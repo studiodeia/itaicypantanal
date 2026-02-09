@@ -42,8 +42,8 @@ const faqData = [
 export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end w-full bg-[#344e41]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
-        <header className="flex flex-col items-start gap-6 md:gap-8 w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        <header className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
           <div className="flex items-center justify-center w-fit font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] whitespace-nowrap [font-style:var(--lead-md-font-style)]" data-testid="text-faq-label">
             PERGUNTAS FREQUENTES
           </div>
@@ -73,8 +73,8 @@ export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
               className="border-b border-[#f2fcf7] data-[state=open]:bg-[#263a30] data-[state=open]:rounded-t-lg"
               data-testid={`accordion-faq-${faq.id}`}
             >
-              <AccordionTrigger className="px-4 md:px-6 lg:px-8 py-5 md:py-8 lg:py-10 hover:no-underline [&[data-state=open]>svg]:rotate-180">
-                <div className="flex items-center gap-4 md:gap-8 lg:gap-12 w-full">
+              <AccordionTrigger className="px-4 md:px-6 lg:px-[32px] py-5 md:py-8 lg:py-[40px] hover:no-underline [&[data-state=open]>svg]:rotate-180">
+                <div className="flex items-center gap-4 md:gap-8 lg:gap-[48px] w-full">
                   <span className="hidden md:inline w-fit font-body-md font-[number:var(--body-md-font-weight)] text-[#6c927f] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] whitespace-nowrap tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
                     {faq.number}
                   </span>
@@ -85,9 +85,9 @@ export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
                 </div>
               </AccordionTrigger>
               {faq.answer && (
-                <AccordionContent className="px-4 md:px-6 lg:px-8 pb-6 md:pb-8 lg:pb-10 pt-3 md:pt-0">
+                <AccordionContent className="px-4 md:px-6 lg:px-[32px] pb-6 md:pb-8 lg:pb-[40px] pt-3 md:pt-0">
                   <div className="pl-0 md:pl-12 lg:pl-[69px]">
-                    <p className="font-body-md md:font-body-lg font-[number:var(--body-md-font-weight)] md:font-[number:var(--body-lg-font-weight)] text-[#a8cab9] text-[18px] md:text-[length:var(--body-lg-font-size)] tracking-[var(--body-md-letter-spacing)] md:tracking-[var(--body-lg-letter-spacing)] leading-[28px] md:leading-[var(--body-lg-line-height)] [font-style:var(--body-md-font-style)] md:[font-style:var(--body-lg-font-style)]">
+                    <p className="lg:max-w-[800px] font-body-md md:font-body-lg font-[number:var(--body-md-font-weight)] md:font-[number:var(--body-lg-font-weight)] text-[#a8cab9] text-[18px] md:text-[length:var(--body-lg-font-size)] lg:text-[24px] tracking-[var(--body-md-letter-spacing)] md:tracking-[var(--body-lg-letter-spacing)] leading-[28px] md:leading-[var(--body-lg-line-height)] lg:leading-[32px] [font-style:var(--body-md-font-style)] md:[font-style:var(--body-lg-font-style)]">
                       {faq.answer}
                     </p>
                   </div>

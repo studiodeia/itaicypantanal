@@ -21,7 +21,7 @@ export const PantanalStatsSection = (): JSX.Element => {
 
   return (
     <section className="bg-[#263a30] flex flex-col items-center w-full">
-      <div className="flex max-w-[1440px] items-end justify-center px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex max-w-[1440px] items-end justify-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-0 items-center justify-between flex-1 lg:flex lg:items-center lg:justify-between">
           {stats.map((stat, index) => (
             <div

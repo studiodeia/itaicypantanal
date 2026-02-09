@@ -56,9 +56,9 @@ const blogPosts = [
 export const PantanalBlogSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end gap-8 w-full bg-[#263a30]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
-        <header className="flex flex-col items-start gap-6 md:gap-8 w-full">
-          <div className="flex items-center md:justify-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-blog-label">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        <header className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
+          <div className="flex items-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-blog-label">
             BLOG
           </div>
 
@@ -74,11 +74,11 @@ export const PantanalBlogSection = (): JSX.Element => {
           </div>
         </header>
 
-        <div className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 w-full">
+        <div className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
           {blogPosts.map((post) => (
             <Card
               key={post.id}
-              className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink"
+              className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink lg:w-[416px]"
               data-testid={`card-blog-${post.id}`}
             >
               <div

@@ -24,8 +24,8 @@ const expeditions = [
 export const ExclusiveExpeditionsSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end w-full bg-[#344e41]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
-        <header className="flex flex-col items-start gap-6 md:gap-8 w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        <header className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
           <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-services-label">
             NOSSOS SERVIÇOS
           </p>
@@ -42,16 +42,16 @@ export const ExclusiveExpeditionsSection = (): JSX.Element => {
           </div>
         </header>
 
-        <div className="flex flex-col md:flex-row w-full items-center gap-4 md:gap-6 lg:gap-8">
+        <div className="flex flex-col md:flex-row w-full items-center gap-4 md:gap-6 lg:gap-[18px]">
           {expeditions.map((expedition, index) => (
             <Card
               key={index}
-              className={`w-full ${index === 0 ? 'md:w-[55%] lg:w-[664px]' : 'md:flex-1'} h-[464px] md:h-[500px] lg:h-[740px] rounded-lg overflow-hidden border-0 bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%),${expedition.backgroundImage}] bg-center bg-cover`}
+              className={`w-full ${index === 0 ? 'md:w-[55%] lg:w-[664px]' : 'md:flex-1 lg:w-[330px]'} h-[464px] md:h-[500px] lg:h-[740px] rounded-lg overflow-hidden border-0 bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%),${expedition.backgroundImage}] bg-center bg-cover`}
               data-testid={`card-expedition-${index}`}
             >
-              <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-8">
-                <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-10">
-                  <div className="flex flex-col items-start gap-3 md:gap-5 w-full">
+              <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-[32px]">
+                <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[40px]">
+                  <div className="flex flex-col items-start gap-3 md:gap-5 lg:gap-[20px] w-full">
                     <h3 className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[#e3f7ec] text-[length:var(--heading-md-font-size)] tracking-[var(--heading-md-letter-spacing)] leading-[var(--heading-md-line-height)] [font-style:var(--heading-md-font-style)]">
                       {expedition.title}
                     </h3>
@@ -65,13 +65,13 @@ export const ExclusiveExpeditionsSection = (): JSX.Element => {
 
                   <Button
                     variant="ghost"
-                    className="flex items-center justify-between w-full py-3 md:py-4 px-0 border-b border-[#f2fcf7] rounded-none h-auto"
+                    className="flex items-center justify-between w-full py-3 md:py-4 lg:h-[56px] lg:py-[12px] px-0 lg:px-[24px] border-b lg:border-b-0 border-[#f2fcf7] rounded-none lg:rounded-[6px] h-auto"
                     data-testid={`button-expedition-details-${index}`}
                   >
-                    <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-                      Mais detalhes
+                    <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] lg:text-[#f2fcf7] text-[length:var(--functional-md-font-size)] lg:text-[24px] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] lg:leading-[32px] [font-style:var(--functional-md-font-style)] [font-family:'Lato',Helvetica] lg:font-semibold">
+                      Quero conhecer
                     </span>
-                    <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 text-[#e3f7ec]" />
+                    <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-[#e3f7ec] lg:text-[#f2fcf7]" />
                   </Button>
                 </div>
               </CardContent>

@@ -48,7 +48,7 @@ const legalLinks = [
 export const SiteFooterSection = (): JSX.Element => {
   return (
     <footer className="flex flex-col items-center justify-end w-full bg-[#263a30]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="flex flex-col lg:flex-row items-start gap-10 md:gap-12 lg:gap-[100px] w-full">
           <div className="flex flex-col items-start gap-8 md:gap-10 lg:gap-12 flex-1 w-full">
             <img
