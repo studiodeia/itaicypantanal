@@ -1,0 +1,886 @@
+<mcp_external_output>
+
+### Content Block 1 (Text)
+const imgRectangle12 = "https://www.figma.com/api/mcp/asset/19b6f5a8-213c-4005-b0d6-a707bfc2a8fe";
+const imgIcon = "https://www.figma.com/api/mcp/asset/22051937-5efc-4505-8b4a-411a8e021f40";
+const imgIcon1 = "https://www.figma.com/api/mcp/asset/16d25524-5f08-42cd-93f6-6480e407bfcc";
+const imgIcon2 = "https://www.figma.com/api/mcp/asset/fcb8c049-b64b-451b-b5d7-bec8c8132e31";
+const imgKeyboardArrowDown = "https://www.figma.com/api/mcp/asset/d695d687-e32a-4120-b352-7ee34318373c";
+const imgKeyboardArrowDown1 = "https://www.figma.com/api/mcp/asset/6773fa14-7345-4739-95ea-32f40ff2e861";
+const imgLine1 = "https://www.figma.com/api/mcp/asset/02980fb1-c007-41b4-92cb-c39389226ae7";
+const imgTypeTablet = "https://www.figma.com/api/mcp/asset/ee9b5f6e-4702-43a0-be32-1e329da18248";
+const imgCalendarMonth = "https://www.figma.com/api/mcp/asset/6c12e21d-9f7f-4a28-82f9-167b81d49211";
+const imgCalendarMonth1 = "https://www.figma.com/api/mcp/asset/ae81dca7-4006-4f4c-b0e4-94b8f8ffed5c";
+const imgChevronForward = "https://www.figma.com/api/mcp/asset/213534b1-b4bc-48de-8387-998b1794ecfc";
+const imgFrame2 = "https://www.figma.com/api/mcp/asset/0eaf9b77-2392-4337-a3e9-22e542ceb26b";
+const imgEllipse1 = "https://www.figma.com/api/mcp/asset/bea56697-1b07-4901-b88b-de6f92567815";
+const imgAdd = "https://www.figma.com/api/mcp/asset/c0bb93a6-5efa-4233-80a8-14b5346b94f5";
+const imgAdd1 = "https://www.figma.com/api/mcp/asset/9fcd881e-d4c1-4c23-809d-1baeebb37b99";
+const imgStarRate = "https://www.figma.com/api/mcp/asset/da0b27d2-233b-46fd-9a71-50d9ee8f712e";
+const imgStarRate1 = "https://www.figma.com/api/mcp/asset/48188226-764f-48b1-a789-8da1feef06cb";
+const imgRectangle13 = "https://www.figma.com/api/mcp/asset/7842130f-024e-431d-a6d3-1fe1d7eb0b13";
+const imgImg = "https://www.figma.com/api/mcp/asset/857e4c1c-a9a3-4586-ab75-c4d5d396ed6b";
+const imgImage = "https://www.figma.com/api/mcp/asset/f118eb1e-be78-4e0a-a7fb-015d0ad19009";
+const imgImage1 = "https://www.figma.com/api/mcp/asset/473c8411-0a53-4b21-b20c-ae4d99076384";
+const imgImage2 = "https://www.figma.com/api/mcp/asset/f9568920-e459-41a4-9134-cc742a1ccc72";
+const imgSectionAcomodacoes = "https://www.figma.com/api/mcp/asset/6353c0c1-25be-4c13-8cd0-db84ec0da869";
+const imgImg1 = "https://www.figma.com/api/mcp/asset/9fa6edd9-4738-427c-9518-0951406704f1";
+const imgKeyboardArrowDown2 = "https://www.figma.com/api/mcp/asset/71a25e9c-6419-48f0-948e-8c37607160f4";
+const imgKeyboardArrowDown3 = "https://www.figma.com/api/mcp/asset/98e0fc7b-50b9-4f5b-be14-7d5530245f3a";
+const imgDehaze = "https://www.figma.com/api/mcp/asset/2ff775d9-761f-4268-bb5a-0a36a8bdc642";
+const imgStarRate2 = "https://www.figma.com/api/mcp/asset/42184888-56a2-4fba-adef-b8593c48c468";
+const imgStarRate3 = "https://www.figma.com/api/mcp/asset/f6ae5ee0-381b-4ccf-8a01-24f7be215715";
+type CtaProps = {
+  className?: string;
+  buttonText?: string;
+  size?: "sm" | "lg";
+  type?: "Default" | "Outline";
+};
+
+function Cta({ className, buttonText = "Label", size = "sm", type = "Default" }: CtaProps) {
+  const isLgAndDefault = size === "lg" && type === "Default";
+  const isLgAndOutline = size === "lg" && type === "Outline";
+  const isSmAndDefault = size === "sm" && type === "Default";
+  return (
+    <div className={className || `content-stretch flex items-center justify-center relative ${isLgAndOutline ? String.raw`border border-[var(--stroke\/component,#f2fcf7)] border-solid h-[56px] px-[24px] py-[12px] rounded-[6px]` : isLgAndDefault ? String.raw`bg-[var(--background\/component\/button,#ac8042)] h-[56px] px-[24px] py-[12px] rounded-[6px]` : String.raw`bg-[var(--background\/component\/button,#ac8042)] px-[16px] py-[6px] rounded-[4px] w-[75px]`}`} id={isLgAndOutline ? "node-2147_10579" : isLgAndDefault ? "node-2147_10576" : "node-2147_10570"}>
+      <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Button Container" id={isLgAndOutline ? "node-2147_10580" : isLgAndDefault ? "node-2147_10577" : "node-2147_10571"}>
+        {isSmAndDefault && (
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/contrast,#f2fcf7)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="2147:10572">
+            <p className="leading-[var(--lh\/400,28px)]">{buttonText}</p>
+          </div>
+        )}
+        {isLgAndDefault && (
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/contrast,#f2fcf7)] text-[length:var(--fs\/500,24px)] whitespace-nowrap" data-node-id="2147:10578">
+            <p className="leading-[var(--lh\/500,32px)]">{buttonText}</p>
+          </div>
+        )}
+        {isLgAndOutline && (
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] whitespace-nowrap" data-node-id="2147:10581">
+            <p className="leading-[var(--lh\/500,32px)]">{buttonText}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Footer({ className }: { className?: string }) {
+  return (
+    <div className={className || ""} data-name="Footer" data-node-id="2147:10760">
+      <div className="bg-[var(--background\/section\/primary,#263a30)] content-stretch flex flex-col items-center justify-end relative w-[744px]" data-name="Type=Tablet" data-node-id="2147:10837">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,100px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,100px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:10838">
+          <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="Footer Container" data-node-id="2147:10839">
+            <div className="h-[40px] relative shrink-0 w-[130.435px]" data-name="Logo" data-node-id="2147:10840">
+              <div className="absolute bg-[var(--green\/25,#f2fcf7)] inset-[-10.33%_-3.33%_-11.41%_-3.17%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[4.131px_4.131px] mask-size-[130.435px_40px]" data-node-id="I2147:10840;111:655" style={{ maskImage: `url('${imgRectangle12}')` }} />
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,52px)] w-[488px]" data-node-id="2147:10841">
+              <p className="leading-[var(--lh\/800,64px)] whitespace-pre-wrap">O Pantanal como você nunca sentiu.</p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="Footer Links Container" data-node-id="2147:10842">
+              <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-name="Footer Social Links Container" data-node-id="2147:10843">
+                <div className="bg-[var(--background\/component\/on-background-primary,#344e41)] content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[4px] shrink-0 size-[40px]" data-name="Button" data-node-id="2147:10844">
+                  <div className="relative shrink-0 size-[18px]" data-name="Icon" data-node-id="2147:10845">
+                    <img alt="" className="block max-w-none size-full" src={imgIcon} />
+                  </div>
+                </div>
+                <div className="bg-[var(--background\/component\/on-background-primary,#344e41)] content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[4px] shrink-0 size-[40px]" data-name="Button" data-node-id="2147:10849">
+                  <div className="relative shrink-0 size-[18px]" data-name="Icon" data-node-id="2147:10850">
+                    <img alt="" className="block max-w-none size-full" src={imgIcon1} />
+                  </div>
+                </div>
+                <div className="bg-[var(--background\/component\/on-background-primary,#344e41)] content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[4px] shrink-0 size-[40px]" data-name="Button" data-node-id="2147:10852">
+                  <div className="relative shrink-0 size-[18px]" data-name="Icon" data-node-id="2147:10853">
+                    <img alt="" className="block max-w-none size-full" src={imgIcon2} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Container" data-node-id="2147:10856">
+                <div className="h-[28px] relative shrink-0 w-full" data-name="Heading 4" data-node-id="2147:10857">
+                  <p className="absolute font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] left-0 not-italic text-[#f5f5f5] text-[length:var(--fs\/400,18px)] top-0" data-node-id="2147:10858">
+                    Diário de Campo Itaicy
+                  </p>
+                </div>
+                <div className="bg-[var(--background\/component\/on-background-primary,#344e41)] content-stretch flex h-[56px] items-center justify-between pl-[20px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-[458px]" data-name="Footer Email Container" data-node-id="2147:10859">
+                  <div className="content-stretch flex items-center relative shrink-0" data-name="Footer Email Input Container" data-node-id="2147:10860">
+                    <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Footer Email Input Container" data-node-id="2147:10861">
+                      <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="2147:10862">
+                        <p className="leading-[var(--lh\/400,28px)]">Seu e-mail</p>
+                      </div>
+                    </div>
+                  </div>
+                  <Cta buttonText="Enviar" className="bg-[var(--background\/component\/button,#ac8042)] content-stretch flex items-center justify-center px-[16px] py-[6px] relative rounded-[4px] shrink-0 w-[75px]" />
+                </div>
+              </div>
+            </div>
+            <div className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" data-name="button" data-node-id="2147:10864">
+              <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px relative" data-name="Button Container" data-node-id="I2147:10864;119:1363">
+                <div className="flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] min-h-px min-w-px not-italic relative text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)]" data-node-id="I2147:10864;119:1341">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Pousada</p>
+                </div>
+                <div className="relative shrink-0 size-[24px]" data-name="chevron_forward" data-node-id="I2147:10864;119:1359">
+                  <div className="absolute inset-[26.44%_37.27%_26.44%_34.78%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-8.347px_-6.346px] mask-size-[24px_24px]" data-name="chevron_forward" data-node-id="I2147:10864;119:1359;324:12134" style={{ maskImage: `url('${imgKeyboardArrowDown}')` }}>
+                    <img alt="" className="block max-w-none size-full" src={imgKeyboardArrowDown1} />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-[-1px] h-0 left-[-600px] w-[600px]" data-node-id="I2147:10864;216:3737">
+                <div className="absolute inset-[-4px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine1} />
+                </div>
+              </div>
+            </div>
+            <div className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" data-name="button" data-node-id="2147:10865">
+              <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px relative" data-name="Button Container" data-node-id="I2147:10865;119:1363">
+                <div className="flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] min-h-px min-w-px not-italic relative text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)]" data-node-id="I2147:10865;119:1341">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Experiências</p>
+                </div>
+                <div className="relative shrink-0 size-[24px]" data-name="chevron_forward" data-node-id="I2147:10865;119:1359">
+                  <div className="absolute inset-[26.44%_37.27%_26.44%_34.78%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-8.347px_-6.346px] mask-size-[24px_24px]" data-name="chevron_forward" data-node-id="I2147:10865;119:1359;324:12134" style={{ maskImage: `url('${imgKeyboardArrowDown}')` }}>
+                    <img alt="" className="block max-w-none size-full" src={imgKeyboardArrowDown1} />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-[-1px] h-0 left-[-600px] w-[600px]" data-node-id="I2147:10865;216:3737">
+                <div className="absolute inset-[-4px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine1} />
+                </div>
+              </div>
+            </div>
+            <div className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" data-name="button" data-node-id="2147:10866">
+              <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px relative" data-name="Button Container" data-node-id="I2147:10866;119:1363">
+                <div className="flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] min-h-px min-w-px not-italic relative text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)]" data-node-id="I2147:10866;119:1341">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Fale conosco</p>
+                </div>
+                <div className="relative shrink-0 size-[24px]" data-name="chevron_forward" data-node-id="I2147:10866;119:1359">
+                  <div className="absolute inset-[26.44%_37.27%_26.44%_34.78%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-8.347px_-6.346px] mask-size-[24px_24px]" data-name="chevron_forward" data-node-id="I2147:10866;119:1359;324:12134" style={{ maskImage: `url('${imgKeyboardArrowDown}')` }}>
+                    <img alt="" className="block max-w-none size-full" src={imgKeyboardArrowDown1} />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-[-1px] h-0 left-[-600px] w-[600px]" data-node-id="I2147:10866;216:3737">
+                <div className="absolute inset-[-4px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgLine1} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] gap-[32px] items-start justify-center leading-[var(--lh\/300,24px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] w-full" data-name="Footer Navigation Container" data-node-id="2147:10867">
+            <p className="relative shrink-0 w-full whitespace-pre-wrap" data-node-id="2147:10868">{`Um refúgio genuíno e sofisticado no coração do Pantanal. Um refúgio genuíno e sofisticado no coração do Pantanal.Um refúgio genuíno e `}</p>
+            <div className="content-stretch flex flex-col gap-[16px] items-start justify-center relative shrink-0 w-full" data-name="Footer Navigation Container" data-node-id="2147:10869">
+              <p className="min-w-full relative shrink-0 w-[min-content] whitespace-pre-wrap" data-node-id="2147:10870">
+                © 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados.
+              </p>
+              <div className="content-stretch flex gap-[8px] items-start relative shrink-0" data-name="Navigation" data-node-id="2147:10871">
+                <p className="relative shrink-0" data-node-id="2147:10872">
+                  Política de Privacidade
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10873">
+                  •
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10874">
+                  Política de Cookies
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10875">
+                  •
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10876">
+                  Sitemap
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10877">
+                  •
+                </p>
+                <p className="relative shrink-0" data-node-id="2147:10878">
+                  Termos de Uso
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SectionCta({ className }: { className?: string }) {
+  return (
+    <div className={className || ""} data-name="section - cta" data-node-id="2147:10702">
+      <div className="content-stretch flex flex-col items-center relative w-[744px]" data-name="Type=Tablet" data-node-id="2147:10714">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <img alt="" className="absolute max-w-none object-cover size-full" src={imgTypeTablet} />
+          <div className="absolute bg-[rgba(0,0,0,0.5)] inset-0" />
+        </div>
+        <div className="content-stretch flex flex-col h-[1133px] items-start justify-between max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,100px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:10715">
+          <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,52px)] w-full" data-node-id="2147:10716">
+            <p className="leading-[var(--lh\/800,64px)] whitespace-pre-wrap">Sua imersão no Pantanal selvagem começa aqui.</p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[48px] items-start relative shrink-0 w-full" data-name="CTA Container" data-node-id="2147:10717">
+            <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[20px] text-[color:var(--text\/primary,#e3f7ec)] w-full" data-node-id="2147:10718">
+              <p className="leading-[1.5] whitespace-pre-wrap">Uma experiência autêntica de ecoturismo, observação de aves ou pesca esportiva espera por você. Selecione as datas da sua expedição e garanta seu lugar em nosso refúgio.</p>
+            </div>
+            <div className="bg-[var(--special\/transparent,rgba(10,19,12,0.2))] content-stretch flex items-center justify-between pl-[20px] pr-[8px] py-[8px] relative rounded-[8px] shrink-0 w-full" data-name="CTA Container" data-node-id="2147:10719">
+              <div className="content-stretch flex gap-[14px] items-center relative shrink-0" data-name="CTA Date Container" data-node-id="2147:10720">
+                <div className="relative shrink-0 size-[24px]" data-name="calendar_month" data-node-id="2147:10721">
+                  <div className="absolute inset-[9.94%_14.58%_10.42%_14.58%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-3.5px_-2.385px] mask-size-[24px_24px]" data-name="calendar_month" data-node-id="I2147:10721;324:11939" style={{ maskImage: `url('${imgCalendarMonth}')` }}>
+                    <img alt="" className="block max-w-none size-full" src={imgCalendarMonth1} />
+                  </div>
+                </div>
+                <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="CTA Date Text Container" data-node-id="2147:10722">
+                  <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="2147:10723">
+                    <p className="leading-[var(--lh\/400,28px)]">23/04/2025 - 24/05/2025</p>
+                  </div>
+                </div>
+              </div>
+              <Cta buttonText="Buscar datas" className="bg-[var(--background\/component\/button,#ac8042)] content-stretch flex items-center justify-center px-[16px] py-[6px] relative rounded-[4px] shrink-0 w-[75px]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+type ButtonProps = {
+  className?: string;
+  buttonText?: string;
+  mobile?: "False";
+  state?: "enabled" | "Hover";
+};
+
+function Button({ className, buttonText = "Button Text", mobile = "False", state = "enabled" }: ButtonProps) {
+  return (
+    <div className={className || "border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center py-[16px] relative w-[296px]"} data-node-id="2147:10740">
+      <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px relative" data-name="Button Container" data-node-id="2147:10741">
+        <div className="flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] min-h-px min-w-px not-italic relative text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/400,18px)]" data-node-id="2147:10742">
+          <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">{buttonText}</p>
+        </div>
+        <div className="relative shrink-0 size-[24px]" data-name="chevron_forward" data-node-id="2147:10743">
+          <div className="absolute inset-[26.44%_37.27%_26.44%_34.78%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-8.347px_-6.346px] mask-size-[24px_24px]" data-name="chevron_forward" data-node-id="I2147:10743;324:12134" style={{ maskImage: `url('${imgKeyboardArrowDown}')` }}>
+            <img alt="" className="block max-w-none size-full" src={imgChevronForward} />
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-[-1px] h-0 left-[-600px] w-[600px]" data-node-id="2147:10744">
+        <div className="absolute inset-[-4px_0_0_0]">
+          <img alt="" className="block max-w-none size-full" src={imgLine1} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BlogCard({ className }: { className?: string }) {
+  return (
+    <div className={className || ""} data-name="Blog card" data-node-id="2147:10659">
+      <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[8px] w-[432px]" data-name="Property 1=Default" data-node-id="2147:10660">
+        <div className="aspect-[432/242.03257751464844] overflow-clip relative shrink-0 w-full" data-node-id="2147:10661">
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+            <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame2} />
+            <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame2} />
+          </div>
+          <div className="absolute bg-[var(--background\/component\/button,#ac8042)] content-stretch flex items-center justify-center left-[16px] px-[12px] py-[4px] rounded-[999px] top-[16px]" data-name="tag" data-node-id="2147:10662">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/contrast,#f2fcf7)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="I2147:10662;216:1750">
+              <p className="leading-[var(--lh\/400,28px)]">Aventura</p>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-center justify-center pt-[16px] relative shrink-0 w-full" data-name="Blog Item Container" data-node-id="2147:10663">
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] h-[16px] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/secondary,#cfebdd)] text-[length:var(--fs\/200,14px)] w-full" data-node-id="2147:10664">
+            <p className="leading-[var(--lh\/200,20px)] whitespace-pre-wrap">15 minutos de leitura</p>
+          </div>
+          <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] overflow-hidden relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/600,32px)] text-ellipsis w-full" data-node-id="2147:10665">
+            <p className="leading-[var(--lh\/600,48px)] text-[32px] whitespace-pre-wrap">Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge</p>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full" data-node-id="2147:10666">
+            <div className="relative shrink-0 size-[44px]" data-node-id="2147:10667">
+              <img alt="" className="block max-w-none size-full" height="44" src={imgEllipse1} width="44" />
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] items-start justify-center leading-[0] min-h-px min-w-px not-italic relative text-[color:var(--text\/secondary,#cfebdd)] whitespace-nowrap" data-node-id="2147:10668">
+              <div className="flex flex-col justify-center relative shrink-0 text-[length:var(--fs\/300,16px)]" data-node-id="2147:10669">
+                <p className="leading-[var(--lh\/300,24px)]">Lucas Vieira</p>
+              </div>
+              <div className="flex flex-col justify-center relative shrink-0 text-[length:var(--fs\/200,14px)]" data-node-id="2147:10670">
+                <p className="leading-[var(--lh\/200,20px)]">09 de Agosto, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+type SectionHeaderProps = {
+  className?: string;
+  desc?: string;
+  lead?: string;
+  title?: string;
+  type?: "Desktop" | "mobile";
+};
+
+function SectionHeader({ className, desc = "Descirption loren ipsum", lead = "LEAD", title = "Section heade", type = "Desktop" }: SectionHeaderProps) {
+  const isDesktop = type === "Desktop";
+  const isMobile = type === "mobile";
+  return (
+    <div className={className || `content-stretch flex flex-col gap-[32px] items-start relative ${isMobile ? "w-[390px]" : "w-[1360px]"}`} id={isMobile ? "node-2147_10966" : "node-2147_10961"}>
+      {isDesktop && (
+        <>
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="2147:10962">
+            <p className="leading-[var(--lh\/300,24px)]">{lead}</p>
+          </div>
+          <div className="content-stretch flex gap-[100px] items-center relative shrink-0 w-full" data-name="Differentials Description Container" data-node-id="2147:10963">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,52px)] w-[664px]" data-node-id="2147:10964">
+              <p className="leading-[var(--lh\/800,64px)] whitespace-pre-wrap">{title}</p>
+            </div>
+            <div className="flex flex-[1_0_0] flex-col font-['Lato:Regular',sans-serif] justify-center min-h-px min-w-px not-italic relative text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)]" data-node-id="2147:10965">
+              <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">{desc}</p>
+            </div>
+          </div>
+        </>
+      )}
+      {isMobile && (
+        <>
+          <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase w-full" data-node-id="2147:10967">
+            <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">{lead}</p>
+          </div>
+          <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,52px)] w-full" data-node-id="2147:10968">
+            <p className="leading-[var(--lh\/800,64px)] whitespace-pre-wrap">{title}</p>
+          </div>
+          <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:10969">
+            <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">{desc}</p>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+type FaqProps = {
+  className?: string;
+  mobile?: "False";
+  open?: boolean;
+};
+
+function Faq({ className, mobile = "False", open = true }: FaqProps) {
+  const isNotOpenAndFalse = !open && mobile === "False";
+  const isOpenAndFalse = open && mobile === "False";
+  return (
+    <div className={className || `content-stretch flex flex-col items-start px-[32px] py-[40px] relative w-[1360px] ${isNotOpenAndFalse ? "" : String.raw`bg-[var(--background\/component\/card,#263a30)] border-[var(--stroke\/component,#f2fcf7)] border-b border-solid gap-[24px] rounded-tl-[8px] rounded-tr-[8px]`}`} id={isNotOpenAndFalse ? "node-2147_16088" : "node-2147_16070"}>
+      <div className="content-stretch flex gap-[48px] items-center relative shrink-0 w-full" data-name="Container" id={isNotOpenAndFalse ? "node-2147_16089" : "node-2147_16071"}>
+        <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/quarternary,#6c927f)] text-[length:var(--fs\/400,18px)]" id={isNotOpenAndFalse ? "node-2147_16090" : "node-2147_16072"}>
+          01
+        </p>
+        <p className="flex-[1_0_0] font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/600,48px)] min-h-px min-w-px relative text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/600,32px)] whitespace-pre-wrap" id={isNotOpenAndFalse ? "node-2147_16091" : "node-2147_16073"}>
+          A pousada é destinada apenas para pesca?
+        </p>
+        <div className="content-stretch flex items-center justify-center relative rounded-[4px] shrink-0 size-[32px]" data-name="CTA" id={isNotOpenAndFalse ? "node-2147_16092" : "node-2147_16074"}>
+          {isOpenAndFalse && (
+            <div className="flex items-center justify-center relative shrink-0 size-[45.255px]">
+              <div className="flex-none rotate-45">
+                <div className="relative size-[32px]" data-name="add" data-node-id="2147:16075">
+                  <img alt="" className="block max-w-none size-full" src={imgAdd} />
+                </div>
+              </div>
+            </div>
+          )}
+          {isNotOpenAndFalse && (
+            <div className="relative shrink-0 size-[32px]" data-name="add" data-node-id="2147:16093">
+              <img alt="" className="block max-w-none size-full" src={imgAdd1} />
+            </div>
+          )}
+        </div>
+      </div>
+      {isOpenAndFalse && (
+        <div className="content-stretch flex items-center px-[69px] relative shrink-0 w-full" data-name="Testimonials Container" data-node-id="2147:16078">
+          <div className="flex flex-[1_0_0] flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] justify-center leading-[0] max-w-[800px] min-h-px min-w-px not-italic relative text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/500,24px)]" data-node-id="2147:16079">
+            <p className="leading-[var(--lh\/500,32px)] whitespace-pre-wrap">Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TestimonialCard({ className }: { className?: string }) {
+  return (
+    <div className={className || ""} data-name="Testimonial card" data-node-id="2147:16023">
+      <div className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] w-[443px]" data-name="Property 1=Desktop" data-node-id="2147:16024">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full" data-name="Container" data-node-id="2147:16025">
+          <div className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" data-name="Content" data-node-id="2147:16026">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/600,32px)] w-full" data-node-id="2147:16027">
+              <p className="leading-[var(--lh\/600,48px)] whitespace-pre-wrap">Titulo impactante</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:16028">
+              <p className="leading-[var(--lh\/500,32px)] whitespace-pre-wrap">“Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.”</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[379px]" data-name="Author Info" data-node-id="2147:16029">
+            <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-[min-content]" data-node-id="2147:16030">
+              <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Lucas Vieira, BRA</p>
+            </div>
+            <div className="content-stretch flex items-center relative shrink-0" data-name="Rating" data-node-id="2147:16031">
+              <div className="relative shrink-0 size-[20px]" data-name="star_rate" data-node-id="2147:16032">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:16032;145:1452" style={{ maskImage: `url('${imgStarRate}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate1} />
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[20px]" data-name="star_rate" data-node-id="2147:16033">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:16033;145:1452" style={{ maskImage: `url('${imgStarRate}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate1} />
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[20px]" data-name="star_rate" data-node-id="2147:16034">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:16034;145:1452" style={{ maskImage: `url('${imgStarRate}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate1} />
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[20px]" data-name="star_rate" data-node-id="2147:16035">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:16035;145:1452" style={{ maskImage: `url('${imgStarRate}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate1} />
+                </div>
+              </div>
+              <div className="relative shrink-0 size-[20px]" data-name="star_rate" data-node-id="2147:16036">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:16036;145:1452" style={{ maskImage: `url('${imgStarRate}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate1} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Tablet() {
+  return (
+    <div className="bg-white content-stretch flex flex-col isolate items-start relative size-full" data-name="Tablet - 775" data-node-id="2147:43302">
+      <div className="content-stretch flex flex-col h-[1133px] items-center justify-end overflow-clip relative shrink-0 w-full z-[12]" data-name="section - hero - home" data-node-id="2147:43303">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] h-[1053px] items-center justify-end max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43304">
+          <div className="content-stretch flex flex-col gap-[40px] items-start leading-[0] overflow-clip relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] w-full" data-name="flex-content" data-node-id="2147:43305">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center max-w-[592px] relative shrink-0 text-[length:var(--fs\/900,56px)] w-[532px]" data-node-id="2147:43306" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+              <p className="leading-[var(--lh\/900,60px)] whitespace-pre-wrap">O Pantanal como você nunca sentiu.</p>
+            </div>
+            <button className="cursor-pointer flex flex-col font-['Lato:Regular',sans-serif] justify-center max-w-[592px] min-w-full not-italic relative shrink-0 text-[length:var(--fs\/400,18px)] text-left w-[min-content]" data-node-id="2147:43307">
+              <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.</p>
+            </button>
+          </div>
+          <div className="bg-[var(--special\/transparent,rgba(10,19,12,0.2))] content-stretch flex gap-[40px] items-center p-[32px] relative rounded-[8px] shrink-0 w-full" data-name="CTA card" data-node-id="2147:43308">
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start leading-[0] min-h-px min-w-px relative" data-name="Container" data-node-id="I2147:43308;111:2097">
+              <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="I2147:43308;111:2098" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                <p className="leading-[var(--lh\/500,36px)] whitespace-pre-wrap">Procure por uma data especial</p>
+              </div>
+              <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] w-full" data-node-id="I2147:43308;111:2099">
+                <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">{`Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem `}</p>
+              </div>
+            </div>
+            <Cta buttonText="Buscar datas" className="bg-[var(--background\/component\/button,#ac8042)] content-stretch flex h-[56px] items-center justify-center px-[24px] py-[12px] relative rounded-[6px] shrink-0" size="lg" />
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col items-center justify-center left-0 px-[20px] py-[12px] right-0 top-[1061px]" data-name="nav-menu" data-node-id="2147:43309">
+          <div className="content-stretch flex items-center justify-between max-w-[1440px] relative shrink-0 w-full" data-name="Container" data-node-id="I2147:43309;244:4738">
+            <div className="h-[32px] relative shrink-0 w-[104.348px]" data-name="Logo" data-node-id="I2147:43309;244:4739">
+              <div className="absolute bg-[var(--green\/25,#f2fcf7)] inset-[-10.33%_-3.33%_-11.41%_-3.17%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[4.131px_4.131px] mask-size-[130.435px_40px]" data-node-id="I2147:43309;244:4739;111:655" style={{ maskImage: `url('${imgRectangle13}')` }} />
+            </div>
+            <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-name="Container" data-node-id="I2147:43309;244:4740">
+              <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-name="Container" data-node-id="I2147:43309;244:4793">
+                <div className="content-stretch flex items-center justify-center px-[12px] py-[10px] relative shrink-0" data-name="nav-menu-item" data-node-id="I2147:43309;244:4794">
+                  <div className="content-stretch flex gap-[8px] h-[28px] items-center relative shrink-0" data-name="Nav item" data-node-id="I2147:43309;244:4794;109:926">
+                    <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="I2147:43309;244:4794;109:894">
+                      <p className="leading-[var(--lh\/400,28px)]">PT</p>
+                    </div>
+                    <div className="relative shrink-0 size-[28px]" data-name="keyboard_arrow_down" data-node-id="I2147:43309;244:4794;109:914">
+                      <div className="absolute inset-[34.78%_26.44%_37.28%_26.44%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-6.347px_-8.346px] mask-size-[24px_24px]" data-name="keyboard_arrow_down" data-node-id="I2147:43309;244:4794;109:914;324:11424" style={{ maskImage: `url('${imgKeyboardArrowDown2}')` }}>
+                        <img alt="" className="block max-w-none size-full" src={imgKeyboardArrowDown3} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[var(--background\/component\/button,#ac8042)] content-stretch flex items-center justify-center px-[16px] py-[6px] relative rounded-[4px] shrink-0 w-[75px]" data-name="CTA" data-node-id="I2147:43309;244:4795">
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Button Container" data-node-id="I2147:43309;244:4795;110:465">
+                    <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/contrast,#f2fcf7)] text-[length:var(--fs\/400,18px)] whitespace-nowrap" data-node-id="I2147:43309;244:4795;110:466">
+                      <p className="leading-[var(--lh\/400,28px)]">Reservar</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex items-center p-[6px] relative shrink-0" data-name="button" data-node-id="I2147:43309;244:4743">
+                <div className="relative shrink-0 size-[28px]" data-name="dehaze" data-node-id="I2147:43309;244:4744">
+                  <div className="absolute inset-[22.92%_14.58%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-3.5px_-5.5px] mask-size-[24px_24px]" data-name="dehaze" data-node-id="I2147:43309;244:4744;324:12067" style={{ maskImage: `url('${imgKeyboardArrowDown2}')` }}>
+                    <img alt="" className="block max-w-none size-full" src={imgDehaze} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/primary,#263a30)] content-stretch flex flex-col items-center justify-center overflow-clip relative shrink-0 w-full z-[11]" data-name="section - manifesto" data-node-id="2147:43310">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,0px)] items-center max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43311">
+          <div className="content-stretch flex flex-col gap-[24px] h-[508px] items-start relative shrink-0 w-full" data-name="Manifesto Container" data-node-id="2147:43312">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase w-full" data-node-id="2147:43313">
+              <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">Manifesto</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[0px] text-[color:var(--text\/primary,#e3f7ec)] w-full whitespace-pre-wrap" data-node-id="2147:43314" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+              <p className="mb-0">
+                <span className="leading-[var(--lh\/900,60px)] text-[56px]">{`Onde o luxo não é o que se vê, mas o que se sente. Acesso exclusivo ao `}</span>
+                <span className="font-['Playfair_Display:Medium',sans-serif] font-medium leading-[72px] text-[#d7a45d] text-[64px]" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                  Pantanal real
+                </span>
+                <span className="leading-[var(--lh\/900,60px)] text-[56px]">{`. `}</span>
+              </p>
+              <p>
+                <span className="leading-[var(--lh\/900,60px)] text-[56px]">{`Uma `}</span>
+                <span className="font-['Playfair_Display:Medium',sans-serif] font-medium leading-[72px] text-[#d7a45d] text-[64px]" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                  imersão autêntica
+                </span>
+                <span className="leading-[var(--lh\/900,60px)] text-[56px]">, longe de tudo.</span>
+              </p>
+            </div>
+            <Button buttonText="Mais detalhes" className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/primary,#263a30)] content-stretch flex flex-col items-center justify-center overflow-clip relative shrink-0 w-full z-[10]" data-name="section - sobre nós" data-node-id="2147:43316">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-end justify-center max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43317">
+          <div className="content-stretch flex flex-col gap-[24px] items-start py-[32px] relative shrink-0 w-full" data-name="Manifesto Container" data-node-id="2147:43318">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="2147:43319">
+              <p className="leading-[var(--lh\/300,24px)]">Sobre nós</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,44px)] w-[459px]" data-node-id="2147:43320">
+              <p className="leading-[var(--lh\/800,56px)] whitespace-pre-wrap">Bem-vindo ao Nosso Refúgio Natural</p>
+            </div>
+            <div className="content-stretch flex flex-col font-['Lato:Regular',sans-serif] gap-[24px] items-start leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-full" data-name="Manifesto Section Description" data-node-id="2147:43321">
+              <div className="flex flex-col justify-center relative shrink-0 w-full" data-node-id="2147:43322">
+                <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Localizada no coração de uma das regiões mais biodiversas do mundo, nossa pousada oferece uma experiência única de conexão com a natureza.</p>
+              </div>
+              <div className="flex flex-col justify-center relative shrink-0 w-full" data-node-id="2147:43323">
+                <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Com mais de 15 anos de experiência em ecoturismo, nos dedicamos a proporcionar momentos inesquecíveis enquanto preservamos e protegemos nosso ambiente natural.</p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="AboutSection" data-node-id="2147:43324">
+              <div className="content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43325">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43326">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#6c927f)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43327">
+                    01
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43328">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43329" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Sustentabilidade
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43330">
+                    Práticas eco-friendly em todas as nossas operações
+                  </p>
+                </div>
+              </div>
+              <div className="border-[var(--stroke\/divider,#446354)] border-solid border-t content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43331">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43332">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#6c927f)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43333">
+                    02
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43334">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43335" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Excelência
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43336">
+                    Guias especializados e equipamentos de primeira linha
+                  </p>
+                </div>
+              </div>
+              <div className="border-[var(--stroke\/divider,#446354)] border-solid border-t content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43337">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43338">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#6c927f)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43339">
+                    03
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43340">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43341" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Hospitalidade
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43342">
+                    Atendimento personalizado para cada hóspede
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-[971.429px] relative rounded-[8px] shrink-0 w-[680px]" data-name="img" data-node-id="2147:43343">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[8px]">
+              <img alt="" className="absolute h-full left-[-36.55%] max-w-none top-0 w-[265.82%]" src={imgImg} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/secondary,#344e41)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[9]" data-name="section - nossos serviços" data-node-id="2147:43344">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43345">
+          <SectionHeader className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" desc="Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição." lead="Nossos serviços" title="Expedições Exclusivas no Coração do Pantanal" type="mobile" />
+          <div className="h-[740px] overflow-clip relative rounded-[16px] shrink-0 w-full" data-name="Image" data-node-id="2147:43347">
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[16px]">
+              <div className="absolute inset-0 overflow-hidden rounded-[16px]">
+                <img alt="" className="absolute h-full left-[-16.37%] max-w-none top-0 w-[167.15%]" src={imgImage} />
+              </div>
+              <div className="absolute inset-0 rounded-[16px]" style={{ backgroundImage: "linear-gradient(-0.000001720809294170067deg, var(--green\/900,rgba(21, 34, 24, 0.5)) 32.77%, rgba(21, 34, 24, 0) 75.473%), linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%)" }} />
+            </div>
+            <div className="absolute bottom-0 content-stretch flex flex-col gap-[40px] items-start left-0 p-[32px] w-[680px]" data-name="Container" data-node-id="2147:43348">
+              <div className="content-stretch flex flex-col gap-[20px] items-start leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] w-full" data-name="Container" data-node-id="2147:43349">
+                <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Bold',sans-serif)] font-bold justify-center relative shrink-0 text-[length:var(--fs\/600,28px)] tracking-[1.4px] w-full" data-node-id="2147:43350" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                  <p className="leading-[var(--lh\/600,40px)] whitespace-pre-wrap">Pesca Esportiva Cota Zero</p>
+                </div>
+                <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center not-italic relative shrink-0 text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43351">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.</p>
+                </div>
+              </div>
+              <Button buttonText="Mais detalhes" className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" />
+            </div>
+          </div>
+          <div className="h-[740px] overflow-clip relative rounded-[16px] shrink-0 w-full" data-name="Image" data-node-id="2147:43353">
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[16px]">
+              <img alt="" className="absolute max-w-none object-cover rounded-[16px] size-full" src={imgImage1} />
+              <div className="absolute inset-0 rounded-[16px]" style={{ backgroundImage: "linear-gradient(-0.000001720809294170067deg, var(--green\/900,rgba(21, 34, 24, 0.5)) 32.77%, rgba(21, 34, 24, 0) 75.473%), linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%)" }} />
+            </div>
+            <div className="absolute bottom-0 content-stretch flex flex-col gap-[40px] items-start p-[32px] right-0 w-[680px]" data-name="Container" data-node-id="2147:43354">
+              <div className="content-stretch flex flex-col gap-[20px] items-start leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] w-full" data-name="Container" data-node-id="2147:43355">
+                <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Bold',sans-serif)] font-bold justify-center relative shrink-0 text-[length:var(--fs\/600,28px)] tracking-[1.4px] w-full" data-node-id="2147:43356" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                  <p className="leading-[var(--lh\/600,40px)] whitespace-pre-wrap">Birdwatching</p>
+                </div>
+                <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center not-italic relative shrink-0 text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43357">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.</p>
+                </div>
+              </div>
+              <Button buttonText="Mais detalhes" className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" />
+            </div>
+          </div>
+          <div className="h-[740px] overflow-clip relative rounded-[16px] shrink-0 w-full" data-name="Image" data-node-id="2147:43359">
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[16px]">
+              <img alt="" className="absolute max-w-none object-cover rounded-[16px] size-full" src={imgImage2} />
+              <div className="absolute inset-0 rounded-[16px]" style={{ backgroundImage: "linear-gradient(-0.000001720809294170067deg, var(--green\/900,rgba(21, 34, 24, 0.5)) 32.77%, rgba(21, 34, 24, 0) 75.473%), linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%)" }} />
+            </div>
+            <div className="absolute bottom-0 content-stretch flex flex-col gap-[40px] items-start p-[32px] right-0 w-[680px]" data-name="Container" data-node-id="2147:43360">
+              <div className="content-stretch flex flex-col gap-[20px] items-start leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] w-full" data-name="Title Container" data-node-id="2147:43361">
+                <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Bold',sans-serif)] font-bold justify-center relative shrink-0 text-[length:var(--fs\/600,28px)] tracking-[1.4px] w-full" data-node-id="2147:43362" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                  <p className="leading-[var(--lh\/600,40px)] whitespace-pre-wrap">Ecoturismo</p>
+                </div>
+                <div className="flex flex-col font-['Lato:Regular',sans-serif] justify-center not-italic relative shrink-0 text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43363">
+                  <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.</p>
+                </div>
+              </div>
+              <Button buttonText="Mais detalhes" className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/primary,#263a30)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[8]" data-name="section - numbers" data-node-id="2147:43365">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43366">
+          <div className="content-stretch flex flex-col gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-center w-full" data-name="Birdwatching Container" data-node-id="2147:43367">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/900,56px)] w-full" data-node-id="2147:43368" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+              <p className="leading-[var(--lh\/900,60px)] whitespace-pre-wrap">166+</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase w-full" data-node-id="2147:43369">
+              <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">Aves avistadas</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-center w-full" data-name="Experience Container" data-node-id="2147:43370">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/900,56px)] w-full" data-node-id="2147:43371" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+              <p className="leading-[var(--lh\/900,60px)] whitespace-pre-wrap">15+</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase w-full" data-node-id="2147:43372">
+              <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">anos de experiência</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[8px] items-center justify-center leading-[0] relative shrink-0 text-center w-full" data-name="Guests Container" data-node-id="2147:43373">
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/900,56px)] w-full" data-node-id="2147:43374" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+              <p className="leading-[var(--lh\/900,60px)] whitespace-pre-wrap">2000+</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase w-full" data-node-id="2147:43375">
+              <p className="leading-[var(--lh\/300,24px)] whitespace-pre-wrap">hóspedes satisfeitos</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[8px] items-center justify-center relative shrink-0 w-full" data-name="Statistics Container" data-node-id="2147:43376">
+            <div className="content-stretch flex gap-[5px] items-center relative shrink-0" data-name="Rating" data-node-id="2147:43377">
+              <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/900,56px)] whitespace-nowrap" data-node-id="2147:43378" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                <p className="leading-[var(--lh\/900,60px)]">4.9</p>
+              </div>
+              <div className="relative shrink-0 size-[17.5px]" data-name="star_rate" data-node-id="2147:43379">
+                <div className="absolute inset-[4.17%_8.33%_12.5%_8.33%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-2px_-1px] mask-size-[24px_24px]" data-name="star_rate" data-node-id="I2147:43379;145:1452" style={{ maskImage: `url('${imgStarRate2}')` }}>
+                  <img alt="" className="block max-w-none size-full" src={imgStarRate3} />
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="2147:43380">
+              <p className="leading-[var(--lh\/300,24px)]">avaliação média</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col h-[1133px] items-start justify-end overflow-clip relative shrink-0 w-full z-[7]" data-name="section - acomodações" data-node-id="2147:43381">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+          <img alt="" className="absolute max-w-none object-cover size-full" src={imgSectionAcomodacoes} />
+          <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(179.99999964692284deg, rgba(21, 34, 24, 0) 0%, var(--green\/900,rgba(21, 34, 24, 0.64)) 45.957%), linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%)" }} />
+        </div>
+        <div className="content-stretch flex gap-[var(--layout\/gap,0px)] h-[1000px] items-end max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43382">
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-h-px min-w-px relative" data-name="Manifesto Container" data-node-id="2147:43383">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="2147:43384">
+              <p className="leading-[var(--lh\/300,24px)]">Acomodações</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,44px)] w-[582px]" data-node-id="2147:43385">
+              <p className="leading-[var(--lh\/800,56px)] whitespace-pre-wrap">Descanso autêntico no coração selvagem</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/500,24px)] w-[min-content]" data-node-id="2147:43386">
+              <p className="leading-[var(--lh\/500,36px)] whitespace-pre-wrap">Nossas acomodações são projetadas para o descanso e a imersão. Confortáveis, climatizadas e com vista para a natureza intocada, elas são o ponto de partida perfeito para sua aventura no Pantanal.</p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Accommodation Buttons Container" data-node-id="2147:43387">
+              <Cta buttonText="Reservar" className="bg-[var(--background\/component\/button,#ac8042)] content-stretch flex h-[56px] items-center justify-center px-[24px] py-[12px] relative rounded-[6px] shrink-0 w-full" size="lg" />
+              <Cta buttonText="Mais detalhes" className="border border-[var(--stroke\/component,#f2fcf7)] border-solid content-stretch flex h-[56px] items-center justify-center px-[24px] py-[12px] relative rounded-[6px] shrink-0 w-full" size="lg" type="Outline" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/secondary,#344e41)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[6]" data-name="section - depoimentos" data-node-id="2147:43390">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="I2147:43390;375:12540">
+          <div className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" data-name="section header" data-node-id="I2147:43390;375:12541">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="I2147:43390;375:12541;359:15495">
+              <p className="leading-[var(--lh\/300,24px)]">Depoimentos</p>
+            </div>
+            <div className="content-stretch flex gap-[100px] items-center relative shrink-0 w-full" data-name="Differentials Description Container" data-node-id="I2147:43390;375:12541;359:15496">
+              <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,44px)] w-[664px]" data-node-id="I2147:43390;375:12541;359:15497">
+                <p className="leading-[var(--lh\/800,56px)] whitespace-pre-wrap">Relatos de quem viveu a real imersão</p>
+              </div>
+              <div className="flex flex-[1_0_0] flex-col font-['Lato:Regular',sans-serif] justify-center min-h-px min-w-px not-italic relative text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)]" data-node-id="I2147:43390;375:12541;359:15498">
+                <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.</p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[32px] items-center justify-center relative shrink-0 w-full" data-name="Testimonials List Container" data-node-id="I2147:43390;375:12542">
+            <TestimonialCard className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] shrink-0 w-[443px]" />
+            <TestimonialCard className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] shrink-0 w-[443px]" />
+            <TestimonialCard className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] shrink-0 w-[443px]" />
+            <TestimonialCard className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] shrink-0 w-[443px]" />
+            <TestimonialCard className="bg-[var(--background\/component\/card,#263a30)] content-stretch flex flex-col h-[464px] items-start overflow-clip p-[32px] relative rounded-[8px] shrink-0 w-[443px]" />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/primary,#fcf4ed)] content-stretch flex flex-col items-center justify-center overflow-clip relative shrink-0 w-full z-[5]" data-name="section - nosso impacto" data-node-id="2147:43391">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-end justify-center max-w-[1440px] overflow-clip px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="2147:43392">
+          <div className="content-stretch flex flex-col gap-[24px] items-start py-[32px] relative shrink-0 w-full" data-name="Manifesto Container" data-node-id="2147:43393">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center leading-[0] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#446354)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="2147:43394">
+              <p className="leading-[var(--lh\/300,24px)]">Nosso impacto</p>
+            </div>
+            <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[color:var(--text\/primary,#263a30)] text-[length:var(--fs\/800,44px)] w-[min-content]" data-node-id="2147:43395">
+              <p className="leading-[var(--lh\/800,56px)] whitespace-pre-wrap">Compromisso com a Natureza, Impacto na Comunidade</p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="AboutSection" data-node-id="2147:43396">
+              <div className="content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43397">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43398">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#8aad9c)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43399">
+                    01
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43400">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#263a30)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43401" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Biodiversidade Exclusiva
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#446354)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43402">
+                    Acesso a áreas protegidas onde 166 espécies de aves foram catalogadas.
+                  </p>
+                </div>
+              </div>
+              <div className="border-[var(--stroke\/divider,#a8cab9)] border-solid border-t content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43403">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43404">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#8aad9c)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43405">
+                    02
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43406">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#263a30)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43407" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Apoio Comunitário
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#446354)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43408">
+                    Parte de nossa receita é revertida diretamente para as comunidades indígenas locais.
+                  </p>
+                </div>
+              </div>
+              <div className="border-[var(--stroke\/divider,#a8cab9)] border-solid border-t content-stretch flex gap-[24px] items-start pt-[24px] relative shrink-0 w-full" data-name="Container" data-node-id="2147:43409">
+                <div className="content-stretch flex items-start pt-[6px] relative shrink-0 w-[32px]" data-name="AboutSection" data-node-id="2147:43410">
+                  <p className="flex-[1_0_0] font-[family-name:var(--ff\/200,'Lato:Regular',sans-serif)] leading-[var(--lh\/200,20px)] min-h-px min-w-px not-italic relative text-[color:var(--text\/quarternary,#8aad9c)] text-[length:var(--fs\/200,14px)] whitespace-pre-wrap" data-node-id="2147:43411">
+                    03
+                  </p>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative whitespace-pre-wrap" data-name="AboutSection" data-node-id="2147:43412">
+                  <p className="font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium leading-[var(--lh\/500,36px)] relative shrink-0 text-[color:var(--text\/primary,#263a30)] text-[length:var(--fs\/500,24px)] w-full" data-node-id="2147:43413" style={{ fontFeatureSettings: "\'lnum\' 1, \'pnum\' 1" }}>
+                    Preservação Oficial
+                  </p>
+                  <p className="font-['Lato:Regular',sans-serif] leading-[var(--lh\/400,28px)] not-italic relative shrink-0 text-[color:var(--text\/tertiary,#446354)] text-[length:var(--fs\/400,18px)] w-full" data-node-id="2147:43414">
+                    Somos os únicos com autorização do IBAMA para operar em milhões de hectares protegidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-[816px] max-w-[780px] relative rounded-[8px] shrink-0 w-full" data-name="img" data-node-id="2147:43415">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[8px]">
+              <img alt="" className="absolute h-[116.35%] left-[100.32%] max-w-none top-[-7.62%] w-[-100.48%]" src={imgImg1} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/secondary,#344e41)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[4]" data-name="section - faq" data-node-id="2147:43416">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="I2147:43416;375:11806">
+          <div className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" data-name="section header" data-node-id="I2147:43416;375:12064">
+            <div className="flex flex-col font-[family-name:var(--ff\/200,'Lato:SemiBold',sans-serif)] justify-center not-italic relative shrink-0 text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/300,16px)] tracking-[3.84px] uppercase whitespace-nowrap" data-node-id="I2147:43416;375:12064;359:15495">
+              <p className="leading-[var(--lh\/300,24px)]">PErguntas frequentes</p>
+            </div>
+            <div className="content-stretch flex gap-[100px] items-center relative shrink-0 w-full" data-name="Differentials Description Container" data-node-id="I2147:43416;375:12064;359:15496">
+              <div className="flex flex-col font-[family-name:var(--ff\/100,'Playfair_Display:Medium',sans-serif)] font-medium justify-center relative shrink-0 text-[color:var(--text\/primary,#e3f7ec)] text-[length:var(--fs\/800,44px)] w-[664px]" data-node-id="I2147:43416;375:12064;359:15497">
+                <p className="leading-[var(--lh\/800,56px)] whitespace-pre-wrap">Ainda possuí alguma dúvida?</p>
+              </div>
+              <div className="flex flex-[1_0_0] flex-col font-['Lato:Regular',sans-serif] justify-center min-h-px min-w-px not-italic relative text-[color:var(--text\/tertiary,#a8cab9)] text-[length:var(--fs\/400,18px)]" data-node-id="I2147:43416;375:12064;359:15498">
+                <p className="leading-[var(--lh\/400,28px)] whitespace-pre-wrap">Respondemos às principais dúvidas para que sua única preocupação seja aproveitar a imersão na natureza selvagem.</p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="AboutSection" data-node-id="I2147:43416;375:11812">
+            <Faq className="content-stretch flex flex-col items-start px-[32px] py-[40px] relative shrink-0 w-full" open={false} />
+            <Faq className="bg-[var(--background\/component\/card,#263a30)] border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex flex-col gap-[24px] items-start px-[32px] py-[40px] relative rounded-tl-[8px] rounded-tr-[8px] shrink-0 w-full" />
+            <Faq className="content-stretch flex flex-col items-start px-[32px] py-[40px] relative shrink-0 w-full" open={false} />
+            <Faq className="content-stretch flex flex-col items-start px-[32px] py-[40px] relative shrink-0 w-full" open={false} />
+            <Faq className="content-stretch flex flex-col items-start px-[32px] py-[40px] relative shrink-0 w-full" open={false} />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[var(--background\/section\/secondary,#344e41)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[3]" data-name="Blog" data-node-id="2147:43417">
+        <div className="content-stretch flex flex-col gap-[var(--layout\/gap,64px)] items-center justify-end max-w-[1440px] px-[var(--layout\/horizontal,40px)] py-[var(--layout\/vertical,64px)] relative shrink-0 w-full" data-name="container" data-node-id="I2147:43417;494:13678">
+          <SectionHeader className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" desc="O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo." lead="blog" title="Diário do Pantanal" type="mobile" />
+          <div className="content-stretch flex flex-col gap-[32px] items-start justify-center relative shrink-0 w-full" data-name="Blog Container" data-node-id="I2147:43417;494:14026">
+            <BlogCard className="content-stretch flex flex-col items-start overflow-clip relative rounded-[8px] shrink-0 w-full" />
+            <BlogCard className="content-stretch flex flex-col items-start overflow-clip relative rounded-[8px] shrink-0 w-full" />
+            <BlogCard className="content-stretch flex flex-col items-start overflow-clip relative rounded-[8px] shrink-0 w-full" />
+          </div>
+          <Button buttonText="Ver todos" className="border-[var(--stroke\/component,#f2fcf7)] border-b border-solid content-stretch flex gap-[16px] items-center justify-center overflow-clip py-[16px] relative shrink-0 w-full" />
+        </div>
+      </div>
+      <SectionCta className="content-stretch flex flex-col items-center overflow-clip relative shrink-0 w-[744px] z-[2]" />
+      <Footer className="bg-[var(--background\/section\/primary,#263a30)] content-stretch flex flex-col items-center justify-end overflow-clip relative shrink-0 w-full z-[1]" />
+    </div>
+  );
+}
+
+### Content Block 2 (Text)
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+### Content Block 3 (Text)
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+### Content Block 4 (Text)
+These styles are contained in the design: Display/lg: Font(family: "FF/100", style: Medium, size: FS/900, weight: 500, lineHeight: LH/900, letterSpacing: 0), Body/md: Font(family: "Lato", style: Regular, size: FS/400, weight: 400, lineHeight: LH/400, letterSpacing: 0), Heading/sm: Font(family: "FF/100", style: Medium, size: FS/500, weight: 500, lineHeight: LH/500, letterSpacing: 0), Body/sm: Font(family: "FF/200", style: Regular, size: FS/300, weight: 400, lineHeight: LH/300, letterSpacing: 0), Functional/md: Font(family: "FF/200", style: SemiBold, size: FS/400, weight: 600, lineHeight: LH/400, letterSpacing: 0), Lead/md: Font(family: "FF/200", style: SemiBold, size: FS/300, weight: 600, lineHeight: LH/300, letterSpacing: 24), Heading/lg: Font(family: "FF/100", style: Medium, size: FS/800, weight: 500, lineHeight: LH/800, letterSpacing: 0), Body/xs: Font(family: "FF/200", style: Regular, size: FS/200, weight: 400, lineHeight: LH/200, letterSpacing: 0), Display/sm: Font(family: "FF/100", style: Bold, size: FS/600, weight: 700, lineHeight: LH/600, letterSpacing: 5), Body/lg: Font(family: "FF/200", style: Regular, size: FS/500, weight: 400, lineHeight: LH/500, letterSpacing: 0), Heading/md: Font(family: "FF/100", style: Medium, size: FS/600, weight: 500, lineHeight: LH/600, letterSpacing: 0).
+
+### Content Block 5 (Text)
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.
+
+### Content Block 6 (Text)
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.
+
+</mcp_external_output>
