@@ -298,13 +298,21 @@ export const PantanalHeroSection = (): JSX.Element => {
         <div className="lg:hidden fixed inset-0 z-50 flex flex-col" data-testid="mobile-menu-overlay">
           <div className="absolute inset-0 backdrop-blur-[16px] bg-[rgba(255,255,255,0.01)]" />
 
-          <div className="relative z-10 flex items-center justify-between px-5 py-3">
+          <div className="relative z-10 bg-[#263a30] flex items-center justify-between px-5 py-3">
             <img
               className="w-[104px] md:w-[115px] h-auto"
               alt="Logo"
               src="/figmaAssets/logo.svg"
             />
             <div className="flex items-center gap-4">
+              <Button
+                variant="ghost"
+                className="hidden md:flex text-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                data-testid="button-language-mobile-menu"
+              >
+                PT
+                <ChevronDownIcon className="w-5 h-5 md:w-7 md:h-7" />
+              </Button>
               <Button
                 className="bg-[#ac8042] text-[#f2fcf7] rounded font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
                 data-testid="button-reservar-mobile-menu"
@@ -333,7 +341,7 @@ export const PantanalHeroSection = (): JSX.Element => {
                     onClick={() => setMobileActiveCategory(item.label)}
                     data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] leading-[32px] text-[#e3f7ec]">
+                    <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
                       {item.label}
                     </span>
                     <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
@@ -341,48 +349,50 @@ export const PantanalHeroSection = (): JSX.Element => {
                 ))}
               </div>
             ) : (
-              <div className="bg-[#263a30] flex flex-col">
-                <button
-                  className="flex items-center gap-4 px-5 py-5 border-b border-[#446354]"
-                  onClick={() => setMobileActiveCategory(null)}
-                  data-testid="button-mobile-menu-back"
-                >
-                  <ArrowLeftIcon className="w-7 h-7 text-[#e3f7ec]" />
-                  <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] leading-[32px] text-[#e3f7ec]">
-                    {mobileActiveCategory}
-                  </span>
-                </button>
+              <div className="bg-[#263a30] flex flex-col items-center pb-10">
+                <div className="flex flex-col gap-10 w-full max-w-[1440px]">
+                  <button
+                    className="flex items-center gap-4 p-5 border-b border-[#446354] w-full"
+                    onClick={() => setMobileActiveCategory(null)}
+                    data-testid="button-mobile-menu-back"
+                  >
+                    <ArrowLeftIcon className="w-7 h-7 text-[#e3f7ec] flex-shrink-0" />
+                    <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                      {mobileActiveCategory}
+                    </span>
+                  </button>
 
-                <div className="flex flex-col px-1">
-                  {mobileMenuItems.map((item, idx) => (
-                    <button
-                      key={idx}
-                      className="flex items-center gap-4 p-4 text-left"
-                      data-testid={`button-mobile-submenu-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      <div className="w-[108px] h-[108px] rounded flex-shrink-0 overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover rounded"
-                        />
-                      </div>
-                      <div className="flex-1 flex flex-col gap-3">
-                        <div className="flex items-center justify-between gap-4">
-                          <span
-                            className="[font-family:'Playfair_Display',serif] font-medium text-[22px] leading-[32px] text-[#e3f7ec]"
-                            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-                          >
-                            {item.title}
-                          </span>
-                          <ChevronRightIcon className="w-6 h-6 text-[#a8cab9] flex-shrink-0" />
+                  <div className="flex flex-col px-1 max-h-[620px] overflow-y-auto">
+                    {mobileMenuItems.map((item, idx) => (
+                      <button
+                        key={idx}
+                        className="flex items-center gap-4 p-4 text-left w-full"
+                        data-testid={`button-mobile-submenu-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        <div className="w-[108px] h-[108px] md:w-[140px] md:h-[140px] rounded flex-shrink-0 overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover rounded"
+                          />
                         </div>
-                        <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] leading-[24px] text-[#a8cab9]">
-                          {item.description}
-                        </p>
-                      </div>
-                    </button>
-                  ))}
+                        <div className="flex-1 flex flex-col gap-3">
+                          <div className="flex items-center justify-between gap-4">
+                            <span
+                              className="[font-family:'Playfair_Display',serif] font-medium text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]"
+                              style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
+                            >
+                              {item.title}
+                            </span>
+                            <ChevronRightIcon className="w-6 h-6 text-[#a8cab9] flex-shrink-0" />
+                          </div>
+                          <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-[#a8cab9]">
+                            {item.description}
+                          </p>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
