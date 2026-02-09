@@ -1,0 +1,261 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --body-lg-font-family: "Lato", Helvetica;
+  --body-lg-font-size: 24px;
+  --body-lg-font-style: normal;
+  --body-lg-font-weight: 400;
+  --body-lg-letter-spacing: 0px;
+  --body-lg-line-height: 32px;
+  --body-md-font-family: "Lato", Helvetica;
+  --body-md-font-size: 18px;
+  --body-md-font-style: normal;
+  --body-md-font-weight: 400;
+  --body-md-letter-spacing: 0px;
+  --body-md-line-height: 28px;
+  --body-sm-font-family: "Lato", Helvetica;
+  --body-sm-font-size: 16px;
+  --body-sm-font-style: normal;
+  --body-sm-font-weight: 400;
+  --body-sm-letter-spacing: 0px;
+  --body-sm-line-height: 24px;
+  --body-xs-font-family: "Lato", Helvetica;
+  --body-xs-font-size: 14px;
+  --body-xs-font-style: normal;
+  --body-xs-font-weight: 400;
+  --body-xs-letter-spacing: 0px;
+  --body-xs-line-height: 20px;
+  --display-lg-font-family: "Playfair Display", Helvetica;
+  --display-lg-font-size: 64px;
+  --display-lg-font-style: normal;
+  --display-lg-font-weight: 500;
+  --display-lg-letter-spacing: 0px;
+  --display-lg-line-height: 72px;
+  --functional-md-font-family: "Lato", Helvetica;
+  --functional-md-font-size: 18px;
+  --functional-md-font-style: normal;
+  --functional-md-font-weight: 600;
+  --functional-md-letter-spacing: 0px;
+  --functional-md-line-height: 28px;
+  --heading-lg-font-family: "Playfair Display", Helvetica;
+  --heading-lg-font-size: 52px;
+  --heading-lg-font-style: normal;
+  --heading-lg-font-weight: 500;
+  --heading-lg-letter-spacing: 0px;
+  --heading-lg-line-height: 64px;
+  --heading-md-font-family: "Playfair Display", Helvetica;
+  --heading-md-font-size: 32px;
+  --heading-md-font-style: normal;
+  --heading-md-font-weight: 500;
+  --heading-md-letter-spacing: 0px;
+  --heading-md-line-height: 48px;
+  --heading-sm-font-family: "Playfair Display", Helvetica;
+  --heading-sm-font-size: 24px;
+  --heading-sm-font-style: normal;
+  --heading-sm-font-weight: 500;
+  --heading-sm-letter-spacing: 0px;
+  --heading-sm-line-height: 32px;
+  --lead-md-font-family: "Lato", Helvetica;
+  --lead-md-font-size: 16px;
+  --lead-md-font-style: normal;
+  --lead-md-font-weight: 600;
+  --lead-md-letter-spacing: 3.84px;
+  --lead-md-line-height: 24px;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
