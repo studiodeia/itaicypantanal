@@ -160,11 +160,9 @@ export const PantanalHeroSection = (): JSX.Element => {
       </video>
 
       <div className={`absolute inset-0 transition-all duration-300 ${
-        mobileMenuOpen
+        mobileMenuOpen || isDropdownOpen
           ? "z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
-          : isDropdownOpen
-            ? "z-[1] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
-            : "z-[1] bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
+          : "z-[1] bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
       }`} />
 
       <div
@@ -260,31 +258,36 @@ export const PantanalHeroSection = (): JSX.Element => {
             onMouseEnter={handleDropdownEnter}
             onMouseLeave={handleDropdownLeave}
           >
-            <div className="max-w-[1360px] mx-auto px-10 pt-4 pb-10">
-              <div className="flex gap-6">
+            <div className="max-w-[1440px] mx-auto px-10 pb-10">
+              <div className="flex gap-[32px] h-[316px]">
                 {menuData[desktopActiveDropdown!].items.map((item, idx) => (
                   <button
                     key={idx}
-                    className="relative flex-1 max-w-[440px] h-[280px] rounded-lg overflow-hidden group cursor-pointer text-left"
+                    className="relative w-[316px] h-full rounded-[8px] overflow-hidden group cursor-pointer text-left flex flex-col justify-end"
                     data-testid={`card-menu-desktop-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent rounded-lg" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-                      <div className="flex items-center gap-3">
+                    <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[8px]">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="absolute inset-0 w-full h-full object-cover rounded-[8px]"
+                      />
+                      <div
+                        className="absolute inset-0 rounded-[8px]"
+                        style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0) 31.13%, rgba(0,0,0,0.64) 73.89%), linear-gradient(90deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.16) 100%)" }}
+                      />
+                    </div>
+                    <div className="relative w-full backdrop-blur-[8px] bg-[rgba(255,255,255,0.01)] flex flex-col gap-[12px] p-[16px]">
+                      <div className="flex items-center justify-between gap-[16px] pb-[8px] border-b border-[#f2fcf7]">
                         <span
-                          className="[font-family:'Playfair_Display',serif] font-medium text-[22px] leading-[32px] text-[#f2fcf7]"
+                          className="[font-family:'Playfair_Display',serif] font-medium text-[32px] leading-[48px] text-[#e3f7ec] flex-1 min-w-0"
                           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
                         >
                           {item.title}
                         </span>
-                        <ChevronRightIcon className="w-5 h-5 text-[#f2fcf7] transition-transform duration-200 group-hover:translate-x-1" />
+                        <ChevronRightIcon className="w-6 h-6 text-[#e3f7ec] shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
                       </div>
-                      <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] leading-[24px] text-[#cfebdd]">
+                      <p className="[font-family:'Lato',sans-serif] font-normal text-[14px] leading-[20px] text-[#a8cab9]">
                         {item.description}
                       </p>
                     </div>
