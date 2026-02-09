@@ -24,7 +24,7 @@ const expeditions = [
 export const ExclusiveExpeditionsSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end w-full bg-[#344e41]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
         <header className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
           <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-services-label">
             NOSSOS SERVIÇOS
