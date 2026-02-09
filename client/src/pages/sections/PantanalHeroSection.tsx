@@ -20,12 +20,12 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Culinária",
-        description: "Experiências gastronômicas com ingredientes autênticos do Pantanal.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/menu-culinaria.jpg",
       },
       {
         title: "Acomodações",
-        description: "Suítes exclusivas em harmonia com a natureza pantaneira.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/menu-acomodacoes.jpg",
       },
     ],
@@ -35,17 +35,17 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Pesca Esportiva",
-        description: "Pesque e solte nas águas cristalinas do Pantanal.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/img.png",
       },
       {
         title: "Birdwatching",
-        description: "Observe mais de 400 espécies de aves em seu habitat natural.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/img-1.png",
       },
       {
         title: "Ecoturismo",
-        description: "Trilhas e expedições guiadas pelo maior bioma alagável do mundo.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/menu-ecoturismo.jpg",
       },
     ],
@@ -55,12 +55,12 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Vida Selvagem",
-        description: "Histórias e curiosidades sobre a fauna pantaneira.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/image.png",
       },
       {
         title: "Sustentabilidade",
-        description: "Como preservamos o Pantanal para as próximas gerações.",
+        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
         image: "/figmaAssets/image-2.png",
       },
     ],
@@ -80,9 +80,10 @@ export const PantanalHeroSection = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
   const [desktopActiveDropdown, setDesktopActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const isDropdownOpen = desktopActiveDropdown !== null && menuData[desktopActiveDropdown] !== undefined;
 
   const handleDesktopNavEnter = useCallback((label: string) => {
     if (closeTimeoutRef.current) {
@@ -129,10 +130,8 @@ export const PantanalHeroSection = (): JSX.Element => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
         desktopActiveDropdown &&
-        dropdownRef.current &&
-        navRef.current &&
-        !dropdownRef.current.contains(e.target as Node) &&
-        !navRef.current.contains(e.target as Node)
+        headerRef.current &&
+        !headerRef.current.contains(e.target as Node)
       ) {
         setDesktopActiveDropdown(null);
       }
@@ -152,138 +151,148 @@ export const PantanalHeroSection = (): JSX.Element => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className={`absolute inset-0 w-full h-full object-cover transition-[filter] duration-300 ${
+          isDropdownOpen ? "blur-[8px] scale-105" : ""
+        }`}
         data-testid="video-hero-background"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)] z-[1]" />
+      <div className={`absolute inset-0 z-[1] transition-all duration-300 ${
+        isDropdownOpen
+          ? "bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
+          : "bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
+      }`} />
 
-      <header className="absolute top-0 left-0 w-full flex flex-col items-center justify-center gap-2 px-5 md:px-8 lg:px-10 py-3 md:py-6 lg:py-8 z-20">
-        <nav className="flex max-w-[1360px] items-center justify-between w-full">
-          <img
-            className="w-[104px] md:w-[115px] lg:w-[130.43px] h-auto"
-            alt="Logo"
-            src="/figmaAssets/logo.svg"
-            data-testid="img-logo"
-          />
+      <div
+        ref={headerRef}
+        className={`absolute top-0 left-0 w-full z-20 transition-colors duration-300 ${
+          isDropdownOpen ? "bg-[#263a30]" : ""
+        }`}
+        onMouseLeave={handleDesktopNavLeave}
+      >
+        <header className="flex flex-col items-center justify-center gap-2 px-5 md:px-8 lg:px-10 py-3 md:py-6 lg:py-8">
+          <nav className="flex max-w-[1360px] items-center justify-between w-full relative">
+            <img
+              className="w-[104px] md:w-[115px] lg:w-[130.43px] h-auto"
+              alt="Logo"
+              src="/figmaAssets/logo.svg"
+              data-testid="img-logo"
+            />
 
-          <div className="flex items-center gap-4">
-            <Button
-              variant="ghost"
-              className="hidden md:flex text-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
-              data-testid="button-language"
-            >
-              PT
-              <ChevronDownIcon className="w-5 h-5 md:w-7 md:h-7" />
-            </Button>
+            <div className="hidden lg:flex items-center gap-1" onMouseLeave={(e) => {
+              if (!(e.relatedTarget instanceof Node) || !headerRef.current?.contains(e.relatedTarget)) {
+                handleDesktopNavLeave();
+              }
+            }}>
+              {navigationItems.map((item, index) => (
+                <button
+                  key={index}
+                  className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
+                    isDropdownOpen
+                      ? desktopActiveDropdown === item.label
+                        ? "text-[#f2fcf7]"
+                        : "text-[#cfebdd]"
+                      : item.active
+                        ? "text-[#e3f7ec]"
+                        : "text-[#a8cab9]"
+                  } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
+                  data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  onMouseEnter={() => item.hasDropdown && handleDesktopNavEnter(item.label)}
+                  onClick={() => {
+                    if (item.hasDropdown) {
+                      setDesktopActiveDropdown(desktopActiveDropdown === item.label ? null : item.label);
+                    }
+                  }}
+                >
+                  {item.label}
+                  {item.hasDropdown && (
+                    <ChevronDownIcon
+                      className={`w-5 h-5 transition-transform duration-200 ${
+                        desktopActiveDropdown === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
 
-            <Button
-              className="bg-[#ac8042] text-[#f2fcf7] rounded font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
-              data-testid="button-reservar-hero"
-            >
-              Reservar
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden text-[#e3f7ec]"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {mobileMenuOpen ? (
-                <XIcon className="w-7 h-7" />
-              ) : (
-                <MenuIcon className="w-7 h-7" />
-              )}
-            </Button>
-          </div>
-
-          <div className="hidden lg:flex absolute top-[calc(50.00%_-_24px)] left-[calc(50.00%_-_344px)] items-center" ref={navRef}>
-            {navigationItems.map((item, index) => (
+            <div className="flex items-center gap-4">
               <Button
-                key={index}
                 variant="ghost"
-                className={`h-auto gap-2 px-3 py-2.5 rounded-lg ${
-                  item.active
-                    ? "text-[#e3f7ec]"
-                    : "text-[#a8cab9]"
-                } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
-                data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                onMouseEnter={() => item.hasDropdown && handleDesktopNavEnter(item.label)}
-                onMouseLeave={handleDesktopNavLeave}
-                onClick={() => {
-                  if (item.hasDropdown) {
-                    setDesktopActiveDropdown(desktopActiveDropdown === item.label ? null : item.label);
-                  }
-                }}
+                className="hidden md:flex text-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                data-testid="button-language"
               >
-                {item.label}
-                {item.hasDropdown && (
-                  <ChevronDownIcon
-                    className={`w-5 h-5 transition-transform duration-200 ${
-                      desktopActiveDropdown === item.label ? "rotate-180" : ""
-                    }`}
-                  />
+                PT
+                <ChevronDownIcon className="w-5 h-5 md:w-7 md:h-7" />
+              </Button>
+
+              <Button
+                className="bg-[#ac8042] text-[#f2fcf7] rounded font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                data-testid="button-reservar-hero"
+              >
+                Reservar
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden text-[#e3f7ec]"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                data-testid="button-mobile-menu"
+              >
+                {mobileMenuOpen ? (
+                  <XIcon className="w-7 h-7" />
+                ) : (
+                  <MenuIcon className="w-7 h-7" />
                 )}
               </Button>
-            ))}
-          </div>
-        </nav>
-      </header>
+            </div>
+          </nav>
+        </header>
 
-      {desktopActiveDropdown && menuData[desktopActiveDropdown] && (
-        <>
+        {isDropdownOpen && (
           <div
-            className="hidden lg:block fixed inset-0 bg-black/40 z-30"
-            onClick={() => setDesktopActiveDropdown(null)}
-            data-testid="overlay-desktop-dropdown"
-          />
-          <div
-            ref={dropdownRef}
-            className="hidden lg:block absolute top-[80px] left-0 w-full z-40"
+            className="hidden lg:block w-full bg-[#263a30]"
             onMouseEnter={handleDropdownEnter}
             onMouseLeave={handleDropdownLeave}
           >
-            <div className="bg-[#263a30] w-full">
-              <div className="max-w-[1360px] mx-auto px-10 py-10">
-                <div className="flex gap-6">
-                  {menuData[desktopActiveDropdown].items.map((item, idx) => (
-                    <button
-                      key={idx}
-                      className="relative flex-1 max-w-[400px] h-[280px] rounded-lg overflow-hidden group cursor-pointer text-left"
-                      data-testid={`card-menu-desktop-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-                        <div className="flex items-center gap-3">
-                          <span
-                            className="[font-family:'Playfair_Display',serif] font-medium text-[22px] leading-[32px] text-[#e3f7ec]"
-                            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-                          >
-                            {item.title}
-                          </span>
-                          <ChevronRightIcon className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1" />
-                        </div>
-                        <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] leading-[24px] text-[#a8cab9]">
-                          {item.description}
-                        </p>
+            <div className="max-w-[1360px] mx-auto px-10 pt-4 pb-10">
+              <div className="flex gap-6">
+                {menuData[desktopActiveDropdown!].items.map((item, idx) => (
+                  <button
+                    key={idx}
+                    className="relative flex-1 max-w-[440px] h-[280px] rounded-lg overflow-hidden group cursor-pointer text-left"
+                    data-testid={`card-menu-desktop-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent rounded-lg" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className="[font-family:'Playfair_Display',serif] font-medium text-[22px] leading-[32px] text-[#f2fcf7]"
+                          style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
+                        >
+                          {item.title}
+                        </span>
+                        <ChevronRightIcon className="w-5 h-5 text-[#f2fcf7] transition-transform duration-200 group-hover:translate-x-1" />
                       </div>
-                    </button>
-                  ))}
-                </div>
+                      <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] leading-[24px] text-[#cfebdd]">
+                        {item.description}
+                      </p>
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
-        </>
-      )}
+        )}
+      </div>
 
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex flex-col" data-testid="mobile-menu-overlay">
