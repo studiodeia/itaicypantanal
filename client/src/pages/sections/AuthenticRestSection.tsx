@@ -21,19 +21,19 @@ const features = [
 export const AuthenticRestSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-center w-full bg-[#263a30]">
-      <div className="flex max-w-[1440px] items-center gap-[100px] px-16 py-[100px] w-full">
-        <div className="flex-1 max-w-[780px] h-full min-h-[600px] rounded-lg bg-[url(/figmaAssets/img.png)] bg-cover bg-center" />
+      <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        <div className="w-full lg:flex-1 lg:max-w-[780px] min-h-[300px] md:min-h-[400px] lg:min-h-[600px] rounded-lg bg-[url(/figmaAssets/img.png)] bg-cover bg-center" data-testid="img-about-us" />
 
-        <div className="flex flex-col items-start gap-8 py-8 flex-1">
-          <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]">
+        <div className="flex flex-col items-start gap-6 md:gap-8 py-0 lg:py-8 flex-1 w-full">
+          <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-about-label">
             SOBRE NÓS
           </p>
 
-          <h2 className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] tracking-[var(--heading-lg-letter-spacing)] leading-[var(--heading-lg-line-height)] [font-style:var(--heading-lg-font-style)]">
+          <h2 className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] tracking-[var(--heading-lg-letter-spacing)] leading-[var(--heading-lg-line-height)] [font-style:var(--heading-lg-font-style)]" data-testid="text-about-heading">
             Bem-vindo ao Nosso Refúgio Natural
           </h2>
 
-          <div className="flex flex-col items-start gap-6 w-full">
+          <div className="flex flex-col items-start gap-4 md:gap-6 w-full">
             <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
               Localizada no coração de uma das regiões mais biodiversas do
               mundo, nossa pousada oferece uma experiência única de conexão com
@@ -47,11 +47,11 @@ export const AuthenticRestSection = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-8 w-full">
+          <div className="flex flex-col gap-6 md:gap-8 w-full">
             {features.map((feature, index) => (
               <div key={feature.number}>
-                {index > 0 && <Separator className="bg-[#446354] mb-8" />}
-                <div className="flex items-start gap-6">
+                {index > 0 && <Separator className="bg-[#446354] mb-6 md:mb-8" />}
+                <div className="flex items-start gap-4 md:gap-6">
                   <div className="flex w-8 pt-1.5">
                     <span className="font-body-xs font-[number:var(--body-xs-font-weight)] text-[#6c927f] text-[length:var(--body-xs-font-size)] tracking-[var(--body-xs-letter-spacing)] leading-[var(--body-xs-line-height)] [font-style:var(--body-xs-font-style)]">
                       {feature.number}
@@ -59,7 +59,7 @@ export const AuthenticRestSection = (): JSX.Element => {
                   </div>
 
                   <div className="flex flex-col gap-2 flex-1">
-                    <h3 className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]">
+                    <h3 className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]" data-testid={`text-feature-title-${feature.number}`}>
                       {feature.title}
                     </h3>
 

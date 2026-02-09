@@ -9,65 +9,117 @@
 
 :root {
   --body-lg-font-family: "Lato", Helvetica;
-  --body-lg-font-size: 24px;
+  --body-lg-font-size: 18px;
   --body-lg-font-style: normal;
   --body-lg-font-weight: 400;
   --body-lg-letter-spacing: 0px;
-  --body-lg-line-height: 32px;
+  --body-lg-line-height: 26px;
   --body-md-font-family: "Lato", Helvetica;
-  --body-md-font-size: 18px;
+  --body-md-font-size: 16px;
   --body-md-font-style: normal;
   --body-md-font-weight: 400;
   --body-md-letter-spacing: 0px;
-  --body-md-line-height: 28px;
+  --body-md-line-height: 24px;
   --body-sm-font-family: "Lato", Helvetica;
-  --body-sm-font-size: 16px;
+  --body-sm-font-size: 14px;
   --body-sm-font-style: normal;
   --body-sm-font-weight: 400;
   --body-sm-letter-spacing: 0px;
-  --body-sm-line-height: 24px;
+  --body-sm-line-height: 20px;
   --body-xs-font-family: "Lato", Helvetica;
-  --body-xs-font-size: 14px;
+  --body-xs-font-size: 12px;
   --body-xs-font-style: normal;
   --body-xs-font-weight: 400;
   --body-xs-letter-spacing: 0px;
-  --body-xs-line-height: 20px;
+  --body-xs-line-height: 18px;
   --display-lg-font-family: "Playfair Display", Helvetica;
-  --display-lg-font-size: 64px;
+  --display-lg-font-size: 36px;
   --display-lg-font-style: normal;
   --display-lg-font-weight: 500;
   --display-lg-letter-spacing: 0px;
-  --display-lg-line-height: 72px;
+  --display-lg-line-height: 42px;
   --functional-md-font-family: "Lato", Helvetica;
-  --functional-md-font-size: 18px;
+  --functional-md-font-size: 16px;
   --functional-md-font-style: normal;
   --functional-md-font-weight: 600;
   --functional-md-letter-spacing: 0px;
-  --functional-md-line-height: 28px;
+  --functional-md-line-height: 24px;
   --heading-lg-font-family: "Playfair Display", Helvetica;
-  --heading-lg-font-size: 52px;
+  --heading-lg-font-size: 28px;
   --heading-lg-font-style: normal;
   --heading-lg-font-weight: 500;
   --heading-lg-letter-spacing: 0px;
-  --heading-lg-line-height: 64px;
+  --heading-lg-line-height: 36px;
   --heading-md-font-family: "Playfair Display", Helvetica;
-  --heading-md-font-size: 32px;
+  --heading-md-font-size: 24px;
   --heading-md-font-style: normal;
   --heading-md-font-weight: 500;
   --heading-md-letter-spacing: 0px;
-  --heading-md-line-height: 48px;
+  --heading-md-line-height: 32px;
   --heading-sm-font-family: "Playfair Display", Helvetica;
-  --heading-sm-font-size: 24px;
+  --heading-sm-font-size: 20px;
   --heading-sm-font-style: normal;
   --heading-sm-font-weight: 500;
   --heading-sm-letter-spacing: 0px;
-  --heading-sm-line-height: 32px;
+  --heading-sm-line-height: 28px;
   --lead-md-font-family: "Lato", Helvetica;
-  --lead-md-font-size: 16px;
+  --lead-md-font-size: 14px;
   --lead-md-font-style: normal;
   --lead-md-font-weight: 600;
-  --lead-md-letter-spacing: 3.84px;
-  --lead-md-line-height: 24px;
+  --lead-md-letter-spacing: 3.36px;
+  --lead-md-line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --body-lg-font-size: 20px;
+    --body-lg-line-height: 28px;
+    --body-md-font-size: 16px;
+    --body-md-line-height: 24px;
+    --body-sm-font-size: 14px;
+    --body-sm-line-height: 20px;
+    --body-xs-font-size: 13px;
+    --body-xs-line-height: 18px;
+    --display-lg-font-size: 48px;
+    --display-lg-line-height: 56px;
+    --functional-md-font-size: 16px;
+    --functional-md-line-height: 24px;
+    --heading-lg-font-size: 40px;
+    --heading-lg-line-height: 48px;
+    --heading-md-font-size: 28px;
+    --heading-md-line-height: 40px;
+    --heading-sm-font-size: 22px;
+    --heading-sm-line-height: 30px;
+    --lead-md-font-size: 14px;
+    --lead-md-letter-spacing: 3.36px;
+    --lead-md-line-height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --body-lg-font-size: 24px;
+    --body-lg-line-height: 32px;
+    --body-md-font-size: 18px;
+    --body-md-line-height: 28px;
+    --body-sm-font-size: 16px;
+    --body-sm-line-height: 24px;
+    --body-xs-font-size: 14px;
+    --body-xs-line-height: 20px;
+    --display-lg-font-size: 64px;
+    --display-lg-line-height: 72px;
+    --functional-md-font-size: 18px;
+    --functional-md-line-height: 28px;
+    --heading-lg-font-size: 52px;
+    --heading-lg-line-height: 64px;
+    --heading-md-font-size: 32px;
+    --heading-md-line-height: 48px;
+    --heading-sm-font-size: 24px;
+    --heading-sm-line-height: 32px;
+    --lead-md-font-size: 16px;
+    --lead-md-letter-spacing: 3.84px;
+    --lead-md-line-height: 24px;
+  }
 }
 
 :root {
@@ -258,4 +310,13 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

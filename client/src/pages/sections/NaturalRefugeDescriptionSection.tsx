@@ -24,23 +24,23 @@ const impactItems = [
 export const NaturalRefugeDescriptionSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-center w-full bg-[#fcf4ed]">
-      <div className="flex max-w-[1440px] items-center gap-[100px] px-16 py-[100px] w-full">
-        <div className="flex-1 max-w-[780px] h-[816px] bg-[url(/figmaAssets/img-1.png)] bg-cover bg-center rounded-lg" />
+      <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        <div className="w-full lg:flex-1 lg:max-w-[780px] min-h-[300px] md:min-h-[400px] lg:h-[816px] bg-[url(/figmaAssets/img-1.png)] bg-cover bg-center rounded-lg" data-testid="img-impact" />
 
-        <div className="flex flex-col items-start gap-8 py-8 flex-1">
-          <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#446354] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]">
+        <div className="flex flex-col items-start gap-6 md:gap-8 py-0 lg:py-8 flex-1 w-full">
+          <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#446354] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-impact-label">
             NOSSO IMPACTO
           </p>
 
-          <h2 className="self-stretch text-[#263a30] font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] tracking-[var(--heading-lg-letter-spacing)] leading-[var(--heading-lg-line-height)] [font-style:var(--heading-lg-font-style)]">
+          <h2 className="self-stretch text-[#263a30] font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] tracking-[var(--heading-lg-letter-spacing)] leading-[var(--heading-lg-line-height)] [font-style:var(--heading-lg-font-style)]" data-testid="text-impact-heading">
             Compromisso com a Natureza, Impacto na Comunidade
           </h2>
 
-          <div className="flex flex-col items-start gap-8 self-stretch w-full">
+          <div className="flex flex-col items-start gap-6 md:gap-8 self-stretch w-full">
             {impactItems.map((item, index) => (
               <div key={item.number}>
-                {index > 0 && <Separator className="bg-[#a8cab9] mb-8" />}
-                <div className="flex items-start gap-6">
+                {index > 0 && <Separator className="bg-[#a8cab9] mb-6 md:mb-8" />}
+                <div className="flex items-start gap-4 md:gap-6">
                   <div className="flex w-8 items-start pt-1.5">
                     <span className="flex-1 font-body-xs font-[number:var(--body-xs-font-weight)] text-[#8aad9c] text-[length:var(--body-xs-font-size)] leading-[var(--body-xs-line-height)] tracking-[var(--body-xs-letter-spacing)] [font-style:var(--body-xs-font-style)]">
                       {item.number}
@@ -48,7 +48,7 @@ export const NaturalRefugeDescriptionSection = (): JSX.Element => {
                   </div>
 
                   <div className="flex-1 flex flex-col items-start gap-2">
-                    <h3 className="self-stretch font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#263a30] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]">
+                    <h3 className="self-stretch font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#263a30] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]" data-testid={`text-impact-title-${item.number}`}>
                       {item.title}
                     </h3>
 
