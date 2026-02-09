@@ -36,7 +36,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
 
           <Button
             variant="ghost"
-            className="flex items-center justify-between gap-4 px-0 py-3 md:py-4 w-full h-auto border-b border-solid border-[#f2fcf7] rounded-none"
+            className="hidden items-center justify-between gap-4 px-0 py-3 md:py-4 w-full h-auto border-b border-solid border-[#f2fcf7] rounded-none"
             data-testid="button-manifesto-details"
           >
             <span className="hidden flex-1 text-left font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
