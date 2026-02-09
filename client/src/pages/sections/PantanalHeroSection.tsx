@@ -159,10 +159,12 @@ export const PantanalHeroSection = (): JSX.Element => {
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
 
-      <div className={`absolute inset-0 z-[1] transition-all duration-300 ${
-        isDropdownOpen || mobileMenuOpen
-          ? "bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
-          : "bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
+      <div className={`absolute inset-0 transition-all duration-300 ${
+        mobileMenuOpen
+          ? "z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
+          : isDropdownOpen
+            ? "z-[1] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
+            : "z-[1] bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
       }`} />
 
       <div
@@ -400,7 +402,7 @@ export const PantanalHeroSection = (): JSX.Element => {
         </div>
       )}
 
-      <div className={`relative z-[2] flex flex-col lg:flex-row max-w-[1440px] items-end justify-end gap-[48px] lg:gap-[100px] px-5 md:px-8 lg:px-16 py-[48px] md:py-12 lg:py-[100px] w-full flex-1 transition-[filter] duration-300 ${mobileMenuOpen ? "blur-[8px]" : ""}`}>
+      <div className="relative z-[2] flex flex-col lg:flex-row max-w-[1440px] items-end justify-end gap-[48px] lg:gap-[100px] px-5 md:px-8 lg:px-16 py-[48px] md:py-12 lg:py-[100px] w-full flex-1">
         <div className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden">
           <h1 className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] max-w-[592px]" data-testid="text-hero-heading" style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}>
             O Pantanal como você nunca sentiu.
