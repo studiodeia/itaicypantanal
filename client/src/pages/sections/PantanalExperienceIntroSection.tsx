@@ -16,22 +16,20 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
 
   return (
     <section className="flex flex-col items-center justify-center bg-[#263a30] w-full relative z-10">
-      <div className="flex flex-col max-w-[1440px] items-center gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="flex flex-col items-start gap-6 md:gap-8 w-full">
-          <p className="flex items-center justify-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-manifesto-label">
+          <p className="w-full md:flex md:items-center md:justify-center font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-manifesto-label">
             MANIFESTO
           </p>
 
-          <h1 className="flex items-center justify-center w-full [font-family:'Playfair_Display',Helvetica] font-normal text-transparent text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]" data-testid="text-manifesto-heading">
+          <h1 className="w-full text-left md:text-center [font-family:'Playfair_Display',Helvetica] font-normal text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]" data-testid="text-manifesto-heading">
             {headingSegments.map((segment, index) => (
-              <span key={index}>
-                <span
-                  className="font-[number:var(--display-lg-font-weight)] leading-[var(--display-lg-line-height)] font-display-lg [font-style:var(--display-lg-font-style)] tracking-[var(--display-lg-letter-spacing)] text-[length:var(--display-lg-font-size)]"
-                  style={{ color: segment.color }}
-                >
-                  {segment.text}
-                </span>
-                {segment.lineBreak && <br />}
+              <span
+                key={index}
+                className="font-[number:var(--display-lg-font-weight)] leading-[var(--display-lg-line-height)] font-display-lg [font-style:var(--display-lg-font-style)] tracking-[var(--display-lg-letter-spacing)] text-[length:var(--display-lg-font-size)]"
+                style={{ color: segment.color }}
+              >
+                {segment.text}
               </span>
             ))}
           </h1>

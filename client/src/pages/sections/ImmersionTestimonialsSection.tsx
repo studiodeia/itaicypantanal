@@ -71,9 +71,9 @@ const testimonials = [
 export const ImmersionTestimonialsSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end bg-[#344e41] w-full">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="flex flex-col items-start gap-6 md:gap-8 w-full">
-          <div className="flex items-center justify-center w-fit font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] whitespace-nowrap [font-style:var(--lead-md-font-style)]" data-testid="text-testimonials-label">
+          <div className="flex items-center w-fit font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] whitespace-nowrap [font-style:var(--lead-md-font-style)]" data-testid="text-testimonials-label">
             DEPOIMENTOS
           </div>
 
@@ -93,10 +93,10 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="flex-shrink-0 w-[300px] md:w-[360px] lg:w-[443px] h-[380px] md:h-[420px] lg:h-[464px] bg-[#263a30] border-none rounded-lg overflow-hidden"
+              className="flex-shrink-0 w-[310px] md:w-[360px] lg:w-[443px] h-[400px] md:h-[420px] lg:h-[464px] bg-[#263a30] border-none rounded-lg overflow-hidden"
               data-testid={`card-testimonial-${index}`}
             >
-              <CardContent className="flex flex-col items-start justify-between h-full p-5 md:p-6 lg:p-8 gap-6 md:gap-8 lg:gap-[34px]">
+              <CardContent className="flex flex-col items-start justify-between h-full p-8 md:p-6 lg:p-8 gap-6 md:gap-8 lg:gap-[34px]">
                 <div className="flex flex-col items-start gap-6 md:gap-8 w-full">
                   <h3 className="w-full font-heading-md font-[number:var(--heading-md-font-weight)] text-[#e3f7ec] text-[length:var(--heading-md-font-size)] tracking-[var(--heading-md-letter-spacing)] leading-[var(--heading-md-line-height)] [font-style:var(--heading-md-font-style)]">
                     {testimonial.title}

@@ -1,7 +1,13 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { ChevronRightIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+
+const mobileNavLinks = [
+  { label: "Pousada", href: "#" },
+  { label: "Experiências", href: "#" },
+  { label: "Fale conosco", href: "#" },
+];
 
 const pousadaLinks = [
   { label: "Home", href: "#" },
@@ -42,7 +48,7 @@ const legalLinks = [
 export const SiteFooterSection = (): JSX.Element => {
   return (
     <footer className="flex flex-col items-center justify-end w-full bg-[#263a30]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="flex flex-col lg:flex-row items-start gap-10 md:gap-12 lg:gap-[100px] w-full">
           <div className="flex flex-col items-start gap-8 md:gap-10 lg:gap-12 flex-1 w-full">
             <img
@@ -85,7 +91,21 @@ export const SiteFooterSection = (): JSX.Element => {
             </div>
           </div>
 
-          <nav className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full lg:w-auto">
+          <div className="flex flex-col w-full md:hidden">
+            {mobileNavLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="flex items-center justify-between py-4 border-b border-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                data-testid={`link-footer-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                {link.label}
+                <ChevronRightIcon className="w-5 h-5 text-[#e3f7ec]" />
+              </a>
+            ))}
+          </div>
+
+          <nav className="hidden md:grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full lg:w-auto">
             <div className="flex flex-col items-start gap-4 md:gap-6">
               <h3 className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]">
                 POUSADA

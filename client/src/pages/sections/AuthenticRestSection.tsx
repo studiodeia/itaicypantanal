@@ -21,8 +21,8 @@ const features = [
 export const AuthenticRestSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-center w-full bg-[#263a30]">
-      <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-10 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
-        <div className="w-full lg:flex-1 lg:max-w-[780px] min-h-[300px] md:min-h-[400px] lg:min-h-[600px] rounded-lg bg-[url(/figmaAssets/img.png)] bg-cover bg-center" data-testid="img-about-us" />
+      <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
+        <div className="w-full lg:flex-1 lg:max-w-[780px] h-[464px] md:min-h-[400px] md:h-auto lg:min-h-[600px] rounded-lg bg-[url(/figmaAssets/img.png)] bg-cover bg-center" data-testid="img-about-us" />
 
         <div className="flex flex-col items-start gap-6 md:gap-8 py-0 lg:py-8 flex-1 w-full">
           <p className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-about-label">
@@ -47,10 +47,10 @@ export const AuthenticRestSection = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-6 md:gap-8 w-full">
+          <div className="flex flex-col gap-0 md:gap-8 w-full">
             {features.map((feature, index) => (
-              <div key={feature.number}>
-                {index > 0 && <Separator className="bg-[#446354] mb-6 md:mb-8" />}
+              <div key={feature.number} className={index > 0 ? "border-t border-[#a8cab9] pt-6 md:border-t-0 md:pt-0" : ""}>
+                {index > 0 && <Separator className="hidden md:block bg-[#a8cab9] mb-6 md:mb-8" />}
                 <div className="flex items-start gap-4 md:gap-6">
                   <div className="flex w-8 pt-1.5">
                     <span className="font-body-xs font-[number:var(--body-xs-font-weight)] text-[#6c927f] text-[length:var(--body-xs-font-size)] tracking-[var(--body-xs-letter-spacing)] leading-[var(--body-xs-line-height)] [font-style:var(--body-xs-font-style)]">

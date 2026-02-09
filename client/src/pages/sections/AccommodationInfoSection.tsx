@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export const AccommodationInfoSection = (): JSX.Element => {
   return (
-    <section className="min-h-[500px] md:min-h-[600px] lg:min-h-[740px] items-start justify-center z-[6] bg-[linear-gradient(270deg,rgba(21,34,24,0)_0%,rgba(21,34,24,0.64)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%),url(..//figmaAssets/section---acomoda--es.png)] bg-cover bg-center flex flex-col w-full">
-      <div className="flex max-w-[1440px] mx-auto items-center gap-8 md:gap-16 lg:gap-[100px] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+    <section className="h-[868px] md:min-h-[600px] md:h-auto lg:min-h-[740px] items-start justify-end md:justify-center z-[6] bg-[linear-gradient(270deg,rgba(21,34,24,0)_0%,rgba(21,34,24,0.64)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%),url(..//figmaAssets/section---acomoda--es.png)] bg-cover bg-center flex flex-col w-full">
+      <div className="flex max-w-[1440px] mx-auto items-center gap-8 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
         <div className="flex-1 flex flex-col items-start gap-6 md:gap-8">
           <p className="w-fit font-lead-md font-[number:var(--lead-md-font-weight)] text-[#e3f7ec] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-accommodations-label">
             ACOMODAÇÕES

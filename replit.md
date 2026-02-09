@@ -4,6 +4,20 @@
 A website for Itaicy, a Pantanal (Brazilian wetlands) eco-tourism and accommodation experience. Imported from Figma design. Built with React, Express, TypeScript, and Tailwind CSS.
 
 ## Recent Changes
+- 2026-02-09: Refined mobile responsive layout across all 12 sections to match Figma 390px specs:
+  - Global: px-5 (20px) horizontal padding, gap-12 mobile vertical gaps, lg:px-10 desktop padding
+  - Hero: 844px mobile height with video background
+  - Manifesto: Left-aligned text on mobile, centered on md+
+  - Sobre nós: 464px mobile image height, feature separators with borders
+  - Nossos serviços: 464px card heights, shadcn Button for card actions
+  - Stats: Centered 2x2 grid on mobile
+  - Acomodações: 868px mobile height, bottom-aligned content
+  - Testimonials: 310px cards, 32px padding, horizontal scroll
+  - Nosso impacto: 464px image, py-8 text padding
+  - FAQ: Hidden numbers on mobile, body-md answer text
+  - Blog: Horizontal scroll with 350px cards, 22px title font
+  - CTA: 844px fixed height mobile, full-width button
+  - Footer: Simplified mobile nav with chevron buttons
 - 2026-02-09: Added fully responsive design across all 12 section components (mobile 390px, tablet 768px, desktop 1024px+) with mobile-first Tailwind breakpoints, responsive CSS typography variables, hamburger menu for mobile/tablet, and scrollbar-hide utility
 - 2025-02-09: Initial Figma import and migration to Replit environment
 
