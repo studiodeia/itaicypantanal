@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
 
 export const PantanalExperienceIntroSection = (): JSX.Element => {
   const headingSegments = [
@@ -17,12 +19,12 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-center bg-[#263a30] w-full relative z-10">
       <div className="flex flex-col max-w-[1440px] items-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
-        <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
-          <p className="w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-manifesto-label">
+        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
+          <motion.p variants={fadeIn} className="w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-manifesto-label">
             MANIFESTO
-          </p>
+          </motion.p>
 
-          <h1 className="w-full text-left [font-family:'Playfair_Display',Helvetica] font-normal text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]" data-testid="text-manifesto-heading">
+          <motion.h1 variants={fadeUp} className="w-full text-left [font-family:'Playfair_Display',Helvetica] font-normal text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]" data-testid="text-manifesto-heading">
             {headingSegments.map((segment, index) => (
               <span
                 key={index}
@@ -32,7 +34,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
                 {segment.text}
               </span>
             ))}
-          </h1>
+          </motion.h1>
 
           <Button
             variant="ghost"
@@ -44,7 +46,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
             </span>
             <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 text-[#e3f7ec]" />
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

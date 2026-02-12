@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import {
   Avatar,
@@ -7,6 +8,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const blogPosts = [
   {
@@ -17,11 +19,11 @@ const blogPosts = [
       "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
     author: {
       name: "Lucas Vieira",
-      avatar: "/figmaAssets/ellipse-1-2.png",
+      avatar: "/images/home/blog-avatar.webp",
       initials: "LV",
     },
     date: "09 de Agosto, 2025",
-    image: "/figmaAssets/frame-2-2.png",
+    image: "/images/home/blog-card.webp",
   },
   {
     id: 2,
@@ -31,11 +33,11 @@ const blogPosts = [
       "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
     author: {
       name: "Lucas Vieira",
-      avatar: "/figmaAssets/ellipse-1-2.png",
+      avatar: "/images/home/blog-avatar.webp",
       initials: "LV",
     },
     date: "09 de Agosto, 2025",
-    image: "/figmaAssets/frame-2-2.png",
+    image: "/images/home/blog-card.webp",
   },
   {
     id: 3,
@@ -45,11 +47,11 @@ const blogPosts = [
       "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
     author: {
       name: "Lucas Vieira",
-      avatar: "/figmaAssets/ellipse-1-2.png",
+      avatar: "/images/home/blog-avatar.webp",
       initials: "LV",
     },
     date: "09 de Agosto, 2025",
-    image: "/figmaAssets/frame-2-2.png",
+    image: "/images/home/blog-card.webp",
   },
 ];
 
@@ -57,25 +59,26 @@ export const PantanalBlogSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-end gap-8 w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
-        <header className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
-          <div className="flex items-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-blog-label">
+        <motion.header variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
+          <motion.div variants={fadeIn} className="flex items-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-blog-label">
             BLOG
-          </div>
+          </motion.div>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 md:gap-6 lg:gap-[100px] w-full">
-            <h2 className="w-full lg:w-[664px] font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]" data-testid="text-blog-heading">
+            <motion.h2 variants={fadeUp} className="w-full lg:w-[664px] font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]" data-testid="text-blog-heading">
               Diário do Pantanal
-            </h2>
+            </motion.h2>
 
-            <p className="w-full lg:flex-1 font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
+            <motion.p variants={fadeUp} className="w-full lg:flex-1 font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
               O que nossos viajantes dizem sobre a experiência autêntica de se
               desconectar na natureza selvagem da Itaicy Ecoturismo.
-            </p>
+            </motion.p>
           </div>
-        </header>
+        </motion.header>
 
-        <div className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
+        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
           {blogPosts.map((post) => (
+            <motion.div key={post.id} variants={cardItem}>
             <Card
               key={post.id}
               className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink lg:w-[416px]"
@@ -121,8 +124,9 @@ export const PantanalBlogSection = (): JSX.Element => {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <Button
           variant="ghost"

@@ -4,3 +4,14 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Temporary files
+tmp/
+
+# Legacy unoptimized assets (migrated to /images/)
+client/public/figmaAssets/acomodacoes/
+client/public/figmaAssets/culinaria/
+client/public/figmaAssets/section - cta.png
+
+# Large media
+*.mp4
