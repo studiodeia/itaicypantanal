@@ -1,0 +1,109 @@
+/* Itaicy Pantanal — Admin Panel Brand Override */
+
+/* Import Google Fonts for admin */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Pantanal palette mapped to Payload elevation system */
+  --theme-elevation-0: #fcf4ed;     /* cream - main background */
+  --theme-elevation-50: #f5e8db;    /* warm sand */
+  --theme-elevation-100: #ede0d2;
+  --theme-elevation-150: #e5d8c8;
+  --theme-elevation-200: #ddd0be;
+  --theme-elevation-250: #d5c8b4;
+  --theme-elevation-300: #cdc0aa;
+  --theme-elevation-350: #c5b8a0;
+  --theme-elevation-400: #bdb096;
+  --theme-elevation-450: #b5a88c;
+  --theme-elevation-500: #ac8042;   /* gold accent */
+  --theme-elevation-600: #8f6a35;   /* gold hover */
+  --theme-elevation-700: #446354;   /* muted green */
+  --theme-elevation-800: #344e41;   /* medium green */
+  --theme-elevation-900: #263a30;   /* dark secondary */
+  --theme-elevation-950: #1a2e23;
+  --theme-elevation-1000: #152218;  /* darkest */
+
+  /* Semantic - success uses green palette */
+  --color-success-500: #344e41;
+
+  /* Semantic - warning uses gold */
+  --color-warning-500: #ac8042;
+
+  /* Radius */
+  --style-radius-s: 4px;
+  --style-radius-m: 8px;
+  --style-radius-l: 12px;
+}
+
+/* Dark mode - inverted for admin editors who prefer dark */
+[data-theme='dark'] {
+  --theme-elevation-0: #152218;
+  --theme-elevation-50: #1a2e23;
+  --theme-elevation-100: #263a30;
+  --theme-elevation-150: #2d4238;
+  --theme-elevation-200: #344e41;
+  --theme-elevation-250: #3b5a49;
+  --theme-elevation-300: #446354;
+  --theme-elevation-350: #4d6f5f;
+  --theme-elevation-400: #567b6a;
+  --theme-elevation-450: #6c927f;
+  --theme-elevation-500: #ac8042;
+  --theme-elevation-600: #d7a45d;
+  --theme-elevation-700: #a8cab9;
+  --theme-elevation-800: #cfebdd;
+  --theme-elevation-900: #e3f7ec;
+  --theme-elevation-950: #f2fcf7;
+  --theme-elevation-1000: #fcf4ed;
+}
+
+/* Login page branding */
+.login {
+  &__brand {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Nav sidebar brand area */
+.nav {
+  &__brand {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Collection group labels */
+.nav__group-label {
+  font-family: var(--font-serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* Dashboard card hover */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(21, 34, 24, 0.1);
+  }
+}
+
+/* Buttons - gold accent for primary */
+.btn {
+  font-family: var(--font-body);
+  border-radius: var(--style-radius-m);
+  transition: all 0.2s ease;
+}
+
+/* Table headers use serif */
+.table .row .cell--header {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}

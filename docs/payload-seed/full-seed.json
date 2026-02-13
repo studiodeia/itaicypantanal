@@ -1,0 +1,704 @@
+{
+  "generatedAt": "2026-02-12T15:21:57.692Z",
+  "notes": {
+    "source": "Conteudo exportado do frontend atual para seed inicial do Payload CMS.",
+    "strategy": "Manter dados atuais como fallback; usar este seed para popular o CMS com paridade."
+  },
+  "blog": {
+    "categories": [
+      "Aventura",
+      "Gastronomia",
+      "Conservação",
+      "Sustentabilidade",
+      "Roteiros Exclusivos",
+      "Eventos e Workshops"
+    ],
+    "posts": [
+      {
+        "slug": "guia-observacao-166-especies-aves",
+        "title": "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy",
+        "subtitle": "Aventura",
+        "description": "Em uma expedição de apenas 5 dias, catalogamos 166 espécies de aves em nossa reserva. Neste guia, apresentamos a lista completa para você.",
+        "tag": "Aventura",
+        "primaryCategory": "Aventura",
+        "categories": [
+          "Aventura",
+          "Conservação"
+        ],
+        "src": "/images/blog-hero-bg",
+        "author": "Lucas José Fernandes Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "10 minutos de leitura"
+      },
+      {
+        "slug": "arara-azul-pantanal",
+        "title": "Arara-Azul",
+        "subtitle": "Anodorhynchus hyacinthinus",
+        "description": "A maior arara do mundo, símbolo do Pantanal. Suas plumagens azul-cobalto hipnotizam observadores.",
+        "tag": "Fauna",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação",
+          "Aventura"
+        ],
+        "src": "/images/blog-recent-1",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "15 minutos de leitura"
+      },
+      {
+        "slug": "arara-vermelha-pantanal",
+        "title": "Arara-Vermelha",
+        "subtitle": "Ara chloropterus",
+        "description": "Ave de grande porte, possui plumagem vermelha e é conhecida por seu canto potente que ressoa nas florestas do Pantanal.",
+        "tag": "Fauna",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação"
+        ],
+        "src": "/images/blog-recent-2",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "12 minutos de leitura"
+      },
+      {
+        "slug": "ibis-preto-pantanal",
+        "title": "Íbis-Preto",
+        "subtitle": "Plegadis chihi",
+        "description": "Ave aquática que se destaca pelo seu longo bico curvo e plumagem iridescente, comum em áreas alagadas.",
+        "tag": "Fauna",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação"
+        ],
+        "src": "/images/blog-recent-3",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "10 minutos de leitura"
+      },
+      {
+        "slug": "guia-100-especies-mamiferos",
+        "title": "Guia Prático: As 100 Espécies de Mamíferos do Pantanal",
+        "subtitle": "20 minutos de leitura",
+        "tag": "Fauna",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação",
+          "Aventura"
+        ],
+        "src": "/images/blog-article-1",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "20 minutos de leitura"
+      },
+      {
+        "slug": "biodiversidade-plantas-nativas",
+        "title": "Explorando a Biodiversidade: 50 Plantas Nativas do Brasil",
+        "subtitle": "30 minutos de leitura",
+        "tag": "Conservação",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação",
+          "Sustentabilidade"
+        ],
+        "src": "/images/blog-article-2",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "30 minutos de leitura"
+      },
+      {
+        "slug": "rios-lagos-vida-aquatica",
+        "title": "Rios e Lagos: A Vida Aquática do Brasil",
+        "subtitle": "25 minutos de leitura",
+        "tag": "Aventura",
+        "primaryCategory": "Aventura",
+        "categories": [
+          "Aventura"
+        ],
+        "src": "/images/blog-article-3",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "25 minutos de leitura"
+      },
+      {
+        "slug": "receitas-pantaneiras-sabores",
+        "title": "Receitas Pantaneiras: Os Sabores Autênticos da Terra",
+        "subtitle": "15 minutos de leitura",
+        "tag": "Gastronomia",
+        "primaryCategory": "Gastronomia",
+        "categories": [
+          "Gastronomia"
+        ],
+        "src": "/images/blog-article-4",
+        "author": "Lucas Vieira",
+        "date": "15 de Julho, 2025",
+        "readingTime": "15 minutos de leitura"
+      },
+      {
+        "slug": "turismo-sustentavel-pantanal",
+        "title": "Turismo Sustentável: Como Preservar o Pantanal",
+        "subtitle": "20 minutos de leitura",
+        "tag": "Sustentabilidade",
+        "primaryCategory": "Sustentabilidade",
+        "categories": [
+          "Sustentabilidade",
+          "Conservação"
+        ],
+        "src": "/images/blog-article-5",
+        "author": "Lucas Vieira",
+        "date": "10 de Julho, 2025",
+        "readingTime": "20 minutos de leitura"
+      },
+      {
+        "slug": "trilha-rio-cuiaba-roteiro",
+        "title": "Trilha do Rio Cuiabá: Roteiro Completo de 3 Dias",
+        "subtitle": "25 minutos de leitura",
+        "tag": "Roteiros Exclusivos",
+        "primaryCategory": "Roteiros Exclusivos",
+        "categories": [
+          "Roteiros Exclusivos",
+          "Aventura"
+        ],
+        "src": "/images/blog-article-6",
+        "author": "Lucas Vieira",
+        "date": "05 de Julho, 2025",
+        "readingTime": "25 minutos de leitura"
+      },
+      {
+        "slug": "workshop-fotografia-natureza",
+        "title": "Workshop de Fotografia: Capturando a Essência do Pantanal",
+        "subtitle": "10 minutos de leitura",
+        "tag": "Eventos e Workshops",
+        "primaryCategory": "Eventos e Workshops",
+        "categories": [
+          "Eventos e Workshops"
+        ],
+        "src": "/images/blog-article-7",
+        "author": "Lucas Vieira",
+        "date": "01 de Julho, 2025",
+        "readingTime": "10 minutos de leitura"
+      },
+      {
+        "slug": "conservacao-araras-projeto",
+        "title": "Conservação das Araras: Um Projeto de Sucesso no Pantanal",
+        "subtitle": "20 minutos de leitura",
+        "tag": "Conservação",
+        "primaryCategory": "Conservação",
+        "categories": [
+          "Conservação"
+        ],
+        "src": "/images/blog-article-8",
+        "author": "Lucas Vieira",
+        "date": "25 de Junho, 2025",
+        "readingTime": "20 minutos de leitura"
+      },
+      {
+        "slug": "pesca-esportiva-guia-iniciantes",
+        "title": "Pesca Esportiva: Guia Completo para Iniciantes",
+        "subtitle": "30 minutos de leitura",
+        "tag": "Aventura",
+        "primaryCategory": "Aventura",
+        "categories": [
+          "Aventura"
+        ],
+        "src": "/images/blog-article-9",
+        "author": "Lucas Vieira",
+        "date": "20 de Junho, 2025",
+        "readingTime": "30 minutos de leitura"
+      }
+    ],
+    "details": [
+      {
+        "slug": "guia-observacao-166-especies-aves",
+        "title": "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy",
+        "subtitle": "Aventura",
+        "description": "Em uma expedição de apenas 5 dias, catalogamos 166 espécies de aves em nossa reserva. Neste guia, apresentamos a lista completa para você.",
+        "tag": "Aventura",
+        "primaryCategory": "Aventura",
+        "categories": [
+          "Aventura",
+          "Conservação"
+        ],
+        "src": "/images/blog-hero-bg",
+        "author": "Lucas José Fernandes Vieira",
+        "date": "09 de Agosto, 2025",
+        "readingTime": "10 minutos de leitura",
+        "heroImage": "/images/article-hero",
+        "relatedSlugs": [
+          "arara-azul-pantanal",
+          "arara-vermelha-pantanal",
+          "ibis-preto-pantanal"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "O Pantanal é, por si só, um dos maiores e mais ricos santuários de vida selvagem do planeta. Mas o que acontece quando você tem acesso a uma porção desse paraíso que é protegida, remota e praticamente intocada pelo turismo de massa?\n\nA resposta é um espetáculo de biodiversidade que supera expectativas. Em uma expedição técnica de apenas 5 dias realizada em nossa reserva, especialistas e guias locais catalogaram um total impressionante de **166 espécies de aves**.\n\nEste guia não é apenas uma lista de verificação; é a prova viva da riqueza do nosso ecossistema e um convite aberto para você explorar esse paraíso conosco."
+          },
+          {
+            "type": "heading",
+            "text": "Por que a Itaicy é um Santuário para Observadores?"
+          },
+          {
+            "type": "paragraph",
+            "text": "O segredo por trás desse número extraordinário não é o acaso, mas o acesso.\n\nDiferente de outras regiões, a Itaicy Ecoturismo possui autorizações especiais, incluindo contratos com o IBAMA, que nos permitem operar em milhões de hectares de áreas protegidas que são fechadas para o público geral. Na prática, isso significa um ecossistema equilibrado, silencioso e livre da pressão do turismo convencional.\n\nAqui, as aves se comportam com naturalidade, e nossos hóspedes encontram uma experiência de observação autêntica, silenciosa e profundamente imersiva."
+          },
+          {
+            "type": "heading",
+            "text": "Destaques da Nossa Avifauna: As Estrelas do Pantanal"
+          },
+          {
+            "type": "paragraph",
+            "text": "Embora cada uma das 166 espécies seja um espetáculo, algumas são os verdadeiros símbolos da região e avistamentos frequentes em nossas expedições."
+          },
+          {
+            "type": "species",
+            "name": "A Arara-Azul-Grande",
+            "scientificName": "(Anodorhynchus hyacinthinus)",
+            "description": "O ícone do Pantanal. Nossas áreas preservadas de matas e palmeirais são o lar e local de alimentação perfeito para a maior arara do mundo. O som distinto e a cor vibrante dessas aves voando em bandos ao amanhecer é uma memória inesquecível.",
+            "image": "/images/article-arara-azul"
+          },
+          {
+            "type": "species",
+            "name": "O Tuiuiú",
+            "scientificName": "(Jabiru mycteria)",
+            "description": "Conhecido como o símbolo do Pantanal, o Tuiuiú é uma cegonha imponente que pode ser visto nas áreas alagadas. Seu bico longo e reto é adaptado para pescar, e sua presença majestosa é um espetáculo durante a época de reprodução.",
+            "image": "/images/article-tuiuiu"
+          },
+          {
+            "type": "species",
+            "name": "A Garça-Branca-Grande",
+            "scientificName": "(Ardea alba)",
+            "description": "Com seu elegante porte e plumagem branca, a Garça-Branca-Grande é comum nas lagoas e campos do Pantanal. Além de ser um belo exemplo da fauna local, é um predador eficaz, caçando peixes e pequenos animais com agilidade.",
+            "image": "/images/article-garca-branca"
+          },
+          {
+            "type": "heading",
+            "text": "Explore o Guia Completo: O Compêndio da Itaicy"
+          },
+          {
+            "type": "paragraph",
+            "text": "As estrelas acima são apenas o começo. Nossa lista completa inclui dezenas de espécies de aves de rapina, tucanos, pica-paus, aves aquáticas e migratórias.\n\nComo entendemos que esse material é crucial tanto para entusiastas quanto para o ranqueamento de nosso site, preparamos duas ferramentas essenciais:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "O Compêndio Digital Interativo",
+                "text": " Como sugerido em nosso planejamento, criamos uma seção inteira em nosso site que funciona como um \"blog\" de espécies. Lá, você pode buscar por nome, ver fotos de cada ave, ler descrições e aprender sobre seus hábitos—um verdadeiro guia de campo digital."
+              },
+              {
+                "bold": "O Relatório Oficial (PDF para Download)",
+                "text": " Para quem prefere um material de campo, transformamos o relatório técnico original em um PDF bonito e diagramado, perfeito para baixar antes da sua viagem. Ele serve como a \"isca\" perfeita para atrair observadores sérios e como seu checklist pessoal durante a expedição."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Sua Aventura Começa Aqui"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ver esta lista é inspirador, mas observar essas aves ao vivo é transformador. Na Itaicy, sua expedição de Observação de pássaros é completa.\n\nNossos guias locais são especialistas—eles não apenas conhecem os nomes, mas também os cantos, os hábitos e os locais exatos onde as aves mais raras costumam estar. Seja em um passeio de barco silencioso ao amanhecer, em uma caminhada por trilhas exclusivas ou em nossos passeios a cavalo, nosso objetivo é colocar você no lugar certo, na hora certa.\n\nPrepare seus binóculos e sua câmera. O santuário está esperando por você."
+          }
+        ]
+      }
+    ],
+    "featuredSlug": "guia-observacao-166-especies-aves",
+    "recentSlugs": [
+      "arara-azul-pantanal",
+      "arara-vermelha-pantanal",
+      "ibis-preto-pantanal"
+    ]
+  },
+  "birdwatching": {
+    "categories": [
+      "Papagaio",
+      "Aquáticas",
+      "Migratórias",
+      "Noturno Perto"
+    ],
+    "species": [
+      {
+        "slug": "arara-azul",
+        "commonName": "Arara-Azul",
+        "scientificName": "Anodorhynchus hyacinthinus",
+        "description": "A maior arara do mundo, símbolo do Pantanal. Suas plumagens azul-cobalto hipnotizam observadores.",
+        "category": "Papagaio",
+        "tag": "Fauna",
+        "src": "/images/bird-species-1",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025"
+      },
+      {
+        "slug": "joao-pinto",
+        "commonName": "João-pinto",
+        "scientificName": "Icterus croconotus",
+        "description": "O Icterus croconotus, celebra a vida selvagem, a beleza e a importância da preservação do Pantanal.",
+        "category": "Noturno Perto",
+        "tag": "Fauna",
+        "src": "/images/bird-species-2",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025"
+      },
+      {
+        "slug": "anhinga",
+        "commonName": "Anhinga",
+        "scientificName": "Anhinga anhinga",
+        "description": "Conhecida como o 'peixe-espeto', essa ave possui um pescoço longo e é um exímio mergulhador, encontrada frequentemente em rios e lagoas do Pantanal.",
+        "category": "Aquáticas",
+        "tag": "Fauna",
+        "src": "/images/bird-species-3",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025"
+      },
+      {
+        "slug": "tuiuiu",
+        "commonName": "Tuiuiú",
+        "scientificName": "Mycteria americana",
+        "description": "Símbolo do Pantanal, o tuiuiú é uma ave majestosa que se destaca por seu tamanho e plumagem branca, sendo um importante indicador da saúde do ecossistema.",
+        "category": "Aquáticas",
+        "tag": "Fauna",
+        "src": "/images/bird-species-4",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025"
+      },
+      {
+        "slug": "arara-vermelha",
+        "commonName": "Arara-Vermelha",
+        "scientificName": "Ara chloropterus",
+        "description": "Ave de grande porte com plumagem vermelha vibrante. Conhecida por seu canto potente que ressoa nas florestas do Pantanal.",
+        "category": "Papagaio",
+        "tag": "Fauna",
+        "src": "/images/bird-species-5",
+        "author": "Lucas Vieira",
+        "date": "05 de Agosto, 2025"
+      },
+      {
+        "slug": "garca-branca-grande",
+        "commonName": "Garça-Branca-Grande",
+        "scientificName": "Ardea alba",
+        "description": "Com seu elegante porte e plumagem branca, a garça é comum nas lagoas e campos do Pantanal, caçando peixes com agilidade.",
+        "category": "Aquáticas",
+        "tag": "Fauna",
+        "src": "/images/bird-species-6",
+        "author": "Lucas Vieira",
+        "date": "01 de Agosto, 2025"
+      },
+      {
+        "slug": "colhereiro",
+        "commonName": "Colhereiro",
+        "scientificName": "Platalea ajaja",
+        "description": "Com sua plumagem rosada e bico em forma de colher, é uma das aves mais fotogênicas do Pantanal.",
+        "category": "Aquáticas",
+        "tag": "Fauna",
+        "src": "/images/bird-species-7",
+        "author": "Lucas Vieira",
+        "date": "28 de Julho, 2025"
+      },
+      {
+        "slug": "gaviao-real",
+        "commonName": "Gavião-Real",
+        "scientificName": "Harpia harpyja",
+        "description": "O maior e mais poderoso raptor das Américas, com garras maiores que as de um urso. Avistamento raro e emocionante.",
+        "category": "Migratórias",
+        "tag": "Fauna",
+        "src": "/images/bird-species-8",
+        "author": "Lucas Vieira",
+        "date": "25 de Julho, 2025"
+      },
+      {
+        "slug": "urutau",
+        "commonName": "Urutau",
+        "scientificName": "Nyctibius griseus",
+        "description": "Mestre da camuflagem noturna, o urutau se confunde com galhos secos durante o dia. Seu canto melancólico ecoa nas noites pantaneiras.",
+        "category": "Noturno Perto",
+        "tag": "Fauna",
+        "src": "/images/bird-species-9",
+        "author": "Lucas Vieira",
+        "date": "20 de Julho, 2025"
+      }
+    ],
+    "details": [
+      {
+        "slug": "arara-azul",
+        "commonName": "Arara-Azul",
+        "scientificName": "Anodorhynchus hyacinthinus",
+        "description": "A maior arara do mundo, símbolo do Pantanal. Suas plumagens azul-cobalto hipnotizam observadores.",
+        "category": "Papagaio",
+        "tag": "Fauna",
+        "src": "/images/bird-species-1",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "heroImage": "/images/bird-species-1",
+        "conservationStatus": "Vulnerável (VU)",
+        "size": "100 cm | Envergadura: 130-150 cm | Peso: 1,2-1,7 kg",
+        "habitat": "Matas ciliares, buritizais e palmeirais do Pantanal. Necessita de árvores grandes e ocas para nidificação, especialmente o manduvi (Sterculia apetala).",
+        "overview": "A **Arara-Azul-Grande** (Anodorhynchus hyacinthinus) é a maior espécie de arara do mundo e um dos símbolos mais emblemáticos do Pantanal. Com sua plumagem azul-cobalto intensa e o anel amarelo ao redor dos olhos, é uma das aves mais fotografadas do Brasil.\n\nApesar de sua beleza, a espécie enfrentou graves ameaças de extinção nas décadas de 1980 e 1990 devido ao tráfico de animais e à destruição de habitat. Graças a intensos programas de conservação — muitos dos quais apoiados por pousadas e reservas como a Itaicy — a população se estabilizou e hoje é estimada em cerca de **6.500 indivíduos** na natureza.\n\nNo Pantanal, a arara-azul é frequentemente avistada em bandos de 6 a 12 indivíduos, especialmente ao amanhecer, quando voam em formação sobre as copas das árvores.",
+        "diet": "A dieta da arara-azul é baseada em nozes de palmeiras, especialmente bocaiúva (Acrocomia aculeata) e acuri (Attalea phalerata). Seu bico poderoso é capaz de quebrar cascas extremamente duras que nenhuma outra ave consegue abrir. Também se alimenta de frutas e sementes de outras espécies vegetais do cerrado e pantanal.",
+        "behavior": "São aves altamente sociais e monogâmicas, formando casais que permanecem juntos por toda a vida. O casal nidifica em cavidades naturais de árvores grandes, com preferência pelo manduvi. A fêmea põe geralmente 2 ovos, mas na maioria das vezes apenas um filhote sobrevive. O período de incubação dura cerca de 30 dias, e o filhote permanece no ninho por até 3 meses.",
+        "bestTime": "A arara-azul pode ser observada durante todo o ano no Pantanal, mas os melhores avistamentos ocorrem entre junho e setembro (estação seca). Neste período, as aves se concentram em áreas com palmeiras frutificando. O melhor horário é ao amanhecer (5h30-7h), quando saem dos dormitórios em bandos ruidosos.",
+        "photographyTips": [
+          "O anel amarelo ao redor dos olhos é o diferencial — capture-o com luz lateral suave.",
+          "Fotografe ao amanhecer quando voam em bandos contra o céu claro.",
+          "Em palmeirais de bocaiúva, espere — elas voltam regularmente para se alimentar.",
+          "Use velocidade alta (1/2000s+) para congelar o voo e capturar a envergadura.",
+          "Os ninhos no manduvi são fotogênicos, mas mantenha distância de pelo menos 30 metros."
+        ],
+        "relatedSlugs": [
+          "tuiuiu",
+          "arara-vermelha",
+          "joao-pinto"
+        ]
+      },
+      {
+        "slug": "tuiuiu",
+        "commonName": "Tuiuiú",
+        "scientificName": "Mycteria americana",
+        "description": "Símbolo do Pantanal, o tuiuiú é uma ave majestosa que se destaca por seu tamanho e plumagem branca, sendo um importante indicador da saúde do ecossistema.",
+        "category": "Aquáticas",
+        "tag": "Fauna",
+        "src": "/images/bird-species-4",
+        "author": "Lucas Vieira",
+        "date": "09 de Agosto, 2025",
+        "heroImage": "/images/bird-species-4",
+        "conservationStatus": "Pouco Preocupante (LC)",
+        "size": "95-100 cm | Envergadura: 120-140 cm | Peso: 1,2-1,7 kg",
+        "habitat": "Áreas alagadas, margens de rios, lagoas e campos inundáveis do Pantanal. Prefere regiões com vegetação aberta e acesso a corpos d'água rasos para alimentação.",
+        "overview": "O **Tuiuiú** (Jabiru mycteria), também conhecido como Jabiru, é a ave-símbolo do Pantanal e a maior cegonha das Américas. Com sua imponente estatura que pode ultrapassar 1,40m de altura e envergadura de até 2,80m, é uma presença inconfundível nas paisagens pantaneiras.\n\nSeu nome popular vem do tupi-guarani e significa \"pescoço inchado\", referência à bolsa vermelha em sua garganta que infla durante a época de acasalamento. A plumagem é predominantemente branca, com cabeça e pescoço pretos e uma faixa vermelha na base do pescoço.\n\nÉ considerado um importante **indicador de saúde ambiental** do ecossistema pantaneiro. Sua presença abundante em uma região indica equilíbrio ecológico, pois depende de águas limpas e abundância de peixes para sobreviver.",
+        "diet": "Alimenta-se principalmente de peixes, anfíbios, répteis (incluindo pequenas cobras), moluscos e grandes insetos aquáticos. Utiliza seu bico largo e robusto para capturar presas em águas rasas, frequentemente caminhando lentamente por campos alagados. Durante a estação seca, quando as lagoas diminuem e concentram os peixes, o tuiuiú tem fartura de alimento.",
+        "behavior": "Espécie monogâmica que forma casais para a vida toda. Constrói enormes ninhos no topo de árvores altas, que podem atingir 2 metros de diâmetro e são reutilizados ano após ano. A época de reprodução coincide com a estação seca (julho a novembro), quando o casal cuida de 2 a 5 ovos. Os filhotes permanecem no ninho por cerca de 3 meses antes de realizar seus primeiros voos.",
+        "bestTime": "A melhor época para observar o tuiuiú no Pantanal é durante a estação seca, entre julho e outubro. Neste período, as águas recuam e os peixes se concentram em lagoas menores, atraindo grandes bandos de tuiuiús para se alimentar. Ao amanhecer e entardecer, é possível observá-los sobrevoando em grupos, criando um espetáculo visual inesquecível contra o pôr-do-sol pantaneiro.",
+        "photographyTips": [
+          "Use lentes teleobjetivas (400mm+) para capturar detalhes da plumagem sem perturbar a ave.",
+          "O melhor horário é ao amanhecer (5h30-7h), quando a luz dourada realça as cores e os tuiuiús saem para pescar.",
+          "Posicione-se perto de lagoas que estejam secando — ali eles se concentram para pescar.",
+          "Fotografe os ninhos de longe; tuiuiús são sensíveis à presença humana durante a nidificação.",
+          "Aproveite o momento em que abrem as asas para secar ao sol — a envergadura cria imagens dramáticas."
+        ],
+        "relatedSlugs": [
+          "arara-azul",
+          "anhinga",
+          "garca-branca-grande"
+        ]
+      }
+    ],
+    "featuredSlugs": [
+      "arara-azul",
+      "tuiuiu"
+    ]
+  },
+  "shared": {
+    "immersionCta": {
+      "heading": "Sua imersao no Pantanal selvagem comeca aqui.",
+      "description": "Uma experiencia autentica de ecoturismo, observacao de aves ou pesca esportiva espera por voce. Selecione as datas da sua expedicao e garanta seu lugar em nosso refugio.",
+      "backgroundImage": "/images/culinaria-cta-bg.webp"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Ainda possui alguma duvida?",
+      "description": "Respondemos as principais duvidas para que sua unica preocupacao seja aproveitar a imersao na natureza selvagem.",
+      "items": [
+        {
+          "id": "item-1",
+          "number": "01",
+          "question": "A pousada e destinada apenas para pesca?",
+          "answer": "Nao. A Itaicy oferece experiencias de pesca esportiva, observacao de aves, ecoturismo e imersoes para familias e casais."
+        },
+        {
+          "id": "item-2",
+          "number": "02",
+          "question": "Como funciona o acesso as areas exclusivas?",
+          "answer": "Nossos roteiros seguem protocolos ambientais e operacionais proprios para garantir seguranca e baixo impacto no bioma."
+        },
+        {
+          "id": "item-3",
+          "number": "03",
+          "question": "As experiencias sao guiadas?",
+          "answer": "Sim. Todas as atividades sao acompanhadas por equipe especializada e guias com conhecimento local."
+        },
+        {
+          "id": "item-4",
+          "number": "04",
+          "question": "Existe opcao para grupos e familias?",
+          "answer": "Sim. Temos configuracoes de hospedagem e roteiro adaptadas para diferentes perfis de viajantes."
+        },
+        {
+          "id": "item-5",
+          "number": "05",
+          "question": "Posso personalizar meu roteiro?",
+          "answer": "Sim. Nossa equipe comercial pode ajustar o pacote de acordo com a disponibilidade e o objetivo da viagem."
+        }
+      ]
+    },
+    "testimonials": {
+      "label": "DEPOIMENTOS",
+      "heading": "Relatos de quem viveu a real imersao",
+      "description": "O que nossos viajantes dizem sobre a experiencia autentica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+      "items": [
+        {
+          "title": "Experiencia inesquecivel",
+          "quote": "\"Elegancia essencial em harmonia com o bioma. Uma experiencia autentica e profundamente transformadora.\"",
+          "author": "Lucas Vieira, BRA"
+        },
+        {
+          "title": "Atendimento impecavel",
+          "quote": "\"Equipe preparada, estrutura excelente e roteiros com muito cuidado ambiental. Voltaremos com certeza.\"",
+          "author": "Fernanda A., BRA"
+        },
+        {
+          "title": "Conexao real com a natureza",
+          "quote": "\"A observacao de aves foi acima da expectativa. Organizacao, seguranca e curadoria de alto nivel.\"",
+          "author": "Rafael M., BRA"
+        }
+      ]
+    },
+    "footer": {
+      "mobileNavLinks": [
+        {
+          "label": "Pousada",
+          "href": "/"
+        },
+        {
+          "label": "Experiencias",
+          "href": "/ecoturismo"
+        },
+        {
+          "label": "Fale conosco",
+          "href": "/contato"
+        }
+      ],
+      "pousadaLinks": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Acomodacoes",
+          "href": "/acomodacoes"
+        },
+        {
+          "label": "Culinaria",
+          "href": "/culinaria"
+        },
+        {
+          "label": "Nosso Impacto",
+          "href": "/nosso-impacto"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        }
+      ],
+      "experienciasLinks": [
+        {
+          "label": "Observacao de passaros",
+          "href": "/observacao-de-aves"
+        },
+        {
+          "label": "Pesca Esportiva",
+          "href": "/pesca"
+        },
+        {
+          "label": "Ecoturismo Imersivo",
+          "href": "/ecoturismo"
+        }
+      ],
+      "contactInfo": [
+        {
+          "icon": "/images/icons/call.png",
+          "text": "+55 (67) 99999-9999"
+        },
+        {
+          "icon": "/images/icons/mail.png",
+          "text": "reservas@pousadaitaicy.com.br"
+        },
+        {
+          "icon": "/images/icons/location-on.png",
+          "text": "Pantanal Sul-Mato-Grossense, Mato Grosso do Sul, Brasil"
+        }
+      ],
+      "legalLinks": [
+        {
+          "label": "Politica de Privacidade",
+          "href": "/politica-de-privacidade"
+        },
+        {
+          "label": "Politica de Cookies",
+          "href": "/politica-de-privacidade"
+        },
+        {
+          "label": "Sitemap",
+          "href": "/"
+        },
+        {
+          "label": "Termos de Uso",
+          "href": "/politica-de-privacidade"
+        }
+      ],
+      "heading": "O Pantanal como voce nunca sentiu.",
+      "newsletterLabel": "Diario de Campo Itaicy",
+      "newsletterInterests": [
+        "Quero Pescar",
+        "Quero Natureza",
+        "Viagem em Família"
+      ],
+      "newsletterInputPlaceholder": "Seu e-mail",
+      "newsletterButtonLabel": "Enviar",
+      "bottomDescription": "Um refugio genuino e sofisticado no coracao do Pantanal. Experiencias aut autenticas para quem busca natureza, conforto e exclusividade.",
+      "copyright": "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados."
+    },
+    "homeHero": {
+      "heading": "O Pantanal como voce nunca sentiu.",
+      "subtitle": "Elegancia essencial em harmonia com o bioma. Uma experiencia de imersao autentica, sem excessos e sem concessoes.",
+      "bookingHeading": "Procure por uma data especial",
+      "bookingDescription": "Selecione o periodo ideal para sua viagem e descubra experiencias exclusivas no coracao do Pantanal."
+    },
+    "homeManifesto": {
+      "label": "MANIFESTO",
+      "segments": [
+        {
+          "text": "Onde o luxo nao e o que se ve, mas o que se sente. Acesso exclusivo ao ",
+          "color": "#e3f7ec"
+        },
+        {
+          "text": "Pantanal real",
+          "color": "#d6a35d"
+        },
+        {
+          "text": ". ",
+          "color": "#e3f7ec"
+        },
+        {
+          "text": "Uma ",
+          "color": "#e3f7ec"
+        },
+        {
+          "text": "imersao autentica",
+          "color": "#d6a35d"
+        },
+        {
+          "text": ", longe de tudo.",
+          "color": "#e3f7ec"
+        }
+      ],
+      "detailsButtonLabel": "Mais detalhes"
+    }
+  },
+  "pages": {
+    "routes": [
+      "/",
+      "/acomodacoes",
+      "/culinaria",
+      "/pesca",
+      "/observacao-de-aves",
+      "/observacao-de-aves/catalogo",
+      "/observacao-de-aves/catalogo/:slug",
+      "/ecoturismo",
+      "/blog",
+      "/blog/:categorySlug/:slug",
+      "/contato",
+      "/nosso-impacto",
+      "/politica-de-privacidade"
+    ]
+  }
+}

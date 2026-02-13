@@ -1,0 +1,54 @@
+{
+  "family": "itaicy-payload-cms",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::<ACCOUNT_ID>:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::<ACCOUNT_ID>:role/itaicy-payload-task-role",
+  "containerDefinitions": [
+    {
+      "name": "payload-cms",
+      "image": "<ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/itaicy-payload-cms:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3001,
+          "hostPort": 3001,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        { "name": "PAYLOAD_PORT", "value": "3001" },
+        { "name": "PAYLOAD_PUBLIC_SERVER_URL", "value": "https://cms.seudominio.com" },
+        { "name": "FRONTEND_ORIGIN", "value": "https://www.seudominio.com" }
+      ],
+      "secrets": [
+        {
+          "name": "PAYLOAD_SECRET",
+          "valueFrom": "arn:aws:secretsmanager:<REGION>:<ACCOUNT_ID>:secret:payload-secret"
+        },
+        {
+          "name": "DATABASE_URL",
+          "valueFrom": "arn:aws:secretsmanager:<REGION>:<ACCOUNT_ID>:secret:payload-database-url"
+        }
+      ],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "wget -qO- http://127.0.0.1:3001/health || exit 1"],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 30
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/itaicy-payload-cms",
+          "awslogs-region": "<REGION>",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
+

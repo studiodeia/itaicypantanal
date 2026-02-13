@@ -1,0 +1,17 @@
+{
+  "routes": [
+    "/",
+    "/acomodacoes",
+    "/culinaria",
+    "/pesca",
+    "/observacao-de-aves",
+    "/observacao-de-aves/catalogo",
+    "/observacao-de-aves/catalogo/:slug",
+    "/ecoturismo",
+    "/blog",
+    "/blog/:categorySlug/:slug",
+    "/contato",
+    "/nosso-impacto",
+    "/politica-de-privacidade"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "itaicy-payload-cms",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "seed": "tsx src/scripts/importSeed.ts",
+    "owner:ensure": "tsx src/scripts/bootstrapOwner.ts",
+    "generate:importmap": "payload generate:importmap"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.0.0",
+    "@payloadcms/db-sqlite": "^3.0.0",
+    "@payloadcms/next": "^3.76.1",
+    "dotenv": "^16.6.1",
+    "next": "^15.4.11",
+    "payload": "^3.0.0",
+    "pg": "^8.16.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.6.3"
+  }
+}
