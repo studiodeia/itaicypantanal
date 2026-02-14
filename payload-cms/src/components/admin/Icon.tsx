@@ -1,24 +1,28 @@
 import React from "react";
 
+/**
+ * Admin Icon — small favicon-sized brand mark used in the browser tab
+ * and collapsed sidebar. Uses the Itaicy logo scaled down.
+ */
 export default function Icon() {
   return (
-    <div
-      style={{
-        width: "28px",
-        height: "28px",
-        borderRadius: "6px",
-        backgroundColor: "#263a30",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "'Playfair Display', Georgia, serif",
-        fontSize: "16px",
-        fontWeight: 600,
-        color: "#d7a45d",
-        lineHeight: 1,
-      }}
-    >
-      I
-    </div>
+    <>
+      <img
+        className="logo-light"
+        src="/images/logo-light.svg"
+        alt="Itaicy"
+        width={100}
+        height={30}
+        style={{ display: "block" }}
+      />
+      <img
+        className="logo-dark"
+        src="/images/logo.svg"
+        alt="Itaicy"
+        width={100}
+        height={30}
+        style={{ display: "none" }}
+      />
+    </>
   );
 }

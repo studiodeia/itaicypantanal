@@ -60,6 +60,15 @@
   --theme-elevation-1000: #fcf4ed;
 }
 
+/* Logo theme swap — light theme shows dark logo, dark theme shows light logo */
+.logo-light { display: block; }
+.logo-dark  { display: none; }
+
+[data-theme='dark'] {
+  .logo-light { display: none; }
+  .logo-dark  { display: block; }
+}
+
 /* Login page branding */
 .login {
   &__brand {
