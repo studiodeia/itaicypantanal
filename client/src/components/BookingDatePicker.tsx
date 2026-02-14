@@ -1,21 +1,19 @@
 import { useState, useCallback } from "react";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon } from "@/lib/icons";
 import { DayPicker } from "react-day-picker";
 import type { DateRange } from "react-day-picker";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { cn } from "@/lib/utils";
 
 interface BookingDatePickerProps {
   className?: string;
   variant?: "hero" | "cta";
 }
-
-const CLOUDBEDS_PROPERTY_ID = "ITAICY_PANTANAL";
-const CLOUDBEDS_BASE_URL = "https://hotels.cloudbeds.com/reservation";
 
 export function BookingDatePicker({ className, variant = "hero" }: BookingDatePickerProps) {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
@@ -27,14 +25,15 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
       return;
     }
 
-    const params = new URLSearchParams({
-      propertyId: CLOUDBEDS_PROPERTY_ID,
-      checkin: format(dateRange.from, "yyyy-MM-dd"),
-      ...(dateRange.to && { checkout: format(dateRange.to, "yyyy-MM-dd") }),
+    goToCloudbedsBooking({
+      checkIn: dateRange.from,
+      checkOut: dateRange.to,
+      utmContent:
+        variant === "hero"
+          ? "booking_datepicker_hero"
+          : "booking_datepicker_cta",
     });
-
-    window.open(`${CLOUDBEDS_BASE_URL}?${params.toString()}`, "_blank");
-  }, [dateRange]);
+  }, [dateRange, variant]);
 
   const displayText = dateRange?.from
     ? dateRange.to
@@ -60,7 +59,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
           "flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 w-full",
           variant === "hero"
             ? "h-12 md:h-14 pl-3 md:pl-5 pr-2 py-2 bg-[rgba(10,19,12,0.2)] rounded-lg"
-            : "p-4 sm:py-2 sm:pr-2 sm:pl-5 bg-[rgba(10,19,12,0.45)] rounded-lg backdrop-blur-[2px]",
+            : "p-4 sm:py-2 sm:pr-2 sm:pl-5 glass-card-hero",
         )}
       >
       <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
@@ -152,3 +151,4 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
     </div>
   );
 }
+

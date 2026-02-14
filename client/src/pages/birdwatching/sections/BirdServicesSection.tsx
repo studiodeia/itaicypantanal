@@ -1,13 +1,21 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { stagger, fadeIn, fadeUp, cardItem, viewport } from "@/lib/motion";
-import { allBirds, getBirdUrl } from "../data";
+import { getBirdUrl } from "../cms";
+import { allBirds as fallbackAllBirds } from "../data";
 import type { BirdSpecies } from "../data";
 
-const birdSpecies = allBirds.slice(0, 4);
+interface BirdServicesSectionProps {
+  birds?: BirdSpecies[];
+}
 
-export const BirdServicesSection = (): JSX.Element => {
+export const BirdServicesSection = ({
+  birds = fallbackAllBirds,
+}: BirdServicesSectionProps): JSX.Element => {
+  const birdSpecies = birds.slice(0, 4);
+
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -90,7 +98,9 @@ export const BirdServicesSection = (): JSX.Element => {
             </p>
           </div>
           <a
-            href="/observacao-de-aves#reservar"
+            href={buildCloudbedsBookingUrl({
+              utmContent: "birdwatching_section_agendar_expedicao",
+            })}
             className="flex items-center justify-center h-14 px-6 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg whitespace-nowrap shrink-0 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
           >
             Agendar Expedição Fotográfica
@@ -171,7 +181,7 @@ const BirdCard = ({ bird, index }: BirdCardProps): JSX.Element => {
           <div className="flex items-center gap-4">
             <div className="w-11 h-11 rounded-full bg-[#446354] overflow-hidden">
               <img
-                src="/images/bird-avatar.webp"
+                src="/images/home/blog-avatar.webp"
                 alt={bird.author}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -200,3 +210,6 @@ const BirdCard = ({ bird, index }: BirdCardProps): JSX.Element => {
     </a>
   );
 };
+
+
+

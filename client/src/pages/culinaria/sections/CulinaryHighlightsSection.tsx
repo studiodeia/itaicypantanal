@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
-import { Fish, Sprout, Flower2 } from "lucide-react";
+import { Fish, Sprout, Flower2 } from "@/lib/icons";
 
 const highlights = [
   {
@@ -78,3 +78,4 @@ export const CulinaryHighlightsSection = (): JSX.Element => {
     </section>
   );
 };
+

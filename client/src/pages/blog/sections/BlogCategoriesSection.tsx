@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { allArticles, categories } from "../data";
-import type { BlogCategory } from "../data";
+import { ChevronDown, ChevronLeft, ChevronRight } from "@/lib/icons";
+import type { BlogArticle } from "../data";
 import { BlogArticleCard } from "../components/BlogArticleCard";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
 
 const ARTICLES_PER_PAGE = 9;
 
-export const BlogCategoriesSection = (): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState<BlogCategory>("Todas");
+interface BlogCategoriesSectionProps {
+  allArticles: BlogArticle[];
+  categories: string[];
+}
+
+export const BlogCategoriesSection = ({
+  allArticles,
+  categories,
+}: BlogCategoriesSectionProps): JSX.Element => {
+  const [activeCategory, setActiveCategory] = useState<string>("Todas");
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredArticles =
@@ -26,7 +33,7 @@ export const BlogCategoriesSection = (): JSX.Element => {
     currentPage * ARTICLES_PER_PAGE,
   );
 
-  const handleCategoryChange = (cat: BlogCategory) => {
+  const handleCategoryChange = (cat: string) => {
     setActiveCategory(cat);
     setCurrentPage(1);
   };
@@ -144,3 +151,4 @@ export const BlogCategoriesSection = (): JSX.Element => {
     </section>
   );
 };
+

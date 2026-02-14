@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, scaleIn, viewport } from "@/lib/motion";
 
 const channels = [
@@ -95,3 +95,4 @@ export const ContactChannelsSection = (): JSX.Element => {
     </section>
   );
 };
+

@@ -1,6 +1,6 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { getBirdUrl } from "../data";
+import { getBirdUrl } from "../cms";
 import type { BirdSpecies } from "../data";
 
 interface BirdSpeciesCardProps {
@@ -59,7 +59,7 @@ export const BirdSpeciesCard = ({
           <div className="flex items-center gap-4">
             <div className="w-11 h-11 rounded-full bg-[#446354] overflow-hidden">
               <img
-                src="/images/bird-avatar.webp"
+                src="/images/home/blog-avatar.webp"
                 alt={bird.author}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -88,3 +88,6 @@ export const BirdSpeciesCard = ({
     </a>
   );
 };
+
+
+

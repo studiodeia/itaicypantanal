@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Compass, ShieldCheck, Sunrise } from "lucide-react";
+import { Compass, ShieldCheck, Sunrise } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const highlights = [
@@ -81,3 +81,4 @@ export const EcoHighlightsSection = (): JSX.Element => {
     </section>
   );
 };
+

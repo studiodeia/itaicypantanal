@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bird, ShieldCheck, Users } from "lucide-react";
+import { Bird, ShieldCheck, Users } from "@/lib/icons";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
 
 const highlights = [
@@ -78,3 +78,4 @@ export const BirdHighlightsSection = (): JSX.Element => {
     </section>
   );
 };
+

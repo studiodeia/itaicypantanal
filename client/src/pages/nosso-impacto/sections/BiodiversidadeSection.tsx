@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
 
 const stats = [
@@ -119,3 +119,4 @@ export const BiodiversidadeSection = (): JSX.Element => {
     </section>
   );
 };
+

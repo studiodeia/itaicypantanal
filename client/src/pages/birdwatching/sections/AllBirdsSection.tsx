@@ -1,15 +1,22 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, Search } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
-import { allBirds, categories } from "../data";
-import type { BirdCategory } from "../data";
+import type { BirdSpecies } from "../data";
 import { BirdSpeciesCard } from "../components/BirdSpeciesCard";
 
 const BIRDS_PER_PAGE = 9;
 
-export const AllBirdsSection = (): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState<BirdCategory>("Todas");
+interface AllBirdsSectionProps {
+  allBirds: BirdSpecies[];
+  categories: string[];
+}
+
+export const AllBirdsSection = ({
+  allBirds,
+  categories,
+}: AllBirdsSectionProps): JSX.Element => {
+  const [activeCategory, setActiveCategory] = useState<string>("Todas");
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -43,7 +50,7 @@ export const AllBirdsSection = (): JSX.Element => {
     currentPage * BIRDS_PER_PAGE,
   );
 
-  const handleCategoryChange = (cat: BirdCategory) => {
+  const handleCategoryChange = (cat: string) => {
     setActiveCategory(cat);
     setCurrentPage(1);
   };
@@ -197,3 +204,4 @@ export const AllBirdsSection = (): JSX.Element => {
     </section>
   );
 };
+

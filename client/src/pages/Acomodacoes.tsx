@@ -1,4 +1,5 @@
-import { BedSingle, BedDouble, Bath, Fence, User, Users } from "lucide-react";
+import { PageMeta } from "@/components/PageMeta";
+import { BedSingle, BedDouble, Bath, Fence, User, Users } from "@/lib/icons";
 import { AccommodationsHeroSection } from "./acomodacoes/sections/AccommodationsHeroSection";
 import { ManifestoStatementSection } from "./acomodacoes/sections/ManifestoStatementSection";
 import { AccommodationsHighlightsSection } from "./acomodacoes/sections/AccommodationsHighlightsSection";
@@ -51,6 +52,15 @@ const apartamentoTriplo = {
 export const Acomodacoes = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
+      <PageMeta
+        title="Acomodacoes"
+        description="Suites premium no coracao do Pantanal. Explorer para viajantes solo, Adventure para casais e Family para familias. Conforto, natureza e privacidade."
+        canonicalPath="/acomodacoes"
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Acomodacoes", path: "/acomodacoes" },
+        ]}
+      />
       <AccommodationsHeroSection />
       <ManifestoStatementSection />
       <div
@@ -71,3 +81,4 @@ export const Acomodacoes = (): JSX.Element => {
     </div>
   );
 };
+

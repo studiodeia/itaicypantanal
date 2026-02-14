@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight, type LucideIcon } from "lucide-react";
+import { ChevronRight, type LucideIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import { fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
 
@@ -90,3 +90,4 @@ export const ApartmentSection = ({
     </section>
   );
 };
+

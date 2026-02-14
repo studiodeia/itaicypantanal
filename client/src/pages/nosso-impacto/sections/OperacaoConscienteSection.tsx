@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Recycle, Droplets, GlassWater } from "lucide-react";
+import { Recycle, Droplets, GlassWater } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const practices = [
@@ -84,3 +84,4 @@ export const OperacaoConscienteSection = (): JSX.Element => {
     </section>
   );
 };
+

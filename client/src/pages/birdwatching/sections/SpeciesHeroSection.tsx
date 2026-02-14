@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
@@ -23,7 +23,7 @@ export const SpeciesHeroSection = ({
     <section className="relative flex flex-col items-center w-full z-[11] overflow-hidden bg-[#263a30]">
       {/* Menu overlay */}
       {menuOpen && (
-        <div className="absolute inset-0 z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px] transition-all duration-300" />
+        <div className="absolute inset-0 z-[3] glass-overlay-hero transition-all duration-300" />
       )}
 
       {/* Navigation */}
@@ -79,7 +79,7 @@ export const SpeciesHeroSection = ({
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full bg-[#446354] overflow-hidden shrink-0">
               <img
-                src="/images/bird-avatar.webp"
+                src="/images/home/blog-avatar.webp"
                 alt={bird.author}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -108,3 +108,6 @@ export const SpeciesHeroSection = ({
     </section>
   );
 };
+
+
+

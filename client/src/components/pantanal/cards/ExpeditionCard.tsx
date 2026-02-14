@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { HeadingMedium } from "../typography/HeadingMedium";
 import { BodyText } from "../typography/BodyText";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon } from "@/lib/icons";
 
 interface ExpeditionCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -68,3 +68,4 @@ export function ExpeditionCard({
     </Card>
   );
 }
+

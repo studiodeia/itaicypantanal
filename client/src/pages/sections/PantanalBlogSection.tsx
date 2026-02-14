@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon } from "@/lib/icons";
 import {
   Avatar,
   AvatarFallback,
@@ -145,3 +145,4 @@ export const PantanalBlogSection = (): JSX.Element => {
     </section>
   );
 };
+

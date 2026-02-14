@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
 
@@ -26,7 +26,7 @@ export const NotFoundHeroSection = (): JSX.Element => {
       <div
         className={`absolute inset-0 transition-all duration-300 ${
           menuOpen
-            ? "z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
+            ? "z-[3] glass-overlay-hero"
             : "z-[1]"
         }`}
         style={
@@ -107,3 +107,4 @@ export const NotFoundHeroSection = (): JSX.Element => {
     </section>
   );
 };
+

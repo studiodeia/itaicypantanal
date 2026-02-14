@@ -20,11 +20,20 @@ export function OptimizedImage({
   alt = "",
   ...imgProps
 }: OptimizedImageProps) {
+  const loading = imgProps.loading ?? "lazy";
+  const decoding = imgProps.decoding ?? "async";
+
   return (
     <picture>
       <source srcSet={`${src}.avif`} type="image/avif" />
       <source srcSet={`${src}.webp`} type="image/webp" />
-      <img src={`${src}.${fallbackFormat}`} alt={alt} {...imgProps} />
+      <img
+        src={`${src}.${fallbackFormat}`}
+        alt={alt}
+        loading={loading}
+        decoding={decoding}
+        {...imgProps}
+      />
     </picture>
   );
 }

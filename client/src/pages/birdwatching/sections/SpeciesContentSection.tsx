@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Ruler, MapPin, Camera } from "lucide-react";
+import { Shield, Ruler, MapPin, Camera } from "@/lib/icons";
 import { fadeUp, scaleIn, viewport } from "@/lib/motion";
 import type { BirdSpeciesDetail } from "../data";
 
@@ -220,3 +220,4 @@ export const SpeciesContentSection = ({
     </section>
   );
 };
+

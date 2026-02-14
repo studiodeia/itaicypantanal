@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { recentArticles } from "../data";
+import { ChevronLeft, ChevronRight } from "@/lib/icons";
+import type { BlogArticle } from "../data";
 import { BlogArticleCard } from "../components/BlogArticleCard";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
 
-export const BlogRecentSection = (): JSX.Element => {
+interface BlogRecentSectionProps {
+  recentArticles: BlogArticle[];
+}
+
+export const BlogRecentSection = ({
+  recentArticles,
+}: BlogRecentSectionProps): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -52,3 +58,4 @@ export const BlogRecentSection = (): JSX.Element => {
     </section>
   );
 };
+

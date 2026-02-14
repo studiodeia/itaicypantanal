@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
 
@@ -43,7 +43,7 @@ export const ContactHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1080px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/contato-hero-bg.webp"
+        src="/images/culinaria-cta-bg.webp"
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -54,7 +54,7 @@ export const ContactHeroSection = (): JSX.Element => {
       <div
         className={`absolute inset-0 transition-all duration-300 ${
           menuOpen
-            ? "z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
+            ? "z-[3] glass-overlay-hero"
             : "z-[1]"
         }`}
         style={
@@ -241,3 +241,6 @@ export const ContactHeroSection = (): JSX.Element => {
     </section>
   );
 };
+
+
+

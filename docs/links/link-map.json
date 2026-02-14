@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "totalLinks": 24,
+    "internalLinks": 7,
+    "externalLinks": 0,
+    "hashLinks": 4,
+    "bookingExpressions": 4,
+    "dynamicExpressions": 9,
+    "brokenInternalLinks": 0,
+    "appRoutes": [
+      "/",
+      "/acomodacoes",
+      "/culinaria",
+      "/pesca",
+      "/observacao-de-aves",
+      "/observacao-de-aves/catalogo",
+      "/observacao-de-aves/catalogo/:slug",
+      "/ecoturismo",
+      "/blog",
+      "/blog/:categorySlug/:slug",
+      "/contato",
+      "/nosso-impacto",
+      "/politica-de-privacidade"
+    ]
+  },
+  "links": [
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\ApartmentSection.tsx",
+      "line": 79,
+      "href": "#",
+      "kind": "hash",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\CulinarySection.tsx",
+      "line": 107,
+      "href": "#",
+      "kind": "hash",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\BirdSpeciesPage.tsx",
+      "line": 25,
+      "href": "/observacao-de-aves/catalogo",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\components\\BirdSpeciesCard.tsx",
+      "line": 15,
+      "href": "{getBirdUrl(bird)}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdServicesSection.tsx",
+      "line": 101,
+      "href": "{buildCloudbedsBookingUrl({\n              utmContent: \"birdwatching_section_agendar_expedicao\",}",
+      "kind": "booking-expression",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdServicesSection.tsx",
+      "line": 116,
+      "href": "/observacao-de-aves/catalogo",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdServicesSection.tsx",
+      "line": 139,
+      "href": "{getBirdUrl(bird)}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\FeaturedBirdsSection.tsx",
+      "line": 11,
+      "href": "{getBirdUrl(bird)}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\SpeciesHeroSection.tsx",
+      "line": 42,
+      "href": "/observacao-de-aves/catalogo",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\blog\\BlogArticlePage.tsx",
+      "line": 20,
+      "href": "/blog",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\blog\\components\\BlogArticleCard.tsx",
+      "line": 17,
+      "href": "{getBlogArticleUrl(article)}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\blog\\components\\RelatedArticleCard.tsx",
+      "line": 14,
+      "href": "{getBlogArticleUrl(article)}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\AccommodationsCrossSellSection.tsx",
+      "line": 60,
+      "href": "/acomodacoes",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryMenuSection.tsx",
+      "line": 139,
+      "href": "{buildCloudbedsBookingUrl({\n            utmContent: \"culinaria_section_fazer_reserva\",}",
+      "kind": "booking-expression",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoServicesSection.tsx",
+      "line": 118,
+      "href": "#",
+      "kind": "hash",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\BiodiversidadeSection.tsx",
+      "line": 107,
+      "href": "/observacao-de-aves",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactEngagementSection.tsx",
+      "line": 25,
+      "href": "{buildCloudbedsBookingUrl({\n            utmContent: \"impacto_section_reservar_experiencia\",}",
+      "kind": "booking-expression",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\not-found\\sections\\NotFoundHeroSection.tsx",
+      "line": 75,
+      "href": "/",
+      "kind": "internal",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaServicesSection.tsx",
+      "line": 136,
+      "href": "{buildCloudbedsBookingUrl({\n              utmContent: \"pesca_section_reservar_expedicao\",}",
+      "kind": "booking-expression",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaServicesSection.tsx",
+      "line": 147,
+      "href": "#",
+      "kind": "hash",
+      "ok": true
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.tsx",
+      "line": 103,
+      "href": "{link.href}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.tsx",
+      "line": 121,
+      "href": "{link.href}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.tsx",
+      "line": 139,
+      "href": "{link.href}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.tsx",
+      "line": 195,
+      "href": "{link.href}",
+      "kind": "expression",
+      "ok": true,
+      "reason": "analise manual necessaria para expressao dinamica"
+    }
+  ],
+  "brokenLinks": []
+}

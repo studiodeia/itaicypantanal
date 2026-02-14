@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { RelatedArticleCard } from "../components/RelatedArticleCard";
 import type { BlogArticle } from "../data";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
@@ -57,3 +57,4 @@ export const RelatedArticlesSection = ({
     </section>
   );
 };
+

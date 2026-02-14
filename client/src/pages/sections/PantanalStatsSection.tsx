@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Star } from "@/lib/icons";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
 
 const stats = [
@@ -83,10 +84,9 @@ export const PantanalStatsSection = (): JSX.Element => {
                   <div className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[#e3f7ec] text-[length:var(--display-lg-font-size)] tracking-[var(--display-lg-letter-spacing)] leading-[var(--display-lg-line-height)] [font-style:var(--display-lg-font-style)]">
                     {formatValue(counts[index], index)}
                   </div>
-                  <img
-                    className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16"
-                    alt="Rating icon"
-                    src="/images/icons/rating-icon.svg"
+                  <Star
+                    className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#d6a35d]"
+                    aria-label="Rating icon"
                   />
                 </div>
               ) : (

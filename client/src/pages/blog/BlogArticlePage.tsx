@@ -1,5 +1,7 @@
 import { useParams } from "wouter";
-import { getArticleBySlug, getRelatedArticles } from "./data";
+import { PageMeta } from "@/components/PageMeta";
+import { JsonLd, buildBlogPosting } from "@/components/JsonLd";
+import { getBlogArticleBySlug, getBlogArticleUrl, getBlogRelatedArticles, useBlogCmsData } from "./cms";
 import { ArticleHeroSection } from "./sections/ArticleHeroSection";
 import { ArticleContentSection } from "./sections/ArticleContentSection";
 import { RelatedArticlesSection } from "./sections/RelatedArticlesSection";
@@ -8,7 +10,8 @@ import { SiteFooterSection } from "../sections/SiteFooterSection";
 
 export const BlogArticlePage = (): JSX.Element => {
   const { slug } = useParams<{ categorySlug: string; slug: string }>();
-  const article = slug ? getArticleBySlug(slug) : undefined;
+  const blogData = useBlogCmsData();
+  const article = slug ? getBlogArticleBySlug(blogData, slug) : undefined;
 
   if (!article) {
     return (
@@ -23,10 +26,33 @@ export const BlogArticlePage = (): JSX.Element => {
     );
   }
 
-  const relatedArticles = getRelatedArticles(article.slug);
+  const relatedArticles = getBlogRelatedArticles(blogData, article.slug);
+  const articleUrl = getBlogArticleUrl(article);
 
   return (
     <div className="flex flex-col w-full">
+      <PageMeta
+        title={article.title}
+        description={article.description}
+        canonicalPath={articleUrl}
+        ogImage={article.heroImage || article.src}
+        ogType="article"
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: article.title, path: articleUrl },
+        ]}
+      />
+      <JsonLd
+        data={buildBlogPosting({
+          title: article.title,
+          description: article.description,
+          author: article.author,
+          date: article.date,
+          image: article.heroImage || article.src,
+          url: articleUrl,
+        })}
+      />
       <ArticleHeroSection article={article} />
       <ArticleContentSection content={article.content} />
       <RelatedArticlesSection articles={relatedArticles} />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { UtensilsCrossed, GlassWater, Compass, Fence, Snowflake, Wifi } from "lucide-react";
+import { UtensilsCrossed, GlassWater, Compass, Fence, Snowflake, Wifi } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const highlights = [
@@ -90,3 +90,4 @@ export const AccommodationsHighlightsSection = (): JSX.Element => {
     </section>
   );
 };
+

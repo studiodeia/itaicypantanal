@@ -78,6 +78,15 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
+  // Do not return index.html for missing static files.
+  app.use((req, res, next) => {
+    if (path.extname(req.path)) {
+      res.status(404).send("Not found");
+      return;
+    }
+    next();
+  });
+
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));

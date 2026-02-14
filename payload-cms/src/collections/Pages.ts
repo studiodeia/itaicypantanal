@@ -1,5 +1,6 @@
 import type { CollectionConfig } from "payload";
 import { isAuthenticated } from "../access/authenticated";
+import { seoFields } from "../fields/seo";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -75,6 +76,12 @@ export const Pages: CollectionConfig = {
             },
           ],
         },
+        seoFields({
+          titleField: "title",
+          descriptionField: "title",
+          imageField: "title",
+          slugPrefix: "",
+        }),
         {
           label: "Conteudo da pagina",
           fields: [

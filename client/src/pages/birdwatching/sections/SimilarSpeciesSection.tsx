@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import { BirdSpeciesCard } from "../components/BirdSpeciesCard";
 import type { BirdSpecies } from "../data";
@@ -57,3 +57,4 @@ export const SimilarSpeciesSection = ({
     </section>
   );
 };
+

@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
 import { BlogArticlePage } from "./BlogArticlePage";
 
 // Mock wouter's useParams to provide categorySlug + slug
@@ -12,7 +13,7 @@ vi.mock("wouter", () => ({
 
 describe("BlogArticlePage", () => {
   it("renders the article title from the featured article", () => {
-    render(<BlogArticlePage />);
+    render(<HelmetProvider><BlogArticlePage /></HelmetProvider>);
     expect(
       screen.getByText(
         "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy",
@@ -21,7 +22,7 @@ describe("BlogArticlePage", () => {
   });
 
   it("renders the article content section", () => {
-    render(<BlogArticlePage />);
+    render(<HelmetProvider><BlogArticlePage /></HelmetProvider>);
     // The featured article has content about bird species
     expect(
       screen.getByText(/santuários de vida selvagem/i),
@@ -29,7 +30,7 @@ describe("BlogArticlePage", () => {
   });
 
   it("renders the related articles section", () => {
-    render(<BlogArticlePage />);
+    render(<HelmetProvider><BlogArticlePage /></HelmetProvider>);
     expect(screen.getByText("Artigos relacionados")).toBeInTheDocument();
   });
 });

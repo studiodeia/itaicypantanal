@@ -1,6 +1,6 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { getArticleUrl } from "../data";
+import { getBlogArticleUrl } from "../cms";
 import type { BlogArticle } from "../data";
 
 interface BlogArticleCardProps {
@@ -14,7 +14,7 @@ export const BlogArticleCard = ({
 }: BlogArticleCardProps): JSX.Element => {
   return (
     <a
-      href={getArticleUrl(article)}
+      href={getBlogArticleUrl(article)}
       className="relative flex flex-col justify-end w-full h-[400px] md:h-[450px] lg:h-[510px] rounded-lg overflow-hidden group"
     >
       {/* Background image */}
@@ -83,3 +83,4 @@ export const BlogArticleCard = ({
     </a>
   );
 };
+

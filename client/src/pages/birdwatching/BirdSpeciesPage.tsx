@@ -1,5 +1,10 @@
 import { useParams } from "wouter";
-import { getBirdBySlug, getRelatedBirds } from "./data";
+import { PageMeta } from "@/components/PageMeta";
+import {
+  getBirdBySlugFromCms,
+  getRelatedBirdsFromCms,
+  useBirdCmsData,
+} from "./cms";
 import { SpeciesHeroSection } from "./sections/SpeciesHeroSection";
 import { SpeciesContentSection } from "./sections/SpeciesContentSection";
 import { SimilarSpeciesSection } from "./sections/SimilarSpeciesSection";
@@ -8,7 +13,8 @@ import { SiteFooterSection } from "../sections/SiteFooterSection";
 
 export const BirdSpeciesPage = (): JSX.Element => {
   const { slug } = useParams<{ slug: string }>();
-  const bird = slug ? getBirdBySlug(slug) : undefined;
+  const birdData = useBirdCmsData();
+  const bird = slug ? getBirdBySlugFromCms(birdData, slug) : undefined;
 
   if (!bird) {
     return (
@@ -26,10 +32,22 @@ export const BirdSpeciesPage = (): JSX.Element => {
     );
   }
 
-  const relatedBirds = getRelatedBirds(bird.slug);
+  const relatedBirds = getRelatedBirdsFromCms(birdData, bird.slug);
 
   return (
     <div className="flex flex-col w-full">
+      <PageMeta
+        title={`${bird.commonName} (${bird.scientificName})`}
+        description={bird.description}
+        canonicalPath={`/observacao-de-aves/catalogo/${bird.slug}`}
+        ogImage={bird.heroImage || bird.src}
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Observacao de Aves", path: "/observacao-de-aves" },
+          { name: "Catalogo", path: "/observacao-de-aves/catalogo" },
+          { name: bird.commonName, path: `/observacao-de-aves/catalogo/${bird.slug}` },
+        ]}
+      />
       <SpeciesHeroSection bird={bird} />
       <SpeciesContentSection bird={bird} />
       <SimilarSpeciesSection birds={relatedBirds} />

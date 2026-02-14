@@ -1,5 +1,6 @@
-import { ChevronDownIcon, ChevronRightIcon, MenuIcon, XIcon, ArrowLeftIcon } from "lucide-react";
+import { ChevronDownIcon, ChevronRightIcon, MenuIcon, XIcon, ArrowLeftIcon } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
+import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -168,7 +169,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
       >
         <header className={cn(
           "flex flex-col items-center justify-center gap-2 px-5 md:px-8 lg:px-10 py-3 md:py-6 lg:py-8 transition-all duration-300",
-          isDropdownOpen && "bg-[rgba(21,34,24,0.9)] backdrop-blur-[10px]"
+          isDropdownOpen && "glass-menu"
         )}>
           <nav className="flex max-w-[1360px] items-center justify-between w-full relative">
             <img
@@ -232,6 +233,11 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
               <Button
                 className="bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] rounded px-4 py-2 h-auto font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] tracking-[var(--functional-sm-letter-spacing)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
                 data-testid="button-reservar-hero"
+                onClick={() =>
+                  goToCloudbedsBooking({
+                    utmContent: "header_desktop_reservar",
+                  })
+                }
               >
                 Reservar
               </Button>
@@ -255,7 +261,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
 
         {isDropdownOpen && (
           <div
-            className="hidden lg:block w-full bg-[rgba(21,34,24,0.9)] backdrop-blur-[10px] shadow-[0_8px_24px_-4px_rgba(10,19,12,0.4)]"
+            className="hidden lg:block w-full glass-menu shadow-[0_8px_24px_-4px_rgba(10,19,12,0.4)]"
             onMouseEnter={handleDropdownEnter}
             onMouseLeave={handleDropdownLeave}
           >
@@ -278,7 +284,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                         style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0) 31.13%, rgba(0,0,0,0.64) 73.89%), linear-gradient(90deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.16) 100%)" }}
                       />
                     </div>
-                    <div className="relative w-full backdrop-blur-[8px] bg-[rgba(255,255,255,0.01)] flex flex-col gap-[12px] p-[16px]">
+                    <div className="relative w-full glass-menu flex flex-col gap-[12px] p-[16px]">
                       <div className="flex items-center justify-between gap-[16px] pb-[8px] border-b border-[#f2fcf7]">
                         <span
                           className="[font-family:'Playfair_Display',serif] font-medium text-[32px] leading-[48px] text-[#e3f7ec] flex-1 min-w-0"
@@ -302,9 +308,9 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
 
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex flex-col" data-testid="mobile-menu-overlay">
-          <div className="absolute inset-0 backdrop-blur-[16px] bg-[rgba(255,255,255,0.01)]" />
+          <div className="absolute inset-0 glass-backdrop" />
 
-          <div className="relative z-10 bg-[rgba(21,34,24,0.9)] backdrop-blur-[10px] flex items-center justify-between px-5 py-3">
+          <div className="relative z-10 glass-menu flex items-center justify-between px-5 py-3">
             <img
               className="w-[104px] md:w-[115px] h-auto"
               alt="Logo"
@@ -325,6 +331,11 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
               <Button
                 className="bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] rounded px-4 py-2 h-auto font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] tracking-[var(--functional-sm-letter-spacing)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
                 data-testid="button-reservar-mobile-menu"
+                onClick={() =>
+                  goToCloudbedsBooking({
+                    utmContent: "header_mobile_reservar",
+                  })
+                }
               >
                 Reservar
               </Button>
@@ -342,7 +353,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
 
           <div className="relative z-10 flex-1 overflow-y-auto">
             {mobileActiveCategory === null ? (
-              <div className="bg-[rgba(21,34,24,0.9)] backdrop-blur-[10px] flex flex-col">
+              <div className="glass-menu flex flex-col">
                 {navigationItems.filter(item => item.hasDropdown).map((item, index) => (
                   <button
                     key={index}
@@ -358,7 +369,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 ))}
               </div>
             ) : (
-              <div className="bg-[rgba(21,34,24,0.9)] backdrop-blur-[10px] flex flex-col items-center pb-10">
+              <div className="glass-menu flex flex-col items-center pb-10">
                 <div className="flex flex-col gap-10 w-full max-w-[1440px]">
                   <button
                     className="flex items-center gap-4 p-5 border-b border-[#446354] w-full"
@@ -412,3 +423,4 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
     </>
   );
 }
+

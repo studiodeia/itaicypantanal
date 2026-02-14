@@ -1,3 +1,9 @@
+import { PageMeta } from "@/components/PageMeta";
+import {
+  JsonLd,
+  buildLodgingBusiness,
+  buildWebSite,
+} from "@/components/JsonLd";
 import { AccommodationInfoSection } from "./sections/AccommodationInfoSection";
 import { AuthenticRestSection } from "./sections/AuthenticRestSection";
 import { ExclusiveExpeditionsSection } from "./sections/ExclusiveExpeditionsSection";
@@ -14,6 +20,13 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 export const Desktop = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full bg-white">
+      <PageMeta
+        title="Eco Lodge Premium no Pantanal"
+        description="Descubra o Pantanal em sua forma mais autentica. Hospedagem premium, pesca esportiva, observacao de aves e experiencias de ecoturismo no coracao do Pantanal."
+        canonicalPath="/"
+        ogImage="/images/og-default.webp"
+      />
+      <JsonLd data={[buildLodgingBusiness(), buildWebSite()]} />
       <PantanalHeroSection />
       <PantanalExperienceIntroSection />
       <AuthenticRestSection />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Fish, Camera, Waves, Heart } from "lucide-react";
+import { Fish, Camera, Waves, Heart } from "@/lib/icons";
 import { fadeIn, fadeUp, scaleIn, stagger, cardItem, viewport } from "@/lib/motion";
 
 const cycleSteps = [
@@ -51,7 +51,7 @@ export const RioVivoSection = (): JSX.Element => {
             className="w-full lg:w-1/2 h-[320px] md:h-[400px] lg:h-[480px] rounded-lg overflow-hidden bg-[#263a30]"
           >
             <img
-              src="/images/impacto-rio-vivo.webp"
+              src="/images/pesca-fish-4.webp"
               alt="Pesque e solte no Pantanal"
               className="w-full h-full object-cover"
             />
@@ -93,3 +93,6 @@ export const RioVivoSection = (): JSX.Element => {
     </section>
   );
 };
+
+
+

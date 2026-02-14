@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const culinaryImages = [
@@ -121,3 +121,4 @@ export const CulinarySection = (): JSX.Element => {
     </section>
   );
 };
+

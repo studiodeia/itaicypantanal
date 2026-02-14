@@ -328,6 +328,62 @@ export const SiteSettings: GlobalConfig = {
           ],
         },
         {
+          label: "SEO Padroes Globais",
+          description:
+            "Valores padrao de SEO usados quando uma pagina nao tem metadados proprios.",
+          fields: [
+            {
+              name: "defaultMetaTitle",
+              type: "text",
+              label: "Titulo padrao (meta title)",
+              defaultValue: "Itaicy Pantanal Eco Lodge | Ecoturismo no Pantanal",
+              admin: {
+                description:
+                  "Usado como fallback quando uma pagina nao tem metaTitle. Max 60 chars.",
+              },
+            },
+            {
+              name: "defaultMetaDescription",
+              type: "textarea",
+              label: "Descricao padrao (meta description)",
+              defaultValue:
+                "Descubra o Pantanal em sua forma mais autentica. Hospedagem premium, pesca esportiva, observacao de aves e experiencias de ecoturismo no coracao do Pantanal.",
+              admin: {
+                description:
+                  "Usado como fallback quando uma pagina nao tem metaDescription. Ideal: 120-155 chars.",
+              },
+            },
+            {
+              name: "defaultOgImage",
+              type: "text",
+              label: "Imagem Open Graph padrao",
+              defaultValue: "/images/og-default.webp",
+              admin: {
+                description:
+                  "Imagem padrao para compartilhamento em redes sociais. Tamanho ideal: 1200x630px.",
+              },
+            },
+            {
+              name: "siteUrl",
+              type: "text",
+              label: "URL do site (producao)",
+              admin: {
+                description:
+                  "URL base do site em producao. Ex: https://itaicypantanal.com.br. Usada para gerar canonical URLs e sitemap.",
+              },
+            },
+            {
+              name: "googleSiteVerification",
+              type: "text",
+              label: "Google Site Verification",
+              admin: {
+                description:
+                  "Codigo de verificacao do Google Search Console. Sera injetado como meta tag.",
+              },
+            },
+          ],
+        },
+        {
           label: "JSON Legado",
           description:
             "Campo JSON legado para compatibilidade. Sera removido apos migracao completa.",

@@ -3,10 +3,13 @@ import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { NavHeader } from "@/components/NavHeader";
 import { BookingDatePicker } from "@/components/BookingDatePicker";
+import { ProgressiveVideo } from "@/components/ProgressiveVideo";
+import { useSharedCmsSections } from "@/lib/cms/shared-content";
 import { fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
 
 export const PantanalHeroSection = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { homeHero } = useSharedCmsSections();
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
     setMenuOpen(isOpen);
@@ -14,7 +17,12 @@ export const PantanalHeroSection = (): JSX.Element => {
 
   return (
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[740px] items-center justify-end w-full z-[11] overflow-hidden">
-      <video
+      <ProgressiveVideo
+        src="/hero-background.mp4"
+        lowSrc="/hero-background.mp4"
+        poster="/images/home/about-us.webp"
+        startDelayMs={1000}
+        preferLowOnSlowConnection
         autoPlay
         loop
         muted
@@ -23,47 +31,70 @@ export const PantanalHeroSection = (): JSX.Element => {
           menuOpen ? "blur-[8px] scale-105" : ""
         }`}
         data-testid="video-hero-background"
-      >
-        <source src="/hero-background.mp4" type="video/mp4" />
-      </video>
+      />
 
-      <div className={`absolute inset-0 transition-all duration-300 ${
-        menuOpen
-          ? "z-[3] bg-[rgba(21,34,24,0.7)] backdrop-blur-[8px]"
-          : "z-[1] bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
-      }`} />
+      <div
+        className={`absolute inset-0 transition-all duration-300 ${
+          menuOpen
+            ? "z-[3] glass-overlay-hero"
+            : "z-[1] bg-[linear-gradient(0deg,rgba(21,34,24,0.5)_0%,rgba(21,34,24,0)_100%),linear-gradient(180deg,rgba(0,0,0,0.16)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.32)_0%,rgba(0,0,0,0.32)_100%)]"
+        }`}
+      />
 
       <NavHeader onMenuStateChange={handleMenuStateChange} />
 
       <div className="relative z-[2] flex flex-col lg:flex-row max-w-[1440px] items-end justify-end gap-[48px] lg:gap-[100px] px-5 md:px-8 lg:px-16 py-[48px] md:py-12 lg:py-[100px] w-full flex-1">
-        <motion.div variants={staggerSlow} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden">
-          <motion.h1 variants={fadeUp} className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] max-w-[592px]" data-testid="text-hero-heading" style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}>
-            O Pantanal como você nunca sentiu.
+        <motion.div
+          variants={staggerSlow}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden"
+        >
+          <motion.h1
+            variants={fadeUp}
+            className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] max-w-[592px]"
+            data-testid="text-hero-heading"
+            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
+          >
+            {homeHero.heading}
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-[#f2fcf7] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)] max-w-[592px]" data-testid="text-hero-subtitle">
-            Elegância essencial em harmonia com o bioma. Uma experiência de
-            imersão autêntica, sem excessos e sem concessões.
+          <motion.p
+            variants={fadeUp}
+            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-[#f2fcf7] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)] max-w-[592px]"
+            data-testid="text-hero-subtitle"
+          >
+            {homeHero.subtitle}
           </motion.p>
         </motion.div>
 
         <motion.div variants={scaleIn} initial="hidden" whileInView="visible" viewport={viewport}>
-        <Card className="w-full lg:w-[522px] bg-[rgba(10,19,12,0.2)] rounded-lg backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] border-0" data-testid="card-booking">
-          <CardContent className="flex flex-col items-start gap-5 md:gap-10 p-4 md:p-8">
-            <div className="flex flex-col items-start gap-4 w-full">
-              <h2 className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]" data-testid="text-booking-heading" style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}>
-                Procure por uma data especial
-              </h2>
+          <Card
+            className="w-full lg:w-[522px] bg-[rgba(10,19,12,0.2)] rounded-lg backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] border-0"
+            data-testid="card-booking"
+          >
+            <CardContent className="flex flex-col items-start gap-5 md:gap-10 p-4 md:p-8">
+              <div className="flex flex-col items-start gap-4 w-full">
+                <h2
+                  className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]"
+                  data-testid="text-booking-heading"
+                  style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
+                >
+                  {homeHero.bookingHeading}
+                </h2>
 
-              <p className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]" data-testid="text-booking-description">
-                Elegância essencial em harmonia com o bioma. Uma experiência de
-                imersão autêntica, sem
-              </p>
-            </div>
+                <p
+                  className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
+                  data-testid="text-booking-description"
+                >
+                  {homeHero.bookingDescription}
+                </p>
+              </div>
 
-            <BookingDatePicker variant="hero" />
-          </CardContent>
-        </Card>
+              <BookingDatePicker variant="hero" />
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>

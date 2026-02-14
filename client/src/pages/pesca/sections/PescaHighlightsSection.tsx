@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, Sailboat, Fish } from "lucide-react";
+import { Star, Sailboat, Fish } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const highlights = [
@@ -83,3 +83,4 @@ export const PescaHighlightsSection = (): JSX.Element => {
     </section>
   );
 };
+

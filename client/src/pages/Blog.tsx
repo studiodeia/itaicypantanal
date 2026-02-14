@@ -1,15 +1,31 @@
+import { PageMeta } from "@/components/PageMeta";
 import { BlogHeroSection } from "./blog/sections/BlogHeroSection";
 import { BlogRecentSection } from "./blog/sections/BlogRecentSection";
 import { BlogCategoriesSection } from "./blog/sections/BlogCategoriesSection";
 import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "./sections/SiteFooterSection";
+import { useBlogCmsData } from "./blog/cms";
 
 export const Blog = (): JSX.Element => {
+  const blogContent = useBlogCmsData();
+
   return (
     <div className="flex flex-col w-full">
-      <BlogHeroSection />
-      <BlogRecentSection />
-      <BlogCategoriesSection />
+      <PageMeta
+        title="Blog"
+        description="Artigos sobre o Pantanal, fauna, flora, ecoturismo, pesca esportiva e observacao de aves. Dicas e guias para sua viagem ao Pantanal."
+        canonicalPath="/blog"
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ]}
+      />
+      <BlogHeroSection featuredArticle={blogContent.featuredArticle} />
+      <BlogRecentSection recentArticles={blogContent.recentArticles} />
+      <BlogCategoriesSection
+        allArticles={blogContent.allArticles}
+        categories={blogContent.categories}
+      />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>

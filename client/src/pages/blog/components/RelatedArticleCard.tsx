@@ -1,5 +1,5 @@
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { getArticleUrl } from "../data";
+import { getBlogArticleUrl } from "../cms";
 import type { BlogArticle } from "../data";
 
 interface RelatedArticleCardProps {
@@ -11,7 +11,7 @@ export const RelatedArticleCard = ({
 }: RelatedArticleCardProps): JSX.Element => {
   return (
     <a
-      href={getArticleUrl(article)}
+      href={getBlogArticleUrl(article)}
       className="flex flex-col items-start w-full group"
     >
       {/* Image */}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { Button } from "@/components/ui/button";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
 
@@ -22,7 +23,15 @@ export const AccommodationInfoSection = (): JSX.Element => {
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 lg:gap-[32px]">
-            <Button className="h-auto lg:h-[56px] bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] text-lg md:text-xl lg:text-[24px] leading-7 md:leading-8 lg:leading-[32px] font-functional-lg font-[number:var(--functional-lg-font-weight)] tracking-[0] px-5 md:px-6 lg:px-[24px] py-2.5 md:py-3 lg:py-[12px] rounded-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]" data-testid="button-reservar-accommodations">
+            <Button
+              className="h-auto lg:h-[56px] bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] text-lg md:text-xl lg:text-[24px] leading-7 md:leading-8 lg:leading-[32px] font-functional-lg font-[number:var(--functional-lg-font-weight)] tracking-[0] px-5 md:px-6 lg:px-[24px] py-2.5 md:py-3 lg:py-[12px] rounded-md transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+              data-testid="button-reservar-accommodations"
+              onClick={() =>
+                goToCloudbedsBooking({
+                  utmContent: "accommodations_section_reservar",
+                })
+              }
+            >
               Reservar
             </Button>
 

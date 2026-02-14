@@ -215,9 +215,18 @@ module.exports = plugin(function({ addUtilities, addComponents, theme }) {
   // ============================================
 
   const glassComponents = {
-    // Hero glass card
+    // NÍVEL 1 - Glass Overlay Suave (Hero overlays)
+    // Filosofia: Presença discreta que não compete com o conteúdo
+    '.glass-overlay-hero': {
+      backdropFilter: 'blur(4px)',
+      WebkitBackdropFilter: 'blur(4px)',
+      backgroundColor: 'rgba(21, 34, 24, 0.65)',
+    },
+
+    // NÍVEL 2 - Glass Card Discreto (Cards, Forms, Booking)
+    // Filosofia: Vidro fosco que sugere leveza sem perder presença
     '.glass-card-hero': {
-      backgroundColor: 'rgba(10, 19, 12, 0.2)',
+      backgroundColor: 'rgba(10, 19, 12, 0.35)',
       borderRadius: '0.5rem',
       backdropFilter: 'blur(2px) brightness(110%)',
       WebkitBackdropFilter: 'blur(2px) brightness(110%)',
@@ -225,18 +234,20 @@ module.exports = plugin(function({ addUtilities, addComponents, theme }) {
       border: '0',
     },
 
-    // Menu backdrop glass
-    '.glass-backdrop': {
-      backdropFilter: 'blur(16px)',
-      WebkitBackdropFilter: 'blur(16px)',
-      backgroundColor: 'rgba(255, 255, 255, 0.01)',
+    // NÍVEL 3 - Glass Menu Presente (Menus, Modals, Dropdowns)
+    // Filosofia: Fundo sólido com leve blur para elegância
+    '.glass-menu': {
+      backdropFilter: 'blur(6px)',
+      WebkitBackdropFilter: 'blur(6px)',
+      backgroundColor: 'rgba(21, 34, 24, 0.92)',
     },
 
-    // Dropdown menu glass
-    '.glass-menu-item': {
-      backdropFilter: 'blur(8px)',
-      WebkitBackdropFilter: 'blur(8px)',
-      backgroundColor: 'rgba(255, 255, 255, 0.01)',
+    // NÍVEL 4 - Glass Backdrop Sutil (Mobile menu background)
+    // Filosofia: Blur médio com presença sutil mas visível
+    '.glass-backdrop': {
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      backgroundColor: 'rgba(21, 34, 24, 0.25)',
     },
   };
 

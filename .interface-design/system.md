@@ -197,20 +197,23 @@ SectionContainer (background + padding)
 1. **Permitido**:
    - Ring shadows: `0 0 0 1px` (para focus states)
    - Subtle shadows para elevação: `shadow-sm`, `shadow`
-   - Backdrop blur para glassmorphism
+   - Backdrop blur para glassmorphism (discreto e suave)
    - Borders para separação
 
 2. **Não Permitido**:
    - Layered shadows pesadas
    - Drop shadows dramáticas
    - Multiple shadow layers
+   - Glassmorfismo excessivamente transparente
 
-**Glassmorphism Pattern**:
-```
-Utility: glass-card-hero
-= backdrop-blur-[2.0px] backdrop-brightness-[110%] bg-pantanal-dark-overlay
-+ inset box-shadow pattern
-```
+**Glassmorphism Patterns** (Filosofia: vidro fosco, não vidro transparente):
+
+| Utility | Blur | Background | Uso |
+|---|---|---|---|
+| `.glass-overlay-hero` | 4px | rgba(21,34,24,0.65) | Hero overlays - presença discreta |
+| `.glass-card-hero` | 2px + brightness | rgba(10,19,12,0.35) | Cards, Forms - vidro fosco com leveza |
+| `.glass-menu` | 6px | rgba(21,34,24,0.92) | Menus, Modals - fundo sólido com blur elegante |
+| `.glass-backdrop` | 12px | rgba(21,34,24,0.25) | Mobile menu background - blur médio com presença |
 
 **Card Elevation**:
 - Card padrão: `rounded-xl border bg-card shadow`

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { stagger, fadeIn, fadeUp, scaleIn, viewport } from "@/lib/motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 
 export const AccommodationsCrossSellSection = (): JSX.Element => {
@@ -72,3 +72,4 @@ export const AccommodationsCrossSellSection = (): JSX.Element => {
     </section>
   );
 };
+

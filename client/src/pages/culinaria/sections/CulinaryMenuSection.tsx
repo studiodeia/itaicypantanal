@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { stagger, fadeIn, fadeUp, viewport } from "@/lib/motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 
 const menuTabs = [
   { id: "carnes", label: "01 Carnes" },
@@ -135,7 +136,9 @@ export const CulinaryMenuSection = (): JSX.Element => {
 
         {/* Bottom CTA */}
         <a
-          href="#"
+          href={buildCloudbedsBookingUrl({
+            utmContent: "culinaria_section_fazer_reserva",
+          })}
           className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
           data-testid="link-menu-reserva"
         >
@@ -148,3 +151,4 @@ export const CulinaryMenuSection = (): JSX.Element => {
     </section>
   );
 };
+

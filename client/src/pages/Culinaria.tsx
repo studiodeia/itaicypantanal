@@ -1,3 +1,4 @@
+import { PageMeta } from "@/components/PageMeta";
 import { CulinaryHeroSection } from "./culinaria/sections/CulinaryHeroSection";
 import { CulinaryManifestoSection } from "./culinaria/sections/CulinaryManifestoSection";
 import { CulinaryHighlightsSection } from "./culinaria/sections/CulinaryHighlightsSection";
@@ -13,6 +14,15 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 export const Culinaria = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
+      <PageMeta
+        title="Culinaria Pantaneira"
+        description="Sabores autenticos do Pantanal preparados com ingredientes locais. Gastronomia regional que conecta voce a cultura e a natureza."
+        canonicalPath="/culinaria"
+        breadcrumbs={[
+          { name: "Inicio", path: "/" },
+          { name: "Culinaria", path: "/culinaria" },
+        ]}
+      />
       <CulinaryHeroSection />
       <CulinaryManifestoSection />
       <CulinaryHighlightsSection />

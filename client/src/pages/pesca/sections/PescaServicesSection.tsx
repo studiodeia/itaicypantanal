@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
 const fishSpecies = [
@@ -132,7 +133,9 @@ export const PescaServicesSection = (): JSX.Element => {
             </p>
           </div>
           <a
-            href="/pesca#reservar"
+            href={buildCloudbedsBookingUrl({
+              utmContent: "pesca_section_reservar_expedicao",
+            })}
             className="flex items-center justify-center h-14 px-6 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg whitespace-nowrap shrink-0 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
           >
             Reservar Expedição de Pesca
@@ -213,7 +216,7 @@ const FishCard = ({ fish, index }: FishCardProps): JSX.Element => {
           <div className="flex items-center gap-4">
             <div className="w-11 h-11 rounded-full bg-[#446354] overflow-hidden">
               <img
-                src="/images/pesca-avatar.webp"
+                src="/images/home/blog-avatar.webp"
                 alt={fish.author}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -242,3 +245,6 @@ const FishCard = ({ fish, index }: FishCardProps): JSX.Element => {
     </div>
   );
 };
+
+
+

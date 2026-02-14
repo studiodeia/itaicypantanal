@@ -14,7 +14,7 @@ export const ComunidadeSection = (): JSX.Element => {
           className="w-full lg:w-1/2 h-[360px] md:h-[440px] lg:h-[560px] rounded-lg overflow-hidden bg-[#263a30]"
         >
           <img
-            src="/images/impacto-comunidade.webp"
+            src="/images/pesca-about-1.webp"
             alt="Guia local do Pantanal"
             className="w-full h-full object-cover grayscale-[30%]"
             data-testid="img-comunidade"
@@ -63,3 +63,5 @@ export const ComunidadeSection = (): JSX.Element => {
     </section>
   );
 };
+
+

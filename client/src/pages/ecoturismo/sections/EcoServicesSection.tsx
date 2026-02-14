@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
@@ -203,3 +203,4 @@ const ActivityCard = ({ activity }: ActivityCardProps): JSX.Element => {
     </div>
   );
 };
+
