@@ -3,6 +3,12 @@ import type { ServerFunctionClient } from "payload";
 
 import { RootLayout, handleServerFunctions } from "@payloadcms/next/layouts";
 
+/* Payload admin CSS — REQUIRED for the admin UI to render properly */
+import "@payloadcms/next/css";
+
+/* Itaicy brand overrides (colors, typography, elevation tokens) */
+import "./custom.scss";
+
 import config from "../../payload.config";
 import { importMap } from "./admin/importMap";
 
