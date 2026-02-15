@@ -80,6 +80,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/cms/page/:slug", async (req, res) => {
+    try {
+      const { content, source } = await getCmsContent();
+      const slug = "/" + (req.params.slug === "home" ? "" : req.params.slug);
+      const pageData = content.pageContent?.[slug] ?? null;
+      if (!pageData) {
+        res.status(404).json({ message: "Page content not found" });
+        return;
+      }
+      res.json({ slug, content: pageData, source });
+    } catch (error) {
+      res.status(500).json({
+        message: error instanceof Error ? error.message : "Failed to load page content",
+      });
+    }
+  });
+
   app.get("/api/cms/birdwatching/species/:slug", async (req, res) => {
     try {
       const { content, source } = await getCmsContent();

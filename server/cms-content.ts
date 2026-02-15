@@ -394,6 +394,14 @@ function buildFromPayloadData(
       ? (legacyShared as Record<string, unknown>)
       : defaultSharedCmsSections);
 
+  // Page content from SiteSettings
+  const pageContent =
+    payloadSiteSettings?.pageContent &&
+    typeof payloadSiteSettings.pageContent === "object" &&
+    !Array.isArray(payloadSiteSettings.pageContent)
+      ? (payloadSiteSettings.pageContent as Record<string, unknown>)
+      : undefined;
+
   return {
     generatedAt: new Date().toISOString(),
     notes: {
@@ -439,6 +447,7 @@ function buildFromPayloadData(
       featuredSlugs: featuredBirdSlugs,
     },
     shared,
+    pageContent,
     pages: {
       routes: [
         "/",
