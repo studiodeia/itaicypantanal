@@ -4,6 +4,8 @@ import {
   buildLodgingBusiness,
   buildWebSite,
 } from "@/components/JsonLd";
+import { usePageCms } from "@/lib/cms/page-content";
+import { homeDefaults } from "./home-defaults";
 import { AccommodationInfoSection } from "./sections/AccommodationInfoSection";
 import { AuthenticRestSection } from "./sections/AuthenticRestSection";
 import { ExclusiveExpeditionsSection } from "./sections/ExclusiveExpeditionsSection";
@@ -18,6 +20,8 @@ import { PantanalStatsSection } from "./sections/PantanalStatsSection";
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Desktop = (): JSX.Element => {
+  const cms = usePageCms("/", homeDefaults);
+
   return (
     <div className="flex flex-col w-full bg-white">
       <PageMeta
@@ -29,14 +33,14 @@ export const Desktop = (): JSX.Element => {
       <JsonLd data={[buildLodgingBusiness(), buildWebSite()]} />
       <PantanalHeroSection />
       <PantanalExperienceIntroSection />
-      <AuthenticRestSection />
-      <ExclusiveExpeditionsSection />
-      <PantanalStatsSection />
-      <AccommodationInfoSection />
+      <AuthenticRestSection content={cms.aboutUs} />
+      <ExclusiveExpeditionsSection content={cms.expeditions} />
+      <PantanalStatsSection content={cms.stats} />
+      <AccommodationInfoSection content={cms.accommodation} />
       <ImmersionTestimonialsSection />
-      <NaturalRefugeDescriptionSection />
+      <NaturalRefugeDescriptionSection content={cms.impact} />
       <FrequentlyAskedQuestionsSection />
-      <PantanalBlogSection />
+      <PantanalBlogSection content={cms.blog} />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>

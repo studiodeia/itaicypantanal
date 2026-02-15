@@ -9,6 +9,17 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import type { HomePageContent } from "@shared/cms-page-content";
+
+const defaultBlogContent: HomePageContent["blog"] = {
+  label: "BLOG",
+  heading: "Diário do Pantanal",
+  description:
+    "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+  buttonText: "Ver todos",
+};
+
+type Props = { content?: HomePageContent["blog"] };
 
 const blogPosts = [
   {
@@ -55,23 +66,23 @@ const blogPosts = [
   },
 ];
 
-export const PantanalBlogSection = (): JSX.Element => {
+export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Element => {
+  const content = contentProp ?? defaultBlogContent;
   return (
     <section className="flex flex-col items-center justify-end gap-8 w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         <motion.header variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
           <motion.div variants={fadeIn} className="flex items-center w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-blog-label">
-            BLOG
+            {content.label}
           </motion.div>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 md:gap-6 lg:gap-[100px] w-full">
             <motion.h2 variants={fadeUp} className="w-full lg:w-[664px] font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]" data-testid="text-blog-heading">
-              Diário do Pantanal
+              {content.heading}
             </motion.h2>
 
             <motion.p variants={fadeUp} className="w-full lg:flex-1 font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              O que nossos viajantes dizem sobre a experiência autêntica de se
-              desconectar na natureza selvagem da Itaicy Ecoturismo.
+              {content.description}
             </motion.p>
           </div>
         </motion.header>
@@ -135,7 +146,7 @@ export const PantanalBlogSection = (): JSX.Element => {
         >
           <div className="flex items-center justify-between flex-1">
             <span className="flex flex-1 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] items-center [font-style:var(--functional-md-font-style)]">
-              Ver todos
+              {content.buttonText}
             </span>
 
             <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 text-[#e3f7ec]" />
@@ -145,4 +156,3 @@ export const PantanalBlogSection = (): JSX.Element => {
     </section>
   );
 };
-

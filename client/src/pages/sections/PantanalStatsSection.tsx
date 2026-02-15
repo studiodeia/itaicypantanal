@@ -2,13 +2,9 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Star } from "@/lib/icons";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import type { HomePageContent } from "@shared/cms-page-content";
 
-const stats = [
-  { target: 2000, suffix: "+", label: "HÓSPEDES SATISFEITOS" },
-  { target: 166, suffix: "+", label: "AVES AVISTADAS" },
-  { target: 15, suffix: "+", label: "ANOS DE EXPERIÊNCIA" },
-  { target: 4.9, suffix: "", label: "AVALIAÇÃO MÉDIA", hasIcon: true },
-];
+type Props = { content: HomePageContent["stats"] };
 
 const ANIMATION_DURATION = 2000;
 
@@ -16,7 +12,8 @@ function easeOutCubic(t: number) {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export const PantanalStatsSection = (): JSX.Element => {
+export const PantanalStatsSection = ({ content }: Props): JSX.Element => {
+  const stats = content.items;
   const sectionRef = useRef<HTMLElement>(null);
   const hasAnimated = useRef(false);
   const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
@@ -41,7 +38,7 @@ export const PantanalStatsSection = (): JSX.Element => {
     };
 
     requestAnimationFrame(tick);
-  }, []);
+  }, [stats]);
 
   useEffect(() => {
     const node = sectionRef.current;
