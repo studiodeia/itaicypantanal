@@ -1,0 +1,514 @@
+{
+  "/": {
+    "aboutUs": {
+      "label": "SOBRE NÓS",
+      "heading": "Bem-vindo ao Nosso Refúgio Natural",
+      "body": [
+        "Localizada no coração de uma das regiões mais biodiversas do mundo, nossa pousada oferece uma experiência única de conexão com a natureza.",
+        "Com mais de 15 anos de experiência em ecoturismo, nos dedicamos a proporcionar momentos inesquecíveis enquanto preservamos e protegemos nosso ambiente natural."
+      ],
+      "image": "/images/home/about-us.webp",
+      "features": [
+        { "number": "01", "title": "Sustentabilidade", "description": "Práticas eco-friendly em todas as nossas operações" },
+        { "number": "02", "title": "Excelência", "description": "Guias especializados e equipamentos de primeira linha" },
+        { "number": "03", "title": "Hospitalidade", "description": "Atendimento personalizado para cada hóspede" }
+      ]
+    },
+    "expeditions": {
+      "label": "NOSSOS SERVIÇOS",
+      "heading": "Expedições Exclusivas no Coração do Pantanal",
+      "description": "Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição.",
+      "items": [
+        { "title": "Pesca Esportiva Cota Zero", "description": "Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.", "backgroundImage": "/images/home/expedition-pesca.webp" },
+        { "title": "Birdwatching", "description": "166 espécies catalogadas em nosso santuário. Guias ornitólogos conduzem expedições imersivas ao amanhecer.", "backgroundImage": "/images/home/expedition-birdwatching.webp" },
+        { "title": "Ecoturismo", "description": "Trilhas guiadas, passeios de barco e safáris fotográficos no coração do Pantanal intocado.", "backgroundImage": "/images/home/expedition-ecoturismo.webp" }
+      ],
+      "buttonText": "Quero conhecer"
+    },
+    "stats": {
+      "items": [
+        { "target": 2000, "suffix": "+", "label": "HÓSPEDES SATISFEITOS" },
+        { "target": 166, "suffix": "+", "label": "AVES AVISTADAS" },
+        { "target": 15, "suffix": "+", "label": "ANOS DE EXPERIÊNCIA" },
+        { "target": 4.9, "suffix": "", "label": "AVALIAÇÃO MÉDIA", "hasIcon": true }
+      ]
+    },
+    "accommodation": {
+      "label": "ACOMODAÇÕES",
+      "heading": "Descanso autêntico no coração selvagem",
+      "body": "Nossas acomodações são projetadas para o descanso e a imersão. Confortáveis, climatizadas e com vista para a natureza intocada, elas são o ponto de partida perfeito para sua aventura no Pantanal.",
+      "buttonReserve": "Reservar",
+      "buttonDetails": "Mais detalhes",
+      "backgroundImage": "/images/home/accommodations-bg.webp"
+    },
+    "impact": {
+      "label": "NOSSO IMPACTO",
+      "heading": "Compromisso com a Natureza, Impacto na Comunidade",
+      "items": [
+        { "number": "01", "title": "Biodiversidade Exclusiva", "description": "Acesso a áreas protegidas onde 166 espécies de aves foram catalogadas." },
+        { "number": "02", "title": "Apoio Comunitário", "description": "Parte de nossa receita é revertida diretamente para as comunidades indígenas locais." },
+        { "number": "03", "title": "Preservação Oficial", "description": "Somos os únicos com autorização do IBAMA para operar em milhões de hectares protegidos." }
+      ],
+      "image": "/images/home/impact.webp"
+    },
+    "blog": {
+      "label": "BLOG",
+      "heading": "Diário do Pantanal",
+      "description": "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+      "buttonText": "Ver todos"
+    }
+  },
+  "/acomodacoes": {
+    "hero": {
+      "label": "ACOMODAÇÕES",
+      "heading": "Refúgios de Conforto Essencial",
+      "subtitle": "O seu ponto de partida para a imersão no Pantanal.",
+      "scrollHint": "Deslize para baixo",
+      "videoMp4": "/Vídeo_Pronto_e_Suave.mp4",
+      "videoWebm": "/video-pronto-suave.webm",
+      "videoMp4Low": "/video-pronto-suave-low.mp4",
+      "videoWebmLow": "/video-pronto-suave-low.webm",
+      "videoPoster": "/images/acomodacoes/suite-explorer.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Nossos apartamentos são projetados para o ", "isHighlight": false },
+        { "text": "conforto essencial", "isHighlight": true },
+        { "text": ", garantindo que você tenha o ", "isHighlight": false },
+        { "text": "refúgio perfeito", "isHighlight": true },
+        { "text": " após um dia de expedição.", "isHighlight": false }
+      ]
+    },
+    "highlights": {
+      "heading": "O Essencial da Sua Estadia",
+      "items": [
+        { "iconName": "UtensilsCrossed", "title": "Gastronomia Full-Board", "description": "Café da manhã, almoço com ingredientes locais, lanche da tarde e jantar autoral — tudo incluso" },
+        { "iconName": "GlassWater", "title": "Open Bar & Bebidas Premium", "description": "Água, sucos naturais, café especial e refrigerantes disponíveis durante toda a estadia" },
+        { "iconName": "Compass", "title": "Expedições Privativas Inclusas", "description": "Passeio de barco e cavalgada guiada inclusos — explore a fauna e flora com especialistas" },
+        { "iconName": "Fence", "title": "Varanda com Vista para o Pantanal", "description": "Todas as suítes possuem varanda privativa para contemplação e observação de aves" },
+        { "iconName": "Snowflake", "title": "Climatização Individual", "description": "Ar-condicionado split em todas as suítes para conforto em qualquer estação" },
+        { "iconName": "Wifi", "title": "Conectividade Essencial", "description": "Wi-Fi via satélite nas áreas sociais — desconecte-se do mundo, conecte-se ao Pantanal" }
+      ]
+    },
+    "rooms": [
+      {
+        "title": "Suíte Explorer",
+        "description": "O refúgio ideal para o viajante solo que busca imersão total. Privacidade, silêncio e conexão com a natureza no seu próprio ritmo.",
+        "image": "/images/acomodacoes/suite-explorer.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedSingle", "label": "Cama Individual Premium" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Intimista" },
+          { "iconName": "User", "label": "1 Pessoa" }
+        ]
+      },
+      {
+        "title": "Suíte Adventure",
+        "description": "Projetada para casais que buscam uma experiência a dois no coração do Pantanal. Conforto, natureza e momentos inesquecíveis.",
+        "image": "/images/acomodacoes/suite-adventure.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedDouble", "label": "Cama de Casal Premium" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Privativa" },
+          { "iconName": "Users", "label": "2 Pessoas" }
+        ]
+      },
+      {
+        "title": "Suíte Family",
+        "description": "A mais espaçosa das nossas suítes. Perfeita para famílias ou pequenos grupos, com cama de casal, solteiro e ampla área de convivência.",
+        "image": "/images/acomodacoes/suite-family.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedDouble", "label": "Cama Casal + Solteiro" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Ampla" },
+          { "iconName": "Users", "label": "3 Pessoas" }
+        ]
+      }
+    ],
+    "culinary": {
+      "label": "CULINÁRIA",
+      "heading": "O Sabor Autêntico do Pantanal",
+      "description": "Nossa gastronomia é focada no essencial: ingredientes locais frescos e um preparo cuidadoso, resultando em uma comida autêntica e reconfortante após um dia de expedição.",
+      "images": [
+        { "src": "/images/acomodacoes/culinaria-1.webp", "alt": "Prato regional do Pantanal", "tag": "Café da manhã" },
+        { "src": "/images/acomodacoes/culinaria-2.webp", "alt": "Almoço preparado com ingredientes locais", "tag": "Almoço" },
+        { "src": "/images/acomodacoes/culinaria-3.webp", "alt": "Jantar sofisticado na pousada", "tag": "Jantar" },
+        { "src": "/images/acomodacoes/culinaria-4.webp", "alt": "Lanche e petiscos regionais", "tag": "Lanche" }
+      ],
+      "ctaText": "Conheça nossa gastronomia",
+      "ctaHref": "/culinaria"
+    }
+  },
+  "/culinaria": {
+    "hero": {
+      "label": "CULINÁRIA",
+      "heading": "Onde o Pantanal Vira Alimento",
+      "subtitle": "Ingredientes do rio e da terra, técnica internacional e alma pantaneira em cada prato.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/culinaria/hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "A ", "isHighlight": false },
+        { "text": "alma do Pantanal", "isHighlight": true },
+        { "text": ", a técnica do mundo. Ingredientes locais colhidos no dia, ", "isHighlight": false },
+        { "text": "técnicas de alta gastronomia", "isHighlight": true },
+        { "text": " e o tempo que cada prato merece — uma cozinha autoral que honra a terra e surpreende o paladar.", "isHighlight": false }
+      ]
+    },
+    "menu": {
+      "label": "NOSSO MENU",
+      "heading": "Galeria de experiências",
+      "body": [
+        "Navegue pelas categorias e explore tudo o que espera por você. Conheça os peixes e carnes já inclusos na sua Pensão Completa. Descubra também os doces caseiros e nossa seleção especial de vinhos e drinks."
+      ],
+      "image": "",
+      "features": [
+        { "number": "01", "title": "Carnes", "description": "" },
+        { "number": "02", "title": "Peixes", "description": "" },
+        { "number": "03", "title": "Massas", "description": "" },
+        { "number": "04", "title": "Doces", "description": "" },
+        { "number": "05", "title": "Bebidas", "description": "" }
+      ]
+    },
+    "highlights": {
+      "heading": "Do Rio e da Horta à Sua Mesa",
+      "items": [
+        { "iconName": "Fish", "title": "Peixes do Rio", "description": "Destaque para o Dourado e outros peixes frescos, garantindo a rastreabilidade." },
+        { "iconName": "Sprout", "title": "Produtores Locais", "description": "Uma breve menção ao apoio à comunidade e fazendas vizinhas." },
+        { "iconName": "Flower2", "title": "Horta da Casa", "description": "(Se existir) Menção aos temperos e vegetais frescos colhidos no dia." }
+      ]
+    },
+    "services": {
+      "label": "NOSSOS SERVIÇOS",
+      "heading": "O Ciclo da Sua Imersão Gastronômica",
+      "description": "Da alvorada ao anoitecer, sua experiência gastronômica está inclusa e conectada à sua expedição.",
+      "items": [
+        { "title": "Café da Manhã com Vista", "description": "Desfrute do seu café observando o despertar do Pantanal.", "image": "/images/culinaria-services-1" },
+        { "title": "Almoço no Refúgio", "description": "", "image": "/images/culinaria-services-2" },
+        { "title": "Jantar à Luz de Velas", "description": "", "image": "/images/culinaria-services-3" }
+      ],
+      "buttonText": "Fazer uma reserva"
+    },
+    "experience": {
+      "heading": "Sabor e Aconchego",
+      "body": [
+        "O calor do fogo, o vinho, os sabores autênticos e o conforto de um refúgio no coração do Pantanal."
+      ],
+      "image": "/images/culinaria-experience-bg.webp"
+    },
+    "crossSell": {
+      "heading": "O refúgio completo",
+      "description": "Agora que conheceu nossa cozinha, encontre a acomodação perfeita para sua imersão no Pantanal.",
+      "buttonText": "Conhecer acomodações",
+      "buttonHref": "/acomodacoes",
+      "image": "/images/culinaria-crosssell-2"
+    }
+  },
+  "/pesca": {
+    "hero": {
+      "label": "PESCA ESPORTIVA",
+      "heading": "Pesca Esportiva de Alta Performance em Zonas Exclusivas",
+      "subtitle": "Uma operação de pesca esportiva de alto nível. Navegue por rios de acesso exclusivo, onde a pressão de pesca é mínima e os gigantes do Pantanal ainda reinam.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/pesca-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "A experiência de quem ", "isHighlight": false },
+        { "text": "desbravou a Amazônia", "isHighlight": true },
+        { "text": ", agora no Pantanal. Operamos com respeito absoluto ao peixe e foco total na sua ", "isHighlight": false },
+        { "text": "performance esportiva", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Alta Performance e Preservação",
+      "body": [
+        "Trazemos ao Pantanal a expertise técnica de nossas 13 operações na Amazônia. Nossa estrutura é desenhada para o pescador esportivo que busca desafio técnico e troféus, em um ambiente onde a pressão de pesca é controlada e os gigantes do rio são respeitados."
+      ],
+      "image": "/images/pesca-about-1",
+      "features": [
+        { "number": "01", "title": "Cota Zero (Pesque e Solte)", "description": "Praticamos rigorosamente a conservação. O peixe é um troféu vivo que retorna ao rio, garantindo o equilíbrio do ecossistema e o futuro do esporte." },
+        { "number": "02", "title": "Zonas de Acesso Restrito", "description": "Navegue por rios e corixos dentro de áreas protegidas e exclusivas, longe da competição e do ruído do turismo convencional." },
+        { "number": "03", "title": "Piloteiros Nativos", "description": "Nossos guias nasceram na região e dominam a leitura do rio. Eles conhecem os pontos de caça do Dourado e as técnicas para maximizar sua performance." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por que pescar na Itaicy?",
+      "items": [
+        { "iconName": "Star", "title": "Expertise de 13 Operações", "description": "Trazemos o know-how de nossa rede de 13 pousadas flutuantes na Amazônia para garantir uma logística impecável." },
+        { "iconName": "Sailboat", "title": "Acesso Exclusivo", "description": "Navegue em zonas de pesca protegidas e exclusivas, garantindo rios menos batidos e mais ativos." },
+        { "iconName": "Fish", "title": "O Reino do Dourado", "description": "Nossa localização estratégica é o habitat ideal para o 'Rei do Rio', proporcionando batalhas inesquecíveis." }
+      ]
+    },
+    "services": {
+      "label": "O SANTUÁRIO",
+      "heading": "Os Gigantes do Nosso Rio",
+      "description": "O Dourado é o rei, mas não reina sozinho. Nossas águas abrigam uma variedade incrível de desafios esportivos. Conheça seus adversários.",
+      "items": [
+        { "title": "Zebra do Pantanal", "description": "Um dos peixes mais icônicos da região, conhecido por suas listras distintivas e força em batalhas de pesca.", "image": "/images/pesca-fish-1" },
+        { "title": "Tucunaré", "description": "Famoso entre os pescadores esportivos, o tucunaré é conhecido por sua agressividade e habilidade de luta.", "image": "/images/pesca-fish-2" },
+        { "title": "Pacu", "description": "Um peixe de carne saborosa, o pacu é alvo de muitas pescarias e intrigante por sua velocidade na água.", "image": "/images/pesca-fish-3" },
+        { "title": "Dourado", "description": "Considerado o rei dos rios, o dourado é famoso por sua luta intensa e é um dos mais procurados na pesca esportiva.", "image": "/images/pesca-fish-4" }
+      ],
+      "buttonText": "Ver guia de espécies completo",
+      "buttonHref": "#"
+    }
+  },
+  "/ecoturismo": {
+    "hero": {
+      "label": "ECOTURISMO",
+      "heading": "Imersão Autêntica na Natureza Selvagem do Pantanal",
+      "subtitle": "Passeios guiados que revelam a essência do bioma mais biodiverso do planeta. Cada experiência é uma conexão profunda com a vida selvagem.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/eco-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Uma experiência que vai além do ", "isHighlight": false },
+        { "text": "turismo convencional", "isHighlight": true },
+        { "text": ". Cada passeio é uma imersão guiada no coração de um dos ", "isHighlight": false },
+        { "text": "ecossistemas mais ricos", "isHighlight": true },
+        { "text": " do planeta.", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Conexão Autêntica com o Bioma",
+      "body": [
+        "Às margens do Rio Cuiabá, oferecemos uma seleção de passeios que proporcionam uma imersão completa na natureza do Pantanal.",
+        "Todos os passeios são acompanhados por guias especializados, garantindo segurança, conforto e uma experiência autêntica neste bioma singular."
+      ],
+      "image": "/images/eco-about-1",
+      "features": [
+        { "number": "01", "title": "Guias Nativos", "description": "Nossos piloteiros e guias nasceram no Pantanal. Eles conhecem cada trilha, cada som e cada comportamento animal da região." },
+        { "number": "02", "title": "Baixo Impacto", "description": "Operamos com grupos reduzidos e protocolos rigorosos para minimizar nossa presença no habitat natural." },
+        { "number": "03", "title": "Experiência Imersiva", "description": "Do nascer ao pôr do sol, cada momento é pensado para conectar você de forma autêntica com a vida selvagem do Pantanal." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por Que Explorar com a Itaicy",
+      "items": [
+        { "iconName": "Compass", "title": "Roteiros Exclusivos", "description": "Acesso a áreas restritas do Rio Cuiabá e seus afluentes, longe do turismo de massa." },
+        { "iconName": "ShieldCheck", "title": "Segurança Total", "description": "Guias experientes e equipamentos de primeira linha em todas as expedições." },
+        { "iconName": "Sunrise", "title": "Experiências Únicas", "description": "Do nascer ao pôr do sol, cada passeio revela uma face diferente do Pantanal." }
+      ]
+    },
+    "services": {
+      "label": "AS EXPEDIÇÕES",
+      "heading": "Nossos Passeios",
+      "description": "Cada passeio é uma oportunidade de vivenciar o Pantanal de forma única. Nossos guias nativos garantem avistamentos memoráveis e segurança em cada expedição.",
+      "items": [
+        { "title": "Passeio de Barco ao Pôr do Sol", "description": "Navegação pelos canais e corixos do Rio Cuiabá, com o espetáculo do pôr do sol refletido nas águas e a tradicional pesca de piranhas.", "image": "/images/eco-activity-1" },
+        { "title": "Safári Noturno", "description": "Aventure-se pelo rio à noite e observe jacarés, capivaras, ariranhas e corujas em seu habitat natural.", "image": "/images/eco-activity-2" },
+        { "title": "Nascer do Sol Pantaneiro", "description": "Saídas ao amanhecer para vivenciar o despertar da vida no Pantanal. Cores, sons e os primeiros movimentos dos animais.", "image": "/images/eco-activity-3" },
+        { "title": "Trilhas Ecológicas", "description": "Caminhadas pelos arredores da pousada, ideais para observação de aves, mamíferos e da exuberante flora nativa.", "image": "/images/eco-activity-4" }
+      ],
+      "buttonText": "Ver todos os passeios disponíveis",
+      "buttonHref": "#"
+    }
+  },
+  "/observacao-de-aves": {
+    "hero": {
+      "label": "OBSERVAÇÃO DE AVES",
+      "heading": "Observação de Espécies Raras em Habitat Intocado",
+      "subtitle": "Uma experiência de observação única. Registre nossa avifauna em um dos santuários de aves mais ricos de todo o planeta.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/bird-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Uma ", "isHighlight": false },
+        { "text": "imersão contemplativa", "isHighlight": true },
+        { "text": " que vai além do convencional. Guiamos com respeito em nosso santuário de ", "isHighlight": false },
+        { "text": "acesso exclusivo", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Observação Consciente e Imersiva",
+      "body": [
+        "No coração do Pantanal, praticamos a observação de aves com respeito absoluto ao habitat natural.",
+        "Cada expedição é planejada para minimizar o impacto ambiental, enquanto maximiza suas oportunidades de avistamento."
+      ],
+      "image": "/images/bird-about-1",
+      "features": [
+        { "number": "01", "title": "Guias Experts", "description": "Nossos guias possuem mais de 15 anos de experiência e conhecem intimamente os comportamentos e rotas de cada espécie." },
+        { "number": "02", "title": "Acesso Exclusivo", "description": "Possuímos autorização do IBAMA para operar em áreas protegidas, longe do turismo convencional." },
+        { "number": "03", "title": "Imersão Contemplativa", "description": "Oferecemos uma experiência que vai além do turismo, focada em uma imersão científica e verdadeiramente contemplativa." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por Que Escolher Nossa Expedição",
+      "items": [
+        { "iconName": "Bird", "title": "166+ Espécies avistadas", "description": "Registradas em apenas 5 dias de expedição" },
+        { "iconName": "ShieldCheck", "title": "Acesso Exclusivo IBAMA", "description": "Áreas protegidas com biodiversidade única" },
+        { "iconName": "Users", "title": "Guias Especializados", "description": "Ornitólogos certificados e fotógrafos experientes" }
+      ]
+    }
+  },
+  "/contato": {
+    "hero": {
+      "label": "PREPARE SUA EXPEDIÇÃO",
+      "heading": "Fale com Nossos Especialistas",
+      "description": "Nossa equipe está à disposição para ajudar com suas dúvidas, seja sobre nossas expedições de birdwatching, pacotes de pesca esportiva ou os detalhes da sua estadia de ecoturismo.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/culinaria-cta-bg.webp"
+    },
+    "formTitle": "Entrar em contato",
+    "steps": {
+      "placeholders": ["E-mail", "Nome completo", "Telefone / WhatsApp", "Sua mensagem..."],
+      "buttonNext": "Avançar",
+      "buttonBack": "Voltar",
+      "buttonSubmit": "Enviar"
+    },
+    "channels": {
+      "heading": "Nossos Canais de Atendimento",
+      "items": [
+        { "iconName": "Phone", "title": "Telefone & WhatsApp", "info": "(65) 9 9640-2380" },
+        { "iconName": "Mail", "title": "E-mail", "info": "contato@pousadaitaicy.com.br" },
+        { "iconName": "MapPin", "title": "Nosso Endereço", "info": "Santo Antônio do Leverger, MT, 78180-000" }
+      ]
+    },
+    "mapCoords": { "lat": -15.87, "lng": -56.08 }
+  },
+  "/nosso-impacto": {
+    "hero": {
+      "label": "NOSSO LEGADO",
+      "heading": "O Pantanal de amanhã se constrói hoje.",
+      "description": "Não somos apenas observadores. Somos guardiões. Na Itaicy, cada estadia financia a proteção de 166 espécies de aves e garante que o Dourado continue reinando em nossos rios.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/bird-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Cada hóspede que chega à Itaicy se torna parte de algo maior: ", "isHighlight": false },
+        { "text": "guardiões de um ecossistema", "isHighlight": true },
+        { "text": " que sustenta milhares de espécies. Sua estadia não é apenas uma viagem — é um ato de ", "isHighlight": false },
+        { "text": "preservação", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "rioVivo": {
+      "heading": "100% Cota Zero: O Compromisso com o Gigante.",
+      "description": "Fomos pioneiros em entender que um Dourado vivo vale mil vezes mais que um no prato. Nossa política estrita de devolução garante que os troféus cresçam, se reproduzam e desafiem gerações de pescadores.",
+      "steps": [
+        { "iconName": "Fish", "title": "Captura", "description": "" },
+        { "iconName": "Camera", "title": "Foto", "description": "" },
+        { "iconName": "Waves", "title": "Soltura", "description": "" },
+        { "iconName": "Heart", "title": "Reprodução", "description": "" }
+      ]
+    },
+    "biodiversidade": {
+      "heading": "Santuário de Vida Selvagem",
+      "description": "",
+      "counters": [
+        { "target": 166, "suffix": "+", "label": "ESPÉCIES CATALOGADAS" },
+        { "target": 4, "suffix": "", "label": "ESPÉCIES AMEAÇADAS PROTEGIDAS" },
+        { "target": 85, "suffix": "%", "label": "DE ÁREA PRESERVADA" }
+      ]
+    },
+    "comunidade": {
+      "heading": "Guardiões Nativos.",
+      "description": "",
+      "body": [
+        "Nossos guias não aprenderam sobre o Pantanal em livros; eles nasceram no ritmo das águas. Valorizamos o saber ancestral, empregando e capacitando a comunidade local. Sua visita gera renda e dignidade para Santo Antônio do Leverger."
+      ],
+      "image": "/images/pesca-about-1.webp"
+    },
+    "operacao": {
+      "heading": "Turismo que Regenera",
+      "description": "",
+      "practices": [
+        { "iconName": "Recycle", "title": "Gestão de Resíduos", "description": "Separação, compostagem e destinação responsável de 100% dos resíduos gerados na operação da pousada." },
+        { "iconName": "GlassWater", "title": "Zero Plástico Descartável", "description": "Garrafas reutilizáveis em todas as embarcações e quartos. Eliminamos o plástico de uso único da operação." },
+        { "iconName": "Droplets", "title": "Tratamento de Água", "description": "Sistema próprio de tratamento de efluentes que devolve água limpa ao ecossistema pantaneiro." }
+      ]
+    },
+    "engagement": {
+      "heading": "Faça parte deste legado.",
+      "description": "",
+      "buttonText": "Reservar Minha Experiência Consciente"
+    }
+  },
+  "/politica-de-privacidade": {
+    "hero": {
+      "title": "Políticas de Privacidade",
+      "lastUpdated": "[Data]"
+    },
+    "sections": [
+      {
+        "id": "dados-coletados",
+        "title": "1. Quais Dados Coletamos?",
+        "content": [
+          "Coletamos informações que você nos fornece e dados gerados automaticamente durante sua navegação:",
+          "**Informações Fornecidas por Você:** Inclui dados de identificação pessoal como nome, e-mail e número de telefone que você insere ao preencher formulários de contato, de reserva ou ao solicitar o download de materiais (como nossos guias de espécies).",
+          "**Informações de Reserva:** Para gerenciar sua estadia, podemos coletar informações sobre as datas da sua viagem e preferências. O processamento final do pagamento é feito por nosso parceiro de reservas externo e seguro.",
+          "**Informações de Navegação (Cookies):** Coletamos dados anônimos sobre como você interage com nosso site (como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência) para melhorar sua experiência."
+        ]
+      },
+      {
+        "id": "uso-dados",
+        "title": "2. Como Usamos Seus Dados?",
+        "content": [
+          "Utilizamos suas informações pessoais com os seguintes objetivos:",
+          "**Processar sua Reserva:** Para confirmar e gerenciar sua expedição, comunicar detalhes importantes sobre sua estadia e garantir que sua experiência seja tranquila.",
+          "**Prestar Atendimento:** Para responder às suas dúvidas, solicitações e fornecer o suporte necessário.",
+          "**Melhorar Nosso Site:** Analisamos dados de navegação para entender como nossos visitantes usam o site, otimizando o layout, o conteúdo e a performance.",
+          "**Marketing e Comunicação (com seu consentimento):** Para enviar e-mails sobre nossos pacotes, promoções especiais e conteúdos relevantes do nosso blog. Você pode optar por não receber essas comunicações a qualquer momento."
+        ]
+      },
+      {
+        "id": "compartilhamento",
+        "title": "3. Com Quem Compartilhamos Seus Dados?",
+        "content": [
+          "A Itaici Ecoturismo não vende, aluga ou comercializa suas informações pessoais.",
+          "O compartilhamento de dados é estritamente limitado a parceiros operacionais essenciais para a prestação do nosso serviço, como o nosso motor de reservas externo, que possui seus próprios e rigorosos padrões de segurança.",
+          "Também poderemos compartilhar informações se formos obrigados por lei ou para proteger nossos direitos legais."
+        ]
+      },
+      {
+        "id": "protecao",
+        "title": "4. Como Protegemos Seus Dados?",
+        "content": [
+          "Implementamos um conjunto de medidas de segurança técnicas e administrativas para proteger seus dados pessoais contra acesso não autorizado, perda, alteração ou destruição. Isso inclui o uso de criptografia (SSL) e controles de acesso restrito."
+        ]
+      },
+      {
+        "id": "direitos-lgpd",
+        "title": "5. Seus Direitos (LGPD)",
+        "content": [
+          "Você, como titular dos dados, tem o direito de:",
+          "Confirmar se estamos tratando seus dados.",
+          "Acessar, corrigir ou atualizar suas informações.",
+          "Solicitar a anonimização ou eliminação de dados que considere desnecessários.",
+          "Revogar seu consentimento para o marketing a qualquer momento.",
+          "Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato conosco através do e-mail: [seu-email-de-contato@itaici.com.br]"
+        ]
+      },
+      {
+        "id": "alteracoes",
+        "title": "6. Alterações Nesta Política",
+        "content": [
+          "Podemos atualizar esta Política de Privacidade periodicamente para refletir novas práticas ou mudanças na legislação. A versão mais recente estará sempre disponível nesta página, e a data da última atualização será indicada no topo."
+        ]
+      }
+    ]
+  },
+  "/404": {
+    "hero": {
+      "label": "404",
+      "heading": "Parece que você saiu um pouco da trilha.",
+      "description": "Acontece até com os exploradores mais experientes. A página que você procurava não foi encontrada ou pode ter sido movida.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/404-hero-bg.webp"
+    },
+    "buttonText": "Voltar para o início"
+  }
+}
