@@ -1,0 +1,342 @@
+{
+  "Crypturellus undulatus": {
+    "description": "Ave terrícola de cerrado e matas abertas, identificada pelo canto melodioso de três sílabas com inflexão interrogativa. Plumagem pardo-acinzentada com desenho vermiculado.",
+    "overview": "O jaó (Crypturellus undulatus) é um tinamídeo de porte médio que habita matas de várzea, galeria, capoeirões e cerrados do Brasil Central. Com cerca de 31 cm, possui coroa escura em tons de marrom acinzentado e plumagem vermiculada — manchas que lembram formas vermiformes. As pernas são esverdeadas e os ovos têm formato quase esférico, em tons de rosa-claro ou cinza-claro. Embora capaz de voar, o jaó recorre ao voo apenas como último recurso para escapar de predadores, comportamento típico dos tinamídeos. Sua vocalização é baixa e melodiosa, composta por três a quatro sílabas com inflexão crescente no final, utilizada para demarcar território e, no período reprodutivo, para atrair parceiros. No Pantanal, pode ser ouvido em intervalos de cinco a dezoito segundos por períodos prolongados durante a época de reprodução.",
+    "habitat": "Habita matas de várzea e galeria, capoeirões, matas secas e ralas, e áreas de cerrado. No Brasil, ocorre da região Norte ao Centro-Oeste e partes adjacentes do Nordeste, incluindo Minas Gerais, São Paulo e Paraná.\n\nTambém é encontrado na Venezuela, Guiana, Colômbia, Peru, Paraguai e Argentina. Apresenta seis subespécies com distribuições distintas ao longo dessa ampla área geográfica.",
+    "diet": "Alimenta-se de bagas, frutas caídas, folhas e sementes, complementando a dieta com insetos e moluscos encontrados sob o tapete de folhagem em decomposição no solo da mata. A busca de alimento ocorre predominantemente no chão, onde a ave se desloca de forma discreta.",
+    "behavior": "Ave de hábitos terrestres e temperamento arredio, o jaó alça voos curtos apenas como último recurso. Na região amazônica, enchentes podem forçar voos de até 500 metros sobre rios. O macho é responsável pela construção do ninho, pela incubação dos ovos (cerca de 17 dias) e pela criação dos filhotes. Entre seus predadores estão gatos-do-mato, raposas, gambás, cobras e gaviões.",
+    "bestTime": "O jaó pode ser detectado ao longo de todo o ano no Pantanal, especialmente por meio de sua vocalização. Durante a estação seca (maio a outubro), a menor cobertura vegetal facilita a escuta do canto nas matas de galeria. No período reprodutivo, a vocalização é mais intensa e prolongada, tornando a identificação mais provável.",
+    "photographyTips": [
+      "Posicione-se em trilhas próximas a matas de galeria e permaneça imóvel — a ave é extremamente arredia",
+      "Utilize o canto como guia de localização; a vocalização de três sílabas é inconfundível e indica proximidade",
+      "Prefira as primeiras horas da manhã, quando a atividade vocal é maior",
+      "Lentes longas (400mm+) são recomendadas, pois o jaó mantém distância considerável",
+      "Ajuste ISO alto para compensar a pouca luz típica do sub-bosque"
+    ],
+    "size": "Mede cerca de 31 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN e pelo Livro Vermelho da Fauna Brasileira (2018). Apesar disso, a espécie é afetada pela expansão agrícola e pelo uso de inseticidas, que contaminam insetos ingeridos pela ave."
+  },
+  "Crypturellus parvirostris": {
+    "description": "A menor espécie do gênero, com cerca de 19 cm. Ave terrícola de campos sujos e capoeiras, reconhecida pela vocalização em escala descendente.",
+    "overview": "O inhambu-chororó (Crypturellus parvirostris) é a menor espécie do gênero Crypturellus, medindo cerca de 19 cm e pesando aproximadamente 180 g. Ave de vasta distribuição no Brasil, habita campos sujos, capoeiras, plantações e divisas de pastos. Sua vocalização consiste em uma sequência de notas em escala descendente, conferindo-lhe o nome popular. Apresenta pouco dimorfismo sexual: a fêmea possui bico vermelho-carmim intenso e porte ligeiramente maior, enquanto o macho tem bico escurecido na ponta e vermelho esmaecido na base. A postura é de quatro a cinco ovos de coloração rósea. Adapta-se bem ao cativeiro e apresenta boa capacidade reprodutiva, o que favorece programas de repovoamento em áreas naturais.",
+    "habitat": "Habita campos sujos, capoeiras, plantações e divisas de pastos. Terrícola por excelência, busca alimento diretamente no solo.\n\nNo Brasil, ocorre nas regiões Nordeste, Sul, Centro-Oeste e Sudeste, e parcialmente no Norte (Amazonas). Também é encontrado no Peru, Bolívia, Paraguai e Argentina.",
+    "diet": "Alimenta-se principalmente de sementes coletadas no chão. Como ave cinegética e terrícola, forrageia de forma discreta entre a vegetação rasteira, percorrendo o solo em busca de grãos e pequenas sementes.",
+    "behavior": "Ave de hábitos discretos e predominantemente terrestres, o inhambu-chororó vocaliza com uma sequência descendente de notas que diferencia machos e fêmeas. A fêmea realiza postura de quatro a cinco ovos róseos. A espécie se reproduz bem em cativeiro, característica que favorece iniciativas de conservação e repovoamento.",
+    "bestTime": "No Pantanal, o inhambu-chororó pode ser detectado ao longo de todo o ano, principalmente pela vocalização. A estação seca (maio a outubro) favorece a observação, pois a vegetação mais baixa torna a ave mais perceptível em campos e bordas de mata.",
+    "photographyTips": [
+      "Fique atento à vocalização descendente para localizar a ave antes de avistá-la",
+      "Posicione-se em bordas de campos sujos e capoeiras, onde a espécie forrageia no solo",
+      "Movimente-se lentamente — a ave tende a se deslocar com cautela no chão",
+      "Lentes longas são recomendadas para registros a distância, já que a espécie é arisca",
+      "Horários de menor calor (início da manhã e fim da tarde) concentram maior atividade"
+    ],
+    "size": "Mede cerca de 19 cm de comprimento e pesa aproximadamente 180 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição e boa capacidade reprodutiva, o que contribui para a estabilidade de suas populações."
+  },
+  "Chauna torquata": {
+    "description": "Grande ave aquática de pernas vermelhas e gola negra, com área branca nas asas visível em voo. Voz potente e territorial, comum em áreas alagadas.",
+    "overview": "O tachã (Chauna torquata) é uma ave anseriforme robusta da família Anhimidae, que mede cerca de 80 cm de comprimento. Possui pernas vermelhas, plumagem pardo-acinzentada, pescoço com gola negra circundada por um estreito anel branco, e asas negras com grande área branca visível durante o voo. É uma espécie territorial e vocal, frequentemente associada a ambientes alagados e margens de rios do Pantanal. Seu nome tem raízes no guarani e é reconhecido em diversas variantes regionais, incluindo anhuma-do-pantanal e chajá. O tachã forma casais duradouros e defende ativamente seu território com vocalizações potentes que podem ser ouvidas a grandes distâncias.",
+    "habitat": "Habita áreas alagadas, margens de rios, lagoas e campos inundáveis. É uma espécie tipicamente associada a paisagens abertas com água, como várzeas e banhados.\n\nOcorre desde a Argentina e Bolívia até a região Sul do Brasil, sendo particularmente comum no Pantanal, onde as extensas planícies alagáveis oferecem ambiente propício.",
+    "diet": "Alimenta-se principalmente de vegetação aquática, incluindo folhas, raízes e brotos de plantas que crescem em áreas alagadas. Complementa a dieta com gramíneas e outras plantas das margens de rios e lagoas.",
+    "behavior": "Ave de hábitos diurnos e comportamento territorial, o tachã forma casais que defendem seu território com vocalizações potentes. Costuma ser visto aos pares ou em pequenos grupos nas margens de áreas alagadas. Apesar do porte robusto, voa com relativa facilidade e realiza deslocamentos entre áreas de alimentação.",
+    "bestTime": "No Pantanal, o tachã pode ser observado durante todo o ano. Durante a estação chuvosa (novembro a abril), quando as áreas alagáveis se expandem, a espécie se torna mais visível nas várzeas. Na seca (maio a outubro), concentra-se próximo a corpos d'água remanescentes, facilitando a localização.",
+    "photographyTips": [
+      "Procure a espécie em margens de lagoas e campos inundados, onde frequentemente é avistada aos pares",
+      "A área branca das asas é um destaque em voo — prepare-se para registros de decolagem",
+      "Utilize a vocalização como indicador de presença; o chamado é audível a grande distância",
+      "Primeiras horas da manhã oferecem luz favorável e maior atividade da espécie",
+      "Lentes de 200-400mm são suficientes, pois o tachã permite aproximação moderada em áreas habituais"
+    ],
+    "size": "Mede cerca de 80 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie é relativamente comum em seu habitat e mantém populações estáveis nas áreas alagáveis do Pantanal e regiões adjacentes."
+  },
+  "Dendrocygna autumnalis": {
+    "description": "Marreca de dorso ferrugíneo, barriga negra e bico e pés vermelhos. Apresenta grande mancha branca nas asas, visível em voo. Comum em áreas aquáticas.",
+    "overview": "A marreca-cabocla (Dendrocygna autumnalis) é uma espécie de marreca de ampla distribuição nas Américas, comum na Amazônia e no Pantanal. Com até 48 cm de comprimento e peso médio de 830 g, apresenta dorso ferrugíneo, fronte cinzenta, barriga negra, e uma grande mancha branca nas asas visível em voo. O bico e os pés são vermelhos, características marcantes para identificação em campo. É uma espécie gregária, que forma grupos numerosos em áreas de alimentação. Também é conhecida como marreca-asa-branca, asa-branca ou marajoara, nomes que refletem sua aparência e distribuição regional.",
+    "habitat": "Habita áreas úmidas, incluindo lagoas, rios, várzeas e campos alagados. É particularmente comum na Amazônia e no Pantanal, onde as extensas áreas alagáveis oferecem condições propícias.\n\nA espécie ocorre em quase todo o continente americano, desde o sul dos Estados Unidos até a Argentina.",
+    "diet": "Alimenta-se de sementes, grãos, vegetação aquática e pequenos invertebrados. Forrageia tanto na água quanto em áreas alagadas rasas, aproveitando a oferta sazonal de alimentos nas planícies inundáveis.",
+    "behavior": "Espécie gregária, a marreca-cabocla forma grupos que podem reunir dezenas de indivíduos em áreas de alimentação. É ativa tanto de dia quanto à noite, com deslocamentos entre áreas de repouso e forrageio. Apresenta voo ágil, com a mancha branca das asas funcionando como marca de identificação em bandos.",
+    "bestTime": "No Pantanal, a marreca-cabocla pode ser observada durante todo o ano. Na estação chuvosa (novembro a abril), os bandos se dispersam pelas áreas inundadas. Na seca (maio a outubro), concentram-se em lagoas e corpos d'água remanescentes, formando grupos maiores e mais fáceis de localizar.",
+    "photographyTips": [
+      "Procure bandos em lagoas rasas e campos alagados, especialmente durante a seca",
+      "A decolagem em grupo proporciona registros dinâmicos com a mancha branca das asas em destaque",
+      "Bico e pés vermelhos são detalhes importantes para registrar em close-up",
+      "Utilize velocidades de obturador altas (1/1000+) para captar voos e pousos",
+      "Posicione-se contra a luz do sol para realçar as cores do dorso ferrugíneo"
+    ],
+    "size": "Mede até 48 cm de comprimento e pesa em média 830 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição e populações estáveis na maior parte de sua área de ocorrência."
+  },
+  "Cairina moschata": {
+    "description": "O maior pato selvagem das Américas, com plumagem negra e faixa branca sob as asas. Macho com carúncula vermelha acima do bico. Ancestral dos patos domésticos.",
+    "overview": "O pato-do-mato (Cairina moschata) é o maior anseriforme selvagem das Américas, com cerca de 85 cm de comprimento e envergadura de 120 cm. O macho pesa aproximadamente 2,2 kg, quase o dobro da fêmea. Na forma selvagem, apresenta plumagem inteiramente negra com uma extensa área branca sob as asas, que se torna mais pronunciada com a idade. Os machos possuem pele nua vermelha ao redor dos olhos e carúncula da mesma cor acima do bico. É uma espécie nativa do Brasil, distribuída desde o México até os Pampas. Foi domesticado pelos grupos indígenas sul-americanos antes da chegada dos europeus, sendo o ancestral direto das variedades domésticas conhecidas mundialmente. No Pantanal, a forma selvagem pode ser observada em rios e áreas florestadas.",
+    "habitat": "Habita rios, lagos e áreas florestadas próximas a cursos d'água. Pode voar e pousar no chão, em árvores, troncos ou na superfície da água, demonstrando versatilidade na ocupação do habitat.\n\nOcorre desde o México até o sul do Brasil, com presença significativa no Pantanal e na Amazônia. Prefere matas ciliares e áreas com árvores altas para nidificação.",
+    "diet": "Alimentação variada que inclui raízes, sementes e folhas de plantas aquáticas, complementada por anfíbios, crustáceos, insetos, pequenos peixes e invertebrados aquáticos. Realiza filtragem da água com o bico na lama ou na superfície, nadando com cabeça e pescoço submersos.",
+    "behavior": "Espécie de hábitos discretos, não emite chamados vocais em voo — produz apenas um sibilo durante disputas entre machos. A batida de asas é lenta e gera um sibilar audível quando a ave passa próxima. O período reprodutivo vai de outubro a março. A fêmea constrói o ninho em ocos de árvores e põe de cinco a doze ovos, incubados por cerca de 28 dias.",
+    "bestTime": "No Pantanal, o pato-do-mato pode ser avistado ao longo de todo o ano. A estação seca (maio a outubro) favorece a observação, pois a concentração de indivíduos próximo a rios e lagoas remanescentes aumenta. O período reprodutivo (outubro a março) é propício para observar casais e ninhadas.",
+    "photographyTips": [
+      "Procure a espécie pousada em troncos e galhos sobre rios — hábito frequente no início da manhã",
+      "A faixa branca sob as asas é visível apenas com as asas abertas; prepare-se para o momento da decolagem",
+      "Registre o detalhe da carúncula vermelha dos machos em close-up para diferenciação",
+      "Utilize caiaques ou embarcações silenciosas para aproximação em rios e lagoas",
+      "Velocidade de obturador moderada (1/500+) é suficiente, dado o voo relativamente lento da espécie"
+    ],
+    "size": "Mede cerca de 85 cm de comprimento, com envergadura de 120 cm. Machos pesam aproximadamente 2,2 kg; fêmeas, cerca de metade desse peso.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Embora protegido pela legislação brasileira, a forma selvagem sofre pressão por perda de habitat em algumas regiões. No Pantanal, as populações silvestres permanecem estáveis."
+  },
+  "Ortalis canicollis": {
+    "description": "Cracídeo do Chaco com cabeça e peito cinzentos e pele rosada ao redor dos olhos. Forma grupos ruidosos que vocalizam ao amanhecer. Restrito ao Pantanal no Brasil.",
+    "overview": "O aracuã-do-pantanal (Ortalis canicollis) é um cracídeo de 50 a 56 cm de comprimento e peso entre 479 e 678 g, associado às florestas secas e úmidas de baixa altitude do Chaco e do Pantanal. Possui cabeça, dorso e peito cinzentos, ventre de tom amarronzado e pele rosada nua ao redor dos olhos. A subespécie O. c. pantanalensis, restrita ao sudoeste do Mato Grosso, é mais amarronzada e com pele facial de tom mais arroxeado. É uma espécie gregária e vocal, que forma grupos que podem reunir dezenas de indivíduos em áreas de alimentação. Sua vocalização ruidosa, tipicamente emitida ao amanhecer, é uma das marcas sonoras do Pantanal.",
+    "habitat": "Habita florestas de várzea, matas secas subtropicais, florestas semidecíduas e de galeria, e palmeirais. Ocorre tanto em mata madura quanto em vegetação secundária.\n\nNo Brasil, a subespécie pantanalensis é encontrada no sudoeste do Mato Grosso e Mato Grosso do Sul. As populações do Chaco distribuem-se pelo leste da Bolívia, oeste do Paraguai e norte da Argentina.",
+    "diet": "Alimenta-se principalmente de frutos e folhas, forrageando geralmente na copa das árvores. Em áreas com sub-bosque aberto, desce ao solo para se alimentar. Complementa a dieta com invertebrados, especialmente lagartas, quando sazonalmente abundantes.",
+    "behavior": "Espécie gregária, forrageia em pequenos grupos, embora bandos de até 30 indivíduos já tenham sido observados. Na Argentina, grupos de até 150 aves foram registrados em áreas agrícolas. A vocalização principal, emitida no início da manhã, é ruidosa e áspera. A reprodução ocorre entre outubro e fevereiro; a fêmea incuba de dois a quatro ovos em ninhos de gravetos e folhas posicionados em arbustos ou árvores.",
+    "bestTime": "No Pantanal, o aracuã-do-pantanal é mais facilmente observado ao amanhecer, quando a vocalização intensa revela a posição dos grupos. A estação seca (maio a outubro) favorece a observação, com a vegetação mais aberta e os bandos concentrados em áreas com frutificação.",
+    "photographyTips": [
+      "Siga a vocalização ruidosa ao amanhecer para localizar os grupos nas copas das árvores",
+      "Fotografe em contra-plongée (de baixo para cima) para registrar a pele rosada facial contra a folhagem",
+      "Grupos em árvores frutíferas permitem registros comportamentais de alimentação",
+      "Lentes de 300-400mm são adequadas, pois a espécie é relativamente tolerante à presença humana",
+      "Aproveite a luz dourada do amanhecer, horário de maior atividade vocal e social"
+    ],
+    "size": "Mede de 50 a 56 cm de comprimento e pesa entre 479 e 678 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie é comum na maior parte de sua distribuição, embora em algumas áreas sofra pressão de caça."
+  },
+  "Pipile cujubi": {
+    "description": "Cracídeo de até 74 cm, plumagem negra com manchas brancas nas asas e crista branca desgrenhada. Barbela vermelha e pele facial azul-clara. Vulnerável.",
+    "overview": "O cujubi (Pipile cujubi) é um cracídeo de grande porte, alcançando até 74 cm de comprimento e pesando entre 1.100 e 1.300 g. Possui coloração geral negra com manchas preto-e-brancas nas asas, crista branca desgrenhada, pintas brancas no peito, pele facial azul-clara nua e uma mancha gular vermelha característica. A subespécie nominal, P. c. cujubi, é mais lustrosa com brilho azulado, enquanto P. c. nattereri apresenta manchas alares brancas maiores. Habita florestas tropicais e semidecíduas em terras baixas até 700 m de altitude, com preferência por matas de pelo menos 15 m de altura. No Pantanal e entorno, a subespécie nattereri pode ser encontrada em áreas florestadas do Mato Grosso e Rondônia.",
+    "habitat": "Habita florestas tropicais e semidecíduas em terras baixas, até 700 m de altitude, com preferência por matas com dossel de pelo menos 15 m de altura.\n\nA subespécie nominal ocorre no centro-norte da Amazônia brasileira, do baixo Rio Madeira ao norte do Pará. A subespécie nattereri distribui-se pelo oeste e sul da Amazônia, nos estados de Goiás, Mato Grosso, Rondônia e sul do Amazonas, estendendo-se ao nordeste da Bolívia.",
+    "diet": "Alimenta-se de frutos e flores, forrageando em bandos de até 30 indivíduos, geralmente no dossel da floresta, mas ocasionalmente no solo. Pode ser observado em bandos mistos com outras espécies de jacus.",
+    "behavior": "Espécie gregária, forrageia em grupos que podem reunir até 30 aves, eventualmente formando bandos mistos com o jacutinga-de-garganta-azul. A vocalização consiste em uma série ascendente de assobios claros, emitida principalmente pela manhã. Realiza uma exibição de batida de asas ao amanhecer, produzindo um ruído áspero e duplicado.",
+    "bestTime": "No Pantanal e entorno, a melhor época para observação coincide com a estação seca (maio a outubro), quando os cujubis se concentram em áreas frutíferas e a vegetação menos densa facilita a detecção. As primeiras horas da manhã, quando a vocalização e as exibições de asas são mais frequentes, oferecem maior chance de avistamento.",
+    "photographyTips": [
+      "Procure a espécie no dossel de matas altas, especialmente em árvores frutíferas",
+      "O contraste entre a plumagem negra e as manchas brancas das asas é favorecido por luz lateral",
+      "Registre o detalhe da barbela vermelha e da pele facial azul em close-up",
+      "Lentes longas (500mm+) são necessárias para registros no dossel",
+      "As exibições de batida de asas ao amanhecer são momentos singulares para fotografia comportamental"
+    ],
+    "size": "Mede até 74 cm de comprimento e pesa entre 1.100 e 1.300 g.",
+    "conservationStatus": "Classificado como Vulnerável (VU) pela IUCN. A caça e o desmatamento são as principais ameaças. Embora considerado relativamente comum em partes de sua ampla distribuição, a perda de habitat florestal representa risco contínuo para a espécie."
+  },
+  "Penelope ochrogaster": {
+    "description": "Cracídeo endêmico do Brasil, de até 77 cm, com barbela vermelha e barriga castanha. Habita matas ciliares e áreas inundáveis. Vulnerável à extinção.",
+    "overview": "O jacu-de-barriga-castanha (Penelope ochrogaster) é uma das espécies endêmicas mais ameaçadas do Brasil, com cerca de 1.700 indivíduos contabilizados em sua distribuição. Alcança até 77 cm de comprimento, possui bico escuro, pés claros, dorso escuro com porções brancas e barbela vermelha que se retrai ou expande conforme o estado de alerta. Habita desde o oeste de Minas Gerais e Goiás até o Mato Grosso, com a maior concentração no Pantanal. É uma espécie discreta e arredia, que se desloca sozinha, em pares ou em pequenos bandos, preferindo florestas densas com copas interligadas, especialmente matas ciliares e áreas sujeitas a inundação sazonal.",
+    "habitat": "Habita florestas ribeirinhas, matas ciliares, cerrado e áreas temporariamente inundáveis, com preferência por formações florestais densas onde as copas das árvores se interligam.\n\nDistribui-se pela região central do Brasil, com núcleos populacionais no Pantanal, no vale do rio Araguaia, no rio São Francisco e no vale do rio Paranã. O Pantanal concentra a maior proporção de indivíduos da espécie.",
+    "diet": "Espécie frugívora que se alimenta de frutos como amora, jabuticaba, pitanga, caqui e palmito, além de flores de ipê e tarumã, cipós e sementes. Conserva as sementes ao ingerir frutos, atuando como dispersora. Entre junho e setembro, é registrada ingerindo grãos de areia e bebendo água de rios nas primeiras horas da manhã.",
+    "behavior": "Comportamento arredio e discreto, aumentando a distância ao perceber ameaças. Desloca-se sozinho, em pares ou em pequenos bandos, com comportamento territorial. Espécie monogâmica, nidifica no alto de árvores. A incubação dura cerca de 28 dias, com postura de dois ovos e nascimento dos filhotes entre outubro e dezembro.",
+    "bestTime": "No Pantanal, a estação seca (maio a outubro) concentra os indivíduos em matas ciliares próximas a rios, facilitando a observação. Entre junho e setembro, há registros de aves bebendo água e ingerindo areia nas margens de rios pela manhã. A espécie é rara e demanda paciência e conhecimento prévio dos pontos de ocorrência.",
+    "photographyTips": [
+      "Concentre a busca em matas ciliares próximas a rios durante a seca, especialmente pela manhã",
+      "A barbela vermelha é um elemento distintivo — registre em close-up quando possível",
+      "Paciência é fundamental: a espécie é arredia e mantém distância de observadores",
+      "Lentes longas (500mm+) são imprescindíveis para registros a distância segura",
+      "Evite movimentos bruscos e ruídos; a ave se dispersa rapidamente ao perceber ameaças"
+    ],
+    "size": "Mede até 77 cm de comprimento.",
+    "conservationStatus": "Classificado como Vulnerável (VU) pela IUCN, com estimativa de cerca de 1.700 indivíduos e subpopulações com menos de 1.000 representantes. A perda de habitat por expansão agropecuária e a caça são as principais ameaças. Está incluído no Plano de Ação Nacional (PAN) para espécies do Cerrado e do Pantanal."
+  },
+  "Crax fasciolata": {
+    "description": "Grande cracídeo com dimorfismo sexual marcante: macho negro com ventre branco e cera amarela; fêmea barrada. Habita matas e cerrados. Vulnerável.",
+    "overview": "O mutum-de-penacho (Crax fasciolata) é um cracídeo de grande porte, medindo entre 82 e 92 cm de comprimento. Apresenta dimorfismo sexual marcante: o macho possui plumagem predominantemente negra com brilho esverdeado, crista de penas negras enroladas, cera amarela na base do bico e ventre branco. A fêmea exibe crista barrada em preto e branco, dorso esverdeado-negro com barras claras e ventre em tons de ocre. Ocorre ao sul do Rio Amazonas, do Rio Tapajós ao Maranhão, e através do Brasil Central, estendendo-se ao Paraguai, Bolívia e Argentina. No Pantanal, é encontrado em matas de galeria, cerrados e buritizais, onde se alimenta principalmente de frutos e sementes coletados no solo.",
+    "habitat": "Ocorre em cerrado, mata de galeria, buritizal, áreas abertas, campos sujos e matas secas. Pode ser encontrado solitário ou em pares.\n\nDistribui-se por Goiás, Maranhão, Minas Gerais, Mato Grosso do Sul, Mato Grosso, Pará, Paraná, Rondônia, São Paulo e Tocantins, além de Paraguai, Bolívia e Argentina. Presente nos biomas Amazônia, Cerrado, Mata Atlântica e Pantanal.",
+    "diet": "Alimenta-se de frutos, sementes e flores, especialmente de ipê (Tabebuia), normalmente coletados do solo. Complementa a dieta com pequenos invertebrados encontrados durante o forrageio terrestre.",
+    "behavior": "Ocorre solitário ou aos pares. A nidificação acontece entre novembro e dezembro. O ninho é construído com ramos e folhas em árvores, com participação de ambos os sexos. A fêmea incuba dois ovos durante 30 dias. Os filhotes são nidífugos, abandonando o ninho logo após a eclosão, mas seguindo a progenitora até a independência.",
+    "bestTime": "No Pantanal, o mutum-de-penacho pode ser observado ao longo de todo o ano. A estação seca (maio a outubro) é mais favorável, pois a redução da vegetação facilita a detecção em matas de galeria e cerrado. O período reprodutivo (novembro-dezembro) permite observar casais e comportamento de nidificação.",
+    "photographyTips": [
+      "Procure a espécie forrageando no solo de matas de galeria e bordas de cerrado nas primeiras horas da manhã",
+      "Registre o dimorfismo sexual fotografando machos e fêmeas — as diferenças de plumagem são notáveis",
+      "A cera amarela do macho e a crista barrada da fêmea são detalhes importantes para close-up",
+      "Mantenha distância e utilize lentes longas (400mm+); a espécie é sensível à aproximação",
+      "Permanência silenciosa em pontos conhecidos de ocorrência é mais eficaz do que busca ativa"
+    ],
+    "size": "Mede de 82 a 92 cm de comprimento.",
+    "conservationStatus": "Classificado como Vulnerável (VU) pela IUCN. O tráfico ilegal de animais silvestres, a caça pelo porte avantajado e a fragmentação de habitat são as principais ameaças. O ICMBio avalia a espécie de forma diferenciada por estado, mas o declínio populacional geral é preocupante."
+  },
+  "Patagioenas picazuro": {
+    "description": "O maior columbídeo do Brasil, com até 34 cm. Plumagem cinza com listra branca nas asas e colar escamoso no pescoço. Comum em cerrados e bordas de floresta.",
+    "overview": "A pomba-asa-branca (Patagioenas picazuro) é o maior columbídeo do Brasil, com machos medindo até 34 cm e fêmeas até 30 cm, pesando cerca de 279 g. Possui plumagem cinza com uma faixa branca nas asas visível durante o voo, anel avermelhado ao redor dos olhos, colar incompleto escamoso e pele cinza-azulada no pescoço. É endêmica da América do Sul, habitando campos, cerrados, bordas de florestas e centros urbanos. Imortalizada na canção de Luiz Gonzaga e Humberto Teixeira, a espécie é símbolo cultural do Nordeste brasileiro e está atualmente com população em crescimento.",
+    "habitat": "Habita campos, cerrados, bordas de florestas e também centros urbanos. Ocorre do nordeste ao sul do Brasil, incluindo o Pantanal, além de Paraguai, Uruguai, Bolívia e Argentina.\n\nApresenta duas subespécies: a nominal, de ampla distribuição, e P. p. marginalis, restrita ao nordeste do Brasil, que é menor e possui bordas brancas mais largas nas asas.",
+    "diet": "Alimenta-se de grãos e sementes coletados em áreas abertas e bordas de mata. Forrageia no solo, frequentemente em pares ou pequenos grupos.",
+    "behavior": "Constrói ninhos com 5 a 10 cm de diâmetro nas laterais ou copas de árvores, demarcados pelos machos em voos altos. A fêmea põe um a dois ovos, chocados pelo casal durante 19 a 20 dias. O macho emite um arrulho mais grave que a fêmea. Espécie relativamente tolerante à presença humana, adaptada a áreas periurbanas.",
+    "bestTime": "No Pantanal, a pomba-asa-branca é observada durante todo o ano, sendo uma das espécies mais frequentes. Não há sazonalidade marcante para observação, embora o período reprodutivo (primavera-verão) ofereça maior atividade vocal e comportamental.",
+    "photographyTips": [
+      "A faixa branca nas asas é o destaque — registre durante voos e pousos",
+      "O anel avermelhado ao redor dos olhos e o colar escamoso são detalhes para close-up",
+      "Espécie comum em áreas periurbanas, permitindo registros a curta distância",
+      "Luz lateral realça os tons cinza-azulados do pescoço",
+      "Fotografe os voos altos de demarcação territorial dos machos durante a época reprodutiva"
+    ],
+    "size": "Mede de 30 a 34 cm de comprimento e pesa cerca de 279 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN, com população atualmente em crescimento."
+  },
+  "Patagioenas cayennensis": {
+    "description": "Pomba de cabeça e peito cor de vinho, com plumagem cinza-azulada e reflexos metálicos na nuca. Habita bordas de mata e margens de rios. Mede cerca de 32 cm.",
+    "overview": "A pomba-galega (Patagioenas cayennensis) é um columbídeo de cerca de 32 cm com plumagem marcante: cabeça, pescoço, manto e peito em tom de vinho, restante cinza-azulado e nuca com reflexos metálicos. As pontas das penas da cauda são pardo-claras. Habita orlas de mata, margens de rios e áreas com árvores isoladas em campos. É uma espécie de ampla distribuição, presente do México à Argentina e em todo o Brasil, embora tenha sido considerada extinta no Ceará em 2021. No Pantanal, é encontrada em bordas de mata ciliar, pouso frequente em embaúbas e árvores sobre rios.",
+    "habitat": "Vive na orla de matas, sobre embaúbas e árvores isoladas nas margens dos rios. Comum em campos com árvores isoladas, bordas de florestas, capoeiras e manguezais.\n\nPresente em todo o Brasil e do México à Argentina e Uruguai. Vive solitária ou aos pares, associando-se em bandos fora da época reprodutiva. Pousa no alto das árvores, geralmente em locais bem visíveis.",
+    "diet": "Espécie granívora e frugívora. Com um rápido movimento lateral do bico, vira folhas mortas para descobrir sementes e frutos caídos. Esse mesmo movimento é utilizado para extrair sementes de fendas.",
+    "behavior": "Desloca-se no solo com passos miúdos e rápidos, parando a cabeça a cada passo para observar o entorno. Voa bem. Durante o acasalamento (setembro a dezembro), machos disputam com vigor, chegando a cair juntos ao solo. O macho faz reverências durante o cortejo. Os casais constroem ninhos tão ralos que os ovos são visíveis por baixo. Postura de dois ovos brancos.",
+    "bestTime": "No Pantanal, a pomba-galega pode ser avistada ao longo de todo o ano. O período reprodutivo (setembro a dezembro) é favorável para observar disputas entre machos e comportamento de cortejo. Na seca (maio a outubro), a vegetação mais aberta facilita a localização em árvores isoladas.",
+    "photographyTips": [
+      "Procure a espécie no topo de árvores isoladas nas margens de rios, onde costuma pousar em locais visíveis",
+      "Os reflexos metálicos na nuca são realçados por luz direta — posicione-se adequadamente",
+      "O tom de vinho do peito e cabeça contrasta com o cinza-azulado do corpo, favorecendo retratos",
+      "Observe disputas entre machos na época reprodutiva para registros comportamentais",
+      "Lentes de 300-400mm são adequadas, pois a espécie pousa em locais expostos"
+    ],
+    "size": "Mede cerca de 32 cm de comprimento.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição, embora tenha sido considerada localmente extinta no Ceará em 2021."
+  },
+  "Columbina squammata": {
+    "description": "Única rolinha com padrão escamado na plumagem. Mede até 22 cm e pesa até 60 g. Arisca, habita bordas de mata, cerradões e parques.",
+    "overview": "A fogo-apagou (Columbina squammata) é a única rolinha com padrão escamado na plumagem, podendo medir até 22 cm de comprimento e pesar até 60 g. Espécie monogâmica e granívora, habita o centro-sul e o nordeste do Brasil. Busca alimento no chão, forrageando em casais ou pequenos grupos em bordas de mata, cerradões, pomares, jardins e parques. É arisca e, na presença humana, tende a alçar voo e se esconder nos galhos das árvores. Seu nome popular é uma referência onomatopaica à vocalização, que lembra a frase \"fogo apagou\".",
+    "habitat": "Habita bordas de mata, cerradões, pomares, jardins e parques. Ocorre predominantemente no centro-sul e nordeste do Brasil, estendendo-se à Bolívia, Paraguai, nordeste da Argentina e norte da América do Sul (Colômbia, Venezuela, Trinidad).\n\nPrefere ambientes semiabertos com acesso ao solo para forrageio.",
+    "diet": "Espécie granívora que busca alimento no chão, forrageando em casais ou pequenos grupos. Alimenta-se de sementes e pequenos grãos encontrados na serapilheira e em áreas abertas.",
+    "behavior": "Espécie monogâmica e arisca. Na presença de pessoas, alça voo rapidamente para se esconder na copa de árvores. Constrói ninhos de gravetos em formato de xícara, normalmente a um ou dois metros de altura, por vezes no chão. Postura de dois ovos brancos.",
+    "bestTime": "No Pantanal, a fogo-apagou pode ser observada ao longo de todo o ano. A estação seca (maio a outubro) é favorável, pois a vegetação mais aberta facilita a detecção em bordas de mata e áreas de cerradão.",
+    "photographyTips": [
+      "O padrão escamado é o diferencial — registre com luz direta para evidenciar a textura das penas",
+      "Aproxime-se lentamente em bordas de mata e pomares, onde a espécie forrageia no solo",
+      "Prepare-se para registros rápidos: a fogo-apagou alça voo ao menor sinal de presença humana",
+      "Lentes de 300-400mm permitem registros a distância segura sem espantar a ave",
+      "Casais forrageando juntos oferecem oportunidade de registros comportamentais"
+    ],
+    "size": "Mede até 22 cm de comprimento e pesa até 60 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é comum em sua área de distribuição e se adapta bem a ambientes modificados."
+  },
+  "Columbina talpacoti": {
+    "description": "Pequena pomba de 17 cm, macho com plumagem marrom-avermelhada e cabeça cinza-azulada. Uma das primeiras aves brasileiras a se adaptar ao meio urbano.",
+    "overview": "A rolinha-roxa (Columbina talpacoti) é uma pequena pomba tropical de 17 cm e aproximadamente 47 g, uma das primeiras espécies brasileiras a se adaptar ao meio urbano. O macho apresenta plumagem marrom-avermelhada com cabeça cinza-azulada, enquanto a fêmea é parda. Ambos os sexos possuem série de pontos negros sobre as asas. É encontrada do México ao norte da Argentina, incluindo todo o Brasil. Curiosamente, costuma ocorrer em maior quantidade em áreas alteradas pelo ser humano do que em seu habitat original de cerrados e campos. No Pantanal, é comum em áreas abertas e proximidades de construções.",
+    "habitat": "Habita áreas abertas, cerrados e campos, com forte presença em ambientes urbanos e periurbanos. O desmatamento facilitou sua expansão, especialmente em áreas de pasto e agricultura.\n\nOcorre do México ao norte da Argentina, incluindo todo o Brasil. Adaptou-se amplamente a centros urbanos, parques e jardins.",
+    "diet": "Alimenta-se de grãos encontrados no chão. Com disponibilidade de alimento, reproduz-se ao longo de todo o ano. Frequenta comedouros com sementes e quirera de milho.",
+    "behavior": "Espécie agressiva entre pares, disputa alimentos e defende territórios usando as asas para golpear oponentes. Os machos são mais belicosos. Nas disputas ou ao tomar sol deitada de lado, exibe a grande área de penas negras sob as asas. O casal mantém território ao redor do ninho, e postura de dois ovos é incubada entre 11 e 13 dias. Os filhotes saem do ninho com até duas semanas.",
+    "bestTime": "No Pantanal, a rolinha-roxa é observada durante todo o ano, sem sazonalidade marcante. É uma das espécies mais fáceis de avistar, presente em áreas abertas e próximo a edificações.",
+    "photographyTips": [
+      "Espécie acessível para fotografia, permitindo aproximação em áreas urbanas e periurbanas",
+      "Registre o contraste entre o marrom-avermelhado do macho e o pardo da fêmea",
+      "Os pontos negros sobre as asas são detalhes importantes para close-up",
+      "Comportamento de banho de sol com a asa esticada é um registro comportamental interessante",
+      "Luz lateral realça os tons avermelhados da plumagem do macho"
+    ],
+    "size": "Mede cerca de 17 cm de comprimento e pesa aproximadamente 47 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é abundante e sua adaptação a ambientes urbanos contribui para a estabilidade populacional."
+  },
+  "Leptotila verreauxi": {
+    "description": "Pomba terrícola de 28 cm com íris vermelha, face dorsal verde-cobre e ventre claro. Habita capoeiras, campos e bordas de mata, forrageando discretamente no solo.",
+    "overview": "A juriti-pupu (Leptotila verreauxi) é uma pomba terrícola de cerca de 28 cm e aproximadamente 150 g. O macho apresenta retrizes laterais e abdome esbranquiçados, face dorsal do pescoço verde-cobre, coroa cinza-claro e ventre violeta-claro; a fêmea é mais clara. A íris vermelha é uma característica marcante. De ampla distribuição, ocorre do sul do Texas à Argentina central, incluindo todo o Brasil. Habita capoeiras, campos, cerrados e bordas de mata, onde forrageia discretamente no solo em busca de sementes e pequenos frutos.",
+    "habitat": "Habita capoeiras, campos, cerrados e bordas de mata. É uma espécie terrícola que prefere ambientes com cobertura vegetal que permita acesso ao solo.\n\nDistribui-se do sul do Texas e México, através da América Central, até a Argentina central e o Brasil, onde apresenta múltiplas subespécies regionais.",
+    "diet": "Alimenta-se de sementes e pequenos frutos coletados no solo. Também consome insetos. Como os demais columbídeos, bebe água sem elevar a cabeça, sorvendo continuamente.",
+    "behavior": "Ave discreta e terrícola, forrageia no solo de forma silenciosa. O ninho é construído a cerca de 5 m do solo com gravetos, onde são depositados dois ovos brancos ou creme. A incubação é feita por ambos os pais e dura aproximadamente 14 dias. Os filhotes são alimentados inicialmente com leite de papo.",
+    "bestTime": "No Pantanal, a juriti-pupu pode ser encontrada ao longo de todo o ano. A estação seca (maio a outubro) facilita a observação, com a vegetação mais aberta e trilhas mais acessíveis em bordas de mata e cerrado.",
+    "photographyTips": [
+      "A íris vermelha é o destaque — busque registros em close-up com iluminação que realce essa característica",
+      "Procure a espécie forrageando no solo em bordas de mata nas primeiras horas da manhã",
+      "Movimente-se lentamente: a juriti-pupu é discreta mas tolera aproximação cuidadosa",
+      "O reflexo verde-cobre da nuca aparece melhor sob luz direta",
+      "Fundo de serapilheira cria composições naturais para retratos no solo"
+    ],
+    "size": "Mede aproximadamente 28 cm de comprimento e pesa cerca de 150 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é comum e amplamente distribuída, sem ameaças significativas à sua conservação."
+  },
+  "Zenaida auriculata": {
+    "description": "Pomba campestre de 22-28 cm, cinza-olivácea com peito rosado e manchas negras sob as coberturas auriculares. Forma bandos compactos durante migrações.",
+    "overview": "A avoante (Zenaida auriculata) é uma pomba campestre de 22 a 28 cm, abundante ao longo da América do Sul e Caribe. Apresenta plumagem geralmente cinza ou marrom-oliva com peito e ventre rosados, e manchas pretas abaixo das coberturas auriculares e atrás dos olhos. A nuca exibe iridescência metálica amarelo-bronze. As fêmeas são de um marrom mais opaco. No Brasil, forma bandos compactos na região Nordeste durante as migrações, comportamento que lhe rendeu o nome popular de \"pomba-de-bando\". Adaptou-se bem à atividade humana, expandindo seu alcance com o desenvolvimento agrícola e urbano.",
+    "habitat": "Habita matagais áridos a semiáridos, pastagens abertas com árvores esparsas e manchas de floresta, evitando florestas tropicais densas. Ocorre até 4.400 m de altitude.\n\nComum em parques urbanos e suburbanos, jardins, áreas industriais e agrícolas. No Brasil, possui distribuição isolada em diversas regiões, com concentração no Nordeste durante migrações.",
+    "diet": "Alimenta-se principalmente de sementes coletadas no chão, aproveitando grãos cultivados em áreas agrícolas. A dieta pode ser complementada por lagartas, pupas de insetos, pulgões e caracóis.",
+    "behavior": "Forma pares reprodutores que criam os filhotes juntos, com postura média de dois ovos por ninhada. O macho realiza duas exibições de cortejo: perseguição com batidas vigorosas de asas e demonstração do local do ninho com abanamento de cauda. Espécie migratória em algumas populações, formando bandos compactos de centenas de indivíduos.",
+    "bestTime": "No Pantanal, a avoante pode ser observada ao longo de todo o ano. A formação de bandos maiores tende a ocorrer em períodos de disponibilidade de grãos. Áreas agrícolas e pastagens adjacentes ao Pantanal concentram grupos numerosos.",
+    "photographyTips": [
+      "Bandos em voo proporcionam registros dinâmicos e impactantes",
+      "A iridescência amarelo-bronze da nuca requer luz direta para ser capturada",
+      "As manchas pretas faciais são um detalhe diagnóstico para close-up",
+      "Áreas de alimentação em pastagens permitem aproximação gradual",
+      "Velocidades de obturador altas (1/2000+) são necessárias para bandos em voo"
+    ],
+    "size": "Mede de 22 a 28 cm de comprimento, com envergadura de 13,5 a 16,3 cm.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é abundante e sua adaptação a ambientes modificados contribui para a expansão populacional. No Brasil, a caça predatória, comercial ou esportiva é crime ambiental."
+  },
+  "Crotophaga major": {
+    "description": "O maior anu das Américas, com 46 cm e plumagem negra de dorso azulado. Vive à beira de rios e lagos, alimentando-se de artrópodes e pequenos peixes.",
+    "overview": "O anu-coroca (Crotophaga major) é a maior espécie de anu das Américas, com tamanho médio de 46 cm e peso aproximado de 157 g. Apresenta plumagem negra com dorso azulado e um bico grande com saliência no topo, maior que o do anu-preto. É uma espécie associada a ambientes aquáticos, vivendo à beira de rios e lagos desde o Panamá até o norte da Argentina. Seu nome popular tem origem no tupi: \"coroca\" (koro'ka) significa \"rabugento\", referência ao bico que lembra o nariz curvo de pessoas idosas. No Pantanal, é encontrado em margens de rios e áreas alagadas, onde se alimenta de artrópodes e pequenos peixes.",
+    "habitat": "Vive à beira de rios e lagos, em áreas úmidas e vegetação ribeirinha. Diferente do anu-preto, que prefere áreas abertas secas, o anu-coroca é fortemente associado a ambientes aquáticos.\n\nOcorre do Panamá até o norte da Argentina, incluindo todo o Pantanal, onde as extensas áreas alagáveis oferecem habitat propício.",
+    "diet": "Alimenta-se de artrópodes e pequenos peixes capturados à beira d'água. O hábito alimentar aquático distingue esta espécie dos demais anus e lhe rendeu nomes como \"anu-peixe\" e \"anu-de-enchente\".",
+    "behavior": "Espécie gregária, vive em grupos ao longo de margens de rios e lagos. Diferencia-se do anu-preto pelo porte maior, habitat aquático e bico com saliência pronunciada. Menos estudado que o anu-preto em termos de comportamento reprodutivo.",
+    "bestTime": "No Pantanal, o anu-coroca pode ser observado durante todo o ano em margens de rios e lagos. Na estação chuvosa (novembro a abril), com o aumento das áreas alagadas, a espécie se dispersa por novos ambientes aquáticos. Na seca (maio a outubro), concentra-se em corpos d'água remanescentes.",
+    "photographyTips": [
+      "Procure a espécie em galhos e vegetação ribeirinha sobre a água",
+      "O dorso azulado é realçado por luz lateral — posicione-se para captar os reflexos",
+      "Registre o bico com saliência, característica diagnóstica em relação ao anu-preto",
+      "Embarcações silenciosas permitem aproximação em margens de rios",
+      "Grupos pousados oferecem oportunidade de registrar vários indivíduos em composição"
+    ],
+    "size": "Mede cerca de 46 cm de comprimento e pesa aproximadamente 157 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie é comum em sua área de distribuição e se beneficia da abundância de ambientes aquáticos no Pantanal."
+  },
+  "Crotophaga ani": {
+    "description": "Ave gregária de plumagem totalmente negra, bico alto com cume e cauda longa. Vive em bandos de 6 a 15 indivíduos em áreas abertas com moitas.",
+    "overview": "O anu-preto (Crotophaga ani) é uma ave cuculiforme gregária de 35 a 36 cm de comprimento, com plumagem e olhos inteiramente negros, bico grande lateralmente achatado com cume na maxila e cauda longa que representa metade do comprimento total. Pesa entre 76 e 222 g. Vive em bandos de seis a quinze indivíduos em áreas abertas com moitas, capões entre pastos e jardins. Pela manhã e após chuvas, pousa de asas abertas para se secar. À noite, os indivíduos do bando se apertam em filas ou se aglomeram para se aquecer. Seu nome científico Crotophaga significa \"comedor de carrapatos\", embora não haja registros confirmados de carrapatos em conteúdos estomacais.",
+    "habitat": "Habita áreas abertas com moitas e capões entre pastos e jardins. Também pode ser encontrado em ambientes urbanos, em terrenos baldios e áreas com vegetação espontânea.\n\nOcorre da Flórida à Argentina, presente em toda a porção leste da América do Sul. Prefere lugares úmidos e busca moitas de taquara para pernoitar.",
+    "diet": "Alimentação diversificada: artrópodes como gafanhotos, percevejos e aranhas, além de pequenos vertebrados como lagartixas e camundongos. Caçam coletivamente, espalhando-se no chão em semicírculo. Acompanham animais maiores e tratores para capturar invertebrados espantados. Na seca, complementam com frutos e sementes.",
+    "behavior": "Espécie altamente gregária, com comportamento cooperativo de reprodução. Mais frequentemente, dois ou três casais constroem ninho coletivo, com até 20 ovos. A incubação dura 13 a 16 dias. Bandos se movem juntos em voos curtos de até 50 metros, sempre com o líder saindo primeiro. Toma banhos de poeira e se seca de asas abertas ao sol.",
+    "bestTime": "No Pantanal, o anu-preto é facilmente observado durante todo o ano. É uma das espécies mais visíveis e vocais, presente em qualquer passeio por áreas abertas. Na estação seca, complementa a dieta com frutos, sendo avistado em áreas de frutificação.",
+    "photographyTips": [
+      "Registre o comportamento de secagem ao sol, com asas abertas — cena típica após chuvas",
+      "Grupos em fila ou aglomerados são registros comportamentais interessantes",
+      "O bico alto com cume é um detalhe diagnóstico para close-up em contraluz",
+      "Caça coletiva em semicírculo no chão é um comportamento raro de documentar",
+      "Espécie tolerante à presença humana, permitindo aproximação e uso de lentes moderadas (200-300mm)"
+    ],
+    "size": "Mede entre 35 e 36 cm de comprimento total, sendo metade correspondente à cauda. Pesa entre 76 e 222 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie é abundante em toda sua distribuição e se adapta bem a ambientes modificados."
+  },
+  "Tapera naevia": {
+    "description": "Cuco parasita de 29 cm com topete avermelhado e plumagem pardo-amarelada. Deposita ovos em ninhos alheios. Vocalização associada ao folclore brasileiro.",
+    "overview": "O saci (Tapera naevia) é um cuculídeo de cerca de 29 cm com plumagem pardo-amarelada, manchas escuras nas asas e topete avermelhado manchado em tons claros e escuros. O peito, abdome e supercílio são brancos. É uma espécie insetívora e parasita de ninhada, depositando seus ovos em ninhos de outras aves, como o joão-teneném. Presente em todo o Brasil e do México à Argentina e Bolívia, divide-se em duas subespécies. Possui forte presença na cultura popular brasileira: o nome \"matinta-pereira\" é citado na canção Águas de Março, de Tom Jobim, que também reproduz seu assobio no arranjo instrumental. Aprecia banhos de sol e de terra.",
+    "habitat": "Habita áreas abertas com vegetação arbustiva, bordas de mata, cerrados e capoeiras. Não apresenta preferência por um tipo específico de floresta, ocorrendo em variados ambientes semiabertos.\n\nPresente em todo o Brasil, com uma subespécie no norte e leste do país e outra no sul. Também ocorre do México à Argentina.",
+    "diet": "Espécie insetívora, alimenta-se de diversos tipos de insetos capturados na vegetação e em áreas abertas.",
+    "behavior": "Parasita de ninhada, o saci deposita seus ovos em ninhos de outras espécies, particularmente do joão-teneném. Aprecia banhos de sol e de terra. Sua vocalização é um assobio ascendente repetitivo, associado a diversas crenças populares e nomes folclóricos como matinta-pereira e peixe-frito.",
+    "bestTime": "No Pantanal, o saci é detectado ao longo de todo o ano, principalmente pela vocalização. A estação seca (maio a outubro) favorece a identificação auditiva, com o canto ressoando em áreas abertas. As primeiras horas da manhã são o período de maior atividade vocal.",
+    "photographyTips": [
+      "Localize a ave pela vocalização antes de buscá-la visualmente na vegetação",
+      "O topete avermelhado é um detalhe diagnóstico para registro em close-up",
+      "Registre comportamento de banho de sol e de terra, hábitos característicos da espécie",
+      "Lentes longas (400mm+) são recomendadas, pois a ave tende a permanecer parcialmente oculta",
+      "Áreas abertas com arbustos são os melhores pontos de busca"
+    ],
+    "size": "Mede cerca de 29 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição e populações estáveis."
+  },
+  "Piaya cayana": {
+    "description": "Grande cuco de 40 a 50 cm com cauda longa, plumagem castanha, bico amarelo e íris vermelha. Percorre galhos com agilidade em busca de insetos grandes.",
+    "overview": "A alma-de-gato (Piaya cayana) é um grande cuculídeo de 40,5 a 50 cm de comprimento e 95 a 120 g, sendo a cauda extremamente longa uma de suas marcas. A plumagem das partes superiores e cabeça é castanha, com garganta mais pálida, peito inferior cinza e barriga enegrecida. As penas centrais da cauda são ruivas e as externas pretas com barras brancas. O bico amarelo e a íris vermelha completam o perfil. Seu nome popular se deve ao canto que lembra o gemido de um gato. Habita dosséis e bordas de florestas em todo o Neotrópico, do México à Argentina. No Pantanal, percorre rápida e silenciosamente os galhos em busca de cigarras, vespas, lagartas e outros insetos de grande porte.",
+    "habitat": "Encontrada no dossel e bordas de floresta, matas secundárias e ambientes semiabertos, do nível do mar até 2.500 m, sendo incomum a partir de 1.200 m.\n\nOcorre em todos os países neotropicais, do México à Argentina, incluindo todo o Brasil. Tolera perturbação humana desde que fragmentos florestais permaneçam.",
+    "diet": "Alimenta-se de insetos grandes, como cigarras, vespas e lagartas (incluindo espécies com pelos urticantes), além de aranhas e pequenos lagartos. Raramente consome frutas. Captura presas na folhagem com investidas rápidas e pode apanhar vespas em voo. Ocasionalmente segue formigas-de-correição, capturando presas levadas pelas formigas.",
+    "behavior": "Percorre rápida e silenciosamente os galhos da floresta, voando principalmente por planeio com batidas de asas ocasionais. Relativamente ousada para um cuculídeo, embora mais frequentemente encontrada oculta na vegetação. Pode ser observada forrageando junto a saguis e em bandos mistos. Nidifica em formato de taça com folhas, depositando dois ovos brancos.",
+    "bestTime": "No Pantanal, a alma-de-gato pode ser observada durante todo o ano. A vocalização que lembra um gemido de gato é audível em qualquer estação. Na seca (maio a outubro), a menor densidade de folhagem facilita a visualização da ave percorrendo os galhos.",
+    "photographyTips": [
+      "A longa cauda ruiva e preta com barras brancas é o elemento mais fotogênico — registre a ave em perfil",
+      "Bico amarelo e íris vermelha são detalhes fundamentais para close-up",
+      "Registre o comportamento de caça com investidas rápidas na folhagem",
+      "Lentes de 300-500mm são adequadas para fotografia no dossel e bordas de mata",
+      "A alma-de-gato é mais ousada que outros cucos — movimente-se lentamente e ela pode tolerar proximidade"
+    ],
+    "size": "Mede de 40,5 a 50 cm de comprimento e pesa entre 95 e 120 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é abundante na maior parte de sua distribuição e tolera graus moderados de perturbação humana, desde que fragmentos florestais sejam mantidos."
+  },
+  "Coccyzus melacoryphus": {
+    "description": "Cuco discreto de florestas secas e úmidas tropicais. Plumagem oliva nas partes superiores e ventre claro. Ampla distribuição na América do Sul.",
+    "overview": "O papa-lagarta-acanelado (Coccyzus melacoryphus) é um cuculídeo discreto que habita florestas secas e úmidas tropicais e subtropicais de baixa altitude, além de florestas secundárias. De porte médio para a família, apresenta plumagem oliva nas partes superiores e ventre claro, com bico escuro que lhe confere o nome em inglês \"Dark-billed Cuckoo\". Possui ampla distribuição na América do Sul, ocorrendo da Colômbia e Venezuela ao Uruguai e Argentina, incluindo todo o Brasil. Já foi registrado ocasionalmente no norte do Chile, Ilhas Malvinas e Grenada. No Pantanal, habita matas ribeirinhas e áreas de transição entre floresta e campo.",
+    "habitat": "Habita florestas secas tropicais ou subtropicais, florestas úmidas de baixa altitude e florestas secundárias degradadas. Prefere ambientes com cobertura arbórea e sub-bosque denso.\n\nOcorre em grande parte da América do Sul, da Colômbia e Venezuela ao Uruguai e Argentina, incluindo todo o Brasil. Também pode ser encontrado em Trinidad e Tobago e nas Guianas.",
+    "diet": "Alimenta-se de insetos, com destaque para lagartas (origem de seu nome popular \"papa-lagarta\"). Forrageia na vegetação de sub-bosque e copa, capturando presas entre folhas e galhos.",
+    "behavior": "Ave de hábitos discretos, desloca-se de forma silenciosa entre a vegetação. Pouco documentado em termos de comportamento reprodutivo no Pantanal. Diferente de alguns cucos, não é parasita de ninhada. Espécie solitária ou em pares, raramente vista em grupos.",
+    "bestTime": "No Pantanal, o papa-lagarta-acanelado pode ser encontrado ao longo de todo o ano, embora seja uma espécie discreta e de difícil detecção visual. A estação seca (maio a outubro) pode facilitar a localização em matas ribeirinhas com menor cobertura foliar.",
+    "photographyTips": [
+      "Espécie discreta que exige paciência para localização e registro",
+      "Procure em sub-bosque de matas ribeirinhas e áreas de transição floresta-campo",
+      "O bico escuro é uma característica diagnóstica para diferenciar de outras espécies do gênero",
+      "Lentes longas (400mm+) e ISO elevado são necessários para o ambiente sombreado em que forrageia",
+      "Fique atento a movimentos sutis na folhagem — a ave se desloca silenciosamente"
+    ],
+    "size": "Mede aproximadamente 27 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e ocorre em diversos tipos de habitat florestal."
+  }
+}

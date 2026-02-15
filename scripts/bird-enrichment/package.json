@@ -1,0 +1,24 @@
+{
+  "name": "bird-enrichment-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "parse": "tsx 00-parse-csv.ts",
+    "gbif": "tsx 01-gbif-match.ts",
+    "wikidata": "tsx 02-wikidata-enrich.ts",
+    "scrape": "tsx 03-firecrawl-scrape.ts",
+    "consolidate": "tsx 04-consolidate.ts",
+    "editorial": "tsx 05-llm-editorial.ts",
+    "seed": "tsx 06-generate-seed.ts",
+    "all": "tsx 00-parse-csv.ts && tsx 01-gbif-match.ts && tsx 02-wikidata-enrich.ts && tsx 04-consolidate.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

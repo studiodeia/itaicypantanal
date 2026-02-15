@@ -1,0 +1,4 @@
+Guarda-rios-amazónico ou martim-pescador-verde (Chloroceryle amazona) é uma espécie de martim-pescador presente do México à Argentina. Tais aves medem cerca de 29,5 cm de comprimento e se alimentam de peixes e invertebrados aquáticos. Por vezes defecam na água para atrair peixes, que são pescados num mergulho rápido e direto, batendo-os contra galhos para atordoá-los antes de engolir. O casal constrói o ninho em barrancos no rio, escavando um buraco profundo, onde a fêmea põe até 4 ovos, chocados por ambos. Os filhotes nascem após 22 dias, e são alimentados com peixinhos. Também são chamados de ariramba-verde e martim-gravata.
+
+
+== Referências ==

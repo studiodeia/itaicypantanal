@@ -1,0 +1,325 @@
+{
+  "Phimosus infuscatus": {
+    "description": "Íbis de face nua avermelhada e plumagem negra com reflexos esverdeados. Frequente em brejos e margens de rios do Pantanal.",
+    "overview": "O tapicuru é a única espécie do gênero Phimosus, pertencente à família Threskiornithidae. Reconhecido pela face desprovida de penas, de coloração avermelhada, e pelo bico curvo amarelado, possui plumagem negra com reflexos esverdeados. Mede entre 46 e 54 centímetros de comprimento e pesa entre 493 e 600 gramas. Habita brejos, banhados e margens de rios, onde forrageia em águas rasas à procura de crustáceos, moluscos e matéria vegetal. No Pantanal, é encontrado com frequência em áreas alagadas e campos inundados. Tende a se isolar em casais durante o período reprodutivo, quando deposita ovos azulados incubados por cerca de 23 a 24 dias. Sua distribuição vem se ampliando em regiões alteradas pelo homem.",
+    "habitat": "Ocorre em brejos, banhados, margens de rios e campos alagados. No Pantanal, é encontrado em áreas inundadas sazonalmente e em zonas úmidas permanentes.\n\nTambém pode ser observado em campos recentemente arados e áreas alagadas próximas a cursos d'água, demonstrando capacidade de adaptação a ambientes modificados.",
+    "diet": "Alimenta-se de crustáceos, moluscos e matéria vegetal, incluindo folhas e sementes. Forrageia em águas rasas, utilizando o bico curvo para sondar o substrato. A disponibilidade de áreas alagadas rasas é determinante para sua atividade alimentar.",
+    "behavior": "Forma casais que tendem a se isolar durante a reprodução. Deposita ovos azulados, com período de incubação de 23 a 24 dias. Fora da época reprodutiva, pode ser visto em pequenos grupos forrageando em áreas alagadas.",
+    "bestTime": "No Pantanal, a observação é favorecida durante a estação seca (maio a outubro), quando a retração das águas concentra as aves em poças e margens de rios remanescentes. Na estação chuvosa (novembro a abril), dispersa-se pelas áreas inundadas, tornando-se menos previsível.",
+    "photographyTips": [
+      "Posicione-se próximo a margens de rios ou brejos rasos ao amanhecer, quando o tapicuru forrageia ativamente",
+      "Utilize lentes de 300-500 mm para captar detalhes da face nua avermelhada, seu traço mais distintivo",
+      "Aproveite a luz lateral do início da manhã para realçar os reflexos esverdeados da plumagem negra",
+      "Na seca, concentre-se em poças remanescentes onde várias aves se reúnem para forragear"
+    ],
+    "size": "Mede entre 46 e 54 cm de comprimento e pesa entre 493 e 600 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e suas populações parecem estáveis, com tendência de expansão em áreas alteradas."
+  },
+  "Theristicus caudatus": {
+    "description": "Íbis de grande porte com pescoço alaranjado, bico longo e curvo, e grito marcante. Comum em campos e áreas úmidas do Pantanal.",
+    "overview": "A curicaca é uma ave de grande porte da família Threskiornithidae, medindo cerca de 69 cm de comprimento e 43 cm de altura. Possui bico longo e curvado, pescoço esbranquiçado a alaranjado, peito alaranjado, dorso cinza-esverdeado, partes inferiores negras e pernas avermelhadas. Seu nome popular deriva do tupi kurikaka, referência aos seus hábitos gregários. Ocorre desde a Colômbia até a Terra do Fogo, incluindo ampla distribuição no Brasil. No Pantanal, frequenta campos abertos, brejos e áreas úmidas, onde forrageia no solo em busca de invertebrados. É reconhecida por sua vocalização forte e repetitiva, audível a grandes distâncias, o que lhe rendeu o apelido de \"despertador\". Duas subespécies são reconhecidas, sendo T. c. caudatus a que ocorre no Centro-Oeste brasileiro.",
+    "habitat": "Habita campos abertos, brejos, pastagens e áreas úmidas. No Pantanal, é encontrada tanto em campos secos quanto em áreas sazonalmente inundadas.\n\nPrefere terrenos com vegetação rasteira que facilitem o forrageio no solo. Pode ser observada também em bordas de matas e proximidades de corpos d'água.",
+    "diet": "Forrageia no solo utilizando o bico longo e curvo para sondar a terra em busca de invertebrados, incluindo insetos, larvas e minhocas. Complementa a dieta com pequenos vertebrados encontrados em campos e áreas úmidas. O nome do gênero, derivado do grego theristikos (\"de fazer colheita\"), alude ao movimento de coleta com o bico.",
+    "behavior": "Espécie gregária, frequentemente observada em pequenos grupos nos campos do Pantanal. Possui vocalização potente e característica, emitida em voo e pousada, que serve para comunicação entre indivíduos e defesa territorial. Nidifica em árvores e arbustos, formando colônias reprodutivas.",
+    "bestTime": "A observação é favorecida ao longo de todo o ano no Pantanal, mas a concentração de indivíduos tende a aumentar na estação seca (maio a outubro), quando campos menos alagados facilitam o forrageio no solo. A vocalização matinal facilita a localização da espécie.",
+    "photographyTips": [
+      "Procure a espécie em campos abertos nas primeiras horas da manhã, quando forrageia ativamente no solo",
+      "Registre o momento do voo com asas abertas para captar o contraste entre o dorso cinza-esverdeado e as partes inferiores negras",
+      "Utilize lentes longas (400-600 mm) para retratos detalhados do bico curvado e da plumagem alaranjada do pescoço",
+      "Grave também o áudio da vocalização — o grito da curicaca é um dos sons mais característicos dos campos do Pantanal"
+    ],
+    "size": "Mede cerca de 69 cm de comprimento e aproximadamente 43 cm de altura.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e populações consideradas estáveis."
+  },
+  "Theristicus caerulescens": {
+    "description": "Íbis de plumagem cinza-azulada, aparentada da curicaca. Habita campos sazonalmente inundados e pastagens do Pantanal.",
+    "overview": "A curicaca-real é uma espécie de íbis da família Threskiornithidae, aparentada da curicaca-comum (T. caudatus), da qual se distingue pela plumagem predominantemente cinza-azulada. Ocorre na Argentina, Bolívia, Brasil, Paraguai e Uruguai, sendo encontrada em campos de gramíneas sazonalmente úmidos ou inundados e em pastagens de baixa altitude. No Pantanal, habita áreas abertas periodicamente alagadas, onde forrageia no solo à procura de invertebrados e pequenos vertebrados. Assim como a curicaca-comum, possui bico longo e curvo adaptado para sondar o solo. É menos gregária que sua congênere e tende a ocupar áreas mais úmidas. A espécie é considerada de ocorrência localizada em parte de sua distribuição.",
+    "habitat": "Habita campos de gramíneas sazonalmente inundados, pastagens de baixa altitude e áreas úmidas subtropicais ou tropicais. No Pantanal, ocorre em campos que alternam entre fases secas e alagadas.\n\nPrefere áreas com vegetação rasteira próximas a corpos d'água, onde o solo permanece úmido por períodos prolongados.",
+    "diet": "Forrageia no solo utilizando o bico longo e curvado para capturar invertebrados, incluindo insetos e larvas. A dieta provavelmente inclui também pequenos vertebrados e outros organismos encontrados em solos úmidos, de modo similar a outras espécies do gênero Theristicus.",
+    "behavior": "Menos gregária que a curicaca-comum, tende a ser observada em pares ou pequenos grupos. Ocupa preferencialmente campos úmidos e sazonalmente inundados. A nidificação segue padrão similar ao de outras espécies da família, em arbustos ou árvores.",
+    "bestTime": "No Pantanal, a observação é mais provável durante a transição entre a estação chuvosa e a seca (abril a junho), quando os campos mantêm umidade residual. Na estação seca plena, concentra-se em áreas que ainda retêm água.",
+    "photographyTips": [
+      "Procure a espécie em campos úmidos e pastagens alagadas, especialmente na transição entre as estações",
+      "Compare com a curicaca-comum para registrar as diferenças de plumagem — a curicaca-real apresenta tons cinza-azulados",
+      "Utilize lentes longas e mantenha distância, pois a espécie tende a ser mais reservada",
+      "Luz suave de início de manhã valoriza os tons sutis da plumagem cinzenta"
+    ],
+    "size": "Mede aproximadamente 70 cm de comprimento, porte similar ao da curicaca-comum.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. Possui distribuição restrita à porção central da América do Sul, mas sem indicação de declínio populacional significativo."
+  },
+  "Mesembrinibis cayennensis": {
+    "description": "Único íbis florestal das Américas. Plumagem verde-escura com reflexos metálicos e vocalização rouca marcante ao amanhecer.",
+    "overview": "O coró-coró é a única espécie florestal da família Threskiornithidae nas Américas, distinguindo-se dos demais íbis por habitar matas e florestas em vez de áreas abertas. Mede entre 48 e 58 cm de comprimento e pesa entre 715 e 785 g. Sua plumagem é verde-escura, com reflexos bronzeados no dorso e azul metálico nas asas e cauda. A crista nucal apresenta penas verde-esmeralda brilhantes. O bico é longo, curvo e esverdeado, e as pernas são negro-esverdeadas. Habita florestas úmidas, especialmente nas proximidades de rios e lagos, em altitudes de até 500 m. No Pantanal, ocorre em matas ciliares e áreas florestadas próximas a cursos d'água. É reconhecido como o mais ruidoso dos íbis, emitindo gritos roucos desde antes do amanhecer.",
+    "habitat": "Habita florestas úmidas, matas ciliares e bordas de matas próximas a rios e lagos. No Pantanal, ocorre ao longo de matas ribeirinhas e áreas florestadas adjacentes a corpos d'água.\n\nDiferentemente de outros íbis, é uma espécie essencialmente florestal, permanecendo próximo à cobertura vegetal densa. Encontrado em altitudes de até 500 metros.",
+    "diet": "Alimenta-se de insetos, crustáceos, rãs e peixes pequenos, capturados em ambientes florestais próximos à água. Utiliza movimentos em ziguezague com a cabeça para localizar presas, aproximando-se lentamente antes de dar botes rápidos. Também consome embuás (diplópodes).",
+    "behavior": "Espécie arrisca e ruidosa, que vocaliza desde antes do amanhecer com gritos roucos. Ao vocalizar, realiza movimentos amplos com o pescoço e direciona o bico para cima. É territorial e utiliza a vocalização para comunicação entre indivíduos. Solitário ou em pares, pousa dentro da mata e sai a voar ao notar proximidade.",
+    "bestTime": "Pode ser observado ao longo de todo o ano no Pantanal, mas é mais facilmente detectado ao amanhecer, quando vocaliza intensamente nas matas ciliares. Na estação seca (maio a outubro), a concentração em trechos florestados próximos a rios remanescentes facilita a localização.",
+    "photographyTips": [
+      "Posicione-se em matas ciliares antes do amanhecer para localizar a espécie pela vocalização rouca",
+      "Utilize flash de preenchimento ou ISO elevado, pois o ambiente florestal apresenta baixa luminosidade",
+      "Aguarde junto a margens de rios em áreas florestadas — a espécie desce para forragear perto da água",
+      "Lentes luminosas (f/2.8 ou f/4) de 300-500 mm são indicadas para o ambiente sombreado da mata"
+    ],
+    "size": "Mede entre 48 e 58 cm de comprimento e pesa entre 715 e 785 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui distribuição ampla, do Panamá ao Paraguai e Argentina, com populações consideradas estáveis."
+  },
+  "Platalea ajaja": {
+    "description": "Ave de plumagem rosada intensa e bico achatado em forma de colher. A tonalidade do rosa reflete a qualidade do ambiente em que vive.",
+    "overview": "O colhereiro é uma ave inconfundível da família Threskiornithidae, reconhecida pela plumagem rosada e pelo bico largo e achatado em formato de colher. Mede entre 71 e 86 cm de comprimento, com envergadura de 120 a 133 cm e peso de 1,2 a 1,8 kg. Os adultos possuem cabeça nua esverdeada, pescoço e dorso brancos e corpo predominantemente rosa. A intensidade da cor rosada é derivada da dieta, resultante do pigmento cantaxantina presente nos crustáceos que consome — quanto maior a ingestão de crustáceos, mais intensa a coloração. Para se alimentar, arrasta o bico sensível lateralmente na água, fechando-o ao detectar presas. No Pantanal, frequenta lagoas, baías e margens de rios, onde forma grupos que forrageiam em águas rasas. Nidifica em arbustos ou árvores, depositando de dois a cinco ovos esbranquiçados com manchas marrons.",
+    "habitat": "Habita lagoas, baías, rios e áreas alagadas com águas rasas. No Pantanal, é encontrado em ambientes aquáticos abertos, especialmente em baías e corixos com pouca profundidade.\n\nFrequenta tanto águas doces quanto salobras. Prefere áreas com substratos lodosos onde pode forragear com seu bico em movimento lateral.",
+    "diet": "Alimenta-se de crustáceos, peixes pequenos, insetos aquáticos, moluscos, rãs e sementes. Utiliza o bico em forma de colher para filtrar o alimento, arrastando-o lateralmente em águas rasas e fechando-o ao detectar presas pelo tato. O pigmento dos crustáceos consumidos é responsável pela coloração rosada da plumagem.",
+    "behavior": "Espécie gregária, forrageia em grupos em águas rasas. Possui parada nupcial elaborada com batimentos de bico e ofertas mútuas de galhos. Nidifica em colônias, construindo ninhos em arbustos ou árvores, frequentemente em manguezais. Deposita de dois a cinco ovos com incubação compartilhada.",
+    "bestTime": "No Pantanal, a observação é particularmente favorecida durante a estação seca (maio a outubro), quando a redução do nível das águas concentra os colhereiros em lagoas e baías rasas. A plumagem rosada atinge maior intensidade no período reprodutivo.",
+    "photographyTips": [
+      "Fotografe em águas rasas durante a golden hour para realçar a plumagem rosada com luz quente",
+      "Registre o comportamento de forrageio lateral do bico — é o movimento mais característico da espécie",
+      "Grupos em voo com pescoço esticado oferecem composições com boa distribuição de cor",
+      "Na seca, concentre-se em lagoas com pouca profundidade, onde dezenas de indivíduos podem se reunir",
+      "Utilize velocidade de obturador acima de 1/1000s para congelar o voo e captar o padrão alar rosado"
+    ],
+    "size": "Mede entre 71 e 86 cm de comprimento, com envergadura de 120 a 133 cm e peso de 1,2 a 1,8 kg.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie se recuperou de declínios históricos causados pela caça por penas no século XIX. Atualmente, é considerada espécie indicadora da qualidade ambiental — a intensidade da coloração reflete a saúde do ecossistema."
+  },
+  "Eurypyga helias": {
+    "description": "Ave solitária de plumagem críptica que, ao abrir as asas, revela manchas oculares coloridas. Habita margens de rios e igarapés.",
+    "overview": "O pavãozinho-do-pará é a única espécie da família Eurypygidae, sem parentesco próximo com outras aves neotropicais. Mede entre 45 e 48 cm de comprimento e pesa cerca de 227 g. Sua plumagem críptica contrasta com as impressionantes manchas oculares nas asas — castanho-avermelhadas e negras —, exibidas em momentos de alarme ou cortejo. Possui bico longo e reto com mandíbula inferior amarela, pescoço fino em formato de S, íris vermelha e pernas alaranjadas. Habita margens de rios, lagos e igarapés em regiões florestadas, onde caminha pelo solo com movimentos elegantes. No Pantanal, ocorre em matas ribeirinhas do Mato Grosso e Mato Grosso do Sul. Alimenta-se de insetos, crustáceos, rãs e peixes pequenos, caçando com aproximação lenta seguida de botes rápidos.",
+    "habitat": "Habita margens de rios, lagos e igarapés em regiões florestadas. No Pantanal, ocorre em matas ciliares e áreas sombreadas próximas a cursos d'água, especialmente em locais rasos com pedras ou troncos expostos.\n\nPreferência por ambientes com cobertura vegetal densa e proximidade de água. Pode ser encontrado em altitudes de até 500 m.",
+    "diet": "Alimenta-se de insetos, crustáceos, rãs e peixes pequenos. Caça com movimentos lentos e precisos, aproximando-se da presa em ziguezague antes de dar botes rápidos. Também captura moscas com habilidade, comportamento que originou o nome popular \"pavão-papa-moscas\". Forrageia em locais rasos, podendo caminhar em águas de pouca profundidade.",
+    "behavior": "Ave solitária que caminha pelo solo com movimentos deliberados, realizando balanços laterais suaves com o corpo. Quando ameaçado, abre as asas e a cauda revelando manchas oculares coloridas que funcionam como mecanismo de defesa contra predadores. Na nidificação, constrói ninho em formato de tigela próximo à água, com um a dois ovos incubados por 26 a 27 dias. Os pais defendem o ninho fingindo estarem feridos.",
+    "bestTime": "No Pantanal, a observação requer paciência ao longo de todo o ano, preferencialmente em matas ciliares. A estação seca (maio a outubro) pode concentrar a espécie em trechos de riachos remanescentes. Mais ativa nas primeiras horas da manhã.",
+    "photographyTips": [
+      "Aguarde em silêncio junto a margens de riachos sombreados — a espécie se aproxima ao longo do curso d'água",
+      "Se a ave abrir as asas em exibição, registre rapidamente as manchas oculares coloridas — o momento é breve",
+      "Utilize ISO elevado e lentes luminosas, pois o ambiente de mata ciliar tem pouca luz",
+      "Procure troncos caídos na água e pedras expostas, onde a espécie costuma pousar para forragear"
+    ],
+    "size": "Mede entre 45 e 48 cm de comprimento e pesa cerca de 227 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição geográfica com extensão de ocorrência superior a 20.000 km², o que reduz sua vulnerabilidade."
+  },
+  "Aramus guarauna": {
+    "description": "Ave paludícola de grande porte, especialista em caramujos. Conhecida pelo grito lamentoso que ecoa nas noites do Pantanal.",
+    "overview": "O carão é uma ave de grande porte, única representante viva da família Aramidae, relacionada a gruiformes como saracuras e grous. Mede entre 64 e 73 cm de comprimento, com envergadura de 101 a 107 cm e peso médio de 1.080 g. Possui plumagem pardo-escura com estrias brancas na cabeça e pescoço, bico longo e curvado com mandíbula amarela, e pernas negras. É especialista na captura de caramujos aquáticos do gênero Pomacea (aruás), utilizando o bico, cuja ponta curva ligeiramente para a direita, como pinça para extrair o molusco da concha sem quebrá-la. No Pantanal, habita zonas pantanosas e margens de rios, sendo facilmente identificado pela vocalização lamentosa — um grito agudo e estridente emitido especialmente ao entardecer e durante a noite.",
+    "habitat": "Habita pântanos de água doce, banhados, margens de rios e áreas alagadas com vegetação aquática. No Pantanal, é encontrado em ambientes com presença de caramujos aquáticos (aruás), seu principal alimento.\n\nFrequenta preferencialmente áreas com vegetação emergente e águas rasas. Também pode ser observado em campos inundados e bordas de lagoas.",
+    "diet": "Alimenta-se quase exclusivamente de caramujos aquáticos do gênero Pomacea (aruás). A disponibilidade desses moluscos determina diretamente a distribuição local da espécie. Complementa a dieta com mexilhões de água doce, outros caracóis, insetos, rãs, lagartos e crustáceos. Carrega o caramujo até local raso ou seco, remove o opérculo com o bico e extrai o molusco em 10 a 20 segundos, raramente quebrando a concha.",
+    "behavior": "Territorial durante a reprodução, com machos defendendo áreas de 0,15 a 4 hectares. Pode ser monogâmico ou poliândrico em série. Nidifica em locais variados — no solo, em vegetação flutuante ou em árvores —, com ninhadas de três a oito ovos incubados por cerca de 27 dias. A vocalização lamentosa, um grito agudo descrito como \"kwEEEeeer\", é emitida principalmente à noite e ao entardecer.",
+    "bestTime": "No Pantanal, a observação é particularmente produtiva na estação seca (maio a outubro), quando a retração das águas concentra os caramujos e, consequentemente, os carões em poças e margens remanescentes. A vocalização noturna facilita a detecção em qualquer época do ano.",
+    "photographyTips": [
+      "Fotografe junto a lagoas rasas na seca, onde o carão forrageia concentrado em busca de caramujos",
+      "Registre a sequência de alimentação: captura do caramujo, remoção do opérculo e extração do molusco",
+      "A luz do final de tarde valoriza as estrias brancas da plumagem contra o fundo escuro da mata",
+      "Pilhas de conchas vazias junto a troncos ou pedras indicam pontos de alimentação recorrentes — bons pontos de espera"
+    ],
+    "size": "Mede entre 64 e 73 cm de comprimento, com envergadura de 101 a 107 cm e peso médio de cerca de 1.080 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição nas Américas. No Brasil, suas populações em áreas pantanosas sazonais podem se deslocar localmente de acordo com o regime de cheias."
+  },
+  "Aramides cajaneus": {
+    "description": "Saracura de pescoço cinza, peito ruivo e pernas vermelho-coral. Sua vocalização repetitiva \"três potes\" é ouvida em matas alagadas.",
+    "overview": "A saracura-três-potes é um ralídeo de grande porte para a família, medindo entre 33 e 40 cm de comprimento e pesando de 320 a 465 g. Possui cabeça e pescoço cinza, peito e flancos ruivos, barriga preta, bico amarelo-esverdeado e pernas vermelho-coral. Seu nome popular é onomatopeico, referindo-se à vocalização repetitiva que lembra o som de \"três potes\". No Pantanal, habita matas alagadas, florestas úmidas de planície e áreas arbustivas próximas a pântanos. Apesar do porte, movimenta-se com agilidade pela vegetação, raramente voando. Ativa predominantemente à noite, alimenta-se de invertebrados, pequenos vertebrados, sementes e frutos. É monogâmica, formando casais permanentes que nidificam em arbustos ou árvores a baixa altura.",
+    "habitat": "Habita florestas úmidas de planície, matas alagadas, bordas de pântanos e áreas arbustivas próximas a água. No Pantanal, ocorre em capões de mata, matas ciliares e vegetação densa adjacente a áreas inundadas.\n\nPode ser encontrada desde o nível do mar até cerca de 2.000 m de altitude. Empoleira-se em arbustos e árvores, comportamento típico de ralídeos florestais.",
+    "diet": "Alimenta-se à noite de invertebrados variados, incluindo moluscos, artrópodes e caranguejos. Também consome sapos, cobras d'água, sementes, bagas e frutos de palmeira. Utiliza o bico para sondar o substrato e mover folhiço. Para comer caracóis, martela as conchas; para obter bagas, salta para quebrar cachos de frutos.",
+    "behavior": "Espécie monogâmica que forma casais duradouros ao longo do ano. Nidifica em arbustos ou árvores, de 1 a 3 metros acima do solo, com ninhadas típicas de cinco ovos incubados por cerca de 20 dias por ambos os sexos. Cautelosa e reservada, raramente voa, preferindo deslocar-se pela vegetação. Muda as rêmiges simultaneamente entre março e junho.",
+    "bestTime": "A detecção é mais fácil pela vocalização, audível ao entardecer e à noite, durante todo o ano no Pantanal. Na estação seca (maio a outubro), a concentração em capões de mata próximos a água remanescente facilita o encontro visual.",
+    "photographyTips": [
+      "Localize a espécie pela vocalização ao entardecer e posicione-se em bordas de mata próximas a água",
+      "Utilize flash com difusor para registros em ambientes sombreados sem assustar a ave",
+      "As pernas vermelho-coral e o bico amarelo-esverdeado são elementos visuais marcantes — priorize enquadramentos que os destaquem",
+      "Aguarde em silêncio junto a trilhas lamacentas na borda da mata — a espécie ocasionalmente forrageia em áreas semi-abertas"
+    ],
+    "size": "Mede entre 33 e 40 cm de comprimento e pesa entre 320 e 465 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição do México à Argentina, com populações estáveis na maior parte de sua área de ocorrência."
+  },
+  "Rynchops niger": {
+    "description": "Ave aquática de bico singular — a mandíbula inferior é mais longa que a superior. Pesca voando rente à água ao entardecer.",
+    "overview": "O talha-mar é uma ave da família Laridae com uma adaptação singular: sua mandíbula inferior é mais longa que a superior, permitindo que se alimente voando rente à superfície da água com o bico aberto, capturando peixes e camarões pelo toque. Mede aproximadamente 50 cm de comprimento, com peso variando entre 235 g (fêmea) e 325 g (macho). Apresenta partes superiores negro-fuliginosas, fronte e partes inferiores brancas, bico parcialmente vermelho e preto, e pés vermelhos. No Pantanal, frequenta rios, lagoas e bancos de areia ao longo dos grandes cursos d'água. Pesca preferencialmente ao crepúsculo e à noite, tanto em águas claras como turvas. Nidifica em bancos de areia, onde a fêmea deposita de dois a três ovos em uma escavação rasa.",
+    "habitat": "Habita rios de grande e médio porte, lagoas e bancos de areia. No Pantanal, ocorre ao longo dos rios Paraguai, Cuiabá, Miranda e seus afluentes, frequentando praias fluviais e áreas de remanso.\n\nPreferência por trechos de rio com bancos de areia expostos, utilizados tanto para descanso quanto para nidificação.",
+    "diet": "Alimenta-se de peixes pequenos e camarões, capturados em voo rasante sobre a superfície da água. Voa com a mandíbula inferior submersa e fecha o bico ao contato com a presa. Pesca preferencialmente ao crepúsculo e à noite, tanto em águas claras quanto turvas, profundas ou rasas.",
+    "behavior": "Espécie gregária que forma grupos em bancos de areia durante o repouso. O voo de pesca é característico — rente à água, com a mandíbula inferior cortando a superfície. Nidifica em colônias em praias fluviais, depositando ovos camuflados diretamente na areia. A atividade de pesca se intensifica ao entardecer.",
+    "bestTime": "No Pantanal, a observação do comportamento de pesca é favorecida ao entardecer e início da noite, durante todo o ano. Na estação seca (maio a outubro), os bancos de areia expostos ao longo dos rios concentram grupos em repouso, facilitando o registro diurno.",
+    "photographyTips": [
+      "Fotografe o voo de pesca ao entardecer, quando a luz baixa cria contraste dramático com a silhueta negra e branca",
+      "Posicione-se em bancos de areia ou barrancos junto ao rio para registrar o voo rasante a baixa altura",
+      "Utilize velocidade de obturador acima de 1/2000s para congelar o momento em que a mandíbula toca a água",
+      "Grupos pousados em praias fluviais na seca oferecem oportunidades para registros de colônia"
+    ],
+    "size": "Mede aproximadamente 50 cm de comprimento, com peso entre 235 g (fêmea) e 325 g (macho).",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição nas Américas, com três subespécies reconhecidas. No Pantanal, depende da manutenção de praias fluviais para a nidificação."
+  },
+  "Phaetusa simplex": {
+    "description": "Trinta-réis robusto de bico amarelo-limão e asas com padrão alvinegro. Frequente nos rios e lagoas do Pantanal.",
+    "overview": "O trinta-réis-grande é uma ave da família Laridae que habita rios e lagoas desde a Amazônia até o Uruguai e Argentina. Mede até 43 cm de comprimento e pesa cerca de 235 g, sendo o maior trinta-réis de água doce da região. Possui plumagem cinzenta, asas com um padrão alvinegro característico, pele da face e garganta vermelhas e bico amarelo-limão. No Pantanal, é encontrado ao longo dos principais rios e lagoas, onde pesca mergulhando da altura para capturar peixes na superfície. Frequentemente observado em bancos de areia e troncos expostos, onde pousa entre as sessões de pesca. Duas subespécies são reconhecidas, sendo P. s. chloropoda a que ocorre nas bacias dos rios Paraguai e Paraná.",
+    "habitat": "Habita rios de grande e médio porte, lagoas e áreas alagadas de água doce. No Pantanal, frequenta os rios Paraguai, Cuiabá, Miranda e seus afluentes, além de baías e corixos.\n\nPreferência por áreas com bancos de areia expostos e troncos emergentes, onde pousa para descanso e pesca.",
+    "diet": "Alimenta-se principalmente de peixes pequenos, capturados em mergulhos a partir de voo pairado sobre a água. Também consome insetos aquáticos. A técnica de pesca consiste em planar a certa altura, identificar a presa e mergulhar de cabeça para capturá-la.",
+    "behavior": "Espécie gregária que forma grupos em bancos de areia e troncos expostos. Voa sobre rios e lagoas em busca de peixes, alternando pairada e mergulhos. A vocalização é aguda e frequente durante o voo. Nidifica em colônias em praias fluviais.",
+    "bestTime": "A observação é produtiva ao longo de todo o ano no Pantanal. Na estação seca (maio a outubro), os rios mais baixos e bancos de areia expostos concentram grupos da espécie, facilitando o registro. A atividade de pesca ocorre ao longo de todo o dia.",
+    "photographyTips": [
+      "Registre o mergulho de pesca a partir de barco ou margem elevada, utilizando velocidade acima de 1/2000s",
+      "Grupos pousados em troncos ou bancos de areia na seca oferecem composições equilibradas com reflexo na água",
+      "O bico amarelo-limão e o padrão alvinegro das asas são os elementos visuais mais distintivos",
+      "Fotografe contra a luz da manhã para silhuetas em voo com as asas abertas"
+    ],
+    "size": "Mede até 43 cm de comprimento e pesa cerca de 235 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e populações estáveis nos principais sistemas fluviais."
+  },
+  "Vanellus chilensis": {
+    "description": "Ave territorial de esporões nas asas e grito estridente. Sentinela dos campos, avisa sobre qualquer intruso em seus domínios.",
+    "overview": "O quero-quero é uma das aves mais conhecidas e populares da América do Sul, reconhecido pelo grito estridente que lhe dá o nome — uma onomatopeia de sua vocalização repetitiva. Mede entre 32 e 38 cm de comprimento e pesa de 300 a 320 g. Possui penacho fino na nuca, esporões no ângulo das asas (usados em defesa), plumagem cinza no dorso, faixa negra no peito e abdômen branco. No Pantanal, habita campos, pastagens, brejos e várzeas, onde é territorial e vigilante, dando alarme ao menor sinal de intrusão em seus domínios. Defende vigorosamente o ninho com voos rasantes e gritos, comportamento que o tornou símbolo de sentinela na cultura popular. Alimenta-se de insetos e pequenos invertebrados coletados no solo.",
+    "habitat": "Habita campos abertos, pastagens, brejos, várzeas e áreas com vegetação rasteira. No Pantanal, é encontrado em campos secos e sazonalmente úmidos, bordas de lagoas e áreas degradadas.\n\nTolera ambientes modificados pelo homem e pode penetrar em áreas urbanas. Prefere locais abertos que permitam boa visibilidade para vigiar predadores.",
+    "diet": "Alimenta-se de insetos e outros pequenos invertebrados capturados no solo. Forrageia caminhando por campos e pastagens, coletando presas à superfície. A dieta pode incluir larvas, minhocas e pequenos artrópodes encontrados em solos úmidos.",
+    "behavior": "Espécie territorial que emite grito de alarme dia e noite ao detectar intrusos. Geralmente monogâmico, nidifica no solo em depressão rasa forrada com palha e gravetos. Põe de três a quatro ovos esverdeados camuflados, defendidos com voos rasantes e gritos estridentes contra predadores. Os filhotes acompanham os pais logo após o nascimento e se alimentam por conta própria. Costuma andar em pares ou pequenos grupos.",
+    "bestTime": "Observável durante todo o ano no Pantanal, em praticamente qualquer campo aberto. A reprodução tende a coincidir com a estação chuvosa (novembro a abril), quando os pais podem ser vistos defendendo ninhos e filhotes.",
+    "photographyTips": [
+      "Registre o comportamento de defesa do ninho — voos rasantes com esporões expostos são cenas características",
+      "Filhotes camuflados no solo oferecem oportunidades de registro se identificados com cuidado",
+      "O penacho na nuca e a faixa negra no peito são elementos distintivos para retratos",
+      "Campos abertos ao amanhecer proporcionam boa luz lateral para registros em ambiente limpo"
+    ],
+    "size": "Mede entre 32 e 38 cm de comprimento e pesa de 300 a 320 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui vasta área de ocorrência na América do Sul, com população grande e aparentemente em crescimento. Está entre as aves mais comuns do continente."
+  },
+  "Himantopus melanurus": {
+    "description": "Ave pernalta elegante de pernas longas rosadas e plumagem preto-e-branca. Frequente em áreas alagadas e lagoas rasas.",
+    "overview": "O pernilongo-de-costas-brancas é uma ave costeira da família Recurvirostridae, caracterizada pelas pernas extremamente longas e finas de coloração rosada, plumagem contrastante em preto e branco, e bico fino e reto. Habita áreas úmidas e litorâneas da América do Sul, do noroeste do Brasil ao sudoeste do Peru e centro-sul da Argentina. No Pantanal, frequenta lagoas rasas, banhados e campos alagados, onde forrageia em águas de pouca profundidade. As pernas longas permitem que se alimente em locais mais profundos do que a maioria das aves limícolas de porte similar. Possui voo elegante com pernas estendidas para trás, bem além da cauda.",
+    "habitat": "Habita lagoas rasas, banhados, campos alagados e áreas úmidas abertas. No Pantanal, ocorre em baías, corixos e campos sazonalmente inundados.\n\nPreferência por áreas com águas abertas e rasas, sem vegetação aquática densa, onde pode caminhar e forragear com suas pernas longas.",
+    "diet": "Alimenta-se de invertebrados aquáticos, incluindo insetos, larvas, crustáceos e moluscos, capturados em águas rasas. Utiliza o bico fino e reto para bicar presas na superfície ou logo abaixo dela. As pernas longas permitem acesso a profundidades intermediárias.",
+    "behavior": "Espécie gregária, frequentemente observada em pequenos grupos em lagoas rasas. Forrageia caminhando lentamente em águas de pouca profundidade, com movimentos deliberados. Nidifica em colônias, construindo ninhos simples no solo próximo à água. Pode emitir vocalizações agudas quando perturbada.",
+    "bestTime": "No Pantanal, a observação é favorecida na estação seca (maio a outubro), quando lagoas rasas concentram grupos da espécie. Na cheia, dispersa-se pelas áreas inundadas. Ativo durante todo o dia.",
+    "photographyTips": [
+      "Fotografe em lagoas rasas com reflexo na água para composições com a silhueta elegante refletida",
+      "As pernas longas rosadas contra a água são o elemento visual mais marcante — inclua-as no enquadramento",
+      "Registre o voo com pernas estendidas para trás, uma postura elegante e característica",
+      "Utilize velocidade moderada (1/500s) para captar o movimento de caminhada na água com leve borramento"
+    ],
+    "size": "Mede aproximadamente 35 a 40 cm de comprimento, com pernas desproporcionalmente longas em relação ao corpo.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie é abundante em áreas úmidas da América do Sul, com populações consideradas estáveis."
+  },
+  "Jacana jacana": {
+    "description": "Ave pernalta de dedos longos que caminha sobre vegetação flutuante. Plumagem negra com manto castanho e esporas amarelas nas asas.",
+    "overview": "A jaçanã é uma ave da família Jacanidae, única representante da família em sua ampla distribuição na América do Sul. Mede cerca de 23 cm de comprimento, com as fêmeas maiores que os machos. Possui plumagem negra com manto castanho claro, bico amarelo com escudo frontal vermelho, rêmiges verde-amareladas e esporas afiadas no encontro das asas. Seus dedos e unhas extremamente longos permitem que caminhe sobre vegetação aquática flutuante, distribuindo o peso corporal sobre uma ampla base. No Pantanal, habita lagoas, baías e campos alagados com vegetação flutuante. Apresenta sistema reprodutivo poliândrico: a fêmea forma haréns de até quatro ou cinco machos, que assumem a incubação dos ovos e os cuidados parentais.",
+    "habitat": "Habita lagoas, baías e campos alagados com vegetação aquática flutuante. No Pantanal, é encontrada em áreas com aguapés, lírios d'água e outras plantas aquáticas sobre as quais caminha.\n\nOcupa três tipos de habitat: vegetação aquática (cerca de 74% do tempo), pastagens adjacentes (20%) e margens arenosas (6%). A saturação do habitat aumenta a competição por território.",
+    "diet": "Onívora, gasta cerca de 80% do tempo forrageando em vegetação aquática, solo e pastagens. Consome ao menos 47 táxons, incluindo insetos, sementes de gramíneas, peixes pequenos, anfíbios, moluscos e outros invertebrados. Vira folhas para acessar organismos nas raízes e superfícies inferiores. Invertebrados compõem cerca de 80% do volume da dieta e sementes cerca de 20%.",
+    "behavior": "Espécie poliândrica: a fêmea defende o território e seleciona o local do ninho, enquanto os machos constroem o ninho, incubam os quatro ovos por 28 dias e cuidam dos filhotes por até dois meses. A fêmea é fisicamente dominante sobre os machos. A defesa territorial envolve perseguições aéreas acompanhadas de vocalização e exibição de esporas. Realiza voos curtos e rentes à água.",
+    "bestTime": "Observável durante todo o ano no Pantanal, sempre que houver vegetação aquática flutuante. Na estação chuvosa (novembro a abril), a expansão das áreas alagadas amplia o habitat disponível. O período reprodutivo concentra-se entre setembro e fevereiro.",
+    "photographyTips": [
+      "Registre o momento em que a jaçanã caminha sobre folhas de aguapé — destaca a adaptação dos dedos longos",
+      "Fotografe a partir de barco ou margem rasa para nivelar a câmera com a ave sobre a vegetação flutuante",
+      "As rêmiges verde-amareladas são mais visíveis em voo — registre decolagens e pousos",
+      "Filhotes sendo cuidados pelo macho, inclusive transportados sob as asas, são registros de comportamento valiosos",
+      "Utilize lentes de 400-600 mm e velocidade acima de 1/1000s para congelar o caminhar sobre as folhas"
+    ],
+    "size": "Mede cerca de 17 a 23 cm de comprimento, com as fêmeas maiores que os machos.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e populações estáveis. Dependente da manutenção de áreas alagadas com vegetação flutuante."
+  },
+  "Cathartes aura": {
+    "description": "Urubu de grande envergadura com cabeça vermelha e nua. Localiza carniça pelo olfato apurado, habilidade rara entre aves.",
+    "overview": "O urubu-de-cabeça-vermelha é o abutre mais abundante das Américas, com população global estimada em 4,5 milhões de indivíduos. Possui envergadura de 160 a 183 cm, comprimento de 62 a 81 cm e peso variável entre 0,8 e 2,4 kg. A plumagem é marrom-enegrecida, com penas de voo cinza-prateadas visíveis por baixo das asas. A cabeça nua é vermelha nos adultos e negra nos juvenis. Distingue-se de outros urubus pela capacidade olfativa desenvolvida: o lobo olfatório do cérebro é proporcionalmente grande, permitindo detectar o gás etil mercaptano produzido no início da decomposição de carcaças. No Pantanal, ocorre em áreas abertas e semiabertas, planando em térmicas ascendentes com as asas em formato de V raso. É geralmente o primeiro urubu a localizar carniça.",
+    "habitat": "Habita áreas abertas e semiabertas, incluindo campos, pastagens, bordas de matas, desertos e cerrados. No Pantanal, é encontrado sobrevoando campos, matas e áreas próximas a rios.\n\nEvita áreas densamente florestadas. Utiliza árvores mortas, penhascos e torres como poleiros. Nidifica em cavidades rochosas, troncos ocos ou diretamente no solo.",
+    "diet": "Necrófago, alimenta-se principalmente de carniça de mamíferos e outros animais. Prefere carcaças recentes, evitando estágios avançados de decomposição. Localiza o alimento pelo olfato, detectando gases da decomposição inicial. Raramente preda animais vivos. Desempenha papel ecológico importante na eliminação de carcaças do ambiente.",
+    "behavior": "Gregário, empoleira-se em grandes grupos comunitários à noite e forrageia independentemente durante o dia. Plana em térmicas ascendentes com as asas em V raso, inclinando-se de um lado para o outro. Frequentemente observado em postura de asas abertas para secagem, aquecimento e controle de bactérias. Como não possui siringe, limita-se a emitir assobios e grunhidos.",
+    "bestTime": "Observável durante todo o ano no Pantanal, especialmente durante as horas mais quentes do dia, quando as térmicas favorecem o voo planado. Na seca, a concentração de fauna e eventuais mortalidades de peixes atraem grupos.",
+    "photographyTips": [
+      "Registre o voo planado com asas em V raso contra céu azul — a silhueta é diagnóstica da espécie",
+      "Fotografe por baixo para captar o contraste entre os forros escuros e as penas de voo cinza-prateadas",
+      "A postura de asas abertas ao sol é fotogênica e revela a envergadura total",
+      "A cabeça vermelha nua é mais bem captada com lentes longas quando a ave está pousada em poleiro elevado"
+    ],
+    "size": "Mede entre 62 e 81 cm de comprimento, com envergadura de 160 a 183 cm e peso de 0,8 a 2,4 kg.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. É o abutre mais abundante das Américas, com população global estimada em 4,5 milhões de indivíduos e tendência estável."
+  },
+  "Cathartes burrovianus": {
+    "description": "Urubu de porte médio com cabeça amarela e nuca avermelhada. Voa baixo sobre pântanos e campos alagados em busca de carniça.",
+    "overview": "O urubu-de-cabeça-amarela é um abutre do Novo Mundo da família Cathartidae, de porte médio, medindo entre 53 e 66 cm de comprimento, com envergadura de 150 a 165 cm e peso de 0,95 a 1,55 kg. Possui plumagem negra com brilho esverdeado, cabeça e pescoço nus com pele amarela, fronte e nuca avermelhadas e coroa azul-acinzentada. Diferencia-se do urubu-da-mata (C. melambrotus) pelo porte menor e cabeça mais amarela, e do urubu-de-cabeça-vermelha (C. aura) pela preferência por voos a baixa altitude sobre pântanos e campos alagados. No Pantanal, utiliza o olfato apurado para localizar carniça, voando solitariamente a baixa altura sobre áreas úmidas. Assim como outros urubus do Novo Mundo, não possui siringe e comunica-se apenas por assobios baixos.",
+    "habitat": "Habita campos sazonalmente inundados, pântanos, pastagens de planície e áreas úmidas abertas. No Pantanal, sobrevoa campos alagados e bordas de áreas pantanosas em busca de carniça.\n\nGeralmente não é encontrado em regiões de alta altitude. Pode vagar por campos secos e clareiras, mas tem preferência por ambientes úmidos de baixa altitude.",
+    "diet": "Necrófago, alimenta-se de carniça e animais atropelados. Também preda pequenos animais aquáticos em pântanos. Prefere carne fresca, mas não consegue abrir a pele de animais de grande porte, dependendo de urubus maiores para o primeiro corte. Localiza alimento pelo olfato, detectando etil mercaptano da decomposição inicial.",
+    "behavior": "Voa solitariamente a baixa altitude, com as asas em posição diédrica. Raramente se eleva a grandes alturas, preferindo sobrevoar pântanos e campos alagados. Empoleira-se em postes e poleiros baixos. Pode realizar deslocamentos locais em resposta a mudanças no nível da água. Não possui vocalização — apenas assobios baixos.",
+    "bestTime": "No Pantanal, a observação é mais frequente ao longo de todo o dia em áreas de campo alagado. Na estação seca (maio a outubro), a concentração de fauna nas áreas remanescentes de água pode atrair a espécie com maior frequência.",
+    "photographyTips": [
+      "Registre o voo rasante sobre pântanos — característica que distingue esta espécie dos demais urubus",
+      "A coloração multicolorida da cabeça (amarelo, vermelho, azul-acinzentado) é um detalhe importante para retratos",
+      "Fotografe pousada em postes ou cercas, onde costuma descansar entre sessões de voo",
+      "Compare com urubu-de-cabeça-vermelha e urubu-preto para registros comparativos das três espécies"
+    ],
+    "size": "Mede entre 53 e 66 cm de comprimento, com envergadura de 150 a 165 cm e peso de 0,95 a 1,55 kg.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui área de ocorrência de cerca de 7.800.000 km² e população estimada entre 100.000 e 1.000.000 de indivíduos, com tendência estável."
+  },
+  "Coragyps atratus": {
+    "description": "Urubu negro e robusto, o mais frequente dos urubus brasileiros. Plana em térmicas a grande altura durante todo o dia.",
+    "overview": "O urubu-preto é a espécie de urubu mais frequentemente observada no Brasil, pertencente à família Cathartidae. Mede entre 56 e 74 cm de comprimento, com envergadura de 1,33 a 1,67 m e peso médio que varia de 1,18 kg nos trópicos a 2,15 kg nas populações andinas e norte-americanas. Possui plumagem inteiramente negra, cabeça nua e rugosa, e asas largas adaptadas ao voo planado em térmicas. No Pantanal, é presença constante, planando a grande altitude durante o dia e empoleirando-se em árvores mortas e postes. Alimenta-se de carniça e frutas em decomposição, desempenhando papel ecológico fundamental na eliminação de carcaças. Possui boa visão, mas olfato menos desenvolvido que o urubu-de-cabeça-vermelha, frequentemente seguindo este para localizar carniça. Seu sistema digestivo é altamente eficiente, capaz de digerir nervos e ossos.",
+    "habitat": "Habita áreas abertas intercaladas com florestas e bosques, pântanos, pastagens e áreas degradadas. No Pantanal, é encontrado em praticamente todos os ambientes, de campos abertos a proximidades de instalações humanas.\n\nPreferência por terrenos baixos e abertos com boa visibilidade. Residente permanente na maior parte de sua distribuição.",
+    "diet": "Necrófago, alimenta-se de carniça de animais diversos e frutas em decomposição. Em áreas habitadas, também consome matéria orgânica em decomposição. Não consegue abrir a pele de grandes carcaças sozinho, dependendo de urubus maiores. O ácido estomacal é potente o suficiente para digerir nervos e ossos.",
+    "behavior": "Gregário, forma grandes grupos em poleiros noturnos e nas proximidades de carcaças. Plana em correntes térmicas a grandes altitudes durante o dia. Nidifica junto ao solo em terrenos afastados da presença humana, com ambos os genitores incubando os ovos cinza ou verde-pálidos por 32 a 40 dias. Juvenis eclodem com plumagem branca e realizam o primeiro voo por volta das 10 a 11 semanas.",
+    "bestTime": "Observável durante todo o ano no Pantanal, a qualquer hora do dia. Mais visível durante as horas mais quentes, quando as térmicas ascendentes favorecem o voo planado a grande altitude. Na seca, concentra-se em áreas com carcaças de peixes.",
+    "photographyTips": [
+      "Registre grupos planando em espiral em térmicas ascendentes para composições com múltiplas aves",
+      "A postura de asas abertas em poleiro é fotogênica e mostra a envergadura total",
+      "Fotografe em voo por baixo para captar as pontas brancas das primárias, visíveis contra o céu",
+      "Cenas de alimentação comunitária em carcaças documentam o importante papel ecológico da espécie"
+    ],
+    "size": "Mede entre 56 e 74 cm de comprimento, com envergadura de 1,33 a 1,67 m e peso médio de 1,18 a 1,94 kg nas regiões tropicais.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. É um dos urubus mais abundantes e amplamente distribuídos das Américas. No Brasil, é protegido por lei — é proibido abater ou manter em cativeiro sem autorização do IBAMA."
+  },
+  "Pandion haliaetus": {
+    "description": "Rapinante especializado em pesca, com garras reversíveis e narinas que se fecham durante o mergulho. Visitante migratório no Pantanal.",
+    "overview": "A águia-pescadora é uma ave de rapina de grande porte da família Pandionidae, a única representante de seu gênero e família. Mede entre 50 e 66 cm de comprimento, com envergadura de até 180 cm e peso de 0,9 a 2,1 kg. Possui partes superiores pardas, cabeça branca com máscara escura nos olhos e partes inferiores brancas. É especializada na captura de peixes, que compõem 99% de sua dieta, possuindo adaptações únicas: dedos reversíveis, espículas nas solas dos dedos, narinas que se fecham durante o mergulho e plumagem oleosa resistente à água. No Pantanal, ocorre como visitante migratório vindo da América do Norte, sendo observada ao longo de rios e lagoas durante o período não reprodutivo. Mergulha de alturas de 5 a 70 metros para capturar peixes com as patas.",
+    "habitat": "Habita proximidades de corpos d'água que ofereçam peixes em abundância. No Pantanal, frequenta rios de grande porte, lagoas e baías, onde pesca em águas abertas.\n\nPode utilizar rios de água doce, salgada ou salobra. No Brasil, ocorre como visitante não reprodutivo, com distribuição isolada em grande parte do território.",
+    "diet": "Alimenta-se quase exclusivamente de peixes (99% da dieta), capturando presas de 150 a 300 g e 25 a 35 cm de comprimento. Avista a presa de 10 a 40 metros de altura, paira momentaneamente e mergulha com as patas para a frente, ajustando o ângulo para compensar a refração da água. Ocasionalmente consome roedores, répteis, anfíbios e crustáceos.",
+    "behavior": "Solitária fora da época reprodutiva. Realiza longas migrações entre a América do Norte (reprodução) e a América do Sul (invernada). No Pantanal, pode ser observada pescando em rios e lagoas, transportando peixes em voo com as garras. Possui visão adaptada para detectar objetos submersos. Pode mergulhar completamente na água durante a captura.",
+    "bestTime": "No Pantanal, a águia-pescadora é observada como visitante migratório, predominantemente entre outubro e março (correspondendo ao verão austral e estação chuvosa). A presença depende das rotas migratórias individuais.",
+    "photographyTips": [
+      "Registre o mergulho de pesca — o momento em que a ave atinge a água com as garras é o registro mais impactante",
+      "Posicione-se em margens elevadas de rios para captar o mergulho de perfil",
+      "A máscara escura nos olhos e as partes inferiores brancas facilitam a identificação em voo",
+      "Utilize velocidade de obturador acima de 1/2500s para congelar o mergulho e a saída da água com o peixe",
+      "O voo com peixe nas garras, cabeça voltada para frente, é uma das imagens mais icônicas de aves de rapina"
+    ],
+    "size": "Mede entre 50 e 66 cm de comprimento, com envergadura de até 180 cm e peso de 0,9 a 2,1 kg.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A população global é estimada em 460.000 indivíduos, com tendência estável. Recuperou-se de declínios históricos causados por pesticidas como o DDT nas décadas de 1950-1960. No Brasil, ocorre como visitante migratório."
+  },
+  "Rosthramus sociabilis": {
+    "description": "Gavião paludícola especialista em caramujos aquáticos (aruás). Bico adunco adaptado para extrair moluscos da concha.",
+    "overview": "O gavião-caramujeiro é um rapinante paludícola da família Accipitridae, exclusivamente malacófago — alimenta-se quase exclusivamente de caramujos aquáticos do gênero Pomacea, conhecidos como aruás. Mede cerca de 41 cm de comprimento. O macho adulto possui coloração cinza-ardósia com base da cauda branca, cera e pés alaranjados. A fêmea e os imaturos apresentam faixa supraocular esbranquiçada e partes inferiores barradas de creme. Possui bico extremamente adunco, adaptado para extrair as partes moles dos caramujos sem quebrar a concha. No Pantanal, habita áreas pantanosas e alagados onde os aruás ocorrem em abundância. Executa voos rasantes sobre pântanos, capturando os caramujos com apenas um dos pés e empoleirando-se para consumir a presa.",
+    "habitat": "Habita pântanos, alagados e áreas úmidas com presença de caramujos aquáticos. No Pantanal, ocorre em baías, corixos e campos alagados onde os aruás do gênero Pomacea são abundantes.\n\nA distribuição local é determinada pela disponibilidade de seu alimento principal. Pode ser encontrado em todas as regiões brasileiras onde haja pantanais e alagados.",
+    "diet": "Alimenta-se quase exclusivamente de caramujos aquáticos do gênero Pomacea (aruás). Captura-os em voo rasante sobre pântanos, pegando-os com um dos pés. Utiliza o bico curvo para separar as partes moles da concha, deixando cair a casca vazia. Ocasionalmente, no Pantanal, também consome pequenos caranguejos.",
+    "behavior": "Espécie gregária que vive em grupos em áreas pantanosas. Nidifica em colônias, construindo plataformas frágeis entre 1 e 4 metros de altura em arbustos ou árvores sobre a água. Deposita 2 a 3 ovos brancos com manchas marrons. O voo de forrageio é rasante e metódico, cobrindo sistematicamente a superfície do pântano.",
+    "bestTime": "No Pantanal, a observação é favorecida durante a estação seca (maio a outubro), quando a retração das águas concentra os caramujos em áreas menores, atraindo grupos do gavião-caramujeiro. Na cheia, dispersa-se pelas áreas alagadas.",
+    "photographyTips": [
+      "Registre o momento da captura do caramujo em voo rasante — o gavião estende apenas um dos pés",
+      "Fotografe a sequência de alimentação no poleiro: extração do molusco e descarte da concha",
+      "Poleiros com acúmulo de conchas vazias abaixo indicam pontos de alimentação recorrentes",
+      "O macho cinza-ardósia contra o verde dos pântanos produz contraste cromático atraente"
+    ],
+    "size": "Mede cerca de 41 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie depende diretamente da existência de caramujos aquáticos e, por extensão, da preservação de áreas úmidas. No Pantanal, é localmente comum onde os aruás são abundantes."
+  },
+  "Leptodon cayanensis": {
+    "description": "Gavião florestal de cabeça cinza e peito branco. Movimenta-se com agilidade pela vegetação e alimenta-se de insetos e larvas.",
+    "overview": "O gavião-gato é uma ave de rapina da família Accipitridae, com distribuição neotropical do México ao Paraguai e norte da Argentina. Mede entre 46 e 54 cm de comprimento, com asas e cauda longas. O adulto apresenta cabeça cinza, peito e barriga brancos, dorso negro e cauda negra com três faixas brancas. As pernas são cinza-azuladas. O juvenil difere pela cabeça mais clara com alto escuro, dorso não uniforme e pernas amarelas. No Pantanal, habita matas ribeirinhas, matas secas e cerradões, sendo considerado pouco comum fora da Amazônia. Apesar do porte, movimenta-se com agilidade pela vegetação e é difícil de localizar. Alimenta-se de larvas de insetos, insetos adultos (vespas, formigas, besouros, gafanhotos), ovos de aves e pequenos invertebrados.",
+    "habitat": "Habita florestas e matas abertas, matas ribeirinhas, matas secas e cerradões. No Pantanal, ocorre em capões de mata e matas ciliares, sendo observado ocasionalmente em áreas de vegetação mais aberta.\n\nVoa tanto por dentro da mata quanto em grandes alturas acima do dossel. Fora da Amazônia, é considerado pouco comum.",
+    "diet": "Alimenta-se de larvas e insetos adultos, incluindo vespas, formigas, besouros e gafanhotos. Também consome ovos de aves e pequenos invertebrados como moluscos. Captura insetos em voo com agilidade e pode predar cobras e pequenos lagartos.",
+    "behavior": "Espécie discreta que se movimenta com facilidade pela vegetação densa. Nos voos planados, mantém-se contra o vento e bate a ponta das asas enquanto o restante permanece parado. Nidifica em árvores, com incubação por ambos os pais. A construção do ninho ocorre por volta de setembro, com jovens emplumados entre novembro e dezembro.",
+    "bestTime": "No Pantanal, pode ser observado ao longo de todo o ano, mas com maior chance durante a estação seca (maio a outubro), quando a folhagem reduzida facilita a visualização em matas. A espécie é discreta e requer busca cuidadosa.",
+    "photographyTips": [
+      "Procure a espécie sobrevoando o dossel de matas em voos planados — mais visível nessas ocasiões",
+      "Utilize lentes longas (500-600 mm) e ISOs elevados para registros em ambientes florestais",
+      "O contraste entre a cabeça cinza e o peito branco é o elemento visual mais diagnóstico em retratos",
+      "Observe galhos médios e altos em bordas de mata, onde pode pousar entre sessões de forrageio"
+    ],
+    "size": "Mede entre 46 e 54 cm de comprimento, com asas e cauda longas.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui distribuição neotropical ampla, mas é considerada pouco comum fora da Amazônia. No Pantanal, a manutenção de matas ciliares e capões é essencial para sua ocorrência."
+  },
+  "Rupornis magnirostris": {
+    "description": "O gavião mais comum do Brasil. Plumagem barrada, vocalização aguda e hábito de pousar em postes e galhos expostos.",
+    "overview": "O gavião-carijó é a espécie de gavião mais abundante do Brasil, pertencente à família Accipitridae, encontrada do México à Argentina em uma variedade de ambientes. Mede cerca de 36 cm de comprimento, com plumagem variando de cinza a marrom e negro nas partes superiores, peito cinza, base das primárias ferrugínea, partes inferiores barradas de canela, cauda com quatro ou cinco faixas escuras e íris e tarsos amarelos. O nome popular \"carijó\" refere-se ao padrão de listras da região ventral. No Pantanal, é presença constante em campos, bordas de mata, áreas urbanas e rurais. Possui vocalização aguda e áspera muito característica, emitida frequentemente de galhos ou fios elétricos. Desempenha papel ecológico importante como regulador de populações de roedores, pequenas aves e insetos.",
+    "habitat": "Habita uma ampla variedade de ambientes, incluindo bordas de mata, campos, cerrados, áreas urbanas e rurais. No Pantanal, ocorre em praticamente todos os habitats, de matas ciliares a campos abertos e proximidades de instalações humanas.\n\nPreferência por áreas com mosaico de vegetação, incluindo regiões fechadas e abertas. Poleiros em galhos expostos, postes e fios elétricos são utilizados para vigiar e caçar.",
+    "diet": "Carnívoro generalista e oportunista, alimenta-se de insetos, cobras, pequenas aves, lagartos, roedores e outros pequenos vertebrados. A dieta varia conforme o habitat. Utiliza a técnica de \"still hunt\" (caça por espreita), pousando em poleiro elevado e aguardando presas. Também ataca ninhos de outras aves.",
+    "behavior": "Espécie territorial com vocalização aguda e frequente, utilizada para demarcação de território e cortejo. Vive em casais que nidificam no topo de árvores, com posturas de cerca de dois ovos incubados pela fêmea por aproximadamente um mês. Durante a reprodução, pode atacar intrusos que se aproximem do ninho, incluindo seres humanos. No sul do Brasil, o acasalamento ocorre a partir de agosto.",
+    "bestTime": "Observável durante todo o ano no Pantanal, em praticamente qualquer ambiente aberto ou semi-aberto. Mais ativo nas primeiras horas da manhã e no final da tarde. A vocalização aguda facilita a localização em qualquer estação.",
+    "photographyTips": [
+      "Procure a espécie em poleiros expostos — postes, galhos secos e fios elétricos são locais frequentes",
+      "Registre o momento de caça com presa nas garras para documentar o papel ecológico da espécie",
+      "As barras canela do peito e a base ferrugínea das primárias são elementos diagnósticos em retratos",
+      "Fotografe de baixo para cima em contraluz suave para registrar a silhueta com primárias abertas"
+    ],
+    "size": "Mede cerca de 36 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. É a espécie de gavião mais abundante do Brasil, com ampla distribuição e populações estáveis. Sua presença é indicadora de equilíbrio ecológico local."
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "Crypturellus undulatus": {
+    "pt": "wikipedia-raw/pt/crypturellus-undulatus.md"
+  },
+  "Crypturellus parvirostris": {
+    "pt": "wikipedia-raw/pt/crypturellus-parvirostris.md"
+  },
+  "Chauna torquata": {
+    "pt": "wikipedia-raw/pt/chauna-torquata.md"
+  },
+  "Dendrocygna autumnalis": {
+    "pt": "wikipedia-raw/pt/dendrocygna-autumnalis.md"
+  },
+  "Cairina moschata": {
+    "pt": "wikipedia-raw/pt/cairina-moschata.md"
+  },
+  "Ortalis canicollis": {
+    "pt": "wikipedia-raw/pt/ortalis-canicollis.md",
+    "en": "wikipedia-raw/en/ortalis-canicollis.md"
+  },
+  "Pipile cujubi": {
+    "pt": "wikipedia-raw/pt/pipile-cujubi.md",
+    "en": "wikipedia-raw/en/pipile-cujubi.md"
+  },
+  "Penelope ochrogaster": {
+    "pt": "wikipedia-raw/pt/penelope-ochrogaster.md",
+    "en": "wikipedia-raw/en/penelope-ochrogaster.md"
+  },
+  "Crax fasciolata": {
+    "pt": "wikipedia-raw/pt/crax-fasciolata.md",
+    "en": "wikipedia-raw/en/crax-fasciolata.md"
+  },
+  "Patagioenas picazuro": {
+    "pt": "wikipedia-raw/pt/patagioenas-picazuro.md"
+  },
+  "Patagioenas cayennensis": {
+    "pt": "wikipedia-raw/pt/patagioenas-cayennensis.md"
+  },
+  "Columbina squammata": {
+    "pt": "wikipedia-raw/pt/columbina-squammata.md"
+  },
+  "Columbina talpacoti": {
+    "pt": "wikipedia-raw/pt/columbina-talpacoti.md"
+  },
+  "Leptotila verreauxi": {
+    "pt": "wikipedia-raw/pt/leptotila-verreauxi.md"
+  },
+  "Zenaida auriculata": {
+    "pt": "wikipedia-raw/pt/zenaida-auriculata.md"
+  },
+  "Crotophaga major": {
+    "pt": "wikipedia-raw/pt/crotophaga-major.md"
+  },
+  "Crotophaga ani": {
+    "pt": "wikipedia-raw/pt/crotophaga-ani.md"
+  },
+  "Tapera naevia": {
+    "pt": "wikipedia-raw/pt/tapera-naevia.md"
+  },
+  "Piaya cayana": {
+    "pt": "wikipedia-raw/pt/piaya-cayana.md"
+  },
+  "Coccyzus melacoryphus": {
+    "pt": "wikipedia-raw/pt/coccyzus-melacoryphus.md"
+  },
+  "Nyctiprogne leucopyga": {
+    "pt": "wikipedia-raw/pt/nyctiprogne-leucopyga.md",
+    "en": "wikipedia-raw/en/nyctiprogne-leucopyga.md"
+  },
+  "Podager nacunda": {
+    "pt": "wikipedia-raw/pt/podager-nacunda.md"
+  },
+  "Nyctibius griseus": {
+    "pt": "wikipedia-raw/pt/nyctibius-griseus.md",
+    "en": "wikipedia-raw/en/nyctibius-griseus.md"
+  },
+  "Phaethornis pretrei": {
+    "pt": "wikipedia-raw/pt/phaethornis-pretrei.md"
+  },
+  "Phaethornis nattereri": {
+    "pt": "wikipedia-raw/pt/phaethornis-nattereri.md",
+    "en": "wikipedia-raw/en/phaethornis-nattereri.md"
+  },
+  "Hylocharis chrysura": {
+    "pt": "wikipedia-raw/pt/hylocharis-chrysura.md"
+  },
+  "Chionomesa fimbriata": {
+    "pt": "wikipedia-raw/pt/chionomesa-fimbriata.md"
+  },
+  "Mycteria americana": {
+    "pt": "wikipedia-raw/pt/mycteria-americana.md"
+  },
+  "Jabiru mycteria": {
+    "pt": "wikipedia-raw/pt/jabiru-mycteria.md",
+    "en": "wikipedia-raw/en/jabiru-mycteria.md"
+  },
+  "Anhinga anhinga": {
+    "pt": "wikipedia-raw/pt/anhinga-anhinga.md",
+    "en": "wikipedia-raw/en/anhinga-anhinga.md"
+  },
+  "Nannopterum brasilianus": {
+    "pt": "wikipedia-raw/pt/nannopterum-brasilianus.md"
+  },
+  "Nycticorax nycticorax": {
+    "pt": "wikipedia-raw/pt/nycticorax-nycticorax.md"
+  },
+  "Butorides striata": {
+    "pt": "wikipedia-raw/pt/butorides-striata.md"
+  },
+  "Ardea cocoi": {
+    "pt": "wikipedia-raw/pt/ardea-cocoi.md"
+  },
+  "Ardea alba": {
+    "pt": "wikipedia-raw/pt/ardea-alba.md",
+    "en": "wikipedia-raw/en/ardea-alba.md"
+  },
+  "Egretta thula": {
+    "pt": "wikipedia-raw/pt/egretta-thula.md"
+  },
+  "Egretta caerulea": {
+    "pt": "wikipedia-raw/pt/egretta-caerulea.md"
+  },
+  "Bubulcus ibis": {
+    "pt": "wikipedia-raw/pt/bubulcus-ibis.md"
+  },
+  "Syrigma sibilatrix": {
+    "pt": "wikipedia-raw/pt/syrigma-sibilatrix.md"
+  },
+  "Tigrisoma lineatum": {
+    "pt": "wikipedia-raw/pt/tigrisoma-lineatum.md"
+  },
+  "Phimosus infuscatus": {
+    "pt": "wikipedia-raw/pt/phimosus-infuscatus.md"
+  },
+  "Theristicus caudatus": {
+    "pt": "wikipedia-raw/pt/theristicus-caudatus.md"
+  },
+  "Theristicus caerulescens": {
+    "pt": "wikipedia-raw/pt/theristicus-caerulescens.md"
+  },
+  "Mesembrinibis cayennensis": {
+    "pt": "wikipedia-raw/pt/mesembrinibis-cayennensis.md"
+  },
+  "Platalea ajaja": {
+    "pt": "wikipedia-raw/pt/platalea-ajaja.md",
+    "en": "wikipedia-raw/en/platalea-ajaja.md"
+  },
+  "Eurypyga helias": {
+    "pt": "wikipedia-raw/pt/eurypyga-helias.md"
+  },
+  "Aramus guarauna": {
+    "pt": "wikipedia-raw/pt/aramus-guarauna.md",
+    "en": "wikipedia-raw/en/aramus-guarauna.md"
+  },
+  "Aramides cajaneus": {
+    "pt": "wikipedia-raw/pt/aramides-cajaneus.md"
+  },
+  "Rynchops niger": {
+    "pt": "wikipedia-raw/pt/rynchops-niger.md"
+  },
+  "Phaetusa simplex": {
+    "pt": "wikipedia-raw/pt/phaetusa-simplex.md"
+  },
+  "Vanellus chilensis": {
+    "pt": "wikipedia-raw/pt/vanellus-chilensis.md"
+  },
+  "Himantopus melanurus": {
+    "pt": "wikipedia-raw/pt/himantopus-melanurus.md"
+  },
+  "Jacana jacana": {
+    "pt": "wikipedia-raw/pt/jacana-jacana.md",
+    "en": "wikipedia-raw/en/jacana-jacana.md"
+  },
+  "Cathartes aura": {
+    "pt": "wikipedia-raw/pt/cathartes-aura.md"
+  },
+  "Cathartes burrovianus": {
+    "pt": "wikipedia-raw/pt/cathartes-burrovianus.md"
+  },
+  "Coragyps atratus": {
+    "pt": "wikipedia-raw/pt/coragyps-atratus.md"
+  },
+  "Pandion haliaetus": {
+    "pt": "wikipedia-raw/pt/pandion-haliaetus.md",
+    "en": "wikipedia-raw/en/pandion-haliaetus.md"
+  },
+  "Rosthramus sociabilis": {
+    "pt": "wikipedia-raw/pt/rosthramus-sociabilis.md"
+  },
+  "Leptodon cayanensis": {
+    "pt": "wikipedia-raw/pt/leptodon-cayanensis.md"
+  },
+  "Rupornis magnirostris": {
+    "pt": "wikipedia-raw/pt/rupornis-magnirostris.md"
+  },
+  "Urubitinga urubitinga": {
+    "pt": "wikipedia-raw/pt/urubitinga-urubitinga.md"
+  },
+  "Busarellus nigricollis": {
+    "pt": "wikipedia-raw/pt/busarellus-nigricollis.md"
+  },
+  "Heterospizias meridionalis": {
+    "pt": "wikipedia-raw/pt/heterospizias-meridionalis.md"
+  },
+  "Tyto furcata": {
+    "en": "wikipedia-raw/en/tyto-furcata.md"
+  },
+  "Glaucidium brasilianum": {
+    "pt": "wikipedia-raw/pt/glaucidium-brasilianum.md"
+  },
+  "Brotogeris chiriri": {
+    "pt": "wikipedia-raw/pt/brotogeris-chiriri.md"
+  },
+  "Myiopsitta monachus": {
+    "pt": "wikipedia-raw/pt/myiopsitta-monachus.md"
+  },
+  "Eupsittula aurea": {
+    "pt": "wikipedia-raw/pt/eupsittula-aurea.md"
+  },
+  "Amazona amazonica": {
+    "pt": "wikipedia-raw/pt/amazona-amazonica.md"
+  },
+  "Amazona aestiva": {
+    "pt": "wikipedia-raw/pt/amazona-aestiva.md",
+    "en": "wikipedia-raw/en/amazona-aestiva.md"
+  },
+  "Orthopsittaca manilatus": {
+    "pt": "wikipedia-raw/pt/orthopsittaca-manilatus.md"
+  },
+  "Primolius auricollis": {
+    "pt": "wikipedia-raw/pt/primolius-auricollis.md",
+    "en": "wikipedia-raw/en/primolius-auricollis.md"
+  },
+  "Ara ararauna": {
+    "pt": "wikipedia-raw/pt/ara-ararauna.md",
+    "en": "wikipedia-raw/en/ara-ararauna.md"
+  },
+  "Diopsittaca nobilis": {
+    "pt": "wikipedia-raw/pt/diopsittaca-nobilis.md"
+  },
+  "Psittacara leucophthalmus": {
+    "pt": "wikipedia-raw/pt/psittacara-leucophthalmus.md"
+  },
+  "Caracara plancus": {
+    "pt": "wikipedia-raw/pt/caracara-plancus.md",
+    "en": "wikipedia-raw/en/caracara-plancus.md"
+  },
+  "Falco rufigularis": {
+    "pt": "wikipedia-raw/pt/falco-rufigularis.md"
+  },
+  "Herpetotheres cachinnans": {
+    "pt": "wikipedia-raw/pt/herpetotheres-cachinnans.md"
+  },
+  "Trogon curucui": {
+    "pt": "wikipedia-raw/pt/trogon-curucui.md"
+  },
+  "Monasa nigrifrons": {
+    "pt": "wikipedia-raw/pt/monasa-nigrifrons.md"
+  },
+  "Nystalus maculatus": {
+    "pt": "wikipedia-raw/pt/nystalus-maculatus.md"
+  },
+  "Galbula ruficauda": {
+    "pt": "wikipedia-raw/pt/galbula-ruficauda.md"
+  },
+  "Megaceryle torquata": {
+    "pt": "wikipedia-raw/pt/megaceryle-torquata.md",
+    "en": "wikipedia-raw/en/megaceryle-torquata.md"
+  },
+  "Chloroceryle amazona": {
+    "pt": "wikipedia-raw/pt/chloroceryle-amazona.md"
+  },
+  "Chloroceryle americana": {
+    "pt": "wikipedia-raw/pt/chloroceryle-americana.md"
+  },
+  "Ramphastos toco": {
+    "pt": "wikipedia-raw/pt/ramphastos-toco.md",
+    "en": "wikipedia-raw/en/ramphastos-toco.md"
+  },
+  "Pteroglossus castanotis": {
+    "pt": "wikipedia-raw/pt/pteroglossus-castanotis.md"
+  },
+  "Melanerpes candidus": {
+    "pt": "wikipedia-raw/pt/melanerpes-candidus.md"
+  },
+  "Veniliornis passerinus": {
+    "pt": "wikipedia-raw/pt/veniliornis-passerinus.md"
+  },
+  "Campephilus melanoleucus": {
+    "pt": "wikipedia-raw/pt/campephilus-melanoleucus.md"
+  },
+  "Celeus lugubris": {
+    "pt": "wikipedia-raw/pt/celeus-lugubris.md",
+    "en": "wikipedia-raw/en/celeus-lugubris.md"
+  },
+  "Piculus chrysochloros": {
+    "pt": "wikipedia-raw/pt/piculus-chrysochloros.md"
+  },
+  "Colaptes melanochloros": {
+    "pt": "wikipedia-raw/pt/colaptes-melanochloros.md"
+  },
+  "Colaptes campestris": {
+    "pt": "wikipedia-raw/pt/colaptes-campestris.md"
+  },
+  "Taraba major": {
+    "pt": "wikipedia-raw/pt/taraba-major.md"
+  },
+  "Thamnophilus doliatus": {
+    "pt": "wikipedia-raw/pt/thamnophilus-doliatus.md"
+  },
+  "Thamnophilus pelzelni": {
+    "pt": "wikipedia-raw/pt/thamnophilus-pelzelni.md"
+  },
+  "Cercomacra melanaria": {
+    "pt": "wikipedia-raw/pt/cercomacra-melanaria.md",
+    "en": "wikipedia-raw/en/cercomacra-melanaria.md"
+  },
+  "Pyriglena maura": {
+    "pt": "wikipedia-raw/pt/pyriglena-maura.md",
+    "en": "wikipedia-raw/en/pyriglena-maura.md"
+  },
+  "Xiphocolaptes major": {
+    "en": "wikipedia-raw/en/xiphocolaptes-major.md"
+  },
+  "Sittasomus griseicapillus": {
+    "pt": "wikipedia-raw/pt/sittasomus-griseicapillus.md"
+  },
+  "Furnarius leucopus": {
+    "pt": "wikipedia-raw/pt/furnarius-leucopus.md"
+  },
+  "Furnarius rufus": {
+    "pt": "wikipedia-raw/pt/furnarius-rufus.md"
+  },
+  "Pseudoseisura unirufa": {
+    "en": "wikipedia-raw/en/pseudoseisura-unirufa.md"
+  },
+  "Certhiaxis cinnamomeus": {
+    "pt": "wikipedia-raw/pt/certhiaxis-cinnamomeus.md"
+  },
+  "Phacellodomus ruber": {
+    "pt": "wikipedia-raw/pt/phacellodomus-ruber.md"
+  },
+  "Synallaxis albilora": {
+    "pt": "wikipedia-raw/pt/synallaxis-albilora.md",
+    "en": "wikipedia-raw/en/synallaxis-albilora.md"
+  },
+  "Synallaxis frontalis": {
+    "pt": "wikipedia-raw/pt/synallaxis-frontalis.md"
+  },
+  "Xenopsaris albinucha": {
+    "pt": "wikipedia-raw/pt/xenopsaris-albinucha.md"
+  },
+  "Hemitriccus striaticollis": {
+    "pt": "wikipedia-raw/pt/hemitriccus-striaticollis.md"
+  },
+  "Hemitriccus margaritaceiventer": {
+    "pt": "wikipedia-raw/pt/hemitriccus-margaritaceiventer.md"
+  },
+  "Todirostrum cinereum": {
+    "pt": "wikipedia-raw/pt/todirostrum-cinereum.md"
+  },
+  "Tolmomyias sulphurescens": {
+    "pt": "wikipedia-raw/pt/tolmomyias-sulphurescens.md"
+  },
+  "Camptostoma obsoletum": {
+    "pt": "wikipedia-raw/pt/camptostoma-obsoletum.md"
+  },
+  "Pseudocolopteryx acutipennis": {
+    "en": "wikipedia-raw/en/pseudocolopteryx-acutipennis.md"
+  },
+  "Pseudocolopteryx flaviventris": {
+    "en": "wikipedia-raw/en/pseudocolopteryx-flaviventris.md"
+  },
+  "Elaenia parvirostris": {
+    "pt": "wikipedia-raw/pt/elaenia-parvirostris.md"
+  },
+  "Inezia inornata": {
+    "pt": "wikipedia-raw/pt/inezia-inornata.md"
+  },
+  "Myiophobus fasciatus": {
+    "pt": "wikipedia-raw/pt/myiophobus-fasciatus.md"
+  },
+  "Pyrocephalus rubinus": {
+    "pt": "wikipedia-raw/pt/pyrocephalus-rubinus.md"
+  },
+  "Sirystes sibilator": {
+    "en": "wikipedia-raw/en/sirystes-sibilator.md"
+  },
+  "Myiarchus ferox": {
+    "pt": "wikipedia-raw/pt/myiarchus-ferox.md"
+  },
+  "Myiarchus tyrannulus": {
+    "en": "wikipedia-raw/en/myiarchus-tyrannulus.md"
+  },
+  "Machetornis rixosa": {
+    "pt": "wikipedia-raw/pt/machetornis-rixosa.md"
+  },
+  "Pitangus sulphuratus": {
+    "pt": "wikipedia-raw/pt/pitangus-sulphuratus.md"
+  },
+  "Megarynchus pitangua": {
+    "pt": "wikipedia-raw/pt/megarynchus-pitangua.md"
+  },
+  "Myiodynastes maculatus": {
+    "pt": "wikipedia-raw/pt/myiodynastes-maculatus.md"
+  },
+  "Tyrannus albogularis": {
+    "en": "wikipedia-raw/en/tyrannus-albogularis.md"
+  },
+  "Tyrannus melancholicus": {
+    "pt": "wikipedia-raw/pt/tyrannus-melancholicus.md"
+  },
+  "Myiozetetes cayanensis": {
+    "pt": "wikipedia-raw/pt/myiozetetes-cayanensis.md"
+  },
+  "Arundinicola leucocephala": {
+    "pt": "wikipedia-raw/pt/arundinicola-leucocephala.md"
+  },
+  "Fluvicola albiventer": {
+    "pt": "wikipedia-raw/pt/fluvicola-albiventer.md"
+  },
+  "Donacobius atricapillus": {
+    "pt": "wikipedia-raw/pt/donacobius-atricapillus.md"
+  },
+  "Tachycineta albiventris": {
+    "pt": "wikipedia-raw/pt/tachycineta-albiventris.md"
+  },
+  "Stelgidopteryx ruficollis": {
+    "pt": "wikipedia-raw/pt/stelgidopteryx-ruficollis.md"
+  },
+  "Polioptila dumicola": {
+    "en": "wikipedia-raw/en/polioptila-dumicola.md"
+  },
+  "Campylorhynchus turdinus": {
+    "pt": "wikipedia-raw/pt/campylorhynchus-turdinus.md"
+  },
+  "Cantorchilus leucotis": {
+    "pt": "wikipedia-raw/pt/cantorchilus-leucotis.md"
+  },
+  "Cyclarhis gujanensis": {
+    "pt": "wikipedia-raw/pt/cyclarhis-gujanensis.md"
+  },
+  "Cyanocorax cyanomelas": {
+    "pt": "wikipedia-raw/pt/cyanocorax-cyanomelas.md"
+  },
+  "Turdus rufiventris": {
+    "pt": "wikipedia-raw/pt/turdus-rufiventris.md"
+  },
+  "Arremon polionotus": {
+    "pt": "wikipedia-raw/pt/arremon-polionotus.md"
+  },
+  "Psarocolius decumanus": {
+    "pt": "wikipedia-raw/pt/psarocolius-decumanus.md"
+  },
+  "Procacicus solitarius": {
+    "pt": "wikipedia-raw/pt/procacicus-solitarius.md"
+  },
+  "Cacicus cela": {
+    "pt": "wikipedia-raw/pt/cacicus-cela.md"
+  },
+  "Icterus pyrrhopterus": {
+    "pt": "wikipedia-raw/pt/icterus-pyrrhopterus.md"
+  },
+  "Icterus croconotus": {
+    "pt": "wikipedia-raw/pt/icterus-croconotus.md",
+    "en": "wikipedia-raw/en/icterus-croconotus.md"
+  },
+  "Molothrus rufoaxillaris": {
+    "pt": "wikipedia-raw/pt/molothrus-rufoaxillaris.md"
+  },
+  "Molothrus oryzivorus": {
+    "pt": "wikipedia-raw/pt/molothrus-oryzivorus.md"
+  },
+  "Agelaioides badius": {
+    "pt": "wikipedia-raw/pt/agelaioides-badius.md"
+  },
+  "Agelasticus cyanopus": {
+    "pt": "wikipedia-raw/pt/agelasticus-cyanopus.md"
+  },
+  "Geothlypis aequinoctialis": {
+    "pt": "wikipedia-raw/pt/geothlypis-aequinoctialis.md"
+  },
+  "Myiothlypis flaveola": {
+    "pt": "wikipedia-raw/pt/myiothlypis-flaveola.md"
+  },
+  "Nemosia pileata": {
+    "pt": "wikipedia-raw/pt/nemosia-pileata.md"
+  },
+  "Eucometis penicillata": {
+    "pt": "wikipedia-raw/pt/eucometis-penicillata.md"
+  },
+  "Paroaria capitata": {
+    "pt": "wikipedia-raw/pt/paroaria-capitata.md",
+    "en": "wikipedia-raw/en/paroaria-capitata.md"
+  },
+  "Ramphocelus carbo": {
+    "pt": "wikipedia-raw/pt/ramphocelus-carbo.md"
+  },
+  "Coryphospingus cucullatus": {
+    "pt": "wikipedia-raw/pt/coryphospingus-cucullatus.md"
+  },
+  "Hemithraupis guira": {
+    "pt": "wikipedia-raw/pt/hemithraupis-guira.md"
+  },
+  "Conirostrum speciosum": {
+    "pt": "wikipedia-raw/pt/conirostrum-speciosum.md"
+  },
+  "Thraupis sayaca": {
+    "pt": "wikipedia-raw/pt/thraupis-sayaca.md"
+  },
+  "Sporophila collaris": {
+    "pt": "wikipedia-raw/pt/sporophila-collaris.md"
+  },
+  "Sporophila angolensis": {
+    "pt": "wikipedia-raw/pt/sporophila-angolensis.md"
+  },
+  "Sporophila caerulescens": {
+    "pt": "wikipedia-raw/pt/sporophila-caerulescens.md"
+  },
+  "Sicalis flaveola": {
+    "pt": "wikipedia-raw/pt/sicalis-flaveola.md"
+  },
+  "Saltator coerulescens": {
+    "en": "wikipedia-raw/en/saltator-coerulescens.md"
+  }
+}

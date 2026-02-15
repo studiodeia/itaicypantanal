@@ -37,6 +37,9 @@ type SeedBird = {
   src?: string;
   author?: string;
   date?: string;
+  taxonomicOrder?: string;
+  family?: string;
+  commonNameEN?: string;
 };
 
 type SeedBirdDetail = SeedBird & {
@@ -259,6 +262,9 @@ async function importBirdwatching(
       src: bird.src ?? "",
       author: bird.author ?? "",
       date: bird.date ?? "",
+      taxonomicOrder: bird.taxonomicOrder ?? "",
+      family: bird.family ?? "",
+      commonNameEN: bird.commonNameEN ?? "",
       heroImage: detail?.heroImage ?? "",
       conservationStatus: detail?.conservationStatus ?? "",
       size: detail?.size ?? "",

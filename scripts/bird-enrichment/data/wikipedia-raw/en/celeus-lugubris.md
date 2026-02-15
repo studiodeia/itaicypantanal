@@ -1,0 +1,46 @@
+The pale-crested woodpecker (Celeus lugubris) a species of bird in subfamily Picinae of the woodpecker family Picidae. It is found in Argentina, Bolivia, Brazil, and Paraguay.
+
+
+== Taxonomy and systematics ==
+The International Ornithological Committee (IOC) has assigned two subspecies to the pale-crested woodpecker, the nominate C. l. lugubris (Malherbe, 1851) and C. l. kerri (Hargitt, 1891). The Clements taxonomy and BirdLife International's Handbook of the Birds of the World add a third, C. l. olrogi (Fraga & Dickinson, 2008), by splitting lugubris. 
+Some authors have treated C. l. kerri as a separate species and others have treated the pale-crested and the blond-crested woodpecker (C. flavescens) as conspecific.
+This article follows the IOC two-subspecies model.
+
+
+== Description ==
+The pale-crested woodpecker is about 23 to 24 cm (9.1 to 9.4 in) long. The nominate subspecies C. l. lugubris weighs 115 to 130 g (4.1 to 4.6 oz) and C. l. kerri weighs 112 to 157 g (4.0 to 5.5 oz). Males of both subspecies have a wide bright red malar area and cheek (and sometimes around the eye); females are barred or scaly brown there instead. In the nominate subspecies, adults of both sexes have a pale blond to buffish head including the long pointed crest, chin, and throat. They have deep rufous-black upperparts with a blond to cream-buff lower back, rump, and uppertail coverts. Their back has narrow cinnamon to pale cinnamon-buff bars; their rump sometimes has a cinnamon tinge, and the longest uppertail coverts are rufous with black bars near the end. Their flight feathers are blackish brown with rufous bars at their base. Their tail feathers are black with some rufous and black spots on the outermost pair. Their lower neck and underparts are dark sooty rufous with a few brighter feather edges. Their rear flanks and thighs are creamy and the latter have variable dark bars. The adult's bill is grayish to horn-colored, their iris dark red to red-brown, and their legs gray. Juveniles are similar to adults but have blackish on the head and irregular barring on their upperparts. Subspecies C. l. kerri is almost identical to the nominate but is slightly larger and darker.
+
+
+== Distribution and habitat ==
+The nominate subspecies of the pale-crested woodpecker is found in central and eastern Bolivia and the western part of Brazil's Mato Grosso state. Subspecies C. l. kerri is found in most of Paraguay, in southern Mato Grosso and the state of Mato Grosso do Sul, and in northeastern Argentina. The species inhabits the somewhat open landscapes of semi-deciduous forest, cerrado woodland, and dry Chaco woodlands; it often is found with palms.
+
+
+== Behavior ==
+
+
+=== Movement ===
+The pale-crested woodpecker is a year-round resident throughout its range.
+
+
+=== Feeding ===
+The pale-crested woodpecker's main food is ants; adults, larvae, and pupae are taken. It generally forages at the forest's middle level, and captures its prey by probing, gleaning, and pecking open dead wood and ant tunnels.
+
+
+=== Breeding ===
+The pale-crested woodpecker's breeding season is mostly from September to November but perhaps somewhat later in the south. It excavates a nest cavity in a tree or arboreal ant or termite nest, typically 4 to 10 m (13 to 33 ft) above the ground. Nothing else is known about its breeding biology.
+
+
+=== Vocal and non-vocal sounds ===
+What is thought to be the pale-crested woodpecker's song is "a very high, slackening, fluted 'twee-twee-tee-tee-tee'." It drums, but weakly.
+
+
+== Status ==
+The IUCN has assessed the pale-crested woodpecker as being of Least Concern. It has a large range but its population size is not known and is believed to be decreasing. No immediate threats have been identified. It is considered "fairly common throughout much of range" and it occurs in several protected areas. However, "research [is] required to ascertain more about its ecology and breeding behaviour."
+
+
+== References ==
+
+
+== External links ==
+Pale-crested woodpecker photo gallery VIREO
+Photo-High Res

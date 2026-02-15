@@ -1,0 +1,2493 @@
+[
+  {
+    "scientificName": "Crypturellus undulatus",
+    "commonNamePT": "jaó",
+    "match": {
+      "usageKey": 2477560,
+      "scientificName": "Crypturellus undulatus (Temminck, 1815)",
+      "canonicalName": "Crypturellus undulatus",
+      "order": "Tinamiformes",
+      "family": "Tinamidae",
+      "genus": "Crypturellus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Crypturellus parvirostris",
+    "commonNamePT": "inhambu-chororó",
+    "match": {
+      "usageKey": 2477558,
+      "scientificName": "Crypturellus parvirostris (Wagler, 1827)",
+      "canonicalName": "Crypturellus parvirostris",
+      "order": "Tinamiformes",
+      "family": "Tinamidae",
+      "genus": "Crypturellus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Chauna torquata",
+    "commonNamePT": "tachã",
+    "match": {
+      "usageKey": 5959222,
+      "scientificName": "Chauna torquata (Oken, 1816)",
+      "canonicalName": "Chauna torquata",
+      "order": "Anseriformes",
+      "family": "Anhimidae",
+      "genus": "Chauna",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Dendrocygna autumnalis",
+    "commonNamePT": "marreca-cabocla",
+    "match": {
+      "usageKey": 2498393,
+      "scientificName": "Dendrocygna autumnalis (Linnaeus, 1758)",
+      "canonicalName": "Dendrocygna autumnalis",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Dendrocygna",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cairina moschata",
+    "commonNamePT": "pato-do-mato",
+    "match": {
+      "usageKey": 9751099,
+      "scientificName": "Cairina moschata (Linnaeus, 1758)",
+      "canonicalName": "Cairina moschata",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Cairina",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ortalis canicollis",
+    "commonNamePT": "aracuã-do-pantanal",
+    "match": {
+      "usageKey": 5229443,
+      "scientificName": "Ortalis canicollis (Wagler, 1830)",
+      "canonicalName": "Ortalis canicollis",
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "genus": "Ortalis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pipile cujubi",
+    "commonNamePT": "cujubi",
+    "match": {
+      "usageKey": 2482294,
+      "scientificName": "Pipile cujubi (Pelzeln, 1858)",
+      "canonicalName": "Pipile cujubi",
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "genus": "Pipile",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Penelope ochrogaster",
+    "commonNamePT": "jacu-de-barriga-castanha",
+    "match": {
+      "usageKey": 2482223,
+      "scientificName": "Penelope ochrogaster Pelzeln, 1870",
+      "canonicalName": "Penelope ochrogaster",
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "genus": "Penelope",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Crax fasciolata",
+    "commonNamePT": "mutum-de-penacho",
+    "match": {
+      "usageKey": 2482174,
+      "scientificName": "Crax fasciolata Spix, 1825",
+      "canonicalName": "Crax fasciolata",
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "genus": "Crax",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Patagioenas picazuro",
+    "commonNamePT": "pomba-asa-branca",
+    "match": {
+      "usageKey": 2495287,
+      "scientificName": "Patagioenas picazuro (Temminck, 1813)",
+      "canonicalName": "Patagioenas picazuro",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Patagioenas",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Patagioenas cayennensis",
+    "commonNamePT": "pomba-galega",
+    "match": {
+      "usageKey": 2495295,
+      "scientificName": "Patagioenas cayennensis (Bonnaterre, 1792)",
+      "canonicalName": "Patagioenas cayennensis",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Patagioenas",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Columbina squammata",
+    "commonNamePT": "fogo-apagou",
+    "match": {
+      "usageKey": 2495888,
+      "scientificName": "Columbina squammata (R.Lesson, 1831)",
+      "canonicalName": "Columbina squammata",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Columbina",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Columbina talpacoti",
+    "commonNamePT": "rolinha-roxa",
+    "match": {
+      "usageKey": 2495858,
+      "scientificName": "Columbina talpacoti (Temminck, 1810)",
+      "canonicalName": "Columbina talpacoti",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Columbina",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Leptotila verreauxi",
+    "commonNamePT": "juriti-pupu",
+    "match": {
+      "usageKey": 2496060,
+      "scientificName": "Leptotila verreauxi Bonaparte, 1855",
+      "canonicalName": "Leptotila verreauxi",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Leptotila",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Zenaida auriculata",
+    "commonNamePT": "avoante",
+    "match": {
+      "usageKey": 2495358,
+      "scientificName": "Zenaida auriculata (Des Murs, 1847)",
+      "canonicalName": "Zenaida auriculata",
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Zenaida",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Crotophaga major",
+    "commonNamePT": "anu-coroca",
+    "match": {
+      "usageKey": 2496210,
+      "scientificName": "Crotophaga major Gmelin, 1788",
+      "canonicalName": "Crotophaga major",
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "genus": "Crotophaga",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Crotophaga ani",
+    "commonNamePT": "anu-preto",
+    "match": {
+      "usageKey": 2496209,
+      "scientificName": "Crotophaga ani Linnaeus, 1758",
+      "canonicalName": "Crotophaga ani",
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "genus": "Crotophaga",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tapera naevia",
+    "commonNamePT": "saci",
+    "match": {
+      "usageKey": 5231932,
+      "scientificName": "Tapera naevia (Linnaeus, 1766)",
+      "canonicalName": "Tapera naevia",
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "genus": "Tapera",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Piaya cayana",
+    "commonNamePT": "alma-de-gato",
+    "match": {
+      "usageKey": 2496432,
+      "scientificName": "Piaya cayana (Linnaeus, 1766)",
+      "canonicalName": "Piaya cayana",
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "genus": "Piaya",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Coccyzus melacoryphus",
+    "commonNamePT": "papa-lagarta-acanelado",
+    "match": {
+      "usageKey": 2496297,
+      "scientificName": "Coccyzus melacoryphus Vieillot, 1817",
+      "canonicalName": "Coccyzus melacoryphus",
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "genus": "Coccyzus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Nyctiprogne leucopyga",
+    "commonNamePT": "bacurau-de-cauda-barrada",
+    "match": {
+      "usageKey": 2496817,
+      "scientificName": "Nyctiprogne leucopyga (von Spix, 1825)",
+      "canonicalName": "Nyctiprogne leucopyga",
+      "order": "Caprimulgiformes",
+      "family": "Caprimulgidae",
+      "genus": "Nyctiprogne",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Podager nacunda",
+    "commonNamePT": "corucão",
+    "match": {
+      "usageKey": 5232074,
+      "scientificName": "Podager nacunda (Vieillot, 1817)",
+      "canonicalName": "Podager nacunda",
+      "order": "Caprimulgiformes",
+      "family": "Caprimulgidae",
+      "genus": "Chordeiles",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Nyctibius griseus",
+    "commonNamePT": "urutau",
+    "match": {
+      "usageKey": 2496811,
+      "scientificName": "Nyctibius griseus (J.F.Gmelin, 1789)",
+      "canonicalName": "Nyctibius griseus",
+      "order": "Nyctibiiformes",
+      "family": "Nyctibiidae",
+      "genus": "Nyctibius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Phaethornis pretrei",
+    "commonNamePT": "rabo-branco-acanelado",
+    "match": {
+      "usageKey": 2476599,
+      "scientificName": "Phaethornis pretrei (R.Lesson & Delattre, 1839)",
+      "canonicalName": "Phaethornis pretrei",
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "genus": "Phaethornis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Phaethornis nattereri",
+    "commonNamePT": "rabo-branco-de-sobre-amarelo",
+    "match": {
+      "usageKey": 2476635,
+      "scientificName": "Phaethornis nattereri von Berlepsch, 1887",
+      "canonicalName": "Phaethornis nattereri",
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "genus": "Phaethornis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Hylocharis chrysura",
+    "commonNamePT": "beija-flor-dourado",
+    "match": {
+      "usageKey": 5228562,
+      "scientificName": "Hylocharis chrysura (Shaw, 1812)",
+      "canonicalName": "Hylocharis chrysura",
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "genus": "Hylocharis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Chionomesa fimbriata",
+    "commonNamePT": "beija-flor-de-garganta-verde",
+    "match": {
+      "usageKey": 10941997,
+      "scientificName": "Chionomesa fimbriata (J.F.Gmelin, 1788)",
+      "canonicalName": "Chionomesa fimbriata",
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "genus": "Chionomesa",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Mycteria americana",
+    "commonNamePT": "cabeça-seca",
+    "match": {
+      "usageKey": 2481937,
+      "scientificName": "Mycteria americana Linnaeus, 1758",
+      "canonicalName": "Mycteria americana",
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "genus": "Mycteria",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Jabiru mycteria",
+    "commonNamePT": "tuiuiú",
+    "match": {
+      "usageKey": 2481953,
+      "scientificName": "Jabiru mycteria (Lichtenstein, 1819)",
+      "canonicalName": "Jabiru mycteria",
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "genus": "Jabiru",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Anhinga anhinga",
+    "commonNamePT": "biguatinga",
+    "match": {
+      "usageKey": 2482082,
+      "scientificName": "Anhinga anhinga (Linnaeus, 1766)",
+      "canonicalName": "Anhinga anhinga",
+      "order": "Suliformes",
+      "family": "Anhingidae",
+      "genus": "Anhinga",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Nannopterum brasilianus",
+    "commonNamePT": "biguá",
+    "match": {
+      "usageKey": 9585234,
+      "scientificName": "Nannopterum brasilianum (J.F.Gmelin, 1789)",
+      "canonicalName": "Nannopterum brasilianum",
+      "order": "Suliformes",
+      "family": "Phalacrocoracidae",
+      "genus": "Phalacrocorax",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Nycticorax nycticorax",
+    "commonNamePT": "socó-dorminhoco",
+    "match": {
+      "usageKey": 2480863,
+      "scientificName": "Nycticorax nycticorax (Linnaeus, 1758)",
+      "canonicalName": "Nycticorax nycticorax",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Nycticorax",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Butorides striata",
+    "commonNamePT": "socozinho",
+    "match": {
+      "usageKey": 2480824,
+      "scientificName": "Butorides striata (Linnaeus, 1758)",
+      "canonicalName": "Butorides striata",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Butorides",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ardea cocoi",
+    "commonNamePT": "garça-moura",
+    "match": {
+      "usageKey": 2480951,
+      "scientificName": "Ardea cocoi Linnaeus, 1766",
+      "canonicalName": "Ardea cocoi",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Ardea",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ardea alba",
+    "commonNamePT": "garça-branca-grande",
+    "match": {
+      "usageKey": 9752617,
+      "scientificName": "Ardea alba Linnaeus, 1758",
+      "canonicalName": "Ardea alba",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Ardea",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Egretta thula",
+    "commonNamePT": "garça-branca-pequena",
+    "match": {
+      "usageKey": 2480873,
+      "scientificName": "Egretta thula (Molina, 1782)",
+      "canonicalName": "Egretta thula",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Egretta",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Egretta caerulea",
+    "commonNamePT": "garça-azul",
+    "match": {
+      "usageKey": 2480894,
+      "scientificName": "Egretta caerulea (Linnaeus, 1758)",
+      "canonicalName": "Egretta caerulea",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Egretta",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Bubulcus ibis",
+    "commonNamePT": "garça-vaqueira",
+    "match": {
+      "usageKey": 2480830,
+      "scientificName": "Bubulcus ibis (Linnaeus, 1758)",
+      "canonicalName": "Bubulcus ibis",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Bubulcus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Syrigma sibilatrix",
+    "commonNamePT": "maria-faceira",
+    "match": {
+      "usageKey": 2480921,
+      "scientificName": "Syrigma sibilatrix (Temminck, 1824)",
+      "canonicalName": "Syrigma sibilatrix",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Syrigma",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tigrisoma lineatum",
+    "commonNamePT": "socó-boi",
+    "match": {
+      "usageKey": 2480869,
+      "scientificName": "Tigrisoma lineatum (Boddaert, 1783)",
+      "canonicalName": "Tigrisoma lineatum",
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Tigrisoma",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Phimosus infuscatus",
+    "commonNamePT": "tapicuru",
+    "match": {
+      "usageKey": 2480812,
+      "scientificName": "Phimosus infuscatus (Lichtenstein, 1823)",
+      "canonicalName": "Phimosus infuscatus",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Phimosus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Theristicus caudatus",
+    "commonNamePT": "curicaca",
+    "match": {
+      "usageKey": 2480790,
+      "scientificName": "Theristicus caudatus (Boddaert, 1783)",
+      "canonicalName": "Theristicus caudatus",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Theristicus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Theristicus caerulescens",
+    "commonNamePT": "curicaca-real",
+    "match": {
+      "usageKey": 2480787,
+      "scientificName": "Theristicus caerulescens (Vieillot, 1817)",
+      "canonicalName": "Theristicus caerulescens",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Theristicus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Mesembrinibis cayennensis",
+    "commonNamePT": "coró-coró",
+    "match": {
+      "usageKey": 2480808,
+      "scientificName": "Mesembrinibis cayennensis (Gmelin, 1789)",
+      "canonicalName": "Mesembrinibis cayennensis",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Mesembrinibis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Platalea ajaja",
+    "commonNamePT": "colhereiro",
+    "match": {
+      "usageKey": 2480803,
+      "scientificName": "Platalea ajaja Linnaeus, 1758",
+      "canonicalName": "Platalea ajaja",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Platalea",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Eurypyga helias",
+    "commonNamePT": "pavãozinho-do-pará",
+    "match": {
+      "usageKey": 2474332,
+      "scientificName": "Eurypyga helias (Pallas, 1781)",
+      "canonicalName": "Eurypyga helias",
+      "order": "Eurypygiformes",
+      "family": "Eurypygidae",
+      "genus": "Eurypyga",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Aramus guarauna",
+    "commonNamePT": "carão",
+    "match": {
+      "usageKey": 2474337,
+      "scientificName": "Aramus guarauna (Linnaeus, 1766)",
+      "canonicalName": "Aramus guarauna",
+      "order": "Gruiformes",
+      "family": "Aramidae",
+      "genus": "Aramus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Aramides cajaneus",
+    "commonNamePT": "saracura-três-potes",
+    "match": {
+      "usageKey": 2474659,
+      "scientificName": "Aramides cajanea (Statius Muller, 1776)",
+      "canonicalName": "Aramides cajanea",
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "genus": "Aramides",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Rynchops niger",
+    "commonNamePT": "talha-mar",
+    "match": {
+      "usageKey": 2481209,
+      "scientificName": "Rynchops niger Linnaeus, 1758",
+      "canonicalName": "Rynchops niger",
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Rynchops",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Phaetusa simplex",
+    "commonNamePT": "trinta-réis-grande",
+    "match": {
+      "usageKey": 5229213,
+      "scientificName": "Phaetusa simplex (J.F.Gmelin, 1789)",
+      "canonicalName": "Phaetusa simplex",
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Phaetusa",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Vanellus chilensis",
+    "commonNamePT": "quero-quero",
+    "match": {
+      "usageKey": 5229146,
+      "scientificName": "Vanellus chilensis (Molina, 1782)",
+      "canonicalName": "Vanellus chilensis",
+      "order": "Charadriiformes",
+      "family": "Charadriidae",
+      "genus": "Vanellus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Himantopus melanurus",
+    "commonNamePT": "pernilongo-de-costas-brancas",
+    "match": {
+      "usageKey": 5229127,
+      "scientificName": "Himantopus melanurus Vieillot, 1817",
+      "canonicalName": "Himantopus melanurus",
+      "order": "Charadriiformes",
+      "family": "Recurvirostridae",
+      "genus": "Himantopus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Jacana jacana",
+    "commonNamePT": "jaçanã",
+    "match": {
+      "usageKey": 2481846,
+      "scientificName": "Jacana jacana (Linnaeus, 1766)",
+      "canonicalName": "Jacana jacana",
+      "order": "Charadriiformes",
+      "family": "Jacanidae",
+      "genus": "Jacana",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cathartes aura",
+    "commonNamePT": "urubu-de-cabeça-vermelha",
+    "match": {
+      "usageKey": 2481930,
+      "scientificName": "Cathartes aura (Linnaeus, 1758)",
+      "canonicalName": "Cathartes aura",
+      "order": "Accipitriformes",
+      "family": "Cathartidae",
+      "genus": "Cathartes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cathartes burrovianus",
+    "commonNamePT": "urubu-de-cabeça-amarela",
+    "match": {
+      "usageKey": 2481928,
+      "scientificName": "Cathartes burrovianus Cassin, 1845",
+      "canonicalName": "Cathartes burrovianus",
+      "order": "Accipitriformes",
+      "family": "Cathartidae",
+      "genus": "Cathartes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Coragyps atratus",
+    "commonNamePT": "urubu-preto",
+    "match": {
+      "usageKey": 2481942,
+      "scientificName": "Coragyps atratus (Bechstein, 1793)",
+      "canonicalName": "Coragyps atratus",
+      "order": "Accipitriformes",
+      "family": "Cathartidae",
+      "genus": "Coragyps",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pandion haliaetus",
+    "commonNamePT": "águia-pescadora",
+    "match": {
+      "usageKey": 2480726,
+      "scientificName": "Pandion haliaetus (Linnaeus, 1758)",
+      "canonicalName": "Pandion haliaetus",
+      "order": "Accipitriformes",
+      "family": "Pandionidae",
+      "genus": "Pandion",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Rosthramus sociabilis",
+    "commonNamePT": "gavião-caramujeiro",
+    "match": {
+      "usageKey": 2480415,
+      "scientificName": "Rostrhamus sociabilis (Vieillot, 1817)",
+      "canonicalName": "Rostrhamus sociabilis",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Rostrhamus",
+      "status": "ACCEPTED",
+      "confidence": 95,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Leptodon cayanensis",
+    "commonNamePT": "gavião-gato",
+    "match": {
+      "usageKey": 5229197,
+      "scientificName": "Leptodon cayanensis (Latham, 1790)",
+      "canonicalName": "Leptodon cayanensis",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Leptodon",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Rupornis magnirostris",
+    "commonNamePT": "gavião-carijó",
+    "match": {
+      "usageKey": 5844398,
+      "scientificName": "Rupornis magnirostris (Gmelin, 1788)",
+      "canonicalName": "Rupornis magnirostris",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Rupornis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Urubitinga urubitinga",
+    "commonNamePT": "gavião-preto",
+    "match": {
+      "usageKey": 4850187,
+      "scientificName": "Urubitinga Gray, 1840",
+      "canonicalName": "Urubitinga",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Urubitinga",
+      "status": "DOUBTFUL",
+      "confidence": 97,
+      "matchType": "HIGHERRANK",
+      "note": "2 synonym homonyms"
+    }
+  },
+  {
+    "scientificName": "Busarellus nigricollis",
+    "commonNamePT": "gavião-belo",
+    "match": {
+      "usageKey": 2480692,
+      "scientificName": "Busarellus nigricollis (Latham, 1790)",
+      "canonicalName": "Busarellus nigricollis",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Busarellus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Heterospizias meridionalis",
+    "commonNamePT": "gavião-caboclo",
+    "match": {
+      "usageKey": 5788520,
+      "scientificName": "Heterospizias meridionalis (Latham, 1790)",
+      "canonicalName": "Heterospizias meridionalis",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Buteogallus",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tyto furcata",
+    "commonNamePT": "suindara",
+    "match": {
+      "usageKey": 9568884,
+      "scientificName": "Tyto furcata (Temminck, 1827)",
+      "canonicalName": "Tyto furcata",
+      "order": "Strigiformes",
+      "family": "Tytonidae",
+      "genus": "Tyto",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Glaucidium brasilianum",
+    "commonNamePT": "caburé",
+    "match": {
+      "usageKey": 5232118,
+      "scientificName": "Glaucidium brasilianum (J.F.Gmelin, 1788)",
+      "canonicalName": "Glaucidium brasilianum",
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "genus": "Glaucidium",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Brotogeris chiriri",
+    "commonNamePT": "periquito-de-encontro-amarelo",
+    "match": {
+      "usageKey": 2479583,
+      "scientificName": "Brotogeris chiriri (Vieillot, 1818)",
+      "canonicalName": "Brotogeris chiriri",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Brotogeris",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiopsitta monachus",
+    "commonNamePT": "caturrita",
+    "match": {
+      "usageKey": 2479407,
+      "scientificName": "Myiopsitta monachus (Boddaert, 1783)",
+      "canonicalName": "Myiopsitta monachus",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Myiopsitta",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Eupsittula aurea",
+    "commonNamePT": "periquito-rei",
+    "match": {
+      "usageKey": 8331425,
+      "scientificName": "Eupsittula aurea (J.F.Gmelin, 1788)",
+      "canonicalName": "Eupsittula aurea",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Aratinga",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Amazona amazonica",
+    "commonNamePT": "curica",
+    "match": {
+      "usageKey": 2479666,
+      "scientificName": "Amazona amazonica (Linnaeus, 1766)",
+      "canonicalName": "Amazona amazonica",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Amazona",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Amazona aestiva",
+    "commonNamePT": "papagaio-verdadeiro",
+    "match": {
+      "usageKey": 2479662,
+      "scientificName": "Amazona aestiva (Linnaeus, 1758)",
+      "canonicalName": "Amazona aestiva",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Amazona",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Orthopsittaca manilatus",
+    "commonNamePT": "maracanã-do-buriti",
+    "match": {
+      "usageKey": 2479446,
+      "scientificName": "Orthopsittaca manilata (Boddaert, 1783)",
+      "canonicalName": "Orthopsittaca manilata",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Orthopsittaca",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Primolius auricollis",
+    "commonNamePT": "maracanã-de-colar",
+    "match": {
+      "usageKey": 2479268,
+      "scientificName": "Primolius auricollis (Cassin, 1853)",
+      "canonicalName": "Primolius auricollis",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Primolius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ara ararauna",
+    "commonNamePT": "arara-canindé",
+    "match": {
+      "usageKey": 5959231,
+      "scientificName": "Ara ararauna (Linnaeus, 1758)",
+      "canonicalName": "Ara ararauna",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Ara",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Diopsittaca nobilis",
+    "commonNamePT": "maracanã-pequena",
+    "match": {
+      "usageKey": 2479365,
+      "scientificName": "Diopsittaca nobilis (Linnaeus, 1758)",
+      "canonicalName": "Diopsittaca nobilis",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Diopsittaca",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Psittacara leucophthalmus",
+    "commonNamePT": "periquitão",
+    "match": {
+      "usageKey": 8317396,
+      "scientificName": "Psittacara leucophthalmus (Müller & Pls, 1776)",
+      "canonicalName": "Psittacara leucophthalmus",
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "genus": "Aratinga",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Caracara plancus",
+    "commonNamePT": "carcará",
+    "match": {
+      "usageKey": 2480989,
+      "scientificName": "Caracara plancus (J.F.Miller, 1777)",
+      "canonicalName": "Caracara plancus",
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "genus": "Caracara",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Falco rufigularis",
+    "commonNamePT": "cauré",
+    "match": {
+      "usageKey": 2481033,
+      "scientificName": "Falco rufigularis Daudin, 1800",
+      "canonicalName": "Falco rufigularis",
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "genus": "Falco",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Herpetotheres cachinnans",
+    "commonNamePT": "acauã",
+    "match": {
+      "usageKey": 2481071,
+      "scientificName": "Herpetotheres cachinnans (Linnaeus, 1758)",
+      "canonicalName": "Herpetotheres cachinnans",
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "genus": "Herpetotheres",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Trogon curucui",
+    "commonNamePT": "surucuá-de-barriga-vermelha",
+    "match": {
+      "usageKey": 2496659,
+      "scientificName": "Trogon curucui Linnaeus, 1766",
+      "canonicalName": "Trogon curucui",
+      "order": "Trogoniformes",
+      "family": "Trogonidae",
+      "genus": "Trogon",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Monasa nigrifrons",
+    "commonNamePT": "chora-chuva-preto",
+    "match": {
+      "usageKey": 2475187,
+      "scientificName": "Monasa nigrifrons (von Spix, 1824)",
+      "canonicalName": "Monasa nigrifrons",
+      "order": "Piciformes",
+      "family": "Bucconidae",
+      "genus": "Monasa",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Nystalus maculatus",
+    "commonNamePT": "rapazinho-dos-velhos",
+    "match": {
+      "usageKey": 2475195,
+      "scientificName": "Nystalus maculatus (J.F.Gmelin, 1788)",
+      "canonicalName": "Nystalus maculatus",
+      "order": "Piciformes",
+      "family": "Bucconidae",
+      "genus": "Nystalus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Galbula ruficauda",
+    "commonNamePT": "ariramba-de-cauda-ruiva",
+    "match": {
+      "usageKey": 5228236,
+      "scientificName": "Galbula ruficauda Cuvier, 1816",
+      "canonicalName": "Galbula ruficauda",
+      "order": "Piciformes",
+      "family": "Galbulidae",
+      "genus": "Galbula",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Megaceryle torquata",
+    "commonNamePT": "martim-pescador-grande",
+    "match": {
+      "usageKey": 2475466,
+      "scientificName": "Megaceryle torquata (Linnaeus, 1766)",
+      "canonicalName": "Megaceryle torquata",
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "genus": "Megaceryle",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Chloroceryle amazona",
+    "commonNamePT": "martim-pescador-verde",
+    "match": {
+      "usageKey": 2475482,
+      "scientificName": "Chloroceryle amazona (Latham, 1790)",
+      "canonicalName": "Chloroceryle amazona",
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "genus": "Chloroceryle",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Chloroceryle americana",
+    "commonNamePT": "martim-pescador-pequeno",
+    "match": {
+      "usageKey": 2475486,
+      "scientificName": "Chloroceryle americana (J.F.Gmelin, 1788)",
+      "canonicalName": "Chloroceryle americana",
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "genus": "Chloroceryle",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ramphastos toco",
+    "commonNamePT": "tucanuçu",
+    "match": {
+      "usageKey": 2478765,
+      "scientificName": "Ramphastos toco P.L.S.Müller, 1776",
+      "canonicalName": "Ramphastos toco",
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "genus": "Ramphastos",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pteroglossus castanotis",
+    "commonNamePT": "araçari-castanho",
+    "match": {
+      "usageKey": 2478822,
+      "scientificName": "Pteroglossus castanotis Gould, 1834",
+      "canonicalName": "Pteroglossus castanotis",
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "genus": "Pteroglossus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Melanerpes candidus",
+    "commonNamePT": "pica-pau-branco",
+    "match": {
+      "usageKey": 2478144,
+      "scientificName": "Melanerpes candidus (Otto, 1796)",
+      "canonicalName": "Melanerpes candidus",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Melanerpes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Veniliornis passerinus",
+    "commonNamePT": "pica-pau-pequeno",
+    "match": {
+      "usageKey": 2478345,
+      "scientificName": "Veniliornis passerinus (Linnaeus, 1766)",
+      "canonicalName": "Veniliornis passerinus",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Veniliornis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Campephilus melanoleucus",
+    "commonNamePT": "pica-pau-de-topete-vermelho",
+    "match": {
+      "usageKey": 2478564,
+      "scientificName": "Campephilus melanoleucos (J.F.Gmelin, 1788)",
+      "canonicalName": "Campephilus melanoleucos",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Campephilus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Celeus lugubris",
+    "commonNamePT": "pica-pau-louro",
+    "match": {
+      "usageKey": 5228917,
+      "scientificName": "Celeus lugubris (Malherbe, 1851)",
+      "canonicalName": "Celeus lugubris",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Celeus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Piculus chrysochloros",
+    "commonNamePT": "pica-pau-dourado-escuro",
+    "match": {
+      "usageKey": 5228906,
+      "scientificName": "Piculus chrysochloros (Vieillot, 1818)",
+      "canonicalName": "Piculus chrysochloros",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Piculus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Colaptes melanochloros",
+    "commonNamePT": "pica-pau-verde-barrado",
+    "match": {
+      "usageKey": 2478272,
+      "scientificName": "Colaptes melanochloros (J.F.Gmelin, 1788)",
+      "canonicalName": "Colaptes melanochloros",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Colaptes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Colaptes campestris",
+    "commonNamePT": "pica-pau-do-campo",
+    "match": {
+      "usageKey": 2478233,
+      "scientificName": "Colaptes campestris (Vieillot, 1818)",
+      "canonicalName": "Colaptes campestris",
+      "order": "Piciformes",
+      "family": "Picidae",
+      "genus": "Colaptes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Taraba major",
+    "commonNamePT": "choró-boi",
+    "match": {
+      "usageKey": 2490224,
+      "scientificName": "Taraba major (Vieillot, 1816)",
+      "canonicalName": "Taraba major",
+      "order": "Passeriformes",
+      "family": "Thamnophilidae",
+      "genus": "Taraba",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Thamnophilus doliatus",
+    "commonNamePT": "choca-barrada",
+    "match": {
+      "usageKey": 5959208,
+      "scientificName": "Thamnophilus doliatus (Linnaeus, 1764)",
+      "canonicalName": "Thamnophilus doliatus",
+      "order": "Passeriformes",
+      "family": "Thamnophilidae",
+      "genus": "Thamnophilus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Thamnophilus pelzelni",
+    "commonNamePT": "choca-do-planalto",
+    "match": {
+      "usageKey": 6093318,
+      "scientificName": "Thamnophilus pelzelni Hellmayr, 1924",
+      "canonicalName": "Thamnophilus pelzelni",
+      "order": "Passeriformes",
+      "family": "Thamnophilidae",
+      "genus": "Thamnophilus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cercomacra melanaria",
+    "commonNamePT": "chororó-do-pantanal",
+    "match": {
+      "usageKey": 2490139,
+      "scientificName": "Cercomacra melanaria (Ménétriés, 1835)",
+      "canonicalName": "Cercomacra melanaria",
+      "order": "Passeriformes",
+      "family": "Thamnophilidae",
+      "genus": "Cercomacra",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pyriglena maura",
+    "commonNamePT": "papa-taoca-do-pantanal",
+    "match": {
+      "usageKey": 11033593,
+      "scientificName": "Pyriglena maura (Ménétriés, 1835)",
+      "canonicalName": "Pyriglena maura",
+      "order": "Passeriformes",
+      "family": "Thamnophilidae",
+      "genus": "Pyriglena",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Xiphocolaptes major",
+    "commonNamePT": "arapaçu-do-campo",
+    "match": {
+      "usageKey": 2485489,
+      "scientificName": "Xiphocolaptes major (Vieillot, 1818)",
+      "canonicalName": "Xiphocolaptes major",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Xiphocolaptes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sittasomus griseicapillus",
+    "commonNamePT": "arapaçu-verde",
+    "match": {
+      "usageKey": 2485628,
+      "scientificName": "Sittasomus griseicapillus (Vieillot, 1818)",
+      "canonicalName": "Sittasomus griseicapillus",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Sittasomus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Furnarius leucopus",
+    "commonNamePT": "casaca-de-couro-amarelo",
+    "match": {
+      "usageKey": 9309489,
+      "scientificName": "Furnarius leucopus Swainson, 1838",
+      "canonicalName": "Furnarius leucopus",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Furnarius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Furnarius rufus",
+    "commonNamePT": "joão-de-barro",
+    "match": {
+      "usageKey": 2485821,
+      "scientificName": "Furnarius rufus (Gmelin, 1788)",
+      "canonicalName": "Furnarius rufus",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Furnarius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pseudoseisura unirufa",
+    "commonNamePT": "casaca-de-couro-de-crista-cinza",
+    "match": {
+      "usageKey": 2485856,
+      "scientificName": "Pseudoseisura unirufa (Orbigny & Lafresnaye, 1838)",
+      "canonicalName": "Pseudoseisura unirufa",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Pseudoseisura",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Certhiaxis cinnamomeus",
+    "commonNamePT": "curutié",
+    "match": {
+      "usageKey": 2486060,
+      "scientificName": "Certhiaxis cinnamomeus (Gmelin, 1788)",
+      "canonicalName": "Certhiaxis cinnamomeus",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Certhiaxis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Phacellodomus ruber",
+    "commonNamePT": "graveteiro",
+    "match": {
+      "usageKey": 2485136,
+      "scientificName": "Phacellodomus ruber (Vieillot, 1817)",
+      "canonicalName": "Phacellodomus ruber",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Phacellodomus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Synallaxis albilora",
+    "commonNamePT": "joão-do-pantanal",
+    "match": {
+      "usageKey": 2484982,
+      "scientificName": "Synallaxis albilora Pelzeln, 1856",
+      "canonicalName": "Synallaxis albilora",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Synallaxis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Synallaxis frontalis",
+    "commonNamePT": "petrim",
+    "match": {
+      "usageKey": 2484977,
+      "scientificName": "Synallaxis frontalis Pelzeln, 1859",
+      "canonicalName": "Synallaxis frontalis",
+      "order": "Passeriformes",
+      "family": "Furnariidae",
+      "genus": "Synallaxis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Xenopsaris albinucha",
+    "commonNamePT": "tijerila",
+    "match": {
+      "usageKey": 2486330,
+      "scientificName": "Xenopsaris albinucha (Burmeister, 1869)",
+      "canonicalName": "Xenopsaris albinucha",
+      "order": "Passeriformes",
+      "family": "Cotingidae",
+      "genus": "Xenopsaris",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Hemitriccus striaticollis",
+    "commonNamePT": "sebinho-rajado-amarelo",
+    "match": {
+      "usageKey": 2482988,
+      "scientificName": "Hemitriccus striaticollis (Lafresnaye, 1853)",
+      "canonicalName": "Hemitriccus striaticollis",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Hemitriccus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Hemitriccus margaritaceiventer",
+    "commonNamePT": "sebinho-de-olho-de-ouro",
+    "match": {
+      "usageKey": 2482999,
+      "scientificName": "Hemitriccus margaritaceiventer (Orbigny & Lafresnaye, 1837)",
+      "canonicalName": "Hemitriccus margaritaceiventer",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Hemitriccus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Todirostrum cinereum",
+    "commonNamePT": "ferreirinho-relógio",
+    "match": {
+      "usageKey": 2483274,
+      "scientificName": "Todirostrum cinereum (Linnaeus, 1766)",
+      "canonicalName": "Todirostrum cinereum",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Todirostrum",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tolmomyias sulphurescens",
+    "commonNamePT": "bico-chato-de-orelha-preta",
+    "match": {
+      "usageKey": 2482882,
+      "scientificName": "Tolmomyias sulphurescens (Spix, 1825)",
+      "canonicalName": "Tolmomyias sulphurescens",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Tolmomyias",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Camptostoma obsoletum",
+    "commonNamePT": "risadinha",
+    "match": {
+      "usageKey": 2483511,
+      "scientificName": "Camptostoma obsoletum (Temminck, 1824)",
+      "canonicalName": "Camptostoma obsoletum",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Camptostoma",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx acutipennis",
+    "commonNamePT": "tricolino-oliváceo",
+    "match": {
+      "usageKey": 2482649,
+      "scientificName": "Pseudocolopteryx acutipennis (P.L.Sclater & Salvin, 1873)",
+      "canonicalName": "Pseudocolopteryx acutipennis",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Pseudocolopteryx",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx flaviventris",
+    "commonNamePT": "amarelinho-do-junco",
+    "match": {
+      "usageKey": 2482646,
+      "scientificName": "Pseudocolopteryx flaviventris (Orbigny & Lafresnaye, 1837)",
+      "canonicalName": "Pseudocolopteryx flaviventris",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Pseudocolopteryx",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Elaenia parvirostris",
+    "commonNamePT": "tuque-pium",
+    "match": {
+      "usageKey": 5229612,
+      "scientificName": "Elaenia parvirostris Pelzeln, 1868",
+      "canonicalName": "Elaenia parvirostris",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Elaenia",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Inezia inornata",
+    "commonNamePT": "alegrinho-do-chaco",
+    "match": {
+      "usageKey": 5229714,
+      "scientificName": "Inezia inornata (Salvadori, 1897)",
+      "canonicalName": "Inezia inornata",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Inezia",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiophobus fasciatus",
+    "commonNamePT": "filipe",
+    "match": {
+      "usageKey": 5229801,
+      "scientificName": "Myiophobus fasciatus (Statius Muller, 1776)",
+      "canonicalName": "Myiophobus fasciatus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Myiophobus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pyrocephalus rubinus",
+    "commonNamePT": "príncipe",
+    "match": {
+      "usageKey": 2483647,
+      "scientificName": "Pyrocephalus rubinus (Boddaert, 1783)",
+      "canonicalName": "Pyrocephalus rubinus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Pyrocephalus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sirystes sibilator",
+    "commonNamePT": "gritador",
+    "match": {
+      "usageKey": 2483973,
+      "scientificName": "Sirystes sibilator (Vieillot, 1818)",
+      "canonicalName": "Sirystes sibilator",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Sirystes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiarchus ferox",
+    "commonNamePT": "maria-cavaleira",
+    "match": {
+      "usageKey": 2483559,
+      "scientificName": "Myiarchus ferox (Gmelin, 1789)",
+      "canonicalName": "Myiarchus ferox",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Myiarchus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiarchus tyrannulus",
+    "commonNamePT": "maria-cavaleira-de-rabo-enferrujado",
+    "match": {
+      "usageKey": 2483589,
+      "scientificName": "Myiarchus tyrannulus (Statius Muller, 1776)",
+      "canonicalName": "Myiarchus tyrannulus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Myiarchus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Machetornis rixosa",
+    "commonNamePT": "suiriri-cavaleiro",
+    "match": {
+      "usageKey": 2482934,
+      "scientificName": "Machetornis rixosa (Vieillot, 1819)",
+      "canonicalName": "Machetornis rixosa",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Machetornis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Pitangus sulphuratus",
+    "commonNamePT": "bem-te-vi",
+    "match": {
+      "usageKey": 2482755,
+      "scientificName": "Pitangus sulphuratus (Linnaeus, 1766)",
+      "canonicalName": "Pitangus sulphuratus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Pitangus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Megarynchus pitangua",
+    "commonNamePT": "neinei",
+    "match": {
+      "usageKey": 2483410,
+      "scientificName": "Megarynchus pitangua (Linnaeus, 1766)",
+      "canonicalName": "Megarynchus pitangua",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Megarynchus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiodynastes maculatus",
+    "commonNamePT": "bem-te-vi-rajado",
+    "match": {
+      "usageKey": 2483497,
+      "scientificName": "Myiodynastes maculatus (Statius Muller, 1776)",
+      "canonicalName": "Myiodynastes maculatus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Myiodynastes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tyrannus albogularis",
+    "commonNamePT": "suiriri-de-garganta-branca",
+    "match": {
+      "usageKey": 9394888,
+      "scientificName": "Tyrannus albogularis Burmeister, 1856",
+      "canonicalName": "Tyrannus albogularis",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Tyrannus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Tyrannus melancholicus",
+    "commonNamePT": "suiriri",
+    "match": {
+      "usageKey": 5229662,
+      "scientificName": "Tyrannus melancholicus Vieillot, 1819",
+      "canonicalName": "Tyrannus melancholicus",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Tyrannus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiozetetes cayanensis",
+    "commonNamePT": "bentevizinho-de-asa-ferrugínea",
+    "match": {
+      "usageKey": 2482921,
+      "scientificName": "Myiozetetes cayanensis (Linnaeus, 1766)",
+      "canonicalName": "Myiozetetes cayanensis",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Myiozetetes",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Arundinicola leucocephala",
+    "commonNamePT": "freirinha",
+    "match": {
+      "usageKey": 2482671,
+      "scientificName": "Arundinicola leucocephala (Linnaeus, 1764)",
+      "canonicalName": "Arundinicola leucocephala",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Arundinicola",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Fluvicola albiventer",
+    "commonNamePT": "lavadeira-de-cara-branca",
+    "match": {
+      "usageKey": 5229567,
+      "scientificName": "Fluvicola albiventer (Spix, 1825)",
+      "canonicalName": "Fluvicola albiventer",
+      "order": "Passeriformes",
+      "family": "Tyrannidae",
+      "genus": "Fluvicola",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Donacobius atricapillus",
+    "commonNamePT": "japacanim",
+    "match": {
+      "usageKey": 2493895,
+      "scientificName": "Donacobius atricapilla (Linnaeus, 1766)",
+      "canonicalName": "Donacobius atricapilla",
+      "order": "Passeriformes",
+      "family": "Donacobiidae",
+      "genus": "Donacobius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Tachycineta albiventris",
+    "commonNamePT": "andorinha-do-rio",
+    "match": {
+      "usageKey": 5230759,
+      "scientificName": "Tachycineta albiventer (Boddaert, 1783)",
+      "canonicalName": "Tachycineta albiventer",
+      "order": "Passeriformes",
+      "family": "Hirundinidae",
+      "genus": "Tachycineta",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "FUZZY"
+    }
+  },
+  {
+    "scientificName": "Stelgidopteryx ruficollis",
+    "commonNamePT": "andorinha-serradora",
+    "match": {
+      "usageKey": 2489203,
+      "scientificName": "Stelgidopteryx ruficollis (Vieillot, 1817)",
+      "canonicalName": "Stelgidopteryx ruficollis",
+      "order": "Passeriformes",
+      "family": "Hirundinidae",
+      "genus": "Stelgidopteryx",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Polioptila dumicola",
+    "commonNamePT": "balança-rabo-de-máscara",
+    "match": {
+      "usageKey": 2487593,
+      "scientificName": "Polioptila dumicola (Vieillot, 1817)",
+      "canonicalName": "Polioptila dumicola",
+      "order": "Passeriformes",
+      "family": "Polioptilidae",
+      "genus": "Polioptila",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Campylorhynchus turdinus",
+    "commonNamePT": "catatau",
+    "match": {
+      "usageKey": 5231468,
+      "scientificName": "Campylorhynchus turdinus (Wied-Neuwied, 1821)",
+      "canonicalName": "Campylorhynchus turdinus",
+      "order": "Passeriformes",
+      "family": "Troglodytidae",
+      "genus": "Campylorhynchus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cantorchilus leucotis",
+    "commonNamePT": "garrinchão-de-barriga-vermelha",
+    "match": {
+      "usageKey": 7341038,
+      "scientificName": "Cantorchilus leucotis (Lafresnaye, 1845)",
+      "canonicalName": "Cantorchilus leucotis",
+      "order": "Passeriformes",
+      "family": "Troglodytidae",
+      "genus": "Cantorchilus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cyclarhis gujanensis",
+    "commonNamePT": "pitiguari",
+    "match": {
+      "usageKey": 2487404,
+      "scientificName": "Cyclarhis gujanensis (Gmelin, 1789)",
+      "canonicalName": "Cyclarhis gujanensis",
+      "order": "Passeriformes",
+      "family": "Vireonidae",
+      "genus": "Cyclarhis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cyanocorax cyanomelas",
+    "commonNamePT": "gralha-do-pantanal",
+    "match": {
+      "usageKey": 2482572,
+      "scientificName": "Cyanocorax cyanomelas (Vieillot, 1818)",
+      "canonicalName": "Cyanocorax cyanomelas",
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "genus": "Cyanocorax",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Turdus rufiventris",
+    "commonNamePT": "sabiá-laranjeira",
+    "match": {
+      "usageKey": 2490718,
+      "scientificName": "Turdus rufiventris Vieillot, 1818",
+      "canonicalName": "Turdus rufiventris",
+      "order": "Passeriformes",
+      "family": "Turdidae",
+      "genus": "Turdus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Arremon polionotus",
+    "commonNamePT": "tico-tico-de-costas-cinzas",
+    "match": {
+      "usageKey": 7734462,
+      "scientificName": "Arremon polionotus Bonaparte, 1850",
+      "canonicalName": "Arremon polionotus",
+      "order": "Passeriformes",
+      "family": "Passerellidae",
+      "genus": "Arremon",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Psarocolius decumanus",
+    "commonNamePT": "japu",
+    "match": {
+      "usageKey": 2484217,
+      "scientificName": "Psarocolius decumanus (Pallas, 1769)",
+      "canonicalName": "Psarocolius decumanus",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Psarocolius",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Procacicus solitarius",
+    "commonNamePT": "iraúna-de-bico-branco",
+    "match": {
+      "usageKey": 10951190,
+      "scientificName": "Procacicus solitarius",
+      "canonicalName": "Procacicus solitarius",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Cacicus",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Cacicus cela",
+    "commonNamePT": "xexéu",
+    "match": {
+      "usageKey": 5229832,
+      "scientificName": "Cacicus cela (Linnaeus, 1758)",
+      "canonicalName": "Cacicus cela",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Cacicus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Icterus pyrrhopterus",
+    "commonNamePT": "encontro",
+    "match": {
+      "usageKey": 7340265,
+      "scientificName": "Icterus pyrrhopterus (Vieillot, 1819)",
+      "canonicalName": "Icterus pyrrhopterus",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Icterus",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Icterus croconotus",
+    "commonNamePT": "joão-pinto",
+    "match": {
+      "usageKey": 7340254,
+      "scientificName": "Icterus croconotus (Wagler, 1829)",
+      "canonicalName": "Icterus croconotus",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Icterus",
+      "status": "SYNONYM",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Molothrus rufoaxillaris",
+    "commonNamePT": "chupim-azeviche",
+    "match": {
+      "usageKey": 9506351,
+      "scientificName": "Molothrus rufoaxillaris Cassin, 1866",
+      "canonicalName": "Molothrus rufoaxillaris",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Molothrus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Molothrus oryzivorus",
+    "commonNamePT": "iraúna-grande",
+    "match": {
+      "usageKey": 2484386,
+      "scientificName": "Molothrus oryzivorus (Gmelin, 1788)",
+      "canonicalName": "Molothrus oryzivorus",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Molothrus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Agelaioides badius",
+    "commonNamePT": "asa-de-telha",
+    "match": {
+      "usageKey": 2484481,
+      "scientificName": "Agelaioides badius (Vieillot, 1819)",
+      "canonicalName": "Agelaioides badius",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Agelaioides",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Agelasticus cyanopus",
+    "commonNamePT": "carretão-do-oeste",
+    "match": {
+      "usageKey": 2484199,
+      "scientificName": "Agelasticus cyanopus (Vieillot, 1819)",
+      "canonicalName": "Agelasticus cyanopus",
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "genus": "Agelasticus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Geothlypis aequinoctialis",
+    "commonNamePT": "pia-cobra",
+    "match": {
+      "usageKey": 2489649,
+      "scientificName": "Geothlypis aequinoctialis (J.F.Gmelin, 1789)",
+      "canonicalName": "Geothlypis aequinoctialis",
+      "order": "Passeriformes",
+      "family": "Parulidae",
+      "genus": "Geothlypis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Myiothlypis flaveola",
+    "commonNamePT": "canário-do-mato",
+    "match": {
+      "usageKey": 8082419,
+      "scientificName": "Myiothlypis flaveola S.F.Baird, 1865",
+      "canonicalName": "Myiothlypis flaveola",
+      "order": "Passeriformes",
+      "family": "Parulidae",
+      "genus": "Myiothlypis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Nemosia pileata",
+    "commonNamePT": "saíra-de-chapéu-preto",
+    "match": {
+      "usageKey": 5230589,
+      "scientificName": "Nemosia pileata (Boddaert, 1783)",
+      "canonicalName": "Nemosia pileata",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Nemosia",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Eucometis penicillata",
+    "commonNamePT": "pipira-da-taoca",
+    "match": {
+      "usageKey": 2488524,
+      "scientificName": "Eucometis penicillata (Spix, 1825)",
+      "canonicalName": "Eucometis penicillata",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Eucometis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Paroaria capitata",
+    "commonNamePT": "cavalaria",
+    "match": {
+      "usageKey": 2492087,
+      "scientificName": "Paroaria capitata (d'Orbigny & Lafresnaye, 1837)",
+      "canonicalName": "Paroaria capitata",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Paroaria",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Ramphocelus carbo",
+    "commonNamePT": "pipira-vermelha",
+    "match": {
+      "usageKey": 2488442,
+      "scientificName": "Ramphocelus carbo (Pallas, 1764)",
+      "canonicalName": "Ramphocelus carbo",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Ramphocelus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Coryphospingus cucullatus",
+    "commonNamePT": "tico-tico-rei",
+    "match": {
+      "usageKey": 2491984,
+      "scientificName": "Coryphospingus cucullatus (P.L.S.Müller, 1776)",
+      "canonicalName": "Coryphospingus cucullatus",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Coryphospingus",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Hemithraupis guira",
+    "commonNamePT": "saíra-de-papo-preto",
+    "match": {
+      "usageKey": 2488072,
+      "scientificName": "Hemithraupis guira (Linnaeus, 1766)",
+      "canonicalName": "Hemithraupis guira",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Hemithraupis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Conirostrum speciosum",
+    "commonNamePT": "figuinha-de-rabo-castanho",
+    "match": {
+      "usageKey": 5230621,
+      "scientificName": "Conirostrum speciosum (Temminck, 1824)",
+      "canonicalName": "Conirostrum speciosum",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Conirostrum",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Thraupis sayaca",
+    "commonNamePT": "sanhaço-cinzento",
+    "match": {
+      "usageKey": 2488622,
+      "scientificName": "Thraupis sayaca (Linnaeus, 1766)",
+      "canonicalName": "Thraupis sayaca",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Thraupis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sporophila collaris",
+    "commonNamePT": "coleiro-do-brejo",
+    "match": {
+      "usageKey": 2491350,
+      "scientificName": "Sporophila collaris (Boddaert, 1783)",
+      "canonicalName": "Sporophila collaris",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Sporophila",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sporophila angolensis",
+    "commonNamePT": "curió",
+    "match": {
+      "usageKey": 8239823,
+      "scientificName": "Sporophila angolensis (Linnaeus, 1766)",
+      "canonicalName": "Sporophila angolensis",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Sporophila",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sporophila caerulescens",
+    "commonNamePT": "coleirinho",
+    "match": {
+      "usageKey": 2491376,
+      "scientificName": "Sporophila caerulescens (Vieillot, 1823)",
+      "canonicalName": "Sporophila caerulescens",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Sporophila",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Sicalis flaveola",
+    "commonNamePT": "canário-da-terra",
+    "match": {
+      "usageKey": 2491862,
+      "scientificName": "Sicalis flaveola (Linnaeus, 1766)",
+      "canonicalName": "Sicalis flaveola",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Sicalis",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  },
+  {
+    "scientificName": "Saltator coerulescens",
+    "commonNamePT": "trinca-ferro-gongá",
+    "match": {
+      "usageKey": 9819034,
+      "scientificName": "Saltator coerulescens Vieillot, 1817",
+      "canonicalName": "Saltator coerulescens",
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "genus": "Saltator",
+      "status": "ACCEPTED",
+      "confidence": 100,
+      "matchType": "EXACT"
+    }
+  }
+]

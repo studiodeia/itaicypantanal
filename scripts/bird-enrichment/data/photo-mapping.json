@@ -1,0 +1,528 @@
+{
+  "birds": [
+    {
+      "filename": "Anhinga-anhinga_biguatinga_IMG2515.jpg",
+      "imgId": "2515",
+      "scientificName": "Anhinga anhinga",
+      "commonNamePT": "biguatinga",
+      "note": null
+    },
+    {
+      "filename": "Ara-ararauna_arara-caninde_IMG2577.jpg",
+      "imgId": "2577",
+      "scientificName": "Ara ararauna",
+      "commonNamePT": "arara-caninde",
+      "note": null
+    },
+    {
+      "filename": "Aramides-cajaneus_saracura-tres-potes_IMG2090.jpg",
+      "imgId": "2090",
+      "scientificName": "Aramides cajaneus",
+      "commonNamePT": "saracura-tres-potes",
+      "note": null
+    },
+    {
+      "filename": "Arundinicola-leucocephala_freirinha_IMG2344.jpg",
+      "imgId": "2344",
+      "scientificName": "Arundinicola leucocephala",
+      "commonNamePT": "freirinha",
+      "note": null
+    },
+    {
+      "filename": "Busarellus-nigricollis_gaviao-belo_IMG2132.jpg",
+      "imgId": "2132",
+      "scientificName": "Busarellus nigricollis",
+      "commonNamePT": "gaviao-belo",
+      "note": null
+    },
+    {
+      "filename": "Cacicus-cela_xexeu_IMG2817.jpg",
+      "imgId": "2817",
+      "scientificName": "Cacicus cela",
+      "commonNamePT": "xexeu",
+      "note": null
+    },
+    {
+      "filename": "Cairina-moschata_pato-do-mato_IMG2530.jpg",
+      "imgId": "2530",
+      "scientificName": "Cairina moschata",
+      "commonNamePT": "pato-do-mato",
+      "note": null
+    },
+    {
+      "filename": "Camptostoma-obsoletum_risadinha_IMG1936.jpg",
+      "imgId": "1936",
+      "scientificName": "Camptostoma obsoletum",
+      "commonNamePT": "risadinha",
+      "note": null
+    },
+    {
+      "filename": "Celeus-lugubris_pica-pau-louro_IMG1872.jpg",
+      "imgId": "1872",
+      "scientificName": "Celeus lugubris",
+      "commonNamePT": "pica-pau-louro",
+      "note": null
+    },
+    {
+      "filename": "Cercomacra-melanaria_chororo-do-pantanal_IMG1765.jpg",
+      "imgId": "1765",
+      "scientificName": "Cercomacra melanaria",
+      "commonNamePT": "chororo-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Chauna-torquata_tacha-e-Ardea-cocoi_garça-moura_IMG1657.jpg",
+      "imgId": "1657",
+      "scientificName": "Chauna torquata",
+      "commonNamePT": "tachã",
+      "note": "Also contains Ardea cocoi (garça-moura)"
+    },
+    {
+      "filename": "Chauna-torquata_tacha-e-Ardea-cocoi_garça-moura_IMG1657.jpg",
+      "imgId": "1657",
+      "scientificName": "Ardea cocoi",
+      "commonNamePT": "garça-moura",
+      "note": "Shared photo with Chauna torquata"
+    },
+    {
+      "filename": "Columbina-squammata_fogo-apagou_IMG1895.jpg",
+      "imgId": "1895",
+      "scientificName": "Columbina squammata",
+      "commonNamePT": "fogo-apagou",
+      "note": null
+    },
+    {
+      "filename": "Egretta-caerulea_garca-azul_IMG2160-2.jpg",
+      "imgId": "2160-2",
+      "scientificName": "Egretta caerulea",
+      "commonNamePT": "garca-azul",
+      "note": null
+    },
+    {
+      "filename": "Egretta-caerulea_garca-azul_IMG2160.jpg",
+      "imgId": "2160",
+      "scientificName": "Egretta caerulea",
+      "commonNamePT": "garca-azul",
+      "note": null
+    },
+    {
+      "filename": "Egretta-thula_garca-branca-pequena_IMG2595.jpg",
+      "imgId": "2595",
+      "scientificName": "Egretta thula",
+      "commonNamePT": "garca-branca-pequena",
+      "note": null
+    },
+    {
+      "filename": "Eurypyga-helias_pavãozinho-do-para_IMG1971.jpg",
+      "imgId": "1971",
+      "scientificName": "Eurypyga helias",
+      "commonNamePT": "pavãozinho-do-para",
+      "note": null
+    },
+    {
+      "filename": "Falco-rufigularis_caure_IMG2738.jpg",
+      "imgId": "2738",
+      "scientificName": "Falco rufigularis",
+      "commonNamePT": "caure",
+      "note": null
+    },
+    {
+      "filename": "Furnarius-leucopus_casaca-de-couro-amarelo_IMG1346.jpg",
+      "imgId": "1346",
+      "scientificName": "Furnarius leucopus",
+      "commonNamePT": "casaca-de-couro-amarelo",
+      "note": null
+    },
+    {
+      "filename": "Galbula-ruficauda_ariramba-de-cauda-ruiva_IMG2649.jpg",
+      "imgId": "2649",
+      "scientificName": "Galbula ruficauda",
+      "commonNamePT": "ariramba-de-cauda-ruiva",
+      "note": null
+    },
+    {
+      "filename": "Hemitriccus-margaritaceiventer_sebinho-de-olho-de-ouro_IMG1709.jpg",
+      "imgId": "1709",
+      "scientificName": "Hemitriccus margaritaceiventer",
+      "commonNamePT": "sebinho-de-olho-de-ouro",
+      "note": null
+    },
+    {
+      "filename": "Icterus-croconotus_joao-pinto_IMG1384.jpg",
+      "imgId": "1384",
+      "scientificName": "Icterus croconotus",
+      "commonNamePT": "joao-pinto",
+      "note": null
+    },
+    {
+      "filename": "Jabiru-mycteria_tuiuiu_IMG1517.jpg",
+      "imgId": "1517",
+      "scientificName": "Jabiru mycteria",
+      "commonNamePT": "tuiuiu",
+      "note": null
+    },
+    {
+      "filename": "Jabiru-mycteria_tuiuiu_IMG1915.jpg",
+      "imgId": "1915",
+      "scientificName": "Jabiru mycteria",
+      "commonNamePT": "tuiuiu",
+      "note": null
+    },
+    {
+      "filename": "Megaceryle-torquata_martim-pescador-grande_IMG1433.jpg",
+      "imgId": "1433",
+      "scientificName": "Megaceryle torquata",
+      "commonNamePT": "martim-pescador-grande",
+      "note": null
+    },
+    {
+      "filename": "Monasa-nigrifrons_chora-chuva-preto_IMG1885.jpg",
+      "imgId": "1885",
+      "scientificName": "Monasa nigrifrons",
+      "commonNamePT": "chora-chuva-preto",
+      "note": null
+    },
+    {
+      "filename": "Myiarchus-ferox_maria-cavaleira_IMG2467.jpg",
+      "imgId": "2467",
+      "scientificName": "Myiarchus ferox",
+      "commonNamePT": "maria-cavaleira",
+      "note": null
+    },
+    {
+      "filename": "Myiophobus-fasciatus_filipe_IMG1700.jpg",
+      "imgId": "1700",
+      "scientificName": "Myiophobus fasciatus",
+      "commonNamePT": "filipe",
+      "note": null
+    },
+    {
+      "filename": "Myiothlypis-flaveola_canario-do-mato_IMG1722.jpg",
+      "imgId": "1722",
+      "scientificName": "Myiothlypis flaveola",
+      "commonNamePT": "canario-do-mato",
+      "note": null
+    },
+    {
+      "filename": "Nannopterum-brasilianus_bigua_IMG2151.jpg",
+      "imgId": "2151",
+      "scientificName": "Nannopterum brasilianus",
+      "commonNamePT": "bigua",
+      "note": null
+    },
+    {
+      "filename": "Nyctiprogne-leucopyga_bacurau-de-cauda-barrada_IMG1465.jpg",
+      "imgId": "1465",
+      "scientificName": "Nyctiprogne leucopyga",
+      "commonNamePT": "bacurau-de-cauda-barrada",
+      "note": null
+    },
+    {
+      "filename": "Nystalus-maculatus_rapazinho-dos-velhos_IMG2473.jpg",
+      "imgId": "2473",
+      "scientificName": "Nystalus maculatus",
+      "commonNamePT": "rapazinho-dos-velhos",
+      "note": null
+    },
+    {
+      "filename": "Ortalis-canicollis_aracua-do-pantanal_IMG1326-2.jpg",
+      "imgId": "1326-2",
+      "scientificName": "Ortalis canicollis",
+      "commonNamePT": "aracua-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Ortalis-canicollis_aracua-do-pantanal_IMG1326.jpg",
+      "imgId": "1326",
+      "scientificName": "Ortalis canicollis",
+      "commonNamePT": "aracua-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Ortalis-canicollis_aracua-do-pantanal_IMG1409.jpg",
+      "imgId": "1409",
+      "scientificName": "Ortalis canicollis",
+      "commonNamePT": "aracua-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Pandion-haliaetus_aguia-pescadora_IMG1633.jpg",
+      "imgId": "1633",
+      "scientificName": "Pandion haliaetus",
+      "commonNamePT": "aguia-pescadora",
+      "note": null
+    },
+    {
+      "filename": "Paroaria-capitata_cavalaria_IMG1432.jpg",
+      "imgId": "1432",
+      "scientificName": "Paroaria capitata",
+      "commonNamePT": "cavalaria",
+      "note": null
+    },
+    {
+      "filename": "Paroaria-capitata_cavalaria_IMG2226.jpg",
+      "imgId": "2226",
+      "scientificName": "Paroaria capitata",
+      "commonNamePT": "cavalaria",
+      "note": null
+    },
+    {
+      "filename": "Patagioenas-picazuro_pomba-asa-branca_IMG2409.jpg",
+      "imgId": "2409",
+      "scientificName": "Patagioenas picazuro",
+      "commonNamePT": "pomba-asa-branca",
+      "note": null
+    },
+    {
+      "filename": "Penelope-ochrogaster_jacu-de-barriga-castanha_IMG2187.jpg",
+      "imgId": "2187",
+      "scientificName": "Penelope ochrogaster",
+      "commonNamePT": "jacu-de-barriga-castanha",
+      "note": null
+    },
+    {
+      "filename": "Phacellodomus-ruber_graveteiro_IMG1395.jpg",
+      "imgId": "1395",
+      "scientificName": "Phacellodomus ruber",
+      "commonNamePT": "graveteiro",
+      "note": null
+    },
+    {
+      "filename": "Phaethornis-pretrei_rabo-branco-acanelado_IMG2477.jpg",
+      "imgId": "2477",
+      "scientificName": "Phaethornis pretrei",
+      "commonNamePT": "rabo-branco-acanelado",
+      "note": null
+    },
+    {
+      "filename": "Piculus-chrysochloros_pica-pau-dourado-escuro_IMG1800.jpg",
+      "imgId": "1800",
+      "scientificName": "Piculus chrysochloros",
+      "commonNamePT": "pica-pau-dourado-escuro",
+      "note": null
+    },
+    {
+      "filename": "Podager-nacunda_corucao_IMG2253.jpg",
+      "imgId": "2253",
+      "scientificName": "Podager nacunda",
+      "commonNamePT": "corucao",
+      "note": null
+    },
+    {
+      "filename": "Podager-nacunda_corucao_IMG2370.jpg",
+      "imgId": "2370",
+      "scientificName": "Podager nacunda",
+      "commonNamePT": "corucao",
+      "note": null
+    },
+    {
+      "filename": "Primolius-auricollis_maracana-de-colar_IMG2453-2.jpg",
+      "imgId": "2453-2",
+      "scientificName": "Primolius auricollis",
+      "commonNamePT": "maracana-de-colar",
+      "note": null
+    },
+    {
+      "filename": "Primolius-auricollis_maracana-de-colar_IMG2453.jpg",
+      "imgId": "2453",
+      "scientificName": "Primolius auricollis",
+      "commonNamePT": "maracana-de-colar",
+      "note": null
+    },
+    {
+      "filename": "Procacicus-solitarius_irauna-de-bico-branco_IMG1355.jpg",
+      "imgId": "1355",
+      "scientificName": "Procacicus solitarius",
+      "commonNamePT": "irauna-de-bico-branco",
+      "note": null
+    },
+    {
+      "filename": "Procacicus-solitarius_irauna-de-bico-branco_IMG2325.jpg",
+      "imgId": "2325",
+      "scientificName": "Procacicus solitarius",
+      "commonNamePT": "irauna-de-bico-branco",
+      "note": null
+    },
+    {
+      "filename": "Psarocolius-decumanus_japu_IMG1996.jpg",
+      "imgId": "1996",
+      "scientificName": "Psarocolius decumanus",
+      "commonNamePT": "japu",
+      "note": null
+    },
+    {
+      "filename": "Pseudocolopteryx-flaviventris_amarelinho-do-junco_IMG1580.jpg",
+      "imgId": "1580",
+      "scientificName": "Pseudocolopteryx flaviventris",
+      "commonNamePT": "amarelinho-do-junco",
+      "note": null
+    },
+    {
+      "filename": "Pseudocolopteryx-flaviventris_amarelinho-do-junco_IMG1610.jpg",
+      "imgId": "1610",
+      "scientificName": "Pseudocolopteryx flaviventris",
+      "commonNamePT": "amarelinho-do-junco",
+      "note": null
+    },
+    {
+      "filename": "Pseudocolopteryx-flaviventris_amarelinho-do-junco_IMG1618.jpg",
+      "imgId": "1618",
+      "scientificName": "Pseudocolopteryx flaviventris",
+      "commonNamePT": "amarelinho-do-junco",
+      "note": null
+    },
+    {
+      "filename": "Pseudoseisura-unirufa_casaca-de-couro-de-crista-cinza_IMG1703.jpg",
+      "imgId": "1703",
+      "scientificName": "Pseudoseisura unirufa",
+      "commonNamePT": "casaca-de-couro-de-crista-cinza",
+      "note": null
+    },
+    {
+      "filename": "Pseudoseisura-unirufa_casaca-de-couro-de-crista-cinza_IMG2323.jpg",
+      "imgId": "2323",
+      "scientificName": "Pseudoseisura unirufa",
+      "commonNamePT": "casaca-de-couro-de-crista-cinza",
+      "note": null
+    },
+    {
+      "filename": "Pteroglossus-castanotis_aracari-castanho_IMG2684.jpg",
+      "imgId": "2684",
+      "scientificName": "Pteroglossus castanotis",
+      "commonNamePT": "aracari-castanho",
+      "note": null
+    },
+    {
+      "filename": "Pyriglena-maura_papa-taoca-do-pantanal_IMG2084.jpg",
+      "imgId": "2084",
+      "scientificName": "Pyriglena maura",
+      "commonNamePT": "papa-taoca-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Pyrocephalus-rubinus_principe-femea_IMG1752.jpg",
+      "imgId": "1752",
+      "scientificName": "Pyrocephalus rubinus",
+      "commonNamePT": "principe",
+      "note": "Female"
+    },
+    {
+      "filename": "Ramphocelus-carbo_pipira-vermelha_IMG2309.jpg",
+      "imgId": "2309",
+      "scientificName": "Ramphocelus carbo",
+      "commonNamePT": "pipira-vermelha",
+      "note": null
+    },
+    {
+      "filename": "Saltator-coerulescens_trinca-ferro-gonga_IMG2584.jpg",
+      "imgId": "2584",
+      "scientificName": "Saltator coerulescens",
+      "commonNamePT": "trinca-ferro-gonga",
+      "note": null
+    },
+    {
+      "filename": "Sporophila-collaris_coleiro-do-brejo_IMG1532.jpg",
+      "imgId": "1532",
+      "scientificName": "Sporophila collaris",
+      "commonNamePT": "coleiro-do-brejo",
+      "note": null
+    },
+    {
+      "filename": "Synallaxis-albilora_joao-do-pantanal_IMG1905.jpg",
+      "imgId": "1905",
+      "scientificName": "Synallaxis albilora",
+      "commonNamePT": "joao-do-pantanal",
+      "note": null
+    },
+    {
+      "filename": "Theristicus-caudatus_curicaca_IMG2079.jpg",
+      "imgId": "2079",
+      "scientificName": "Theristicus caudatus",
+      "commonNamePT": "curicaca",
+      "note": null
+    },
+    {
+      "filename": "Theristicus-caudatus_curicaca_IMG2358-2.jpg",
+      "imgId": "2358-2",
+      "scientificName": "Theristicus caudatus",
+      "commonNamePT": "curicaca",
+      "note": null
+    },
+    {
+      "filename": "Theristicus-caudatus_curicaca_IMG2358.jpg",
+      "imgId": "2358",
+      "scientificName": "Theristicus caudatus",
+      "commonNamePT": "curicaca",
+      "note": null
+    },
+    {
+      "filename": "Turdus-rufiventris_sabia-laranjeira_IMG2294.jpg",
+      "imgId": "2294",
+      "scientificName": "Turdus rufiventris",
+      "commonNamePT": "sabia-laranjeira",
+      "note": null
+    },
+    {
+      "filename": "Tyto-furcata_suindara_IMG1506.jpg",
+      "imgId": "1506",
+      "scientificName": "Tyto furcata",
+      "commonNamePT": "suindara",
+      "note": null
+    }
+  ],
+  "nonBirds": [
+    {
+      "filename": "NAO-AVE_Anta_IMG2102.jpg",
+      "imgId": "2102",
+      "animal": "Anta"
+    },
+    {
+      "filename": "NAO-AVE_Ariranha_IMG2386.jpg",
+      "imgId": "2386",
+      "animal": "Ariranha"
+    },
+    {
+      "filename": "NAO-AVE_Esquilo_IMG1277.jpg",
+      "imgId": "1277",
+      "animal": "Esquilo"
+    },
+    {
+      "filename": "NAO-AVE_Iguana_IMG2749.jpg",
+      "imgId": "2749",
+      "animal": "Iguana"
+    },
+    {
+      "filename": "NAO-AVE_Lagarto-teiu_IMG2691.jpg",
+      "imgId": "2691",
+      "animal": "Lagarto-teiu"
+    },
+    {
+      "filename": "NAO-AVE_Macaco-prego_IMG1313.jpg",
+      "imgId": "1313",
+      "animal": "Macaco-prego"
+    },
+    {
+      "filename": "NAO-AVE_Sagui_IMG2499.jpg",
+      "imgId": "2499",
+      "animal": "Sagui"
+    }
+  ],
+  "summary": {
+    "totalFiles": 73,
+    "birdPhotos": 67,
+    "uniqueSpecies": 54,
+    "nonBirdPhotos": 7,
+    "speciesWithMultiplePhotos": [
+      "Egretta caerulea (2)",
+      "Jabiru mycteria (2)",
+      "Ortalis canicollis (3)",
+      "Paroaria capitata (2)",
+      "Podager nacunda (2)",
+      "Primolius auricollis (2)",
+      "Procacicus solitarius (2)",
+      "Pseudocolopteryx flaviventris (3)",
+      "Pseudoseisura unirufa (2)",
+      "Theristicus caudatus (3)"
+    ]
+  }
+}

@@ -1,0 +1,2326 @@
+[
+  {
+    "scientificName": "Crypturellus undulatus",
+    "commonNamePT": "jaó",
+    "tier": 3,
+    "result": {
+      "qid": "Q510118",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Crypturellus_undulatus.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ja%C3%B3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Undulated_tinamou"
+    }
+  },
+  {
+    "scientificName": "Crypturellus parvirostris",
+    "commonNamePT": "inhambu-chororó",
+    "tier": 3,
+    "result": {
+      "qid": "Q1265542",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 180,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Crypturellus_parvirostris.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Inhambu-choror%C3%B3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Small-billed_tinamou"
+    }
+  },
+  {
+    "scientificName": "Chauna torquata",
+    "commonNamePT": "tachã",
+    "tier": 3,
+    "result": {
+      "qid": "Q602961",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 92,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Possa_da_Londra_in_the_Brazilian_Patanal_(105m)_-_the_weird_looking_Southern_Screamer_(Chauna_torquata)_-_(24213807344).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Toch%C3%A3-cinzenta",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Southern_screamer"
+    }
+  },
+  {
+    "scientificName": "Dendrocygna autumnalis",
+    "commonNamePT": "marreca-cabocla",
+    "tier": 3,
+    "result": {
+      "qid": "Q752461",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 831,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Black-bellied_Whistling_Duck%2C_Tobago%2C_Trinidad_and_Tobago_1.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Marreca-cabocla",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-bellied_whistling_duck"
+    }
+  },
+  {
+    "scientificName": "Cairina moschata",
+    "commonNamePT": "pato-do-mato",
+    "tier": 3,
+    "result": {
+      "qid": "Q242851",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 74,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Muskovy_duck_(Cairina_moschata).JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cairina_moschata",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Muscovy_duck"
+    }
+  },
+  {
+    "scientificName": "Ortalis canicollis",
+    "commonNamePT": "aracuã-do-pantanal",
+    "tier": 1,
+    "result": {
+      "qid": "Q1067564",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortalis_canicollis_-Mato_Grosso_do_Sul%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Aracu%C3%A3-do-pantanal",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Chaco_chachalaca"
+    }
+  },
+  {
+    "scientificName": "Pipile cujubi",
+    "commonNamePT": "cujubi",
+    "tier": 1,
+    "result": {
+      "qid": "Q1082395",
+      "iucnStatus": "VU",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Red-throated_piping_guan_(Pipile_cujubi).JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cujubi",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Red-throated_piping_guan"
+    }
+  },
+  {
+    "scientificName": "Penelope ochrogaster",
+    "commonNamePT": "jacu-de-barriga-castanha",
+    "tier": 1,
+    "result": {
+      "qid": "Q256552",
+      "iucnStatus": "VU",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rotbrustguan.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jacu-de-barriga-castanha",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Chestnut-bellied_guan"
+    }
+  },
+  {
+    "scientificName": "Crax fasciolata",
+    "commonNamePT": "mutum-de-penacho",
+    "tier": 1,
+    "result": {
+      "qid": "Q1267247",
+      "iucnStatus": "VU",
+      "lengthCm": null,
+      "massG": 90,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Nacktgesichthokko_Zoo_Berlin_1.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Mutum-de-penacho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Bare-faced_curassow"
+    }
+  },
+  {
+    "scientificName": "Patagioenas picazuro",
+    "commonNamePT": "pomba-asa-branca",
+    "tier": 3,
+    "result": {
+      "qid": "Q1269659",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 279,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Patagioenas_picazuro_-Buenos_Aires%2C_Argentina-8-4c.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Patagioenas_picazuro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Picazuro_pigeon"
+    }
+  },
+  {
+    "scientificName": "Patagioenas cayennensis",
+    "commonNamePT": "pomba-galega",
+    "tier": 3,
+    "result": {
+      "qid": "Q1263074",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pale-vented_Pigeon_-Sarapiqui_-_Costa_Rica_S4E0867_(26697349415)_(cropped).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pomba-galega",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Pale-vented_pigeon"
+    }
+  },
+  {
+    "scientificName": "Columbina squammata",
+    "commonNamePT": "fogo-apagou",
+    "tier": 3,
+    "result": {
+      "qid": "Q1259412",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Columbina_squammata_-Bonito%2C_Mato_Grosso_do_Sul%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Fogo-apagou",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Scaled_dove"
+    }
+  },
+  {
+    "scientificName": "Columbina talpacoti",
+    "commonNamePT": "rolinha-roxa",
+    "tier": 3,
+    "result": {
+      "qid": "Q1386698",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 3600,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Dario_Sanches_-_ROLINHA-ROXA_(Columbina_talpacoti).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Rolinha-roxa",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Ruddy_ground_dove"
+    }
+  },
+  {
+    "scientificName": "Leptotila verreauxi",
+    "commonNamePT": "juriti-pupu",
+    "tier": 3,
+    "result": {
+      "qid": "Q1066498",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Whitetippeddove.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Leptotila_verreauxi",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-tipped_dove"
+    }
+  },
+  {
+    "scientificName": "Zenaida auriculata",
+    "commonNamePT": "avoante",
+    "tier": 3,
+    "result": {
+      "qid": "Q1006452",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Aruba-Zenaida-auriculata.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Avoante",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Eared_dove"
+    }
+  },
+  {
+    "scientificName": "Crotophaga major",
+    "commonNamePT": "anu-coroca",
+    "tier": 3,
+    "result": {
+      "qid": "Q730129",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 157,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater_ani_(Crotophaga_major)_Rio_Napo.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Anu-coroca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Greater_ani"
+    }
+  },
+  {
+    "scientificName": "Crotophaga ani",
+    "commonNamePT": "anu-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q256046",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 13200,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Smooth-billed_ani_(Crotophaga_ani)_GC.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Anu-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Smooth-billed_ani"
+    }
+  },
+  {
+    "scientificName": "Tapera naevia",
+    "commonNamePT": "saci",
+    "tier": 3,
+    "result": {
+      "qid": "Q1262847",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Saci_(Tapera_naevia).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Saci_(ave)",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Striped_cuckoo"
+    }
+  },
+  {
+    "scientificName": "Piaya cayana",
+    "commonNamePT": "alma-de-gato",
+    "tier": 3,
+    "result": {
+      "qid": "Q1270495",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Piaya_cayana_(Cuco_ardilla_-_Squirrel_cuckoo)_(45788138352).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Alma-de-gato",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Squirrel_cuckoo"
+    }
+  },
+  {
+    "scientificName": "Coccyzus melacoryphus",
+    "commonNamePT": "papa-lagarta-acanelado",
+    "tier": 3,
+    "result": {
+      "qid": "Q969834",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 46000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Coccyzus_melacoryphus.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Papa-lagarta-acanelado",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Dark-billed_cuckoo"
+    }
+  },
+  {
+    "scientificName": "Nyctiprogne leucopyga",
+    "commonNamePT": "bacurau-de-cauda-barrada",
+    "tier": 1,
+    "result": {
+      "qid": "Q1261746",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Nyctiprogne_leucopyga_Band-tailed_Nighthawk%3B_Arari%2C_Maranh%C3%A3o%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bacurau-de-cauda-barrada",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Band-tailed_nighthawk"
+    }
+  },
+  {
+    "scientificName": "Podager nacunda",
+    "commonNamePT": "corucão",
+    "tier": 3,
+    "result": {
+      "qid": "Q1260007",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Nacunda_nighthawk.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Coruc%C3%A3o",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Nacunda_nighthawk"
+    }
+  },
+  {
+    "scientificName": "Nyctibius griseus",
+    "commonNamePT": "urutau",
+    "tier": 2,
+    "result": {
+      "qid": "Q1258935",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 242,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_Nacional_Guaricana_-_Luiz_Alves_(01).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Urutau-comum",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Common_potoo"
+    }
+  },
+  {
+    "scientificName": "Phaethornis pretrei",
+    "commonNamePT": "rabo-branco-acanelado",
+    "tier": 3,
+    "result": {
+      "qid": "Q204159",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 5600,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaethornis_pretrei_Planalto_Hermit%3B_Itapira%2C_S%C3%A3o_Paulo%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Rabo-branco-acanelado",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Planalto_hermit"
+    }
+  },
+  {
+    "scientificName": "Phaethornis nattereri",
+    "commonNamePT": "rabo-branco-de-sobre-amarelo",
+    "tier": 1,
+    "result": {
+      "qid": "Q1269976",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaethornis_nattereri_Cinnamon-throated_Hermit%3B_Chapada_dos_Guimar%C3%A3es%2C_Mato_Grosso%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Rabo-branco-de-sobre-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Cinnamon-throated_hermit"
+    }
+  },
+  {
+    "scientificName": "Hylocharis chrysura",
+    "commonNamePT": "beija-flor-dourado",
+    "tier": 3,
+    "result": {
+      "qid": "Q1273179",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 470,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hylocharis_chrysura_-_Luciano_Massa_-_305624465.jpeg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Beija-flor-dourado",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Gilded_sapphire"
+    }
+  },
+  {
+    "scientificName": "Chionomesa fimbriata",
+    "commonNamePT": "beija-flor-de-garganta-verde",
+    "tier": 3,
+    "result": {
+      "qid": "Q873437",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 520,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazilia_fimbriata.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Beija-flor-de-garganta-verde",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Glittering-throated_emerald"
+    }
+  },
+  {
+    "scientificName": "Mycteria americana",
+    "commonNamePT": "cabeça-seca",
+    "tier": 3,
+    "result": {
+      "qid": "Q990175",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/WoodStorkWhole.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cabe%C3%A7a-seca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Wood_stork"
+    }
+  },
+  {
+    "scientificName": "Jabiru mycteria",
+    "commonNamePT": "tuiuiú",
+    "tier": 2,
+    "result": {
+      "qid": "Q17970",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabiru_Mato_Grosso_Pantanal_Brazil-2.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jaburu",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Jabiru"
+    }
+  },
+  {
+    "scientificName": "Anhinga anhinga",
+    "commonNamePT": "biguatinga",
+    "tier": 2,
+    "result": {
+      "qid": "Q469940",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Anhinga_anhinga_-Costa_Rica-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Biguatinga",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Anhinga"
+    }
+  },
+  {
+    "scientificName": "Nannopterum brasilianus",
+    "commonNamePT": "biguá",
+    "tier": 3,
+    "result": {
+      "qid": "Q117254632",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Phalacrocorax_brasilianus_(Costa_Rica).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bigu%C3%A1",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Neotropic_cormorant"
+    }
+  },
+  {
+    "scientificName": "Nycticorax nycticorax",
+    "commonNamePT": "socó-dorminhoco",
+    "tier": 3,
+    "result": {
+      "qid": "Q126216",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 682,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Nycticorax_nycticorax_nycticorax%2C_Camargue_(33620984464).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Soc%C3%B3-dorminhoco",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-crowned_night_heron"
+    }
+  },
+  {
+    "scientificName": "Butorides striata",
+    "commonNamePT": "socozinho",
+    "tier": 3,
+    "result": {
+      "qid": "Q270722",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Butorides_striata_Garcita_rayada_Striated_Heron_(6549356697).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Socozinho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Striated_heron"
+    }
+  },
+  {
+    "scientificName": "Ardea cocoi",
+    "commonNamePT": "garça-moura",
+    "tier": 3,
+    "result": {
+      "qid": "Q911449",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Ardea_cocoi_-Apure_State%2C_Venezuela-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gar%C3%A7a-moura",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Cocoi_heron"
+    }
+  },
+  {
+    "scientificName": "Ardea alba",
+    "commonNamePT": "garça-branca-grande",
+    "tier": 2,
+    "result": {
+      "qid": "Q130730",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Egret_(Ardea_alba)_(25562005404).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gar%C3%A7a-branca-grande",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Great_egret"
+    }
+  },
+  {
+    "scientificName": "Egretta thula",
+    "commonNamePT": "garça-branca-pequena",
+    "tier": 3,
+    "result": {
+      "qid": "Q59785",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/SnowyEgret-Florida.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gar%C3%A7a-branca-pequena",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Snowy_egret"
+    }
+  },
+  {
+    "scientificName": "Egretta caerulea",
+    "commonNamePT": "garça-azul",
+    "tier": 3,
+    "result": {
+      "qid": "Q371028",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 25000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Egretta_caerulea_-Cananeia%2C_Sao_Paulo%2C_Brasil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gar%C3%A7a-azul",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Little_blue_heron"
+    }
+  },
+  {
+    "scientificName": "Bubulcus ibis",
+    "commonNamePT": "garça-vaqueira",
+    "tier": 3,
+    "result": {
+      "qid": "Q106447604",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A9ron_garde_boeufs_%C3%A0_Oued_Mejerda.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bubulcus_ibis",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Western_cattle_egret"
+    }
+  },
+  {
+    "scientificName": "Syrigma sibilatrix",
+    "commonNamePT": "maria-faceira",
+    "tier": 3,
+    "result": {
+      "qid": "Q218549",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 455,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Syrigma_sibilatrix_-Punta_del_Este%2C_Uruguay-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Maria-faceira",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Whistling_heron"
+    }
+  },
+  {
+    "scientificName": "Tigrisoma lineatum",
+    "commonNamePT": "socó-boi",
+    "tier": 3,
+    "result": {
+      "qid": "Q333239",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tigrisoma_lineatum_-Parque_del_Este%2C_Caracas%2C_Venezuela-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Soc%C3%B3-boi",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rufescent_tiger_heron"
+    }
+  },
+  {
+    "scientificName": "Phimosus infuscatus",
+    "commonNamePT": "tapicuru",
+    "tier": 3,
+    "result": {
+      "qid": "Q926047",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Phimosus_infuscatus_-Mato_Grosso_do_Sul%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Tapicuru",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Bare-faced_ibis"
+    }
+  },
+  {
+    "scientificName": "Theristicus caudatus",
+    "commonNamePT": "curicaca",
+    "tier": 3,
+    "result": {
+      "qid": "Q574693",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/CURICACA_(_Theristicus_caudatus_).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Curicaca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Buff-necked_ibis"
+    }
+  },
+  {
+    "scientificName": "Theristicus caerulescens",
+    "commonNamePT": "curicaca-real",
+    "tier": 3,
+    "result": {
+      "qid": "Q279282",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/BANDURRIA_MORA_Harpiprioncaerulescens.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Curicaca-real",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Plumbeous_ibis"
+    }
+  },
+  {
+    "scientificName": "Mesembrinibis cayennensis",
+    "commonNamePT": "coró-coró",
+    "tier": 3,
+    "result": {
+      "qid": "Q912057",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Mesembrinibis_cayennensis_por_Luiz_Alves_(02).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cor%C3%B3-cor%C3%B3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Green_ibis"
+    }
+  },
+  {
+    "scientificName": "Platalea ajaja",
+    "commonNamePT": "colhereiro",
+    "tier": 2,
+    "result": {
+      "qid": "Q389664",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Roseate_Spoonbill_-_Myakka_River_State_Park.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Colhereiro-americano",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Roseate_spoonbill"
+    }
+  },
+  {
+    "scientificName": "Eurypyga helias",
+    "commonNamePT": "pavãozinho-do-pará",
+    "tier": 3,
+    "result": {
+      "qid": "Q601107",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 227,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/075_Sunbittern_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pav%C3%A3ozinho-do-par%C3%A1",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Sunbittern"
+    }
+  },
+  {
+    "scientificName": "Aramus guarauna",
+    "commonNamePT": "carão",
+    "tier": 2,
+    "result": {
+      "qid": "Q725276",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 1085,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Aramus_guarauna.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Car%C3%A3o",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Limpkin"
+    }
+  },
+  {
+    "scientificName": "Aramides cajaneus",
+    "commonNamePT": "saracura-três-potes",
+    "tier": 3,
+    "result": {
+      "qid": "Q1268308",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey-necked_Wood_Rail_(Aramides_cajanea)_(28439453400).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Saracura-tr%C3%AAs-potes",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Grey-cowled_wood_rail"
+    }
+  },
+  {
+    "scientificName": "Rynchops niger",
+    "commonNamePT": "talha-mar",
+    "tier": 3,
+    "result": {
+      "qid": "Q516662",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 26900,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Skimmer_Close_Flying.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Rynchops_niger",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black_skimmer"
+    }
+  },
+  {
+    "scientificName": "Phaetusa simplex",
+    "commonNamePT": "trinta-réis-grande",
+    "tier": 3,
+    "result": {
+      "qid": "Q1073630",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 235,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Large-billed_Tern_(Phaetusa_simplex)%2C_Pantanal%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Trinta-r%C3%A9is-grande",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Large-billed_tern"
+    }
+  },
+  {
+    "scientificName": "Vanellus chilensis",
+    "commonNamePT": "quero-quero",
+    "tier": 3,
+    "result": {
+      "qid": "Q855348",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 27800,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Southern_lapwing_(Vanellus_chilensis_chilensis)_Chiloe.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Quero-quero",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Southern_lapwing"
+    }
+  },
+  {
+    "scientificName": "Himantopus melanurus",
+    "commonNamePT": "pernilongo-de-costas-brancas",
+    "tier": 3,
+    "result": {
+      "qid": "Q962720",
+      "iucnStatus": null,
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/White-backed_stilts_(Himantopus_melanurus).JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pernilongo-de-costas-brancas",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-backed_stilt"
+    }
+  },
+  {
+    "scientificName": "Jacana jacana",
+    "commonNamePT": "jaçanã",
+    "tier": 2,
+    "result": {
+      "qid": "Q856201",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 9700,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Acana_jacana_-near_Yarina_Lodge%2C_Napo_Province%2C_Ecuador_-adult-8_cropped.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ja%C3%A7an%C3%A3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Wattled_jacana"
+    }
+  },
+  {
+    "scientificName": "Cathartes aura",
+    "commonNamePT": "urubu-de-cabeça-vermelha",
+    "tier": 3,
+    "result": {
+      "qid": "Q245181",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathartes_aura_-Mexico-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Urubu-de-cabe%C3%A7a-vermelha",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Turkey_vulture"
+    }
+  },
+  {
+    "scientificName": "Cathartes burrovianus",
+    "commonNamePT": "urubu-de-cabeça-amarela",
+    "tier": 3,
+    "result": {
+      "qid": "Q852751",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Lesser_Yellow-headed_Vulture_(Cathartes_burrovianus)_(28695241483).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Urubu-de-cabe%C3%A7a-amarela",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Lesser_yellow-headed_vulture"
+    }
+  },
+  {
+    "scientificName": "Coragyps atratus",
+    "commonNamePT": "urubu-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q213366",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Coragyps_atratus_Miami-Dade_FL.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Urubu-de-cabe%C3%A7a-preta",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black_vulture"
+    }
+  },
+  {
+    "scientificName": "Pandion haliaetus",
+    "commonNamePT": "águia-pescadora",
+    "tier": 2,
+    "result": {
+      "qid": "Q25332",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 1400,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Balbuzard_pecheur_Lac_de_Tunis.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pandion_haliaetus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Osprey"
+    }
+  },
+  {
+    "scientificName": "Rosthramus sociabilis",
+    "commonNamePT": "gavião-caramujeiro",
+    "tier": 3,
+    "result": {
+      "qid": "Q839657",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 32000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/087_Male_Snail_kite_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-caramujeiro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Snail_kite"
+    }
+  },
+  {
+    "scientificName": "Leptodon cayanensis",
+    "commonNamePT": "gavião-gato",
+    "tier": 3,
+    "result": {
+      "qid": "Q1260051",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Leptodon_cayannensis_-_Gray-headed_kite.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-gato",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Gray-headed_kite"
+    }
+  },
+  {
+    "scientificName": "Rupornis magnirostris",
+    "commonNamePT": "gavião-carijó",
+    "tier": 3,
+    "result": {
+      "qid": "Q426708",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rupornis_magnirostris_Gavil%C3%A1n_caminero_Roadside_Hawk_(12480876794).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-carij%C3%B3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Roadside_hawk"
+    }
+  },
+  {
+    "scientificName": "Urubitinga urubitinga",
+    "commonNamePT": "gavião-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q1261514",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Buteogallus_urubitinga_NBII.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Great_black_hawk"
+    }
+  },
+  {
+    "scientificName": "Busarellus nigricollis",
+    "commonNamePT": "gavião-belo",
+    "tier": 3,
+    "result": {
+      "qid": "Q1264645",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Black-collared_Hawk_(Busarellus_nigricollis)_(28205842443).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-belo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-collared_hawk"
+    }
+  },
+  {
+    "scientificName": "Heterospizias meridionalis",
+    "commonNamePT": "gavião-caboclo",
+    "tier": 3,
+    "result": {
+      "qid": "Q600791",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 74,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Savanna_Hawk_(Buteogallus_meridionalis)_(28209553996).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gavi%C3%A3o-caboclo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Savanna_hawk"
+    }
+  },
+  {
+    "scientificName": "Tyto furcata",
+    "commonNamePT": "suindara",
+    "tier": 3,
+    "result": {
+      "qid": "Q468015",
+      "iucnStatus": null,
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Schleiereule_fws.jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/American_barn_owl"
+    }
+  },
+  {
+    "scientificName": "Glaucidium brasilianum",
+    "commonNamePT": "caburé",
+    "tier": 3,
+    "result": {
+      "qid": "Q518608",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 9400,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cactus_Ferruginous_Pygmy-owl.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Glaucidium_brasilianum",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Ferruginous_pygmy_owl"
+    }
+  },
+  {
+    "scientificName": "Brotogeris chiriri",
+    "commonNamePT": "periquito-de-encontro-amarelo",
+    "tier": 3,
+    "result": {
+      "qid": "Q1071745",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Brotogeris_chiriri_-Sao_Paulo%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Periquito-de-encontro-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Yellow-chevroned_parakeet"
+    }
+  },
+  {
+    "scientificName": "Myiopsitta monachus",
+    "commonNamePT": "caturrita",
+    "tier": 3,
+    "result": {
+      "qid": "Q724987",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Monk_Parakeet_(Myiopsitta_monachus)_Buenos_Aires.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Myiopsitta_monachus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Monk_parakeet"
+    }
+  },
+  {
+    "scientificName": "Eupsittula aurea",
+    "commonNamePT": "periquito-rei",
+    "tier": 3,
+    "result": {
+      "qid": "Q27074962",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 87,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Aratinga_aurea_-Brazil-8-4c.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jandaia-coquinho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Peach-fronted_parakeet"
+    }
+  },
+  {
+    "scientificName": "Amazona amazonica",
+    "commonNamePT": "curica",
+    "tier": 3,
+    "result": {
+      "qid": "Q586803",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazona_amazonica_(1).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Papagaio-do-mangue",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Orange-winged_amazon"
+    }
+  },
+  {
+    "scientificName": "Amazona aestiva",
+    "commonNamePT": "papagaio-verdadeiro",
+    "tier": 1,
+    "result": {
+      "qid": "Q525897",
+      "iucnStatus": "NT",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue-fronted_Amazon_(Amazona_aestiva)_-8-2rc.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Papagaio-verdadeiro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Blue-fronted_amazon"
+    }
+  },
+  {
+    "scientificName": "Orthopsittaca manilatus",
+    "commonNamePT": "maracanã-do-buriti",
+    "tier": 3,
+    "result": {
+      "qid": "Q177191",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Orthopsittaca_manilata_-Brazil-6.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Maracan%C3%A3-de-cara-amarela",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Red-bellied_macaw"
+    }
+  },
+  {
+    "scientificName": "Primolius auricollis",
+    "commonNamePT": "maracanã-de-colar",
+    "tier": 1,
+    "result": {
+      "qid": "Q775737",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 245,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden-collared_Macaw_(Primolius_auricollis)_(cropped).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Maracan%C3%A3-de-colar",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Golden-collared_macaw"
+    }
+  },
+  {
+    "scientificName": "Ara ararauna",
+    "commonNamePT": "arara-canindé",
+    "tier": 2,
+    "result": {
+      "qid": "Q205477",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Ara_ararauna_(Costa_Rica).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Arara-canind%C3%A9",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Blue-and-yellow_macaw"
+    }
+  },
+  {
+    "scientificName": "Diopsittaca nobilis",
+    "commonNamePT": "maracanã-pequena",
+    "tier": 3,
+    "result": {
+      "qid": "Q905913",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Ser_livre.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Maracan%C3%A3-nobre",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Red-shouldered_macaw"
+    }
+  },
+  {
+    "scientificName": "Psittacara leucophthalmus",
+    "commonNamePT": "periquitão",
+    "tier": 3,
+    "result": {
+      "qid": "Q27075005",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 158,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Aratinga_leucophthalma_-Piraju_-Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Periquit%C3%A3o-maracan%C3%A3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-eyed_parakeet"
+    }
+  },
+  {
+    "scientificName": "Caracara plancus",
+    "commonNamePT": "carcará",
+    "tier": 2,
+    "result": {
+      "qid": "Q755119",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Schopfkarakara.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Carcar%C3%A1",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Crested_caracara"
+    }
+  },
+  {
+    "scientificName": "Falco rufigularis",
+    "commonNamePT": "cauré",
+    "tier": 3,
+    "result": {
+      "qid": "Q844220",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 129,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/OFalco_rufigularis_Bat_Falcon_(cropped).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Caur%C3%A9",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Bat_falcon"
+    }
+  },
+  {
+    "scientificName": "Herpetotheres cachinnans",
+    "commonNamePT": "acauã",
+    "tier": 3,
+    "result": {
+      "qid": "Q903642",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 695,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Lachfalke.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Acau%C3%A3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Laughing_falcon"
+    }
+  },
+  {
+    "scientificName": "Trogon curucui",
+    "commonNamePT": "surucuá-de-barriga-vermelha",
+    "tier": 3,
+    "result": {
+      "qid": "Q688318",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue-crowned_trogon_(Trogon_curucui_peruvianus)_male_Sumaco.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Surucu%C3%A1-de-barriga-vermelha",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Blue-crowned_trogon"
+    }
+  },
+  {
+    "scientificName": "Monasa nigrifrons",
+    "commonNamePT": "chora-chuva-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q955203",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 81,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Monasa_leofleck.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Chora-chuva-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-fronted_nunbird"
+    }
+  },
+  {
+    "scientificName": "Nystalus maculatus",
+    "commonNamePT": "rapazinho-dos-velhos",
+    "tier": 3,
+    "result": {
+      "qid": "Q1268455",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 42000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Reserva_Ecol%C3%B3gica_do_Panga_Gabriele_Andreia_da_Silva_02.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Rapazinho-dos-velhos",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Spot-backed_puffbird"
+    }
+  },
+  {
+    "scientificName": "Galbula ruficauda",
+    "commonNamePT": "ariramba-de-cauda-ruiva",
+    "tier": 3,
+    "result": {
+      "qid": "Q765770",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Galbula_ruficauda_Jacamar_colirrufo_Rufous-tailed_Jacamar_(8491003559).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ariramba-de-cauda-ruiva",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rufous-tailed_jacamar"
+    }
+  },
+  {
+    "scientificName": "Megaceryle torquata",
+    "commonNamePT": "martim-pescador-grande",
+    "tier": 2,
+    "result": {
+      "qid": "Q1272848",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/MARTIM-PESCADOR-GRANDE_(Megaceryle_torquata).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Martim-pescador-grande",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Ringed_kingfisher"
+    }
+  },
+  {
+    "scientificName": "Chloroceryle amazona",
+    "commonNamePT": "martim-pescador-verde",
+    "tier": 3,
+    "result": {
+      "qid": "Q456421",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_Kingfisher.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Martim-pescador-verde",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Amazon_kingfisher"
+    }
+  },
+  {
+    "scientificName": "Chloroceryle americana",
+    "commonNamePT": "martim-pescador-pequeno",
+    "tier": 3,
+    "result": {
+      "qid": "Q580159",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 4300,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_kingfisher_(Chloroceryle_americana_americana)_male.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Martim-pescador-pequeno",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Green_kingfisher"
+    }
+  },
+  {
+    "scientificName": "Ramphastos toco",
+    "commonNamePT": "tucanuçu",
+    "tier": 2,
+    "result": {
+      "qid": "Q376038",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Tucanu%C3%A7u",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Toco_toucan"
+    }
+  },
+  {
+    "scientificName": "Pteroglossus castanotis",
+    "commonNamePT": "araçari-castanho",
+    "tier": 3,
+    "result": {
+      "qid": "Q790670",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 265,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Aracari_Castanho.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ara%C3%A7ari-castanho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Chestnut-eared_aracari"
+    }
+  },
+  {
+    "scientificName": "Melanerpes candidus",
+    "commonNamePT": "pica-pau-branco",
+    "tier": 3,
+    "result": {
+      "qid": "Q583898",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pica-pau_PPreta_0605_7.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-branco",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Veniliornis passerinus",
+    "commonNamePT": "pica-pau-pequeno",
+    "tier": 3,
+    "result": {
+      "qid": "Q594083",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 30000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Woodpecker_(Veniliornis_passerinus).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Veniliornis_passerinus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Little_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Campephilus melanoleucus",
+    "commonNamePT": "pica-pau-de-topete-vermelho",
+    "tier": 3,
+    "result": {
+      "qid": "Q1269588",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Crimson-crested_Woodpecker_(Campephilus_melanoleucus)_female_investigating_a_possible_nesting_site_..._(27874788734).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-de-topete-vermelho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Crimson-crested_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Celeus lugubris",
+    "commonNamePT": "pica-pau-louro",
+    "tier": 1,
+    "result": {
+      "qid": "Q882017",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Celeus_lugubris_Pale-crested_Woodpecker.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-louro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Pale-crested_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Piculus chrysochloros",
+    "commonNamePT": "pica-pau-dourado-escuro",
+    "tier": 3,
+    "result": {
+      "qid": "Q1268092",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden-green_Woodpecker_-_Dari%C3%A9n_-_Panama_(48431577586).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-dourado-escuro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Golden-green_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Colaptes melanochloros",
+    "commonNamePT": "pica-pau-verde-barrado",
+    "tier": 3,
+    "result": {
+      "qid": "Q1265722",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Colaptes_melanochloros_-Bataguassu%2C_Mato_Grosso_do_Sul%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-verde-barrado",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Green-barred_woodpecker"
+    }
+  },
+  {
+    "scientificName": "Colaptes campestris",
+    "commonNamePT": "pica-pau-do-campo",
+    "tier": 3,
+    "result": {
+      "qid": "Q1274176",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 158,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Campo_flicker_(Colaptes_campestris)_female.JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pica-pau-do-campo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Campo_flicker"
+    }
+  },
+  {
+    "scientificName": "Taraba major",
+    "commonNamePT": "choró-boi",
+    "tier": 3,
+    "result": {
+      "qid": "Q383575",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Antshrike_-_Male.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Taraba_major",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Great_antshrike"
+    }
+  },
+  {
+    "scientificName": "Thamnophilus doliatus",
+    "commonNamePT": "choca-barrada",
+    "tier": 3,
+    "result": {
+      "qid": "Q863581",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Barred_Antshrike_-_Lake_Bayano_-_Panama.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Choca-barrada",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Barred_antshrike"
+    }
+  },
+  {
+    "scientificName": "Thamnophilus pelzelni",
+    "commonNamePT": "choca-do-planalto",
+    "tier": 3,
+    "result": {
+      "qid": "Q1076023",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Thamnophilus_pelzelni.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Choca-do-planalto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Planalto_slaty_antshrike"
+    }
+  },
+  {
+    "scientificName": "Cercomacra melanaria",
+    "commonNamePT": "chororó-do-pantanal",
+    "tier": 1,
+    "result": {
+      "qid": "Q1261323",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cercomacra_melanaria_-Mato_Grosso_do_Sul%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Choror%C3%B3-do-pantanal",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Mato_Grosso_antbird"
+    }
+  },
+  {
+    "scientificName": "Pyriglena maura",
+    "commonNamePT": "papa-taoca-do-pantanal",
+    "tier": 1,
+    "result": {
+      "qid": "Q100869319",
+      "iucnStatus": null,
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyriglena_maura_-_Western_Fire-eye_(male)%3B_Vila_Bela_da_Sant%C3%ADssima_Trindade%2C_Mato_Grosso%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Papa-taoca-do-pantanal",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Western_fire-eye"
+    }
+  },
+  {
+    "scientificName": "Xiphocolaptes major",
+    "commonNamePT": "arapaçu-do-campo",
+    "tier": 1,
+    "result": {
+      "qid": "Q1260248",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 156,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_rufous_woodcreeper.jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Great_rufous_woodcreeper"
+    }
+  },
+  {
+    "scientificName": "Sittasomus griseicapillus",
+    "commonNamePT": "arapaçu-verde",
+    "tier": 3,
+    "result": {
+      "qid": "Q874879",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Olivaceous_Woodcreeper_-79_100-_(23978227148).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Arapa%C3%A7u-verde",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Olivaceous_woodcreeper"
+    }
+  },
+  {
+    "scientificName": "Furnarius leucopus",
+    "commonNamePT": "casaca-de-couro-amarelo",
+    "tier": 3,
+    "result": {
+      "qid": "Q1265893",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Furnarius_leucopus_assimilis_-_Pale-legged_hornero%3B_Riachuelo%2C_Rio_Grande_do_Norte%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Casaca-de-couro-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Pale-legged_hornero"
+    }
+  },
+  {
+    "scientificName": "Furnarius rufus",
+    "commonNamePT": "joão-de-barro",
+    "tier": 3,
+    "result": {
+      "qid": "Q852731",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 53,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Dario_Sanches_-_JO%C3%83O-DE-BARRO_(Furnarius_rufus)_(3).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jo%C3%A3o-de-barro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rufous_hornero"
+    }
+  },
+  {
+    "scientificName": "Pseudoseisura unirufa",
+    "commonNamePT": "casaca-de-couro-de-crista-cinza",
+    "tier": 1,
+    "result": {
+      "qid": "Q560016",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 49000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudoseisura_unirufa_-_Grey-crested_cacholote_2.JPG",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Grey-crested_cacholote"
+    }
+  },
+  {
+    "scientificName": "Certhiaxis cinnamomeus",
+    "commonNamePT": "curutié",
+    "tier": 3,
+    "result": {
+      "qid": "Q1267573",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Curuti%C3%A9.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Curuti%C3%A9",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Yellow-chinned_spinetail"
+    }
+  },
+  {
+    "scientificName": "Phacellodomus ruber",
+    "commonNamePT": "graveteiro",
+    "tier": 3,
+    "result": {
+      "qid": "Q1269189",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 41000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Phacellodomus_ruber-Greater_Thornbird.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Graveteiro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Greater_thornbird"
+    }
+  },
+  {
+    "scientificName": "Synallaxis albilora",
+    "commonNamePT": "joão-do-pantanal",
+    "tier": 1,
+    "result": {
+      "qid": "Q1265320",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Synallaxis_albilora.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jo%C3%A3o-do-pantanal",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-lored_spinetail"
+    }
+  },
+  {
+    "scientificName": "Synallaxis frontalis",
+    "commonNamePT": "petrim",
+    "tier": 3,
+    "result": {
+      "qid": "Q1272376",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Synallaxis_frontalis_-_En%C3%A9as_V._Gouv%C3%AAa_Junior_-_396350625.jpeg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Synallaxis_frontalis",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Sooty-fronted_spinetail"
+    }
+  },
+  {
+    "scientificName": "Xenopsaris albinucha",
+    "commonNamePT": "tijerila",
+    "tier": 3,
+    "result": {
+      "qid": "Q669234",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Xenopsaris_albinucha_-_White_naped_xenopsaris_(adult).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Tijerila",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-naped_xenopsaris"
+    }
+  },
+  {
+    "scientificName": "Hemitriccus striaticollis",
+    "commonNamePT": "sebinho-rajado-amarelo",
+    "tier": 3,
+    "result": {
+      "qid": "Q1259371",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 8600,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemitriccus_striaticollis_-_Stripe-necked_Tody_Tyrant%3B_Arari%3B_Maranh%C3%A3o%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sebinho-rajado-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Stripe-necked_tody-tyrant"
+    }
+  },
+  {
+    "scientificName": "Hemitriccus margaritaceiventer",
+    "commonNamePT": "sebinho-de-olho-de-ouro",
+    "tier": 3,
+    "result": {
+      "qid": "Q1263117",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/MOSQUETA_OJO_DORADO_Hemitriccus_margaritaceiventer.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sebinho-de-olho-de-ouro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Pearly-vented_tody-tyrant"
+    }
+  },
+  {
+    "scientificName": "Todirostrum cinereum",
+    "commonNamePT": "ferreirinho-relógio",
+    "tier": 3,
+    "result": {
+      "qid": "Q619229",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Todirostrum_cinereum.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ferreirinho-rel%C3%B3gio",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Common_tody-flycatcher"
+    }
+  },
+  {
+    "scientificName": "Tolmomyias sulphurescens",
+    "commonNamePT": "bico-chato-de-orelha-preta",
+    "tier": 3,
+    "result": {
+      "qid": "Q948121",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tolmomyias_sulphurescens_-Parque_Estadual_da_Cantareira%2C_Sao_Paulo%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bico-chato-de-orelha-preta",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Yellow-olive_flatbill"
+    }
+  },
+  {
+    "scientificName": "Camptostoma obsoletum",
+    "commonNamePT": "risadinha",
+    "tier": 3,
+    "result": {
+      "qid": "Q857875",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Camptostoma_obsoletum_obsoletum_-_Southern_beardless_tyrannulet.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Risadinha",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Southern_beardless_tyrannulet"
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx acutipennis",
+    "commonNamePT": "tricolino-oliváceo",
+    "tier": 1,
+    "result": {
+      "qid": "Q1271610",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 8500,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocolopteryx_acutipennis_Subtropical_Dordito%3B_Mongagu%C3%A1%2C_S%C3%A3o_Paulo%2C_Brazil_(cropped).jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Subtropical_doradito"
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx flaviventris",
+    "commonNamePT": "amarelinho-do-junco",
+    "tier": 1,
+    "result": {
+      "qid": "Q1259214",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 7500,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Warbling_Doradito_(Pseudocolopteryx_flaviventris)_(15773188928).jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Warbling_doradito"
+    }
+  },
+  {
+    "scientificName": "Elaenia parvirostris",
+    "commonNamePT": "tuque-pium",
+    "tier": 3,
+    "result": {
+      "qid": "Q903012",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Elaenia_parvirostris_-Capao_do_Leao%2C_Rio_Grande_do_Sul%2C_Brasil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Guaracava-de-bico-curto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Small-billed_elaenia"
+    }
+  },
+  {
+    "scientificName": "Inezia inornata",
+    "commonNamePT": "alegrinho-do-chaco",
+    "tier": 3,
+    "result": {
+      "qid": "Q1259605",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 5700,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Inezia_inornata_-_Plain_tyrannulet.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Alegrinho-do-chaco",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Plain_inezia"
+    }
+  },
+  {
+    "scientificName": "Myiophobus fasciatus",
+    "commonNamePT": "filipe",
+    "tier": 3,
+    "result": {
+      "qid": "Q941858",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Myiophobus_fasciatus_54670465.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Filipe-de-peito-riscado",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Bran-colored_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Pyrocephalus rubinus",
+    "commonNamePT": "príncipe",
+    "tier": 3,
+    "result": {
+      "qid": "Q572657",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/095_Scarlet_Flycatcher_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pyrocephalus_rubinus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Scarlet_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Sirystes sibilator",
+    "commonNamePT": "gritador",
+    "tier": 3,
+    "result": {
+      "qid": "Q1060993",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Sirystes_sibilator_Sirystes.JPG",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Sibilant_sirystes"
+    }
+  },
+  {
+    "scientificName": "Myiarchus ferox",
+    "commonNamePT": "maria-cavaleira",
+    "tier": 3,
+    "result": {
+      "qid": "Q221422",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Myiarchus_ferox_Atrapamoscas_garrochero_Short-crested_Flycatcher_(16340490505)_(cropped).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Maria-cavaleira",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Short-crested_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Myiarchus tyrannulus",
+    "commonNamePT": "maria-cavaleira-de-rabo-enferrujado",
+    "tier": 3,
+    "result": {
+      "qid": "Q903898",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Myiarchus_tyrannulus_-Piraju%2C_Sao_Paulo%2C_Brazil-8.jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Brown-crested_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Machetornis rixosa",
+    "commonNamePT": "suiriri-cavaleiro",
+    "tier": 3,
+    "result": {
+      "qid": "Q656000",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 34000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Machetornis_rixosa_(picabuey)%2C_color_amendment.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Suiriri-cavaleiro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Cattle_tyrant"
+    }
+  },
+  {
+    "scientificName": "Pitangus sulphuratus",
+    "commonNamePT": "bem-te-vi",
+    "tier": 3,
+    "result": {
+      "qid": "Q202804",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 6850,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_kiskadee_(70240).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bem-te-vi",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Great_kiskadee"
+    }
+  },
+  {
+    "scientificName": "Megarynchus pitangua",
+    "commonNamePT": "neinei",
+    "tier": 3,
+    "result": {
+      "qid": "Q876231",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Boat-billed_flycatcher.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Neinei",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Boat-billed_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Myiodynastes maculatus",
+    "commonNamePT": "bem-te-vi-rajado",
+    "tier": 3,
+    "result": {
+      "qid": "Q875860",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 43000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Myiodynastes_maculatus_-Piraju%2C_Brasil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Myiodynastes_maculatus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Streaked_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Tyrannus albogularis",
+    "commonNamePT": "suiriri-de-garganta-branca",
+    "tier": 3,
+    "result": {
+      "qid": "Q1261458",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 37000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tyrannus_albogularis_-_White-throated_Flycatcher%3B_Iranduba%2C_Amazonas%2C_Brazil.jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-throated_kingbird"
+    }
+  },
+  {
+    "scientificName": "Tyrannus melancholicus",
+    "commonNamePT": "suiriri",
+    "tier": 3,
+    "result": {
+      "qid": "Q1273578",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 4410,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tyrannus-melancholicus-001.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Suiriri-tropical",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Tropical_kingbird"
+    }
+  },
+  {
+    "scientificName": "Myiozetetes cayanensis",
+    "commonNamePT": "bentevizinho-de-asa-ferrugínea",
+    "tier": 3,
+    "result": {
+      "qid": "Q1271552",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Myiozetetes_cayanensis_-Manizales%2C_Caldas%2C_Colombia-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Bentevizinho-de-asa-ferrug%C3%ADnea",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rusty-margined_flycatcher"
+    }
+  },
+  {
+    "scientificName": "Arundinicola leucocephala",
+    "commonNamePT": "freirinha",
+    "tier": 3,
+    "result": {
+      "qid": "Q778373",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Arundinicola_leucocephala_-Piraju%2C_Sao_Paulo%2C_Brazil_-male-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Lavadeira-de-cabe%C3%A7a-branca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-headed_marsh_tyrant"
+    }
+  },
+  {
+    "scientificName": "Fluvicola albiventer",
+    "commonNamePT": "lavadeira-de-cara-branca",
+    "tier": 3,
+    "result": {
+      "qid": "Q840074",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Fluvicola_albiventer_(cropped).jpeg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Lavadeira-de-cara-branca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-backed_water_tyrant"
+    }
+  },
+  {
+    "scientificName": "Donacobius atricapillus",
+    "commonNamePT": "japacanim",
+    "tier": 3,
+    "result": {
+      "qid": "Q1424769",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Donacobius_atricapilla_-Fazenda_Campo_de_Ouro%2C_Piraju%2C_Sao_Paulo%2C_Brasil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Japacanim",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Black-capped_donacobius"
+    }
+  },
+  {
+    "scientificName": "Tachycineta albiventris",
+    "commonNamePT": "andorinha-do-rio",
+    "tier": 3,
+    "result": {
+      "qid": "Q3136328",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/White-winged_Swallow_1052.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Andorinha-do-rio",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/White-winged_swallow"
+    }
+  },
+  {
+    "scientificName": "Stelgidopteryx ruficollis",
+    "commonNamePT": "andorinha-serradora",
+    "tier": 3,
+    "result": {
+      "qid": "Q2718656",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Stelgidopteryx_ruficollis_-Manizales%2C_Caldas%2C_Colombia-8_(cropped).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Andorinha-serradora",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Southern_rough-winged_swallow"
+    }
+  },
+  {
+    "scientificName": "Polioptila dumicola",
+    "commonNamePT": "balança-rabo-de-máscara",
+    "tier": 3,
+    "result": {
+      "qid": "Q902015",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tacma.jpg",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Masked_gnatcatcher"
+    }
+  },
+  {
+    "scientificName": "Campylorhynchus turdinus",
+    "commonNamePT": "catatau",
+    "tier": 3,
+    "result": {
+      "qid": "Q2667759",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 39000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Campylorhynchus_turdinus_unicolor_581024203.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Campylorhynchus_turdinus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Thrush-like_wren"
+    }
+  },
+  {
+    "scientificName": "Cantorchilus leucotis",
+    "commonNamePT": "garrinchão-de-barriga-vermelha",
+    "tier": 3,
+    "result": {
+      "qid": "Q4780970",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Garrinch%C3%A3o-de-barriga-vermelha_(Cantorchilus_leucotis).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cantorchilus_leucotis",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Buff-breasted_wren"
+    }
+  },
+  {
+    "scientificName": "Cyclarhis gujanensis",
+    "commonNamePT": "pitiguari",
+    "tier": 3,
+    "result": {
+      "qid": "Q678728",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclarhis_gujanensis_-eating_green_caterpillar.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pitiguari",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rufous-browed_peppershrike"
+    }
+  },
+  {
+    "scientificName": "Cyanocorax cyanomelas",
+    "commonNamePT": "gralha-do-pantanal",
+    "tier": 3,
+    "result": {
+      "qid": "Q1433146",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 207,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyanocorax_cyanomelas_1838.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Gralha-cinza",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Purplish_jay"
+    }
+  },
+  {
+    "scientificName": "Turdus rufiventris",
+    "commonNamePT": "sabiá-laranjeira",
+    "tier": 3,
+    "result": {
+      "qid": "Q609283",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 5800,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rufous-bellied_thrush_(Turdus_rufiventris).JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sabi%C3%A1-laranjeira",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rufous-bellied_thrush"
+    }
+  },
+  {
+    "scientificName": "Arremon polionotus",
+    "commonNamePT": "tico-tico-de-costas-cinzas",
+    "tier": 3,
+    "result": {
+      "qid": "Q1588810",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 2900,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Arremon_flavirostris_-Piraju%2C_Sao_Paulo%2C_Brazil-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Tico-tico-de-bico-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Saffron-billed_sparrow"
+    }
+  },
+  {
+    "scientificName": "Psarocolius decumanus",
+    "commonNamePT": "japu",
+    "tier": 3,
+    "result": {
+      "qid": "Q906518",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 11200,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Psarocolius_decumanus.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Japu-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Crested_oropendola"
+    }
+  },
+  {
+    "scientificName": "Procacicus solitarius",
+    "commonNamePT": "iraúna-de-bico-branco",
+    "tier": 3,
+    "result": {
+      "qid": "Q944938",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 80,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cacicus_solitarius_-Argentina-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ira%C3%BAna-de-bico-branco",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Solitary_cacique"
+    }
+  },
+  {
+    "scientificName": "Cacicus cela",
+    "commonNamePT": "xexéu",
+    "tier": 3,
+    "result": {
+      "qid": "Q580297",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 5250,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellow-rumped_Cacique_-_Pantanal_-_Brazil_H8O2199_(23593614830).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cacicus_cela",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Yellow-rumped_cacique"
+    }
+  },
+  {
+    "scientificName": "Icterus pyrrhopterus",
+    "commonNamePT": "encontro",
+    "tier": 3,
+    "result": {
+      "qid": "Q5419907",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Epaulet_Oriole_(Icterus_cayanensis)-6-3c.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Encontro_(ave)",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Variable_oriole"
+    }
+  },
+  {
+    "scientificName": "Icterus croconotus",
+    "commonNamePT": "joão-pinto",
+    "tier": 2,
+    "result": {
+      "qid": "Q1307046",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Orange-backed_troupial.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Jo%C3%A3o-pinto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Orange-backed_troupial"
+    }
+  },
+  {
+    "scientificName": "Molothrus rufoaxillaris",
+    "commonNamePT": "chupim-azeviche",
+    "tier": 3,
+    "result": {
+      "qid": "Q1591515",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 58,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Screaming_Cowbird_(Molothrus_rufoaxillaris).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Vira-bosta-picum%C3%A3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Screaming_cowbird"
+    }
+  },
+  {
+    "scientificName": "Molothrus oryzivorus",
+    "commonNamePT": "iraúna-grande",
+    "tier": 3,
+    "result": {
+      "qid": "Q1589673",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Molothrus_oryzivorus.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Ira%C3%BAna-grande",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Giant_cowbird"
+    }
+  },
+  {
+    "scientificName": "Agelaioides badius",
+    "commonNamePT": "asa-de-telha",
+    "tier": 3,
+    "result": {
+      "qid": "Q1584315",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Baywing_(Agelaioides_badius).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Asa-de-telha-escuro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Grayish_baywing"
+    }
+  },
+  {
+    "scientificName": "Agelasticus cyanopus",
+    "commonNamePT": "carretão-do-oeste",
+    "tier": 3,
+    "result": {
+      "qid": "Q2668913",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Unicolored_Blackbird_(Agelasticus_cyanopus)_male.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Carret%C3%A3o_(ave)",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Unicolored_blackbird"
+    }
+  },
+  {
+    "scientificName": "Geothlypis aequinoctialis",
+    "commonNamePT": "pia-cobra",
+    "tier": 3,
+    "result": {
+      "qid": "Q1300593",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 1900,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Geothlypis_aequinoctialis_Masked_Yellowthroat_(male)%3B_Serra_do_Navio%2C_Amap%C3%A1%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Geothlypis_aequinoctialis",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Masked_yellowthroat"
+    }
+  },
+  {
+    "scientificName": "Myiothlypis flaveola",
+    "commonNamePT": "canário-do-mato",
+    "tier": 3,
+    "result": {
+      "qid": "Q27075946",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 13100,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Basileuterus_flaveolus.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pula-pula-amarelo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Flavescent_warbler"
+    }
+  },
+  {
+    "scientificName": "Nemosia pileata",
+    "commonNamePT": "saíra-de-chapéu-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q2668130",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 16000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Nemosia_pileata_Hooded_Tanager_(male)%2C_S%C3%A3o_Domingos%2C_Goi%C3%A1s%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sa%C3%ADra-de-chap%C3%A9u-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Hooded_tanager"
+    }
+  },
+  {
+    "scientificName": "Eucometis penicillata",
+    "commonNamePT": "pipira-da-taoca",
+    "tier": 3,
+    "result": {
+      "qid": "Q1587130",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 27000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Eucometis_penicillata_-_Adam_Jackson_-_453395555_(cropped).jpeg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pipira-da-taoca",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Grey-headed_tanager"
+    }
+  },
+  {
+    "scientificName": "Paroaria capitata",
+    "commonNamePT": "cavalaria",
+    "tier": 2,
+    "result": {
+      "qid": "Q779285",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 21000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellow-billed_cardinal_(Paroaria_capitata).JPG",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Cardeal-do-pantanal",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Yellow-billed_cardinal"
+    }
+  },
+  {
+    "scientificName": "Ramphocelus carbo",
+    "commonNamePT": "pipira-vermelha",
+    "tier": 3,
+    "result": {
+      "qid": "Q906965",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramphocelus_carbo_-Piraju%2C_Sao_Paulo%2C_Brazil_-male-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Pipira-vermelha",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Silver-beaked_tanager"
+    }
+  },
+  {
+    "scientificName": "Coryphospingus cucullatus",
+    "commonNamePT": "tico-tico-rei",
+    "tier": 3,
+    "result": {
+      "qid": "Q1587819",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Coryphospingus_cucullatus_-Piraju%2C_Sao_Paulo%2C_Brazil-8_(1).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Coryphospingus_cucullatus",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Red_pileated_finch"
+    }
+  },
+  {
+    "scientificName": "Hemithraupis guira",
+    "commonNamePT": "saíra-de-papo-preto",
+    "tier": 3,
+    "result": {
+      "qid": "Q1028619",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 12000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemithraupis_guira.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sa%C3%ADra-de-papo-preto",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Guira_tanager"
+    }
+  },
+  {
+    "scientificName": "Conirostrum speciosum",
+    "commonNamePT": "figuinha-de-rabo-castanho",
+    "tier": 3,
+    "result": {
+      "qid": "Q1588553",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Conirostrum_speciosum.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Figuinha-de-rabo-castanho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Chestnut-vented_conebill"
+    }
+  },
+  {
+    "scientificName": "Thraupis sayaca",
+    "commonNamePT": "sanhaço-cinzento",
+    "tier": 3,
+    "result": {
+      "qid": "Q1588073",
+      "iucnStatus": null,
+      "lengthCm": null,
+      "massG": 32000,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Thraupis_sayaca_-_Sayaca_Tanager_-_Bertioga%2C_S%C3%A3o_Paulo%2C_Brazil.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Sanha%C3%A7o-cinzento",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Sayaca_tanager"
+    }
+  },
+  {
+    "scientificName": "Sporophila collaris",
+    "commonNamePT": "coleiro-do-brejo",
+    "tier": 3,
+    "result": {
+      "qid": "Q3121356",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 10800,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Sporophila_collaris_-Dourados%2C_Mato_Grosso_do_Sul%2C_Brazil_-male-8.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Coleiro-do-brejo",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Rusty-collared_seedeater"
+    }
+  },
+  {
+    "scientificName": "Sporophila angolensis",
+    "commonNamePT": "curió",
+    "tier": 3,
+    "result": {
+      "qid": "Q28867456",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Chestnut-bellied_Seed-Finch_(Oryzoborus_angolensis).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Curi%C3%B3",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Chestnut-bellied_seed_finch"
+    }
+  },
+  {
+    "scientificName": "Sporophila caerulescens",
+    "commonNamePT": "coleirinho",
+    "tier": 3,
+    "result": {
+      "qid": "Q2668397",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Double-collared_seedeater_(Sporophila_caerulescens_caerulescens)_male_Colonia.jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Coleirinho",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Double-collared_seedeater"
+    }
+  },
+  {
+    "scientificName": "Sicalis flaveola",
+    "commonNamePT": "canário-da-terra",
+    "tier": 3,
+    "result": {
+      "qid": "Q1064372",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": 19200,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Sicalis_flaveola_por_Luiz_Alves_(01).jpg",
+      "wikipediaPT": "https://pt.wikipedia.org/wiki/Can%C3%A1rio-da-terra-verdadeiro",
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Saffron_finch"
+    }
+  },
+  {
+    "scientificName": "Saltator coerulescens",
+    "commonNamePT": "trinca-ferro-gongá",
+    "tier": 3,
+    "result": {
+      "qid": "Q531938",
+      "iucnStatus": "LC",
+      "lengthCm": null,
+      "massG": null,
+      "wikimediaImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Saltator_coerulescens_-_Greyish_Saltator.JPG",
+      "wikipediaPT": null,
+      "wikipediaEN": "https://en.wikipedia.org/wiki/Bluish-grey_saltator"
+    }
+  }
+]

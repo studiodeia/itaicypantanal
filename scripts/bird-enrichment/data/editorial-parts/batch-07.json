@@ -1,0 +1,342 @@
+{
+  "Sirystes sibilator": {
+    "description": "Tiranídeo de copa que emite chamados agudos e ressonantes. Forrageia em pares no dossel de matas ciliares e cerradões do Pantanal.",
+    "overview": "O gritador é um tiranídeo de porte médio, com cerca de 18 cm, que habita o dossel de florestas primárias, matas ciliares e cerradões. Possui plumagem discreta — coroa preta com leve crista, face cinza-ardósia, dorso oliváceo acinzentado e ventre que vai do cinza ao branco. A espécie ocorre do sul da Amazônia até o norte do Rio Grande do Sul, além de Paraguai e norte da Argentina. Residente na maior parte de sua área, o gritador forrageia tipicamente em pares no alto das árvores, integrando e por vezes liderando bandos mistos. Alimenta-se de insetos grandes capturados em voos curtos a partir de poleiros elevados e complementa a dieta com frutos. Sua vocalização é inconfundível: um chamado alto e penetrante que ecoa pelo dossel florestal.",
+    "habitat": "Habita florestas primárias, matas secundárias maduras, matas ciliares e cerradões. Permanece quase exclusivamente no dossel, raramente descendo a estratos mais baixos. No Pantanal, ocorre em áreas florestadas adjacentes a cursos d'água e em remanescentes de mata seca.",
+    "diet": "Alimenta-se principalmente de insetos grandes capturados com voos curtos a partir de poleiros no dossel. Complementa a dieta com frutos, que são apanhados da vegetação durante breves manobras de voo. Forrageia sobre áreas amplas, cobrindo extensões consideráveis de copa.",
+    "behavior": "Tipicamente encontrado em pares, integra bandos mistos de alimentação com frequência e pode atuar como espécie líder do bando. Tem comportamento territorial e vocaliza ativamente, emitindo chamados agudos e ressonantes que funcionam como sinal de presença no dossel.",
+    "bestTime": "Pode ser observado ao longo de todo o ano no Pantanal, sendo residente na região. A detecção é facilitada pela vocalização forte, especialmente nas primeiras horas da manhã, quando os bandos mistos de copa estão mais ativos. A estação seca (maio a outubro) favorece a observação pela menor densidade de folhagem.",
+    "photographyTips": [
+      "Posicione-se em clareiras ou bordas de mata para obter ângulos de visão do dossel",
+      "Utilize teleobjetiva de pelo menos 400 mm — a espécie permanece no alto das árvores",
+      "Localize-a pelo chamado alto e ressonante antes de buscar visualmente",
+      "Acompanhe bandos mistos de copa, onde o gritador pode atuar como espécie líder",
+      "A luz difusa do início da manhã reduz o contraste excessivo típico de fotos contra o céu"
+    ],
+    "size": "Mede entre 18 e 18,5 cm de comprimento e pesa cerca de 26 a 28 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Embora a população esteja em declínio em algumas áreas do sudeste do Brasil devido à fragmentação florestal, a espécie possui ampla distribuição e ocorre em diversas unidades de conservação."
+  },
+  "Myiarchus ferox": {
+    "description": "Tiranídeo de crista curta, comum em bordas de mata e áreas degradadas. Frequenta florestas úmidas de baixada e vegetação secundária no Pantanal.",
+    "overview": "A maria-cavaleira é um tiranídeo de porte médio da família Tyrannidae, amplamente distribuído pela América do Sul — da Colômbia e Venezuela até a Argentina e Uruguai. Habita florestas úmidas de baixada e áreas de vegetação secundária, incluindo ambientes alterados. No Pantanal, ocorre em bordas de mata, capões e áreas de transição entre vegetação densa e campos abertos. Como outros representantes do gênero Myiarchus, possui bico relativamente forte e crista discreta. Alimenta-se de insetos capturados em voos curtos a partir de poleiros e inclui frutos na dieta. A espécie é residente e pode ser encontrada ao longo de todo o ano na região.",
+    "habitat": "Ocupa florestas subtropicais e tropicais úmidas de baixada, além de matas secundárias em diversos estágios de regeneração. Frequenta bordas de mata, capões e áreas com vegetação degradada. No Pantanal, pode ser encontrada em ambientes florestados próximos a cursos d'água e em áreas de transição.",
+    "diet": "Alimenta-se de insetos capturados com voos curtos a partir de poleiros, técnica típica do gênero Myiarchus. Inclui frutos na dieta, especialmente fora do período reprodutivo. Forrageia em estratos médios e altos da vegetação.",
+    "behavior": "Espécie geralmente solitária ou encontrada em pares. Utiliza cavidades em árvores para nidificação, comportamento característico do gênero. Defende o território de forma ativa durante a estação reprodutiva, emitindo vocalizações insistentes.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. A observação é mais produtiva no período da seca (maio a outubro), quando a vegetação menos densa facilita a visualização nas bordas de mata e capões. Vocaliza com mais frequência nas primeiras horas do dia.",
+    "photographyTips": [
+      "Busque a espécie em poleiros expostos nas bordas de mata e capões",
+      "Teleobjetiva de 300-400 mm é adequada, pois utiliza estratos médios da vegetação",
+      "Observe voos curtos de captura de insetos para antecipar o retorno ao poleiro",
+      "A estação seca oferece melhor visibilidade e fundos menos confusos",
+      "Diferencie da maria-cavaleira-de-rabo-enferrujado pela crista mais curta e pela vocalização"
+    ],
+    "size": "Mede cerca de 18 a 19 cm de comprimento.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição geográfica e adapta-se a habitats secundários, o que contribui para a estabilidade populacional."
+  },
+  "Myiarchus tyrannulus": {
+    "description": "Tiranídeo robusto de crista volumosa e cauda avermelhada. Nidifica em cavidades naturais e ocorre em matas ciliares e cerrados do Pantanal.",
+    "overview": "A maria-cavaleira-de-rabo-enferrujado é um dos maiores representantes do gênero Myiarchus, com comprimento entre 18 e 23 cm. No Pantanal, a subespécie M. t. tyrannulus habita matas ciliares, cerrados e áreas de vegetação aberta com árvores esparsas. Possui plumagem pardo-acinzentada no dorso, ventre amarelo vivo e cauda com conspícuas penas internas avermelhadas que dão origem ao nome popular. Alimenta-se de artrópodes capturados em voos curtos e inclui frutos na dieta, especialmente fora da estação reprodutiva. Nidifica obrigatoriamente em cavidades — naturais ou escavadas por pica-paus — em árvores ou cactos. A vocalização áspera e o porte avantajado distinguem-na de outras espécies do gênero presentes na região.",
+    "habitat": "Habita matas ciliares, cerrados, savanas arborizadas e áreas abertas com árvores esparsas. Depende de cavidades arbóreas para nidificação, o que determina sua associação com ambientes que possuem árvores maduras ou mortas. No Pantanal, ocorre em paisagens de transição entre mata e campo.",
+    "diet": "Na estação reprodutiva, alimenta-se quase exclusivamente de artrópodes, incluindo eventualmente pequenos vertebrados. Fora desse período, incorpora frutos em proporção significativa. Captura presas com voos curtos a partir de poleiros, retirando-as da vegetação; ocasionalmente captura insetos em pleno voo.",
+    "behavior": "Espécie territorial durante a reprodução, que ocorre na primavera e verão locais. Constrói ninho em cavidades preexistentes utilizando fibras vegetais, pelos, penas e pele de serpente. A fêmea realiza a incubação e ambos os pais alimentam os filhotes. Pode ser agressiva na defesa do território de nidificação.",
+    "bestTime": "A estação seca (maio a outubro) é o melhor período para observação no Pantanal, quando a vegetação mais aberta facilita a visualização. A espécie é residente na região e pode ser encontrada ao longo de todo o ano. Vocaliza ativamente nas primeiras horas da manhã.",
+    "photographyTips": [
+      "Busque em poleiros expostos próximos a cavidades em árvores secas ou mortas",
+      "Fotografe em voo de retorno ao poleiro para registrar a cauda avermelhada aberta",
+      "Teleobjetiva de 400 mm ou mais oferece boas possibilidades de retratos detalhados",
+      "A luz lateral do início da manhã realça o contraste entre o ventre amarelo e o dorso pardo",
+      "Procure ninhos ativos em cavidades — a espécie retorna com frequência ao local de nidificação"
+    ],
+    "size": "Mede entre 18 e 23 cm de comprimento. O peso varia de 21 a 54 g, conforme a subespécie.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A população é considerada estável ou em crescimento. A espécie é comum em grande parte de sua área de distribuição e ocorre em diversos habitats protegidos."
+  },
+  "Machetornis rixosa": {
+    "description": "Tiranídeo amarelo associado a bovinos e equinos, dos quais retira parasitas. Frequente em pastagens, campos e áreas abertas do Pantanal.",
+    "overview": "O suiriri-cavaleiro é um tiranídeo de porte médio, com cerca de 18 cm, notável pelo hábito de pousar sobre bovinos e equinos — comportamento que originou seu nome popular. Possui ventre amarelo, pescoço claro, cabeça cinza e dorso marrom. No Pantanal, é uma presença constante em pastagens, campos, fazendas e áreas abertas, incluindo margens de rios e praias. Alimenta-se de carrapatos e outros parasitas que encontra sobre o gado, estabelecendo uma relação mutualística com os grandes herbívoros da região. Constrói ninho de gravetos em arbustos. O nome tupi suiriri reflete sua vocalização, e o epíteto rixosa, do latim, significa briguento — referência ao temperamento territorial da espécie.",
+    "habitat": "Ocupa pastagens, campos, fazendas, parques, praias fluviais e áreas abertas em geral. Está fortemente associado à presença de grandes herbívoros domésticos ou silvestres. No Pantanal, é encontrado em campos inundáveis durante a seca e em áreas de criação de gado ao longo de todo o ano.",
+    "diet": "Alimenta-se principalmente de carrapatos e outros ectoparasitas que coleta diretamente sobre bovinos e equinos. Também captura insetos em voo ou no solo. Essa relação com o gado constitui um dos exemplos mais visíveis de mutualismo entre aves e mamíferos no Pantanal.",
+    "behavior": "Pousa com frequência no dorso de bovinos e equinos, percorrendo o corpo dos animais em busca de parasitas. Espécie territorial, defende ativamente sua área de forrageio. Constrói ninho de gravetos em arbustos baixos. A muda de penas ocorre após o período reprodutivo.",
+    "bestTime": "Presente no Pantanal durante todo o ano. A observação é facilitada pela associação com gado, bastando procurar rebanhos em áreas de pastagem. Na estação seca (maio a outubro), os campos mais acessíveis concentram os animais e, consequentemente, os suiriris-cavaleiros.",
+    "photographyTips": [
+      "Fotografe pousado sobre o dorso de cavalos ou bois para registrar o comportamento típico",
+      "Aproximação é relativamente fácil, pois a espécie é habituada à presença humana e do gado",
+      "Use 200-400 mm para retratos contextualizados com o animal hospedeiro",
+      "A luz dourada do fim de tarde em pastagens cria composições com atmosfera pantaneira",
+      "Registre o momento da captura de parasitas sobre o gado para documentar o comportamento mutualístico"
+    ],
+    "size": "Mede cerca de 18 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie beneficia-se da presença de pastagens e criação de gado, o que contribui para populações estáveis em áreas rurais."
+  },
+  "Pitangus sulphuratus": {
+    "description": "Ave onívora e adaptável, uma das mais conhecidas do Brasil. Seu canto trissilábico inconfundível ecoa por todo o Pantanal, de matas ciliares a áreas urbanas.",
+    "overview": "O bem-te-vi é uma das aves mais populares e difundidas do Brasil, presente em praticamente todos os ambientes — de matas densas a praças urbanas. Com cerca de 22 a 25 cm e aproximadamente 60 g, possui ventre amarelo vivo, dorso pardo, listra branca sobre a cabeça e bico preto achatado. No Pantanal, ocorre em matas ciliares, campos com árvores, margens de rios e lagoas. É um dos passeriformes mais versáteis em termos alimentares: consome insetos, frutos, pequenos peixes, girinos, lagartos e até ovos de jacaré. Captura presas em voo, na vegetação e na superfície da água. Constrói ninho esférico com entrada lateral, utilizando inclusive materiais de origem humana. O canto trissilábico que dá nome à espécie é uma das vocalizações mais reconhecidas da avifauna neotropical. A população global é estimada entre 5 e 50 milhões de indivíduos.",
+    "habitat": "Ocupa uma variedade excepcional de ambientes: matas ciliares, cerrados, campos com árvores, margens de rios e lagoas, áreas urbanas e periurbanas. No Pantanal, é encontrado em praticamente todos os ambientes, desde áreas florestadas até campos abertos e proximidades de construções humanas.",
+    "diet": "Onívoro de dieta extremamente variada. Consome insetos em grande quantidade, frutos diversos (mamão, pitanga, laranja), minhocas, pequenos peixes, girinos, lagartos, pequenas serpentes e crustáceos. Captura presas em voo, apanha-as da vegetação e mergulha para pescar em águas rasas. Também se alimenta de ectoparasitas sobre o gado.",
+    "behavior": "Espécie monogâmica que defende o território de nidificação com vigor, investindo contra aves de rapina e outros animais que se aproximam do ninho. Macho e fêmea cantam em dueto durante o acasalamento. O ninho esférico, com entrada lateral, mede cerca de 25 cm de diâmetro e é construído com ramos vegetais. A ninhada tem 2 a 4 ovos, incubados por ambos os pais durante 17 dias. Período reprodutivo de setembro a dezembro.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano, sendo uma das espécies mais fáceis de observar. O canto alto e frequente facilita a detecção em qualquer horário do dia, embora a atividade seja maior pela manhã. Na estação seca (maio a outubro), a concentração de fauna aquática em poças rasas atrai bem-te-vis que pescam na superfície.",
+    "photographyTips": [
+      "Espécie pouco arisca — abordagem paciente permite fotos a curta distância com 100-200 mm",
+      "Registre o mergulho para captura de peixes em águas rasas, comportamento frequente no Pantanal",
+      "Poleiros em fios, cercas e galhos expostos oferecem fundos limpos para retratos",
+      "Fotografe o ninho esférico com entrada lateral, estrutura arquitetônica distinta",
+      "O ventre amarelo vivo é realçado com luz frontal suave, evitando sombras duras no bico escuro"
+    ],
+    "size": "Mede entre 22 e 25 cm de comprimento e pesa aproximadamente 60 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A população global é estimada entre 5 e 50 milhões de indivíduos. A espécie demonstra grande capacidade de adaptação a ambientes alterados, com populações estáveis ou em crescimento."
+  },
+  "Megarynchus pitangua": {
+    "description": "Semelhante ao bem-te-vi, diferencia-se pelo bico largo e achatado. Habita florestas, cerrados e áreas próximas à água no Pantanal.",
+    "overview": "O neinei é um tiranídeo de porte médio, com aproximadamente 23 cm, frequentemente confundido com o bem-te-vi devido à aparência semelhante. A principal diferença morfológica está no bico: largo e achatado no neinei, enquanto o bem-te-vi possui bico mais estreito e pontiagudo. O nome do gênero Megarynchus, do grego, significa exatamente 'bico grande'. A vocalização também é distinta, e o nome popular neinei é onomatopaico. Habita florestas, cerrados e paisagens abertas com árvores esparsas, com preferência por áreas próximas à água. No Pantanal, ocorre em matas ciliares e capões. A dieta inclui frutos, artrópodes e, ocasionalmente, peixes. A espécie é parcialmente migratória, e o casal canta em dueto, embora de forma pouco sincronizada. Constrói ninho pequeno com ramos secos em partes altas de árvores isoladas.",
+    "habitat": "Habita florestas, cerrados e paisagens abertas com árvores esparsas, preferencialmente próximo a cursos d'água. No Pantanal, ocorre em matas ciliares, capões e bordas de áreas florestadas. Pode ser encontrado também em áreas urbanas com arborização.",
+    "diet": "Alimenta-se de frutos, artrópodes e, ocasionalmente, peixes. O bico largo e achatado é uma adaptação que facilita a captura de presas maiores e o manuseio de frutos. Forrageia em estratos médios e altos da vegetação.",
+    "behavior": "O casal mantém território e canta em dueto, embora a sincronização seja irregular. Constrói ninho pequeno de ramos secos em partes altas de árvores isoladas. A fêmea põe 2 a 3 ovos. Realiza migrações parciais em algumas populações.",
+    "bestTime": "A observação é mais produtiva na estação seca (maio a outubro), quando a folhagem reduzida facilita a visualização. A espécie vocaliza ativamente pela manhã, e o chamado distintivo auxilia na diferenciação do bem-te-vi. Presente na região ao longo de boa parte do ano.",
+    "photographyTips": [
+      "Fotografe o bico largo e achatado em perfil para evidenciar a principal diferença em relação ao bem-te-vi",
+      "Busque a espécie em bordas de mata próximas a cursos d'água",
+      "Use teleobjetiva de 300-400 mm para retratos detalhados no estrato médio da vegetação",
+      "Registre o comportamento de captura de frutos para documentar a dieta",
+      "Compare lado a lado com fotos do bem-te-vi para material educativo sobre espécies semelhantes"
+    ],
+    "size": "Mede aproximadamente 23 cm de comprimento quando adulto.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição, do México à Argentina, e ocorre em diversas unidades de conservação."
+  },
+  "Myiodynastes maculatus": {
+    "description": "Tiranídeo listrado que nidifica em cavidades arbóreas. Espécie migratória austral que se reproduz no Pantanal durante a primavera e o verão.",
+    "overview": "O bem-te-vi-rajado é um tiranídeo de porte médio, reconhecível pela plumagem pardo-escura com estrias brancas e pardas no corpo, cauda avermelhada e mancha amarela na coroa. No Pantanal, a subespécie M. m. solitarius é migratória austral: reproduz-se na região durante a primavera e o verão, deslocando-se para o norte — frequentemente até a Amazônia — no período não reprodutivo. Habita bordas de matas secundárias, florestas de galeria, matas de várzea e áreas abertas com árvores. Nidifica em cavidades arbóreas, geralmente feitas por pica-paus ou resultantes de quebras de galhos, podendo utilizar também ninhos abandonados de joão-de-barro. A dieta baseia-se em insetos, incluindo cigarras, vespas e formigas voadoras, complementada por frutos pequenos.",
+    "habitat": "Frequenta bordas de matas secundárias, florestas de galeria, matas de várzea e áreas abertas com vegetação arbórea. Pode utilizar áreas verdes urbanas com pelo menos 10 hectares durante o período reprodutivo. No Pantanal, associa-se a ambientes florestados com cavidades disponíveis para nidificação.",
+    "diet": "Alimenta-se de insetos como cigarras, vespas e formigas voadoras, complementando a dieta com frutos pequenos que consegue manipular com o bico. Forrageia geralmente pousado em poleiros nas bordas de mata, realizando voos curtos para captura de presas.",
+    "behavior": "Espécie migratória austral — reproduz-se no sul e sudeste da América do Sul e desloca-se para o norte no período não reprodutivo, percorrendo por vezes mais de 3.000 km. Nidifica em cavidades preexistentes, como ocos de pica-pau ou ninhos abandonados de joão-de-barro. Passa a maior parte do tempo pousada em poleiros nas bordas de mata.",
+    "bestTime": "No Pantanal, a observação é mais favorável entre setembro e março, quando a espécie está presente para reprodução. Durante a estação seca (maio a agosto), a maioria dos indivíduos já migrou para regiões mais ao norte. A vocalização ativa no período reprodutivo facilita a detecção.",
+    "photographyTips": [
+      "Procure em bordas de mata e áreas com cavidades em árvores durante a estação reprodutiva",
+      "Fotografe em poleiros expostos nas bordas florestais, onde a espécie costuma permanecer",
+      "Registre a cauda avermelhada aberta em voo para documentar o padrão diagnóstico",
+      "Use 400 mm ou mais para retratos detalhados mostrando as estrias características",
+      "Documente a entrada e saída de cavidades de nidificação para séries comportamentais"
+    ],
+    "size": "Mede cerca de 21 a 22 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição, do México à Argentina, com sete subespécies reconhecidas. Adapta-se a ambientes alterados, desde que haja cavidades para nidificação."
+  },
+  "Tyrannus albogularis": {
+    "description": "Tiranídeo de garganta branca e ventre amarelo, associado a ambientes abertos próximos à água. Migratório parcial, reproduz-se no Pantanal na primavera.",
+    "overview": "O suiriri-de-garganta-branca é um tiranídeo de porte médio, com 20 a 21 cm e peso entre 35 e 38 g. Possui cabeça cinza-clara com máscara escura dos loros aos auriculares, dorso verde-oliva, asas pardo-escuras, cauda preta e chanfrada, garganta branca contrastante e ventre amarelo vivo. É migratório parcial: reproduz-se principalmente no centro-sul do Brasil entre setembro e abril, deslocando-se para o norte na estação não reprodutiva, alcançando Amazônia ocidental, Peru, Equador e Venezuela. No Pantanal, habita cerrados, savanas, bordas de matas de galeria e áreas com palmeiras, geralmente próximo a cursos d'água. Alimenta-se de insetos capturados em voos a partir de poleiros baixos, tipicamente a 3 ou 4 metros do solo.",
+    "habitat": "Ocupa cerrados, savanas, bordas de matas de galeria e áreas com palmeiras de buriti. Geralmente encontrado próximo a cursos d'água em ambientes relativamente abertos e arbustivos. No Pantanal, frequenta áreas de vegetação esparsa com acesso a corpos d'água. Na estação não reprodutiva, pode ocorrer em áreas suburbanas.",
+    "diet": "Alimenta-se de insetos capturados em voo, partindo de poleiros tipicamente posicionados a 3 ou 4 metros de altura. Realiza investidas aéreas curtas, retornando ao poleiro após a captura. A técnica de forrageio é característica dos tiranídeos do gênero Tyrannus.",
+    "behavior": "Migratório parcial com padrão austral — reproduz-se no centro-sul do Brasil e desloca-se para o norte no inverno. O período reprodutivo estende-se de setembro a abril. Constrói ninho em formato de taça, similar a outros representantes do gênero. A espécie é pouco vocal, emitindo trinos agudos e séries irregulares de notas.",
+    "bestTime": "No Pantanal, o melhor período para observação coincide com a estação reprodutiva, de setembro a abril. É mais frequente durante a transição entre seca e chuva (setembro a novembro), quando os indivíduos chegam para reprodução. Encontrado próximo a corpos d'água e áreas de palmeiras.",
+    "photographyTips": [
+      "Busque em poleiros baixos (3-4 m) próximos a cursos d'água e áreas de palmeiras",
+      "Fotografe a garganta branca contrastando com o ventre amarelo, característica diagnóstica",
+      "Registre o voo de captura de insetos para documentar a técnica de forrageio",
+      "Use 300-400 mm — os poleiros relativamente baixos facilitam a aproximação",
+      "A luz do início da manhã em ambientes abertos de cerrado oferece iluminação uniforme"
+    ],
+    "size": "Mede entre 20 e 21 cm de comprimento e pesa de 35 a 38 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A população é considerada estável e a espécie ocorre em diversas áreas protegidas. Demonstra tolerância a habitats alterados."
+  },
+  "Tyrannus melancholicus": {
+    "description": "Tiranídeo comum e conspícuo, pousa em poleiros elevados de onde realiza voos acrobáticos para capturar insetos. Presente em áreas abertas de todo o Pantanal.",
+    "overview": "O suiriri é um dos tiranídeos mais difundidos e visíveis das Américas, ocorrendo do sul dos Estados Unidos ao centro da Argentina. Com 22 cm e cerca de 39 g, possui cabeça cinza com máscara escura na altura dos olhos, coroa laranja parcialmente oculta, dorso verde-acinzentado, garganta clara e ventre amarelo. No Pantanal, habita áreas semiabertas com árvores e arbustos, bordas de mata, campos com árvores esparsas e proximidades de construções. A espécie é monogâmica e os pares permanecem juntos ao longo do ano. Forrageia a partir de poleiros elevados, realizando voos acrobáticos para capturar insetos no ar, e também consome frutos de diversas espécies. Defende o território com agressividade, investindo contra aves muito maiores, como tucanos e gaviões. A população reprodutora global é estimada em cerca de 200 milhões de indivíduos.",
+    "habitat": "Habita áreas semiabertas com árvores e arbustos, bordas de mata, acostamentos, jardins e campos com vegetação arbórea. No Pantanal, frequenta campos inundáveis com árvores esparsas, matas ciliares e áreas de transição. Mantém-se geralmente nos níveis superiores das árvores.",
+    "diet": "Alimenta-se de insetos capturados em voos acrobáticos a partir de poleiros elevados, podendo pairar brevemente para retirar presas da vegetação. Complementa a dieta com frutos de diversas espécies arbóreas, incluindo tamanqueiro e Annonaceae. Forrageia preferencialmente nos estratos superiores da vegetação.",
+    "behavior": "Espécie monogâmica cujos pares permanecem juntos ao longo do ano. Defende o território de forma agressiva contra intrusos, inclusive aves de rapina, tucanos e carcarás. A fêmea constrói ninho raso em formato de taça em forquilhas altas (até 20 m), e incuba 2 a 4 ovos por 16 dias. Os filhotes emplumam em 18 a 19 dias.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano, sendo residente na região. A observação é facilitada pelo hábito de pousar em poleiros elevados e expostos. A atividade de defesa territorial é mais intensa durante o período reprodutivo (setembro a dezembro), quando os voos de investida contra predadores são frequentes.",
+    "photographyTips": [
+      "Poleiros em topos de árvores e galhos expostos oferecem fundos limpos de céu",
+      "Registre voos acrobáticos de captura de insetos com velocidade de obturador acima de 1/2000s",
+      "Documente comportamentos de defesa territorial contra aves maiores",
+      "A coroa alaranjada, geralmente oculta, pode ser fotografada durante exibições de excitação",
+      "Use 300-500 mm para retratos detalhados; a espécie tolera proximidade moderada"
+    ],
+    "size": "Mede cerca de 22 cm de comprimento, pesa 39 g e tem envergadura de 38 a 41 cm.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN, com população em crescimento. A população reprodutora global é estimada em 200 milhões de indivíduos. É uma das espécies mais comuns e amplamente distribuídas da região neotropical."
+  },
+  "Myiozetetes cayanensis": {
+    "description": "Tiranídeo pequeno de asa ferrugínea, encontrado em florestas úmidas de baixada e matas secundárias. Habita áreas próximas a cursos d'água no Pantanal.",
+    "overview": "O bentevizinho-de-asa-ferrugínea é um tiranídeo de porte pequeno a médio, encontrado em florestas subtropicais e tropicais úmidas de baixada, além de matas secundárias em diversos estágios de regeneração. A espécie ocorre do Panamá ao sul da Bolívia e ao centro-leste do Brasil. No Pantanal, frequenta matas ciliares e áreas de vegetação úmida próximas a corpos d'água. Sua plumagem apresenta tons pardos no dorso com bordas ferrugíneas nas penas das asas — característica que origina o nome popular. Semelhante a outros tiranídeos pequenos, alimenta-se de insetos capturados em voos curtos e complementa a dieta com frutos. É frequentemente observado em pares ou pequenos grupos, vocalizando de forma insistente nas proximidades de cursos d'água.",
+    "habitat": "Habita florestas subtropicais e tropicais úmidas de baixada e matas secundárias degradadas. No Pantanal, ocorre em matas ciliares, beiras de rios e lagoas, e áreas de vegetação densa próximas a corpos d'água.",
+    "diet": "Alimenta-se de insetos e outros artrópodes capturados em voos curtos a partir de poleiros. Inclui frutos na dieta, especialmente fora do período reprodutivo. Forrageia nos estratos médios da vegetação, geralmente próximo à água.",
+    "behavior": "Encontrado em pares ou pequenos grupos. Vocaliza com frequência, especialmente próximo a cursos d'água. Defende ativamente o território durante o período reprodutivo. Compartilha habitats com outros tiranídeos de porte similar, diferenciando-se pelas bordas ferrugíneas das asas.",
+    "bestTime": "Pode ser observado ao longo de todo o ano no Pantanal, sendo residente na região. A estação seca (maio a outubro) facilita o acesso a matas ciliares e a visualização em áreas de vegetação ripária. Vocaliza ativamente nas primeiras horas da manhã.",
+    "photographyTips": [
+      "Busque a espécie em matas ciliares e bordas de vegetação próximas a rios e lagoas",
+      "Fotografe as asas abertas para evidenciar as bordas ferrugíneas diagnósticas",
+      "Use teleobjetiva de 300-400 mm nos estratos médios da vegetação ripária",
+      "A luz filtrada das matas ciliares requer ISO mais alto; priorize velocidades acima de 1/500s",
+      "Registre interações com outros tiranídeos semelhantes para comparação de espécies"
+    ],
+    "size": "Mede cerca de 16 a 17 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição do Panamá ao Brasil e ocorre em diversos habitats florestais, incluindo áreas degradadas."
+  },
+  "Arundinicola leucocephala": {
+    "description": "Tiranídeo de pântanos com marcante dimorfismo sexual: macho preto com cabeça branca, fêmea parda com face clara. Único representante de seu gênero.",
+    "overview": "A freirinha é um pequeno tiranídeo de áreas úmidas, único representante do gênero Arundinicola. Apresenta dimorfismo sexual acentuado: o macho possui cabeça inteiramente branca contrastando com corpo preto, enquanto a fêmea é pardacenta com dorso escuro e fronte, face e peito brancos. No Pantanal, habita pântanos, lagoas e áreas alagadas com vegetação emergente, onde é frequentemente observada pousada em talos de gramíneas aquáticas e arbustos baixos próximos à água. A espécie tem ampla distribuição no Brasil e países adjacentes, associada a ambientes palustres. O nome popular freirinha faz referência à plumagem do macho, que lembra o hábito de uma religiosa. Outros nomes regionais incluem maria-velhinha, viuvinha e rendeiro.",
+    "habitat": "Habita exclusivamente áreas úmidas: pântanos, lagoas, banhados e margens alagadas de rios com vegetação emergente. No Pantanal, é encontrada em campos inundados, meandros abandonados e lagoas com taboas e outras plantas aquáticas. Pousa em talos de gramíneas e arbustos baixos sobre a água.",
+    "diet": "Alimenta-se de pequenos insetos capturados em voos curtos a partir de poleiros baixos sobre a água. Forrageia na vegetação emergente dos ambientes palustres, retornando ao poleiro após cada investida. Pode também capturar insetos na superfície da água.",
+    "behavior": "Espécie sedentária associada a áreas úmidas. Encontrada solitária ou em pares, pousada em talos de vegetação aquática emergente. O dimorfismo sexual acentuado facilita a identificação de machos e fêmeas em campo. A vocalização é discreta, com chamados curtos emitidos do poleiro.",
+    "bestTime": "A estação seca (maio a outubro) é o melhor período para observação no Pantanal, quando as lagoas e banhados se concentram, agrupando as aves em áreas menores e mais acessíveis. Na estação chuvosa (novembro a abril), a inundação ampla dispersa os indivíduos por áreas maiores.",
+    "photographyTips": [
+      "Busque machos pousados em talos de vegetação aquática — o contraste preto e branco é fotogênico",
+      "Fotografe ambos os sexos para documentar o dimorfismo acentuado",
+      "Use teleobjetiva de 400-600 mm, pois a espécie mantém distância em ambientes abertos sobre a água",
+      "O reflexo na água calma pode criar composições simétricas em dias sem vento",
+      "A luz do início da manhã em áreas alagadas oferece tons quentes que valorizam a plumagem"
+    ],
+    "size": "Mede cerca de 12 a 13 cm de comprimento.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie tem ampla distribuição na América do Sul e é localmente comum em habitats palustres adequados."
+  },
+  "Fluvicola albiventer": {
+    "description": "Pequeno tiranídeo preto e branco de ambientes alagados. Frequenta margens de lagoas e banhados, pousando em vegetação baixa sobre a água.",
+    "overview": "A lavadeira-de-cara-branca é um pequeno tiranídeo associado a ambientes palustres, com plumagem contrastante em preto e branco. A face e as partes inferiores são brancas, enquanto o dorso e as asas são pretos, criando um padrão distintivo. A espécie ocorre da Argentina ao Peru, incluindo Brasil, Bolívia, Paraguai e Uruguai. No Pantanal, habita pântanos, banhados e margens de lagoas com vegetação emergente, onde é observada pousada em talos de gramíneas aquáticas e arbustos baixos. Alimenta-se de insetos capturados em voos curtos sobre a superfície da água. O nome popular lavadeira faz referência ao hábito de frequentar áreas aquáticas e ao movimento constante da cauda, que lembra o gesto de lavar roupas.",
+    "habitat": "Habita exclusivamente ambientes palustres: pântanos, banhados, margens de lagoas e áreas alagadas com vegetação emergente. No Pantanal, é encontrada em campos inundados e margens de corpos d'água rasos, sempre associada à presença de vegetação aquática baixa.",
+    "diet": "Alimenta-se de pequenos insetos e outros artrópodes capturados em voos curtos sobre a superfície da água. Parte de poleiros baixos na vegetação emergente e retorna ao mesmo ponto ou a um poleiro próximo após cada investida.",
+    "behavior": "Movimenta a cauda de forma característica enquanto pousada, o que contribui para o nome popular. Encontrada solitária ou em pares nos ambientes alagados. Pousa em vegetação baixa sobre a água e em talos emergentes. Espécie territorial durante o período reprodutivo.",
+    "bestTime": "No Pantanal, a estação seca (maio a outubro) concentra as aves em corpos d'água remanescentes, facilitando a observação. Na cheia, os indivíduos dispersam por áreas inundadas mais amplas. Presente ao longo de todo o ano na região.",
+    "photographyTips": [
+      "Busque em margens de lagoas e banhados com vegetação emergente baixa",
+      "A plumagem preto e branca demanda exposição cuidadosa — meça a luz nas áreas brancas para evitar estouros",
+      "Use teleobjetiva de 400-600 mm em ambientes abertos sobre a água",
+      "Registre o movimento característico da cauda para documentar o comportamento diagnóstico",
+      "Reflexos na água calma podem enriquecer a composição, especialmente nas primeiras horas da manhã"
+    ],
+    "size": "Mede cerca de 12 a 13 cm de comprimento.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui distribuição ampla na América do Sul e é localmente comum em habitats palustres adequados."
+  },
+  "Donacobius atricapillus": {
+    "description": "Ave de brejo com canto forte e variado, única representante da família Donacobiidae. Habita margens de rios e lagoas no Pantanal.",
+    "overview": "O japacanim é uma ave da ordem Passeriformes e única representante da família Donacobiidae, o que lhe confere interesse taxonômico particular. Também conhecido como sabiá-do-brejo, habita margens de rios e lagoas, onde se associa à vegetação densa de áreas alagadas. No Pantanal, é uma presença marcante nos banhados e meandros abandonados, reconhecível pelo canto forte e variado que ecoa entre a vegetação ripária. Possui plumagem parda no dorso, partes inferiores amareladas e coroa preta que dá origem ao nome científico atricapilla (cabeça preta). O nome popular japacanim tem origem tupi, derivado de iapakani. A espécie pode ser encontrada em grupos ou solitária, percorrendo a vegetação densa das margens aquáticas.",
+    "habitat": "Habita margens de rios e lagoas com vegetação densa e emergente, banhados e meandros abandonados. No Pantanal, ocorre em áreas alagadas com taboas, gramíneas altas e arbustos densos na interface entre água e terra firme. Raramente se afasta de ambientes palustres.",
+    "diet": "Alimenta-se de insetos e outros artrópodes encontrados na vegetação densa das margens aquáticas. Forrageia entre talos e folhas de plantas emergentes, explorando ativamente a vegetação em busca de presas.",
+    "behavior": "Possui canto forte e variado, emitido frequentemente ao longo do dia. Pode ser encontrado em grupos ou solitário, percorrendo a vegetação densa de áreas alagadas. O casal frequentemente vocaliza em dueto, reforçando o vínculo de par. Espécie sedentária e territorial em ambientes palustres.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. O canto alto e constante facilita a detecção mesmo quando a ave está oculta na vegetação densa. A estação seca (maio a outubro) concentra os indivíduos em áreas úmidas remanescentes, facilitando o acesso.",
+    "photographyTips": [
+      "Localize pelo canto forte e variado antes de buscar visualmente na vegetação densa",
+      "Aguarde em clareiras nas margens de lagoas, onde a espécie pode emergir da vegetação",
+      "Use teleobjetiva de 400-600 mm — a vegetação densa exige distância focal longa e foco rápido",
+      "Registre o dueto vocal do casal, documentando o comportamento cooperativo",
+      "A luz do início da manhã penetra horizontalmente na vegetação ribeirinha, iluminando poleiros ocultos"
+    ],
+    "size": "Mede cerca de 22 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. É a única espécie da família Donacobiidae, com distribuição ampla na América do Sul tropical e populações estáveis."
+  },
+  "Tachycineta albiventris": {
+    "description": "Andorinha de dorso verde-azulado metálico e ventre branco, associada a corpos d'água. Endêmica da América do Sul, voa sobre rios e lagoas do Pantanal.",
+    "overview": "A andorinha-do-rio é uma espécie endêmica da América do Sul e do Caribe, intimamente associada a corpos d'água. Possui dorso verde-azulado com brilho metálico e ventre branco, o que lhe confere aparência distinta em voo. No Pantanal, é uma presença constante sobre rios, lagoas e áreas alagadas, onde realiza voos rápidos e ágeis para capturar insetos na superfície ou em pleno ar. Pertence ao gênero Tachycineta, que inclui outras andorinhas de ambientes aquáticos. A espécie é gregária e frequentemente observada em grupos sobrevoando cursos d'água, especialmente ao entardecer. Nidifica em cavidades próximas a ambientes ribeirinhos.",
+    "habitat": "Associada a corpos d'água: rios, lagoas, banhados e áreas inundadas. No Pantanal, voa sobre os principais cursos d'água e áreas alagadas, utilizando barrancos ribeirinhos e cavidades naturais para nidificação. Raramente se afasta de ambientes aquáticos.",
+    "diet": "Alimenta-se exclusivamente de insetos capturados em voo, geralmente sobre a superfície de rios e lagoas. Realiza voos rápidos e manobras ágeis rente à água, capturando mosquitos, efêmeras e outros insetos aquáticos.",
+    "behavior": "Espécie gregária, frequentemente observada em grupos sobrevoando cursos d'água. Nidifica em cavidades naturais em barrancos ribeirinhos. Os voos de alimentação ocorrem preferencialmente sobre a água, onde a densidade de insetos é maior. Pode formar dormitórios comunais ao entardecer.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano, com observação facilitada sobre rios e lagoas. A atividade de voo é intensa ao amanhecer e ao entardecer. Na estação seca (maio a outubro), a concentração de água em leitos menores agrupa as andorinhas em áreas mais definidas.",
+    "photographyTips": [
+      "Fotografe em voo rente à superfície da água para registrar o brilho metálico do dorso",
+      "Use velocidade de obturador acima de 1/2000s para congelar o voo rápido",
+      "Posicione-se em pontes ou margens elevadas para obter ângulos de cima para baixo sobre a água",
+      "O reflexo na água pode criar composições dinâmicas em condições de luz calma",
+      "Busque grupos pousados em fios ou galhos secos sobre a água para retratos em repouso"
+    ],
+    "size": "Mede cerca de 13 a 14 cm de comprimento.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie é endêmica da América do Sul com distribuição ampla e populações estáveis em ambientes aquáticos."
+  },
+  "Stelgidopteryx ruficollis": {
+    "description": "Andorinha parda de garganta ruiva e voo lento e deliberado. Nidifica em cavidades de barrancos e não forma colônias, ao contrário de outras andorinhas.",
+    "overview": "A andorinha-serradora é uma andorinha de pequeno porte, com 13,5 cm e 15 g, amplamente distribuída da América Central ao norte da Argentina e Uruguai. Possui plumagem parda no dorso, asas e cauda escuras, lombo cinza-claro, garganta e peito superiores ruivos e ventre branco-amarelado. A cauda é ligeiramente bifurcada. O nome serradora refere-se ao aspecto serrilhado das penas primárias externas, característica visível apenas ao segurar a ave. No Pantanal, habita áreas abertas e clareiras florestais, onde realiza voos lentos e deliberados para capturar insetos. Diferencia-se de outras andorinhas por não formar colônias, nidificando solitariamente em cavidades de barrancos, paredões rochosos ou ninhos abandonados de martins-pescadores e jacamares. A subespécie do sul realiza migração para o norte no inverno.",
+    "habitat": "Encontrada em áreas abertas, clareiras florestais e bordas de mata. No Pantanal, frequenta campos abertos, margens de rios com barrancos e áreas de pastagem. Nidifica em cavidades diversas: buracos em barrancos, paredões rochosos e ninhos abandonados de martins-pescadores e jacamares.",
+    "diet": "Alimenta-se de insetos capturados em voo, incluindo percevejos, besouros, moscas, formigas voadoras e heterópteros. O estilo de voo é lento e deliberado, diferente das manobras rápidas de outras andorinhas, voando geralmente baixo sobre a vegetação.",
+    "behavior": "Menos gregária que outras andorinhas, não forma colônias de nidificação. Nidifica em cavidades forradas de gramíneas, com ninhadas de 3 a 6 ovos brancos. A incubação pela fêmea dura 16 a 18 dias e os filhotes emplumam em 13 dias. As populações do sul (S. r. ruficollis) migram para o norte no inverno, enquanto as do norte são sedentárias.",
+    "bestTime": "As populações do sul estão presentes no Pantanal durante a primavera e o verão (setembro a março). A observação é facilitada nas margens de rios com barrancos, onde a espécie nidifica. O voo lento e deliberado permite acompanhamento visual prolongado.",
+    "photographyTips": [
+      "Fotografe em voo baixo sobre campos e margens de rios — o voo lento facilita o acompanhamento",
+      "Busque cavidades em barrancos ribeirinhos onde a espécie nidifica",
+      "Use velocidade de obturador de 1/1000s a 1/1500s — suficiente pelo voo mais lento",
+      "Registre a garganta ruiva, característica diagnóstica, em fotos laterais ou frontais",
+      "A hora dourada em campos abertos oferece boa iluminação para fotos em voo"
+    ],
+    "size": "Mede 13,5 cm de comprimento e pesa cerca de 15 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição da América Central ao sul da América do Sul e adapta-se a áreas abertas e ambientes alterados."
+  },
+  "Polioptila dumicola": {
+    "description": "Pequeno passeriforme ágil com máscara preta (macho) e movimentos rápidos pela vegetação. Habita cerrados e áreas do Pantanal com árvores espaçadas.",
+    "overview": "O balança-rabo-de-máscara é um pequeno passeriforme da família Polioptilidae, com 12 a 13 cm e peso de 5 a 7 g — maior que a maioria dos outros representantes do gênero. O macho apresenta máscara preta conspícua com fina linha branca inferior, partes superiores cinza-azuladas e ventre esbranquiçado. A fêmea não possui máscara, apresentando apenas um crescente preto abaixo do olho. No Pantanal, a subespécie P. d. berlepschi habita cerrados e áreas com árvores espaçadas, diferindo das subespécies do sul que ocorrem no Chaco. Forrageia no dossel de forma ágil, saltando entre galhos e realizando voos curtos para capturar pequenos artrópodes. Frequentemente integra bandos mistos de alimentação. O canto é descrito como variável, curto e melodioso.",
+    "habitat": "A subespécie P. d. berlepschi habita cerrados e áreas do Pantanal com árvores espaçadas, sem dossel contínuo. As subespécies do sul ocorrem preferencialmente no Gran Chaco e em diferentes tipos de savana. No Pantanal, frequenta áreas de vegetação aberta com arbustos e árvores dispersas, geralmente abaixo de 1.000 m de altitude.",
+    "diet": "Alimenta-se exclusivamente de pequenos artrópodes. Forrageia no dossel e entre galhos, capturando presas por gleaning (catação em ramos), hover-gleaning (captura em voo pairado) e investidas curtas contra insetos em voo.",
+    "behavior": "Ave ágil que percorre rapidamente a vegetação em busca de presas, movimentando constantemente o corpo e a cauda. Forrageia solitariamente ou em pares, frequentemente como parte de bandos mistos. A estação reprodutiva vai de setembro a janeiro. O ninho é uma taça profunda feita de fibras vegetais e teia de aranha, camuflada com liquens. A ninhada é de 3 a 5 ovos, incubados por ambos os sexos.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. A observação exige atenção aos movimentos rápidos na vegetação e aos chamados agudos. A estação seca (maio a outubro) facilita a visualização pela menor densidade de folhagem nos cerrados.",
+    "photographyTips": [
+      "Use teleobjetiva de 500-600 mm — a espécie é pequena e ágil",
+      "Fotografe machos para registrar a máscara preta diagnóstica",
+      "Acompanhe bandos mistos, onde a espécie pode ser encontrada com maior frequência",
+      "Velocidade de obturador acima de 1/1000s é necessária para congelar os movimentos rápidos",
+      "Busque momentos de pausa entre movimentos para obter fotos nítidas"
+    ],
+    "size": "Mede entre 12 e 13 cm de comprimento e pesa de 5 a 7 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN no cômputo geral. A subespécie P. d. berlepschi, presente no Pantanal, não é considerada ameaçada, embora a subespécie P. d. saturata, da Bolívia, enfrente pressão por conversão agrícola."
+  },
+  "Campylorhynchus turdinus": {
+    "description": "Maior corruíra do Brasil, vocaliza alto e frequenta florestas secas, pântanos e matas úmidas de baixada. Encontrada em diversos ambientes florestais do Pantanal.",
+    "overview": "O catatau é a maior corruíra (família Troglodytidae) encontrada no Pantanal, com plumagem parda no dorso e partes inferiores mais claras, frequentemente com padrão de estrias ou manchas. A espécie ocorre da Colômbia e Equador ao Paraguai e norte da Argentina, incluindo grande parte do Brasil. No Pantanal, habita florestas secas, matas úmidas de baixada, áreas pantanosas e matas secundárias degradadas. É uma ave vocal e conspícua, cujo canto alto e repetitivo ecoa nos ambientes florestais. O nome catatau é onomatopaico. Forrageia nos estratos médios e baixos da vegetação, explorando troncos, galhos e emaranhados de cipós em busca de insetos e outros artrópodes.",
+    "habitat": "Habita florestas secas tropicais e subtropicais, matas úmidas de baixada, áreas pantanosas com vegetação arbórea e matas secundárias degradadas. No Pantanal, ocorre em capões, matas ciliares e áreas de vegetação densa, incluindo ambientes com algum grau de inundação sazonal.",
+    "diet": "Alimenta-se de insetos e outros artrópodes encontrados entre troncos, galhos e emaranhados de vegetação. Forrageia nos estratos médios e baixos, explorando ativamente frestas e superfícies de cascas de árvores.",
+    "behavior": "Espécie vocal e ativa, com canto alto e repetitivo emitido ao longo do dia. Encontrada em pares ou pequenos grupos familiares. Forrageia explorando ativamente a vegetação densa. Constrói ninhos volumosos e fechados com material vegetal.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano, sendo residente na região. A vocalização constante e alta facilita a detecção mesmo em vegetação densa. A estação seca (maio a outubro) melhora o acesso às áreas florestais e a visibilidade.",
+    "photographyTips": [
+      "Localize pela vocalização alta e repetitiva antes de buscar visualmente",
+      "Busque nos estratos médios e baixos da vegetação, onde a espécie forrageia",
+      "Use 300-400 mm em ambientes florestais — a espécie opera a alturas moderadas",
+      "Registre o comportamento de exploração de troncos e galhos para documentar o forrageio",
+      "A luz difusa do sub-bosque exige ISO elevado; priorize velocidades acima de 1/500s"
+    ],
+    "size": "Mede cerca de 22 cm de comprimento.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e ocorre em diversos tipos de habitat florestal, incluindo áreas degradadas."
+  },
+  "Cantorchilus leucotis": {
+    "description": "Corruíra de barriga avermelhada que habita matas ciliares e áreas úmidas. Vocaliza ativamente em pares, sem dimorfismo de plumagem visível.",
+    "overview": "O garrinchão-de-barriga-vermelha é uma corruíra (família Troglodytidae) de porte médio, com até 14,5 cm, amplamente distribuída do Panamá ao sudeste do Brasil. Não apresenta dimorfismo sexual de plumagem, sendo possível diferenciar os sexos apenas pelo tamanho — machos são maiores. No Pantanal, habita matas de galeria e matas ribeirinhas, com preferência por áreas úmidas próximas a cursos d'água. A espécie possui partes inferiores de tom ferrugíneo que dá origem ao nome popular. É uma ave ativa e vocal, que forrageia nos estratos médios e baixos da vegetação densa ao longo de rios e lagoas. O casal mantém território e vocaliza com frequência.",
+    "habitat": "Habita matas de galeria e matas ribeirinhas, preferencialmente em áreas úmidas próximas a cursos d'água. No Pantanal, frequenta a vegetação densa das margens de rios e lagoas, capões com sub-bosque desenvolvido e áreas de transição entre mata e campo alagado.",
+    "diet": "Alimenta-se de insetos e outros artrópodes capturados nos estratos médios e baixos da vegetação densa. Explora ativamente folhas, galhos e emaranhados de cipós em busca de presas.",
+    "behavior": "Espécie ativa e vocal, encontrada em pares que mantêm território ao longo do ano. O casal vocaliza frequentemente em dueto. Forrageia de forma enérgica na vegetação densa, movendo-se rapidamente entre ramos e emaranhados.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. A vocalização frequente do casal facilita a detecção em matas ciliares densas. A estação seca (maio a outubro) reduz a vegetação e melhora o acesso a matas ribeirinhas.",
+    "photographyTips": [
+      "Localize pela vocalização ativa do casal nas matas ciliares antes de buscar visualmente",
+      "Aguarde em clareiras naturais dentro da mata ribeirinha para obter fundos limpos",
+      "Use teleobjetiva de 300-500 mm — a espécie opera nos estratos médios da vegetação densa",
+      "Registre a barriga avermelhada em perfil lateral para evidenciar a característica diagnóstica",
+      "A luz difusa das matas ribeirinhas exige ISO elevado; velocidades acima de 1/500s são recomendadas"
+    ],
+    "size": "Mede até 14,5 cm de comprimento, com machos ligeiramente maiores que fêmeas.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição do Panamá ao sudeste do Brasil e ocorre em habitats ribeirinhos bem preservados."
+  },
+  "Cyclarhis gujanensis": {
+    "description": "Vireonídeo robusto de sobrancelha alaranjada e canto melodioso. Habita bordas de mata, capoeiras e vegetação secundária no Pantanal.",
+    "overview": "O pitiguari é um vireonídeo robusto de aproximadamente 15 cm e 28 g, com coroa castanho-escura, sobrancelha alaranjada característica, laterais da cabeça acinzentadas, peito amarelo vivo e partes superiores esverdeadas. A íris é alaranjada. Os sexos são semelhantes em plumagem. No Pantanal, habita bordas de mata, capoeiras e vegetação secundária, incluindo ambientes alterados como pomares e jardins. A espécie tem ampla distribuição, do México à Argentina e Uruguai, estando presente em quase todo o Brasil, exceto partes da Amazônia. O canto melodioso e repetitivo é uma das vocalizações mais reconhecíveis dos ambientes de borda no Pantanal. Forrageia nos estratos médios e altos, movimentando-se de forma deliberada entre a folhagem.",
+    "habitat": "Frequenta bordas de mata, capoeiras, caatingas e ambientes com vegetação secundária, incluindo pomares e jardins. No Pantanal, ocorre nas bordas de capões, matas ciliares e áreas de transição entre vegetação densa e campos abertos. Adapta-se a ambientes alterados.",
+    "diet": "Alimenta-se de insetos e outros artrópodes capturados na folhagem dos estratos médios e altos. O bico robusto permite manipular presas maiores que as consumidas por outros vireonídeos. Pode incluir frutos na dieta.",
+    "behavior": "Espécie solitária ou encontrada em pares, com vocalização melodiosa e repetitiva emitida ao longo do dia. Forrageia de forma deliberada entre a folhagem, movendo-se lentamente enquanto examina folhas e galhos. Pode integrar bandos mistos de alimentação.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. O canto melodioso e constante é a melhor forma de detecção, sendo audível durante grande parte do dia. A estação seca (maio a outubro) facilita a visualização em bordas de mata com folhagem menos densa.",
+    "photographyTips": [
+      "Localize pelo canto melodioso e repetitivo antes de buscar visualmente na folhagem",
+      "Fotografe a sobrancelha alaranjada e a íris alaranjada, características diagnósticas",
+      "Use 300-500 mm em bordas de mata, onde a espécie forrageia em estratos médios",
+      "Aguarde que a ave pare em poleiros expostos durante pausas no forrageio",
+      "A luz lateral destaca a sobrancelha alaranjada contra o fundo esverdeado da folhagem"
+    ],
+    "size": "Mede aproximadamente 15 cm de comprimento e pesa cerca de 28 g.",
+    "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Possui ampla distribuição do México à Argentina e adapta-se a ambientes secundários e alterados, mantendo populações estáveis."
+  },
+  "Cyanocorax cyanomelas": {
+    "description": "Corvídeo grande e barulhento de plumagem violácea escura. Vive em bandos nos capões e bordas de mata, alertando a fauna sobre a presença de intrusos.",
+    "overview": "A gralha-do-pantanal é um corvídeo de grande porte, medindo 37 cm e pesando cerca de 207 g, com plumagem predominantemente violácea escura, cabeça e garganta pretas e cauda de tonalidade violeta mais viva. No Pantanal, é uma espécie conspícua e barulhenta, vivendo em bandos de até 10 indivíduos que percorrem áreas florestadas, bordas de mata e campos com árvores dispersas. Possui comportamento inquisitivo, investigando perturbações em seu território e emitindo alarmes fortes que alertam toda a fauna local sobre a presença de humanos ou outros predadores. A vocalização é um 'cra, cra, cra' rouco emitido em voo ou pousada. A espécie distribui-se do sudeste do Peru e norte da Bolívia ao Paraguai, sudoeste do Brasil e norte da Argentina.",
+    "habitat": "Habita florestas secas, matas úmidas de baixada e matas degradadas. No Pantanal, frequenta capões, bordas de mata, áreas florestadas e campos com árvores dispersas. Os bandos percorrem diferentes ambientes ao longo do dia, descendo ocasionalmente ao solo.",
+    "diet": "Dieta onívora que inclui frutos, sementes, insetos e outros artrópodes, além de ovos e filhotes de outras aves. Forrageia nos estratos médios e altos da vegetação e no solo, explorando oportunisticamente os recursos disponíveis.",
+    "behavior": "Vive em bandos de até 10 indivíduos com coesão variável. Comportamento inquisitivo — investiga perturbações no território e emite alarmes fortes que alertam outras espécies. Pode associar-se a bandos de gralha-picaça. O voo é relativamente pesado e barulhento. A vocalização é um 'cra, cra, cra' rouco e audível a distância.",
+    "bestTime": "Presente no Pantanal ao longo de todo o ano. Os bandos são barulhentos e conspícuos, facilitando a detecção a qualquer hora do dia. A estação seca (maio a outubro) melhora o acesso aos capões e a visibilidade em áreas florestais.",
+    "photographyTips": [
+      "Localize os bandos pelo chamado rouco e forte — são audíveis a grande distância",
+      "Fotografe em bordas de mata onde os bandos transitam entre ambientes",
+      "Use 200-400 mm — os bandos podem ser relativamente tolerantes à presença humana",
+      "Registre o brilho violáceo da plumagem com luz lateral para realçar a iridescência",
+      "Documente interações entre indivíduos do bando e o comportamento de alarme territorial"
+    ],
+    "size": "Mede cerca de 37 cm de comprimento e pesa aproximadamente 207 g.",
+    "conservationStatus": "Classificada como Pouco Preocupante (LC) pela IUCN. A espécie possui distribuição ampla no centro-sul da América do Sul e populações estáveis em áreas de mata e cerrado."
+  }
+}

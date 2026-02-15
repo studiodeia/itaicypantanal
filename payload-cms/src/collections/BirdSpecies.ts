@@ -87,6 +87,40 @@ export const BirdSpecies: CollectionConfig = {
               type: "row",
               fields: [
                 {
+                  name: "taxonomicOrder",
+                  type: "text",
+                  label: "Ordem taxonomica",
+                  required: false,
+                  admin: {
+                    width: "33%",
+                    description: "Ex: Psittaciformes, Passeriformes",
+                  },
+                },
+                {
+                  name: "family",
+                  type: "text",
+                  label: "Familia",
+                  required: false,
+                  admin: {
+                    width: "33%",
+                    description: "Ex: Psittacidae, Thraupidae",
+                  },
+                },
+                {
+                  name: "commonNameEN",
+                  type: "text",
+                  label: "Nome em ingles",
+                  required: false,
+                  admin: {
+                    width: "34%",
+                  },
+                },
+              ],
+            },
+            {
+              type: "row",
+              fields: [
+                {
                   name: "category",
                   type: "relationship",
                   label: "Categoria",

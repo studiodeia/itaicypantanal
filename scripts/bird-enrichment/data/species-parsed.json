@@ -1,0 +1,2730 @@
+[
+  {
+    "scientificName": "Crypturellus undulatus",
+    "commonNamePT": "jaó",
+    "commonNameEN": "Undulated Tinamou",
+    "order": "TINAMIFORMES",
+    "family": "Tinamidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Crypturellus parvirostris",
+    "commonNamePT": "inhambu-chororó",
+    "commonNameEN": "Small-billed Tinamou",
+    "order": "TINAMIFORMES",
+    "family": "Tinamidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Chauna torquata",
+    "commonNamePT": "tachã",
+    "commonNameEN": "Southern Screamer",
+    "order": "ANSERIFORMES",
+    "family": "Anhimidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Dendrocygna autumnalis",
+    "commonNamePT": "marreca-cabocla",
+    "commonNameEN": "Black-bellied Whistling-Duck",
+    "order": "ANSERIFORMES",
+    "family": "Anatidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cairina moschata",
+    "commonNamePT": "pato-do-mato",
+    "commonNameEN": "Muscovy Duck",
+    "order": "ANSERIFORMES",
+    "family": "Anatidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Ortalis canicollis",
+    "commonNamePT": "aracuã-do-pantanal",
+    "commonNameEN": "Chaco Chachalaca",
+    "order": "GALLIFORMES",
+    "family": "Cracidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-A"
+      ]
+    }
+  },
+  {
+    "scientificName": "Pipile cujubi",
+    "commonNamePT": "cujubi",
+    "commonNameEN": "Red-throated Piping-Guan",
+    "order": "GALLIFORMES",
+    "family": "Cracidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": true,
+      "iucnFromReport": "VU",
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig01-A"
+      ]
+    }
+  },
+  {
+    "scientificName": "Penelope ochrogaster",
+    "commonNamePT": "jacu-de-barriga-castanha",
+    "commonNameEN": "Chestnut-bellied Guan",
+    "order": "GALLIFORMES",
+    "family": "Cracidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": true,
+      "iucnFromReport": "VU",
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig01-B"
+      ]
+    }
+  },
+  {
+    "scientificName": "Crax fasciolata",
+    "commonNamePT": "mutum-de-penacho",
+    "commonNameEN": "Bare-faced Curassow",
+    "order": "GALLIFORMES",
+    "family": "Cracidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": true,
+      "iucnFromReport": "VU",
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Patagioenas picazuro",
+    "commonNamePT": "pomba-asa-branca",
+    "commonNameEN": "Picazuro Pigeon",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Patagioenas cayennensis",
+    "commonNamePT": "pomba-galega",
+    "commonNameEN": "Pale-vented Pigeon",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Columbina squammata",
+    "commonNamePT": "fogo-apagou",
+    "commonNameEN": "Scaled Dove",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "A"
+      ]
+    }
+  },
+  {
+    "scientificName": "Columbina talpacoti",
+    "commonNamePT": "rolinha-roxa",
+    "commonNameEN": "Ruddy Ground-Dove",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Leptotila verreauxi",
+    "commonNamePT": "juriti-pupu",
+    "commonNameEN": "White-tipped Dove",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Zenaida auriculata",
+    "commonNamePT": "avoante",
+    "commonNameEN": "Eared Dove",
+    "order": "COLUMBIFORMES",
+    "family": "Columbidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Crotophaga major",
+    "commonNamePT": "anu-coroca",
+    "commonNameEN": "Greater Ani",
+    "order": "CUCULIFORMES",
+    "family": "Cuculidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Crotophaga ani",
+    "commonNamePT": "anu-preto",
+    "commonNameEN": "Smooth-billed Ani",
+    "order": "CUCULIFORMES",
+    "family": "Cuculidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tapera naevia",
+    "commonNamePT": "saci",
+    "commonNameEN": "Striped Cuckoo",
+    "order": "CUCULIFORMES",
+    "family": "Cuculidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Piaya cayana",
+    "commonNamePT": "alma-de-gato",
+    "commonNameEN": "Squirrel Cuckoo",
+    "order": "CUCULIFORMES",
+    "family": "Cuculidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Coccyzus melacoryphus",
+    "commonNamePT": "papa-lagarta-acanelado",
+    "commonNameEN": "Dark-billed Cuckoo",
+    "order": "CUCULIFORMES",
+    "family": "Cuculidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Nyctiprogne leucopyga",
+    "commonNamePT": "bacurau-de-cauda-barrada",
+    "commonNameEN": "Band-tailed Nighthawk",
+    "order": "CAPRIMULGIFORMES",
+    "family": "Caprimulgidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": true,
+      "notableReason": "Ocorrência restrita à Amazônia e planície pantaneira, dependente de áreas florestadas às margens de corpos d'água.",
+      "photoLabels": [
+        "Fig03-A"
+      ]
+    }
+  },
+  {
+    "scientificName": "Podager nacunda",
+    "commonNamePT": "corucão",
+    "commonNameEN": "Nacunda Nighthawk",
+    "order": "CAPRIMULGIFORMES",
+    "family": "Caprimulgidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "B"
+      ]
+    }
+  },
+  {
+    "scientificName": "Nyctibius griseus",
+    "commonNamePT": "urutau",
+    "commonNameEN": "Common Potoo",
+    "order": "NYCTIBIIFORMES",
+    "family": "Nyctibiidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Phaethornis pretrei",
+    "commonNamePT": "rabo-branco-acanelado",
+    "commonNameEN": "Cinnamon-throated Hermit",
+    "order": "APODIFORMES",
+    "family": "Trochiliidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Phaethornis nattereri",
+    "commonNamePT": "rabo-branco-de-sobre-amarelo",
+    "commonNameEN": "Planalto Hermit",
+    "order": "APODIFORMES",
+    "family": "Trochiliidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Hylocharis chrysura",
+    "commonNamePT": "beija-flor-dourado",
+    "commonNameEN": "Gilded Hummingbird",
+    "order": "APODIFORMES",
+    "family": "Trochiliidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Chionomesa fimbriata",
+    "commonNamePT": "beija-flor-de-garganta-verde",
+    "commonNameEN": "Glittering-throated Emerald",
+    "order": "APODIFORMES",
+    "family": "Trochiliidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Mycteria americana",
+    "commonNamePT": "cabeça-seca",
+    "commonNameEN": "Wood Stork",
+    "order": "CICONIIFORMES",
+    "family": "Ciconidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Jabiru mycteria",
+    "commonNamePT": "tuiuiú",
+    "commonNameEN": "Jabiru",
+    "order": "CICONIIFORMES",
+    "family": "Ciconidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "C"
+      ]
+    }
+  },
+  {
+    "scientificName": "Anhinga anhinga",
+    "commonNamePT": "biguatinga",
+    "commonNameEN": "Anhinga",
+    "order": "SULIFORMES",
+    "family": "Anhingidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Nannopterum brasilianus",
+    "commonNamePT": "biguá",
+    "commonNameEN": "Neotropic Cormorant",
+    "order": "SULIFORMES",
+    "family": "Phalacrocoracidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "D"
+      ]
+    }
+  },
+  {
+    "scientificName": "Nycticorax nycticorax",
+    "commonNamePT": "socó-dorminhoco",
+    "commonNameEN": "Black-crowned Night Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Butorides striata",
+    "commonNamePT": "socozinho",
+    "commonNameEN": "Striated Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Ardea cocoi",
+    "commonNamePT": "garça-moura",
+    "commonNameEN": "Cocoi Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Ardea alba",
+    "commonNamePT": "garça-branca-grande",
+    "commonNameEN": "Great Egret",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Egretta thula",
+    "commonNamePT": "garça-branca-pequena",
+    "commonNameEN": "Snowy Egret",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Egretta caerulea",
+    "commonNamePT": "garça-azul",
+    "commonNameEN": "Little Blue Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "E"
+      ]
+    }
+  },
+  {
+    "scientificName": "Bubulcus ibis",
+    "commonNamePT": "garça-vaqueira",
+    "commonNameEN": "Cattle Egret",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Syrigma sibilatrix",
+    "commonNamePT": "maria-faceira",
+    "commonNameEN": "Whistling Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tigrisoma lineatum",
+    "commonNamePT": "socó-boi",
+    "commonNameEN": "Rufescent Tiger-Heron",
+    "order": "PELECANIFORMES",
+    "family": "Ardeidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Phimosus infuscatus",
+    "commonNamePT": "tapicuru",
+    "commonNameEN": "Bare-faced Ibis",
+    "order": "PELECANIFORMES",
+    "family": "Threskiornithidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Theristicus caudatus",
+    "commonNamePT": "curicaca",
+    "commonNameEN": "Buff-necked Ibis",
+    "order": "PELECANIFORMES",
+    "family": "Threskiornithidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "F"
+      ]
+    }
+  },
+  {
+    "scientificName": "Theristicus caerulescens",
+    "commonNamePT": "curicaca-real",
+    "commonNameEN": "Plumbeous Ibis",
+    "order": "PELECANIFORMES",
+    "family": "Threskiornithidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "G"
+      ]
+    }
+  },
+  {
+    "scientificName": "Mesembrinibis cayennensis",
+    "commonNamePT": "coró-coró",
+    "commonNameEN": "Green Ibis",
+    "order": "PELECANIFORMES",
+    "family": "Threskiornithidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Platalea ajaja",
+    "commonNamePT": "colhereiro",
+    "commonNameEN": "Roseate Spoonbill",
+    "order": "PELECANIFORMES",
+    "family": "Threskiornithidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Eurypyga helias",
+    "commonNamePT": "pavãozinho-do-pará",
+    "commonNameEN": "Sunbittern",
+    "order": "EURYPIGIFORMES",
+    "family": "Eurypygidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "H"
+      ]
+    }
+  },
+  {
+    "scientificName": "Aramus guarauna",
+    "commonNamePT": "carão",
+    "commonNameEN": "Limpkin",
+    "order": "GRUIFORMES",
+    "family": "Aramidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Aramides cajaneus",
+    "commonNamePT": "saracura-três-potes",
+    "commonNameEN": "Gray-necked Wood-Rail",
+    "order": "GRUIFORMES",
+    "family": "Rallidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "I"
+      ]
+    }
+  },
+  {
+    "scientificName": "Rynchops niger",
+    "commonNamePT": "talha-mar",
+    "commonNameEN": "Black Skimmer",
+    "order": "CHARADRIIFORMES",
+    "family": "Rhynchopidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Phaetusa simplex",
+    "commonNamePT": "trinta-réis-grande",
+    "commonNameEN": "Large-billed Tern",
+    "order": "CHARADRIIFORMES",
+    "family": "Laridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Vanellus chilensis",
+    "commonNamePT": "quero-quero",
+    "commonNameEN": "Southern Lapwing",
+    "order": "CHARADRIIFORMES",
+    "family": "Charadriidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Himantopus melanurus",
+    "commonNamePT": "pernilongo-de-costas-brancas",
+    "commonNameEN": "White-necked Stilt",
+    "order": "CHARADRIIFORMES",
+    "family": "Recurvirostridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Jacana jacana",
+    "commonNamePT": "jaçanã",
+    "commonNameEN": "Wattled Jacana",
+    "order": "CHARADRIIFORMES",
+    "family": "Jacanidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cathartes aura",
+    "commonNamePT": "urubu-de-cabeça-vermelha",
+    "commonNameEN": "Turkey Vulture",
+    "order": "CATHARTIFORMES",
+    "family": "Cathartidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cathartes burrovianus",
+    "commonNamePT": "urubu-de-cabeça-amarela",
+    "commonNameEN": "Lesser Yellow-headed Vulture",
+    "order": "CATHARTIFORMES",
+    "family": "Cathartidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Coragyps atratus",
+    "commonNamePT": "urubu-preto",
+    "commonNameEN": "Black Vulture",
+    "order": "CATHARTIFORMES",
+    "family": "Cathartidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pandion haliaetus",
+    "commonNamePT": "águia-pescadora",
+    "commonNameEN": "Osprey",
+    "order": "ACCIPITRIFORMES",
+    "family": "Pandionidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "J"
+      ]
+    }
+  },
+  {
+    "scientificName": "Rosthramus sociabilis",
+    "commonNamePT": "gavião-caramujeiro",
+    "commonNameEN": "Snail Kite",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Leptodon cayanensis",
+    "commonNamePT": "gavião-gato",
+    "commonNameEN": "Gray-headed Kite",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Rupornis magnirostris",
+    "commonNamePT": "gavião-carijó",
+    "commonNameEN": "Roadside Hawk",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Urubitinga urubitinga",
+    "commonNamePT": "gavião-preto",
+    "commonNameEN": "Great Black Hawk",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Busarellus nigricollis",
+    "commonNamePT": "gavião-belo",
+    "commonNameEN": "Black-collared Hawk",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Heterospizias meridionalis",
+    "commonNamePT": "gavião-caboclo",
+    "commonNameEN": "Savanna Hawk",
+    "order": "ACCIPITRIFORMES",
+    "family": "Accipitridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tyto furcata",
+    "commonNamePT": "suindara",
+    "commonNameEN": "Barn Owl",
+    "order": "STRIGIFORMES",
+    "family": "Tytonidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "K"
+      ]
+    }
+  },
+  {
+    "scientificName": "Glaucidium brasilianum",
+    "commonNamePT": "caburé",
+    "commonNameEN": "Ferruginous Pygmy-Owl",
+    "order": "STRIGIFORMES",
+    "family": "Strigidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Brotogeris chiriri",
+    "commonNamePT": "periquito-de-encontro-amarelo",
+    "commonNameEN": "Yellow-chevroned Parakeet",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiopsitta monachus",
+    "commonNamePT": "caturrita",
+    "commonNameEN": "Monk Parakeet",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Eupsittula aurea",
+    "commonNamePT": "periquito-rei",
+    "commonNameEN": "Peach-fronted Parakeet",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Amazona amazonica",
+    "commonNamePT": "curica",
+    "commonNameEN": "Orange-winged Parrot",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Amazona aestiva",
+    "commonNamePT": "papagaio-verdadeiro",
+    "commonNameEN": "Turquoise-fronted Parrot",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": true,
+      "iucnFromReport": "NT",
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Orthopsittaca manilatus",
+    "commonNamePT": "maracanã-do-buriti",
+    "commonNameEN": "Red-bellied Macaw",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Primolius auricollis",
+    "commonNamePT": "maracanã-de-colar",
+    "commonNameEN": "Yellow-collared Macaw",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": true,
+      "notableReason": "Ocorrente na bacia do Araguaia e planície pantaneira, espécie com deficiência de dados sobre sua história natural.",
+      "photoLabels": [
+        "Fig03-B"
+      ]
+    }
+  },
+  {
+    "scientificName": "Ara ararauna",
+    "commonNamePT": "arara-canindé",
+    "commonNameEN": "Blue-and-yellow Macaw",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Diopsittaca nobilis",
+    "commonNamePT": "maracanã-pequena",
+    "commonNameEN": "Red-shouldered Macaw",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Psittacara leucophthalmus",
+    "commonNamePT": "periquitão",
+    "commonNameEN": "White-eyed Parakeet",
+    "order": "PSITTACIFORMES",
+    "family": "Psittacidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Caracara plancus",
+    "commonNamePT": "carcará",
+    "commonNameEN": "Crested Caracara",
+    "order": "FALCONIFORMES",
+    "family": "Falconidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Falco rufigularis",
+    "commonNamePT": "cauré",
+    "commonNameEN": "Bat Falcon",
+    "order": "FALCONIFORMES",
+    "family": "Falconidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Herpetotheres cachinnans",
+    "commonNamePT": "acauã",
+    "commonNameEN": "Laughing Falcon",
+    "order": "FALCONIFORMES",
+    "family": "Falconidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Trogon curucui",
+    "commonNamePT": "surucuá-de-barriga-vermelha",
+    "commonNameEN": "Blue-crowned Trogon",
+    "order": "TROGONIFORMES",
+    "family": "Trogonidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Monasa nigrifrons",
+    "commonNamePT": "chora-chuva-preto",
+    "commonNameEN": "Black-fronted Nunbird",
+    "order": "GALBULIFORMES",
+    "family": "Bucconidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "L"
+      ]
+    }
+  },
+  {
+    "scientificName": "Nystalus maculatus",
+    "commonNamePT": "rapazinho-dos-velhos",
+    "commonNameEN": "Spot-backed Puffbird",
+    "order": "GALBULIFORMES",
+    "family": "Bucconidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Galbula ruficauda",
+    "commonNamePT": "ariramba-de-cauda-ruiva",
+    "commonNameEN": "Rufous-tailed Jacamar",
+    "order": "GALBULIFORMES",
+    "family": "Galbulidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Megaceryle torquata",
+    "commonNamePT": "martim-pescador-grande",
+    "commonNameEN": "Ringed Kingfisher",
+    "order": "CORACIIFORMES",
+    "family": "Alcedinidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "M"
+      ]
+    }
+  },
+  {
+    "scientificName": "Chloroceryle amazona",
+    "commonNamePT": "martim-pescador-verde",
+    "commonNameEN": "Amazon Kingfisher",
+    "order": "CORACIIFORMES",
+    "family": "Alcedinidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Chloroceryle americana",
+    "commonNamePT": "martim-pescador-pequeno",
+    "commonNameEN": "Green Kingfisher",
+    "order": "CORACIIFORMES",
+    "family": "Alcedinidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Ramphastos toco",
+    "commonNamePT": "tucanuçu",
+    "commonNameEN": "Toco Toucan",
+    "order": "PICIFORMES",
+    "family": "Ramphastidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pteroglossus castanotis",
+    "commonNamePT": "araçari-castanho",
+    "commonNameEN": "Chestnut-eared Aracari",
+    "order": "PICIFORMES",
+    "family": "Ramphastidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Melanerpes candidus",
+    "commonNamePT": "pica-pau-branco",
+    "commonNameEN": "White Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Veniliornis passerinus",
+    "commonNamePT": "pica-pau-pequeno",
+    "commonNameEN": "Little Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Campephilus melanoleucus",
+    "commonNamePT": "pica-pau-de-topete-vermelho",
+    "commonNameEN": "Crimson-crested Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Celeus lugubris",
+    "commonNamePT": "pica-pau-louro",
+    "commonNameEN": "Pale-crested Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-B"
+      ]
+    }
+  },
+  {
+    "scientificName": "Piculus chrysochloros",
+    "commonNamePT": "pica-pau-dourado-escuro",
+    "commonNameEN": "Golden-green Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "N"
+      ]
+    }
+  },
+  {
+    "scientificName": "Colaptes melanochloros",
+    "commonNamePT": "pica-pau-verde-barrado",
+    "commonNameEN": "Green-barred Woodpecker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Colaptes campestris",
+    "commonNamePT": "pica-pau-do-campo",
+    "commonNameEN": "Campo Flicker",
+    "order": "PICIFORMES",
+    "family": "Picidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Taraba major",
+    "commonNamePT": "choró-boi",
+    "commonNameEN": "Great Antshrike",
+    "order": "PASSERIFORMES",
+    "family": "Thamnophilidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Thamnophilus doliatus",
+    "commonNamePT": "choca-barrada",
+    "commonNameEN": "Barred Antshrike",
+    "order": "PASSERIFORMES",
+    "family": "Thamnophilidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Thamnophilus pelzelni",
+    "commonNamePT": "choca-do-planalto",
+    "commonNameEN": "Planalto Slaty-Antshrike",
+    "order": "PASSERIFORMES",
+    "family": "Thamnophilidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cercomacra melanaria",
+    "commonNamePT": "chororó-do-pantanal",
+    "commonNameEN": "Mato Grosso Antbird",
+    "order": "PASSERIFORMES",
+    "family": "Thamnophilidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-C"
+      ]
+    }
+  },
+  {
+    "scientificName": "Pyriglena maura",
+    "commonNamePT": "papa-taoca-do-pantanal",
+    "commonNameEN": "Western Fire-eye",
+    "order": "PASSERIFORMES",
+    "family": "Thamnophilidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-D"
+      ]
+    }
+  },
+  {
+    "scientificName": "Xiphocolaptes major",
+    "commonNamePT": "arapaçu-do-campo",
+    "commonNameEN": "Great Rufous Woodcreeper",
+    "order": "PASSERIFORMES",
+    "family": "Dendrocolaptidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Sittasomus griseicapillus",
+    "commonNamePT": "arapaçu-verde",
+    "commonNameEN": "Olivaceous Woodcreeper",
+    "order": "PASSERIFORMES",
+    "family": "Dendrocolaptidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Furnarius leucopus",
+    "commonNamePT": "casaca-de-couro-amarelo",
+    "commonNameEN": "Pale-legged Hornero",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "O"
+      ]
+    }
+  },
+  {
+    "scientificName": "Furnarius rufus",
+    "commonNamePT": "joão-de-barro",
+    "commonNameEN": "Rufous Hornero",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pseudoseisura unirufa",
+    "commonNamePT": "casaca-de-couro-de-crista-cinza",
+    "commonNameEN": "Rufous Cacholote",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-E"
+      ]
+    }
+  },
+  {
+    "scientificName": "Certhiaxis cinnamomeus",
+    "commonNamePT": "curutié",
+    "commonNameEN": "Yellow-chinned Spinetail",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Phacellodomus ruber",
+    "commonNamePT": "graveteiro",
+    "commonNameEN": "Greater Thornbird",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Synallaxis albilora",
+    "commonNamePT": "joão-do-pantanal",
+    "commonNameEN": "White-lored Spinetail",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": true,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Fig02-F"
+      ]
+    }
+  },
+  {
+    "scientificName": "Synallaxis frontalis",
+    "commonNamePT": "petrim",
+    "commonNameEN": "Sooty-fronted Spinetail",
+    "order": "PASSERIFORMES",
+    "family": "Furnariidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Xenopsaris albinucha",
+    "commonNamePT": "tijerila",
+    "commonNameEN": "White-naped Xenopsaris",
+    "order": "PASSERIFORMES",
+    "family": "Tityridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Hemitriccus striaticollis",
+    "commonNamePT": "sebinho-rajado-amarelo",
+    "commonNameEN": "Stripe-necked Tody-Tyrant",
+    "order": "PASSERIFORMES",
+    "family": "Rhynchocyclidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Hemitriccus margaritaceiventer",
+    "commonNamePT": "sebinho-de-olho-de-ouro",
+    "commonNameEN": "Pearly-vented Tody-Tyrant",
+    "order": "PASSERIFORMES",
+    "family": "Rhynchocyclidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Todirostrum cinereum",
+    "commonNamePT": "ferreirinho-relógio",
+    "commonNameEN": "Common Tody-Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Rhynchocyclidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tolmomyias sulphurescens",
+    "commonNamePT": "bico-chato-de-orelha-preta",
+    "commonNameEN": "Yellow-olive Flatbill",
+    "order": "PASSERIFORMES",
+    "family": "Rhynchocyclidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Camptostoma obsoletum",
+    "commonNamePT": "risadinha",
+    "commonNameEN": "Southern Beardless-Tyrannulet",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx acutipennis",
+    "commonNamePT": "tricolino-oliváceo",
+    "commonNameEN": "Subtropical Doradito",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": true,
+      "notableReason": "Espécie migratória que chega à planície pantaneira durante os meses de inverno. Dinâmica migratória na região pouco conhecida.",
+      "photoLabels": [
+        "Fig03-C"
+      ]
+    }
+  },
+  {
+    "scientificName": "Pseudocolopteryx flaviventris",
+    "commonNamePT": "amarelinho-do-junco",
+    "commonNameEN": "Warbling Doradito",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 1,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": true,
+      "notableReason": "Espécie migratória, segundo registro para o estado de Mato Grosso.",
+      "photoLabels": [
+        "Fig03-D"
+      ]
+    }
+  },
+  {
+    "scientificName": "Elaenia parvirostris",
+    "commonNamePT": "tuque-pium",
+    "commonNameEN": "Small-billed Elaenia",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Inezia inornata",
+    "commonNamePT": "alegrinho-do-chaco",
+    "commonNameEN": "Plain Tyrannulet",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiophobus fasciatus",
+    "commonNamePT": "filipe",
+    "commonNameEN": "Bran-colored Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pyrocephalus rubinus",
+    "commonNamePT": "príncipe",
+    "commonNameEN": "Vermilion Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Sirystes sibilator",
+    "commonNamePT": "gritador",
+    "commonNameEN": "Sibilant Sirystes",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiarchus ferox",
+    "commonNamePT": "maria-cavaleira",
+    "commonNameEN": "Short-crested Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiarchus tyrannulus",
+    "commonNamePT": "maria-cavaleira-de-rabo-enferrujado",
+    "commonNameEN": "Brown-crested Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Machetornis rixosa",
+    "commonNamePT": "suiriri-cavaleiro",
+    "commonNameEN": "Cattle Tyrant",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Pitangus sulphuratus",
+    "commonNamePT": "bem-te-vi",
+    "commonNameEN": "Great Kiskadee",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Megarynchus pitangua",
+    "commonNamePT": "neinei",
+    "commonNameEN": "Boat-billed Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiodynastes maculatus",
+    "commonNamePT": "bem-te-vi-rajado",
+    "commonNameEN": "Streaked Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tyrannus albogularis",
+    "commonNamePT": "suiriri-de-garganta-branca",
+    "commonNameEN": "White-throated Kingbird",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tyrannus melancholicus",
+    "commonNamePT": "suiriri",
+    "commonNameEN": "Tropical Kingbird",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiozetetes cayanensis",
+    "commonNamePT": "bentevizinho-de-asa-ferrugínea",
+    "commonNameEN": "Rusty-margined Flycatcher",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Arundinicola leucocephala",
+    "commonNamePT": "freirinha",
+    "commonNameEN": "White-headed Marsh Tyrant",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "P"
+      ]
+    }
+  },
+  {
+    "scientificName": "Fluvicola albiventer",
+    "commonNamePT": "lavadeira-de-cara-branca",
+    "commonNameEN": "Black-backed Water-Tyrant",
+    "order": "PASSERIFORMES",
+    "family": "Tyrannidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Donacobius atricapillus",
+    "commonNamePT": "japacanim",
+    "commonNameEN": "Black-capped Donacobius",
+    "order": "PASSERIFORMES",
+    "family": "Donacobiidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Tachycineta albiventris",
+    "commonNamePT": "andorinha-do-rio",
+    "commonNameEN": "White-winged Swallow",
+    "order": "PASSERIFORMES",
+    "family": "Hirundinidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Stelgidopteryx ruficollis",
+    "commonNamePT": "andorinha-serradora",
+    "commonNameEN": "Southern Rough-winged Swallow",
+    "order": "PASSERIFORMES",
+    "family": "Hirundinidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Polioptila dumicola",
+    "commonNamePT": "balança-rabo-de-máscara",
+    "commonNameEN": "Masked Gnatcatcher",
+    "order": "PASSERIFORMES",
+    "family": "Polioptilidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Campylorhynchus turdinus",
+    "commonNamePT": "catatau",
+    "commonNameEN": "Thrush-like Wren",
+    "order": "PASSERIFORMES",
+    "family": "Troglodytidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Q"
+      ]
+    }
+  },
+  {
+    "scientificName": "Cantorchilus leucotis",
+    "commonNamePT": "garrinchão-de-barriga-vermelha",
+    "commonNameEN": "Buff-breasted Wren",
+    "order": "PASSERIFORMES",
+    "family": "Troglodytidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cyclarhis gujanensis",
+    "commonNamePT": "pitiguari",
+    "commonNameEN": "Rufous-browed Peppershrike",
+    "order": "PASSERIFORMES",
+    "family": "Vireonidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cyanocorax cyanomelas",
+    "commonNamePT": "gralha-do-pantanal",
+    "commonNameEN": "Purplish Jay",
+    "order": "PASSERIFORMES",
+    "family": "Corvidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Turdus rufiventris",
+    "commonNamePT": "sabiá-laranjeira",
+    "commonNameEN": "Rufous-bellied Thrush",
+    "order": "PASSERIFORMES",
+    "family": "Turdidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "R"
+      ]
+    }
+  },
+  {
+    "scientificName": "Arremon polionotus",
+    "commonNamePT": "tico-tico-de-costas-cinzas",
+    "commonNameEN": "Gray-backed Sparrow",
+    "order": "PASSERIFORMES",
+    "family": "Passerelidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Psarocolius decumanus",
+    "commonNamePT": "japu",
+    "commonNameEN": "Crested Oropendola",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "S"
+      ]
+    }
+  },
+  {
+    "scientificName": "Procacicus solitarius",
+    "commonNamePT": "iraúna-de-bico-branco",
+    "commonNameEN": "Solitary Black Cacique",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Cacicus cela",
+    "commonNamePT": "xexéu",
+    "commonNameEN": "Yellow-rumped Cacique",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Icterus pyrrhopterus",
+    "commonNamePT": "encontro",
+    "commonNameEN": "Variable Oriole",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Icterus croconotus",
+    "commonNamePT": "joão-pinto",
+    "commonNameEN": "Orange-backed Troupial",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "T"
+      ]
+    }
+  },
+  {
+    "scientificName": "Molothrus rufoaxillaris",
+    "commonNamePT": "chupim-azeviche",
+    "commonNameEN": "Screaming Cowbird",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Molothrus oryzivorus",
+    "commonNamePT": "iraúna-grande",
+    "commonNameEN": "Giant Cowbird",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Agelaioides badius",
+    "commonNamePT": "asa-de-telha",
+    "commonNameEN": "Grayish Baywing",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Agelasticus cyanopus",
+    "commonNamePT": "carretão-do-oeste",
+    "commonNameEN": "Unicolored Blackbird",
+    "order": "PASSERIFORMES",
+    "family": "Icteridae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "U"
+      ]
+    }
+  },
+  {
+    "scientificName": "Geothlypis aequinoctialis",
+    "commonNamePT": "pia-cobra",
+    "commonNameEN": "Southern Yellowthroat",
+    "order": "PASSERIFORMES",
+    "family": "Parulidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Myiothlypis flaveola",
+    "commonNamePT": "canário-do-mato",
+    "commonNameEN": "Flavescent Warbler",
+    "order": "PASSERIFORMES",
+    "family": "Parulidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Nemosia pileata",
+    "commonNamePT": "saíra-de-chapéu-preto",
+    "commonNameEN": "Hooded Tanager",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Eucometis penicillata",
+    "commonNamePT": "pipira-da-taoca",
+    "commonNameEN": "Gray-headed Tanager",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "X"
+      ]
+    }
+  },
+  {
+    "scientificName": "Paroaria capitata",
+    "commonNamePT": "cavalaria",
+    "commonNameEN": "Yellow-billed Cardinal",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 2,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "V"
+      ]
+    }
+  },
+  {
+    "scientificName": "Ramphocelus carbo",
+    "commonNamePT": "pipira-vermelha",
+    "commonNameEN": "Silver-beaked Tanager",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Coryphospingus cucullatus",
+    "commonNamePT": "tico-tico-rei",
+    "commonNameEN": "Red-crested Finch",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Hemithraupis guira",
+    "commonNamePT": "saíra-de-papo-preto",
+    "commonNameEN": "Guira Tanager",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Conirostrum speciosum",
+    "commonNamePT": "figuinha-de-rabo-castanho",
+    "commonNameEN": "Chestnut-vented Conebill",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Thraupis sayaca",
+    "commonNamePT": "sanhaço-cinzento",
+    "commonNameEN": "Sayaca Tanager",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Sporophila collaris",
+    "commonNamePT": "coleiro-do-brejo",
+    "commonNameEN": "Rusty-collared Seedeater",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": [
+        "Y"
+      ]
+    }
+  },
+  {
+    "scientificName": "Sporophila angolensis",
+    "commonNamePT": "curió",
+    "commonNameEN": "Chestnut-bellied Seed-Finch",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Sporophila caerulescens",
+    "commonNamePT": "coleirinho",
+    "commonNameEN": "Double-collared Seedeater",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Sicalis flaveola",
+    "commonNamePT": "canário-da-terra",
+    "commonNameEN": "Saffron Finch",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  },
+  {
+    "scientificName": "Saltator coerulescens",
+    "commonNamePT": "trinca-ferro-gongá",
+    "commonNameEN": "Grayish Saltator",
+    "order": "PASSERIFORMES",
+    "family": "Thraupidae",
+    "tier": 3,
+    "report": {
+      "isThreatened": false,
+      "iucnFromReport": null,
+      "isPantanalRestricted": false,
+      "isNotable": false,
+      "notableReason": null,
+      "photoLabels": []
+    }
+  }
+]

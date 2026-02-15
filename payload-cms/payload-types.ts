@@ -338,6 +338,15 @@ export interface BirdSpecy {
   scientificName: string;
   slug: string;
   description?: string | null;
+  /**
+   * Ex: Psittaciformes, Passeriformes
+   */
+  taxonomicOrder?: string | null;
+  /**
+   * Ex: Psittacidae, Thraupidae
+   */
+  family?: string | null;
+  commonNameEN?: string | null;
   category?: (number | null) | BirdCategory;
   tag?: string | null;
   src?: string | null;
@@ -657,6 +666,9 @@ export interface BirdSpeciesSelect<T extends boolean = true> {
   scientificName?: T;
   slug?: T;
   description?: T;
+  taxonomicOrder?: T;
+  family?: T;
+  commonNameEN?: T;
   category?: T;
   tag?: T;
   src?: T;
