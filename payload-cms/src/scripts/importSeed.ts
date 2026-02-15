@@ -319,6 +319,41 @@ async function importPages(
   }
 }
 
+async function importPageContent(
+  payload: Awaited<ReturnType<typeof getPayload>>,
+) {
+  const candidates = [
+    resolve(process.cwd(), "..", "docs", "payload-seed", "page-content.json"),
+    resolve(process.cwd(), "docs", "payload-seed", "page-content.json"),
+  ];
+
+  let raw: string | undefined;
+  for (const candidate of candidates) {
+    try {
+      raw = await readFile(candidate, "utf8");
+      break;
+    } catch {
+      // try next candidate
+    }
+  }
+
+  if (!raw) {
+    console.log("page-content.json nao encontrado, pulando importacao de conteudo de paginas.");
+    return;
+  }
+
+  const pageContent = JSON.parse(raw) as Record<string, unknown>;
+
+  await payload.updateGlobal({
+    slug: "site-settings",
+    data: { pageContent },
+    depth: 0,
+    overrideAccess: true,
+  });
+
+  console.log("SiteSettings.pageContent populado com sucesso.");
+}
+
 async function importSharedSections(
   payload: Awaited<ReturnType<typeof getPayload>>,
   shared: SeedData["shared"],
@@ -427,6 +462,7 @@ async function main() {
   await importBirdwatching(payload, seed.birdwatching);
   await importPages(payload, seed.pages.routes);
   await importSharedSections(payload, seed.shared);
+  await importPageContent(payload);
 
   console.log("Seed importado para o Payload com sucesso.");
 }

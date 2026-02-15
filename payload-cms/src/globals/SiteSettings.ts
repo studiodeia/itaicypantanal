@@ -384,6 +384,22 @@ export const SiteSettings: GlobalConfig = {
           ],
         },
         {
+          label: "Conteudo das Paginas",
+          description:
+            "Conteudo editavel de todas as paginas do site. Cada chave corresponde a uma rota.",
+          fields: [
+            {
+              name: "pageContent",
+              type: "json",
+              label: "Conteudo por Pagina (JSON)",
+              admin: {
+                description:
+                  "JSON com chaves por rota (ex: '/', '/acomodacoes'). Cada rota contem os textos, imagens e dados de todas as secoes da pagina.",
+              },
+            },
+          ],
+        },
+        {
           label: "JSON Legado",
           description:
             "Campo JSON legado para compatibilidade. Sera removido apos migracao completa.",

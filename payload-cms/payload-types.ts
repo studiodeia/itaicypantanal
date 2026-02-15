@@ -870,6 +870,18 @@ export interface SiteSetting {
    */
   googleSiteVerification?: string | null;
   /**
+   * JSON com chaves por rota (ex: '/', '/acomodacoes'). Cada rota contem os textos, imagens e dados de todas as secoes da pagina.
+   */
+  pageContent?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
    * ATENCAO: Este campo sera descontinuado. Edite o conteudo nas abas acima.
    */
   sharedSections?:
@@ -958,6 +970,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   defaultOgImage?: T;
   siteUrl?: T;
   googleSiteVerification?: T;
+  pageContent?: T;
   sharedSections?: T;
   updatedAt?: T;
   createdAt?: T;
