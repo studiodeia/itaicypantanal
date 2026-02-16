@@ -14,6 +14,7 @@ const staticRoutes = [
   "/blog",
   "/contato",
   "/nosso-impacto",
+  "/regiao",
   "/politica-de-privacidade",
 ];
 
@@ -29,6 +30,7 @@ const routePriority: Record<string, { priority: string; changefreq: string }> = 
   "/blog": { priority: "0.8", changefreq: "weekly" },
   "/observacao-de-aves/catalogo": { priority: "0.8", changefreq: "weekly" },
   "/nosso-impacto": { priority: "0.7", changefreq: "monthly" },
+  "/regiao": { priority: "0.8", changefreq: "monthly" },
   "/politica-de-privacidade": { priority: "0.3", changefreq: "yearly" },
 };
 
@@ -188,6 +190,9 @@ export function buildLlmsTxt(req: Request): string {
 - [Ecoturismo](${baseUrl}/ecoturismo): Safaris fotograficos, trilhas ecologicas, passeios de barco pelo Rio Negro.
 - [Culinaria Pantaneira](${baseUrl}/culinaria): Gastronomia regional com ingredientes do Pantanal.
 
+## A Regiao
+- [Pantanal Sul-Matogrossense](${baseUrl}/regiao): Guia completo — localizacao, como chegar, melhor epoca, clima por estacao e destinos proximos (Bonito, Campo Grande, Estrada Parque).
+
 ## Hospedagem
 - [Acomodacoes](${baseUrl}/acomodacoes): Quartos com ar-condicionado, Wi-Fi, vista para o rio. Capacidade: 10 quartos.
 
@@ -213,6 +218,6 @@ export function buildLlmsTxt(req: Request): string {
 ## Dados Estruturados
 - Sitemap: ${baseUrl}/sitemap.xml
 - JSON API: ${baseUrl}/api/cms/blog, ${baseUrl}/api/cms/birdwatching
-- Schema.org: JSON-LD em todas as paginas (LodgingBusiness, FAQPage, BlogPosting, AggregateRating)
+- Schema.org: JSON-LD em todas as paginas (LodgingBusiness, FAQPage, BlogPosting, AggregateRating, Taxon, TouristTrip, ItemList)
 `;
 }

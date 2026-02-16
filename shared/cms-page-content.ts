@@ -120,6 +120,12 @@ export type CmsServices = {
 
 // === Per-page content types ===
 
+export type CmsAudienceSegment = {
+  iconName: string;
+  title: string;
+  description: string;
+};
+
 export type HomePageContent = {
   aboutUs: CmsSobreNos;
   expeditions: {
@@ -143,6 +149,12 @@ export type HomePageContent = {
     heading: string;
     items: CmsImpactItem[];
     image: string;
+  };
+  paraQuem?: {
+    label: string;
+    heading: string;
+    description: string;
+    segments: CmsAudienceSegment[];
   };
   blog: {
     label: string;
@@ -266,6 +278,53 @@ export type NotFoundPageContent = {
   buttonText: string;
 };
 
+// === Regiao (region) page ===
+export type CmsAccessRoute = {
+  from: string;
+  distance: string;
+  duration: string;
+  description: string;
+};
+export type CmsSeason = {
+  period: string;
+  temperature: string;
+  rainfall: string;
+  characteristics: string;
+};
+export type CmsNearbyPlace = {
+  name: string;
+  distance: string;
+  description: string;
+};
+export type RegiaoPageContent = {
+  hero: CmsHero;
+  location: {
+    label: string;
+    heading: string;
+    description: string;
+    coordinates: string;
+  };
+  access: {
+    label: string;
+    heading: string;
+    description: string;
+    routes: CmsAccessRoute[];
+  };
+  climate: {
+    label: string;
+    heading: string;
+    description: string;
+    seasons: CmsSeason[];
+  };
+  nearby: {
+    label: string;
+    heading: string;
+    description: string;
+    places: CmsNearbyPlace[];
+  };
+  faq?: CmsFaq;
+};
+
 // === Map route → content type ===
 export type PageContentMap = {
   "/": HomePageContent;
@@ -277,5 +336,6 @@ export type PageContentMap = {
   "/contato": ContatoPageContent;
   "/nosso-impacto": NossoImpactoPageContent;
   "/politica-de-privacidade": PrivacidadePageContent;
+  "/regiao": RegiaoPageContent;
   "/404": NotFoundPageContent;
 };

@@ -61,6 +61,9 @@ const BirdSpeciesPage = lazy(() =>
     default: module.BirdSpeciesPage,
   })),
 );
+const Regiao = lazy(() =>
+  import("@/pages/Regiao").then((module) => ({ default: module.Regiao })),
+);
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function RouterFallback() {
@@ -90,6 +93,7 @@ function Router() {
         <Route path="/blog/:categorySlug/:slug" component={BlogArticlePage} />
         <Route path="/contato" component={Contato} />
         <Route path="/nosso-impacto" component={NossoImpacto} />
+        <Route path="/regiao" component={Regiao} />
         <Route path="/politica-de-privacidade" component={Privacidade} />
         {/* Fallback to 404 */}
         <Route component={NotFound} />

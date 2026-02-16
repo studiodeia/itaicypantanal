@@ -16,6 +16,7 @@ import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuest
 import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSection";
 import { ImmersionTestimonialsSection } from "./sections/ImmersionTestimonialsSection";
 import { NaturalRefugeDescriptionSection } from "./sections/NaturalRefugeDescriptionSection";
+import { ParaQuemSection } from "./sections/ParaQuemSection";
 import { PantanalBlogSection } from "./sections/PantanalBlogSection";
 import { PantanalExperienceIntroSection } from "./sections/PantanalExperienceIntroSection";
 import { PantanalHeroSection } from "./sections/PantanalHeroSection";
@@ -65,6 +66,7 @@ export const Desktop = (): JSX.Element => {
       <AccommodationInfoSection content={cms.accommodation} />
       <ImmersionTestimonialsSection />
       <NaturalRefugeDescriptionSection content={cms.impact} />
+      {cms.paraQuem && <ParaQuemSection content={cms.paraQuem} />}
       <FrequentlyAskedQuestionsSection content={cms.faq} />
       <PantanalBlogSection content={cms.blog} />
       <ImmersionCallToActionSection />

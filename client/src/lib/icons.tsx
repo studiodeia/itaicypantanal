@@ -1,6 +1,7 @@
 import { forwardRef, type ComponentType } from "react";
 import type { IconProps as PhosphorIconProps, IconWeight } from "@phosphor-icons/react";
 import {
+  Airplane as PhAirplane,
   ArrowDown as PhArrowDown,
   ArrowLeft as PhArrowLeft,
   ArrowRight as PhArrowRight,
@@ -15,6 +16,7 @@ import {
   CaretUp as PhCaretUp,
   Check as PhCheck,
   Circle as PhCircle,
+  CloudRain as PhCloudRain,
   Compass as PhCompass,
   Dot as PhDot,
   DotsSixVertical as PhDotsSixVertical,
@@ -27,9 +29,11 @@ import {
   ForkKnife as PhForkKnife,
   Heart as PhHeart,
   InstagramLogo as PhInstagramLogo,
+  Leaf as PhLeaf,
   List as PhList,
   MagnifyingGlass as PhMagnifyingGlass,
   MapPin as PhMapPin,
+  NavigationArrow as PhNavigationArrow,
   Phone as PhPhone,
   PintGlass as PhPintGlass,
   Plant as PhPlant,
@@ -41,6 +45,7 @@ import {
   Sidebar as PhSidebar,
   Snowflake as PhSnowflake,
   Star as PhStar,
+  Sun as PhSun,
   SunHorizon as PhSunHorizon,
   User as PhUser,
   Users as PhUsers,
@@ -91,6 +96,7 @@ export const CalendarIcon = createOutlineIcon(PhCalendarBlank);
 export const Camera = createOutlineIcon(PhCamera);
 export const Check = createOutlineIcon(PhCheck);
 export const ChevronDown = createOutlineIcon(PhCaretDown);
+export const CloudRain = createOutlineIcon(PhCloudRain);
 export const ChevronDownIcon = createOutlineIcon(PhCaretDown);
 export const ChevronLeft = createOutlineIcon(PhCaretLeft);
 export const ChevronRight = createOutlineIcon(PhCaretRight);
@@ -108,12 +114,15 @@ export const GlassWater = createOutlineIcon(PhPintGlass);
 export const GripVertical = createOutlineIcon(PhDotsSixVertical);
 export const Heart = createOutlineIcon(PhHeart);
 export const Instagram = createOutlineIcon(PhInstagramLogo);
+export const Leaf = createOutlineIcon(PhLeaf);
 export const Mail = createOutlineIcon(PhEnvelopeSimple);
 export const MapPin = createOutlineIcon(PhMapPin);
 export const MenuIcon = createOutlineIcon(PhList);
+export const Navigation = createOutlineIcon(PhNavigationArrow);
 export const MoreHorizontal = createOutlineIcon(PhDotsThree);
 export const PanelLeft = createOutlineIcon(PhSidebar);
 export const Phone = createOutlineIcon(PhPhone);
+export const Plane = createOutlineIcon(PhAirplane);
 export const Recycle = createOutlineIcon(PhRecycle);
 export const Ruler = createOutlineIcon(PhRuler);
 export const Sailboat = createOutlineIcon(PhSailboat);
@@ -123,6 +132,7 @@ export const ShieldCheck = createOutlineIcon(PhShieldCheck);
 export const Snowflake = createOutlineIcon(PhSnowflake);
 export const Sprout = createOutlineIcon(PhPlant);
 export const Star = createOutlineIcon(PhStar);
+export const Sun = createOutlineIcon(PhSun);
 export const Sunrise = createOutlineIcon(PhSunHorizon);
 export const User = createOutlineIcon(PhUser);
 export const Users = createOutlineIcon(PhUsers);
