@@ -1,4 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
+import { usePageCms } from "@/lib/cms/page-content";
+import { birdwatchingDefaults } from "./birdwatching-defaults";
 import { BirdHeroSection } from "./birdwatching/sections/BirdHeroSection";
 import { BirdManifestoSection } from "./birdwatching/sections/BirdManifestoSection";
 import { BirdSobreNosSection } from "./birdwatching/sections/BirdSobreNosSection";
@@ -12,6 +14,7 @@ import { useBirdCmsData } from "./birdwatching/cms";
 
 export const BirdWatching = (): JSX.Element => {
   const birdData = useBirdCmsData();
+  const cms = usePageCms("/observacao-de-aves", birdwatchingDefaults);
 
   return (
     <div className="flex flex-col w-full">
@@ -24,10 +27,10 @@ export const BirdWatching = (): JSX.Element => {
           { name: "Observacao de Aves", path: "/observacao-de-aves" },
         ]}
       />
-      <BirdHeroSection />
-      <BirdManifestoSection />
-      <BirdSobreNosSection />
-      <BirdHighlightsSection />
+      <BirdHeroSection content={cms.hero} />
+      <BirdManifestoSection content={cms.manifesto} />
+      <BirdSobreNosSection content={cms.sobreNos} />
+      <BirdHighlightsSection content={cms.highlights} />
       <BirdServicesSection birds={birdData.allBirds} />
       <ImmersionTestimonialsSection />
       <ImmersionCallToActionSection />

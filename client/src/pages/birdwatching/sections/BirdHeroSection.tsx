@@ -4,8 +4,11 @@ import { ChevronDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { Divider } from "@/components/Divider";
 import { staggerSlow, fadeIn, fadeUp, viewport } from "@/lib/motion";
+import type { CmsHero } from "@shared/cms-page-content";
 
-export const BirdHeroSection = (): JSX.Element => {
+type Props = { content: CmsHero };
+
+export const BirdHeroSection = ({ content }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -16,7 +19,7 @@ export const BirdHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/bird-hero-bg.webp"
+        src={content.backgroundImage ?? "/images/bird-hero-bg.webp"}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -54,7 +57,7 @@ export const BirdHeroSection = (): JSX.Element => {
         <div className="flex flex-col items-start gap-6 md:gap-8 w-full max-w-[738px]">
           {/* Label */}
           <motion.span variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#e3f7ec] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]">
-            OBSERVAÇÃO DE AVES
+            {content.label}
           </motion.span>
 
           {/* Title */}
@@ -63,7 +66,7 @@ export const BirdHeroSection = (): JSX.Element => {
             className="max-w-[600px] font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)]"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
-            Observação de Espécies Raras em Habitat Intocado
+            {content.heading}
           </motion.h1>
         </div>
 
@@ -72,13 +75,12 @@ export const BirdHeroSection = (): JSX.Element => {
           <Divider theme="dark" />
           <div className="flex items-start justify-between w-full">
             <p className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              Uma experiência de observação única. Registre nossa avifauna em um
-              dos santuários de aves mais ricos de todo o planeta.
+              {content.subtitle}
             </p>
 
             <div className="hidden md:flex items-center gap-2 text-[#e3f7ec]">
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-                Deslize para baixo
+                {content.scrollHint ?? "Deslize para baixo"}
               </span>
               <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>
@@ -88,4 +90,3 @@ export const BirdHeroSection = (): JSX.Element => {
     </section>
   );
 };
-

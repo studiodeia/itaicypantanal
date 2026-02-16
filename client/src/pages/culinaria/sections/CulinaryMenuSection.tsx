@@ -4,14 +4,7 @@ import { stagger, fadeIn, fadeUp, viewport } from "@/lib/motion";
 import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
-
-const menuTabs = [
-  { id: "carnes", label: "01 Carnes" },
-  { id: "peixes", label: "02 Peixes" },
-  { id: "massas", label: "03 Massas" },
-  { id: "doces", label: "04 Doces" },
-  { id: "bebidas", label: "05 Bebidas" },
-];
+import type { CmsSobreNos } from "@shared/cms-page-content";
 
 const menuImages = [
   { src: "/images/culinaria-menu-1", tag: "Termo para dar vontade" },
@@ -24,8 +17,14 @@ const menuImages = [
   { src: "/images/culinaria-menu-8" },
 ];
 
-export const CulinaryMenuSection = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState("carnes");
+type Props = { content: CmsSobreNos };
+
+export const CulinaryMenuSection = ({ content }: Props): JSX.Element => {
+  const tabs = (content.features ?? []).map((f) => ({
+    id: f.title.toLowerCase(),
+    label: `${f.number} ${f.title}`,
+  }));
+  const [activeTab, setActiveTab] = useState(tabs[0]?.id ?? "carnes");
 
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
@@ -43,7 +42,7 @@ export const CulinaryMenuSection = (): JSX.Element => {
             data-testid="text-menu-label"
             variants={fadeIn}
           >
-            NOSSO MENU
+            {content.label}
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -52,23 +51,23 @@ export const CulinaryMenuSection = (): JSX.Element => {
               data-testid="text-menu-heading"
               variants={fadeUp}
             >
-              Galeria de experiências
+              {content.heading}
             </motion.h2>
-            <motion.p
-              className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
-              variants={fadeUp}
-            >
-              Navegue pelas categorias e explore tudo o que espera por você.
-              Conheça os peixes e carnes já inclusos na sua Pensão Completa.
-              Descubra também os doces caseiros e nossa seleção especial de
-              vinhos e drinks.
-            </motion.p>
+            {content.body.map((paragraph, i) => (
+              <motion.p
+                key={i}
+                className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
+                variants={fadeUp}
+              >
+                {paragraph}
+              </motion.p>
+            ))}
           </div>
         </motion.div>
 
         {/* Tab navigation */}
         <div className="flex border-b border-[#446354] overflow-x-auto scrollbar-hide">
-          {menuTabs.map((tab) => (
+          {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
@@ -98,7 +97,6 @@ export const CulinaryMenuSection = (): JSX.Element => {
                   alt={`Prato ${idx + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                {/* Overlay gradient on first image */}
                 {img.tag && (
                   <>
                     <div
@@ -151,4 +149,3 @@ export const CulinaryMenuSection = (): JSX.Element => {
     </section>
   );
 };
-

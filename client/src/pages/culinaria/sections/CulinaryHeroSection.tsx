@@ -4,8 +4,11 @@ import { staggerSlow, fadeIn, fadeUp, viewport } from "@/lib/motion";
 import { ChevronDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { Divider } from "@/components/Divider";
+import type { CmsHero } from "@shared/cms-page-content";
 
-export const CulinaryHeroSection = (): JSX.Element => {
+type Props = { content: CmsHero };
+
+export const CulinaryHeroSection = ({ content }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -16,7 +19,7 @@ export const CulinaryHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/culinaria/hero-bg.webp"
+        src={content.backgroundImage ?? "/images/culinaria/hero-bg.webp"}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -59,7 +62,7 @@ export const CulinaryHeroSection = (): JSX.Element => {
             data-testid="text-culinary-label"
             variants={fadeIn}
           >
-            CULINÁRIA
+            {content.label}
           </motion.span>
 
           {/* Title */}
@@ -69,7 +72,7 @@ export const CulinaryHeroSection = (): JSX.Element => {
             data-testid="text-culinary-hero-heading"
             variants={fadeUp}
           >
-            Onde o Pantanal Vira Alimento
+            {content.heading}
           </motion.h1>
         </div>
 
@@ -81,12 +84,12 @@ export const CulinaryHeroSection = (): JSX.Element => {
               className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
               data-testid="text-culinary-subtitle"
             >
-              Ingredientes do rio e da terra, técnica internacional e alma pantaneira em cada prato.
+              {content.subtitle}
             </p>
 
             <div className="hidden md:flex items-center gap-2 text-[#e3f7ec]">
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-                Deslize para baixo
+                {content.scrollHint ?? "Deslize para baixo"}
               </span>
               <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>
@@ -96,4 +99,3 @@ export const CulinaryHeroSection = (): JSX.Element => {
     </section>
   );
 };
-

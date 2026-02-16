@@ -256,78 +256,6 @@ export const SiteSettings: GlobalConfig = {
           ],
         },
         {
-          label: "Home Hero",
-          fields: [
-            {
-              name: "homeHeroHeading",
-              type: "text",
-              label: "Titulo Principal",
-            },
-            {
-              name: "homeHeroSubtitle",
-              type: "text",
-              label: "Subtitulo",
-            },
-            {
-              name: "homeHeroBookingHeading",
-              type: "text",
-              label: "Titulo do Card de Reserva",
-            },
-            {
-              name: "homeHeroBookingDescription",
-              type: "text",
-              label: "Descricao do Card de Reserva",
-            },
-          ],
-        },
-        {
-          label: "Home Manifesto",
-          fields: [
-            {
-              name: "homeManifestoLabel",
-              type: "text",
-              label: "Label",
-              admin: { width: "30%" },
-            },
-            {
-              name: "homeManifestoDetailsButtonLabel",
-              type: "text",
-              label: "Texto do Botao",
-              admin: { width: "70%" },
-            },
-            {
-              name: "homeManifestoSegments",
-              type: "array",
-              label: "Segmentos do Manifesto",
-              labels: { singular: "Segmento", plural: "Segmentos" },
-              fields: [
-                {
-                  name: "type",
-                  type: "select",
-                  label: "Tipo",
-                  options: [
-                    { label: "Texto", value: "text" },
-                    { label: "Destaque", value: "highlight" },
-                    { label: "Separador", value: "divider" },
-                  ],
-                  required: true,
-                  admin: { width: "30%" },
-                },
-                {
-                  name: "content",
-                  type: "text",
-                  label: "Conteudo",
-                  admin: {
-                    width: "70%",
-                    condition: (_data: Record<string, unknown>, siblingData: Record<string, unknown>) =>
-                      siblingData?.type !== "divider",
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
           label: "SEO Padroes Globais",
           description:
             "Valores padrao de SEO usados quando uma pagina nao tem metadados proprios.",
@@ -379,38 +307,6 @@ export const SiteSettings: GlobalConfig = {
               admin: {
                 description:
                   "Codigo de verificacao do Google Search Console. Sera injetado como meta tag.",
-              },
-            },
-          ],
-        },
-        {
-          label: "Conteudo das Paginas",
-          description:
-            "Conteudo editavel de todas as paginas do site. Cada chave corresponde a uma rota.",
-          fields: [
-            {
-              name: "pageContent",
-              type: "json",
-              label: "Conteudo por Pagina (JSON)",
-              admin: {
-                description:
-                  "JSON com chaves por rota (ex: '/', '/acomodacoes'). Cada rota contem os textos, imagens e dados de todas as secoes da pagina.",
-              },
-            },
-          ],
-        },
-        {
-          label: "JSON Legado",
-          description:
-            "Campo JSON legado para compatibilidade. Sera removido apos migracao completa.",
-          fields: [
-            {
-              name: "sharedSections",
-              type: "json",
-              label: "Secoes Compartilhadas (Legado)",
-              admin: {
-                description:
-                  "ATENCAO: Este campo sera descontinuado. Edite o conteudo nas abas acima.",
               },
             },
           ],

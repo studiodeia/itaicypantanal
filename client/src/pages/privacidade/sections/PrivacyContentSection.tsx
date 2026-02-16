@@ -1,17 +1,58 @@
-import { useCallback } from "react";
+import { useCallback, Fragment } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeUp, viewport } from "@/lib/motion";
+import type { CmsPrivacySection } from "@shared/cms-page-content";
 
-const sections = [
-  { id: "dados-coletados", label: "1. Quais Dados Coletamos?" },
-  { id: "uso-dados", label: "2. Como Usamos Seus Dados?" },
-  { id: "compartilhamento", label: "3. Compartilhamento de dados" },
-  { id: "protecao", label: "4. Como Protegemos Seus Dados?" },
-  { id: "direitos-lgpd", label: "5. Seus Direitos (LGPD)" },
-  { id: "alteracoes", label: "6. Alterações Nesta Política" },
-];
+type Props = { content: CmsPrivacySection[] };
 
-export const PrivacyContentSection = (): JSX.Element => {
+/**
+ * Renders a content string array, grouping consecutive ** items into <ul>.
+ * - Strings starting with "**" become list items with bold prefix
+ * - Other strings become <p> paragraphs
+ */
+function renderContentBlock(items: string[]) {
+  const elements: React.ReactNode[] = [];
+  let listBuffer: string[] = [];
+  let key = 0;
+
+  const flushList = () => {
+    if (listBuffer.length === 0) return;
+    elements.push(
+      <ul key={`list-${key++}`} className="list-disc ml-9 flex flex-col gap-0">
+        {listBuffer.map((item, i) => {
+          const match = item.match(/^\*\*(.+?)\*\*\s*(.*)/);
+          if (match) {
+            return (
+              <li key={i}>
+                <strong className="font-semibold">{match[1]}</strong> {match[2]}
+              </li>
+            );
+          }
+          return <li key={i}>{item}</li>;
+        })}
+      </ul>,
+    );
+    listBuffer = [];
+  };
+
+  for (const item of items) {
+    if (item.startsWith("**")) {
+      listBuffer.push(item);
+    } else {
+      flushList();
+      elements.push(
+        <p key={`p-${key++}`} className="mb-6">
+          {item}
+        </p>,
+      );
+    }
+  }
+  flushList();
+
+  return elements;
+}
+
+export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
   const scrollToSection = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -45,13 +86,13 @@ export const PrivacyContentSection = (): JSX.Element => {
             <div className="w-full h-px bg-pantanal-border-muted" />
 
             <nav className="flex flex-col">
-              {sections.map((section) => (
+              {content.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
                   className="flex items-center px-3 py-2.5 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] leading-[var(--functional-md-line-height)] text-pantanal-darkText-primary tracking-[var(--functional-md-letter-spacing)] [font-style:var(--functional-md-font-style)] text-left transition-colors duration-200 hover:text-pantanal-gold rounded cursor-pointer"
                 >
-                  {section.label}
+                  {section.title}
                 </button>
               ))}
             </nav>
@@ -89,244 +130,31 @@ export const PrivacyContentSection = (): JSX.Element => {
             </p>
           </motion.div>
 
-          {/* Section 1 */}
-          <motion.h2
-            id="dados-coletados"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            1. Quais Dados Coletamos?
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p className="mb-6">
-              Coletamos informações que você nos fornece e dados gerados
-              automaticamente durante sua navegação:
-            </p>
-            <ul className="list-disc ml-9 flex flex-col gap-0">
-              <li>
-                <strong className="font-semibold">
-                  Informações Fornecidas por Você:
-                </strong>{" "}
-                Inclui dados de identificação pessoal como nome, e-mail e número
-                de telefone que você insere ao preencher formulários de contato,
-                de reserva ou ao solicitar o download de materiais (como nossos
-                guias de espécies).
-              </li>
-              <li>
-                <strong className="font-semibold">
-                  Informações de Reserva:
-                </strong>{" "}
-                Para gerenciar sua estadia, podemos coletar informações sobre as
-                datas da sua viagem e preferências. O processamento final do
-                pagamento é feito por nosso parceiro de reservas externo e
-                seguro.
-              </li>
-              <li>
-                <strong className="font-semibold">
-                  Informações de Navegação (Cookies):
-                </strong>{" "}
-                Coletamos dados anônimos sobre como você interage com nosso site
-                (como endereço IP, tipo de navegador, páginas visitadas e tempo
-                de permanência) para melhorar sua experiência.
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Section 2 */}
-          <motion.h2
-            id="uso-dados"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            2. Como Usamos Seus Dados?
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p className="mb-6">
-              Utilizamos suas informações pessoais com os seguintes objetivos:
-            </p>
-            <ul className="list-disc ml-9 flex flex-col gap-0">
-              <li>
-                <strong className="font-semibold">
-                  Processar sua Reserva:
-                </strong>{" "}
-                Para confirmar e gerenciar sua expedição, comunicar detalhes
-                importantes sobre sua estadia e garantir que sua experiência seja
-                tranquila.
-              </li>
-              <li>
-                <strong className="font-semibold">
-                  Prestar Atendimento:
-                </strong>{" "}
-                Para responder às suas dúvidas, solicitações e fornecer o suporte
-                necessário.
-              </li>
-              <li>
-                <strong className="font-semibold">
-                  Melhorar Nosso Site:
-                </strong>{" "}
-                Analisamos dados de navegação para entender como nossos
-                visitantes usam o site, otimizando o layout, o conteúdo e a
-                performance.
-              </li>
-              <li>
-                <strong className="font-semibold">
-                  Marketing e Comunicação (com seu consentimento):
-                </strong>{" "}
-                Para enviar e-mails sobre nossos pacotes, promoções especiais e
-                conteúdos relevantes do nosso blog. Você pode optar por não
-                receber essas comunicações a qualquer momento.
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Section 3 */}
-          <motion.h2
-            id="compartilhamento"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            3. Com Quem Compartilhamos Seus Dados?
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p className="mb-6">
-              A Itaici Ecoturismo não vende, aluga ou comercializa suas
-              informações pessoais.
-            </p>
-            <p className="mb-6">
-              O compartilhamento de dados é estritamente limitado a parceiros
-              operacionais essenciais para a prestação do nosso serviço, como o
-              nosso motor de reservas externo, que possui seus próprios e
-              rigorosos padrões de segurança.
-            </p>
-            <p>
-              Também poderemos compartilhar informações se formos obrigados por
-              lei ou para proteger nossos direitos legais.
-            </p>
-          </motion.div>
-
-          {/* Section 4 */}
-          <motion.h2
-            id="protecao"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            4. Como Protegemos Seus Dados?
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p>
-              Implementamos um conjunto de medidas de segurança técnicas e
-              administrativas para proteger seus dados pessoais contra acesso não
-              autorizado, perda, alteração ou destruição. Isso inclui o uso de
-              criptografia (SSL) e controles de acesso restrito.
-            </p>
-          </motion.div>
-
-          {/* Section 5 */}
-          <motion.h2
-            id="direitos-lgpd"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            5. Seus Direitos (LGPD)
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p className="mb-6">
-              Você, como titular dos dados, tem o direito de:
-            </p>
-            <ul className="list-disc ml-9 flex flex-col gap-0 mb-6">
-              <li>Confirmar se estamos tratando seus dados.</li>
-              <li>Acessar, corrigir ou atualizar suas informações.</li>
-              <li>
-                Solicitar a anonimização ou eliminação de dados que considere
-                desnecessários.
-              </li>
-              <li>
-                Revogar seu consentimento para o marketing a qualquer momento.
-              </li>
-            </ul>
-            <p>
-              Para exercer seus direitos ou tirar dúvidas sobre esta política,
-              entre em contato conosco através do e-mail:
-              [seu-email-de-contato@itaici.com.br]
-            </p>
-          </motion.div>
-
-          {/* Section 6 */}
-          <motion.h2
-            id="alteracoes"
-            className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
-            style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            6. Alterações Nesta Política
-          </motion.h2>
-          <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <p>
-              Podemos atualizar esta Política de Privacidade periodicamente para
-              refletir novas práticas ou mudanças na legislação. A versão mais
-              recente estará sempre disponível nesta página, e a data da última
-              atualização será indicada no topo.
-            </p>
-          </motion.div>
+          {/* Dynamic sections */}
+          {content.map((section) => (
+            <Fragment key={section.id}>
+              <motion.h2
+                id={section.id}
+                className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] scroll-mt-8"
+                style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewport}
+              >
+                {section.title}
+              </motion.h2>
+              <motion.div
+                className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewport}
+              >
+                {renderContentBlock(section.content)}
+              </motion.div>
+            </Fragment>
+          ))}
         </div>
       </div>
     </section>

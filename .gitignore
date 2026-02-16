@@ -15,3 +15,15 @@ client/public/figmaAssets/section - cta.png
 
 # Large media
 *.mp4
+
+# Payload CMS build artifacts
+payload-cms/.next/
+payload-cms/.playwright-cli/
+payload-cms/payload.db
+payload-cms/tsconfig.tsbuildinfo
+
+# Environment files
+payload-cms/.env
+
+# Windows artifacts
+nul

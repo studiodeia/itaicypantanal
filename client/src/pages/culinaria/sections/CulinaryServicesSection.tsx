@@ -1,27 +1,11 @@
 import { motion } from "framer-motion";
 import { stagger, fadeIn, fadeUp, cardItem, viewport } from "@/lib/motion";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import type { CmsServices } from "@shared/cms-page-content";
 
-const services = [
-  {
-    src: "/images/culinaria-services-1",
-    title: "Café da Manhã com Vista",
-    description: "Desfrute do seu café observando o despertar do Pantanal.",
-    large: true,
-  },
-  {
-    src: "/images/culinaria-services-2",
-    title: "Almoço no Refúgio",
-    large: false,
-  },
-  {
-    src: "/images/culinaria-services-3",
-    title: "Jantar à Luz de Velas",
-    large: false,
-  },
-];
+type Props = { content: CmsServices };
 
-export const CulinaryServicesSection = (): JSX.Element => {
+export const CulinaryServicesSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#344e41]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -38,7 +22,7 @@ export const CulinaryServicesSection = (): JSX.Element => {
             data-testid="text-services-label"
             variants={fadeIn}
           >
-            NOSSOS SERVIÇOS
+            {content.label}
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -47,14 +31,13 @@ export const CulinaryServicesSection = (): JSX.Element => {
               data-testid="text-services-heading"
               variants={fadeUp}
             >
-              O Ciclo da Sua Imersão Gastronômica
+              {content.heading}
             </motion.h2>
             <motion.p
               className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
               variants={fadeUp}
             >
-              Da alvorada ao anoitecer, sua experiência gastronômica está inclusa
-              e conectada à sua expedição.
+              {content.description}
             </motion.p>
           </div>
         </motion.div>
@@ -67,11 +50,11 @@ export const CulinaryServicesSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          {services.map((service, idx) => (
+          {content.items.map((service, idx) => (
             <motion.div
               key={idx}
               className={`relative overflow-hidden rounded-lg ${
-                service.large
+                idx === 0
                   ? "w-full md:w-1/2 h-[300px] md:h-full"
                   : "w-full md:flex-1 h-[250px] md:h-full"
               }`}
@@ -79,7 +62,7 @@ export const CulinaryServicesSection = (): JSX.Element => {
               variants={cardItem}
             >
               <OptimizedImage
-                src={service.src}
+                src={service.image}
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />

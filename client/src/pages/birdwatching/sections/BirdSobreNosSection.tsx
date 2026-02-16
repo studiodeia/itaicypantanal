@@ -1,29 +1,11 @@
 import { motion } from "framer-motion";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { stagger, fadeIn, fadeUp, scaleIn, viewport } from "@/lib/motion";
+import type { CmsSobreNos } from "@shared/cms-page-content";
 
-const pillars = [
-  {
-    number: "01",
-    title: "Guias Experts",
-    description:
-      "Nossos guias possuem mais de 15 anos de experiência e conhecem intimamente os comportamentos e rotas de cada espécie.",
-  },
-  {
-    number: "02",
-    title: "Acesso Exclusivo",
-    description:
-      "Possuímos autorização do IBAMA para operar em áreas protegidas, longe do turismo convencional.",
-  },
-  {
-    number: "03",
-    title: "Imersão Contemplativa",
-    description:
-      "Oferecemos uma experiência que vai além do turismo, focada em uma imersão científica e verdadeiramente contemplativa.",
-  },
-];
+type Props = { content: CmsSobreNos };
 
-export const BirdSobreNosSection = (): JSX.Element => {
+export const BirdSobreNosSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-8 md:gap-12 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -36,7 +18,7 @@ export const BirdSobreNosSection = (): JSX.Element => {
           className="w-full lg:flex-1 h-[300px] md:h-[500px] lg:h-[904px] rounded-lg overflow-hidden"
         >
           <OptimizedImage
-            src="/images/bird-about-1"
+            src={content.image}
             alt="Observação de aves no Pantanal"
             className="w-full h-full object-cover"
           />
@@ -52,7 +34,7 @@ export const BirdSobreNosSection = (): JSX.Element => {
         >
           {/* Label */}
           <motion.span variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]">
-            NOSSA FILOSOFIA
+            {content.label}
           </motion.span>
 
           {/* Title */}
@@ -61,24 +43,24 @@ export const BirdSobreNosSection = (): JSX.Element => {
             className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
-            Observação Consciente e Imersiva
+            {content.heading}
           </motion.h2>
 
           {/* Description */}
           <motion.div variants={fadeUp} className="flex flex-col gap-6">
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              No coração do Pantanal, praticamos a observação de aves com
-              respeito absoluto ao habitat natural.
-            </p>
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              Cada expedição é planejada para minimizar o impacto ambiental,
-              enquanto maximiza suas oportunidades de avistamento.
-            </p>
+            {content.body.map((paragraph, i) => (
+              <p
+                key={i}
+                className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
+              >
+                {paragraph}
+              </p>
+            ))}
           </motion.div>
 
           {/* Pillars */}
           <motion.div variants={fadeUp} className="flex flex-col gap-8">
-            {pillars.map((pillar, idx) => (
+            {(content.features ?? []).map((pillar, idx) => (
               <div
                 key={idx}
                 className={`flex gap-6 items-start pt-6 ${

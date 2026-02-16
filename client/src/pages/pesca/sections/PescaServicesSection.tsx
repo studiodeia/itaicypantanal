@@ -3,6 +3,9 @@ import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import type { CmsServices } from "@shared/cms-page-content";
+
+type Props = { content: CmsServices };
 
 const fishSpecies = [
   {
@@ -47,7 +50,7 @@ const fishSpecies = [
   },
 ];
 
-export const PescaServicesSection = (): JSX.Element => {
+export const PescaServicesSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -64,7 +67,7 @@ export const PescaServicesSection = (): JSX.Element => {
             data-testid="text-pesca-services-label"
             variants={fadeIn}
           >
-            O SANTUÁRIO
+            {content.label}
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -73,15 +76,13 @@ export const PescaServicesSection = (): JSX.Element => {
               data-testid="text-pesca-services-heading"
               variants={fadeUp}
             >
-              Os Gigantes do Nosso Rio
+              {content.heading}
             </motion.h2>
             <motion.p
               className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
               variants={fadeUp}
             >
-              O Dourado é o rei, mas não reina sozinho. Nossas águas abrigam uma
-              variedade incrível de desafios esportivos. Conheça seus
-              adversários.
+              {content.description}
             </motion.p>
           </div>
         </motion.div>
@@ -144,12 +145,12 @@ export const PescaServicesSection = (): JSX.Element => {
 
         {/* Bottom CTA */}
         <a
-          href="#"
+          href={content.buttonHref ?? "#"}
           className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
           data-testid="link-pesca-guia"
         >
           <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            Ver guia de espécies completo
+            {content.buttonText ?? "Ver guia de espécies completo"}
           </span>
           <ChevronRight
             className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"

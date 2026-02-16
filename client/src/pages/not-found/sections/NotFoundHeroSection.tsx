@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
+import type { CmsHero } from "@shared/cms-page-content";
 
-export const NotFoundHeroSection = (): JSX.Element => {
+type Props = { content: CmsHero; buttonText: string };
+
+export const NotFoundHeroSection = ({ content, buttonText }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -15,7 +18,7 @@ export const NotFoundHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1080px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/404-hero-bg.webp"
+        src={content.backgroundImage}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -58,7 +61,7 @@ export const NotFoundHeroSection = (): JSX.Element => {
               className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#e3f7ec] text-[length:var(--lead-md-font-size)] tracking-[3.84px] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)] uppercase"
               variants={fadeIn}
             >
-              404
+              {content.label}
             </motion.span>
 
             <motion.h1
@@ -66,7 +69,7 @@ export const NotFoundHeroSection = (): JSX.Element => {
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               variants={fadeUp}
             >
-              Parece que você saiu um pouco da trilha.
+              {content.heading}
             </motion.h1>
           </motion.div>
 
@@ -79,7 +82,7 @@ export const NotFoundHeroSection = (): JSX.Element => {
             whileInView="visible"
             viewport={viewport}
           >
-            Voltar para o início
+            {buttonText}
           </motion.a>
         </div>
 
@@ -92,13 +95,12 @@ export const NotFoundHeroSection = (): JSX.Element => {
           viewport={viewport}
         >
           <p className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-            Acontece até com os exploradores mais experientes. A página que você
-            procurava não foi encontrada ou pode ter sido movida.
+            {content.description}
           </p>
 
           <div className="hidden md:flex items-center gap-2 text-[#e3f7ec] shrink-0">
             <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-              Deslize para baixo
+              {content.scrollHint}
             </span>
             <ArrowDown className="w-6 h-6" />
           </div>
@@ -107,4 +109,3 @@ export const NotFoundHeroSection = (): JSX.Element => {
     </section>
   );
 };
-

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const EcoManifestoSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const EcoManifestoSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <motion.div
@@ -16,11 +19,15 @@ export const EcoManifestoSection = (): JSX.Element => {
           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           variants={fadeUp}
         >
-          Uma experiência que vai além do{" "}
-          <span className="text-[#d7a45d]">turismo convencional</span>. Cada
-          passeio é uma imersão guiada no coração de um dos{" "}
-          <span className="text-[#d7a45d]">ecossistemas mais ricos</span> do
-          planeta.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            )
+          )}
         </motion.p>
       </motion.div>
     </section>

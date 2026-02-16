@@ -1,4 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
+import { usePageCms } from "@/lib/cms/page-content";
+import { culinariaDefaults } from "./culinaria-defaults";
 import { CulinaryHeroSection } from "./culinaria/sections/CulinaryHeroSection";
 import { CulinaryManifestoSection } from "./culinaria/sections/CulinaryManifestoSection";
 import { CulinaryHighlightsSection } from "./culinaria/sections/CulinaryHighlightsSection";
@@ -12,6 +14,8 @@ import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSe
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Culinaria = (): JSX.Element => {
+  const cms = usePageCms("/culinaria", culinariaDefaults);
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -23,14 +27,14 @@ export const Culinaria = (): JSX.Element => {
           { name: "Culinaria", path: "/culinaria" },
         ]}
       />
-      <CulinaryHeroSection />
-      <CulinaryManifestoSection />
-      <CulinaryHighlightsSection />
-      <CulinaryExperienceSection />
-      <CulinaryMenuSection />
-      <CulinaryServicesSection />
+      <CulinaryHeroSection content={cms.hero} />
+      <CulinaryManifestoSection content={cms.manifesto} />
+      <CulinaryHighlightsSection content={cms.highlights} />
+      <CulinaryExperienceSection content={cms.experience} />
+      <CulinaryMenuSection content={cms.menu} />
+      <CulinaryServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
-      <AccommodationsCrossSellSection />
+      <AccommodationsCrossSellSection content={cms.crossSell} />
       <FrequentlyAskedQuestionsSection />
       <ImmersionCallToActionSection />
       <SiteFooterSection />

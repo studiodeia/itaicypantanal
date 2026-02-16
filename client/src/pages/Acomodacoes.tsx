@@ -1,5 +1,7 @@
 import { PageMeta } from "@/components/PageMeta";
-import { BedSingle, BedDouble, Bath, Fence, User, Users } from "@/lib/icons";
+import { usePageCms } from "@/lib/cms/page-content";
+import { resolveIcon } from "@/lib/icon-resolver";
+import { acomodacoesDefaults } from "./acomodacoes-defaults";
 import { AccommodationsHeroSection } from "./acomodacoes/sections/AccommodationsHeroSection";
 import { ManifestoStatementSection } from "./acomodacoes/sections/ManifestoStatementSection";
 import { AccommodationsHighlightsSection } from "./acomodacoes/sections/AccommodationsHighlightsSection";
@@ -10,46 +12,23 @@ import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuest
 import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
-const apartamentoSingle = {
-  title: "Suíte Explorer",
-  description:
-    "O refúgio ideal para o viajante solo que busca imersão total. Privacidade, silêncio e conexão com a natureza no seu próprio ritmo.",
-  features: [
-    { icon: BedSingle, label: "Cama Individual Premium" },
-    { icon: Bath, label: "Banheiro Privativo" },
-    { icon: Fence, label: "Varanda Intimista" },
-    { icon: User, label: "1 Pessoa" },
-  ],
-  image: "/images/acomodacoes/suite-explorer.webp",
-};
-
-const apartamentoDuplo = {
-  title: "Suíte Adventure",
-  description:
-    "Projetada para casais que buscam uma experiência a dois no coração do Pantanal. Conforto, natureza e momentos inesquecíveis.",
-  features: [
-    { icon: BedDouble, label: "Cama de Casal Premium" },
-    { icon: Bath, label: "Banheiro Privativo" },
-    { icon: Fence, label: "Varanda Privativa" },
-    { icon: Users, label: "2 Pessoas" },
-  ],
-  image: "/images/acomodacoes/suite-adventure.webp",
-};
-
-const apartamentoTriplo = {
-  title: "Suíte Family",
-  description:
-    "A mais espaçosa das nossas suítes. Perfeita para famílias ou pequenos grupos, com cama de casal, solteiro e ampla área de convivência.",
-  features: [
-    { icon: BedDouble, label: "Cama Casal + Solteiro" },
-    { icon: Bath, label: "Banheiro Privativo" },
-    { icon: Fence, label: "Varanda Ampla" },
-    { icon: Users, label: "3 Pessoas" },
-  ],
-  image: "/images/acomodacoes/suite-family.webp",
-};
+const imagePositions = ["left", "right", "left"] as const;
 
 export const Acomodacoes = (): JSX.Element => {
+  const cms = usePageCms("/acomodacoes", acomodacoesDefaults);
+
+  const rooms = cms.rooms.map((room, i) => ({
+    title: room.title,
+    description: room.description,
+    features: room.features.map((f) => ({
+      icon: resolveIcon(f.iconName),
+      label: f.label,
+    })),
+    image: room.image,
+    ctaText: room.ctaText,
+    imagePosition: imagePositions[i] ?? "left",
+  }));
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -61,24 +40,31 @@ export const Acomodacoes = (): JSX.Element => {
           { name: "Acomodacoes", path: "/acomodacoes" },
         ]}
       />
-      <AccommodationsHeroSection />
-      <ManifestoStatementSection />
+      <AccommodationsHeroSection content={cms.hero} />
+      <ManifestoStatementSection content={cms.manifesto} />
       <div
         style={{
           background: "linear-gradient(180deg, #344e41 0%, #263a30 100%)",
         }}
       >
-        <AccommodationsHighlightsSection />
-        <ApartmentSection {...apartamentoSingle} imagePosition="left" />
-        <ApartmentSection {...apartamentoDuplo} imagePosition="right" />
-        <ApartmentSection {...apartamentoTriplo} imagePosition="left" />
+        <AccommodationsHighlightsSection content={cms.highlights} />
+        {rooms.map((room) => (
+          <ApartmentSection
+            key={room.title}
+            title={room.title}
+            description={room.description}
+            features={room.features}
+            image={room.image}
+            ctaText={room.ctaText}
+            imagePosition={room.imagePosition}
+          />
+        ))}
       </div>
       <ImmersionTestimonialsSection />
-      <CulinarySection />
+      <CulinarySection content={cms.culinary} />
       <FrequentlyAskedQuestionsSection />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>
   );
 };
-

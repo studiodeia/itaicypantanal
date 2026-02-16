@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { NavHeader } from "@/components/NavHeader";
 import { Divider } from "@/components/Divider";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
+import type { CmsHero } from "@shared/cms-page-content";
 
-export const EcoHeroSection = (): JSX.Element => {
+type Props = { content: CmsHero };
+
+export const EcoHeroSection = ({ content }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -16,7 +19,7 @@ export const EcoHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/eco-hero-bg.webp"
+        src={content.backgroundImage ?? "/images/eco-hero-bg.webp"}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -57,7 +60,7 @@ export const EcoHeroSection = (): JSX.Element => {
             className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#e3f7ec] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]"
             variants={fadeIn}
           >
-            ECOTURISMO
+            {content.label}
           </motion.span>
 
           {/* Title */}
@@ -66,7 +69,7 @@ export const EcoHeroSection = (): JSX.Element => {
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            Imersão Autêntica na Natureza Selvagem do Pantanal
+            {content.heading}
           </motion.h1>
         </div>
 
@@ -75,14 +78,12 @@ export const EcoHeroSection = (): JSX.Element => {
           <Divider theme="dark" />
           <div className="flex items-start justify-between w-full">
             <p className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              Passeios guiados que revelam a essência do bioma mais biodiverso
-              do planeta. Cada experiência é uma conexão profunda com a vida
-              selvagem.
+              {content.subtitle}
             </p>
 
             <div className="hidden md:flex items-center gap-2 text-[#e3f7ec]">
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-                Deslize para baixo
+                {content.scrollHint ?? "Deslize para baixo"}
               </span>
               <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>
@@ -92,4 +93,3 @@ export const EcoHeroSection = (): JSX.Element => {
     </section>
   );
 };
-

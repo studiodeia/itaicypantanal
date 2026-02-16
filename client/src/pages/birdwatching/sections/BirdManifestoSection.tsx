@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { stagger, fadeUp, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const BirdManifestoSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const BirdManifestoSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <motion.div
@@ -16,10 +19,15 @@ export const BirdManifestoSection = (): JSX.Element => {
           className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[#e3f7ec] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)]"
           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
         >
-          Uma{" "}
-          <span className="text-[#d7a45d]">imersão contemplativa</span> que vai
-          além do convencional. Guiamos com respeito em nosso santuário de{" "}
-          <span className="text-[#d7a45d]">acesso exclusivo</span>.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            )
+          )}
         </motion.p>
       </motion.div>
     </section>

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const CulinaryManifestoSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const CulinaryManifestoSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] items-center justify-center min-h-[400px] md:min-h-[500px] lg:min-h-[600px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -14,12 +17,15 @@ export const CulinaryManifestoSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          A{" "}
-          <span className="text-[#d7a45d]">alma do Pantanal</span>, a técnica
-          do mundo. Ingredientes locais colhidos no dia,{" "}
-          <span className="text-[#d7a45d]">técnicas de alta gastronomia</span>{" "}
-          e o tempo que cada prato merece — uma cozinha autoral que honra a
-          terra e surpreende o paladar.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            )
+          )}
         </motion.p>
       </div>
     </section>

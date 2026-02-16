@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
-export const ImpactEngagementSection = (): JSX.Element => {
+type Props = { content: NossoImpactoPageContent["engagement"] };
+
+export const ImpactEngagementSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#152218]">
       <motion.div
@@ -17,7 +20,7 @@ export const ImpactEngagementSection = (): JSX.Element => {
           className="font-heading-xl font-[number:var(--heading-xl-font-weight)] text-[#e3f7ec] text-[length:var(--heading-xl-font-size)] leading-[var(--heading-xl-line-height)] tracking-[var(--heading-xl-letter-spacing)] [font-style:var(--heading-xl-font-style)] max-w-[800px]"
           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
         >
-          Faça parte deste legado.
+          {content.heading}
         </motion.h2>
 
         <motion.a
@@ -27,7 +30,7 @@ export const ImpactEngagementSection = (): JSX.Element => {
           })}
           className="inline-flex items-center justify-center h-14 px-8 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
         >
-          Reservar Minha Experiência Consciente
+          {content.buttonText}
         </motion.a>
       </motion.div>
     </section>

@@ -3,8 +3,15 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
+import type { CmsHero, ContatoPageContent } from "@shared/cms-page-content";
 
-export const ContactHeroSection = (): JSX.Element => {
+type Props = {
+  content: CmsHero;
+  formTitle: string;
+  steps: ContatoPageContent["steps"];
+};
+
+export const ContactHeroSection = ({ content, formTitle, steps }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -43,7 +50,7 @@ export const ContactHeroSection = (): JSX.Element => {
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1080px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
-        src="/images/culinaria-cta-bg.webp"
+        src={content.backgroundImage ?? "/images/culinaria-cta-bg.webp"}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-[filter,transform] duration-300 ${
           menuOpen ? "blur-[8px] scale-105" : ""
@@ -86,7 +93,7 @@ export const ContactHeroSection = (): JSX.Element => {
               className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#d7a45d] text-[length:var(--lead-md-font-size)] tracking-[3.84px] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)] uppercase"
               variants={fadeIn}
             >
-              PREPARE SUA EXPEDIÇÃO
+              {content.label}
             </motion.span>
 
             <motion.h1
@@ -94,7 +101,7 @@ export const ContactHeroSection = (): JSX.Element => {
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               variants={fadeUp}
             >
-              Fale com Nossos Especialistas
+              {content.heading}
             </motion.h1>
           </motion.div>
 
@@ -114,7 +121,7 @@ export const ContactHeroSection = (): JSX.Element => {
                 className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]"
                 style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               >
-                Entrar em contato
+                {formTitle}
               </h2>
               <span className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[#a8cab9] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)]">
                 {step}/3
@@ -129,7 +136,7 @@ export const ContactHeroSection = (): JSX.Element => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="E-mail"
+                  placeholder={steps.placeholders[0] ?? "E-mail"}
                   className={inputClasses}
                   required
                   data-testid="input-contact-email"
@@ -140,7 +147,7 @@ export const ContactHeroSection = (): JSX.Element => {
                   className="flex items-center justify-center h-14 w-full border border-[#f2fcf7] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg transition-all duration-300 hover:bg-[#f2fcf7] hover:text-[#152218] hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
                   data-testid="button-avancar"
                 >
-                  Avançar
+                  {steps.buttonNext}
                 </button>
               </div>
             )}
@@ -153,7 +160,7 @@ export const ContactHeroSection = (): JSX.Element => {
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Nome completo"
+                  placeholder={steps.placeholders[1] ?? "Nome completo"}
                   className={inputClasses}
                   required
                 />
@@ -162,7 +169,7 @@ export const ContactHeroSection = (): JSX.Element => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Telefone / WhatsApp"
+                  placeholder={steps.placeholders[2] ?? "Telefone / WhatsApp"}
                   className={inputClasses}
                 />
                 <div className="flex gap-3">
@@ -171,14 +178,14 @@ export const ContactHeroSection = (): JSX.Element => {
                     onClick={handleBack}
                     className="flex items-center justify-center h-14 flex-1 border border-[#a8cab9] rounded-[6px] text-[#a8cab9] font-['Lato',sans-serif] font-semibold text-base transition-all duration-300 hover:border-[#e3f7ec] hover:text-[#e3f7ec]"
                   >
-                    Voltar
+                    {steps.buttonBack}
                   </button>
                   <button
                     type="button"
                     onClick={handleAdvance}
                     className="flex items-center justify-center h-14 flex-1 border border-[#f2fcf7] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base transition-all duration-300 hover:bg-[#f2fcf7] hover:text-[#152218] hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
                   >
-                    Avançar
+                    {steps.buttonNext}
                   </button>
                 </div>
               </div>
@@ -191,7 +198,7 @@ export const ContactHeroSection = (): JSX.Element => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Sua mensagem..."
+                  placeholder={steps.placeholders[3] ?? "Sua mensagem..."}
                   rows={3}
                   className={`${inputClasses} resize-none`}
                   required
@@ -202,13 +209,13 @@ export const ContactHeroSection = (): JSX.Element => {
                     onClick={handleBack}
                     className="flex items-center justify-center h-14 flex-1 border border-[#a8cab9] rounded-[6px] text-[#a8cab9] font-['Lato',sans-serif] font-semibold text-base transition-all duration-300 hover:border-[#e3f7ec] hover:text-[#e3f7ec]"
                   >
-                    Voltar
+                    {steps.buttonBack}
                   </button>
                   <button
                     type="submit"
                     className="flex items-center justify-center h-14 flex-1 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
                   >
-                    Enviar
+                    {steps.buttonSubmit}
                   </button>
                 </div>
               </div>
@@ -225,14 +232,12 @@ export const ContactHeroSection = (): JSX.Element => {
           viewport={viewport}
         >
           <p className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-            Nossa equipe está à disposição para ajudar com suas dúvidas, seja
-            sobre nossas expedições de birdwatching, pacotes de pesca esportiva
-            ou os detalhes da sua estadia de ecoturismo.
+            {content.description}
           </p>
 
           <div className="hidden md:flex items-center gap-2 text-[#e3f7ec] shrink-0">
             <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-              Deslize para baixo
+              {content.scrollHint ?? "Deslize para baixo"}
             </span>
             <ArrowDown className="w-6 h-6" />
           </div>

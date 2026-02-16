@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { stagger, fadeIn, fadeUp, scaleIn, viewport } from "@/lib/motion";
 import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import type { CulinariaPageContent } from "@shared/cms-page-content";
 
-export const AccommodationsCrossSellSection = (): JSX.Element => {
+type Props = { content: CulinariaPageContent["crossSell"] };
+
+export const AccommodationsCrossSellSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#fcf4ed]">
       <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-8 md:gap-12 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -16,7 +19,7 @@ export const AccommodationsCrossSellSection = (): JSX.Element => {
           viewport={viewport}
         >
           <OptimizedImage
-            src="/images/culinaria-crosssell-2"
+            src={content.image}
             alt="Acomodações Itaicy"
             className="w-full h-full object-cover"
             data-testid="img-crosssell-accommodation"
@@ -45,25 +48,24 @@ export const AccommodationsCrossSellSection = (): JSX.Element => {
             data-testid="text-crosssell-heading"
             variants={fadeUp}
           >
-            O refúgio completo
+            {content.heading}
           </motion.h2>
 
           <motion.p
             className="font-body-md font-[number:var(--body-md-font-weight)] text-[#446354] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
             variants={fadeUp}
           >
-            Agora que conheceu nossa cozinha, encontre a acomodação perfeita
-            para sua imersão no Pantanal.
+            {content.description}
           </motion.p>
 
           <motion.a
-            href="/acomodacoes"
+            href={content.buttonHref}
             className="flex items-center justify-between w-full py-4 border-b border-[#344e41] transition-all duration-300 group"
             data-testid="link-crosssell-acomodacoes"
             variants={fadeUp}
           >
             <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#263a30] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-              Conhecer acomodações
+              {content.buttonText}
             </span>
             <ChevronRight className="w-5 h-5 text-[#263a30] transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2} />
           </motion.a>
@@ -72,4 +74,3 @@ export const AccommodationsCrossSellSection = (): JSX.Element => {
     </section>
   );
 };
-

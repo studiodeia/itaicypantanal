@@ -82,21 +82,6 @@ export const Pages: CollectionConfig = {
           imageField: "title",
           slugPrefix: "",
         }),
-        {
-          label: "Conteudo da pagina",
-          fields: [
-            {
-              name: "sections",
-              type: "json",
-              label: "Secoes (JSON)",
-              required: false,
-              admin: {
-                description:
-                  "Cole aqui o JSON das secoes da pagina. Mantemos esta estrutura para paridade total com o frontend.",
-              },
-            },
-          ],
-        },
       ],
     },
   ],

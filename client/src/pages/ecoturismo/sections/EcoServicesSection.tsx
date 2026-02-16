@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import type { CmsServices } from "@shared/cms-page-content";
+
+type Props = { content: CmsServices };
 
 const activities = [
   {
@@ -46,7 +49,7 @@ const activities = [
   },
 ];
 
-export const EcoServicesSection = (): JSX.Element => {
+export const EcoServicesSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -62,7 +65,7 @@ export const EcoServicesSection = (): JSX.Element => {
             className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]"
             variants={fadeIn}
           >
-            AS EXPEDIÇÕES
+            {content.label}
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -70,15 +73,13 @@ export const EcoServicesSection = (): JSX.Element => {
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               variants={fadeUp}
             >
-              Nossos Passeios
+              {content.heading}
             </motion.h2>
             <motion.p
               className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
               variants={fadeUp}
             >
-              Cada passeio é uma oportunidade de vivenciar o Pantanal de forma
-              única. Nossos guias nativos garantem avistamentos memoráveis e
-              segurança em cada expedição.
+              {content.description}
             </motion.p>
           </div>
         </motion.div>
@@ -115,11 +116,11 @@ export const EcoServicesSection = (): JSX.Element => {
 
         {/* Bottom CTA */}
         <a
-          href="#"
+          href={content.buttonHref ?? "#"}
           className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
         >
           <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            Ver todos os passeios disponíveis
+            {content.buttonText ?? "Ver todos os passeios disponíveis"}
           </span>
           <ChevronRight
             className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"
@@ -203,4 +204,3 @@ const ActivityCard = ({ activity }: ActivityCardProps): JSX.Element => {
     </div>
   );
 };
-

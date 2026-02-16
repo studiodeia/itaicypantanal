@@ -2,12 +2,9 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
+import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
-const stats = [
-  { target: 166, suffix: "+", label: "ESPÉCIES CATALOGADAS" },
-  { target: 4, suffix: "", label: "ESPÉCIES AMEAÇADAS PROTEGIDAS" },
-  { target: 85, suffix: "%", label: "DE ÁREA PRESERVADA" },
-];
+type Props = { content: NossoImpactoPageContent["biodiversidade"] };
 
 const ANIMATION_DURATION = 2000;
 
@@ -15,10 +12,10 @@ function easeOutCubic(t: number) {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export const BiodiversidadeSection = (): JSX.Element => {
+export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
   const sectionRef = useRef<HTMLElement>(null);
   const hasAnimated = useRef(false);
-  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
+  const [counts, setCounts] = useState<number[]>(content.counters.map(() => 0));
 
   const animateCounts = useCallback(() => {
     const startTime = performance.now();
@@ -28,13 +25,13 @@ export const BiodiversidadeSection = (): JSX.Element => {
       const progress = Math.min(elapsed / ANIMATION_DURATION, 1);
       const eased = easeOutCubic(progress);
 
-      setCounts(stats.map((s) => Math.round(s.target * eased)));
+      setCounts(content.counters.map((s) => Math.round(s.target * eased)));
 
       if (progress < 1) requestAnimationFrame(tick);
     };
 
     requestAnimationFrame(tick);
-  }, []);
+  }, [content.counters]);
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -73,7 +70,7 @@ export const BiodiversidadeSection = (): JSX.Element => {
             className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)] max-w-[664px]"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
-            Santuário de Vida Selvagem
+            {content.heading}
           </motion.h2>
         </motion.div>
 
@@ -85,7 +82,7 @@ export const BiodiversidadeSection = (): JSX.Element => {
           viewport={viewport}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-[32px]"
         >
-          {stats.map((stat, index) => (
+          {content.counters.map((stat, index) => (
             <div
               key={index}
               className="flex flex-col items-start gap-3 p-8 rounded-lg bg-[#344e41]"
@@ -119,4 +116,3 @@ export const BiodiversidadeSection = (): JSX.Element => {
     </section>
   );
 };
-

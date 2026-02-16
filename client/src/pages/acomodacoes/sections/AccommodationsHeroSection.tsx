@@ -5,8 +5,11 @@ import { NavHeader } from "@/components/NavHeader";
 import { ProgressiveVideo } from "@/components/ProgressiveVideo";
 import { Divider } from "@/components/Divider";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
+import type { CmsHero } from "@shared/cms-page-content";
 
-export const AccommodationsHeroSection = (): JSX.Element => {
+type Props = { content: CmsHero };
+
+export const AccommodationsHeroSection = ({ content }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -16,11 +19,11 @@ export const AccommodationsHeroSection = (): JSX.Element => {
   return (
     <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       <ProgressiveVideo
-        src="/Vídeo_Pronto_e_Suave.mp4"
-        lowSrc="/video-pronto-suave-low.mp4"
-        webmSrc="/video-pronto-suave.webm"
-        lowWebmSrc="/video-pronto-suave-low.webm"
-        poster="/images/acomodacoes/suite-explorer.webp"
+        src={content.videoMp4 ?? "/Vídeo_Pronto_e_Suave.mp4"}
+        lowSrc={content.videoMp4Low ?? "/video-pronto-suave-low.mp4"}
+        webmSrc={content.videoWebm ?? "/video-pronto-suave.webm"}
+        lowWebmSrc={content.videoWebmLow ?? "/video-pronto-suave-low.webm"}
+        poster={content.videoPoster ?? "/images/acomodacoes/suite-explorer.webp"}
         startDelayMs={800}
         preferLowOnSlowConnection
         autoPlay
@@ -64,7 +67,7 @@ export const AccommodationsHeroSection = (): JSX.Element => {
             data-testid="text-accommodations-label"
             variants={fadeIn}
           >
-            ACOMODAÇÕES
+            {content.label}
           </motion.span>
 
           <motion.h1
@@ -73,7 +76,7 @@ export const AccommodationsHeroSection = (): JSX.Element => {
             data-testid="text-accommodations-hero-heading"
             variants={fadeUp}
           >
-            Refúgios de Conforto Essencial
+            {content.heading}
           </motion.h1>
         </div>
 
@@ -84,12 +87,12 @@ export const AccommodationsHeroSection = (): JSX.Element => {
               className="max-w-[400px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
               data-testid="text-accommodations-subtitle"
             >
-              O seu ponto de partida para a imersão no Pantanal.
+              {content.subtitle}
             </p>
 
             <div className="hidden md:flex items-center gap-2 text-[#a8cab9]">
               <span className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)] whitespace-nowrap">
-                Deslize para baixo
+                {content.scrollHint ?? "Deslize para baixo"}
               </span>
               <ChevronDown className="w-4 h-4 animate-bounce" />
             </div>
@@ -99,4 +102,3 @@ export const AccommodationsHeroSection = (): JSX.Element => {
     </section>
   );
 };
-

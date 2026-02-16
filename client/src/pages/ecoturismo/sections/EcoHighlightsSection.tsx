@@ -1,29 +1,11 @@
 import { motion } from "framer-motion";
-import { Compass, ShieldCheck, Sunrise } from "@/lib/icons";
+import { resolveIcon } from "@/lib/icon-resolver";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import type { CmsHighlights } from "@shared/cms-page-content";
 
-const highlights = [
-  {
-    icon: Compass,
-    title: "Roteiros Exclusivos",
-    description:
-      "Acesso a áreas restritas do Rio Cuiabá e seus afluentes, longe do turismo de massa.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Segurança Total",
-    description:
-      "Guias experientes e equipamentos de primeira linha em todas as expedições.",
-  },
-  {
-    icon: Sunrise,
-    title: "Experiências Únicas",
-    description:
-      "Do nascer ao pôr do sol, cada passeio revela uma face diferente do Pantanal.",
-  },
-];
+type Props = { content: CmsHighlights };
 
-export const EcoHighlightsSection = (): JSX.Element => {
+export const EcoHighlightsSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#344e41]">
       <div className="flex flex-col max-w-[1440px] items-center gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -39,7 +21,7 @@ export const EcoHighlightsSection = (): JSX.Element => {
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            Por Que Explorar com a Itaicy
+            {content.heading}
           </motion.h2>
         </motion.div>
 
@@ -51,13 +33,15 @@ export const EcoHighlightsSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          {highlights.map((item, index) => (
+          {content.items.map((item, index) => {
+            const Icon = resolveIcon(item.iconName);
+            return (
             <motion.div
               key={index}
               className="flex flex-col items-start gap-16 md:gap-0 md:justify-between w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] h-auto md:h-[260px] lg:h-[272px] bg-[#263a30] rounded-lg p-8 md:p-7 lg:p-[32px]"
               variants={cardItem}
             >
-              <item.icon
+              <Icon
                 className="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 text-[#e3f7ec]"
                 strokeWidth={1.5}
               />
@@ -75,10 +59,10 @@ export const EcoHighlightsSection = (): JSX.Element => {
                 </p>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>
   );
 };
-

@@ -2,8 +2,11 @@ import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeUp, viewport } from "@/lib/motion";
+import type { PrivacidadePageContent } from "@shared/cms-page-content";
 
-export const PrivacyHeroSection = (): JSX.Element => {
+type Props = { content: PrivacidadePageContent["hero"] };
+
+export const PrivacyHeroSection = ({ content }: Props): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -30,7 +33,7 @@ export const PrivacyHeroSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          Políticas de Privacidade
+          {content.title}
         </motion.h1>
 
         <motion.p
@@ -40,7 +43,7 @@ export const PrivacyHeroSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          Última atualização: [Data]
+          Última atualização: {content.lastUpdated}
         </motion.p>
       </div>
     </section>

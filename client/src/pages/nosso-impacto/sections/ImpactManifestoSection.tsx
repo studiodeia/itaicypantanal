@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const ImpactManifestoSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const ImpactManifestoSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <motion.div
@@ -17,11 +20,15 @@ export const ImpactManifestoSection = (): JSX.Element => {
           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           data-testid="text-impact-manifesto"
         >
-          Cada hóspede que chega à Itaicy se torna parte de algo maior:{" "}
-          <span className="text-[#d7a45d]">guardiões de um ecossistema</span>{" "}
-          que sustenta milhares de espécies. Sua estadia não é apenas uma
-          viagem — é um ato de{" "}
-          <span className="text-[#d7a45d]">preservação</span>.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            ),
+          )}
         </motion.p>
       </motion.div>
     </section>

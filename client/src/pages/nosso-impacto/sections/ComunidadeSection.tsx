@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeIn, fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
+import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
-export const ComunidadeSection = (): JSX.Element => {
+type Props = { content: NossoImpactoPageContent["comunidade"] };
+
+export const ComunidadeSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#344e41]">
       <div className="flex flex-col lg:flex-row max-w-[1440px] gap-12 lg:gap-[64px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full items-center">
@@ -14,7 +17,7 @@ export const ComunidadeSection = (): JSX.Element => {
           className="w-full lg:w-1/2 h-[360px] md:h-[440px] lg:h-[560px] rounded-lg overflow-hidden bg-[#263a30]"
         >
           <img
-            src="/images/pesca-about-1.webp"
+            src={content.image}
             alt="Guia local do Pantanal"
             className="w-full h-full object-cover grayscale-[30%]"
             data-testid="img-comunidade"
@@ -38,15 +41,14 @@ export const ComunidadeSection = (): JSX.Element => {
             className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
-            Guardiões Nativos.
+            {content.heading}
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-            Nossos guias não aprenderam sobre o Pantanal em livros; eles
-            nasceram no ritmo das águas. Valorizamos o saber ancestral,
-            empregando e capacitando a comunidade local. Sua visita gera renda
-            e dignidade para Santo Antônio do Leverger.
-          </motion.p>
+          {content.body.map((paragraph, i) => (
+            <motion.p key={i} variants={fadeUp} className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
+              {paragraph}
+            </motion.p>
+          ))}
 
           <motion.div variants={fadeUp} className="flex flex-col gap-4 pt-4 border-t border-[#446354]">
             <div className="flex items-center gap-4">
@@ -63,5 +65,3 @@ export const ComunidadeSection = (): JSX.Element => {
     </section>
   );
 };
-
-

@@ -46,6 +46,87 @@ function toRelationSlug(
   return null;
 }
 
+const PAGE_GLOBAL_SLUGS = [
+  { route: "/", slug: "home-content" },
+  { route: "/acomodacoes", slug: "acomodacoes-content" },
+  { route: "/culinaria", slug: "culinaria-content" },
+  { route: "/pesca", slug: "pesca-content" },
+  { route: "/ecoturismo", slug: "ecoturismo-content" },
+  { route: "/observacao-de-aves", slug: "birdwatching-content" },
+  { route: "/contato", slug: "contato-content" },
+  { route: "/nosso-impacto", slug: "nosso-impacto-content" },
+  { route: "/politica-de-privacidade", slug: "privacidade-content" },
+  { route: "/404", slug: "not-found-content" },
+] as const;
+
+/** Unwraps Payload {text: string}[] arrays back to string[] for frontend */
+function unwrapTextArray(arr: unknown): string[] {
+  if (!Array.isArray(arr)) return [];
+  return arr.map((item) => {
+    if (typeof item === "string") return item;
+    if (item && typeof item === "object" && "text" in item) return String((item as AnyDoc).text);
+    return "";
+  });
+}
+
+/** Strip top-level Payload meta fields from a global response */
+function stripPayloadMeta(obj: AnyDoc): AnyDoc {
+  const result: AnyDoc = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (key === "id" || key === "createdAt" || key === "updatedAt" || key === "globalType") continue;
+    result[key] = value;
+  }
+  return result;
+}
+
+/** Route-specific transformation from Payload global shape to frontend-expected shape */
+function transformGlobalToPageContent(route: string, raw: AnyDoc): Record<string, unknown> {
+  const data = stripPayloadMeta(raw);
+
+  switch (route) {
+    case "/": {
+      const aboutUs = toRecord(data.aboutUs);
+      if (aboutUs) aboutUs.body = unwrapTextArray(aboutUs.body);
+      return { ...data, aboutUs };
+    }
+    case "/culinaria": {
+      const menu = toRecord(data.menu);
+      if (menu) menu.body = unwrapTextArray(menu.body);
+      const experience = toRecord(data.experience);
+      if (experience) experience.body = unwrapTextArray(experience.body);
+      return { ...data, menu, experience };
+    }
+    case "/pesca":
+    case "/ecoturismo":
+    case "/observacao-de-aves": {
+      const sobreNos = toRecord(data.sobreNos);
+      if (sobreNos) sobreNos.body = unwrapTextArray(sobreNos.body);
+      return { ...data, sobreNos };
+    }
+    case "/contato": {
+      const steps = toRecord(data.steps);
+      if (steps) steps.placeholders = unwrapTextArray(steps.placeholders);
+      return { ...data, steps };
+    }
+    case "/nosso-impacto": {
+      const comunidade = toRecord(data.comunidade);
+      if (comunidade) comunidade.body = unwrapTextArray(comunidade.body);
+      return { ...data, comunidade };
+    }
+    case "/politica-de-privacidade": {
+      const sections = Array.isArray(data.sections)
+        ? data.sections.map((s: AnyDoc) => ({
+            ...s,
+            content: unwrapTextArray(s.content),
+          }))
+        : data.sections;
+      return { ...data, sections };
+    }
+    default:
+      return data;
+  }
+}
+
 function buildSharedFromStructuredSettings(
   settings: AnyDoc | null,
 ): Record<string, unknown> | null {
@@ -116,22 +197,6 @@ function buildSharedFromStructuredSettings(
         : [],
       copyright: str(settings.footerCopyright),
     },
-    homeHero: {
-      heading: str(settings.homeHeroHeading),
-      subtitle: str(settings.homeHeroSubtitle),
-      bookingHeading: str(settings.homeHeroBookingHeading),
-      bookingDescription: str(settings.homeHeroBookingDescription),
-    },
-    homeManifesto: {
-      label: str(settings.homeManifestoLabel),
-      segments: Array.isArray(settings.homeManifestoSegments)
-        ? settings.homeManifestoSegments.map((seg: AnyDoc) => ({
-            type: str(seg.type),
-            content: str(seg.content),
-          }))
-        : [],
-      detailsButtonLabel: str(settings.homeManifestoDetailsButtonLabel),
-    },
   };
 }
 
@@ -155,6 +220,7 @@ function buildFromPayloadData(
   payloadBirdCategories: AnyDoc[],
   payloadBirdSpecies: AnyDoc[],
   payloadSiteSettings: AnyDoc | null,
+  pageContentFromGlobals?: Record<string, unknown>,
 ): CmsContent {
   const categoryById = new Map<string, string>();
   const blogCategories = payloadCategories.map((doc) => {
@@ -383,24 +449,12 @@ function buildFromPayloadData(
     .slice(0, 2)
     .map((bird) => bird.slug);
 
-  // Try new structured fields first, then legacy JSON, then defaults
-  const structuredShared = buildSharedFromStructuredSettings(payloadSiteSettings);
-  const legacyShared = payloadSiteSettings?.sharedSections;
+  // Try structured fields first, then defaults
   const shared =
-    structuredShared ??
-    (legacyShared &&
-    typeof legacyShared === "object" &&
-    !Array.isArray(legacyShared)
-      ? (legacyShared as Record<string, unknown>)
-      : defaultSharedCmsSections);
+    buildSharedFromStructuredSettings(payloadSiteSettings) ?? defaultSharedCmsSections;
 
-  // Page content from SiteSettings
-  const pageContent =
-    payloadSiteSettings?.pageContent &&
-    typeof payloadSiteSettings.pageContent === "object" &&
-    !Array.isArray(payloadSiteSettings.pageContent)
-      ? (payloadSiteSettings.pageContent as Record<string, unknown>)
-      : undefined;
+  // Page content from individual globals (or undefined when loading from seed)
+  const pageContent = pageContentFromGlobals;
 
   return {
     generatedAt: new Date().toISOString(),
@@ -489,6 +543,23 @@ async function loadFromPayloadRest(baseUrl: string): Promise<CmsContent> {
     siteSettings = null;
   }
 
+  // Fetch all page globals in parallel
+  const globalResults = await Promise.allSettled(
+    PAGE_GLOBAL_SLUGS.map(({ slug }) =>
+      fetchJsonWithTimeout(`${normalizedBase}/api/globals/${slug}?depth=0`),
+    ),
+  );
+
+  const pageContent: Record<string, unknown> = {};
+  for (let i = 0; i < PAGE_GLOBAL_SLUGS.length; i++) {
+    const result = globalResults[i];
+    if (result.status !== "fulfilled") continue;
+    const raw = toRecord(result.value);
+    if (!raw) continue;
+    const { route } = PAGE_GLOBAL_SLUGS[i];
+    pageContent[route] = transformGlobalToPageContent(route, raw);
+  }
+
   const blogCategoriesDocs = (
     toRecord(blogCategoriesRes)?.docs as unknown[] | undefined
   )?.filter((doc): doc is AnyDoc => Boolean(toRecord(doc))) ?? [];
@@ -508,6 +579,7 @@ async function loadFromPayloadRest(baseUrl: string): Promise<CmsContent> {
     birdCategoryDocs,
     birdSpeciesDocs,
     siteSettings,
+    Object.keys(pageContent).length > 0 ? pageContent : undefined,
   );
 }
 

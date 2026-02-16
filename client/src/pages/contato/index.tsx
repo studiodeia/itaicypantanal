@@ -1,9 +1,13 @@
 import { PageMeta } from "@/components/PageMeta";
+import { usePageCms } from "@/lib/cms/page-content";
+import { contatoDefaults } from "../contato-defaults";
 import { ContactHeroSection } from "./sections/ContactHeroSection";
 import { ContactChannelsSection } from "./sections/ContactChannelsSection";
 import { SiteFooterSection } from "@/pages/sections/SiteFooterSection";
 
 export const Contato = (): JSX.Element => {
+  const cms = usePageCms("/contato", contatoDefaults);
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -15,8 +19,8 @@ export const Contato = (): JSX.Element => {
           { name: "Contato", path: "/contato" },
         ]}
       />
-      <ContactHeroSection />
-      <ContactChannelsSection />
+      <ContactHeroSection content={cms.hero} formTitle={cms.formTitle} steps={cms.steps} />
+      <ContactChannelsSection content={cms.channels} />
       <SiteFooterSection />
     </div>
   );

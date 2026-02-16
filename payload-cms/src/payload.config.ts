@@ -13,6 +13,16 @@ import { BlogPosts } from "./collections/BlogPosts";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import { Users } from "./collections/Users";
+import { AcomodacoesContent } from "./globals/AcomodacoesContent";
+import { BirdwatchingContent } from "./globals/BirdwatchingContent";
+import { ContatoContent } from "./globals/ContatoContent";
+import { CulinariaContent } from "./globals/CulinariaContent";
+import { EcoturismoContent } from "./globals/EcoturismoContent";
+import { HomeContent } from "./globals/HomeContent";
+import { NossoImpactoContent } from "./globals/NossoImpactoContent";
+import { NotFoundContent } from "./globals/NotFoundContent";
+import { PescaContent } from "./globals/PescaContent";
+import { PrivacidadeContent } from "./globals/PrivacidadeContent";
 import { SiteSettings } from "./globals/SiteSettings";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
@@ -49,7 +59,19 @@ export default buildConfig({
     BirdCategories,
     Users,
   ],
-  globals: [SiteSettings],
+  globals: [
+    SiteSettings,
+    HomeContent,
+    AcomodacoesContent,
+    CulinariaContent,
+    PescaContent,
+    EcoturismoContent,
+    BirdwatchingContent,
+    ContatoContent,
+    NossoImpactoContent,
+    PrivacidadeContent,
+    NotFoundContent,
+  ],
   cors: [frontendOrigin, payloadPublicServerUrl],
   csrf: [frontendOrigin, payloadPublicServerUrl],
   onInit: async (payload) => {

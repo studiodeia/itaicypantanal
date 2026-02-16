@@ -1,4 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
+import { usePageCms } from "@/lib/cms/page-content";
+import { pescaDefaults } from "./pesca-defaults";
 import { PescaHeroSection } from "./pesca/sections/PescaHeroSection";
 import { PescaManifestoSection } from "./pesca/sections/PescaManifestoSection";
 import { PescaSobreNosSection } from "./pesca/sections/PescaSobreNosSection";
@@ -10,6 +12,8 @@ import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuest
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Pesca = (): JSX.Element => {
+  const cms = usePageCms("/pesca", pescaDefaults);
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -21,11 +25,11 @@ export const Pesca = (): JSX.Element => {
           { name: "Pesca Esportiva", path: "/pesca" },
         ]}
       />
-      <PescaHeroSection />
-      <PescaManifestoSection />
-      <PescaSobreNosSection />
-      <PescaHighlightsSection />
-      <PescaServicesSection />
+      <PescaHeroSection content={cms.hero} />
+      <PescaManifestoSection content={cms.manifesto} />
+      <PescaSobreNosSection content={cms.sobreNos} />
+      <PescaHighlightsSection content={cms.highlights} />
+      <PescaServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
       <ImmersionCallToActionSection />
       <FrequentlyAskedQuestionsSection />

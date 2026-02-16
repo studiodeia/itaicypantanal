@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const ManifestoStatementSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const ManifestoStatementSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] items-start px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -14,11 +17,15 @@ export const ManifestoStatementSection = (): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          Nossos apartamentos são projetados para o{" "}
-          <span className="text-[#d7a45d]">conforto essencial</span>,
-          garantindo que você tenha o{" "}
-          <span className="text-[#d7a45d]">refúgio perfeito</span> após um dia
-          de expedição.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            )
+          )}
         </motion.p>
       </div>
     </section>

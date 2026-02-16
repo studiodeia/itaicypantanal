@@ -319,7 +319,130 @@ async function importPages(
   }
 }
 
-async function importPageContent(
+/** Wraps string[] into {text: string}[] for Payload array fields */
+function wrapStrings(arr: unknown): { text: string }[] {
+  if (!Array.isArray(arr)) return [];
+  return arr.map((item) => ({ text: typeof item === "string" ? item : String(item) }));
+}
+
+const routeToGlobalSlug: Record<string, string> = {
+  "/": "home-content",
+  "/acomodacoes": "acomodacoes-content",
+  "/culinaria": "culinaria-content",
+  "/pesca": "pesca-content",
+  "/ecoturismo": "ecoturismo-content",
+  "/observacao-de-aves": "birdwatching-content",
+  "/contato": "contato-content",
+  "/nosso-impacto": "nosso-impacto-content",
+  "/politica-de-privacidade": "privacidade-content",
+  "/404": "not-found-content",
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function buildGlobalData(route: string, data: any): Record<string, unknown> | null {
+  switch (route) {
+    case "/":
+      return {
+        aboutUs: {
+          ...data.aboutUs,
+          body: wrapStrings(data.aboutUs?.body),
+        },
+        expeditions: data.expeditions,
+        stats: data.stats,
+        accommodation: data.accommodation,
+        impact: data.impact,
+        blog: data.blog,
+      };
+    case "/acomodacoes":
+      return {
+        hero: data.hero,
+        manifesto: data.manifesto,
+        highlights: data.highlights,
+        rooms: data.rooms,
+        culinary: data.culinary,
+      };
+    case "/culinaria":
+      return {
+        hero: data.hero,
+        manifesto: data.manifesto,
+        menu: {
+          ...data.menu,
+          body: wrapStrings(data.menu?.body),
+        },
+        highlights: data.highlights,
+        services: data.services,
+        experience: {
+          ...data.experience,
+          body: wrapStrings(data.experience?.body),
+        },
+        crossSell: data.crossSell,
+      };
+    case "/pesca":
+    case "/ecoturismo":
+      return {
+        hero: data.hero,
+        manifesto: data.manifesto,
+        sobreNos: {
+          ...data.sobreNos,
+          body: wrapStrings(data.sobreNos?.body),
+        },
+        highlights: data.highlights,
+        services: data.services,
+      };
+    case "/observacao-de-aves":
+      return {
+        hero: data.hero,
+        manifesto: data.manifesto,
+        sobreNos: {
+          ...data.sobreNos,
+          body: wrapStrings(data.sobreNos?.body),
+        },
+        highlights: data.highlights,
+      };
+    case "/contato":
+      return {
+        hero: data.hero,
+        formTitle: data.formTitle,
+        steps: {
+          ...data.steps,
+          placeholders: wrapStrings(data.steps?.placeholders),
+        },
+        channels: data.channels,
+        mapCoords: data.mapCoords,
+      };
+    case "/nosso-impacto":
+      return {
+        hero: data.hero,
+        manifesto: data.manifesto,
+        rioVivo: data.rioVivo,
+        biodiversidade: data.biodiversidade,
+        comunidade: {
+          ...data.comunidade,
+          body: wrapStrings(data.comunidade?.body),
+        },
+        operacao: data.operacao,
+        engagement: data.engagement,
+      };
+    case "/politica-de-privacidade":
+      return {
+        hero: data.hero,
+        sections: (data.sections ?? []).map((s: { id: string; title: string; content: string[] }) => ({
+          id: s.id,
+          title: s.title,
+          content: wrapStrings(s.content),
+        })),
+      };
+    case "/404":
+      return {
+        hero: data.hero,
+        buttonText: data.buttonText,
+      };
+    default:
+      return null;
+  }
+}
+
+async function importPageGlobals(
   payload: Awaited<ReturnType<typeof getPayload>>,
 ) {
   const candidates = [
@@ -338,20 +461,31 @@ async function importPageContent(
   }
 
   if (!raw) {
-    console.log("page-content.json nao encontrado, pulando importacao de conteudo de paginas.");
+    console.log("page-content.json nao encontrado, pulando importacao de globals de pagina.");
     return;
   }
 
-  const pageContent = JSON.parse(raw) as Record<string, unknown>;
+  const allPages = JSON.parse(raw) as Record<string, unknown>;
 
-  await payload.updateGlobal({
-    slug: "site-settings",
-    data: { pageContent },
-    depth: 0,
-    overrideAccess: true,
-  });
+  for (const [route, pageData] of Object.entries(allPages)) {
+    const globalSlug = routeToGlobalSlug[route];
+    if (!globalSlug) {
+      console.log(`Rota ${route} nao tem global correspondente, pulando.`);
+      continue;
+    }
 
-  console.log("SiteSettings.pageContent populado com sucesso.");
+    const data = buildGlobalData(route, pageData);
+    if (!data) continue;
+
+    await payload.updateGlobal({
+      slug: globalSlug,
+      data,
+      depth: 0,
+      overrideAccess: true,
+    });
+
+    console.log(`Global ${globalSlug} populado com sucesso.`);
+  }
 }
 
 async function importSharedSections(
@@ -365,8 +499,6 @@ async function importSharedSections(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const s = shared as any;
   const updateData: Record<string, unknown> = {
-    // Keep legacy JSON for backward compat
-    sharedSections: shared,
   };
 
   // CTA
@@ -422,28 +554,6 @@ async function importSharedSections(
     updateData.footerCopyright = s.footer.copyright ?? "";
   }
 
-  // Home Hero
-  if (s.homeHero) {
-    updateData.homeHeroHeading = s.homeHero.heading ?? "";
-    updateData.homeHeroSubtitle = s.homeHero.subtitle ?? "";
-    updateData.homeHeroBookingHeading = s.homeHero.bookingHeading ?? "";
-    updateData.homeHeroBookingDescription =
-      s.homeHero.bookingDescription ?? "";
-  }
-
-  // Home Manifesto
-  if (s.homeManifesto) {
-    updateData.homeManifestoLabel = s.homeManifesto.label ?? "";
-    updateData.homeManifestoDetailsButtonLabel =
-      s.homeManifesto.detailsButtonLabel ?? "";
-    updateData.homeManifestoSegments = (s.homeManifesto.segments ?? []).map(
-      (seg: { type?: string; content?: string }) => ({
-        type: seg.type ?? "text",
-        content: seg.content ?? "",
-      }),
-    );
-  }
-
   await payload.updateGlobal({
     slug: "site-settings",
     data: updateData,
@@ -462,7 +572,7 @@ async function main() {
   await importBirdwatching(payload, seed.birdwatching);
   await importPages(payload, seed.pages.routes);
   await importSharedSections(payload, seed.shared);
-  await importPageContent(payload);
+  await importPageGlobals(payload);
 
   console.log("Seed importado para o Payload com sucesso.");
 }

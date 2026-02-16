@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { stagger, fadeIn, fadeUp, scaleIn, viewport } from "@/lib/motion";
+import { stagger, fadeIn, fadeUp, viewport } from "@/lib/motion";
 import { Divider } from "@/components/Divider";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import type { CulinariaPageContent } from "@shared/cms-page-content";
 
 const experienceImages = [
   { src: "/images/culinaria-experience-1", alt: "Experiência gastronômica 1" },
@@ -10,13 +11,15 @@ const experienceImages = [
   { src: "/images/culinaria-experience-4", alt: "Experiência gastronômica 4" },
 ];
 
-export const CulinaryExperienceSection = (): JSX.Element => {
+type Props = { content: CulinariaPageContent["experience"] };
+
+export const CulinaryExperienceSection = ({ content }: Props): JSX.Element => {
   return (
     <section
       className="relative flex flex-col items-center w-full bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          'linear-gradient(180deg, rgba(21,34,24,0) 36.3%, rgba(21,34,24,0.64) 73.3%), linear-gradient(0deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.32) 100%), url("/images/culinaria-experience-bg.webp")',
+          `linear-gradient(180deg, rgba(21,34,24,0) 36.3%, rgba(21,34,24,0.64) 73.3%), linear-gradient(0deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.32) 100%), url("${content.image}")`,
       }}
     >
       <div className="flex flex-col lg:flex-row max-w-[1440px] items-end gap-8 md:gap-12 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full min-h-[600px] md:min-h-[800px] lg:min-h-[1000px]">
@@ -42,16 +45,18 @@ export const CulinaryExperienceSection = (): JSX.Element => {
             data-testid="text-experience-heading"
             variants={fadeUp}
           >
-            Sabor e Aconchego
+            {content.heading}
           </motion.h2>
 
-          <motion.p
-            className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
-            variants={fadeUp}
-          >
-            O calor do fogo, o vinho, os sabores autênticos e o conforto de um
-            refúgio no coração do Pantanal.
-          </motion.p>
+          {content.body.map((paragraph, i) => (
+            <motion.p
+              key={i}
+              className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
+              variants={fadeUp}
+            >
+              {paragraph}
+            </motion.p>
+          ))}
         </motion.div>
 
         {/* Right: image grid + divider */}

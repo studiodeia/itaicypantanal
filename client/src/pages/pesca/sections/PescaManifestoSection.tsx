@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import type { CmsManifesto } from "@shared/cms-page-content";
 
-export const PescaManifestoSection = (): JSX.Element => {
+type Props = { content: CmsManifesto };
+
+export const PescaManifestoSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <motion.div
@@ -17,10 +20,15 @@ export const PescaManifestoSection = (): JSX.Element => {
           data-testid="text-pesca-manifesto"
           variants={fadeUp}
         >
-          A experiência de quem{" "}
-          <span className="text-[#d7a45d]">desbravou a Amazônia</span>, agora
-          no Pantanal. Operamos com respeito absoluto ao peixe e foco total na
-          sua <span className="text-[#d7a45d]">performance esportiva</span>.
+          {content.segments.map((seg, i) =>
+            seg.isHighlight ? (
+              <span key={i} className="text-[#d7a45d]">
+                {seg.text}
+              </span>
+            ) : (
+              seg.text
+            )
+          )}
         </motion.p>
       </motion.div>
     </section>

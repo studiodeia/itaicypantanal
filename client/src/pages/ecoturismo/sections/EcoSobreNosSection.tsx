@@ -1,29 +1,11 @@
 import { motion } from "framer-motion";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { fadeIn, fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
+import type { CmsSobreNos } from "@shared/cms-page-content";
 
-const pillars = [
-  {
-    number: "01",
-    title: "Guias Nativos",
-    description:
-      "Nossos piloteiros e guias nasceram no Pantanal. Eles conhecem cada trilha, cada som e cada comportamento animal da região.",
-  },
-  {
-    number: "02",
-    title: "Baixo Impacto",
-    description:
-      "Operamos com grupos reduzidos e protocolos rigorosos para minimizar nossa presença no habitat natural.",
-  },
-  {
-    number: "03",
-    title: "Experiência Imersiva",
-    description:
-      "Do nascer ao pôr do sol, cada momento é pensado para conectar você de forma autêntica com a vida selvagem do Pantanal.",
-  },
-];
+type Props = { content: CmsSobreNos };
 
-export const EcoSobreNosSection = (): JSX.Element => {
+export const EcoSobreNosSection = ({ content }: Props): JSX.Element => {
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col lg:flex-row max-w-[1440px] items-center gap-8 md:gap-12 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -36,7 +18,7 @@ export const EcoSobreNosSection = (): JSX.Element => {
           viewport={viewport}
         >
           <OptimizedImage
-            src="/images/eco-about-1"
+            src={content.image}
             alt="Ecoturismo no Pantanal"
             className="w-full h-full object-cover"
           />
@@ -55,7 +37,7 @@ export const EcoSobreNosSection = (): JSX.Element => {
             className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]"
             variants={fadeIn}
           >
-            NOSSA FILOSOFIA
+            {content.label}
           </motion.span>
 
           {/* Title */}
@@ -64,25 +46,24 @@ export const EcoSobreNosSection = (): JSX.Element => {
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            Conexão Autêntica com o Bioma
+            {content.heading}
           </motion.h2>
 
           {/* Description */}
           <motion.div className="flex flex-col gap-6" variants={fadeUp}>
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              Às margens do Rio Cuiabá, oferecemos uma seleção de passeios que
-              proporcionam uma imersão completa na natureza do Pantanal.
-            </p>
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
-              Todos os passeios são acompanhados por guias especializados,
-              garantindo segurança, conforto e uma experiência autêntica neste
-              bioma singular.
-            </p>
+            {content.body.map((paragraph, i) => (
+              <p
+                key={i}
+                className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]"
+              >
+                {paragraph}
+              </p>
+            ))}
           </motion.div>
 
           {/* Pillars */}
           <div className="flex flex-col gap-8">
-            {pillars.map((pillar, idx) => (
+            {(content.features ?? []).map((pillar, idx) => (
               <motion.div
                 key={idx}
                 className={`flex gap-6 items-start pt-6 ${

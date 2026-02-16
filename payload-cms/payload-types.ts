@@ -99,9 +99,29 @@ export interface Config {
   fallbackLocale: null;
   globals: {
     'site-settings': SiteSetting;
+    'home-content': HomeContent;
+    'acomodacoes-content': AcomodacoesContent;
+    'culinaria-content': CulinariaContent;
+    'pesca-content': PescaContent;
+    'ecoturismo-content': EcoturismoContent;
+    'birdwatching-content': BirdwatchingContent;
+    'contato-content': ContatoContent;
+    'nosso-impacto-content': NossoImpactoContent;
+    'privacidade-content': PrivacidadeContent;
+    'not-found-content': NotFoundContent;
   };
   globalsSelect: {
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    'home-content': HomeContentSelect<false> | HomeContentSelect<true>;
+    'acomodacoes-content': AcomodacoesContentSelect<false> | AcomodacoesContentSelect<true>;
+    'culinaria-content': CulinariaContentSelect<false> | CulinariaContentSelect<true>;
+    'pesca-content': PescaContentSelect<false> | PescaContentSelect<true>;
+    'ecoturismo-content': EcoturismoContentSelect<false> | EcoturismoContentSelect<true>;
+    'birdwatching-content': BirdwatchingContentSelect<false> | BirdwatchingContentSelect<true>;
+    'contato-content': ContatoContentSelect<false> | ContatoContentSelect<true>;
+    'nosso-impacto-content': NossoImpactoContentSelect<false> | NossoImpactoContentSelect<true>;
+    'privacidade-content': PrivacidadeContentSelect<false> | PrivacidadeContentSelect<true>;
+    'not-found-content': NotFoundContentSelect<false> | NotFoundContentSelect<true>;
   };
   locale: null;
   user: User;
@@ -836,19 +856,6 @@ export interface SiteSetting {
       }[]
     | null;
   footerCopyright?: string | null;
-  homeHeroHeading?: string | null;
-  homeHeroSubtitle?: string | null;
-  homeHeroBookingHeading?: string | null;
-  homeHeroBookingDescription?: string | null;
-  homeManifestoLabel?: string | null;
-  homeManifestoDetailsButtonLabel?: string | null;
-  homeManifestoSegments?:
-    | {
-        type: 'text' | 'highlight' | 'divider';
-        content?: string | null;
-        id?: string | null;
-      }[]
-    | null;
   /**
    * Usado como fallback quando uma pagina nao tem metaTitle. Max 60 chars.
    */
@@ -869,30 +876,710 @@ export interface SiteSetting {
    * Codigo de verificacao do Google Search Console. Sera injetado como meta tag.
    */
   googleSiteVerification?: string | null;
-  /**
-   * JSON com chaves por rota (ex: '/', '/acomodacoes'). Cada rota contem os textos, imagens e dados de todas as secoes da pagina.
-   */
-  pageContent?:
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina inicial.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home-content".
+ */
+export interface HomeContent {
+  id: number;
+  aboutUs?: {
+    label?: string | null;
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    /**
+     * Ex: /images/pesca-about-1
+     */
+    image?: string | null;
+    features?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  expeditions?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    items?:
+      | {
+          title: string;
+          description?: string | null;
+          backgroundImage?: string | null;
+          href?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    buttonText?: string | null;
+  };
+  stats?: {
+    items?:
+      | {
+          target: number;
+          suffix?: string | null;
+          label?: string | null;
+          hasIcon?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  accommodation?: {
+    label?: string | null;
+    heading?: string | null;
+    body?: string | null;
+    buttonReserve?: string | null;
+    buttonDetails?: string | null;
+    backgroundImage?: string | null;
+  };
+  impact?: {
+    label?: string | null;
+    heading?: string | null;
+    items?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    image?: string | null;
+  };
+  blog?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    buttonText?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de acomodacoes.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "acomodacoes-content".
+ */
+export interface AcomodacoesContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+    videoMp4?: string | null;
+    videoWebm?: string | null;
+    videoMp4Low?: string | null;
+    videoWebmLow?: string | null;
+    videoPoster?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  highlights?: {
+    heading?: string | null;
+    items?:
+      | {
+          /**
+           * Ex: Fish, Star, Compass
+           */
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  rooms?:
     | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
+        title: string;
+        description?: string | null;
+        image?: string | null;
+        ctaText?: string | null;
+        features?:
+          | {
+              iconName?: string | null;
+              label?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
     | null;
-  /**
-   * ATENCAO: Este campo sera descontinuado. Edite o conteudo nas abas acima.
-   */
-  sharedSections?:
+  culinary?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    images?:
+      | {
+          src: string;
+          alt?: string | null;
+          tag?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    ctaText?: string | null;
+    ctaHref?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de culinaria.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "culinaria-content".
+ */
+export interface CulinariaContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  menu?: {
+    label?: string | null;
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    /**
+     * Ex: /images/pesca-about-1
+     */
+    image?: string | null;
+    features?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  highlights?: {
+    heading?: string | null;
+    items?:
+      | {
+          /**
+           * Ex: Fish, Star, Compass
+           */
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  services?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    items?:
+      | {
+          title: string;
+          description?: string | null;
+          image?: string | null;
+          href?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    buttonText?: string | null;
+    buttonHref?: string | null;
+  };
+  experience?: {
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    image?: string | null;
+  };
+  crossSell?: {
+    heading?: string | null;
+    description?: string | null;
+    buttonText?: string | null;
+    buttonHref?: string | null;
+    image?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de pesca esportiva.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pesca-content".
+ */
+export interface PescaContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  sobreNos?: {
+    label?: string | null;
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    /**
+     * Ex: /images/pesca-about-1
+     */
+    image?: string | null;
+    features?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  highlights?: {
+    heading?: string | null;
+    items?:
+      | {
+          /**
+           * Ex: Fish, Star, Compass
+           */
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  services?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    items?:
+      | {
+          title: string;
+          description?: string | null;
+          image?: string | null;
+          href?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    buttonText?: string | null;
+    buttonHref?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de ecoturismo.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ecoturismo-content".
+ */
+export interface EcoturismoContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  sobreNos?: {
+    label?: string | null;
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    /**
+     * Ex: /images/pesca-about-1
+     */
+    image?: string | null;
+    features?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  highlights?: {
+    heading?: string | null;
+    items?:
+      | {
+          /**
+           * Ex: Fish, Star, Compass
+           */
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  services?: {
+    label?: string | null;
+    heading?: string | null;
+    description?: string | null;
+    items?:
+      | {
+          title: string;
+          description?: string | null;
+          image?: string | null;
+          href?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    buttonText?: string | null;
+    buttonHref?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de observacao de aves.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "birdwatching-content".
+ */
+export interface BirdwatchingContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  sobreNos?: {
+    label?: string | null;
+    heading?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    /**
+     * Ex: /images/pesca-about-1
+     */
+    image?: string | null;
+    features?:
+      | {
+          number?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  highlights?: {
+    heading?: string | null;
+    items?:
+      | {
+          /**
+           * Ex: Fish, Star, Compass
+           */
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina de contato.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contato-content".
+ */
+export interface ContatoContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  formTitle?: string | null;
+  steps?: {
+    placeholders?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    buttonNext?: string | null;
+    buttonBack?: string | null;
+    buttonSubmit?: string | null;
+  };
+  channels?: {
+    heading?: string | null;
+    items?:
+      | {
+          iconName?: string | null;
+          title?: string | null;
+          info?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  mapCoords?: {
+    lat?: number | null;
+    lng?: number | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da pagina Nosso Impacto (conservacao).
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "nosso-impacto-content".
+ */
+export interface NossoImpactoContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  manifesto?: {
+    /**
+     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     */
+    segments?:
+      | {
+          text: string;
+          isHighlight?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  rioVivo?: {
+    heading?: string | null;
+    description?: string | null;
+    steps?:
+      | {
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  biodiversidade?: {
+    heading?: string | null;
+    description?: string | null;
+    counters?:
+      | {
+          target: number;
+          suffix?: string | null;
+          label?: string | null;
+          hasIcon?: boolean | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  comunidade?: {
+    heading?: string | null;
+    description?: string | null;
+    body?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    image?: string | null;
+  };
+  operacao?: {
+    heading?: string | null;
+    description?: string | null;
+    practices?:
+      | {
+          iconName?: string | null;
+          title?: string | null;
+          description?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  engagement?: {
+    heading?: string | null;
+    description?: string | null;
+    buttonText?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo editavel da politica de privacidade.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "privacidade-content".
+ */
+export interface PrivacidadeContent {
+  id: number;
+  hero?: {
+    title?: string | null;
+    lastUpdated?: string | null;
+  };
+  sections?:
     | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
+        id: string;
+        title: string;
+        /**
+         * Cada item e um paragrafo. Comece com ** para criar itens de lista com negrito.
+         */
+        content?:
+          | {
+              text: string;
+              id?: string | null;
+            }[]
+          | null;
+      }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Conteudo da pagina de erro 404.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "not-found-content".
+ */
+export interface NotFoundContent {
+  id: number;
+  hero: {
+    label?: string | null;
+    heading: string;
+    subtitle?: string | null;
+    description?: string | null;
+    scrollHint?: string | null;
+    /**
+     * Ex: /images/pesca-hero-bg.webp
+     */
+    backgroundImage?: string | null;
+  };
+  buttonText?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -952,26 +1639,708 @@ export interface SiteSettingsSelect<T extends boolean = true> {
         id?: T;
       };
   footerCopyright?: T;
-  homeHeroHeading?: T;
-  homeHeroSubtitle?: T;
-  homeHeroBookingHeading?: T;
-  homeHeroBookingDescription?: T;
-  homeManifestoLabel?: T;
-  homeManifestoDetailsButtonLabel?: T;
-  homeManifestoSegments?:
-    | T
-    | {
-        type?: T;
-        content?: T;
-        id?: T;
-      };
   defaultMetaTitle?: T;
   defaultMetaDescription?: T;
   defaultOgImage?: T;
   siteUrl?: T;
   googleSiteVerification?: T;
-  pageContent?: T;
-  sharedSections?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home-content_select".
+ */
+export interface HomeContentSelect<T extends boolean = true> {
+  aboutUs?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+        features?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  expeditions?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              backgroundImage?: T;
+              href?: T;
+              id?: T;
+            };
+        buttonText?: T;
+      };
+  stats?:
+    | T
+    | {
+        items?:
+          | T
+          | {
+              target?: T;
+              suffix?: T;
+              label?: T;
+              hasIcon?: T;
+              id?: T;
+            };
+      };
+  accommodation?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?: T;
+        buttonReserve?: T;
+        buttonDetails?: T;
+        backgroundImage?: T;
+      };
+  impact?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        items?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+        image?: T;
+      };
+  blog?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        buttonText?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "acomodacoes-content_select".
+ */
+export interface AcomodacoesContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+        videoMp4?: T;
+        videoWebm?: T;
+        videoMp4Low?: T;
+        videoWebmLow?: T;
+        videoPoster?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  highlights?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  rooms?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        ctaText?: T;
+        features?:
+          | T
+          | {
+              iconName?: T;
+              label?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  culinary?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        images?:
+          | T
+          | {
+              src?: T;
+              alt?: T;
+              tag?: T;
+              id?: T;
+            };
+        ctaText?: T;
+        ctaHref?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "culinaria-content_select".
+ */
+export interface CulinariaContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  menu?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+        features?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  highlights?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  services?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?: T;
+              href?: T;
+              id?: T;
+            };
+        buttonText?: T;
+        buttonHref?: T;
+      };
+  experience?:
+    | T
+    | {
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+      };
+  crossSell?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        buttonText?: T;
+        buttonHref?: T;
+        image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pesca-content_select".
+ */
+export interface PescaContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  sobreNos?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+        features?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  highlights?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  services?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?: T;
+              href?: T;
+              id?: T;
+            };
+        buttonText?: T;
+        buttonHref?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ecoturismo-content_select".
+ */
+export interface EcoturismoContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  sobreNos?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+        features?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  highlights?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  services?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?: T;
+              href?: T;
+              id?: T;
+            };
+        buttonText?: T;
+        buttonHref?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "birdwatching-content_select".
+ */
+export interface BirdwatchingContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  sobreNos?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+        features?:
+          | T
+          | {
+              number?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  highlights?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contato-content_select".
+ */
+export interface ContatoContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  formTitle?: T;
+  steps?:
+    | T
+    | {
+        placeholders?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        buttonNext?: T;
+        buttonBack?: T;
+        buttonSubmit?: T;
+      };
+  channels?:
+    | T
+    | {
+        heading?: T;
+        items?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              info?: T;
+              id?: T;
+            };
+      };
+  mapCoords?:
+    | T
+    | {
+        lat?: T;
+        lng?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "nosso-impacto-content_select".
+ */
+export interface NossoImpactoContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  manifesto?:
+    | T
+    | {
+        segments?:
+          | T
+          | {
+              text?: T;
+              isHighlight?: T;
+              id?: T;
+            };
+      };
+  rioVivo?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        steps?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  biodiversidade?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        counters?:
+          | T
+          | {
+              target?: T;
+              suffix?: T;
+              label?: T;
+              hasIcon?: T;
+              id?: T;
+            };
+      };
+  comunidade?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        body?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        image?: T;
+      };
+  operacao?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        practices?:
+          | T
+          | {
+              iconName?: T;
+              title?: T;
+              description?: T;
+              id?: T;
+            };
+      };
+  engagement?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        buttonText?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "privacidade-content_select".
+ */
+export interface PrivacidadeContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        title?: T;
+        lastUpdated?: T;
+      };
+  sections?:
+    | T
+    | {
+        id?: T;
+        title?: T;
+        content?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "not-found-content_select".
+ */
+export interface NotFoundContentSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        subtitle?: T;
+        description?: T;
+        scrollHint?: T;
+        backgroundImage?: T;
+      };
+  buttonText?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
