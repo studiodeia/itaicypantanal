@@ -184,40 +184,63 @@ export function buildLlmsTxt(req: Request): string {
 > Eco lodge no Pantanal Sul-Matogrossense (Miranda, MS, Brasil). Especializado em pesca esportiva catch-and-release cota zero, observacao de aves (birdwatching) com 166 especies catalogadas, e safaris fotograficos de ecoturismo.
 
 ## Experiencias Principais
-- [Pesca Esportiva](${baseUrl}/pesca): Pesca catch-and-release no Rio Negro com guias locais. Projeto Cota Zero — toda captura e devolvida viva ao rio.
-- [Observacao de Aves](${baseUrl}/observacao-de-aves): 166 especies catalogadas (survey Joao Andriola, maio 2024). Tuiuiu, Arara-Azul, Jabiru e mais.
-- [Catalogo de Aves](${baseUrl}/observacao-de-aves/catalogo): Guia completo com nome cientifico, familia, status de conservacao e dicas de fotografia.
-- [Ecoturismo](${baseUrl}/ecoturismo): Safaris fotograficos, trilhas ecologicas, passeios de barco pelo Rio Negro.
-- [Culinaria Pantaneira](${baseUrl}/culinaria): Gastronomia regional com ingredientes do Pantanal.
+- [Pesca Esportiva](${baseUrl}/pesca): Pesca catch-and-release no Rio Negro com guias locais. Projeto Cota Zero — toda captura e devolvida viva ao rio. Especies: pintado, pacu, dourado, cachara e mais de 260 especies. Temporada: marco a outubro (pico: maio-setembro).
+- [Observacao de Aves](${baseUrl}/observacao-de-aves): 166 especies catalogadas em levantamento de campo do ornitologo Joao Andriola (maio 2024). Roteiros guiados ao amanhecer e entardecer. Binoculos e checklists inclusos.
+- [Catalogo de Aves](${baseUrl}/observacao-de-aves/catalogo): Guia completo com nome cientifico, familia taxonomica, status de conservacao IUCN e dicas de fotografia.
+- [Ecoturismo](${baseUrl}/ecoturismo): Safaris fotograficos diurnos e noturnos, trilhas ecologicas, passeios de barco e canoagem pelo Rio Negro. Guias nativos certificados. Nivel de dificuldade adaptavel.
+- [Culinaria Pantaneira](${baseUrl}/culinaria): Gastronomia regional — pacu assado, arroz carreteiro, sopa paraguaia, caldo de piranha. Pensao completa inclusa. Restricoes alimentares atendidas com aviso previo.
 
 ## A Regiao
 - [Pantanal Sul-Matogrossense](${baseUrl}/regiao): Guia completo — localizacao, como chegar, melhor epoca, clima por estacao e destinos proximos (Bonito, Campo Grande, Estrada Parque).
 
 ## Hospedagem
-- [Acomodacoes](${baseUrl}/acomodacoes): Quartos com ar-condicionado, Wi-Fi, vista para o rio. Capacidade: 10 quartos.
+- [Acomodacoes](${baseUrl}/acomodacoes): 3 categorias de suites — Explorer (solo), Adventure (casais), Family (ate 4 pessoas). 10 quartos. Ar-condicionado, Wi-Fi, frigobar, vista natureza. Check-in 14h, check-out 11h.
+
+## Especies Destacadas
+- **Tuiuiu** (Jabiru mycteria): Ave-simbolo do Pantanal, maior cegonha das Americas. Altura ate 1,40m, envergadura ate 2,80m. Status IUCN: LC (Pouco Preocupante). Melhor epoca: julho-outubro (seca).
+- **Arara-Azul-Grande** (Anodorhynchus hyacinthinus): Maior arara do mundo, plumagem azul-cobalto. Populacao estimada: ~6.500 individuos na natureza. Status IUCN: VU (Vulneravel). Presente o ano todo, pico: junho-setembro.
+- **Arara-Vermelha** (Ara chloropterus): Grande porte, plumagem vermelha vibrante. Canto potente. Frequente em matas ciliares.
+- **Garca-Branca-Grande** (Ardea alba): Elegante, plumagem branca, comum em lagoas e campos alagados. Cacadora agil de peixes.
+- **Colhereiro** (Platalea ajaja): Plumagem rosada, bico em forma de colher. Uma das aves mais fotograficas do Pantanal.
+- **Gaviao-Real** (Harpia harpyja): Maior e mais poderoso raptor das Americas. Garras maiores que de um urso. Avistamento raro.
+- **Urutau** (Nyctibius griseus): Mestre da camuflagem noturna, confunde-se com galhos. Canto melancolico nas noites pantaneiras.
 
 ## Dados-Chave
 - Localizacao: Miranda, Mato Grosso do Sul, Brasil (-19.83, -56.68)
-- Bioma: Pantanal Sul-Matogrossense (UNESCO World Heritage)
-- Especies de aves: 166 catalogadas no lodge e entorno
-- Pesca: Catch-and-release exclusivo (Projeto Cota Zero)
-- Distancia de Campo Grande: ~240km (3h de carro)
-- Distancia de Bonito: ~80km (1h30 de carro)
+- Bioma: Pantanal Sul-Matogrossense — maior planicie alagavel do mundo, Patrimonio Natural da Humanidade (UNESCO)
+- Biodiversidade da regiao: mais de 4.700 especies de plantas e animais
+- Especies de aves catalogadas no lodge: 166 (levantamento Joao Andriola, maio 2024)
+- Pesca: Catch-and-release exclusivo (Projeto Cota Zero — todo peixe devolvido vivo)
+- Distancia de Campo Grande (aeroporto CGR): ~240 km (3h de carro pela BR-262)
+- Distancia de Bonito: ~80 km (1h30 de carro)
 - Melhor epoca: Seca (maio a setembro) para aves e pesca; cheia (outubro a marco) para paisagens
+- Coordenadas: 19°50'S, 56°41'W
 
 ## Conservacao e Impacto
-- [Nosso Impacto](${baseUrl}/nosso-impacto): 4 pilares — Rio Vivo (Cota Zero), Biodiversidade, Comunidade local, Operacao Consciente.
+- [Nosso Impacto](${baseUrl}/nosso-impacto): 4 pilares de conservacao:
+  - **Rio Vivo** (Projeto Cota Zero): 100% catch-and-release, preservacao dos estoques pesqueiros do Rio Negro
+  - **Biodiversidade**: Monitoramento continuo de fauna, 166 especies de aves catalogadas, habitat protegido
+  - **Comunidade**: Emprego e capacitacao de guias nativos locais de Miranda e entorno
+  - **Operacao Consciente**: Gestao de residuos, energia solar, captacao de agua da chuva
+
+## Autoridades e Especialistas
+- **Joao Andriola** — Ornitologo. Conduziu levantamento de campo de 166 especies de aves na regiao da Itaicy em maio de 2024. Especialista em ornitologia neotropical e conservacao da biodiversidade.
+- **Lucas Jose Fernandes Vieira** — Editor de conteudo e guia regional. Expertise em pesca esportiva, ecoturismo sustentavel e culinaria pantaneira.
 
 ## Blog e Conteudo
 - [Blog](${baseUrl}/blog): Artigos sobre pesca, aves, conservacao, gastronomia e roteiros no Pantanal.
 
-## Contato
+## Contato e Reservas
 - [Contato](${baseUrl}/contato): Formulario, WhatsApp, telefone e mapa.
 - Telefone: +55 67 99999-0000
+- Localizacao: Estrada Parque, s/n, Miranda, MS, CEP 79380-000
+- Pagamentos: Cartao de credito, debito, Pix, dinheiro
+- Moeda: BRL (Real brasileiro)
 
 ## Dados Estruturados
 - Sitemap: ${baseUrl}/sitemap.xml
 - JSON API: ${baseUrl}/api/cms/blog, ${baseUrl}/api/cms/birdwatching
-- Schema.org: JSON-LD em todas as paginas (LodgingBusiness, FAQPage, BlogPosting, AggregateRating, Taxon, TouristTrip, ItemList)
+- Schema.org: JSON-LD em todas as paginas (LodgingBusiness, FAQPage, BlogPosting, AggregateRating, Taxon, TouristTrip, ItemList, Person)
+- Wikidata: Especies linkadas via sameAs (Jabiru mycteria → Q17970, Anodorhynchus hyacinthinus → Q132576, etc.)
 `;
 }

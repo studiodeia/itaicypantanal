@@ -62,7 +62,7 @@ export async function setupVite(app: Express, server: Server) {
       let page = await vite.transformIndexHtml(url, template);
       const host = req.get("host") || "127.0.0.1:5000";
       const baseUrl = `${req.protocol}://${host}`;
-      page = injectRouteMeta(page, url.split("?")[0], baseUrl);
+      page = await injectRouteMeta(page, url.split("?")[0], baseUrl);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
@@ -97,11 +97,11 @@ export function serveStatic(app: Express) {
     "utf-8",
   );
 
-  app.use("*", (req, res) => {
+  app.use("*", async (req, res) => {
     const envBase = process.env.SITE_URL?.trim()?.replace(/\/+$/, "");
     const host = req.get("host") || "127.0.0.1:5000";
     const baseUrl = envBase || `${req.protocol}://${host}`;
-    const page = injectRouteMeta(indexHtml, req.originalUrl.split("?")[0], baseUrl);
+    const page = await injectRouteMeta(indexHtml, req.originalUrl.split("?")[0], baseUrl);
     res.status(200).set({ "Content-Type": "text/html" }).end(page);
   });
 }

@@ -133,6 +133,71 @@ export function buildFAQPage(
   };
 }
 
+// ─── Known author profiles for E-E-A-T signals ──────────────────────
+
+interface AuthorProfile {
+  name: string;
+  jobTitle: string;
+  affiliation: string;
+  knowsAbout: string[];
+  sameAs?: string[];
+}
+
+const authorProfiles: Record<string, AuthorProfile> = {
+  "Lucas Vieira": {
+    name: "Lucas José Fernandes Vieira",
+    jobTitle: "Editor de Conteúdo e Guia Regional",
+    affiliation: SITE_NAME,
+    knowsAbout: [
+      "Pesca esportiva no Pantanal",
+      "Ecoturismo sustentável",
+      "Fauna e flora do Pantanal Sul-Matogrossense",
+      "Culinária pantaneira",
+    ],
+  },
+  "Lucas José Fernandes Vieira": {
+    name: "Lucas José Fernandes Vieira",
+    jobTitle: "Editor de Conteúdo e Guia Regional",
+    affiliation: SITE_NAME,
+    knowsAbout: [
+      "Pesca esportiva no Pantanal",
+      "Ecoturismo sustentável",
+      "Fauna e flora do Pantanal Sul-Matogrossense",
+      "Culinária pantaneira",
+    ],
+  },
+  "João Andriola": {
+    name: "João Andriola",
+    jobTitle: "Ornitólogo",
+    affiliation: SITE_NAME,
+    knowsAbout: [
+      "Ornitologia neotropical",
+      "Observação de aves no Pantanal",
+      "Levantamento e catalogação de espécies",
+      "Conservação da biodiversidade",
+    ],
+  },
+};
+
+function buildAuthorPerson(authorName: string, origin: string) {
+  const profile = authorProfiles[authorName];
+  if (profile) {
+    return {
+      "@type": "Person",
+      name: profile.name,
+      jobTitle: profile.jobTitle,
+      worksFor: {
+        "@type": "LodgingBusiness",
+        name: profile.affiliation,
+        url: origin,
+      },
+      knowsAbout: profile.knowsAbout,
+      ...(profile.sameAs && profile.sameAs.length > 0 && { sameAs: profile.sameAs }),
+    };
+  }
+  return { "@type": "Person", name: authorName || SITE_NAME };
+}
+
 export function buildBlogPosting(article: {
   title: string;
   description?: string;
@@ -146,10 +211,7 @@ export function buildBlogPosting(article: {
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    author: {
-      "@type": "Person",
-      name: article.author || SITE_NAME,
-    },
+    author: buildAuthorPerson(article.author || SITE_NAME, origin),
     datePublished: article.date,
     dateModified: article.date,
     image: article.image
@@ -170,6 +232,21 @@ export function buildBlogPosting(article: {
   };
 }
 
+// ─── Known Wikidata QIDs for species sameAs links ───────────────────
+
+const speciesWikidata: Record<string, { qid: string; wpPT?: string; wpEN?: string }> = {
+  "Anodorhynchus hyacinthinus": { qid: "Q132576", wpPT: "https://pt.wikipedia.org/wiki/Arara-azul-grande", wpEN: "https://en.wikipedia.org/wiki/Hyacinth_macaw" },
+  "Jabiru mycteria": { qid: "Q17970", wpPT: "https://pt.wikipedia.org/wiki/Jaburu", wpEN: "https://en.wikipedia.org/wiki/Jabiru" },
+  "Mycteria americana": { qid: "Q990175", wpPT: "https://pt.wikipedia.org/wiki/Cabeça-seca", wpEN: "https://en.wikipedia.org/wiki/Wood_stork" },
+  "Icterus croconotus": { qid: "Q1307046", wpPT: "https://pt.wikipedia.org/wiki/João-pinto", wpEN: "https://en.wikipedia.org/wiki/Orange-backed_troupial" },
+  "Anhinga anhinga": { qid: "Q469940", wpPT: "https://pt.wikipedia.org/wiki/Biguatinga", wpEN: "https://en.wikipedia.org/wiki/Anhinga" },
+  "Ara chloropterus": { qid: "Q520698", wpPT: "https://pt.wikipedia.org/wiki/Arara-vermelha-grande", wpEN: "https://en.wikipedia.org/wiki/Red-and-green_macaw" },
+  "Ardea alba": { qid: "Q148873", wpPT: "https://pt.wikipedia.org/wiki/Garça-branca-grande", wpEN: "https://en.wikipedia.org/wiki/Great_egret" },
+  "Platalea ajaja": { qid: "Q667466", wpPT: "https://pt.wikipedia.org/wiki/Colhereiro", wpEN: "https://en.wikipedia.org/wiki/Roseate_spoonbill" },
+  "Harpia harpyja": { qid: "Q159810", wpPT: "https://pt.wikipedia.org/wiki/Gavião-real", wpEN: "https://en.wikipedia.org/wiki/Harpy_eagle" },
+  "Nyctibius griseus": { qid: "Q622584", wpPT: "https://pt.wikipedia.org/wiki/Urutau", wpEN: "https://en.wikipedia.org/wiki/Common_potoo" },
+};
+
 export function buildTaxon(species: {
   commonName: string;
   scientificName: string;
@@ -181,6 +258,14 @@ export function buildTaxon(species: {
   slug: string;
 }) {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const wikiLinks = speciesWikidata[species.scientificName];
+  const sameAs: string[] = [];
+  if (wikiLinks) {
+    sameAs.push(`https://www.wikidata.org/wiki/${wikiLinks.qid}`);
+    if (wikiLinks.wpPT) sameAs.push(wikiLinks.wpPT);
+    if (wikiLinks.wpEN) sameAs.push(wikiLinks.wpEN);
+  }
+
   return {
     "@type": "Taxon",
     name: species.scientificName,
@@ -193,6 +278,7 @@ export function buildTaxon(species: {
         ? species.image
         : `${origin}${species.image}`
       : undefined,
+    ...(sameAs.length > 0 && { sameAs }),
     ...(species.conservationStatus && {
       hasDefinedTerm: {
         "@type": "DefinedTerm",
@@ -203,6 +289,12 @@ export function buildTaxon(species: {
     isPartOf: {
       "@type": "TouristDestination",
       name: "Pantanal Sul-Matogrossense",
+    },
+    contributor: {
+      "@type": "Person",
+      name: "João Andriola",
+      jobTitle: "Ornitólogo",
+      description: "Levantamento de campo com 166 espécies catalogadas, maio de 2024",
     },
   };
 }

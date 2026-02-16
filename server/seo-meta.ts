@@ -7,6 +7,8 @@
  * and a <noscript> content block so crawlers see real page content.
  */
 
+import { getCmsContent } from "./cms-content";
+
 const SITE_NAME = "Itaicy Pantanal Eco Lodge";
 const DEFAULT_OG_IMAGE = "/images/og-default.webp";
 
@@ -34,12 +36,12 @@ const routeMetaMap: Record<string, RouteMeta> = {
       "A Itaicy Pantanal Eco Lodge fica em Miranda, Mato Grosso do Sul, no coracao do Pantanal Sul-Matogrossense, Patrimonio Natural da Humanidade pela UNESCO. Oferecemos tres experiencias principais: pesca esportiva catch-and-release (Projeto Cota Zero), observacao de aves com 166 especies catalogadas pelo ornitologo Joao Andriola em maio de 2024, e safaris fotograficos de ecoturismo. Nossas acomodacoes sao climatizadas com vista para a natureza, e a culinaria regional inclui pacu assado, arroz carreteiro e ingredientes do Pantanal. Estamos a 240 km de Campo Grande (3h de carro) e 80 km de Bonito. A melhor epoca para visitar e a seca, de maio a setembro, ideal para pesca e avistamento de fauna.",
   },
   "/pesca": {
-    title: "Pesca Esportiva",
+    title: "Pesca Esportiva no Pantanal — Como Pescar no Rio Negro",
     description:
       "Pesca esportiva no Pantanal com guias locais experientes. Pintado, pacu, dourado e mais de 260 especies em um dos melhores destinos de pesca do mundo.",
     ogImage: "/images/home/expedition-pesca.webp",
     noscriptSummary:
-      "A Itaicy Pantanal Eco Lodge oferece pesca esportiva catch-and-release no Rio Negro, no Pantanal Sul-Matogrossense. Nosso Projeto Cota Zero garante que todo peixe capturado e devolvido vivo ao rio, preservando o ecossistema. Os guias locais conhecem profundamente os rios e os habitos dos peixes, incluindo pintado, pacu, dourado, cachara e mais de 260 especies. A temporada de pesca vai de marco a outubro, com pico de atividade entre maio e setembro durante a seca. Fornecemos equipamento profissional completo, barcos exclusivos e coletes salva-vidas. Pacotes de 3 a 7 noites com pensao completa.",
+      "Onde pescar no Pantanal? A Itaicy Pantanal Eco Lodge oferece pesca esportiva catch-and-release no Rio Negro, no Pantanal Sul-Matogrossense. Nosso Projeto Cota Zero garante que todo peixe capturado e devolvido vivo ao rio, preservando o ecossistema. Quais peixes posso pescar? Os guias locais conhecem profundamente os rios e os habitos dos peixes, incluindo pintado, pacu, dourado, cachara e mais de 260 especies. Qual a melhor epoca para pesca no Pantanal? A temporada de pesca vai de marco a outubro, com pico de atividade entre maio e setembro durante a seca. Fornecemos equipamento profissional completo, barcos exclusivos e coletes salva-vidas. Pacotes de 3 a 7 noites com pensao completa.",
     jsonLd: [
       {
         "@context": "https://schema.org",
@@ -64,12 +66,12 @@ const routeMetaMap: Record<string, RouteMeta> = {
     ],
   },
   "/observacao-de-aves": {
-    title: "Observacao de Aves",
+    title: "Observacao de Aves no Pantanal — Birdwatching com 166 Especies",
     description:
       "Mais de 650 especies de aves no Pantanal. Tuiuiu, arara-azul, tucanos e muito mais. Guias especializados e roteiros exclusivos de birdwatching.",
     ogImage: "/images/home/expedition-birdwatching.webp",
     noscriptSummary:
-      "A regiao da Itaicy Pantanal Eco Lodge abriga 166 especies de aves catalogadas pelo ornitologo Joao Andriola em expedicao de campo realizada em maio de 2024. Entre as especies mais emblematicas estao o Tuiuiu (Jabiru mycteria), ave-simbolo do Pantanal, e a Arara-Azul-Grande (Anodorhynchus hyacinthinus), ameacada de extincao. Os roteiros de birdwatching sao guiados ao amanhecer e entardecer, quando a atividade das aves e mais intensa. Disponibilizamos binoculos, guias de campo e checklists personalizados. O Pantanal Sul-Matogrossense e considerado um dos melhores destinos de observacao de aves da America do Sul.",
+      "Quantas especies de aves tem no Pantanal? A regiao da Itaicy Pantanal Eco Lodge abriga 166 especies catalogadas pelo ornitologo Joao Andriola em expedicao de campo em maio de 2024. Quais aves posso ver? Entre as mais emblematicas estao o Tuiuiu (Jabiru mycteria), ave-simbolo do Pantanal, e a Arara-Azul-Grande (Anodorhynchus hyacinthinus), ameacada de extincao. Como funciona o birdwatching? Os roteiros sao guiados ao amanhecer e entardecer, quando a atividade das aves e mais intensa. Disponibilizamos binoculos, guias de campo e checklists personalizados. O Pantanal Sul-Matogrossense e considerado um dos melhores destinos de observacao de aves da America do Sul.",
     jsonLd: [
       {
         "@context": "https://schema.org",
@@ -94,19 +96,19 @@ const routeMetaMap: Record<string, RouteMeta> = {
     ],
   },
   "/observacao-de-aves/catalogo": {
-    title: "Catalogo de Aves do Pantanal",
+    title: "Catalogo de Aves do Pantanal — 166 Especies com Fotos e Guia",
     description:
       "Guia completo de aves do Pantanal. Tuiuiu, arara-azul, tucanos, papagaios e dezenas de especies com fotos, habitats e dicas de observacao.",
     noscriptSummary:
-      "Catalogo completo de aves avistadas na regiao da Itaicy Pantanal Eco Lodge. Inclui 166 especies catalogadas com nome popular, nome cientifico, familia taxonomica, habitat, dieta, comportamento e status de conservacao segundo a IUCN. As especies estao organizadas por categorias: aquaticas, papagaios, migratorias e noturnas. Cada ficha inclui dicas de fotografia e melhor horario para observacao.",
+      "Quais aves posso encontrar no Pantanal? Este catalogo inclui 166 especies catalogadas pelo ornitologo Joao Andriola na regiao da Itaicy, com nome popular, nome cientifico, familia taxonomica, habitat, dieta, comportamento e status de conservacao IUCN. Quais categorias de aves existem? As especies estao organizadas em aquaticas, papagaios, migratorias e noturnas. Especies destacadas incluem Tuiuiu (Jabiru mycteria), Arara-Azul-Grande (Anodorhynchus hyacinthinus), Colhereiro (Platalea ajaja) e Gaviao-Real (Harpia harpyja). Cada ficha inclui dicas de fotografia e melhor horario para observacao.",
   },
   "/ecoturismo": {
-    title: "Ecoturismo",
+    title: "Ecoturismo no Pantanal — Trilhas, Safaris e Passeios de Barco",
     description:
       "Experiencias de ecoturismo sustentavel no Pantanal. Trilhas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo.",
     ogImage: "/images/home/expedition-ecoturismo.webp",
     noscriptSummary:
-      "A Itaicy Pantanal Eco Lodge oferece experiencias de ecoturismo sustentavel na maior planicie alagavel do mundo. As atividades incluem trilhas ecologicas guiadas, safaris fotograficos diurnos e noturnos, passeios de barco pelo Rio Negro e canoagem. Todos os roteiros sao acompanhados por guias nativos certificados que conhecem profundamente o bioma Pantanal. O ecoturismo na Itaicy e projetado para minimizar o impacto ambiental e maximizar a conexao com a natureza. Nivel de dificuldade adaptavel para todas as idades e condicoes fisicas.",
+      "O que fazer no Pantanal alem da pesca? A Itaicy Pantanal Eco Lodge oferece experiencias de ecoturismo sustentavel na maior planicie alagavel do mundo. Quais atividades estao disponiveis? As opcoes incluem trilhas ecologicas guiadas, safaris fotograficos diurnos e noturnos, passeios de barco pelo Rio Negro e canoagem. Preciso de preparo fisico? Nivel de dificuldade adaptavel para todas as idades e condicoes fisicas. Todos os roteiros sao acompanhados por guias nativos certificados que conhecem profundamente o bioma Pantanal. O ecoturismo na Itaicy e projetado para minimizar o impacto ambiental e maximizar a conexao com a natureza.",
     jsonLd: [
       {
         "@context": "https://schema.org",
@@ -131,18 +133,18 @@ const routeMetaMap: Record<string, RouteMeta> = {
     ],
   },
   "/culinaria": {
-    title: "Culinaria Pantaneira",
+    title: "Culinaria Pantaneira — Pratos Tipicos e Gastronomia Regional",
     description:
       "Sabores autenticos do Pantanal preparados com ingredientes locais. Gastronomia regional que conecta voce a cultura e a natureza.",
     noscriptSummary:
-      "A culinaria da Itaicy Pantanal Eco Lodge valoriza ingredientes regionais do Pantanal e do Cerrado. O cardapio inclui pratos tradicionais como pacu assado na brasa, arroz carreteiro, sopa paraguaia, caldo de piranha e sobremesas com frutas nativas do cerrado. A pensao completa esta inclusa nas diarias: cafe da manha, almoco e jantar. Atendemos restricoes alimentares (vegetariano, celiaco, intolerancia a lactose) com aviso previo. A experiencia gastronomica reflete a cultura pantaneira e ribeirinha da regiao de Miranda.",
+      "Quais sao os pratos tipicos do Pantanal? A culinaria da Itaicy Pantanal Eco Lodge inclui pacu assado na brasa, arroz carreteiro, sopa paraguaia, caldo de piranha e sobremesas com frutas nativas do cerrado. As refeicoes estao inclusas? Sim, a pensao completa esta inclusa nas diarias: cafe da manha, almoco e jantar. Atendem restricoes alimentares? Sim, atendemos dietas vegetarianas, celiacas e intolerancia a lactose com aviso previo. Os ingredientes sao regionais, valorizando a producao do Pantanal e do Cerrado. A experiencia gastronomica reflete a cultura pantaneira e ribeirinha da regiao de Miranda.",
   },
   "/acomodacoes": {
-    title: "Acomodacoes",
+    title: "Acomodacoes no Pantanal — Suites Explorer, Adventure e Family",
     description:
       "Suites premium no coracao do Pantanal. Explorer para viajantes solo, Adventure para casais e Family para familias. Conforto, natureza e privacidade.",
     noscriptSummary:
-      "A Itaicy Pantanal Eco Lodge possui 10 quartos distribuidos em tres categorias: Suite Explorer para viajantes individuais, Suite Adventure para casais e lua de mel, e Suite Family para familias com ate 4 pessoas. Todas as suites sao climatizadas, com Wi-Fi, frigobar e vista para a natureza. A estrutura inclui restaurante com culinaria pantaneira, varandas panoramicas e areas comuns confortaveis. Check-in as 14h, check-out as 11h.",
+      "Quais tipos de acomodacao a Itaicy oferece? A Itaicy Pantanal Eco Lodge possui 10 quartos em tres categorias: Suite Explorer para viajantes individuais, Suite Adventure para casais e lua de mel, e Suite Family para familias com ate 4 pessoas. O que esta incluso nos quartos? Todas as suites sao climatizadas, com Wi-Fi, frigobar e vista para a natureza. Qual o horario de check-in? Check-in as 14h, check-out as 11h. A estrutura inclui restaurante com culinaria pantaneira, varandas panoramicas e areas comuns confortaveis.",
   },
   "/blog": {
     title: "Blog",
@@ -159,18 +161,18 @@ const routeMetaMap: Record<string, RouteMeta> = {
       "Entre em contato com a Itaicy Pantanal Eco Lodge para reservas e informacoes. Telefone: +55 67 99999-0000. Localizacao: Estrada Parque, s/n, Miranda, MS, CEP 79380-000. Aceitamos pagamentos por cartao de credito, debito, Pix e dinheiro.",
   },
   "/nosso-impacto": {
-    title: "Nosso Impacto",
+    title: "Nosso Impacto Ambiental — Conservacao e Sustentabilidade no Pantanal",
     description:
       "Conservacao ambiental, pesca sustentavel Cota Zero, protecao da biodiversidade e apoio a comunidades locais. Conheca o impacto positivo da Itaicy no Pantanal.",
     noscriptSummary:
-      "O impacto da Itaicy Pantanal Eco Lodge se organiza em quatro pilares de conservacao: Rio Vivo (Projeto Cota Zero de pesca catch-and-release), Biodiversidade (166 especies de aves catalogadas, monitoramento de fauna), Comunidade (emprego e capacitacao de guias nativos locais) e Operacao Consciente (gestao de residuos, energia solar, captacao de agua da chuva). Somos comprometidos com o ecoturismo sustentavel e a preservacao do Pantanal como Patrimonio da Humanidade.",
+      "O que e o Projeto Cota Zero? E o programa de pesca 100% catch-and-release da Itaicy onde todo peixe capturado e devolvido vivo ao Rio Negro. Como a Itaicy contribui para a conservacao? O impacto se organiza em quatro pilares: Rio Vivo (Projeto Cota Zero), Biodiversidade (166 especies de aves catalogadas pelo ornitologo Joao Andriola, monitoramento de fauna), Comunidade (emprego e capacitacao de guias nativos locais de Miranda) e Operacao Consciente (gestao de residuos, energia solar, captacao de agua da chuva). Somos comprometidos com o ecoturismo sustentavel e a preservacao do Pantanal como Patrimonio da Humanidade pela UNESCO.",
   },
   "/regiao": {
-    title: "Pantanal Sul-Matogrossense — Regiao, Clima e Como Chegar",
+    title: "Pantanal Sul-Matogrossense — Como Chegar, Melhor Epoca e Clima",
     description:
       "Guia completo do Pantanal Sul-Matogrossense. Localizacao em Miranda (MS), como chegar de aviao ou carro, melhor epoca para visitar, clima por estacao e pontos turisticos proximos como Bonito.",
     noscriptSummary:
-      "A Itaicy Pantanal Eco Lodge fica em Miranda, Mato Grosso do Sul, no Pantanal Sul-Matogrossense, Patrimonio Natural da Humanidade pela UNESCO. Coordenadas: 19 graus 50 minutos Sul, 56 graus 41 minutos Oeste. Como chegar: voo para Campo Grande (CGR) com transfer terrestre de 3 horas pela BR-262. Distancia de Bonito: 80 km (1h30). Clima: tropical com estacao seca (maio a setembro, 15-30 graus C) e cheia (outubro a marco, 25-40 graus C). Melhor epoca para pesca e aves: seca. Para paisagens: transicao entre estacoes. Pontos proximos: Bonito (80 km), Campo Grande (240 km), Estrada Parque Pantanal.",
+      "Como chegar ao Pantanal? Voo para Campo Grande (aeroporto CGR) com transfer terrestre de 3 horas pela BR-262 ate Miranda, MS. Qual a melhor epoca para visitar o Pantanal? A estacao seca (maio a setembro) e ideal para pesca esportiva e observacao de aves; a cheia (outubro a marco) proporciona paisagens espetaculares. Qual o clima no Pantanal? Tropical com seca (15-30°C) e cheia (25-40°C). A Itaicy Pantanal Eco Lodge fica no Pantanal Sul-Matogrossense, Patrimonio Natural da Humanidade pela UNESCO. O que visitar perto? Bonito (80 km, 1h30), Campo Grande (240 km, 3h) e Estrada Parque Pantanal.",
   },
   "/politica-de-privacidade": {
     title: "Politica de Privacidade",
@@ -187,29 +189,82 @@ function escapeHtml(str: string): string {
     .replace(/>/g, "&gt;");
 }
 
+/** Convert slug back to human-readable title */
+function slugToTitle(slug: string): string {
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 /**
- * Resolve route metadata. Tries exact match first, then prefix patterns
- * for dynamic routes (blog articles, bird species).
+ * Resolve route metadata. Tries exact match first, then looks up dynamic
+ * routes (blog articles, bird species) from CMS data for specific titles.
  */
-function getRouteMeta(path: string): RouteMeta | null {
+async function getRouteMeta(path: string): Promise<RouteMeta | null> {
   // Exact match
   if (routeMetaMap[path]) return routeMetaMap[path];
 
   // Dynamic blog article: /blog/:category/:slug
-  if (/^\/blog\/[^/]+\/[^/]+$/.test(path)) {
+  const blogMatch = path.match(/^\/blog\/[^/]+\/([^/]+)$/);
+  if (blogMatch) {
+    const articleSlug = blogMatch[1];
+    try {
+      const { content } = await getCmsContent();
+      const article = content.blog.details.find((a) => a.slug === articleSlug);
+      if (article) {
+        const title = typeof article.title === "string" ? article.title : "";
+        const desc = typeof article.description === "string" ? article.description : "";
+        const heroImg = typeof article.heroImage === "string" ? article.heroImage : undefined;
+        return {
+          title: title || slugToTitle(articleSlug),
+          description:
+            desc ||
+            `Artigo sobre ${slugToTitle(articleSlug)} no Pantanal — blog da Itaicy Pantanal Eco Lodge.`,
+          ogImage: heroImg,
+          noscriptSummary: desc || undefined,
+        };
+      }
+    } catch {
+      // Fall through to default
+    }
     return {
-      title: "Blog",
+      title: slugToTitle(articleSlug),
       description:
-        "Artigo do blog da Itaicy Pantanal Eco Lodge sobre o Pantanal, fauna, flora e ecoturismo.",
+        `Artigo sobre ${slugToTitle(articleSlug)} — blog da Itaicy Pantanal Eco Lodge sobre o Pantanal, fauna, flora e ecoturismo.`,
     };
   }
 
   // Dynamic bird species: /observacao-de-aves/catalogo/:slug
-  if (/^\/observacao-de-aves\/catalogo\/[^/]+$/.test(path)) {
+  const birdMatch = path.match(/^\/observacao-de-aves\/catalogo\/([^/]+)$/);
+  if (birdMatch) {
+    const speciesSlug = birdMatch[1];
+    try {
+      const { content } = await getCmsContent();
+      const species = content.birdwatching.details.find((s) => s.slug === speciesSlug);
+      if (species) {
+        const commonName = typeof species.commonName === "string" ? species.commonName : "";
+        const sciName = typeof species.scientificName === "string" ? species.scientificName : "";
+        const desc = typeof species.description === "string" ? species.description : "";
+        const overview = typeof species.overview === "string" ? species.overview : "";
+        const heroImg = typeof species.heroImage === "string" ? species.heroImage : undefined;
+        const src = typeof species.src === "string" ? species.src : undefined;
+        const displayName = commonName || slugToTitle(speciesSlug);
+        return {
+          title: `${displayName}${sciName ? ` (${sciName})` : ""}`,
+          description:
+            desc ||
+            `Ficha completa de ${displayName} no Pantanal. Habitat, dieta, comportamento e dicas de observacao.`,
+          ogImage: heroImg || src,
+          noscriptSummary: overview || desc || undefined,
+        };
+      }
+    } catch {
+      // Fall through to default
+    }
     return {
-      title: "Especie de Ave — Catalogo do Pantanal",
+      title: `${slugToTitle(speciesSlug)} — Catalogo de Aves do Pantanal`,
       description:
-        "Ficha completa de especie de ave avistada no Pantanal Sul-Matogrossense. Nome cientifico, habitat, dieta e dicas de observacao.",
+        `Ficha completa de ${slugToTitle(speciesSlug)} no Pantanal Sul-Matogrossense. Nome cientifico, habitat, dieta e dicas de observacao.`,
     };
   }
 
@@ -221,12 +276,12 @@ function getRouteMeta(path: string): RouteMeta | null {
  * Replaces the static <title> and <meta description> with route-specific values,
  * adds OG tags, canonical URL, and a <noscript> content block for AI crawlers.
  */
-export function injectRouteMeta(
+export async function injectRouteMeta(
   html: string,
   requestPath: string,
   baseUrl: string,
-): string {
-  const meta = getRouteMeta(requestPath);
+): Promise<string> {
+  const meta = await getRouteMeta(requestPath);
   if (!meta) return html;
 
   const fullTitle = meta.title.includes(SITE_NAME)
