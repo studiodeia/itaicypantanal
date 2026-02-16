@@ -173,6 +173,54 @@ const routeMetaMap: Record<string, RouteMeta> = {
       "Guia completo do Pantanal Sul-Matogrossense. Localizacao em Miranda (MS), como chegar de aviao ou carro, melhor epoca para visitar, clima por estacao e pontos turisticos proximos como Bonito.",
     noscriptSummary:
       "Como chegar ao Pantanal? Voo para Campo Grande (aeroporto CGR) com transfer terrestre de 3 horas pela BR-262 ate Miranda, MS. Qual a melhor epoca para visitar o Pantanal? A estacao seca (maio a setembro) e ideal para pesca esportiva e observacao de aves; a cheia (outubro a marco) proporciona paisagens espetaculares. Qual o clima no Pantanal? Tropical com seca (15-30°C) e cheia (25-40°C). A Itaicy Pantanal Eco Lodge fica no Pantanal Sul-Matogrossense, Patrimonio Natural da Humanidade pela UNESCO. O que visitar perto? Bonito (80 km, 1h30), Campo Grande (240 km, 3h) e Estrada Parque Pantanal.",
+    jsonLd: (() => {
+      const year = new Date().getFullYear();
+      const nextYear = year + 1;
+      const loc = {
+        "@type": "Place",
+        name: "Itaicy Pantanal Eco Lodge",
+        address: { "@type": "PostalAddress", addressLocality: "Miranda", addressRegion: "MS", addressCountry: "BR" },
+      };
+      const org = { "@type": "Organization", name: "Itaicy Pantanal Eco Lodge", url: "https://itaicypantanal.com.br" };
+      return [
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Temporada de Pesca Esportiva no Pantanal",
+          description: "Pesca esportiva catch-and-release no Rio Negro. Pintado, pacu, dourado e mais de 260 especies. Projeto Cota Zero.",
+          startDate: `${year}-03-01`,
+          endDate: `${year}-10-31`,
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          location: loc,
+          organizer: org,
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Alta Temporada de Observacao de Aves no Pantanal",
+          description: "Melhor epoca para birdwatching. 166 especies catalogadas incluindo Tuiuiu e Arara-Azul-Grande.",
+          startDate: `${year}-07-01`,
+          endDate: `${year}-10-31`,
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          location: loc,
+          organizer: org,
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Temporada de Cheia — Safaris Fotograficos no Pantanal",
+          description: "Paisagens espetaculares com campos alagados, fauna concentrada e fotografia de natureza.",
+          startDate: `${year}-10-01`,
+          endDate: `${nextYear}-03-31`,
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          eventStatus: "https://schema.org/EventScheduled",
+          location: loc,
+          organizer: org,
+        },
+      ];
+    })(),
   },
   "/politica-de-privacidade": {
     title: "Politica de Privacidade",

@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      as="style"
+    >
+    <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Playfair+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     >
@@ -81,6 +86,54 @@
         "target": "https://itaicypantanal.com.br/blog?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+
+    <!-- Static JSON-LD: WebPage with SpeakableSpecification for voice search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Itaicy Pantanal Eco Lodge",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["[data-speakable]", "h1", "meta[name='description']"]
+      },
+      "url": "https://itaicypantanal.com.br",
+      "inLanguage": "pt-BR"
+    }
+    </script>
+
+    <!-- Static JSON-LD: Organization with social sameAs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Itaicy Pantanal Eco Lodge",
+      "legalName": "Itaicy Pantanal Eco Lodge",
+      "url": "https://itaicypantanal.com.br",
+      "logo": "https://itaicypantanal.com.br/images/icons/logo.svg",
+      "foundingDate": "2024",
+      "description": "Eco lodge no Pantanal Sul-Matogrossense especializado em pesca esportiva catch-and-release, observacao de aves e ecoturismo sustentavel.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estrada Parque, s/n",
+        "addressLocality": "Miranda",
+        "addressRegion": "MS",
+        "postalCode": "79380-000",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-67-99999-0000",
+        "contactType": "reservations",
+        "availableLanguage": ["Portuguese", "English"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/itaicypantanal",
+        "https://www.facebook.com/itaicypantanal",
+        "https://www.tripadvisor.com.br/itaicypantanal"
+      ]
     }
     </script>
   </head>

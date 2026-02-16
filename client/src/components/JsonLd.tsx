@@ -100,6 +100,39 @@ export function buildLodgingBusiness() {
   };
 }
 
+export function buildOrganization() {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  return {
+    "@type": "Organization",
+    name: SITE_NAME,
+    legalName: SITE_NAME,
+    url: origin,
+    logo: `${origin}/images/icons/logo.svg`,
+    foundingDate: "2024",
+    description:
+      "Eco lodge no Pantanal Sul-Matogrossense especializado em pesca esportiva catch-and-release, observacao de aves e ecoturismo sustentavel.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Estrada Parque, s/n",
+      addressLocality: "Miranda",
+      addressRegion: "MS",
+      postalCode: "79380-000",
+      addressCountry: "BR",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+55-67-99999-0000",
+      contactType: "reservations",
+      availableLanguage: ["Portuguese", "English"],
+    },
+    sameAs: [
+      "https://www.instagram.com/itaicypantanal",
+      "https://www.facebook.com/itaicypantanal",
+      "https://www.tripadvisor.com.br/itaicypantanal",
+    ],
+  };
+}
+
 export function buildWebSite() {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   return {
@@ -353,6 +386,98 @@ export function buildTourProduct(tour: {
       },
     },
   };
+}
+
+// ─── Seasonal Event schemas for temporal query matching ──────────────
+
+export function buildSeasonalEvents() {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const currentYear = new Date().getFullYear();
+  const nextYear = currentYear + 1;
+
+  return [
+    {
+      "@type": "Event",
+      name: "Temporada de Pesca Esportiva no Pantanal",
+      description:
+        "Temporada de pesca esportiva catch-and-release no Pantanal Sul-Matogrossense. Pintado, pacu, dourado e mais de 260 especies. Projeto Cota Zero — todo peixe devolvido vivo.",
+      startDate: `${currentYear}-03-01`,
+      endDate: `${currentYear}-10-31`,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: SITE_NAME,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Miranda",
+          addressRegion: "MS",
+          addressCountry: "BR",
+        },
+      },
+      organizer: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: origin,
+      },
+      url: `${origin}/pesca`,
+      image: `${origin}/images/home/expedition-pesca.webp`,
+    },
+    {
+      "@type": "Event",
+      name: "Alta Temporada de Observacao de Aves no Pantanal",
+      description:
+        "Melhor epoca para birdwatching no Pantanal. 166 especies catalogadas incluindo Tuiuiu (Jabiru mycteria) e Arara-Azul-Grande (Anodorhynchus hyacinthinus). Roteiros guiados ao amanhecer e entardecer.",
+      startDate: `${currentYear}-07-01`,
+      endDate: `${currentYear}-10-31`,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: SITE_NAME,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Miranda",
+          addressRegion: "MS",
+          addressCountry: "BR",
+        },
+      },
+      organizer: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: origin,
+      },
+      url: `${origin}/observacao-de-aves`,
+      image: `${origin}/images/home/expedition-birdwatching.webp`,
+    },
+    {
+      "@type": "Event",
+      name: "Temporada de Cheia — Safaris Fotograficos no Pantanal",
+      description:
+        "Epoca de cheia no Pantanal (outubro a marco). Paisagens espetaculares com campos alagados, fauna concentrada e oportunidades unicas de fotografia de natureza.",
+      startDate: `${currentYear}-10-01`,
+      endDate: `${nextYear}-03-31`,
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: SITE_NAME,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Miranda",
+          addressRegion: "MS",
+          addressCountry: "BR",
+        },
+      },
+      organizer: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: origin,
+      },
+      url: `${origin}/ecoturismo`,
+      image: `${origin}/images/home/expedition-ecoturismo.webp`,
+    },
+  ];
 }
 
 export function buildAggregateRating(
