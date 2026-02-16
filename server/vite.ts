@@ -5,6 +5,7 @@ import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
+import { injectRouteMeta } from "./seo-meta";
 
 const viteLogger = createLogger();
 
@@ -58,7 +59,10 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx"`,
         `src="/src/main.tsx?v=${nanoid()}"`,
       );
-      const page = await vite.transformIndexHtml(url, template);
+      let page = await vite.transformIndexHtml(url, template);
+      const host = req.get("host") || "127.0.0.1:5000";
+      const baseUrl = `${req.protocol}://${host}`;
+      page = injectRouteMeta(page, url.split("?")[0], baseUrl);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
@@ -87,8 +91,17 @@ export function serveStatic(app: Express) {
     next();
   });
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // fall through to index.html with per-route meta injection
+  const indexHtml = fs.readFileSync(
+    path.resolve(distPath, "index.html"),
+    "utf-8",
+  );
+
+  app.use("*", (req, res) => {
+    const envBase = process.env.SITE_URL?.trim()?.replace(/\/+$/, "");
+    const host = req.get("host") || "127.0.0.1:5000";
+    const baseUrl = envBase || `${req.protocol}://${host}`;
+    const page = injectRouteMeta(indexHtml, req.originalUrl.split("?")[0], baseUrl);
+    res.status(200).set({ "Content-Type": "text/html" }).end(page);
   });
 }

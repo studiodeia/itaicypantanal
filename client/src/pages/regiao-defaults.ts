@@ -131,35 +131,35 @@ export const regiaoDefaults: RegiaoPageContent = {
         number: "01",
         question: "Qual a diferenca entre Pantanal Norte e Pantanal Sul?",
         answer:
-          "O Pantanal Norte (Mato Grosso), com base em Pocone e na Transpantaneira, e mais conhecido pelo turismo de onca-pintada e tem uma infraestrutura focada em safaris. O Pantanal Sul (Mato Grosso do Sul), onde fica a Itaicy em Miranda, e mais procurado por pescadores esportivos e observadores de aves, com 166 especies catalogadas apenas na regiao da pousada. O Sul tambem e mais acessivel, com aeroporto internacional em Campo Grande a 3 horas de distancia, e oferece a proximidade com Bonito para roteiros combinados.",
+          "O Pantanal ocupa cerca de 150.000 km² divididos entre dois estados brasileiros, e cada metade oferece experiencias distintas para o visitante. O Pantanal Norte (Mato Grosso), com base em Pocone e ao longo da Transpantaneira, e mais conhecido pelo turismo de onca-pintada e tem infraestrutura focada em safaris fotograficos, com lodges concentrados ao longo dos 145 km da estrada-parque. O Pantanal Sul (Mato Grosso do Sul), onde fica a Itaicy em Miranda, e mais procurado por pescadores esportivos e observadores de aves, com 166 especies catalogadas apenas na area da pousada. O Sul tambem se destaca pela maior acessibilidade: o Aeroporto Internacional de Campo Grande (CGR) fica a apenas 240 km, cerca de 3 horas de carro pela BR-262 asfaltada. Alem disso, a proximidade de 80 km com Bonito permite combinar Pantanal e rios cristalinos em um unico roteiro de 7 a 10 dias.",
       },
       {
         id: "regiao-2",
         number: "02",
         question: "Preciso de vacinas para visitar o Pantanal?",
         answer:
-          "A vacina contra febre amarela e altamente recomendada para quem visita o Pantanal, embora nao seja obrigatoria por lei. Recomenda-se tomar a vacina pelo menos 10 dias antes da viagem para que a imunizacao esteja ativa. Alem disso, e importante estar com o calendario vacinal em dia, incluindo tetano. O uso de repelente e roupas de manga longa ao entardecer ajuda na protecao contra mosquitos. A Itaicy disponibiliza repelente e orientacoes sobre saude durante toda a estadia.",
+          "Antes de viajar ao Pantanal, e importante verificar suas vacinas e tomar algumas precaucoes basicas de saude, ja que a regiao e classificada como area endemica de febre amarela pelo Ministerio da Saude. A vacina contra febre amarela e altamente recomendada, embora nao seja obrigatoria por lei para viajantes nacionais. Recomenda-se toma-la pelo menos 10 dias antes da viagem para que a imunizacao esteja ativa. A dose unica confere protecao vitalicia segundo a Organizacao Mundial da Saude. Alem disso, e importante estar com o calendario vacinal em dia, incluindo tetano e hepatite A. O uso de repelente com DEET ou icaridina e roupas de manga longa ao entardecer ajuda na protecao contra mosquitos, que sao mais ativos entre outubro e marco. A Itaicy disponibiliza repelente nas areas comuns e orientacoes sobre saude durante toda a estadia.",
       },
       {
         id: "regiao-3",
         number: "03",
         question: "O que levar para uma viagem ao Pantanal?",
         answer:
-          "Para aproveitar o Pantanal ao maximo, leve roupas leves e de cores neutras (caqui, verde, cinza), calcados fechados confortaveis para trilhas, chinelos para a pousada, bone ou chapeu, protetor solar fator 50+, repelente de insetos, binoculos para observacao de aves e uma camera fotografica com zoom. No inverno pantaneiro (junho a agosto), as noites podem chegar a 10-15°C, entao leve um agasalho. A Itaicy fornece equipamentos de pesca, coletes salva-vidas e guias especializados — voce nao precisa trazer equipamento esportivo.",
+          "Planejar a mala para o Pantanal exige atencao ao clima tropical e as atividades ao ar livre que voce fara durante a estadia na regiao. Leve roupas leves e de cores neutras (caqui, verde, cinza) que ajudam na camuflagem durante observacao de fauna, calcados fechados confortaveis para trilhas em terreno irregular, chinelos para a pousada, bone ou chapeu de aba larga, protetor solar fator 50+ e repelente de insetos com DEET. Binoculos sao essenciais para observacao de aves, e uma camera fotografica com zoom de pelo menos 200 mm fara diferenca nos registros de fauna. No inverno pantaneiro (junho a agosto), as temperaturas noturnas podem cair a 10-15°C, entao inclua um agasalho de fleece ou jaqueta leve. A Itaicy fornece todos os equipamentos de pesca, coletes salva-vidas, lanternas para passeios noturnos e guias especializados — voce nao precisa trazer equipamento esportivo.",
       },
       {
         id: "regiao-4",
         number: "04",
         question: "Tem internet e sinal de celular no Pantanal?",
         answer:
-          "A Itaicy Pantanal Eco Lodge oferece Wi-Fi nas areas comuns (recepcao, restaurante e varandas). O sinal e via satelite, adequado para mensagens, e-mails e navegacao basica, mas nao ideal para streaming ou videochamadas pesadas. O sinal de celular (4G) funciona de forma intermitente na regiao de Miranda — operadoras Vivo e Claro tem melhor cobertura. Recomendamos aproveitar a desconexao digital como parte da experiencia imersiva no Pantanal, mas voce nao ficara completamente isolado.",
+          "A conectividade no Pantanal e limitada em comparacao com centros urbanos, mas a Itaicy mantem infraestrutura suficiente para que voce se comunique quando necessario. O lodge oferece Wi-Fi via satelite nas areas comuns, incluindo recepcao, restaurante e varandas com vista para o rio. A conexao e adequada para mensagens de texto, e-mails, navegacao basica e envio de fotos em redes sociais, mas nao e ideal para streaming de video ou videochamadas longas. O sinal de celular 4G funciona de forma intermitente na regiao de Miranda, que fica a cerca de 30 minutos do lodge — as operadoras Vivo e Claro oferecem melhor cobertura na area. Recomendamos aproveitar a desconexao digital como parte da experiencia imersiva no Pantanal: muitos hospedes relatam que a pausa nas telas e um dos pontos altos da viagem. Mesmo assim, voce nao ficara completamente isolado em nenhum momento.",
       },
       {
         id: "regiao-5",
         number: "05",
         question: "O Pantanal e seguro para familias com criancas?",
         answer:
-          "Sim, o Pantanal e um destino seguro e muito recomendado para familias. A Itaicy recebe familias com criancas de todas as idades e adapta roteiros conforme o perfil do grupo. Passeios de barco, trilhas curtas e observacao de animais sao atividades que encantam criancas. A pousada tem Suite Family com espaco para ate 4 pessoas. Guias nativos acompanham todas as atividades e conhecem a regiao profundamente, garantindo seguranca. O contato direto com a natureza e uma experiencia educativa e transformadora para criancas.",
+          "O Pantanal e uma regiao de natureza preservada e com infraestrutura turistica consolidada, o que o torna um destino seguro e muito recomendado para familias com criancas de todas as idades. A Itaicy recebe familias regularmente e adapta os roteiros conforme o perfil e a faixa etaria do grupo, oferecendo passeios de barco em ritmo tranquilo, trilhas curtas de ate 2 km e sessoes de observacao de animais que encantam os pequenos. A pousada conta com Suite Family que acomoda ate 4 pessoas confortavelmente em um unico ambiente. Guias nativos com mais de 15 anos de experiencia acompanham todas as atividades e conhecem profundamente a fauna e os caminhos da regiao, garantindo seguranca em cada saida. O contato direto com jacares, capivaras, tucanos e araras em habitat natural oferece uma experiencia educativa e transformadora que criancas lembram por toda a vida.",
       },
     ],
   },

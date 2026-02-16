@@ -120,6 +120,8 @@ export function buildFAQPage(
 ) {
   return {
     "@type": "FAQPage",
+    datePublished: "2024-05-01",
+    dateModified: "2026-02-16",
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -231,6 +233,8 @@ export function buildTourProduct(tour: {
     name: tour.name,
     description: tour.description,
     url: `${origin}${tour.url}`,
+    datePublished: "2024-05-01",
+    dateModified: "2026-02-16",
     image: tour.image
       ? tour.image.startsWith("http")
         ? tour.image
