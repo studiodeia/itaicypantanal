@@ -60,6 +60,18 @@ export type CmsPrivacySection = {
   title: string;
   content: string[];
 };
+export type CmsFaqItem = {
+  id: string;
+  number: string;
+  question: string;
+  answer: string;
+};
+export type CmsFaq = {
+  label: string;
+  heading: string;
+  description: string;
+  items: CmsFaqItem[];
+};
 
 // === Hero (shared pattern across pages) ===
 export type CmsHero = {
@@ -138,6 +150,7 @@ export type HomePageContent = {
     description: string;
     buttonText: string;
   };
+  faq?: CmsFaq;
 };
 
 export type AcomodacoesPageContent = {
@@ -153,6 +166,7 @@ export type AcomodacoesPageContent = {
     ctaText: string;
     ctaHref: string;
   };
+  faq?: CmsFaq;
 };
 
 export type CulinariaPageContent = {
@@ -169,6 +183,7 @@ export type CulinariaPageContent = {
     buttonHref: string;
     image: string;
   };
+  faq?: CmsFaq;
 };
 
 export type PescaPageContent = {
@@ -177,6 +192,7 @@ export type PescaPageContent = {
   sobreNos: CmsSobreNos;
   highlights: CmsHighlights;
   services: CmsServices;
+  faq?: CmsFaq;
 };
 
 export type EcoturismoPageContent = {
@@ -185,6 +201,7 @@ export type EcoturismoPageContent = {
   sobreNos: CmsSobreNos;
   highlights: CmsHighlights;
   services: CmsServices;
+  faq?: CmsFaq;
 };
 
 export type BirdwatchingPageContent = {
@@ -192,6 +209,7 @@ export type BirdwatchingPageContent = {
   manifesto: CmsManifesto;
   sobreNos: CmsSobreNos;
   highlights: CmsHighlights;
+  faq?: CmsFaq;
 };
 
 export type ContatoPageContent = {

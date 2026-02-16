@@ -7,9 +7,15 @@ import {
 } from "@/components/ui/accordion";
 import { useSharedCmsSections } from "@/lib/cms/shared-content";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
+import type { CmsFaq } from "@shared/cms-page-content";
 
-export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
-  const { faq } = useSharedCmsSections();
+type Props = {
+  content?: CmsFaq;
+};
+
+export const FrequentlyAskedQuestionsSection = ({ content }: Props): JSX.Element => {
+  const shared = useSharedCmsSections();
+  const faq = content ?? shared.faq;
 
   return (
     <section className="flex flex-col items-center justify-end w-full bg-[#344e41]">

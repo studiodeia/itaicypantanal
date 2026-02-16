@@ -1,4 +1,5 @@
 import { PageMeta } from "@/components/PageMeta";
+import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
 import { culinariaDefaults } from "./culinaria-defaults";
 import { CulinaryHeroSection } from "./culinaria/sections/CulinaryHeroSection";
@@ -16,6 +17,18 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 export const Culinaria = (): JSX.Element => {
   const cms = usePageCms("/culinaria", culinariaDefaults);
 
+  const faqSchema = cms.faq?.items.length
+    ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
+    : null;
+
+  const tourSchema = buildTourProduct({
+    name: "Culinaria Pantaneira — Itaicy Eco Lodge",
+    description:
+      "Gastronomia autentica do Pantanal com ingredientes regionais e pratos tipicos. Experiencia culinaria imersiva com sabores do Mato Grosso do Sul.",
+    url: "/culinaria",
+    image: cms.hero?.backgroundImage,
+  });
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -27,6 +40,8 @@ export const Culinaria = (): JSX.Element => {
           { name: "Culinaria", path: "/culinaria" },
         ]}
       />
+      <JsonLd data={tourSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
       <CulinaryHeroSection content={cms.hero} />
       <CulinaryManifestoSection content={cms.manifesto} />
       <CulinaryHighlightsSection content={cms.highlights} />
@@ -35,7 +50,7 @@ export const Culinaria = (): JSX.Element => {
       <CulinaryServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
       <AccommodationsCrossSellSection content={cms.crossSell} />
-      <FrequentlyAskedQuestionsSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>

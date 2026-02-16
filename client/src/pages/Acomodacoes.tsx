@@ -1,4 +1,5 @@
 import { PageMeta } from "@/components/PageMeta";
+import { JsonLd, buildFAQPage } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
 import { resolveIcon } from "@/lib/icon-resolver";
 import { acomodacoesDefaults } from "./acomodacoes-defaults";
@@ -29,6 +30,10 @@ export const Acomodacoes = (): JSX.Element => {
     imagePosition: imagePositions[i] ?? "left",
   }));
 
+  const faqSchema = cms.faq?.items.length
+    ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
+    : null;
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -40,6 +45,7 @@ export const Acomodacoes = (): JSX.Element => {
           { name: "Acomodacoes", path: "/acomodacoes" },
         ]}
       />
+      {faqSchema && <JsonLd data={faqSchema} />}
       <AccommodationsHeroSection content={cms.hero} />
       <ManifestoStatementSection content={cms.manifesto} />
       <div
@@ -62,7 +68,7 @@ export const Acomodacoes = (): JSX.Element => {
       </div>
       <ImmersionTestimonialsSection />
       <CulinarySection content={cms.culinary} />
-      <FrequentlyAskedQuestionsSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>

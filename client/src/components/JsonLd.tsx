@@ -31,17 +31,20 @@ export function JsonLd({ data }: JsonLdProps) {
 const SITE_NAME = "Itaicy Pantanal Eco Lodge";
 
 export function buildLodgingBusiness() {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
   return {
     "@type": "LodgingBusiness",
     name: SITE_NAME,
     description:
-      "Eco lodge premium no coracao do Pantanal. Hospedagem, pesca esportiva, observacao de aves e experiencias de ecoturismo.",
-    url: typeof window !== "undefined" ? window.location.origin : "",
+      "Eco lodge no Pantanal Sul-Matogrossense em Miranda, MS. Pesca esportiva catch-and-release cota zero, observacao de 166 especies de aves catalogadas e safaris fotograficos de ecoturismo.",
+    url: origin,
     telephone: "+55 67 99999-0000",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Estrada Parque, s/n",
       addressLocality: "Miranda",
       addressRegion: "MS",
+      postalCode: "79380-000",
       addressCountry: "BR",
     },
     geo: {
@@ -49,18 +52,51 @@ export function buildLodgingBusiness() {
       latitude: -19.83,
       longitude: -56.68,
     },
-    image: "/images/og-default.webp",
+    image: `${origin}/images/og-default.webp`,
     priceRange: "$$$$",
     starRating: {
       "@type": "Rating",
       ratingValue: "5",
     },
+    checkinTime: "14:00",
+    checkoutTime: "11:00",
+    petsAllowed: false,
+    smokingAllowed: false,
+    numberOfRooms: 10,
     amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Pesca esportiva" },
-      { "@type": "LocationFeatureSpecification", name: "Observacao de aves" },
-      { "@type": "LocationFeatureSpecification", name: "Ecoturismo" },
-      { "@type": "LocationFeatureSpecification", name: "Culinaria pantaneira" },
+      { "@type": "LocationFeatureSpecification", name: "Pesca esportiva catch-and-release (cota zero)", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Observacao de aves guiada (166 especies)", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Safaris fotograficos e ecoturismo", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Culinaria pantaneira regional", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Wi-Fi gratuito", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Ar-condicionado", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Passeios de barco no Rio Negro", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Trilhas ecologicas guiadas", value: true },
     ],
+    knowsAbout: [
+      "Pesca esportiva no Pantanal",
+      "Observacao de aves (birdwatching) no Pantanal",
+      "Ecoturismo sustentavel",
+      "Conservacao da biodiversidade pantaneira",
+      "Projeto Cota Zero - pesca sem extracao",
+      "Fauna e flora do Pantanal Sul-Matogrossense",
+    ],
+    audience: {
+      "@type": "PeopleAudience",
+      audienceType: "Pescadores esportivos, observadores de aves, ecoturistas, fotografos de natureza, casais, familias",
+    },
+    containedInPlace: {
+      "@type": "TouristDestination",
+      name: "Pantanal Sul-Matogrossense",
+      description: "Maior planicie alagavel do mundo, Patrimonio Natural da Humanidade (UNESCO). Abriga mais de 4.700 especies de plantas e animais.",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -19.83,
+        longitude: -56.68,
+      },
+    },
+    paymentAccepted: "Cash, Credit Card, Debit Card, Pix",
+    currenciesAccepted: "BRL",
   };
 }
 
@@ -128,6 +164,97 @@ export function buildBlogPosting(article: {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${origin}${article.url}`,
+    },
+  };
+}
+
+export function buildTaxon(species: {
+  commonName: string;
+  scientificName: string;
+  description?: string;
+  conservationStatus?: string;
+  size?: string;
+  habitat?: string;
+  image?: string;
+  slug: string;
+}) {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  return {
+    "@type": "Taxon",
+    name: species.scientificName,
+    alternateName: species.commonName,
+    taxonRank: "species",
+    description: species.description,
+    url: `${origin}/observacao-de-aves/catalogo/${species.slug}`,
+    image: species.image
+      ? species.image.startsWith("http")
+        ? species.image
+        : `${origin}${species.image}`
+      : undefined,
+    ...(species.conservationStatus && {
+      hasDefinedTerm: {
+        "@type": "DefinedTerm",
+        name: `IUCN ${species.conservationStatus}`,
+        inDefinedTermSet: "IUCN Red List",
+      },
+    }),
+    isPartOf: {
+      "@type": "TouristDestination",
+      name: "Pantanal Sul-Matogrossense",
+    },
+  };
+}
+
+export function buildItemList(items: { name: string; url: string; position: number }[]) {
+  return {
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item) => ({
+      "@type": "ListItem",
+      position: item.position,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
+export function buildTourProduct(tour: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  provider?: string;
+}) {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  return {
+    "@type": "TouristTrip",
+    name: tour.name,
+    description: tour.description,
+    url: `${origin}${tour.url}`,
+    image: tour.image
+      ? tour.image.startsWith("http")
+        ? tour.image
+        : `${origin}${tour.image}`
+      : undefined,
+    touristType: [
+      "Eco-tourists",
+      "Nature lovers",
+      "Wildlife photographers",
+    ],
+    provider: {
+      "@type": "LodgingBusiness",
+      name: tour.provider || SITE_NAME,
+      url: origin,
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "BRL",
+      url: `${origin}${tour.url}`,
+      seller: {
+        "@type": "LodgingBusiness",
+        name: SITE_NAME,
+      },
     },
   };
 }

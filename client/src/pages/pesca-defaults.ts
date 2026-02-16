@@ -106,4 +106,41 @@ export const pescaDefaults: PescaPageContent = {
     buttonText: "Ver guia de espécies completo",
     buttonHref: "#",
   },
+  faq: {
+    label: "PERGUNTAS FREQUENTES",
+    heading: "Duvidas sobre Pesca Esportiva",
+    description: "Respondemos as principais perguntas sobre a operacao de pesca no Pantanal da Itaicy.",
+    items: [
+      {
+        id: "pesca-1",
+        number: "01",
+        question: "Qual e a melhor epoca para pescar no Pantanal?",
+        answer: "A temporada de pesca vai de marco a outubro. O periodo de seca (maio a setembro) e o mais indicado, pois os rios estao mais baixos e os peixes se concentram em pocoes, facilitando a pesca esportiva. O pico de atividade do Dourado ocorre entre maio e julho.",
+      },
+      {
+        id: "pesca-2",
+        number: "02",
+        question: "O que significa pesca cota zero (pesque e solte)?",
+        answer: "Cota zero significa que todo peixe capturado e devolvido vivo ao rio. Nao ha retirada de peixes. Essa pratica garante a conservacao das especies, a manutencao do equilibrio ecologico e a perpetuacao da pesca esportiva para futuras geracoes. Na Itaicy, o Projeto Cota Zero e rigorosamente cumprido.",
+      },
+      {
+        id: "pesca-3",
+        number: "03",
+        question: "Quais especies posso pescar na Itaicy?",
+        answer: "As principais especies sao: Dourado (o 'Rei do Rio'), Pintado, Pacu, Piraputanga, Cachara, Barbado e Tucunare. Nossos rios abrigam mais de 260 especies de peixes, com destaque para os grandes predadores esportivos.",
+      },
+      {
+        id: "pesca-4",
+        number: "04",
+        question: "Preciso levar meu proprio equipamento de pesca?",
+        answer: "Nao e obrigatorio. Oferecemos equipamento completo de alta performance (varas, carretilhas, iscas artificiais). Porem, se voce possui equipamento proprio e prefere usa-lo, e bem-vindo. Nossos guias podem orientar sobre o melhor setup para cada especie e condicao do rio.",
+      },
+      {
+        id: "pesca-5",
+        number: "05",
+        question: "Os guias de pesca sao locais?",
+        answer: "Sim. Nossos piloteiros e guias nasceram na regiao e possuem conhecimento profundo dos rios, dos habitos dos peixes e das melhores tecnicas. Eles dominam a leitura do rio e sabem exatamente onde os grandes exemplares se concentram em cada epoca do ano.",
+      },
+    ],
+  },
 };

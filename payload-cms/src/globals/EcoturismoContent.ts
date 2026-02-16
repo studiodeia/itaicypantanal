@@ -5,6 +5,7 @@ import { manifestoFields } from "../fields/manifestoFields";
 import { highlightsFields } from "../fields/highlightsFields";
 import { sobreNosFields } from "../fields/sobreNosFields";
 import { servicesFields } from "../fields/servicesFields";
+import { faqFields } from "../fields/faqFields";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -49,6 +50,13 @@ export const EcoturismoContent: GlobalConfig = {
           label: "Servicos",
           fields: [
             { name: "services", type: "group", label: "Servicos", fields: servicesFields() },
+          ],
+        },
+        {
+          label: "FAQ",
+          description: "Perguntas frequentes sobre ecoturismo.",
+          fields: [
+            { name: "faq", type: "group", label: "Perguntas Frequentes", fields: faqFields() },
           ],
         },
       ],

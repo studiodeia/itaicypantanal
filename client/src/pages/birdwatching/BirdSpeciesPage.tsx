@@ -1,5 +1,6 @@
 import { useParams } from "wouter";
 import { PageMeta } from "@/components/PageMeta";
+import { JsonLd, buildTaxon } from "@/components/JsonLd";
 import {
   getBirdBySlugFromCms,
   getRelatedBirdsFromCms,
@@ -34,6 +35,17 @@ export const BirdSpeciesPage = (): JSX.Element => {
 
   const relatedBirds = getRelatedBirdsFromCms(birdData, bird.slug);
 
+  const taxonSchema = buildTaxon({
+    commonName: bird.commonName,
+    scientificName: bird.scientificName,
+    description: bird.overview || bird.description,
+    conservationStatus: bird.conservationStatus,
+    size: bird.size,
+    habitat: bird.habitat,
+    image: bird.heroImage || bird.src,
+    slug: bird.slug,
+  });
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -48,6 +60,7 @@ export const BirdSpeciesPage = (): JSX.Element => {
           { name: bird.commonName, path: `/observacao-de-aves/catalogo/${bird.slug}` },
         ]}
       />
+      <JsonLd data={taxonSchema} />
       <SpeciesHeroSection bird={bird} />
       <SpeciesContentSection bird={bird} />
       <SimilarSpeciesSection birds={relatedBirds} />

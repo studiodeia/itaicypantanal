@@ -83,4 +83,41 @@ export const acomodacoesDefaults: AcomodacoesPageContent = {
     ctaText: "Conheça nossa gastronomia",
     ctaHref: "/culinaria",
   },
+  faq: {
+    label: "PERGUNTAS FREQUENTES",
+    heading: "Duvidas sobre Acomodacoes e Hospedagem",
+    description: "Tudo o que voce precisa saber sobre a estrutura, quartos e comodidades da Itaicy.",
+    items: [
+      {
+        id: "acomod-1",
+        number: "01",
+        question: "Quais tipos de suite estao disponiveis?",
+        answer: "Oferecemos tres categorias: Suite Explorer (individual, ideal para viajantes solo), Suite Adventure (casal, com cama queen) e Suite Family (familia, com cama casal + solteiro). Todas possuem ar-condicionado, banheiro privativo, varanda com vista para o Pantanal e amenities completos.",
+      },
+      {
+        id: "acomod-2",
+        number: "02",
+        question: "O que esta incluso na diaria?",
+        answer: "A diaria inclui hospedagem em suite privativa, pensao completa (cafe da manha, almoco, lanche e jantar), agua e sucos naturais, passeio de barco e cavalgada guiada, Wi-Fi nas areas sociais e acesso a todas as areas de convivencia da pousada. Atividades adicionais e bebidas premium podem ter custo extra.",
+      },
+      {
+        id: "acomod-3",
+        number: "03",
+        question: "Qual a capacidade total da pousada?",
+        answer: "A Itaicy possui 10 suites, com capacidade para ate 20 hospedes simultaneamente. Essa estrutura enxuta e intencional: garante exclusividade, atendimento personalizado e o minimo impacto ambiental no entorno do lodge.",
+      },
+      {
+        id: "acomod-4",
+        number: "04",
+        question: "A pousada tem Wi-Fi e sinal de celular?",
+        answer: "Sim. Oferecemos Wi-Fi via satelite nas areas sociais (restaurante, deck, recepcao). O sinal e suficiente para mensagens e e-mails, mas pode nao suportar streaming pesado. Sinal de celular (Vivo e Claro) funciona em areas abertas. Recomendamos usar a estadia para desconectar e curtir a natureza.",
+      },
+      {
+        id: "acomod-5",
+        number: "05",
+        question: "Como chego ate a pousada?",
+        answer: "A Itaicy fica em Miranda, MS, a aproximadamente 240 km de Campo Grande (3h de carro) e 80 km de Bonito (1h30). O aeroporto mais proximo e o de Campo Grande (CGR). Oferecemos transfer sob consulta. A estrada e asfaltada ate a entrada da propriedade.",
+      },
+    ],
+  },
 };

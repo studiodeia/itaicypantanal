@@ -1,4 +1,5 @@
 import { PageMeta } from "@/components/PageMeta";
+import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
 import { ecoturismoDefaults } from "./ecoturismo-defaults";
 import { EcoHeroSection } from "./ecoturismo/sections/EcoHeroSection";
@@ -14,6 +15,18 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 export const Ecoturismo = (): JSX.Element => {
   const cms = usePageCms("/ecoturismo", ecoturismoDefaults);
 
+  const faqSchema = cms.faq?.items.length
+    ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
+    : null;
+
+  const tourSchema = buildTourProduct({
+    name: "Ecoturismo no Pantanal — Itaicy Eco Lodge",
+    description:
+      "Experiencias de ecoturismo sustentavel no Pantanal. Trilhas ecologicas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo.",
+    url: "/ecoturismo",
+    image: cms.hero?.backgroundImage,
+  });
+
   return (
     <div className="flex flex-col w-full">
       <PageMeta
@@ -25,6 +38,8 @@ export const Ecoturismo = (): JSX.Element => {
           { name: "Ecoturismo", path: "/ecoturismo" },
         ]}
       />
+      <JsonLd data={tourSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
       <EcoHeroSection content={cms.hero} />
       <EcoManifestoSection content={cms.manifesto} />
       <EcoSobreNosSection content={cms.sobreNos} />
@@ -32,7 +47,7 @@ export const Ecoturismo = (): JSX.Element => {
       <EcoServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
       <ImmersionCallToActionSection />
-      <FrequentlyAskedQuestionsSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <SiteFooterSection />
     </div>
   );

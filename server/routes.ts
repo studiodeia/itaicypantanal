@@ -1,8 +1,10 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { getCmsContent } from "./cms-content";
-import { buildRobotsTxt, buildSitemapXml } from "./sitemap";
+import { getCmsAgentConfig, getCmsContent } from "./cms-content";
+import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt } from "./sitemap";
+import { handleChatRequest } from "./agent/chat-route";
+import { handleFaqReindexRequest } from "./agent/reindex-route";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // put application routes here
@@ -46,6 +48,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       res.status(500).json({
         message: error instanceof Error ? error.message : "Failed to load shared content",
+      });
+    }
+  });
+
+  app.get("/api/cms/agent-config", async (_req, res) => {
+    try {
+      const { config, source } = await getCmsAgentConfig();
+      res.json({ source, config });
+    } catch (error) {
+      res.status(500).json({
+        message: error instanceof Error ? error.message : "Failed to load agent config",
       });
     }
   });
@@ -129,6 +142,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/robots.txt", (req, res) => {
     const robotsTxt = buildRobotsTxt(req);
     res.type("text/plain").send(robotsTxt);
+  });
+
+  app.get("/llms.txt", (req, res) => {
+    const llmsTxt = buildLlmsTxt(req);
+    res.type("text/plain").send(llmsTxt);
+  });
+
+  app.post("/api/chat", async (req, res) => {
+    await handleChatRequest(req, res);
+  });
+
+  app.post("/api/agent/reindex/faqs", async (req, res) => {
+    await handleFaqReindexRequest(req, res);
   });
 
   const httpServer = createServer(app);

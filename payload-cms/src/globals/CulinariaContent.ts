@@ -5,6 +5,7 @@ import { manifestoFields } from "../fields/manifestoFields";
 import { highlightsFields } from "../fields/highlightsFields";
 import { sobreNosFields } from "../fields/sobreNosFields";
 import { servicesFields } from "../fields/servicesFields";
+import { faqFields } from "../fields/faqFields";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -140,6 +141,13 @@ export const CulinariaContent: GlobalConfig = {
                 { name: "image", type: "text", label: "Imagem (path)" },
               ],
             },
+          ],
+        },
+        {
+          label: "FAQ",
+          description: "Perguntas frequentes sobre culinaria pantaneira.",
+          fields: [
+            { name: "faq", type: "group", label: "Perguntas Frequentes", fields: faqFields() },
           ],
         },
       ],

@@ -102,4 +102,41 @@ export const culinariaDefaults: CulinariaPageContent = {
     buttonHref: "/acomodacoes",
     image: "/images/culinaria-crosssell-2",
   },
+  faq: {
+    label: "PERGUNTAS FREQUENTES",
+    heading: "Duvidas sobre a Culinaria Pantaneira",
+    description: "Tudo o que voce precisa saber sobre a gastronomia e as refeicoes na Itaicy.",
+    items: [
+      {
+        id: "culinaria-1",
+        number: "01",
+        question: "As refeicoes estao inclusas na hospedagem?",
+        answer: "Sim. Todas as refeicoes estao inclusas no regime de Pensao Completa: cafe da manha, almoco e jantar. Tambem oferecemos lanches e bebidas durante as atividades do dia. Dietas especiais (vegetariana, sem gluten, sem lactose) podem ser atendidas mediante aviso previo.",
+      },
+      {
+        id: "culinaria-2",
+        number: "02",
+        question: "Quais pratos tipicos do Pantanal sao servidos?",
+        answer: "Nosso cardapio inclui pratos icônicos como pacu assado na brasa, caldo de piranha, arroz carreteiro, farofa de banana, mojica de pintado, chipa e doces com frutas do cerrado. Cada prato e preparado com ingredientes frescos, muitos deles colhidos no dia de produtores locais da regiao de Miranda.",
+      },
+      {
+        id: "culinaria-3",
+        number: "03",
+        question: "Voces servem bebidas alcoolicas?",
+        answer: "Sim. Oferecemos uma selecao de vinhos, cervejas artesanais e drinks autorais inspirados em frutas e ingredientes do Pantanal. O consumo de bebidas alcoolicas premium pode ter custo adicional, dependendo do pacote contratado.",
+      },
+      {
+        id: "culinaria-4",
+        number: "04",
+        question: "De onde vem os ingredientes usados na cozinha?",
+        answer: "Priorizamos ingredientes locais e sazonais. Peixes vem do rio (apenas de fornecedores autorizados, nao da pesca esportiva), carnes de fazendas da regiao, e temperos e ervas da nossa propria horta. Essa rastreabilidade garante frescor, qualidade e apoio a economia da comunidade local.",
+      },
+      {
+        id: "culinaria-5",
+        number: "05",
+        question: "A cozinha atende restricoes alimentares?",
+        answer: "Sim. Nossa equipe de cozinha pode adaptar o cardapio para atender restricoes alimentares como vegetarianismo, veganismo, intolerancia a gluten, lactose ou alergias especificas. Basta nos informar no momento da reserva para que possamos preparar opcoes adequadas.",
+      },
+    ],
+  },
 };

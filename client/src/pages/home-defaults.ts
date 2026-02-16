@@ -102,4 +102,41 @@ export const homeDefaults: HomePageContent = {
       "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
     buttonText: "Ver todos",
   },
+  faq: {
+    label: "PERGUNTAS FREQUENTES",
+    heading: "Duvidas sobre o Pantanal e a Itaicy",
+    description: "Respondemos as principais perguntas sobre a regiao, a pousada e as experiencias que oferecemos.",
+    items: [
+      {
+        id: "home-1",
+        number: "01",
+        question: "A pousada e destinada apenas para pesca?",
+        answer: "Nao. A Itaicy oferece tres experiencias principais: pesca esportiva cota zero (catch-and-release), observacao de aves (birdwatching com 166 especies catalogadas) e ecoturismo (trilhas, safaris fotograficos, passeios de barco). Tambem e ideal para casais, familias e fotografos de natureza que buscam imersao no Pantanal.",
+      },
+      {
+        id: "home-2",
+        number: "02",
+        question: "Onde fica a Itaicy Pantanal Eco Lodge?",
+        answer: "Estamos localizados em Miranda, Mato Grosso do Sul, no coracao do Pantanal Sul-Matogrossense (Patrimonio Natural da Humanidade - UNESCO). Ficamos a 240 km de Campo Grande (3h de carro) e 80 km de Bonito (1h30). O acesso e por estrada asfaltada ate a entrada da propriedade.",
+      },
+      {
+        id: "home-3",
+        number: "03",
+        question: "Qual a melhor epoca para visitar o Pantanal?",
+        answer: "Cada estacao oferece experiencias unicas. A seca (maio a setembro) e ideal para pesca esportiva e avistamento de fauna concentrada. A cheia (outubro a marco) revela paisagens dramaticas e aves migratorias. Para birdwatching, a seca e imbativel; para paisagens e fotografia, a transicao entre estacoes.",
+      },
+      {
+        id: "home-4",
+        number: "04",
+        question: "As experiencias sao guiadas?",
+        answer: "Sim. Todas as atividades sao acompanhadas por guias nativos especializados que nasceram na regiao e conhecem profundamente o bioma, os rios, os habitos da fauna e as melhores tecnicas para cada experiencia. Nossos guias sao certificados e seguem protocolos ambientais rigorosos.",
+      },
+      {
+        id: "home-5",
+        number: "05",
+        question: "Posso personalizar meu roteiro?",
+        answer: "Sim. Nossa equipe pode ajustar o pacote de acordo com seus interesses (pesca, aves, fotografia, contemplacao), a epoca do ano e a duracao da estadia. Oferecemos roteiros de 3 a 7 noites, com combinacoes de atividades adaptadas ao seu perfil e objetivos de viagem.",
+      },
+    ],
+  },
 };

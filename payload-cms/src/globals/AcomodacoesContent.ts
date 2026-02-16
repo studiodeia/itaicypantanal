@@ -3,6 +3,7 @@ import { isAuthenticated } from "../access/authenticated";
 import { heroFields } from "../fields/heroFields";
 import { manifestoFields } from "../fields/manifestoFields";
 import { highlightsFields } from "../fields/highlightsFields";
+import { faqFields } from "../fields/faqFields";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -156,6 +157,13 @@ export const AcomodacoesContent: GlobalConfig = {
                 },
               ],
             },
+          ],
+        },
+        {
+          label: "FAQ",
+          description: "Perguntas frequentes sobre acomodacoes.",
+          fields: [
+            { name: "faq", type: "group", label: "Perguntas Frequentes", fields: faqFields() },
           ],
         },
       ],

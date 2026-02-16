@@ -98,6 +98,7 @@ export interface Config {
   };
   fallbackLocale: null;
   globals: {
+    'agent-config': AgentConfig;
     'site-settings': SiteSetting;
     'home-content': HomeContent;
     'acomodacoes-content': AcomodacoesContent;
@@ -111,6 +112,7 @@ export interface Config {
     'not-found-content': NotFoundContent;
   };
   globalsSelect: {
+    'agent-config': AgentConfigSelect<false> | AgentConfigSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     'home-content': HomeContentSelect<false> | HomeContentSelect<true>;
     'acomodacoes-content': AcomodacoesContentSelect<false> | AcomodacoesContentSelect<true>;
@@ -184,18 +186,6 @@ export interface Page {
    * Deixe vazio para usar automaticamente: "http://127.0.0.1:5000/{slug}". Preencha apenas se a URL canonica for diferente.
    */
   canonicalUrl?: string | null;
-  /**
-   * Cole aqui o JSON das secoes da pagina. Mantemos esta estrutura para paridade total com o frontend.
-   */
-  sections?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -576,7 +566,6 @@ export interface PagesSelect<T extends boolean = true> {
   ogImage?: T;
   noIndex?: T;
   canonicalUrl?: T;
-  sections?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -792,6 +781,71 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
+ * Configuracoes operacionais editaveis do agente: disclaimers, handoff, fallback e saudacao.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "agent-config".
+ */
+export interface AgentConfig {
+  id: number;
+  enabled?: boolean | null;
+  assistantName: string;
+  bookingEngineUrl: string;
+  /**
+   * Abaixo deste valor o agente deve evitar resposta definitiva e priorizar handoff humano.
+   */
+  faqConfidenceThreshold: number;
+  priceDisclaimer: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  availabilityDisclaimer: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  policyDisclaimer: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  handoff: {
+    email: string;
+    emergencyPhone: string;
+    whatsapp: string;
+    serviceHours: string;
+    slaHours: number;
+  };
+  genericErrorFallback: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  apiUnavailableFallback: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  leadConsentPrompt: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  leadSuccessMessage: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  welcomeGreeting: {
+    pt: string;
+    en: string;
+    es: string;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * Configuracoes globais compartilhadas em todo o site: contato, rodape, FAQ, depoimentos e secoes da home.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -962,6 +1016,19 @@ export interface HomeContent {
     description?: string | null;
     buttonText?: string | null;
   };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
+        }[]
+      | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1045,6 +1112,19 @@ export interface AcomodacoesContent {
       | null;
     ctaText?: string | null;
     ctaHref?: string | null;
+  };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
+        }[]
+      | null;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -1149,6 +1229,19 @@ export interface CulinariaContent {
     buttonHref?: string | null;
     image?: string | null;
   };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
+        }[]
+      | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1234,6 +1327,19 @@ export interface PescaContent {
       | null;
     buttonText?: string | null;
     buttonHref?: string | null;
+  };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
+        }[]
+      | null;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -1321,6 +1427,19 @@ export interface EcoturismoContent {
     buttonText?: string | null;
     buttonHref?: string | null;
   };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
+        }[]
+      | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1388,6 +1507,19 @@ export interface BirdwatchingContent {
           title?: string | null;
           description?: string | null;
           id?: string | null;
+        }[]
+      | null;
+  };
+  faq: {
+    label?: string | null;
+    heading: string;
+    description?: string | null;
+    items?:
+      | {
+          id: string;
+          number: string;
+          question: string;
+          answer: string;
         }[]
       | null;
   };
@@ -1585,6 +1717,84 @@ export interface NotFoundContent {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "agent-config_select".
+ */
+export interface AgentConfigSelect<T extends boolean = true> {
+  enabled?: T;
+  assistantName?: T;
+  bookingEngineUrl?: T;
+  faqConfidenceThreshold?: T;
+  priceDisclaimer?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  availabilityDisclaimer?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  policyDisclaimer?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  handoff?:
+    | T
+    | {
+        email?: T;
+        emergencyPhone?: T;
+        whatsapp?: T;
+        serviceHours?: T;
+        slaHours?: T;
+      };
+  genericErrorFallback?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  apiUnavailableFallback?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  leadConsentPrompt?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  leadSuccessMessage?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  welcomeGreeting?:
+    | T
+    | {
+        pt?: T;
+        en?: T;
+        es?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings_select".
  */
 export interface SiteSettingsSelect<T extends boolean = true> {
@@ -1737,6 +1947,21 @@ export interface HomeContentSelect<T extends boolean = true> {
         description?: T;
         buttonText?: T;
       };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
+            };
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1817,6 +2042,21 @@ export interface AcomodacoesContentSelect<T extends boolean = true> {
             };
         ctaText?: T;
         ctaHref?: T;
+      };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
+            };
       };
   updatedAt?: T;
   createdAt?: T;
@@ -1921,6 +2161,21 @@ export interface CulinariaContentSelect<T extends boolean = true> {
         buttonHref?: T;
         image?: T;
       };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
+            };
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2002,6 +2257,21 @@ export interface PescaContentSelect<T extends boolean = true> {
             };
         buttonText?: T;
         buttonHref?: T;
+      };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
+            };
       };
   updatedAt?: T;
   createdAt?: T;
@@ -2085,6 +2355,21 @@ export interface EcoturismoContentSelect<T extends boolean = true> {
         buttonText?: T;
         buttonHref?: T;
       };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
+            };
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2147,6 +2432,21 @@ export interface BirdwatchingContentSelect<T extends boolean = true> {
               title?: T;
               description?: T;
               id?: T;
+            };
+      };
+  faq?:
+    | T
+    | {
+        label?: T;
+        heading?: T;
+        description?: T;
+        items?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              question?: T;
+              answer?: T;
             };
       };
   updatedAt?: T;
