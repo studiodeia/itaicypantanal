@@ -1,0 +1,61 @@
+{
+  "enabled": true,
+  "assistantName": "Assistente Itaicy",
+  "bookingEngineUrl": "https://hotels.cloudbeds.com/reservation/ITAICY",
+  "faqConfidenceThreshold": 0.75,
+  "disclaimers": {
+    "price": {
+      "pt": "Valores a partir de, sujeitos a variação conforme datas, ocupação e disponibilidade. Confirmação final no motor de reservas.",
+      "en": "Rates are starting prices and may vary by dates, occupancy, and availability. Final confirmation is provided in the official booking engine.",
+      "es": "Las tarifas son referenciales y pueden variar según fechas, ocupación y disponibilidad. La confirmación final se realiza en el motor oficial de reservas."
+    },
+    "availability": {
+      "pt": "Disponibilidade sujeita a confirmação no momento da reserva.",
+      "en": "Availability is subject to confirmation at the time of booking.",
+      "es": "La disponibilidad está sujeta a confirmación al momento de la reserva."
+    },
+    "policyReference": {
+      "pt": "Confira os termos completos no momento da reserva.",
+      "en": "Please review full terms at the time of booking.",
+      "es": "Consulte los términos completos al momento de la reserva."
+    }
+  },
+  "handoff": {
+    "email": "itaicy-digital@studiodeia.com.br",
+    "emergencyPhone": "+55 (67) 99999-9999",
+    "whatsapp": "+55 (67) 99999-9999",
+    "serviceHours": "Segunda a sexta, 08:00-18:00 (BRT)",
+    "slaHours": 24
+  },
+  "fallback": {
+    "genericError": {
+      "pt": "Estou com instabilidade agora. Posso te conectar com nossa equipe para continuar o atendimento.",
+      "en": "I am experiencing instability right now. I can connect you with our team to continue the assistance.",
+      "es": "Estoy con inestabilidad en este momento. Puedo conectarte con nuestro equipo para continuar la atención."
+    },
+    "apiUnavailable": {
+      "pt": "No momento não consigo consultar este dado em tempo real. Posso encaminhar seu atendimento para nossa equipe.",
+      "en": "I cannot retrieve this information in real time at the moment. I can forward your request to our team.",
+      "es": "En este momento no puedo consultar este dato en tiempo real. Puedo derivar tu atención a nuestro equipo."
+    }
+  },
+  "lead": {
+    "consentPrompt": {
+      "pt": "Você concorda que usemos seu contato para enviar informações sobre a Itaicy?",
+      "en": "Do you agree that we may use your contact details to send information about Itaicy?",
+      "es": "¿Estás de acuerdo en que usemos tu contacto para enviar información sobre Itaicy?"
+    },
+    "successMessage": {
+      "pt": "Perfeito! Nossa equipe entrará em contato em breve.",
+      "en": "Great! Our team will contact you shortly.",
+      "es": "¡Perfecto! Nuestro equipo te contactará en breve."
+    }
+  },
+  "welcome": {
+    "greeting": {
+      "pt": "Olá! Sou o assistente virtual do Itaicy Pantanal Eco Lodge. Posso ajudar com hospedagem, experiências, disponibilidade e reservas.",
+      "en": "Hello! I am Itaicy Pantanal Eco Lodge virtual assistant. I can help with accommodation, experiences, availability, and bookings.",
+      "es": "¡Hola! Soy el asistente virtual de Itaicy Pantanal Eco Lodge. Puedo ayudarte con alojamiento, experiencias, disponibilidad y reservas."
+    }
+  }
+}

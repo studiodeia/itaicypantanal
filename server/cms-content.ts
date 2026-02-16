@@ -1,5 +1,7 @@
-import { loadCmsSeed } from "./cms-seed";
+import { loadAgentConfigSeed, loadCmsSeed } from "./cms-seed";
 import { defaultSharedCmsSections } from "../shared/cms-shared-content";
+import type { AgentConfig } from "../shared/agent-config";
+import { mapPayloadAgentConfigToAgentConfig } from "../shared/agent-config-payload";
 
 type AnyDoc = Record<string, unknown>;
 
@@ -10,8 +12,14 @@ type CachedEntry = {
   source: "seed" | "payload";
   content: CmsContent;
 };
+type AgentConfigCachedEntry = {
+  expiresAt: number;
+  source: "seed" | "payload";
+  config: AgentConfig;
+};
 
 let cache: CachedEntry | null = null;
+let agentConfigCache: AgentConfigCachedEntry | null = null;
 
 const CACHE_TTL_MS = 30_000;
 const REMOTE_TIMEOUT_MS = 4_000;
@@ -583,6 +591,54 @@ async function loadFromPayloadRest(baseUrl: string): Promise<CmsContent> {
   );
 }
 
+async function loadAgentConfigFromPayloadRest(baseUrl: string): Promise<AgentConfig> {
+  const normalizedBase = baseUrl.replace(/\/+$/, "");
+  const result = await fetchJsonWithTimeout(
+    `${normalizedBase}/api/globals/agent-config?depth=0`,
+  );
+  const raw = toRecord(result);
+  if (!raw) {
+    throw new Error("Invalid agent-config payload response");
+  }
+
+  const data = stripPayloadMeta(raw);
+  return mapPayloadAgentConfigToAgentConfig(data);
+}
+
+export async function getCmsAgentConfig(): Promise<{
+  source: "seed" | "payload";
+  config: AgentConfig;
+}> {
+  const now = Date.now();
+  if (agentConfigCache && agentConfigCache.expiresAt > now) {
+    return { source: agentConfigCache.source, config: agentConfigCache.config };
+  }
+
+  const payloadBaseUrl = process.env.PAYLOAD_CMS_BASE_URL;
+  if (payloadBaseUrl) {
+    try {
+      const payloadConfig = await loadAgentConfigFromPayloadRest(payloadBaseUrl);
+      agentConfigCache = {
+        expiresAt: now + CACHE_TTL_MS,
+        source: "payload",
+        config: payloadConfig,
+      };
+      return { source: "payload", config: payloadConfig };
+    } catch {
+      // Silent fallback to seed keeps API available if CMS is down.
+    }
+  }
+
+  const seedConfig = await loadAgentConfigSeed();
+  agentConfigCache = {
+    expiresAt: now + CACHE_TTL_MS,
+    source: "seed",
+    config: seedConfig,
+  };
+
+  return { source: "seed", config: seedConfig };
+}
+
 export async function getCmsContent(): Promise<{
   source: "seed" | "payload";
   content: CmsContent;
@@ -624,4 +680,5 @@ export async function getCmsContent(): Promise<{
 
 export function clearCmsContentCache() {
   cache = null;
+  agentConfigCache = null;
 }

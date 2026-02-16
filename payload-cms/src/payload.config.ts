@@ -14,6 +14,7 @@ import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import { Users } from "./collections/Users";
 import { AcomodacoesContent } from "./globals/AcomodacoesContent";
+import { AgentConfig } from "./globals/AgentConfig";
 import { BirdwatchingContent } from "./globals/BirdwatchingContent";
 import { ContatoContent } from "./globals/ContatoContent";
 import { CulinariaContent } from "./globals/CulinariaContent";
@@ -60,6 +61,7 @@ export default buildConfig({
     Users,
   ],
   globals: [
+    AgentConfig,
     SiteSettings,
     HomeContent,
     AcomodacoesContent,

@@ -1,5 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import {
+  defaultAgentConfig,
+  normalizeAgentConfig,
+  type AgentConfig,
+} from "../shared/agent-config";
 
 type CmsSeed = {
   generatedAt?: string;
@@ -28,6 +33,7 @@ type CmsSeed = {
 };
 
 let cachedSeed: CmsSeed | null = null;
+let cachedAgentConfigSeed: AgentConfig | null = null;
 
 export async function loadCmsSeed(): Promise<CmsSeed> {
   if (cachedSeed) {
@@ -53,6 +59,29 @@ export async function loadCmsSeed(): Promise<CmsSeed> {
   return cachedSeed;
 }
 
+export async function loadAgentConfigSeed(): Promise<AgentConfig> {
+  if (cachedAgentConfigSeed) {
+    return cachedAgentConfigSeed;
+  }
+
+  const seedPath = resolve(
+    process.cwd(),
+    "docs",
+    "payload-seed",
+    "agent-config.json",
+  );
+
+  try {
+    const raw = await readFile(seedPath, "utf8");
+    cachedAgentConfigSeed = normalizeAgentConfig(JSON.parse(raw));
+  } catch {
+    cachedAgentConfigSeed = defaultAgentConfig;
+  }
+
+  return cachedAgentConfigSeed;
+}
+
 export function clearCmsSeedCache() {
   cachedSeed = null;
+  cachedAgentConfigSeed = null;
 }
