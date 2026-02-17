@@ -76,7 +76,7 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
                       {Array.from({ length: 5 }).map((_, starIndex) => (
                         <Star
                           key={starIndex}
-                          className="w-4 h-4 md:w-5 md:h-5 text-[#d6a35d]"
+                          className="w-4 h-4 md:w-5 md:h-5 text-[#e3f7ec]"
                           aria-hidden="true"
                         />
                       ))}

@@ -82,7 +82,7 @@ export const PantanalStatsSection = ({ content }: Props): JSX.Element => {
                     {formatValue(counts[index], index)}
                   </div>
                   <Star
-                    className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#d6a35d]"
+                    className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#e3f7ec]"
                     aria-label="Rating icon"
                   />
                 </div>
