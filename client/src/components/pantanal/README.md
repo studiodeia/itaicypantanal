@@ -211,23 +211,34 @@ import { SectionHeader } from "@/components/pantanal";
 
 ### GoldButton
 
-Botão CTA dourado principal.
+Botão CTA dourado principal. Estilo **unico e consistente** em todo o site,
+identico ao "Reservar" do header.
 
 ```tsx
 import { GoldButton } from "@/components/pantanal";
 
+// Como componente <button> (usa shadcn Button internamente)
 <GoldButton>Reservar</GoldButton>
 <GoldButton onClick={() => {}}>Quero conhecer</GoldButton>
+
+// Para elementos <a> que precisam do mesmo estilo visual:
+import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
+<a href="/booking" className={goldButtonClass}>Reservar</a>
 ```
 
 **Props**: Herda todas as props do shadcn/ui `Button`
 
-**Styles** (via utility `.btn-gold`):
-- Background: #ac8042
-- Color: #f2fcf7
-- Height: 40px
-- Padding: 32px horizontal
-- Hover: #8f6a35
+**Estilo padrao (unica variante)**:
+- Background: `#ac8042` / Hover: `#8f6a35`
+- Color: `#f2fcf7`
+- Tipografia: `functional-sm` (Lato 16px/24px, weight 400)
+- Border-radius: `4px` (rounded)
+- Padding: `8px 16px`
+- Hover: `translateY(-2px)`, Active: `translateY(0) opacity 0.9`
+- Focus: `ring-2 rgba(172,128,66,0.4)`
+
+**IMPORTANTE**: Nao adicionar variantes de tamanho. Todos os CTAs gold
+devem ter exatamente este formato para manter consistencia visual.
 
 ---
 
@@ -339,7 +350,7 @@ Todos os componentes usam as utilities do design system:
 - `.gap-section` - Gap responsivo (48px → 64px → 100px)
 
 ### Components
-- `.btn-gold` - Botão CTA dourado
+- `.btn-gold` - Botão CTA dourado (legacy, usar `<GoldButton>` ou `goldButtonClass`)
 - `.card-expedition` - Card de expedição com heights responsivos
 - `.card-testimonial` - Card de testimonial com sizes fixos
 

@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
+import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
 import type { CmsHero, ContatoPageContent } from "@shared/cms-page-content";
 
@@ -213,7 +214,7 @@ export const ContactHeroSection = ({ content, formTitle, steps }: Props): JSX.El
                   </button>
                   <button
                     type="submit"
-                    className="flex items-center justify-center h-14 flex-1 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+                    className={`${goldButtonClass} flex-1`}
                   >
                     {steps.buttonSubmit}
                   </button>

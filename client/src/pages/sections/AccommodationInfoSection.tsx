@@ -43,7 +43,6 @@ export const AccommodationInfoSection = ({ content }: Props): JSX.Element => {
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 lg:gap-8">
             <GoldButton
-              buttonSize="lg"
               data-testid="button-reservar-accommodations"
               onClick={() =>
                 goToCloudbedsBooking({

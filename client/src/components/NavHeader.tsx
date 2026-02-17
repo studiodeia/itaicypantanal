@@ -1,5 +1,6 @@
 import { ChevronDownIcon, ChevronRightIcon, MenuIcon, XIcon, ArrowLeftIcon } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
+import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "wouter";
@@ -257,8 +258,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 </button>
               </LanguageSwitcher>
 
-              <Button
-                className="bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] rounded px-4 py-2 h-auto font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] tracking-[var(--functional-sm-letter-spacing)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+              <GoldButton
                 data-testid="button-reservar-hero"
                 onClick={() =>
                   goToCloudbedsBooking({
@@ -267,7 +267,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 }
               >
                 Reservar
-              </Button>
+              </GoldButton>
 
               <Button
                 variant="ghost"
@@ -359,8 +359,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 PT
                 <ChevronDownIcon className="w-5 h-5" />
               </button>
-              <Button
-                className="bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7] rounded px-4 py-2 h-auto font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] tracking-[var(--functional-sm-letter-spacing)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+              <GoldButton
                 data-testid="button-reservar-mobile-menu"
                 onClick={() =>
                   goToCloudbedsBooking({
@@ -369,7 +368,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 }
               >
                 Reservar
-              </Button>
+              </GoldButton>
               <Button
                 variant="ghost"
                 size="icon"

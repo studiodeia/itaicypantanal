@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import {
   ChevronRightIcon,
   Facebook,
@@ -9,12 +10,21 @@ import {
   Phone,
   Youtube,
 } from "@/lib/icons";
-import { Button } from "@/components/ui/button";
+import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { Input } from "@/components/ui/input";
 import { useSharedCmsSections } from "@/lib/cms/shared-content";
 import { fadeIn, stagger, viewport } from "@/lib/motion";
 
 const socialIcons = [Instagram, Facebook, Youtube];
+
+/** Render internal links with Wouter's Link, external/file links with <a> */
+function FooterLink({ href, className, children }: { href: string; className?: string; children: React.ReactNode }) {
+  const isInternal = href.startsWith("/") && !href.endsWith(".xml");
+  if (isInternal) {
+    return <Link href={href} className={className}>{children}</Link>;
+  }
+  return <a href={href} className={className}>{children}</a>;
+}
 
 function resolveFooterContactIcon(iconPath: string) {
   const normalized = iconPath.toLowerCase();
@@ -125,12 +135,11 @@ export const SiteFooterSection = (): JSX.Element => {
                     data-testid="input-email-newsletter"
                   />
 
-                  <Button
-                    className="h-auto px-3 md:px-4 py-2 bg-[#ac8042] hover:bg-[#8f6a35] rounded text-[#f2fcf7] font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] tracking-[var(--functional-sm-letter-spacing)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90"
+                  <GoldButton
                     data-testid="button-newsletter-submit"
                   >
                     {footer.newsletterButtonLabel}
-                  </Button>
+                  </GoldButton>
                 </div>
               </div>
             </div>
@@ -138,14 +147,14 @@ export const SiteFooterSection = (): JSX.Element => {
 
           <div className="flex flex-col w-full md:hidden">
             {footer.mobileNavLinks.map((link, index) => (
-              <a
+              <FooterLink
                 key={index}
                 href={link.href}
-                className="flex items-center justify-between py-4 border-b border-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                className="flex items-center justify-between py-4 border-b border-[#a8cab9] font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] no-underline"
               >
                 {link.label}
                 <ChevronRightIcon className="w-5 h-5 text-[#e3f7ec]" />
-              </a>
+              </FooterLink>
             ))}
           </div>
 
@@ -157,12 +166,12 @@ export const SiteFooterSection = (): JSX.Element => {
               <ul className="flex flex-col items-start gap-2">
                 {footer.pousadaLinks.map((link, index) => (
                   <li key={index}>
-                    <a
+                    <FooterLink
                       href={link.href}
                       className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] whitespace-nowrap [font-style:var(--functional-md-font-style)] hover:underline"
                     >
                       {link.label}
-                    </a>
+                    </FooterLink>
                   </li>
                 ))}
               </ul>
@@ -175,12 +184,12 @@ export const SiteFooterSection = (): JSX.Element => {
               <ul className="flex flex-col items-start gap-2">
                 {footer.experienciasLinks.map((link, index) => (
                   <li key={index}>
-                    <a
+                    <FooterLink
                       href={link.href}
                       className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] whitespace-nowrap [font-style:var(--functional-md-font-style)] hover:underline"
                     >
                       {link.label}
-                    </a>
+                    </FooterLink>
                   </li>
                 ))}
               </ul>
@@ -230,12 +239,12 @@ export const SiteFooterSection = (): JSX.Element => {
                       &bull;
                     </span>
                   )}
-                  <a
+                  <FooterLink
                     href={link.href}
                     className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] whitespace-nowrap [font-style:var(--body-sm-font-style)] hover:underline"
                   >
                     {link.label}
-                  </a>
+                  </FooterLink>
                 </div>
               ))}
             </nav>

@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
 import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { Button } from "@/components/ui/button";
+import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { cn } from "@/lib/utils";
@@ -139,14 +140,14 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
         </PopoverContent>
       </Popover>
 
-      <Button
-        className="h-auto px-4 py-2 bg-[#ac8042] hover:bg-[#8f6a35] rounded text-[#f2fcf7] font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] whitespace-nowrap [font-style:var(--functional-md-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+      <GoldButton
+        className="w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
         onClick={handleSearch}
         disabled={!dateRange?.from}
         data-testid="button-buscar-datas"
       >
         Buscar datas
-      </Button>
+      </GoldButton>
       </div>
     </div>
   );

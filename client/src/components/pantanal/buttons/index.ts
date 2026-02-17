@@ -1,2 +1,2 @@
-export { GoldButton } from "./GoldButton";
+export { GoldButton, goldButtonClass } from "./GoldButton";
 export { OutlineButton } from "./OutlineButton";

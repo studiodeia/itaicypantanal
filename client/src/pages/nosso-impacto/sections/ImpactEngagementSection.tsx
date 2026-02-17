@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
+import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
@@ -28,7 +29,7 @@ export const ImpactEngagementSection = ({ content }: Props): JSX.Element => {
           href={buildCloudbedsBookingUrl({
             utmContent: "impacto_section_reservar_experiencia",
           })}
-          className="inline-flex items-center justify-center h-14 px-8 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+          className={goldButtonClass}
         >
           {content.buttonText}
         </motion.a>

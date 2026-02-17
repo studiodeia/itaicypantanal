@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
-import { OptimizedImage } from "@/components/OptimizedImage";
+import { BirdImage } from "@/components/BirdImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
+import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { stagger, fadeIn, fadeUp, cardItem, viewport } from "@/lib/motion";
 import { getBirdUrl } from "../cms";
 import { allBirds as fallbackAllBirds } from "../data";
@@ -101,7 +103,7 @@ export const BirdServicesSection = ({
             href={buildCloudbedsBookingUrl({
               utmContent: "birdwatching_section_agendar_expedicao",
             })}
-            className="flex items-center justify-center h-14 px-6 bg-[#ac8042] hover:bg-[#8f6a35] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-lg whitespace-nowrap shrink-0 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+            className={`${goldButtonClass} shrink-0`}
           >
             Agendar Expedição Fotográfica
           </a>
@@ -136,9 +138,9 @@ interface BirdCardProps {
 
 const BirdCard = ({ bird, index }: BirdCardProps): JSX.Element => {
   return (
-    <a href={getBirdUrl(bird)} className="relative flex flex-col justify-end w-full md:flex-1 h-[500px] md:h-[600px] lg:h-[910px] rounded-lg overflow-hidden group">
+    <Link href={getBirdUrl(bird)} className="relative flex flex-col justify-end w-full md:flex-1 h-[500px] md:h-[600px] lg:h-[910px] rounded-lg overflow-hidden group no-underline">
       {/* Background image */}
-      <OptimizedImage
+      <BirdImage
         src={bird.src}
         alt={bird.commonName}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -207,7 +209,7 @@ const BirdCard = ({ bird, index }: BirdCardProps): JSX.Element => {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
