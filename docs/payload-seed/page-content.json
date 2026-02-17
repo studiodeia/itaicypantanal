@@ -5,7 +5,7 @@
       "heading": "Bem-vindo ao Nosso Refúgio Natural",
       "body": [
         "Localizada no coração de uma das regiões mais biodiversas do mundo, nossa pousada oferece uma experiência única de conexão com a natureza.",
-        "Com mais de 15 anos de experiência em ecoturismo, nos dedicamos a proporcionar momentos inesquecíveis enquanto preservamos e protegemos nosso ambiente natural."
+        "Desde 2005, nos dedicamos a proporcionar momentos inesqueciveis enquanto preservamos e protegemos nosso ambiente natural. A pousada esta situada no historico sitio da Usina Itaicy, fundada em 1897 por Toto Paes de Barros, responsavel pela primeira geracao de energia eletrica de Mato Grosso — patrimonio tombado (Tombamento 55/84)."
       ],
       "image": "/images/home/about-us.webp",
       "features": [
@@ -19,9 +19,9 @@
       "heading": "Expedições Exclusivas no Coração do Pantanal",
       "description": "Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição.",
       "items": [
-        { "title": "Pesca Esportiva Cota Zero", "description": "Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.", "backgroundImage": "/images/home/expedition-pesca.webp" },
-        { "title": "Birdwatching", "description": "166 espécies catalogadas em nosso santuário. Guias ornitólogos conduzem expedições imersivas ao amanhecer.", "backgroundImage": "/images/home/expedition-birdwatching.webp" },
-        { "title": "Ecoturismo", "description": "Trilhas guiadas, passeios de barco e safáris fotográficos no coração do Pantanal intocado.", "backgroundImage": "/images/home/expedition-ecoturismo.webp" }
+        { "title": "Pesca Esportiva Cota Zero", "description": "Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.", "backgroundImage": "/images/home/expedition-pesca.webp", "href": "/pesca" },
+        { "title": "Birdwatching", "description": "166 espécies catalogadas em nosso santuário. Guias ornitólogos conduzem expedições imersivas ao amanhecer.", "backgroundImage": "/images/home/expedition-birdwatching.webp", "href": "/observacao-de-aves" },
+        { "title": "Ecoturismo", "description": "Trilhas guiadas, passeios de barco e safáris fotográficos no coração do Pantanal intocado.", "backgroundImage": "/images/home/expedition-ecoturismo.webp", "href": "/ecoturismo" }
       ],
       "buttonText": "Quero conhecer"
     },
@@ -29,7 +29,7 @@
       "items": [
         { "target": 2000, "suffix": "+", "label": "HÓSPEDES SATISFEITOS" },
         { "target": 166, "suffix": "+", "label": "AVES AVISTADAS" },
-        { "target": 15, "suffix": "+", "label": "ANOS DE EXPERIÊNCIA" },
+        { "target": 20, "suffix": "+", "label": "ANOS DE EXPERIÊNCIA" },
         { "target": 4.9, "suffix": "", "label": "AVALIAÇÃO MÉDIA", "hasIcon": true }
       ]
     },
@@ -63,8 +63,8 @@
       "description": "Respondemos as principais perguntas sobre a regiao, a pousada e as experiencias que oferecemos.",
       "items": [
         {"id": "home-1", "number": "01", "question": "A pousada e destinada apenas para pesca?", "answer": "Nao. A Itaicy oferece tres experiencias principais: pesca esportiva cota zero (catch-and-release), observacao de aves (birdwatching com 166 especies catalogadas) e ecoturismo (trilhas, safaris fotograficos, passeios de barco). Tambem e ideal para casais, familias e fotografos de natureza que buscam imersao no Pantanal."},
-        {"id": "home-2", "number": "02", "question": "Onde fica a Itaicy Pantanal Eco Lodge?", "answer": "Estamos localizados em Miranda, Mato Grosso do Sul, no coracao do Pantanal Sul-Matogrossense (Patrimonio Natural da Humanidade - UNESCO). Ficamos a 240 km de Campo Grande (3h de carro) e 80 km de Bonito (1h30). O acesso e por estrada asfaltada ate a entrada da propriedade."},
-        {"id": "home-3", "number": "03", "question": "Qual a melhor epoca para visitar o Pantanal?", "answer": "Cada estacao oferece experiencias unicas. A seca (maio a setembro) e ideal para pesca esportiva e avistamento de fauna concentrada. A cheia (outubro a marco) revela paisagens dramaticas e aves migratorias. Para birdwatching, a seca e imbativel; para paisagens e fotografia, a transicao entre estacoes."},
+        {"id": "home-2", "number": "02", "question": "Onde fica a Itaicy Pantanal Eco Lodge?", "answer": "Estamos localizados em Santo Antonio do Leverger, Mato Grosso, as margens do Rio Cuiaba, na Rodovia MT 040, KM 23. Ficamos a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande. O acesso e por estrada asfaltada ate a entrada da propriedade."},
+        {"id": "home-3", "number": "03", "question": "Qual a melhor epoca para visitar o Pantanal?", "answer": "Cada estacao oferece experiencias unicas. A seca (maio a setembro) e ideal para pesca esportiva (temporada fev-set no Rio Cuiaba) e avistamento de fauna concentrada. A cheia (outubro a marco) revela paisagens dramaticas e aves migratorias. Para birdwatching, a seca e imbativel; para paisagens e fotografia, a transicao entre estacoes."},
         {"id": "home-4", "number": "04", "question": "As experiencias sao guiadas?", "answer": "Sim. Todas as atividades sao acompanhadas por guias nativos especializados que nasceram na regiao e conhecem profundamente o bioma, os rios, os habitos da fauna e as melhores tecnicas para cada experiencia. Nossos guias sao certificados e seguem protocolos ambientais rigorosos."},
         {"id": "home-5", "number": "05", "question": "Posso personalizar meu roteiro?", "answer": "Sim. Nossa equipe pode ajustar o pacote de acordo com seus interesses (pesca, aves, fotografia, contemplacao), a epoca do ano e a duracao da estadia. Oferecemos roteiros de 3 a 7 noites, com combinacoes de atividades adaptadas ao seu perfil e objetivos de viagem."}
       ]
@@ -159,10 +159,10 @@
       "description": "Tudo o que voce precisa saber sobre a estrutura, quartos e comodidades da Itaicy.",
       "items": [
         {"id": "acomod-1", "number": "01", "question": "Quais tipos de suite estao disponiveis?", "answer": "Oferecemos tres categorias: Suite Explorer (individual, ideal para viajantes solo), Suite Adventure (casal, com cama queen) e Suite Family (familia, com cama casal + solteiro). Todas possuem ar-condicionado, banheiro privativo, varanda com vista para o Pantanal e amenities completos."},
-        {"id": "acomod-2", "number": "02", "question": "O que esta incluso na diaria?", "answer": "A diaria inclui hospedagem em suite privativa, pensao completa (cafe da manha, almoco, lanche e jantar), agua e sucos naturais, passeio de barco e cavalgada guiada, Wi-Fi nas areas sociais e acesso a todas as areas de convivencia da pousada. Atividades adicionais e bebidas premium podem ter custo extra."},
-        {"id": "acomod-3", "number": "03", "question": "Qual a capacidade total da pousada?", "answer": "A Itaicy possui 10 suites, com capacidade para ate 20 hospedes simultaneamente. Essa estrutura enxuta e intencional: garante exclusividade, atendimento personalizado e o minimo impacto ambiental no entorno do lodge."},
+        {"id": "acomod-2", "number": "02", "question": "O que esta incluso na diaria?", "answer": "A diaria inclui hospedagem em suite privativa, cafe da manha reforcado, almoco e jantar a la carte, passeio de barco e cavalgada guiada, Wi-Fi nas areas sociais, acesso a piscina e areas de convivencia. Criancas sao bem-vindas e room service esta disponivel. Atividades adicionais e bebidas podem ter custo extra."},
+        {"id": "acomod-3", "number": "03", "question": "Qual a capacidade total da pousada?", "answer": "A Itaicy possui suites confortaveis com capacidade limitada para garantir exclusividade e atendimento personalizado. A estrutura inclui piscina, restaurante a la carte, deck panoramico e areas de convivencia, tudo integrado a natureza as margens do Rio Cuiaba."},
         {"id": "acomod-4", "number": "04", "question": "A pousada tem Wi-Fi e sinal de celular?", "answer": "Sim. Oferecemos Wi-Fi via satelite nas areas sociais (restaurante, deck, recepcao). O sinal e suficiente para mensagens e e-mails, mas pode nao suportar streaming pesado. Sinal de celular (Vivo e Claro) funciona em areas abertas. Recomendamos usar a estadia para desconectar e curtir a natureza."},
-        {"id": "acomod-5", "number": "05", "question": "Como chego ate a pousada?", "answer": "A Itaicy fica em Miranda, MS, a aproximadamente 240 km de Campo Grande (3h de carro) e 80 km de Bonito (1h30). O aeroporto mais proximo e o de Campo Grande (CGR). Oferecemos transfer sob consulta. A estrada e asfaltada ate a entrada da propriedade."}
+        {"id": "acomod-5", "number": "05", "question": "Como chego ate a pousada?", "answer": "A Itaicy fica em Santo Antonio do Leverger, MT, na Rodovia MT 040, KM 23, a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande, MT. Oferecemos transfer sob consulta. A estrada e asfaltada ate a entrada da propriedade."}
       ]
     }
   },
@@ -201,9 +201,9 @@
     "highlights": {
       "heading": "Do Rio e da Horta à Sua Mesa",
       "items": [
-        { "iconName": "Fish", "title": "Peixes do Rio", "description": "Destaque para o Dourado e outros peixes frescos, garantindo a rastreabilidade." },
-        { "iconName": "Sprout", "title": "Produtores Locais", "description": "Uma breve menção ao apoio à comunidade e fazendas vizinhas." },
-        { "iconName": "Flower2", "title": "Horta da Casa", "description": "(Se existir) Menção aos temperos e vegetais frescos colhidos no dia." }
+        { "iconName": "Fish", "title": "Peixes do Rio Cuiaba", "description": "Matrinxa, Tambaqui, Pintado e outros peixes frescos do Rio Cuiaba, preparados no dia com tecnica autoral." },
+        { "iconName": "Sprout", "title": "Produtores Locais", "description": "Ingredientes de fazendas vizinhas e produtores de Santo Antonio do Leverger, apoiando a economia local." },
+        { "iconName": "Flower2", "title": "Cardapio a la Carte", "description": "Menu a la carte com pratos regionais e internacionais, acompanhados de selecao de vinhos e cafe da manha reforcado." }
       ]
     },
     "services": {
@@ -236,9 +236,9 @@
       "heading": "Duvidas sobre a Culinaria Pantaneira",
       "description": "Tudo o que voce precisa saber sobre a gastronomia e as refeicoes na Itaicy.",
       "items": [
-        {"id": "culinaria-1", "number": "01", "question": "As refeicoes estao inclusas na hospedagem?", "answer": "Sim. Todas as refeicoes estao inclusas no regime de Pensao Completa: cafe da manha, almoco e jantar. Tambem oferecemos lanches e bebidas durante as atividades do dia. Dietas especiais (vegetariana, sem gluten, sem lactose) podem ser atendidas mediante aviso previo."},
-        {"id": "culinaria-2", "number": "02", "question": "Quais pratos tipicos do Pantanal sao servidos?", "answer": "Nosso cardapio inclui pratos iconicos como pacu assado na brasa, caldo de piranha, arroz carreteiro, farofa de banana, mojica de pintado, chipa e doces com frutas do cerrado. Cada prato e preparado com ingredientes frescos, muitos deles colhidos no dia de produtores locais da regiao de Miranda."},
-        {"id": "culinaria-3", "number": "03", "question": "Voces servem bebidas alcoolicas?", "answer": "Sim. Oferecemos uma selecao de vinhos, cervejas artesanais e drinks autorais inspirados em frutas e ingredientes do Pantanal. O consumo de bebidas alcoolicas premium pode ter custo adicional, dependendo do pacote contratado."},
+        {"id": "culinaria-1", "number": "01", "question": "As refeicoes estao inclusas na hospedagem?", "answer": "Sim. A hospedagem inclui cafe da manha reforcado, almoco e jantar, servidos a la carte com opcoes regionais e internacionais. Tambem oferecemos lanches durante as atividades do dia. Dietas especiais (vegetariana, sem gluten, sem lactose) podem ser atendidas mediante aviso previo."},
+        {"id": "culinaria-2", "number": "02", "question": "Quais pratos tipicos do Pantanal sao servidos?", "answer": "Nosso cardapio a la carte inclui peixes frescos do Rio Cuiaba como Matrinxa, Tambaqui e Pintado, alem de pratos regionais como arroz carreteiro, farofa de banana e doces com frutas do cerrado. Cada prato e preparado com ingredientes frescos de produtores locais da regiao de Santo Antonio do Leverger."},
+        {"id": "culinaria-3", "number": "03", "question": "Voces servem bebidas alcoolicas?", "answer": "Sim. Oferecemos uma selecao de vinhos nacionais e importados, cervejas e drinks autorais inspirados em frutas e ingredientes do Pantanal. Acompanham perfeitamente os pratos de peixe e as noites no deck da pousada."},
         {"id": "culinaria-4", "number": "04", "question": "De onde vem os ingredientes usados na cozinha?", "answer": "Priorizamos ingredientes locais e sazonais. Peixes vem do rio (apenas de fornecedores autorizados, nao da pesca esportiva), carnes de fazendas da regiao, e temperos e ervas da nossa propria horta. Essa rastreabilidade garante frescor, qualidade e apoio a economia da comunidade local."},
         {"id": "culinaria-5", "number": "05", "question": "A cozinha atende restricoes alimentares?", "answer": "Sim. Nossa equipe de cozinha pode adaptar o cardapio para atender restricoes alimentares como vegetarianismo, veganismo, intolerancia a gluten, lactose ou alergias especificas. Basta nos informar no momento da reserva para que possamos preparar opcoes adequadas."}
       ]
@@ -254,9 +254,9 @@
     },
     "manifesto": {
       "segments": [
-        { "text": "A experiência de quem ", "isHighlight": false },
-        { "text": "desbravou a Amazônia", "isHighlight": true },
-        { "text": ", agora no Pantanal. Operamos com respeito absoluto ao peixe e foco total na sua ", "isHighlight": false },
+        { "text": "No Rio Cuiaba, operamos com ", "isHighlight": false },
+        { "text": "respeito absoluto ao peixe", "isHighlight": true },
+        { "text": " e foco total na sua ", "isHighlight": false },
         { "text": "performance esportiva", "isHighlight": true },
         { "text": ".", "isHighlight": false }
       ]
@@ -265,7 +265,7 @@
       "label": "NOSSA FILOSOFIA",
       "heading": "Alta Performance e Preservação",
       "body": [
-        "Trazemos ao Pantanal a expertise técnica de nossas 13 operações na Amazônia. Nossa estrutura é desenhada para o pescador esportivo que busca desafio técnico e troféus, em um ambiente onde a pressão de pesca é controlada e os gigantes do rio são respeitados."
+        "As margens do Rio Cuiaba, nossa estrutura e desenhada para o pescador esportivo que busca desafio tecnico e trofeus. Operamos com embarcacoes de aluminio equipadas com plataforma de arremesso, comportando ate 2 pescadores por barco, sempre acompanhados de piloteiro nativo que conhece cada pocao do rio."
       ],
       "image": "/images/pesca-about-1",
       "features": [
@@ -277,9 +277,9 @@
     "highlights": {
       "heading": "Por que pescar na Itaicy?",
       "items": [
-        { "iconName": "Star", "title": "Expertise de 13 Operações", "description": "Trazemos o know-how de nossa rede de 13 pousadas flutuantes na Amazônia para garantir uma logística impecável." },
-        { "iconName": "Sailboat", "title": "Acesso Exclusivo", "description": "Navegue em zonas de pesca protegidas e exclusivas, garantindo rios menos batidos e mais ativos." },
-        { "iconName": "Fish", "title": "O Reino do Dourado", "description": "Nossa localização estratégica é o habitat ideal para o 'Rei do Rio', proporcionando batalhas inesquecíveis." }
+        { "iconName": "Star", "title": "Temporada Fev-Set", "description": "A temporada de pesca no Rio Cuiaba vai de fevereiro a setembro, com pico do Dourado entre junho e setembro na seca." },
+        { "iconName": "Sailboat", "title": "Barcos Equipados", "description": "Embarcacoes de aluminio com plataforma de arremesso, ate 2 pescadores por barco, piloteiro nativo incluso." },
+        { "iconName": "Fish", "title": "O Reino do Dourado", "description": "O Rio Cuiaba e habitat natural do Dourado, Pintado, Cachara, Pacu e Piraputanga — trofeus para cada perfil de pescador." }
       ]
     },
     "services": {
@@ -287,10 +287,10 @@
       "heading": "Os Gigantes do Nosso Rio",
       "description": "O Dourado é o rei, mas não reina sozinho. Nossas águas abrigam uma variedade incrível de desafios esportivos. Conheça seus adversários.",
       "items": [
-        { "title": "Zebra do Pantanal", "description": "Um dos peixes mais icônicos da região, conhecido por suas listras distintivas e força em batalhas de pesca.", "image": "/images/pesca-fish-1" },
-        { "title": "Tucunaré", "description": "Famoso entre os pescadores esportivos, o tucunaré é conhecido por sua agressividade e habilidade de luta.", "image": "/images/pesca-fish-2" },
-        { "title": "Pacu", "description": "Um peixe de carne saborosa, o pacu é alvo de muitas pescarias e intrigante por sua velocidade na água.", "image": "/images/pesca-fish-3" },
-        { "title": "Dourado", "description": "Considerado o rei dos rios, o dourado é famoso por sua luta intensa e é um dos mais procurados na pesca esportiva.", "image": "/images/pesca-fish-4" }
+        { "title": "Dourado", "description": "O 'Rei do Rio Cuiaba'. Famoso por sua luta intensa e saltos espetaculares, e o trofeu mais cobiçado da pesca esportiva no Pantanal.", "image": "/images/pesca-fish-4" },
+        { "title": "Pintado", "description": "O maior bagre do Pantanal. Pode ultrapassar 1 metro de comprimento e proporciona batalhas memoraveis nas aguas do Rio Cuiaba.", "image": "/images/pesca-fish-1" },
+        { "title": "Cachara", "description": "Primo do Pintado, o Cachara e um predador de fundo que exige tecnica e paciencia. Habita os poçoes e canais do Rio Cuiaba.", "image": "/images/pesca-fish-2" },
+        { "title": "Pacu", "description": "Peixe versatil e combativo, o Pacu e encontrado em abundancia no Rio Cuiaba. Ótimo para pesca com iscas naturais e artificiais.", "image": "/images/pesca-fish-3" }
       ],
       "buttonText": "Ver guia de espécies completo",
       "buttonHref": "#"
@@ -300,9 +300,9 @@
       "heading": "Duvidas sobre Pesca Esportiva",
       "description": "Respondemos as principais perguntas sobre a operacao de pesca no Pantanal da Itaicy.",
       "items": [
-        {"id": "pesca-1", "number": "01", "question": "Qual e a melhor epoca para pescar no Pantanal?", "answer": "A temporada de pesca vai de marco a outubro. O periodo de seca (maio a setembro) e o mais indicado, pois os rios estao mais baixos e os peixes se concentram em pocoes, facilitando a pesca esportiva. O pico de atividade do Dourado ocorre entre maio e julho."},
+        {"id": "pesca-1", "number": "01", "question": "Qual e a melhor epoca para pescar no Pantanal?", "answer": "A temporada de pesca no Rio Cuiaba vai de fevereiro a setembro. O periodo de seca (junho a setembro) e o mais indicado, pois os rios estao mais baixos e os peixes se concentram em pocoes, facilitando a pesca esportiva. O pico de atividade do Dourado ocorre entre junho e setembro. As embarcacoes sao de aluminio com plataforma de arremesso, comportando ate 2 pescadores por barco acompanhados de piloteiro nativo."},
         {"id": "pesca-2", "number": "02", "question": "O que significa pesca cota zero (pesque e solte)?", "answer": "Cota zero significa que todo peixe capturado e devolvido vivo ao rio. Nao ha retirada de peixes. Essa pratica garante a conservacao das especies, a manutencao do equilibrio ecologico e a perpetuacao da pesca esportiva para futuras geracoes. Na Itaicy, o Projeto Cota Zero e rigorosamente cumprido."},
-        {"id": "pesca-3", "number": "03", "question": "Quais especies posso pescar na Itaicy?", "answer": "As principais especies sao: Dourado (o 'Rei do Rio'), Pintado, Pacu, Piraputanga, Cachara, Barbado e Tucunare. Nossos rios abrigam mais de 260 especies de peixes, com destaque para os grandes predadores esportivos."},
+        {"id": "pesca-3", "number": "03", "question": "Quais especies posso pescar na Itaicy?", "answer": "As principais especies do Rio Cuiaba sao: Dourado (o 'Rei do Rio'), Pintado, Cachara, Pacu e Piraputanga. Nossos rios abrigam grande diversidade de peixes, com destaque para os grandes predadores esportivos. As embarcacoes de aluminio com plataforma de arremesso garantem conforto e performance na pesca."},
         {"id": "pesca-4", "number": "04", "question": "Preciso levar meu proprio equipamento de pesca?", "answer": "Nao e obrigatorio. Oferecemos equipamento completo de alta performance (varas, carretilhas, iscas artificiais). Porem, se voce possui equipamento proprio e prefere usa-lo, e bem-vindo. Nossos guias podem orientar sobre o melhor setup para cada especie e condicao do rio."},
         {"id": "pesca-5", "number": "05", "question": "Os guias de pesca sao locais?", "answer": "Sim. Nossos piloteiros e guias nasceram na regiao e possuem conhecimento profundo dos rios, dos habitos dos peixes e das melhores tecnicas. Eles dominam a leitura do rio e sabem exatamente onde os grandes exemplares se concentram em cada epoca do ano."}
       ]
@@ -367,7 +367,7 @@
       "items": [
         {"id": "eco-1", "number": "01", "question": "Quais atividades de ecoturismo estao incluidas no pacote?", "answer": "Os pacotes incluem passeios de barco, safaris fotograficos, trilhas ecologicas guiadas, focagem noturna (safari noturno) e observacao do nascer e por do sol. Todas as atividades sao conduzidas por guias nativos especializados. A disponibilidade varia conforme a epoca do ano e condicoes climaticas."},
         {"id": "eco-2", "number": "02", "question": "E seguro fazer ecoturismo no Pantanal?", "answer": "Sim. Todas as expedicoes sao acompanhadas por guias experientes que conhecem profundamente a regiao. Utilizamos embarcacoes equipadas com coletes salva-vidas, radio comunicacao e kit de primeiros socorros. Os roteiros seguem protocolos ambientais e operacionais rigorosos para garantir sua seguranca."},
-        {"id": "eco-3", "number": "03", "question": "Quais animais e possivel avistar durante os passeios?", "answer": "O Pantanal abriga mais de 4.700 especies. Durante as expedicoes, e comum avistar jacares, capivaras, ariranhas, tucanos, tuiuius, araras-azuis, cervos-do-pantanal, oncas-pintadas (com sorte), sucuris e centenas de especies de aves. A diversidade varia entre as estacoes seca e chuvosa."},
+        {"id": "eco-3", "number": "03", "question": "Quais animais e possivel avistar durante os passeios?", "answer": "O Pantanal abriga mais de 4.700 especies de plantas e animais. Durante as expedicoes no Rio Cuiaba, e comum avistar jacares, capivaras, ariranhas, tucanos, tuiuius, araras-azuis, cervos-do-pantanal, oncas-pintadas (com sorte), sucuris e centenas de especies de aves. A Itaicy tem 166 especies de aves catalogadas no entorno do lodge."},
         {"id": "eco-4", "number": "04", "question": "Qual a melhor epoca para ecoturismo no Pantanal?", "answer": "Cada epoca oferece experiencias unicas. A seca (maio a setembro) facilita o avistamento de animais nos rios e lagoas. A cheia (outubro a marco) revela paisagens dramaticas e a reproducao de diversas especies. Para fotografia de fauna, a seca e ideal; para paisagens, a transicao entre estacoes."},
         {"id": "eco-5", "number": "05", "question": "Preciso de preparo fisico para as atividades?", "answer": "A maioria das atividades nao exige preparo fisico especial. Passeios de barco, safaris e focagem noturna sao acessiveis para todas as idades. Trilhas ecologicas tem nivel leve a moderado. Sempre informamos o grau de dificuldade antes de cada atividade para que voce escolha o que melhor se adapta ao seu perfil."}
       ]
@@ -417,7 +417,7 @@
       "heading": "Duvidas sobre Observacao de Aves",
       "description": "Respondemos as principais perguntas sobre birdwatching no Pantanal da Itaicy.",
       "items": [
-        {"id": "bird-1", "number": "01", "question": "Quantas especies de aves e possivel avistar na Itaicy?", "answer": "Nosso levantamento cientifico (survey Joao Andriola, maio 2024) catalogou 166 especies no entorno do lodge em apenas 5 dias de expedicao. O Pantanal abriga mais de 650 especies de aves, e a regiao de Miranda e um dos pontos de maior concentracao de avifauna do bioma."},
+        {"id": "bird-1", "number": "01", "question": "Quantas especies de aves e possivel avistar na Itaicy?", "answer": "Nosso levantamento cientifico (survey Joao Andriola, maio 2024) catalogou 166 especies no entorno do lodge em apenas 5 dias de expedicao. O Pantanal abriga mais de 650 especies de aves, e a regiao de Santo Antonio do Leverger, as margens do Rio Cuiaba, e um dos pontos de maior concentracao de avifauna do bioma."},
         {"id": "bird-2", "number": "02", "question": "Preciso ter experiencia em birdwatching para participar?", "answer": "Nao. Nossas expedicoes sao adaptadas para todos os niveis, desde iniciantes curiosos ate birders experientes com listas de vida. Nossos guias especialistas ajudam na identificacao, explicam comportamentos e indicam os melhores angulos para fotografia. Fornecemos binoculos e guias de campo."},
         {"id": "bird-3", "number": "03", "question": "Qual a melhor epoca para observacao de aves no Pantanal?", "answer": "A seca (maio a setembro) e ideal porque as aves se concentram proximo a fontes de agua, facilitando o avistamento. Porem, a epoca chuvosa (outubro a marco) atrai especies migratorias do hemisferio norte. Para araras-azuis e tuiuius, a seca e imbativel; para migratorias, visite entre outubro e dezembro."},
         {"id": "bird-4", "number": "04", "question": "Quais especies mais emblematicas posso avistar?", "answer": "As especies mais iconicas incluem o Tuiuiu (ave-simbolo do Pantanal), Arara-Azul-Grande, Arara-Vermelha, Tucano-Toco, Gaviao-Real, Jabiru, Martin-Pescador-Grande e diversas especies de garcas, socos e falcoes. Aves noturnas como a Coruja-Buraqueira e o Urutau tambem sao frequentes."},
@@ -490,7 +490,7 @@
       "heading": "Guardiões Nativos.",
       "description": "",
       "body": [
-        "Nossos guias não aprenderam sobre o Pantanal em livros; eles nasceram no ritmo das águas. Valorizamos o saber ancestral, empregando e capacitando a comunidade local. Sua visita gera renda e dignidade para Santo Antônio do Leverger."
+        "Nossos guias e piloteiros nao aprenderam sobre o Pantanal em livros; eles nasceram no ritmo das aguas do Rio Cuiaba. Valorizamos o saber ancestral, empregando e capacitando a comunidade local de Santo Antonio do Leverger. Sua visita gera renda e dignidade para a regiao."
       ],
       "image": "/images/pesca-about-1.webp"
     },
@@ -512,7 +512,7 @@
   "/politica-de-privacidade": {
     "hero": {
       "title": "Políticas de Privacidade",
-      "lastUpdated": "[Data]"
+      "lastUpdated": "17 de fevereiro de 2026"
     },
     "sections": [
       {
@@ -561,7 +561,7 @@
           "Acessar, corrigir ou atualizar suas informações.",
           "Solicitar a anonimização ou eliminação de dados que considere desnecessários.",
           "Revogar seu consentimento para o marketing a qualquer momento.",
-          "Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato conosco através do e-mail: [seu-email-de-contato@itaici.com.br]"
+          "Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato conosco através do e-mail: contato@pousadaitaicy.com.br"
         ]
       },
       {

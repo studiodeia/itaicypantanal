@@ -158,6 +158,29 @@ export const rateLimits = pgTable(
   }),
 );
 
+export const panelUsers = pgTable(
+  "panel_users",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    username: varchar("username", { length: 64 }).notNull(),
+    passwordHash: text("password_hash").notNull(),
+    role: varchar("role", { length: 16 }).notNull().default("user"),
+    displayName: varchar("display_name", { length: 120 }).notNull(),
+    enabled: boolean("enabled").notNull().default(true),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => ({
+    usernameUniqueIdx: uniqueIndex("panel_users_username_uidx").on(table.username),
+    roleIdx: index("panel_users_role_idx").on(table.role),
+    enabledIdx: index("panel_users_enabled_idx").on(table.enabled),
+  }),
+);
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -170,3 +193,4 @@ export type Lead = typeof leads.$inferSelect;
 export type Handoff = typeof handoffs.$inferSelect;
 export type AgentLog = typeof agentLogs.$inferSelect;
 export type RateLimit = typeof rateLimits.$inferSelect;
+export type PanelUser = typeof panelUsers.$inferSelect;

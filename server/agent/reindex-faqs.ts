@@ -1,3 +1,4 @@
+import { and, like, notInArray } from "drizzle-orm";
 import { db, isDatabaseAvailable } from "../db";
 import { getCmsContent } from "../cms-content";
 import { faqs } from "../../shared/schema";
@@ -11,6 +12,29 @@ type CmsFaqItem = {
   lang: string;
 };
 
+function slugify(input: string): string {
+  return input
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function resolveSourceDocId(item: Record<string, unknown>, index: number): string {
+  if (typeof item.sourceDocId === "string" && item.sourceDocId.trim().length > 0) {
+    return item.sourceDocId.trim();
+  }
+  if (typeof item.id === "string" && item.id.trim().length > 0) {
+    return `cms-shared-faq-${item.id.trim()}`;
+  }
+  if (typeof item.question === "string" && item.question.trim().length > 0) {
+    const slug = slugify(item.question).slice(0, 72);
+    return `cms-shared-faq-${slug || index + 1}`;
+  }
+  return `cms-shared-faq-${index + 1}`;
+}
+
 function toCmsFaqItems(shared: Record<string, unknown> | undefined): CmsFaqItem[] {
   const faq = shared?.faq as Record<string, unknown> | undefined;
   const items = Array.isArray(faq?.items) ? faq.items : [];
@@ -21,7 +45,7 @@ function toCmsFaqItems(shared: Record<string, unknown> | undefined): CmsFaqItem[
       const question = typeof rec.question === "string" ? rec.question.trim() : "";
       const answer = typeof rec.answer === "string" ? rec.answer.trim() : "";
       return {
-        sourceDocId: `cms-shared-faq-${index + 1}`,
+        sourceDocId: resolveSourceDocId(rec, index),
         question,
         answer,
         category: "geral",
@@ -31,7 +55,26 @@ function toCmsFaqItems(shared: Record<string, unknown> | undefined): CmsFaqItem[
     .filter((item) => item.question.length > 0 && item.answer.length > 0);
 }
 
+type ReindexFaqOptions = {
+  sourceDocId?: string;
+};
+
 export async function reindexFaqsFromCms(): Promise<{
+  mode: "full" | "incremental";
+  sourceDocId?: string;
+  total: number;
+  upserted: number;
+  embedded: number;
+  embeddingEnabled: boolean;
+}> {
+  return reindexFaqsFromCmsWithOptions({});
+}
+
+export async function reindexFaqsFromCmsWithOptions(
+  options: ReindexFaqOptions,
+): Promise<{
+  mode: "full" | "incremental";
+  sourceDocId?: string;
   total: number;
   upserted: number;
   embedded: number;
@@ -39,6 +82,8 @@ export async function reindexFaqsFromCms(): Promise<{
 }> {
   if (!isDatabaseAvailable() || !db) {
     return {
+      mode: options.sourceDocId ? "incremental" : "full",
+      sourceDocId: options.sourceDocId,
       total: 0,
       upserted: 0,
       embedded: 0,
@@ -47,11 +92,28 @@ export async function reindexFaqsFromCms(): Promise<{
   }
 
   const { content } = await getCmsContent();
-  const items = toCmsFaqItems(content.shared as Record<string, unknown> | undefined);
+  const allItems = toCmsFaqItems(content.shared as Record<string, unknown> | undefined);
+  const items = options.sourceDocId
+    ? allItems.filter((item) => item.sourceDocId === options.sourceDocId)
+    : allItems;
   const embeddingEnabled = isEmbeddingAvailable();
 
   let upserted = 0;
   let embedded = 0;
+
+  if (!options.sourceDocId) {
+    const sourceIds = items.map((item) => item.sourceDocId);
+    if (sourceIds.length > 0) {
+      await db
+        .delete(faqs)
+        .where(
+          and(
+            like(faqs.sourceDocId, "cms-shared-faq-%"),
+            notInArray(faqs.sourceDocId, sourceIds),
+          ),
+        );
+    }
+  }
 
   for (const item of items) {
     const embedding = embeddingEnabled
@@ -85,6 +147,8 @@ export async function reindexFaqsFromCms(): Promise<{
   }
 
   return {
+    mode: options.sourceDocId ? "incremental" : "full",
+    sourceDocId: options.sourceDocId,
     total: items.length,
     upserted,
     embedded,

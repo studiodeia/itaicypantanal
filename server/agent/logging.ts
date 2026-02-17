@@ -22,20 +22,24 @@ type AgentLogInsert = {
 export async function writeAgentLog(entry: AgentLogInsert): Promise<void> {
   if (!isDatabaseAvailable() || !db) return;
 
-  await db.insert(agentLogs).values({
-    sessionId: entry.sessionId,
-    intent: entry.intent ?? null,
-    toolUsed: entry.toolUsed ?? null,
-    promptVersionHash: entry.promptVersionHash ?? null,
-    inputSummary: entry.inputSummary ?? null,
-    outputSummary: entry.outputSummary ?? null,
-    latencyMs: entry.latencyMs ?? null,
-    confidenceScore: entry.confidenceScore ?? null,
-    groundingLevel: entry.groundingLevel ?? "none",
-    sourceRefs: entry.sourceRefs ?? [],
-    fallbackUsed: entry.fallbackUsed ?? false,
-    status: entry.status ?? "success",
-    tokensIn: entry.tokensIn ?? null,
-    tokensOut: entry.tokensOut ?? null,
-  });
+  try {
+    await db.insert(agentLogs).values({
+      sessionId: entry.sessionId,
+      intent: entry.intent ?? null,
+      toolUsed: entry.toolUsed ?? null,
+      promptVersionHash: entry.promptVersionHash ?? null,
+      inputSummary: entry.inputSummary ?? null,
+      outputSummary: entry.outputSummary ?? null,
+      latencyMs: entry.latencyMs ?? null,
+      confidenceScore: entry.confidenceScore ?? null,
+      groundingLevel: entry.groundingLevel ?? "none",
+      sourceRefs: entry.sourceRefs ?? [],
+      fallbackUsed: entry.fallbackUsed ?? false,
+      status: entry.status ?? "success",
+      tokensIn: entry.tokensIn ?? null,
+      tokensOut: entry.tokensOut ?? null,
+    });
+  } catch (err) {
+    console.error("[agent-log] Failed to write log:", (err as Error).message);
+  }
 }

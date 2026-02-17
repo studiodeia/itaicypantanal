@@ -27,3 +27,6 @@ payload-cms/.env
 
 # Windows artifacts
 nul
+
+# Vercel local metadata
+.vercel/

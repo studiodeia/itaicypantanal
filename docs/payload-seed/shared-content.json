@@ -13,31 +13,31 @@
         "id": "item-1",
         "number": "01",
         "question": "A pousada e destinada apenas para pesca?",
-        "answer": "Nao. A Itaicy oferece experiencias de pesca esportiva, observacao de aves, ecoturismo e imersoes para familias e casais."
+        "answer": "Nao. A Itaicy oferece tres experiencias principais: pesca esportiva cota zero (temporada fev-set no Rio Cuiaba), observacao de aves (166 especies catalogadas) e ecoturismo (trilhas, safaris fotograficos, passeios de barco). Tambem e ideal para casais, familias e fotografos de natureza."
       },
       {
         "id": "item-2",
         "number": "02",
-        "question": "Como funciona o acesso as areas exclusivas?",
-        "answer": "Nossos roteiros seguem protocolos ambientais e operacionais proprios para garantir seguranca e baixo impacto no bioma."
+        "question": "Como chegar a Itaicy?",
+        "answer": "Estamos na Rodovia MT 040, KM 23, em Santo Antonio do Leverger, MT, a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande. Oferecemos transfer sob consulta."
       },
       {
         "id": "item-3",
         "number": "03",
         "question": "As experiencias sao guiadas?",
-        "answer": "Sim. Todas as atividades sao acompanhadas por equipe especializada e guias com conhecimento local."
+        "answer": "Sim. Todas as atividades sao acompanhadas por guias nativos especializados que nasceram na regiao e conhecem profundamente o bioma, os rios e os habitos da fauna. Os piloteiros de pesca dominam a leitura do Rio Cuiaba."
       },
       {
         "id": "item-4",
         "number": "04",
-        "question": "Existe opcao para grupos e familias?",
-        "answer": "Sim. Temos configuracoes de hospedagem e roteiro adaptadas para diferentes perfis de viajantes."
+        "question": "O que esta incluso na diaria?",
+        "answer": "A diaria inclui hospedagem, cafe da manha reforcado, almoco e jantar a la carte, passeio de barco, cavalgada guiada, Wi-Fi nas areas sociais e acesso a piscina e areas de convivencia. Criancas sao bem-vindas e room service esta disponivel."
       },
       {
         "id": "item-5",
         "number": "05",
         "question": "Posso personalizar meu roteiro?",
-        "answer": "Sim. Nossa equipe comercial pode ajustar o pacote de acordo com a disponibilidade e o objetivo da viagem."
+        "answer": "Sim. Nossa equipe pode ajustar o pacote conforme seus interesses (pesca, aves, fotografia, contemplacao), a epoca do ano e a duracao da estadia. Oferecemos roteiros adaptados ao seu perfil. Entre em contato pelo WhatsApp (19) 98870-5593 ou e-mail contato@pousadaitaicy.com.br."
       }
     ]
   },
@@ -117,15 +117,15 @@
     "contactInfo": [
       {
         "icon": "/images/icons/call.png",
-        "text": "+55 (67) 99999-9999"
+        "text": "+55 (65) 99640-2380"
       },
       {
         "icon": "/images/icons/mail.png",
-        "text": "reservas@pousadaitaicy.com.br"
+        "text": "contato@pousadaitaicy.com.br"
       },
       {
         "icon": "/images/icons/location-on.png",
-        "text": "Pantanal Sul-Mato-Grossense, Mato Grosso do Sul, Brasil"
+        "text": "Rodovia MT 040, KM 23 - Santo Antonio do Leverger, MT, 78180-000"
       }
     ],
     "legalLinks": [
@@ -156,7 +156,7 @@
     "newsletterInputPlaceholder": "Seu e-mail",
     "newsletterButtonLabel": "Enviar",
     "bottomDescription": "Um refugio genuino e sofisticado no coracao do Pantanal. Experiencias aut autenticas para quem busca natureza, conforto e exclusividade.",
-    "copyright": "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados."
+    "copyright": "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados. Desde 2005."
   },
   "homeHero": {
     "heading": "O Pantanal como voce nunca sentiu.",

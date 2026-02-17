@@ -5,6 +5,9 @@ import { getCmsAgentConfig, getCmsContent } from "./cms-content";
 import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt } from "./sitemap";
 import { handleChatRequest } from "./agent/chat-route";
 import { handleFaqReindexRequest } from "./agent/reindex-route";
+import { handleAgentMetricsRequest } from "./agent/metrics-route";
+import { handleCloudbedsStatusRequest } from "./agent/cloudbeds-status-route";
+import { registerPanelRoutes } from "./panel/routes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // put application routes here
@@ -156,6 +159,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/agent/reindex/faqs", async (req, res) => {
     await handleFaqReindexRequest(req, res);
   });
+
+  app.get("/api/agent/metrics", async (req, res) => {
+    await handleAgentMetricsRequest(req, res);
+  });
+
+  app.get("/api/agent/cloudbeds/status", async (req, res) => {
+    await handleCloudbedsStatusRequest(req, res);
+  });
+
+  registerPanelRoutes(app);
 
   const httpServer = createServer(app);
 

@@ -2,6 +2,7 @@ import { ChevronDownIcon, ChevronRightIcon, MenuIcon, XIcon, ArrowLeftIcon } fro
 import { Button } from "@/components/ui/button";
 import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
@@ -9,6 +10,7 @@ interface MenuItem {
   title: string;
   description: string;
   image: string;
+  href: string;
 }
 
 interface MenuCategory {
@@ -22,13 +24,15 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Culinária",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Sabores regionais autênticos preparados com ingredientes do Pantanal.",
         image: "/images/nav/menu-culinaria.webp",
+        href: "/culinaria",
       },
       {
         title: "Acomodações",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Conforto e natureza em harmonia no coração do Pantanal.",
         image: "/images/nav/menu-acomodacoes.webp",
+        href: "/acomodacoes",
       },
     ],
   },
@@ -37,18 +41,21 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Pesca Esportiva",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Pesca em águas privativas com guias experientes do Pantanal.",
         image: "/images/nav/menu-pesca.webp",
+        href: "/pesca",
       },
       {
         title: "Birdwatching",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "166 espécies catalogadas em expedições guiadas ao amanhecer.",
         image: "/images/nav/menu-birdwatching.webp",
+        href: "/observacao-de-aves",
       },
       {
         title: "Ecoturismo",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Trilhas, passeios de barco e safáris fotográficos imersivos.",
         image: "/images/nav/menu-ecoturismo.webp",
+        href: "/ecoturismo",
       },
     ],
   },
@@ -57,25 +64,27 @@ const menuData: Record<string, MenuCategory> = {
     items: [
       {
         title: "Vida Selvagem",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Histórias e descobertas da fauna e flora do Pantanal.",
         image: "/images/nav/menu-vida-selvagem.webp",
+        href: "/blog",
       },
       {
         title: "Sustentabilidade",
-        description: "Lorem ipsum dolor sit amet consectetur. Ultricies dictum.",
+        description: "Nosso compromisso com a preservação do ecossistema pantaneiro.",
         image: "/images/nav/menu-sustentabilidade.webp",
+        href: "/blog",
       },
     ],
   },
 };
 
 const navigationItems = [
-  { label: "Início", active: true, hasDropdown: false },
-  { label: "Hospedagens", active: false, hasDropdown: true },
-  { label: "Experiências", active: false, hasDropdown: true },
-  { label: "Nosso impacto", active: false, hasDropdown: false },
-  { label: "Contato", active: false, hasDropdown: false },
-  { label: "Blog", active: false, hasDropdown: true },
+  { label: "Início", active: true, hasDropdown: false, href: "/" },
+  { label: "Hospedagens", active: false, hasDropdown: true, href: "/acomodacoes" },
+  { label: "Experiências", active: false, hasDropdown: true, href: "/ecoturismo" },
+  { label: "Nosso impacto", active: false, hasDropdown: false, href: "/nosso-impacto" },
+  { label: "Contato", active: false, hasDropdown: false, href: "/contato" },
+  { label: "Blog", active: false, hasDropdown: true, href: "/blog" },
 ];
 
 interface NavHeaderProps {
@@ -90,6 +99,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
   const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [location] = useLocation();
 
   const isDropdownOpen = desktopActiveDropdown !== null && menuData[desktopActiveDropdown] !== undefined;
 
@@ -172,48 +182,65 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
           isDropdownOpen && "glass-menu"
         )}>
           <nav className="flex max-w-[1360px] items-center justify-between w-full relative">
-            <img
-              className="w-[104px] md:w-[115px] lg:w-[130.43px] h-auto"
-              alt="Logo"
-              src="/images/icons/logo.svg"
-              data-testid="img-logo"
-            />
+            <Link href="/" aria-label="Itaicy Pantanal Eco Lodge - Início">
+              <img
+                className="w-[104px] md:w-[115px] lg:w-[130.43px] h-auto"
+                alt="Logo"
+                src="/images/icons/logo.svg"
+                data-testid="img-logo"
+              />
+            </Link>
 
             <div className="hidden lg:flex items-center gap-1" onMouseLeave={(e) => {
               if (!(e.relatedTarget instanceof Node) || !headerRef.current?.contains(e.relatedTarget)) {
                 handleDesktopNavLeave();
               }
             }}>
-              {navigationItems.map((item, index) => (
-                <button
-                  key={index}
-                  className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
-                    isDropdownOpen
-                      ? desktopActiveDropdown === item.label
-                        ? "text-[#f2fcf7]"
-                        : "text-[#cfebdd]"
-                      : item.active
-                        ? "text-[#e3f7ec]"
-                        : "text-[#a8cab9]"
-                  } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
-                  data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  onMouseEnter={() => item.hasDropdown && handleDesktopNavEnter(item.label)}
-                  onClick={() => {
-                    if (item.hasDropdown) {
+              {navigationItems.map((item, index) => {
+                const isCurrentPage = location === item.href || (item.href !== "/" && location.startsWith(item.href));
+                return item.hasDropdown ? (
+                  <button
+                    key={index}
+                    className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
+                      isDropdownOpen
+                        ? desktopActiveDropdown === item.label
+                          ? "text-[#f2fcf7]"
+                          : "text-[#cfebdd]"
+                        : isCurrentPage
+                          ? "text-[#e3f7ec]"
+                          : "text-[#a8cab9]"
+                    } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
+                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    onMouseEnter={() => handleDesktopNavEnter(item.label)}
+                    onClick={() => {
                       setDesktopActiveDropdown(desktopActiveDropdown === item.label ? null : item.label);
-                    }
-                  }}
-                >
-                  {item.label}
-                  {item.hasDropdown && (
+                    }}
+                  >
+                    {item.label}
                     <ChevronDownIcon
                       className={`w-5 h-5 transition-transform duration-200 ${
                         desktopActiveDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
-                  )}
-                </button>
-              ))}
+                  </button>
+                ) : (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
+                      isDropdownOpen
+                        ? "text-[#cfebdd]"
+                        : isCurrentPage
+                          ? "text-[#e3f7ec]"
+                          : "text-[#a8cab9]"
+                    } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
+                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    onMouseEnter={() => setDesktopActiveDropdown(null)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="flex items-center gap-4">
@@ -268,10 +295,12 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
             <div className="max-w-[1440px] mx-auto px-10 pb-10">
               <div className="flex gap-[32px] h-[316px]">
                 {menuData[desktopActiveDropdown!].items.map((item, idx) => (
-                  <button
+                  <Link
                     key={idx}
-                    className="relative w-[316px] h-full rounded-[8px] overflow-hidden group cursor-pointer text-left flex flex-col justify-end"
+                    href={item.href}
+                    className="relative w-[316px] h-full rounded-[8px] overflow-hidden group cursor-pointer text-left flex flex-col justify-end no-underline"
                     data-testid={`card-menu-desktop-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    onClick={() => setDesktopActiveDropdown(null)}
                   >
                     <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[8px]">
                       <img
@@ -298,7 +327,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                         {item.description}
                       </p>
                     </div>
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -311,11 +340,13 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
           <div className="absolute inset-0 glass-backdrop" />
 
           <div className="relative z-10 glass-menu flex items-center justify-between px-5 py-3">
-            <img
-              className="w-[104px] md:w-[115px] h-auto"
-              alt="Logo"
-              src="/images/icons/logo.svg"
-            />
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} aria-label="Itaicy Pantanal Eco Lodge - Início">
+              <img
+                className="w-[104px] md:w-[115px] h-auto"
+                alt="Logo"
+                src="/images/icons/logo.svg"
+              />
+            </Link>
             <div className="flex items-center gap-4">
               <button
                 className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-[#a8cab9] hover:text-[#e3f7ec] transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
@@ -354,19 +385,34 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
           <div className="relative z-10 flex-1 overflow-y-auto">
             {mobileActiveCategory === null ? (
               <div className="glass-menu flex flex-col">
-                {navigationItems.filter(item => item.hasDropdown).map((item, index) => (
-                  <button
-                    key={index}
-                    className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left"
-                    onClick={() => setMobileActiveCategory(item.label)}
-                    data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
-                      {item.label}
-                    </span>
-                    <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
-                  </button>
-                ))}
+                {navigationItems.map((item, index) =>
+                  item.hasDropdown ? (
+                    <button
+                      key={index}
+                      className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left"
+                      onClick={() => setMobileActiveCategory(item.label)}
+                      data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                        {item.label}
+                      </span>
+                      <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
+                    </button>
+                  ) : (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left no-underline"
+                      onClick={() => setMobileMenuOpen(false)}
+                      data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                        {item.label}
+                      </span>
+                      <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
+                    </Link>
+                  )
+                )}
               </div>
             ) : (
               <div className="glass-menu flex flex-col items-center pb-10">
@@ -384,9 +430,11 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
 
                   <div className="flex flex-col px-1 max-h-[620px] overflow-y-auto">
                     {mobileMenuItems.map((item, idx) => (
-                      <button
+                      <Link
                         key={idx}
-                        className="flex items-center gap-4 p-4 text-left w-full"
+                        href={item.href}
+                        className="flex items-center gap-4 p-4 text-left w-full no-underline"
+                        onClick={() => setMobileMenuOpen(false)}
                         data-testid={`button-mobile-submenu-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         <div className="w-[108px] h-[108px] md:w-[140px] md:h-[140px] rounded flex-shrink-0 overflow-hidden">
@@ -410,7 +458,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                             {item.description}
                           </p>
                         </div>
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -65,6 +65,26 @@ const Regiao = lazy(() =>
   import("@/pages/Regiao").then((module) => ({ default: module.Regiao })),
 );
 const NotFound = lazy(() => import("@/pages/not-found"));
+const ChatWidget = lazy(() =>
+  import("@/components/chat/ChatWidget").then((module) => ({
+    default: module.ChatWidget,
+  })),
+);
+const PanelLoginPage = lazy(() =>
+  import("@/pages/panel/PanelLoginPage").then((module) => ({
+    default: module.PanelLoginPage,
+  })),
+);
+const PanelHomePage = lazy(() =>
+  import("@/pages/panel/PanelHomePage").then((module) => ({
+    default: module.PanelHomePage,
+  })),
+);
+const PanelAdminPage = lazy(() =>
+  import("@/pages/panel/PanelAdminPage").then((module) => ({
+    default: module.PanelAdminPage,
+  })),
+);
 
 function RouterFallback() {
   return (
@@ -95,10 +115,30 @@ function Router() {
         <Route path="/nosso-impacto" component={NossoImpacto} />
         <Route path="/regiao" component={Regiao} />
         <Route path="/politica-de-privacidade" component={Privacidade} />
+        <Route path="/painel/login" component={PanelLoginPage} />
+        <Route path="/painel/admin" component={PanelAdminPage} />
+        <Route path="/painel" component={PanelHomePage} />
         {/* Fallback to 404 */}
         <Route component={NotFound} />
       </Switch>
     </Suspense>
+  );
+}
+
+function AppContent() {
+  const [location] = useLocation();
+  const hideChatWidget = location.startsWith("/painel");
+
+  return (
+    <>
+      <Toaster />
+      <Router />
+      {!hideChatWidget && (
+        <Suspense fallback={null}>
+          <ChatWidget />
+        </Suspense>
+      )}
+    </>
   );
 }
 
@@ -107,8 +147,7 @@ function App() {
     <MotionProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <Toaster />
-          <Router />
+          <AppContent />
         </TooltipProvider>
       </QueryClientProvider>
     </MotionProvider>

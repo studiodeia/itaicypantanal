@@ -1,5 +1,6 @@
 import type { GlobalConfig } from "payload";
 import { isAuthenticated } from "../access/authenticated";
+import { triggerAgentFaqReindexAfterSiteSettingsChange } from "../hooks/triggerAgentFaqReindex";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -15,6 +16,9 @@ export const SiteSettings: GlobalConfig = {
   access: {
     read: () => true,
     update: isAuthenticated,
+  },
+  hooks: {
+    afterChange: [triggerAgentFaqReindexAfterSiteSettingsChange],
   },
   fields: [
     {

@@ -1,27 +1,31 @@
 import type { Request, Response } from "express";
-import { reindexFaqsFromCms } from "./reindex-faqs";
-
-function isAuthorized(req: Request): boolean {
-  const configuredKey = process.env.AGENT_ADMIN_KEY;
-
-  if (!configuredKey) {
-    return process.env.NODE_ENV === "development";
-  }
-
-  const provided = req.header("x-agent-admin-key");
-  return provided === configuredKey;
-}
+import { z } from "zod";
+import { reindexFaqsFromCmsWithOptions } from "./reindex-faqs";
+import { denyIfUnauthorized } from "./admin-auth";
 
 export async function handleFaqReindexRequest(req: Request, res: Response) {
-  if (!isAuthorized(req)) {
-    res.status(401).json({
-      message: "Unauthorized reindex request.",
-    });
+  if (denyIfUnauthorized(req, res)) {
     return;
   }
 
   try {
-    const result = await reindexFaqsFromCms();
+    const requestSchema = z.object({
+      source_doc_id: z.string().min(1).optional(),
+    });
+    const parsed = requestSchema.safeParse(req.body);
+
+    if (!parsed.success) {
+      res.status(400).json({
+        status: "error",
+        message: "Invalid payload for FAQ reindex endpoint.",
+      });
+      return;
+    }
+
+    const result = await reindexFaqsFromCmsWithOptions({
+      sourceDocId: parsed.data.source_doc_id,
+    });
+
     res.json({
       status: "ok",
       ...result,

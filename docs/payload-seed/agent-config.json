@@ -21,10 +21,10 @@
     }
   },
   "handoff": {
-    "email": "itaicy-digital@studiodeia.com.br",
-    "emergencyPhone": "+55 (67) 99999-9999",
-    "whatsapp": "+55 (67) 99999-9999",
-    "serviceHours": "Segunda a sexta, 08:00-18:00 (BRT)",
+    "email": "contato@pousadaitaicy.com.br",
+    "emergencyPhone": "+55 (65) 99640-2380",
+    "whatsapp": "+55 (19) 98870-5593",
+    "serviceHours": "Todos os dias, 07:00-20:00 (BRT)",
     "slaHours": 24
   },
   "fallback": {

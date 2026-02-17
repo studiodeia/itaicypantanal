@@ -399,6 +399,8 @@ function buildFromPayloadData(
       src: typeof doc.src === "string" ? doc.src : "",
       author: typeof doc.author === "string" ? doc.author : "",
       date: typeof doc.date === "string" ? doc.date : "",
+      photoCredit: typeof doc.photoCredit === "string" ? doc.photoCredit : "",
+      photoLicense: typeof doc.photoLicense === "string" ? doc.photoLicense : "",
       heroImage: typeof doc.heroImage === "string" ? doc.heroImage : "",
       conservationStatus:
         typeof doc.conservationStatus === "string"
@@ -450,6 +452,8 @@ function buildFromPayloadData(
       bestTime: bird.bestTime,
       photographyTips: bird.photographyTips,
       relatedSlugs: bird.relatedSlugs,
+      photoCredit: bird.photoCredit,
+      photoLicense: bird.photoLicense,
     }));
 
   const featuredBirdSlugs = birdSpecies
@@ -504,6 +508,8 @@ function buildFromPayloadData(
         src: bird.src,
         author: bird.author,
         date: bird.date,
+        photoCredit: bird.photoCredit,
+        photoLicense: bird.photoLicense,
       })),
       details: birdDetails,
       featuredSlugs: featuredBirdSlugs,
