@@ -43,7 +43,7 @@ export const PantanalHeroSection = (): JSX.Element => {
 
       <NavHeader onMenuStateChange={handleMenuStateChange} />
 
-      <div className="relative z-[2] flex flex-col lg:flex-row max-w-[1440px] items-end justify-end gap-[48px] lg:gap-[100px] px-5 md:px-8 lg:px-16 py-[48px] md:py-12 lg:py-[100px] w-full flex-1">
+      <div className="relative z-[2] flex flex-col lg:flex-row max-w-[1440px] items-end justify-end gap-[48px] lg:gap-[100px] px-5 md:px-8 lg:px-16 py-[48px] md:py-12 lg:py-[80px] w-full flex-1">
         <motion.div
           variants={staggerSlow}
           initial="hidden"
@@ -58,6 +58,14 @@ export const PantanalHeroSection = (): JSX.Element => {
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
             {homeHero.heading}
+            {homeHero.headingAccent && (
+              <span
+                className="block italic"
+                style={{ color: "#a88b56" }}
+              >
+                {homeHero.headingAccent}
+              </span>
+            )}
           </motion.h1>
 
           <motion.p
@@ -71,11 +79,11 @@ export const PantanalHeroSection = (): JSX.Element => {
 
         <motion.div variants={scaleIn} initial="hidden" whileInView="visible" viewport={viewport}>
           <Card
-            className="w-full lg:w-[522px] bg-[rgba(10,19,12,0.2)] rounded-lg backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] border-0"
+            className="w-full lg:w-[512px] bg-[rgba(10,19,12,0.65)] rounded-[12px] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] border-0"
             data-testid="card-booking"
           >
-            <CardContent className="flex flex-col items-start gap-5 md:gap-10 p-4 md:p-8">
-              <div className="flex flex-col items-start gap-4 w-full">
+            <CardContent className="flex flex-col items-start gap-6 p-6 md:p-8">
+              <div className="flex flex-col items-start gap-3 w-full">
                 <h2
                   className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[#e3f7ec] text-[length:var(--heading-sm-font-size)] tracking-[var(--heading-sm-letter-spacing)] leading-[var(--heading-sm-line-height)] [font-style:var(--heading-sm-font-style)]"
                   data-testid="text-booking-heading"
@@ -84,15 +92,26 @@ export const PantanalHeroSection = (): JSX.Element => {
                   {homeHero.bookingHeading}
                 </h2>
 
+                {/* Gold underline accent */}
+                <div className="w-8 h-[2px] bg-[#ac8042]" />
+
                 <p
                   className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
                   data-testid="text-booking-description"
                 >
+                  <span className="font-bold text-[#d7a45d]">Passo 1:</span>{" "}
                   {homeHero.bookingDescription}
                 </p>
               </div>
 
               <BookingDatePicker variant="hero" />
+
+              {/* Disclaimer */}
+              <p className="w-full text-center text-xs leading-4 text-[#9ca3af] [font-family:'Lato',sans-serif] font-normal">
+                Garantimos o melhor preço para reservas diretas.{" "}
+                Tarifas incluem sistema{" "}
+                <span className="font-bold">Premium All-Inclusive</span>
+              </p>
             </CardContent>
           </Card>
         </motion.div>

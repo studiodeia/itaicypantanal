@@ -60,6 +60,7 @@ export type SharedCmsSections = {
   };
   homeHero: {
     heading: string;
+    headingAccent?: string;
     subtitle: string;
     bookingHeading: string;
     bookingDescription: string;
@@ -190,12 +191,13 @@ export const defaultSharedCmsSections: SharedCmsSections = {
       "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados.",
   },
   homeHero: {
-    heading: "O Pantanal como voce nunca sentiu.",
+    heading: "O Pantanal como",
+    headingAccent: "você nunca sentiu.",
     subtitle:
       "Elegancia essencial em harmonia com o bioma. Uma experiencia de imersao autentica, sem excessos e sem concessoes.",
     bookingHeading: "Procure por uma data especial",
     bookingDescription:
-      "Selecione o periodo ideal para sua viagem e descubra experiencias exclusivas no coracao do Pantanal.",
+      "Selecione o período da sua estadia para verificar a disponibilidade.",
   },
   homeManifesto: {
     label: "MANIFESTO",

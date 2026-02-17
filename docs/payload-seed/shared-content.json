@@ -159,10 +159,11 @@
     "copyright": "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados. Desde 2005."
   },
   "homeHero": {
-    "heading": "O Pantanal como voce nunca sentiu.",
+    "heading": "O Pantanal como",
+    "headingAccent": "você nunca sentiu.",
     "subtitle": "Elegancia essencial em harmonia com o bioma. Uma experiencia de imersao autentica, sem excessos e sem concessoes.",
     "bookingHeading": "Procure por uma data especial",
-    "bookingDescription": "Selecione o periodo ideal para sua viagem e descubra experiencias exclusivas no coracao do Pantanal."
+    "bookingDescription": "Selecione o período da sua estadia para verificar a disponibilidade."
   },
   "homeManifesto": {
     "label": "MANIFESTO",
