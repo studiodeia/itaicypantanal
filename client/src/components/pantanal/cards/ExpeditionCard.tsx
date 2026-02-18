@@ -42,7 +42,7 @@ export function ExpeditionCard({
       <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-8">
         <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-10">
           <div className="flex flex-col items-start gap-3 md:gap-5 lg:gap-5 w-full">
-            <HeadingMedium className="text-pantanal-light-primary">
+            <HeadingMedium>
               {title}
             </HeadingMedium>
 
