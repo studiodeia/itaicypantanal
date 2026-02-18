@@ -1,6 +1,7 @@
 import type { HomePageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const homeDefaults: HomePageContent = {
+const pt: HomePageContent = {
   aboutUs: {
     label: "SOBRE NÓS",
     heading: "Bem-vindo ao Nosso Refúgio Natural",
@@ -244,3 +245,5 @@ export const homeDefaults: HomePageContent = {
     ],
   },
 };
+
+export const homeDefaults: LocalizedDefaults<"/"> = { pt, en: pt, es: pt };

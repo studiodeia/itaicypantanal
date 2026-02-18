@@ -1,6 +1,7 @@
 import type { PrivacidadePageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const privacidadeDefaults: PrivacidadePageContent = {
+const pt: PrivacidadePageContent = {
   hero: {
     title: "Políticas de Privacidade",
     lastUpdated: "[Data]",
@@ -64,3 +65,5 @@ export const privacidadeDefaults: PrivacidadePageContent = {
     },
   ],
 };
+
+export const privacidadeDefaults: LocalizedDefaults<"/politica-de-privacidade"> = { pt, en: pt, es: pt };

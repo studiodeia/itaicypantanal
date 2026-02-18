@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ContactChannelsSection } from "./ContactChannelsSection";
 import { contatoDefaults } from "../../contato-defaults";
 
-const content = contatoDefaults.channels;
+const content = contatoDefaults.pt.channels;
 
 describe("ContactChannelsSection", () => {
   it("renders the section heading", () => {

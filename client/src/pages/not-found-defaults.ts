@@ -1,6 +1,7 @@
 import type { NotFoundPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const notFoundDefaults: NotFoundPageContent = {
+const pt: NotFoundPageContent = {
   hero: {
     label: "404",
     heading: "Parece que você saiu um pouco da trilha.",
@@ -11,3 +12,5 @@ export const notFoundDefaults: NotFoundPageContent = {
   },
   buttonText: "Voltar para o início",
 };
+
+export const notFoundDefaults: LocalizedDefaults<"/404"> = { pt, en: pt, es: pt };

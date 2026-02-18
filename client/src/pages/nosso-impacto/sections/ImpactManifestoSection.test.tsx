@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ImpactManifestoSection } from "./ImpactManifestoSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.manifesto;
+const content = nossoImpactoDefaults.pt.manifesto;
 
 describe("ImpactManifestoSection", () => {
   it("renders the manifesto text", () => {

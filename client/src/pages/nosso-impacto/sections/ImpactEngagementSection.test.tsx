@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ImpactEngagementSection } from "./ImpactEngagementSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.engagement;
+const content = nossoImpactoDefaults.pt.engagement;
 
 describe("ImpactEngagementSection", () => {
   it("renders the headline", () => {

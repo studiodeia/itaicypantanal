@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ImpactHeroSection } from "./ImpactHeroSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.hero;
+const content = nossoImpactoDefaults.pt.hero;
 
 describe("ImpactHeroSection", () => {
   it("renders the gold label", () => {

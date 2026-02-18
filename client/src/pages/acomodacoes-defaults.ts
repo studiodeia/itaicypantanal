@@ -1,6 +1,7 @@
 import type { AcomodacoesPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const acomodacoesDefaults: AcomodacoesPageContent = {
+const pt: AcomodacoesPageContent = {
   hero: {
     label: "ACOMODAÇÕES",
     heading: "Refúgios de Conforto Essencial",
@@ -121,3 +122,5 @@ export const acomodacoesDefaults: AcomodacoesPageContent = {
     ],
   },
 };
+
+export const acomodacoesDefaults: LocalizedDefaults<"/acomodacoes"> = { pt, en: pt, es: pt };

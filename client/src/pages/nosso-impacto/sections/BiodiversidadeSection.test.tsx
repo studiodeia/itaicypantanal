@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { BiodiversidadeSection } from "./BiodiversidadeSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.biodiversidade;
+const content = nossoImpactoDefaults.pt.biodiversidade;
 
 describe("BiodiversidadeSection", () => {
   it("renders the section label", () => {

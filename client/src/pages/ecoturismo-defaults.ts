@@ -1,6 +1,7 @@
 import type { EcoturismoPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const ecoturismoDefaults: EcoturismoPageContent = {
+const pt: EcoturismoPageContent = {
   hero: {
     label: "ECOTURISMO",
     heading: "Imersão Autêntica na Natureza Selvagem do Pantanal",
@@ -145,3 +146,5 @@ export const ecoturismoDefaults: EcoturismoPageContent = {
     ],
   },
 };
+
+export const ecoturismoDefaults: LocalizedDefaults<"/ecoturismo"> = { pt, en: pt, es: pt };

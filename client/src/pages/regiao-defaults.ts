@@ -1,6 +1,7 @@
 import type { RegiaoPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const regiaoDefaults: RegiaoPageContent = {
+const pt: RegiaoPageContent = {
   hero: {
     label: "A REGIAO",
     heading: "Pantanal Sul-Matogrossense",
@@ -164,3 +165,5 @@ export const regiaoDefaults: RegiaoPageContent = {
     ],
   },
 };
+
+export const regiaoDefaults: LocalizedDefaults<"/regiao"> = { pt, en: pt, es: pt };

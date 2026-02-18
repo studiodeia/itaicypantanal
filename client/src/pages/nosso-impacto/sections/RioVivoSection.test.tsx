@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { RioVivoSection } from "./RioVivoSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.rioVivo;
+const content = nossoImpactoDefaults.pt.rioVivo;
 
 describe("RioVivoSection", () => {
   it("renders the section label", () => {

@@ -1,6 +1,7 @@
 import type { ContatoPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const contatoDefaults: ContatoPageContent = {
+const pt: ContatoPageContent = {
   hero: {
     label: "PREPARE SUA EXPEDIÇÃO",
     heading: "Fale com Nossos Especialistas",
@@ -43,3 +44,5 @@ export const contatoDefaults: ContatoPageContent = {
   },
   mapCoords: { lat: -15.87, lng: -56.08 },
 };
+
+export const contatoDefaults: LocalizedDefaults<"/contato"> = { pt, en: pt, es: pt };

@@ -1,6 +1,7 @@
 import type { BirdwatchingPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const birdwatchingDefaults: BirdwatchingPageContent = {
+const pt: BirdwatchingPageContent = {
   hero: {
     label: "OBSERVAÇÃO DE AVES",
     heading: "Observação de Espécies Raras em Habitat Intocado",
@@ -108,3 +109,5 @@ export const birdwatchingDefaults: BirdwatchingPageContent = {
     ],
   },
 };
+
+export const birdwatchingDefaults: LocalizedDefaults<"/observacao-de-aves"> = { pt, en: pt, es: pt };

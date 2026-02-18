@@ -56,6 +56,7 @@ function normalizeRatesRows(rows: AnyRecord[]) {
     .map((row, index) => {
       const category =
         asString(row.category) ||
+        asString(row.roomTypeName) ||
         asString(row.roomType) ||
         asString(row.room_type) ||
         asString(row.roomName) ||
@@ -108,6 +109,7 @@ function buildRatesAnswer(
   hasResults: boolean,
   bookingEngineUrl: string,
   disclaimer: string,
+  preview: string[],
 ): string {
   if (!hasResults) {
     return [
@@ -119,15 +121,20 @@ function buildRatesAnswer(
 
   return [
     `Encontrei tarifas atualizadas. Consulte e finalize no motor oficial: ${bookingEngineUrl}`,
+    preview.length > 0 ? `Opcoes: ${preview.join(" | ")}` : "",
     disclaimer,
-  ].join(" ");
+  ]
+    .filter((part) => part.trim().length > 0)
+    .join(" ");
 }
 
 function getCloudbedsUnavailableMessage(config: AgentConfig): string {
   const enabledByEnv = (process.env.CLOUDBEDS_ENABLED || "").trim().toLowerCase() === "true";
   const hasClient = Boolean((process.env.CLOUDBEDS_CLIENT_ID || "").trim());
   const hasSecret = Boolean((process.env.CLOUDBEDS_CLIENT_SECRET || "").trim());
-  const hasAccessToken = Boolean((process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim());
+  const hasAccessToken = Boolean(
+    ((process.env.CLOUDBEDS_API_KEY || "").trim() || (process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim()).length > 0,
+  );
   const hasRefreshToken = Boolean((process.env.CLOUDBEDS_REFRESH_TOKEN || "").trim());
 
   if (enabledByEnv && hasClient && hasSecret && !hasAccessToken && !hasRefreshToken) {
@@ -199,6 +206,9 @@ export function createGetRatesTool(config: AgentConfig) {
         const rows = extractRows(raw);
         const normalized = normalizeRatesRows(rows);
         const hasResults = normalized.length > 0;
+        const preview = normalized
+          .slice(0, 3)
+          .map((row) => `${row.category} (a partir de ${row.amount} ${row.currency})`);
 
         return {
           checkIn,
@@ -208,7 +218,7 @@ export function createGetRatesTool(config: AgentConfig) {
           roomType: roomType || null,
           currency,
           shouldHandoff: !hasResults,
-          answer: buildRatesAnswer(hasResults, config.bookingEngineUrl, disclaimer),
+          answer: buildRatesAnswer(hasResults, config.bookingEngineUrl, disclaimer, preview),
           disclaimer,
           bookingEngineUrl: config.bookingEngineUrl,
           rates: normalized.slice(0, 6),

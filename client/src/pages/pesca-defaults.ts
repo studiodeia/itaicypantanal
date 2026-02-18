@@ -1,6 +1,7 @@
 import type { PescaPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const pescaDefaults: PescaPageContent = {
+const pt: PescaPageContent = {
   hero: {
     label: "PESCA ESPORTIVA",
     heading: "Pesca Esportiva de Alta Performance em Zonas Exclusivas",
@@ -144,3 +145,5 @@ export const pescaDefaults: PescaPageContent = {
     ],
   },
 };
+
+export const pescaDefaults: LocalizedDefaults<"/pesca"> = { pt, en: pt, es: pt };

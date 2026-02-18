@@ -1,6 +1,7 @@
 import type { CulinariaPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const culinariaDefaults: CulinariaPageContent = {
+const pt: CulinariaPageContent = {
   hero: {
     label: "CULINÁRIA",
     heading: "Onde o Pantanal Vira Alimento",
@@ -140,3 +141,5 @@ export const culinariaDefaults: CulinariaPageContent = {
     ],
   },
 };
+
+export const culinariaDefaults: LocalizedDefaults<"/culinaria"> = { pt, en: pt, es: pt };

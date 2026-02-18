@@ -3,8 +3,8 @@ import { render, screen } from "@testing-library/react";
 import { NotFoundHeroSection } from "./NotFoundHeroSection";
 import { notFoundDefaults } from "../../not-found-defaults";
 
-const content = notFoundDefaults.hero;
-const buttonText = notFoundDefaults.buttonText;
+const content = notFoundDefaults.pt.hero;
+const buttonText = notFoundDefaults.pt.buttonText;
 
 describe("NotFoundHeroSection", () => {
   it("renders the 404 label", () => {

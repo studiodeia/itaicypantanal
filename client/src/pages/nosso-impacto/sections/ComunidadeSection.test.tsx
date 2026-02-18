@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { ComunidadeSection } from "./ComunidadeSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.comunidade;
+const content = nossoImpactoDefaults.pt.comunidade;
 
 describe("ComunidadeSection", () => {
   it("renders the section label", () => {

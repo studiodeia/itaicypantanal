@@ -4,9 +4,9 @@ import { ContactHeroSection } from "./ContactHeroSection";
 import { contatoDefaults } from "../../contato-defaults";
 
 const props = {
-  content: contatoDefaults.hero,
-  formTitle: contatoDefaults.formTitle,
-  steps: contatoDefaults.steps,
+  content: contatoDefaults.pt.hero,
+  formTitle: contatoDefaults.pt.formTitle,
+  steps: contatoDefaults.pt.steps,
 };
 
 describe("ContactHeroSection", () => {

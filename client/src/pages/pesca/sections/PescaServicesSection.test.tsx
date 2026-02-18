@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { PescaServicesSection } from "./PescaServicesSection";
 import { pescaDefaults } from "../../pesca-defaults";
 
-const content = pescaDefaults.services;
+const content = pescaDefaults.pt.services;
 
 describe("PescaServicesSection", () => {
   it("renders the contextual CTA card", () => {

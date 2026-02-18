@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { OperacaoConscienteSection } from "./OperacaoConscienteSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";
 
-const content = nossoImpactoDefaults.operacao;
+const content = nossoImpactoDefaults.pt.operacao;
 
 describe("OperacaoConscienteSection", () => {
   it("renders the section label", () => {

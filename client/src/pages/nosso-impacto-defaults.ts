@@ -1,6 +1,7 @@
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
+import type { LocalizedDefaults } from "@/lib/cms/page-content";
 
-export const nossoImpactoDefaults: NossoImpactoPageContent = {
+const pt: NossoImpactoPageContent = {
   hero: {
     label: "NOSSO LEGADO",
     heading: "O Pantanal de amanhã se constrói hoje.",
@@ -82,3 +83,5 @@ export const nossoImpactoDefaults: NossoImpactoPageContent = {
     buttonText: "Reservar Minha Experiência Consciente",
   },
 };
+
+export const nossoImpactoDefaults: LocalizedDefaults<"/nosso-impacto"> = { pt, en: pt, es: pt };
