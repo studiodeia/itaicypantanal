@@ -17,7 +17,7 @@ export const AccommodationsHeroSection = ({ content }: Props): JSX.Element => {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       <ProgressiveVideo
         src={content.videoMp4 ?? "/Vídeo_Pronto_e_Suave.mp4"}
         lowSrc={content.videoMp4Low ?? "/video-pronto-suave-low.mp4"}

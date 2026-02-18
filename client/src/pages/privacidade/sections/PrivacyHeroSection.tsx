@@ -14,7 +14,7 @@ export const PrivacyHeroSection = ({ content }: Props): JSX.Element => {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden bg-pantanal-dark-secondary">
+    <section className="relative flex flex-col h-[480px] md:h-[480px] lg:h-[592px] items-center justify-end w-full z-[11] overflow-hidden bg-pantanal-dark-secondary">
       {/* Menu overlay */}
       {menuOpen && (
         <div className="absolute inset-0 z-[3] glass-overlay-hero transition-all duration-300" />

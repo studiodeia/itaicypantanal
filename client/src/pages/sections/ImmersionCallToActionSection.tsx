@@ -34,7 +34,7 @@ export const ImmersionCallToActionSection = (): JSX.Element => {
         >
           <motion.p
             variants={fadeUp}
-            className="relative self-stretch font-body-lg font-[number:var(--body-lg-font-weight)] text-[#e3f7ec] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
+            className="relative self-stretch font-body-lg font-[number:var(--body-lg-font-weight)] text-[#e3f7ec] text-[20px] md:text-[length:var(--body-lg-font-size)] leading-[1.5] md:leading-[var(--body-lg-line-height)] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
           >
             {immersionCta.description}
           </motion.p>

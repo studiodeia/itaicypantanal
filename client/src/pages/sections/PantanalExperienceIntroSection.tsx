@@ -8,7 +8,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
   const { homeManifesto } = useSharedCmsSections();
 
   return (
-    <section className="flex flex-col items-center justify-center bg-pantanal-dark-secondary w-full relative z-10">
+    <section className="flex flex-col items-center justify-center bg-[#263a30] w-full relative z-10">
       <div className="flex flex-col max-w-[1440px] items-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         <motion.div
           variants={stagger}
@@ -19,7 +19,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
         >
           <motion.p
             variants={fadeIn}
-            className="w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-pantanal-light-muted text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]"
+            className="w-full font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]"
             data-testid="text-manifesto-label"
           >
             {homeManifesto.label}
@@ -27,7 +27,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
 
           <motion.h1
             variants={fadeUp}
-            className="w-full text-left font-display-lg text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]"
+            className="w-full text-left [font-family:'Playfair_Display',Helvetica] font-normal text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]"
             data-testid="text-manifesto-heading"
           >
             {homeManifesto.segments.map((segment, index) => (

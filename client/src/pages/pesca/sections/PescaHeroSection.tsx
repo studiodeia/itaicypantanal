@@ -16,7 +16,7 @@ export const PescaHeroSection = ({ content }: Props): JSX.Element => {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[920px] items-center justify-end w-full z-[11] overflow-hidden">
       <img
         src={content.backgroundImage ?? "/images/pesca-hero-bg.webp"}
         alt=""

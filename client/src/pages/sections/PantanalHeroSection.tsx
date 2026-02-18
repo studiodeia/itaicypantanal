@@ -16,7 +16,7 @@ export const PantanalHeroSection = (): JSX.Element => {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[740px] items-center justify-end w-full z-[11] overflow-hidden">
       <ProgressiveVideo
         src="/hero-background.mp4"
         lowSrc="/hero-background.mp4"
@@ -49,7 +49,7 @@ export const PantanalHeroSection = (): JSX.Element => {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-screen lg:justify-between flex-1 overflow-hidden"
+          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden"
         >
           <motion.h1
             variants={fadeUp}
@@ -59,7 +59,10 @@ export const PantanalHeroSection = (): JSX.Element => {
           >
             {homeHero.heading}
             {homeHero.headingAccent && (
-              <span className="block text-pantanal-light-highlight">
+              <span
+                className="block"
+                style={{ color: "#a88b56" }}
+              >
                 {homeHero.headingAccent}
               </span>
             )}
@@ -76,7 +79,7 @@ export const PantanalHeroSection = (): JSX.Element => {
 
         <motion.div variants={scaleIn} initial="hidden" whileInView="visible" viewport={viewport}>
           <Card
-            className="w-full lg:w-[512px] bg-[rgba(10,19,12,0.65)] rounded-[12px] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-pantanal border-0"
+            className="w-full lg:w-[512px] bg-[rgba(10,19,12,0.65)] rounded-[12px] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] border-0"
             data-testid="card-booking"
           >
             <CardContent className="flex flex-col items-start gap-6 p-6 md:p-8">
@@ -90,7 +93,7 @@ export const PantanalHeroSection = (): JSX.Element => {
                 </h2>
 
                 {/* Gold underline accent */}
-                <div className="w-8 h-screen bg-pantanal-gold" />
+                <div className="w-8 h-[2px] bg-[#ac8042]" />
 
                 <p
                   className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
@@ -104,7 +107,7 @@ export const PantanalHeroSection = (): JSX.Element => {
               <BookingDatePicker variant="hero" />
 
               {/* Disclaimer */}
-              <p className="w-full text-center text-xs leading-4 text-pantanal-light-muted font-body-xs">
+              <p className="w-full text-center text-xs leading-4 text-[#9ca3af] [font-family:'Lato',sans-serif] font-normal">
                 Garantimos o melhor preço para reservas diretas.<br />
                 Tarifas incluem sistema{" "}
                 <span className="font-bold">Premium All-Inclusive</span>

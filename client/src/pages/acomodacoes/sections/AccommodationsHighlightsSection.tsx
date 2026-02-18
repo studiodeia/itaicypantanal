@@ -7,7 +7,7 @@ type Props = { content: CmsHighlights };
 
 export const AccommodationsHighlightsSection = ({ content }: Props): JSX.Element => {
   return (
-    <section className="flex flex-col items-center w-full bg-pantanal-dark-primary">
+    <section className="flex flex-col items-center w-full">
       <div className="flex flex-col max-w-[1440px] items-center gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         {/* Title — centered */}
         <motion.h2

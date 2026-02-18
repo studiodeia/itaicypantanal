@@ -18,7 +18,7 @@ export const ArticleHeroSection = ({
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1000px] items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image (heroImage) */}
       <img
         src={`${article.heroImage}.webp`}
@@ -84,7 +84,7 @@ export const ArticleHeroSection = ({
         <motion.div className="flex flex-wrap items-center gap-4 lg:gap-8" variants={fadeUp}>
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full bg-[#446354] overflow-hidden shrink-0" />
-            <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
+            <span className="font-['Lato',sans-serif] font-bold text-[#e3f7ec] text-base lg:text-lg leading-6 lg:leading-7">
               {article.author}
             </span>
           </div>

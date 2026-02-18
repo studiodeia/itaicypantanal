@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/vitest";
 
 // Mock IntersectionObserver for Framer Motion whileInView and other observers
 if (typeof globalThis.IntersectionObserver === "undefined") {

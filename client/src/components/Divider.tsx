@@ -14,7 +14,7 @@ export const Divider = ({ theme = "dark", className }: DividerProps) => (
   <div
     className={cn(
       "w-full h-px",
-      theme === "dark" ? "bg-pantanal-border-primary" : "bg-pantanal-medium",
+      theme === "dark" ? "bg-[#f2fcf7]" : "bg-[#344E41]",
       className
     )}
     role="separator"

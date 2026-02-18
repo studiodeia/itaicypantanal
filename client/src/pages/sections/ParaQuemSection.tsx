@@ -7,7 +7,7 @@ type Props = { content: NonNullable<HomePageContent["paraQuem"]> };
 
 export const ParaQuemSection = ({ content }: Props): JSX.Element => {
   return (
-    <section className="flex flex-col items-center w-full bg-pantanal-creamDark">
+    <section className="flex flex-col items-center w-full bg-[#f5f0eb]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         {/* Header */}
         <motion.div
@@ -30,7 +30,7 @@ export const ParaQuemSection = ({ content }: Props): JSX.Element => {
             <h2 className="lg:w-[664px] shrink-0 font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#152218] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]">
               {content.heading}
             </h2>
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-pantanal-darkText-secondary text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
+            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#4a6741] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
               {content.description}
             </p>
           </motion.div>
@@ -60,7 +60,7 @@ export const ParaQuemSection = ({ content }: Props): JSX.Element => {
                 >
                   {segment.title}
                 </h3>
-                <p className="font-body-sm font-[number:var(--body-sm-font-weight)] text-pantanal-darkText-secondary text-[length:var(--body-sm-font-size)] leading-[var(--body-sm-line-height)] tracking-[var(--body-sm-letter-spacing)] [font-style:var(--body-sm-font-style)]">
+                <p className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#4a6741] text-[length:var(--body-sm-font-size)] leading-[var(--body-sm-line-height)] tracking-[var(--body-sm-letter-spacing)] [font-style:var(--body-sm-font-style)]">
                   {segment.description}
                 </p>
               </motion.div>

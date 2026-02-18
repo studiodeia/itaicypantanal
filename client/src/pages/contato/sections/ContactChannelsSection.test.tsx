@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ContactChannelsSection } from "./ContactChannelsSection";
 import { contatoDefaults } from "../../contato-defaults";

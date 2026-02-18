@@ -110,7 +110,7 @@ export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
         <div className="flex-1 flex flex-col gap-12 text-pantanal-darkText-primary min-w-0">
           {/* Intro */}
           <motion.div
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
+            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -145,7 +145,7 @@ export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
                 {section.title}
               </motion.h2>
               <motion.div
-                className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
+                className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-relaxed lg:leading-[48px] text-pantanal-darkText-primary tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)]"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
