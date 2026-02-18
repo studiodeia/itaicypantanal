@@ -1,4 +1,17 @@
 import { Helmet } from "react-helmet-async";
+import { useLanguage } from "@/i18n/context";
+
+const OG_LOCALE: Record<string, string> = {
+  pt: "pt_BR",
+  en: "en_US",
+  es: "es_ES",
+};
+
+const HTML_LANG: Record<string, string> = {
+  pt: "pt-BR",
+  en: "en",
+  es: "es",
+};
 
 const SITE_NAME = "Itaicy Pantanal Eco Lodge";
 const DEFAULT_OG_IMAGE = "/images/og-default.webp";
@@ -29,6 +42,9 @@ export function PageMeta({
   noIndex = false,
   breadcrumbs,
 }: PageMetaProps) {
+  const { lang } = useLanguage();
+  const ogLocale = OG_LOCALE[lang] ?? "pt_BR";
+  const htmlLang = HTML_LANG[lang] ?? "pt-BR";
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   const canonicalUrl = canonicalPath ? `${origin}${canonicalPath}` : undefined;
@@ -54,6 +70,7 @@ export function PageMeta({
 
   return (
     <Helmet>
+      <html lang={htmlLang} />
       <title>{fullTitle}</title>
       {description && <meta name="description" content={description} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -66,7 +83,7 @@ export function PageMeta({
       <meta property="og:image" content={ogImageUrl} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:locale" content={ogLocale} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
