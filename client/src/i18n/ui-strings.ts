@@ -192,10 +192,9 @@ export const ui = {
       blogAdventure: "Aventura",
       blogGastronomy: "Gastronomia",
       blogConservation: "Conservação",
-      blogBirdwatching: "Observação de Aves",
-      blogFishing: "Pesca",
-      blogEcotourism: "Ecoturismo",
-      blogCulture: "Cultura",
+      blogSustainability: "Sustentabilidade",
+      blogExclusiveRoutes: "Roteiros Exclusivos",
+      blogEventsWorkshops: "Eventos e Workshops",
       birdAll: "Todas",
       birdParrot: "Papagaio",
       birdAquatic: "Aquáticas",
@@ -207,10 +206,9 @@ export const ui = {
       blogAdventure: "Adventure",
       blogGastronomy: "Gastronomy",
       blogConservation: "Conservation",
-      blogBirdwatching: "Birdwatching",
-      blogFishing: "Fishing",
-      blogEcotourism: "Ecotourism",
-      blogCulture: "Culture",
+      blogSustainability: "Sustainability",
+      blogExclusiveRoutes: "Exclusive Routes",
+      blogEventsWorkshops: "Events & Workshops",
       birdAll: "All",
       birdParrot: "Parrots",
       birdAquatic: "Aquatic",
@@ -222,10 +220,9 @@ export const ui = {
       blogAdventure: "Aventura",
       blogGastronomy: "Gastronomía",
       blogConservation: "Conservación",
-      blogBirdwatching: "Avistamiento de Aves",
-      blogFishing: "Pesca",
-      blogEcotourism: "Ecoturismo",
-      blogCulture: "Cultura",
+      blogSustainability: "Sostenibilidad",
+      blogExclusiveRoutes: "Rutas Exclusivas",
+      blogEventsWorkshops: "Eventos y Talleres",
       birdAll: "Todas",
       birdParrot: "Loros",
       birdAquatic: "Acuáticas",
@@ -245,4 +242,38 @@ export function t<
   const fallback = ui[section]["pt"] as Record<string, string>;
   const k = key as string;
   return (locale?.[k] ?? fallback[k] ?? k);
+}
+
+const BLOG_CATEGORY_KEY: Record<string, keyof typeof ui.categories.pt> = {
+  "Todas": "all",
+  "Aventura": "blogAdventure",
+  "Gastronomia": "blogGastronomy",
+  "Conservação": "blogConservation",
+  "Sustentabilidade": "blogSustainability",
+  "Roteiros Exclusivos": "blogExclusiveRoutes",
+  "Eventos e Workshops": "blogEventsWorkshops",
+};
+
+const BIRD_CATEGORY_KEY: Record<string, keyof typeof ui.categories.pt> = {
+  "Todas": "birdAll",
+  "Papagaio": "birdParrot",
+  "Aquáticas": "birdAquatic",
+  "Migratórias": "birdMigratory",
+  "Noturno Perto": "birdNocturnal",
+};
+
+export function getBlogCategoryLabel(ptCategory: string, lang: Lang): string {
+  const key = BLOG_CATEGORY_KEY[ptCategory];
+  if (!key) return ptCategory;
+  const locale = ui.categories[lang] as Record<string, string> | undefined;
+  const fallback = ui.categories.pt as Record<string, string>;
+  return locale?.[key] ?? fallback[key] ?? ptCategory;
+}
+
+export function getBirdCategoryLabel(ptCategory: string, lang: Lang): string {
+  const key = BIRD_CATEGORY_KEY[ptCategory];
+  if (!key) return ptCategory;
+  const locale = ui.categories[lang] as Record<string, string> | undefined;
+  const fallback = ui.categories.pt as Record<string, string>;
+  return locale?.[key] ?? fallback[key] ?? ptCategory;
 }

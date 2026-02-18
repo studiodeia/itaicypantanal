@@ -4,6 +4,8 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "@/lib/icons";
 import type { BlogArticle } from "../data";
 import { BlogArticleCard } from "../components/BlogArticleCard";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { getBlogCategoryLabel } from "@/i18n/ui-strings";
 
 const ARTICLES_PER_PAGE = 9;
 
@@ -18,6 +20,7 @@ export const BlogCategoriesSection = ({
 }: BlogCategoriesSectionProps): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState<string>("Todas");
   const [currentPage, setCurrentPage] = useState(1);
+  const { lang } = useLanguage();
 
   const filteredArticles =
     activeCategory === "Todas"
@@ -71,7 +74,7 @@ export const BlogCategoriesSection = ({
                       : "text-[#263a30] rounded-full hover:bg-[#f5e8db]/50"
                   }`}
                 >
-                  {cat}
+                  {getBlogCategoryLabel(cat, lang)}
                 </button>
               ))}
             </div>

@@ -4,6 +4,8 @@ import { ChevronDown, ChevronLeft, ChevronRight, Search } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import type { BirdSpecies } from "../data";
 import { BirdSpeciesCard } from "../components/BirdSpeciesCard";
+import { useLanguage } from "@/i18n/context";
+import { getBirdCategoryLabel } from "@/i18n/ui-strings";
 
 const BIRDS_PER_PAGE = 9;
 
@@ -16,6 +18,7 @@ export const AllBirdsSection = ({
   allBirds,
   categories,
 }: AllBirdsSectionProps): JSX.Element => {
+  const { lang } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<string>("Todas");
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
@@ -115,7 +118,7 @@ export const AllBirdsSection = ({
                     : "text-[#263a30] rounded-full hover:bg-[#f5e8db]/50"
                 }`}
               >
-                {cat}
+                {getBirdCategoryLabel(cat, lang)}
               </button>
             ))}
           </div>
