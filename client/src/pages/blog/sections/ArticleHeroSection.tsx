@@ -18,7 +18,7 @@ export const ArticleHeroSection = ({
   }, []);
 
   return (
-    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1000px] items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image (heroImage) */}
       <img
         src={`${article.heroImage}.webp`}

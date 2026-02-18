@@ -16,7 +16,7 @@ export const PantanalHeroSection = (): JSX.Element => {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[740px] items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
       <ProgressiveVideo
         src="/hero-background.mp4"
         lowSrc="/hero-background.mp4"
@@ -49,7 +49,7 @@ export const PantanalHeroSection = (): JSX.Element => {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden"
+          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-screen lg:justify-between flex-1 overflow-hidden"
         >
           <motion.h1
             variants={fadeUp}
@@ -90,7 +90,7 @@ export const PantanalHeroSection = (): JSX.Element => {
                 </h2>
 
                 {/* Gold underline accent */}
-                <div className="w-8 h-[2px] bg-pantanal-gold" />
+                <div className="w-8 h-screen bg-pantanal-gold" />
 
                 <p
                   className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"

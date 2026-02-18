@@ -17,7 +17,7 @@ export const NotFoundHeroSection = ({ content, buttonText }: Props): JSX.Element
   }, []);
 
   return (
-    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1080px] items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
         src={content.backgroundImage}

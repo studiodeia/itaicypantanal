@@ -48,7 +48,7 @@ export const ContactHeroSection = ({ content, formTitle, steps }: Props): JSX.El
     "w-full bg-transparent border-0 border-b border-[#a8cab9] rounded-none px-0 py-3 text-[#e3f7ec] font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] placeholder:text-[#a8cab9] focus:border-[#ac8042] focus:outline-none transition-colors duration-300";
 
   return (
-    <section className="relative flex flex-col h-[844px] md:h-[680px] lg:h-[1080px] items-center justify-end w-full z-[11] overflow-hidden">
+    <section className="relative flex flex-col h-screen items-center justify-end w-full z-[11] overflow-hidden">
       {/* Background image */}
       <img
         src={content.backgroundImage ?? "/images/culinaria-cta-bg.webp"}
