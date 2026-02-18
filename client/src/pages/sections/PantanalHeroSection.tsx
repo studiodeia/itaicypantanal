@@ -108,7 +108,7 @@ export const PantanalHeroSection = (): JSX.Element => {
 
               {/* Disclaimer */}
               <p className="w-full text-center text-xs leading-4 text-[#9ca3af] [font-family:'Lato',sans-serif] font-normal">
-                Garantimos o melhor preço para reservas diretas.{" "}
+                Garantimos o melhor preço para reservas diretas.<br />
                 Tarifas incluem sistema{" "}
                 <span className="font-bold">Premium All-Inclusive</span>
               </p>

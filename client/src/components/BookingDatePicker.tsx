@@ -145,7 +145,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
 
         {/* Full-width CTA button */}
         <GoldButton
-          className="w-full h-[52px] text-sm tracking-[1.5px] uppercase disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+          className="w-full h-[52px] tracking-[1.5px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           onClick={handleSearch}
           data-testid="button-buscar-datas"
         >
