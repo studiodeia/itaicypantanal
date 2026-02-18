@@ -60,7 +60,7 @@ export const PantanalHeroSection = (): JSX.Element => {
             {homeHero.heading}
             {homeHero.headingAccent && (
               <span
-                className="block italic"
+                className="block"
                 style={{ color: "#a88b56" }}
               >
                 {homeHero.headingAccent}
@@ -70,7 +70,7 @@ export const PantanalHeroSection = (): JSX.Element => {
 
           <motion.p
             variants={fadeUp}
-            className="font-body-lg font-[number:var(--body-lg-font-weight)] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-[#f2fcf7] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)] max-w-[592px]"
+            className="font-body-lg font-[400] text-[length:var(--body-lg-font-size)] leading-[var(--body-lg-line-height)] text-[#f2fcf7] tracking-[var(--body-lg-letter-spacing)] [font-style:var(--body-lg-font-style)] max-w-[592px]"
             data-testid="text-hero-subtitle"
           >
             {homeHero.subtitle}
