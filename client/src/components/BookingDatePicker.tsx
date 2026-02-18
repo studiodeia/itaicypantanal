@@ -4,11 +4,15 @@ import { DayPicker } from "react-day-picker";
 import type { DateRange } from "react-day-picker";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
+import { enUS } from "date-fns/locale/en-US";
+import { es } from "date-fns/locale/es";
 import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 
 interface BookingDatePickerProps {
   className?: string;
@@ -47,6 +51,8 @@ const dayPickerClassNames = {
 export function BookingDatePicker({ className, variant = "hero" }: BookingDatePickerProps) {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [popoverOpen, setPopoverOpen] = useState(false);
+  const { lang } = useLanguage();
+  const dateLocale = lang === "en" ? enUS : lang === "es" ? es : ptBR;
 
   const handleSearch = useCallback(() => {
     if (!dateRange?.from) {
@@ -64,13 +70,14 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
     });
   }, [dateRange, variant]);
 
+  const datePlaceholder = t("booking", "datePlaceholder", lang);
   const checkInLabel = dateRange?.from
     ? format(dateRange.from, "dd/MM/yyyy")
-    : "DD/MM/AAAA";
+    : datePlaceholder;
 
   const checkOutLabel = dateRange?.to
     ? format(dateRange.to, "dd/MM/yyyy")
-    : "DD/MM/AAAA";
+    : datePlaceholder;
 
   if (variant === "hero") {
     return (
@@ -81,7 +88,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
             <div
               className="grid grid-cols-2 gap-3 cursor-pointer"
               role="group"
-              aria-label="Selecionar datas de check-in e check-out"
+              aria-label={t("booking", "selectAriaLabel", lang)}
               data-testid="trigger-datepicker"
             >
               {/* CHECK-IN */}
@@ -126,7 +133,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
                 }
               }}
               numberOfMonths={2}
-              locale={ptBR}
+              locale={dateLocale}
               disabled={{ before: new Date() }}
               showOutsideDays
               className="p-4"
@@ -149,7 +156,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
           onClick={handleSearch}
           data-testid="button-buscar-datas"
         >
-          Verificar Disponibilidade →
+          {t("booking", "checkAvailabilityBtn", lang)}
         </GoldButton>
       </div>
     );
@@ -159,8 +166,8 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
   const displayText = dateRange?.from
     ? dateRange.to
       ? `${format(dateRange.from, "dd/MM/yyyy")}  —  ${format(dateRange.to, "dd/MM/yyyy")}`
-      : `${format(dateRange.from, "dd/MM/yyyy")}  —  Selecione`
-    : "Selecionar datas de estadia";
+      : `${format(dateRange.from, "dd/MM/yyyy")}  —  ${t("booking", "selectCheckout", lang)}`
+    : t("booking", "selectDates", lang);
 
   return (
     <div
@@ -197,7 +204,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
                 }
               }}
               numberOfMonths={2}
-              locale={ptBR}
+              locale={dateLocale}
               disabled={{ before: new Date() }}
               showOutsideDays
               className="p-4"
@@ -220,7 +227,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
           disabled={!dateRange?.from}
           data-testid="button-buscar-datas"
         >
-          Buscar datas
+          {t("booking", "searchDates", lang)}
         </GoldButton>
       </div>
     </div>
