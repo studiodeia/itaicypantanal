@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { MotionProvider } from "@/components/MotionProvider";
+import { LanguageProvider } from "@/i18n/context";
 
 const Desktop = lazy(() =>
   import("@/pages/Desktop").then((module) => ({ default: module.Desktop })),
@@ -144,13 +145,15 @@ function AppContent() {
 
 function App() {
   return (
-    <MotionProvider>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <AppContent />
-        </TooltipProvider>
-      </QueryClientProvider>
-    </MotionProvider>
+    <LanguageProvider>
+      <MotionProvider>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <AppContent />
+          </TooltipProvider>
+        </QueryClientProvider>
+      </MotionProvider>
+    </LanguageProvider>
   );
 }
 
