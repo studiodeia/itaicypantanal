@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight, type LucideIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
+import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
 
 interface ApartmentFeature {
@@ -51,13 +52,13 @@ export const ApartmentSection = ({
           {/* Content */}
           <motion.div className="w-full lg:w-1/2 flex flex-col gap-6 md:gap-8" variants={fadeUp}>
             <h2
-              className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]"
+              className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-pantanal-light-primary text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]"
               data-testid={`text-apartment-title-${title.toLowerCase().replace(/\s+/g, "-")}`}
             >
               {title}
             </h2>
 
-            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
+            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-pantanal-light-muted text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">
               {description}
             </p>
 
@@ -66,7 +67,7 @@ export const ApartmentSection = ({
               {features.map((feature, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center gap-2 p-2 bg-[rgba(10,19,12,0.2)] rounded-lg font-body-sm font-[number:var(--body-sm-font-weight)] text-[#cfebdd] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
+                  className="inline-flex items-center gap-2 p-2 bg-[rgba(10,19,12,0.2)] rounded-lg font-body-sm font-[number:var(--body-sm-font-weight)] text-pantanal-light-tertiary text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
                 >
                   <feature.icon className="w-4 h-4 shrink-0" strokeWidth={1.5} />
                   {feature.label}
@@ -76,15 +77,16 @@ export const ApartmentSection = ({
 
             {/* CTA */}
             <div className="flex flex-col gap-6 pt-2">
-              <div className="w-full h-px bg-[rgba(168,202,185,0.2)]" />
-              <a
-                href="#"
-                className="link-hover inline-flex items-center gap-2 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] w-fit group"
+              <div className="w-full h-px bg-pantanal-border-muted/20" />
+              <button
+                type="button"
+                onClick={() => goToCloudbedsBooking({ utmContent: `apartment_${title.toLowerCase().replace(/\s+/g, "_")}` })}
+                className="link-hover inline-flex items-center gap-2 font-functional-md font-[number:var(--functional-md-font-weight)] text-pantanal-light-primary text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] w-fit group bg-transparent border-0 p-0 cursor-pointer"
                 data-testid={`link-apartment-cta-${title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {ctaText}
                 <ChevronRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2} />
-              </a>
+              </button>
             </div>
           </motion.div>
         </motion.div>

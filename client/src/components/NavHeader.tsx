@@ -205,11 +205,11 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                     className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
                       isDropdownOpen
                         ? desktopActiveDropdown === item.label
-                          ? "text-[#f2fcf7]"
-                          : "text-[#cfebdd]"
+                          ? "text-pantanal-light-secondary"
+                          : "text-pantanal-light-tertiary"
                         : isCurrentPage
-                          ? "text-[#e3f7ec]"
-                          : "text-[#a8cab9]"
+                          ? "text-pantanal-light-primary"
+                          : "text-pantanal-light-muted"
                     } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
                     data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     onMouseEnter={() => handleDesktopNavEnter(item.label)}
@@ -230,10 +230,10 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                     href={item.href}
                     className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
                       isDropdownOpen
-                        ? "text-[#cfebdd]"
+                        ? "text-pantanal-light-tertiary"
                         : isCurrentPage
-                          ? "text-[#e3f7ec]"
-                          : "text-[#a8cab9]"
+                          ? "text-pantanal-light-primary"
+                          : "text-pantanal-light-muted"
                     } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
                     data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     onMouseEnter={() => setDesktopActiveDropdown(null)}
@@ -250,7 +250,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 onOpenChange={setLanguageSwitcherOpen}
               >
                 <button
-                  className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-[#a8cab9] hover:text-[#e3f7ec] transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                  className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-pantanal-light-muted hover:text-pantanal-light-primary transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
                   data-testid="button-language"
                 >
                   PT
@@ -272,7 +272,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden text-[#e3f7ec]"
+                className="lg:hidden text-pantanal-light-primary"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
@@ -314,16 +314,16 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                       />
                     </div>
                     <div className="relative w-full glass-menu flex flex-col gap-[12px] p-[16px]">
-                      <div className="flex items-center justify-between gap-[16px] pb-[8px] border-b border-[#f2fcf7]">
+                      <div className="flex items-center justify-between gap-[16px] pb-[8px] border-b border-pantanal-border-primary">
                         <span
-                          className="[font-family:'Playfair_Display',serif] font-medium text-[32px] leading-[48px] text-[#e3f7ec] flex-1 min-w-0"
+                          className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[length:var(--heading-md-font-size)] leading-[var(--heading-md-line-height)] tracking-[var(--heading-md-letter-spacing)] text-pantanal-light-primary flex-1 min-w-0"
                           style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
                         >
                           {item.title}
                         </span>
-                        <ChevronRightIcon className="w-6 h-6 text-[#e3f7ec] shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
+                        <ChevronRightIcon className="w-6 h-6 text-pantanal-light-primary shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
                       </div>
-                      <p className="[font-family:'Lato',sans-serif] font-normal text-[14px] leading-[20px] text-[#a8cab9]">
+                      <p className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] text-pantanal-light-muted">
                         {item.description}
                       </p>
                     </div>
@@ -349,7 +349,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
             </Link>
             <div className="flex items-center gap-4">
               <button
-                className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-[#a8cab9] hover:text-[#e3f7ec] transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
+                className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-pantanal-light-muted hover:text-pantanal-light-primary transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
                 data-testid="button-language-mobile-menu"
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -372,7 +372,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-[#e3f7ec]"
+                className="text-pantanal-light-primary"
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid="button-close-mobile-menu"
               >
@@ -388,27 +388,27 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   item.hasDropdown ? (
                     <button
                       key={index}
-                      className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left"
+                      className="flex items-center justify-between px-5 py-5 border-b border-pantanal-border-light text-left"
                       onClick={() => setMobileActiveCategory(item.label)}
                       data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
-                      <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                      <span className="font-body-lg font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-pantanal-light-primary">
                         {item.label}
                       </span>
-                      <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
+                      <ChevronRightIcon className="w-6 h-6 text-pantanal-light-muted" />
                     </button>
                   ) : (
                     <Link
                       key={index}
                       href={item.href}
-                      className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left no-underline"
+                      className="flex items-center justify-between px-5 py-5 border-b border-pantanal-border-light text-left no-underline"
                       onClick={() => setMobileMenuOpen(false)}
                       data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
-                      <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                      <span className="font-body-lg font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-pantanal-light-primary">
                         {item.label}
                       </span>
-                      <ChevronRightIcon className="w-6 h-6 text-[#a8cab9]" />
+                      <ChevronRightIcon className="w-6 h-6 text-pantanal-light-muted" />
                     </Link>
                   )
                 )}
@@ -417,12 +417,12 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
               <div className="glass-menu flex flex-col items-center pb-10">
                 <div className="flex flex-col gap-10 w-full max-w-[1440px]">
                   <button
-                    className="flex items-center gap-4 p-5 border-b border-[#446354] w-full"
+                    className="flex items-center gap-4 p-5 border-b border-pantanal-border-light w-full"
                     onClick={() => setMobileActiveCategory(null)}
                     data-testid="button-mobile-menu-back"
                   >
-                    <ArrowLeftIcon className="w-7 h-7 text-[#e3f7ec] flex-shrink-0" />
-                    <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
+                    <ArrowLeftIcon className="w-7 h-7 text-pantanal-light-primary flex-shrink-0" />
+                    <span className="font-body-lg font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-pantanal-light-primary">
                       {mobileActiveCategory}
                     </span>
                   </button>
@@ -446,14 +446,14 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                         <div className="flex-1 flex flex-col gap-3">
                           <div className="flex items-center justify-between gap-4">
                             <span
-                              className="[font-family:'Playfair_Display',serif] font-medium text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]"
+                              className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[22px] md:text-[length:var(--heading-md-font-size)] leading-[32px] md:leading-[var(--heading-md-line-height)] tracking-[var(--heading-md-letter-spacing)] text-pantanal-light-primary"
                               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
                             >
                               {item.title}
                             </span>
-                            <ChevronRightIcon className="w-6 h-6 text-[#a8cab9] flex-shrink-0" />
+                            <ChevronRightIcon className="w-6 h-6 text-pantanal-light-muted flex-shrink-0" />
                           </div>
-                          <p className="[font-family:'Lato',sans-serif] font-normal text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-[#a8cab9]">
+                          <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] text-pantanal-light-muted">
                             {item.description}
                           </p>
                         </div>

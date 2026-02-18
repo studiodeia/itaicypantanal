@@ -168,7 +168,7 @@ export const AllBirdsSection = ({
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="flex items-center justify-center w-12 h-12 bg-[#f5e8db] rounded text-[#263a30] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 disabled:opacity-40 disabled:hover:translate-y-0"
+              className="flex items-center justify-center w-12 h-12 bg-pantanal-creamDark rounded-md text-pantanal-darkText-primary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 disabled:opacity-40 disabled:hover:translate-y-0"
             >
               <ChevronLeft className="w-6 h-6" strokeWidth={2} />
             </button>
@@ -178,10 +178,10 @@ export const AllBirdsSection = ({
                 <button
                   key={page}
                   onClick={() => setCurrentPage(page)}
-                  className={`flex items-center justify-center w-12 h-12 rounded font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 ${
+                  className={`flex items-center justify-center w-12 h-12 rounded-md font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 ${
                     currentPage === page
-                      ? "bg-[#ac8042] text-[#f2fcf7]"
-                      : "bg-[#f5e8db] text-[#263a30]"
+                      ? "bg-pantanal-gold text-pantanal-light-secondary"
+                      : "bg-pantanal-creamDark text-pantanal-darkText-primary"
                   }`}
                 >
                   {String(page).padStart(2, "0")}
@@ -194,7 +194,7 @@ export const AllBirdsSection = ({
                 setCurrentPage((p) => Math.min(totalPages, p + 1))
               }
               disabled={currentPage === totalPages}
-              className="flex items-center justify-center w-12 h-12 bg-[#f5e8db] rounded text-[#263a30] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 disabled:opacity-40 disabled:hover:translate-y-0"
+              className="flex items-center justify-center w-12 h-12 bg-pantanal-creamDark rounded-md text-pantanal-darkText-primary transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 disabled:opacity-40 disabled:hover:translate-y-0"
             >
               <ChevronRight className="w-6 h-6" strokeWidth={2} />
             </button>
