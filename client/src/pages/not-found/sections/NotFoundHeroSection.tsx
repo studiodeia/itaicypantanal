@@ -1,7 +1,9 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
+import { outlineButtonClass } from "@/components/pantanal/buttons/OutlineButton";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
 import type { CmsHero } from "@shared/cms-page-content";
 
@@ -74,16 +76,16 @@ export const NotFoundHeroSection = ({ content, buttonText }: Props): JSX.Element
           </motion.div>
 
           {/* Right: Button */}
-          <motion.a
-            href="/"
-            className="flex items-center justify-center h-14 px-6 border border-[#f2fcf7] rounded-[6px] text-[#f2fcf7] font-['Lato',sans-serif] font-semibold text-base lg:text-[24px] lg:leading-[32px] whitespace-nowrap shrink-0 transition-all duration-300 hover:bg-[#f2fcf7] hover:text-[#152218] hover:-translate-y-0.5 active:translate-y-0 active:opacity-90 focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]"
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
           >
-            {buttonText}
-          </motion.a>
+            <Link href="/" className={`${outlineButtonClass} no-underline shrink-0`}>
+              {buttonText}
+            </Link>
+          </motion.div>
         </div>
 
         {/* Bottom: border-top + description + scroll */}
