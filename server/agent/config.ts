@@ -1,7 +1,9 @@
+import { anthropic, createAnthropic } from "@ai-sdk/anthropic";
 import { openai, createOpenAI } from "@ai-sdk/openai";
 import type { VisitorIntent } from "./conversation-profile";
 
-export const AGENT_DEFAULT_MODEL = "gpt-5-mini";
+export const AGENT_DEFAULT_MODEL_OPENAI = "gpt-5-mini";
+export const AGENT_DEFAULT_MODEL_ANTHROPIC = "claude-3-5-sonnet-latest";
 
 function parseNumber(
   value: string | undefined,
@@ -57,14 +59,65 @@ export function getAgentFirstTokenDelayMs(intent: VisitorIntent = "general"): nu
 }
 
 export function getAgentModel() {
-  const modelId = process.env.AGENT_MODEL || AGENT_DEFAULT_MODEL;
+  const requestedModel = (process.env.AGENT_MODEL || "").trim();
+  const providerPreference = (process.env.AGENT_PROVIDER || "auto").trim().toLowerCase();
+  const hasOpenAi = Boolean(process.env.OPENAI_API_KEY?.trim());
+  const hasAnthropic = Boolean(process.env.ANTHROPIC_API_KEY?.trim());
 
-  if (process.env.OPENAI_API_KEY) {
+  const preferAnthropicByModel = requestedModel.startsWith("claude");
+  const preferOpenAiByModel =
+    requestedModel.startsWith("gpt") || requestedModel.startsWith("o");
+
+  if (providerPreference === "anthropic") {
+    if (!hasAnthropic) {
+      throw new Error("LLM provider anthropic selected but ANTHROPIC_API_KEY is missing.");
+    }
+    const provider = createAnthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    });
+    return provider(requestedModel || AGENT_DEFAULT_MODEL_ANTHROPIC);
+  }
+
+  if (providerPreference === "openai") {
+    if (!hasOpenAi) {
+      throw new Error("LLM provider openai selected but OPENAI_API_KEY is missing.");
+    }
     const provider = createOpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
-    return provider(modelId);
+    return provider(requestedModel || AGENT_DEFAULT_MODEL_OPENAI);
   }
 
-  return openai(modelId);
+  // auto
+  if (preferAnthropicByModel && hasAnthropic) {
+    const provider = createAnthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    });
+    return provider(requestedModel);
+  }
+
+  if (preferOpenAiByModel && hasOpenAi) {
+    const provider = createOpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    return provider(requestedModel);
+  }
+
+  if (hasOpenAi) {
+    const provider = createOpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    return provider(requestedModel || AGENT_DEFAULT_MODEL_OPENAI);
+  }
+
+  if (hasAnthropic) {
+    const provider = createAnthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    });
+    return provider(requestedModel || AGENT_DEFAULT_MODEL_ANTHROPIC);
+  }
+
+  throw new Error(
+    "No LLM API key configured. Set OPENAI_API_KEY or ANTHROPIC_API_KEY.",
+  );
 }

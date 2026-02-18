@@ -4761,7 +4761,9 @@
     "firecrawlFiles": {
       "wikiEN": "wikipedia-raw/en/pseudocolopteryx-acutipennis.md"
     },
-    "photos": []
+    "photos": [
+      "Pseudocolopteryx-acutipennis_tricolino-olivaceo_ML619565992.jpg"
+    ]
   },
   {
     "scientificName": "Pseudocolopteryx flaviventris",
@@ -5659,7 +5661,9 @@
     "firecrawlFiles": {
       "wikiPT": "wikipedia-raw/pt/campylorhynchus-turdinus.md"
     },
-    "photos": []
+    "photos": [
+      "Campylorhynchus-turdinus_catatau_ML619547231.jpg"
+    ]
   },
   {
     "scientificName": "Cantorchilus leucotis",
@@ -6239,7 +6243,9 @@
     "firecrawlFiles": {
       "wikiPT": "wikipedia-raw/pt/agelasticus-cyanopus.md"
     },
-    "photos": []
+    "photos": [
+      "Agelasticus-cyanopus_carretao-do-oeste_ML619598388.jpg"
+    ]
   },
   {
     "scientificName": "Geothlypis aequinoctialis",

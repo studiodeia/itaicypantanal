@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { getBlogArticleUrl } from "../cms";
 import type { BlogArticle } from "../data";
@@ -10,9 +11,9 @@ export const RelatedArticleCard = ({
   article,
 }: RelatedArticleCardProps): JSX.Element => {
   return (
-    <a
+    <Link
       href={getBlogArticleUrl(article)}
-      className="flex flex-col items-start w-full group"
+      className="flex flex-col items-start w-full group no-underline"
     >
       {/* Image */}
       <div className="relative aspect-[432/242] w-full rounded-lg overflow-hidden">
@@ -51,6 +52,6 @@ export const RelatedArticleCard = ({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };

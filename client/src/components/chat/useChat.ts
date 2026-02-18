@@ -16,6 +16,10 @@ type ChatConfig = {
   disclaimer: string;
   bookingEngineUrl: string;
   handoffWhatsapp: string;
+  handoffEmail: string;
+  handoffPhone: string;
+  handoffServiceHours: string;
+  handoffSlaHours: number;
 };
 
 type SuggestedActions = {
@@ -35,14 +39,27 @@ type UseChatState = {
   clearError: () => void;
 };
 
+function getStaticGreeting(locale: AgentLocale): string {
+  if (locale === "en") {
+    return "Hello. This is Itaicy digital service. I can help with availability, rates, and lodge information.";
+  }
+  if (locale === "es") {
+    return "Hola. Este es el servicio digital de Itaicy. Puedo ayudarte con disponibilidad, tarifas e informacion de la posada.";
+  }
+  return "Ola. Este e o atendimento digital da Itaicy. Posso ajudar com disponibilidade, tarifas e informacoes da pousada.";
+}
+
 const defaultConfig: ChatConfig = {
   locale: "pt",
-  greeting:
-    "Ola. Este e o atendimento digital da Itaicy. Posso ajudar com disponibilidade, tarifas e informacoes da pousada.",
+  greeting: getStaticGreeting("pt"),
   disclaimer:
     "Atendimento digital sujeito a confirmacao da equipe para politicas e condicoes comerciais.",
   bookingEngineUrl: "https://bookings.cloudbeds.com",
   handoffWhatsapp: "",
+  handoffEmail: "",
+  handoffPhone: "",
+  handoffServiceHours: "",
+  handoffSlaHours: 24,
 };
 
 const toolLabels: Record<string, string> = {
@@ -84,10 +101,7 @@ function randomRequestId(): string {
   return "00000000-0000-4000-8000-000000000000";
 }
 
-function pickLocalizedText(
-  copy: { pt: string; en: string; es: string },
-  locale: AgentLocale,
-): string {
+function pickLocalizedText(copy: { pt: string; en: string; es: string }, locale: AgentLocale): string {
   if (locale === "en") return copy.en;
   if (locale === "es") return copy.es;
   return copy.pt;
@@ -101,6 +115,14 @@ function detectLocale(message: string): AgentLocale {
   if (/\b(hello|booking|availability|rate|price|reservation)\b/.test(normalized)) {
     return "en";
   }
+  return "pt";
+}
+
+function detectPreferredLocale(): AgentLocale {
+  if (typeof navigator === "undefined") return "pt";
+  const lang = (navigator.language || "").toLowerCase();
+  if (lang.startsWith("es")) return "es";
+  if (lang.startsWith("en")) return "en";
   return "pt";
 }
 
@@ -177,14 +199,29 @@ export function useChat(): UseChatState {
         const cmsConfig = json.config;
         if (!cmsConfig || cancelled) return;
 
-        const locale: AgentLocale = "pt";
+        const locale = detectPreferredLocale();
+
         setConfig((current) => ({
           ...current,
           locale,
+          greeting: getStaticGreeting(locale),
           disclaimer: pickLocalizedText(cmsConfig.disclaimers.policyReference, locale),
           bookingEngineUrl: cmsConfig.bookingEngineUrl,
           handoffWhatsapp: cmsConfig.handoff.whatsapp,
+          handoffEmail: cmsConfig.handoff.email,
+          handoffPhone: cmsConfig.handoff.emergencyPhone,
+          handoffServiceHours: cmsConfig.handoff.serviceHours,
+          handoffSlaHours: cmsConfig.handoff.slaHours,
         }));
+
+        setMessages((current) => {
+          const hasUserMessage = current.some((item) => item.role === "user");
+          if (hasUserMessage) return current;
+          if (current.length === 1 && current[0]?.role === "assistant") {
+            return [{ ...current[0], text: getStaticGreeting(locale) }];
+          }
+          return current;
+        });
       } catch {
         // keep default config
       }
@@ -247,9 +284,7 @@ export function useChat(): UseChatState {
           if (event.event === "token") {
             setMessages((current) =>
               current.map((item) =>
-                item.id === assistantId
-                  ? { ...item, text: `${item.text}${event.text}` }
-                  : item,
+                item.id === assistantId ? { ...item, text: `${item.text}${event.text}` } : item,
               ),
             );
             continue;
@@ -264,6 +299,7 @@ export function useChat(): UseChatState {
             setActiveTool(null);
 
             if (event.status === "error") {
+              setSuggestedActions((current) => ({ ...current, handoff: true }));
               setError(
                 normalizeErrorMessage(
                   event.error ?? "Falha ao consultar um servico do atendimento digital.",
@@ -279,17 +315,25 @@ export function useChat(): UseChatState {
                 setSuggestedActions((current) => ({ ...current, handoff: true }));
               }
             }
+
+            if (event.status === "fallback") {
+              setSuggestedActions((current) => ({ ...current, handoff: true }));
+            }
             continue;
           }
 
           if (event.event === "done") {
             setSessionId(event.session_id);
             setActiveTool(null);
+            if (event.grounding_level === "none") {
+              setSuggestedActions((current) => ({ ...current, handoff: true }));
+            }
             continue;
           }
 
           if (event.event === "error") {
             setActiveTool(null);
+            setSuggestedActions((current) => ({ ...current, handoff: true }));
             setError(normalizeErrorMessage(event.message));
           }
         }
@@ -336,6 +380,7 @@ export function useChat(): UseChatState {
             ? normalizeErrorMessage(caughtError.message)
             : "Erro inesperado no atendimento digital.";
 
+        setSuggestedActions((current) => ({ ...current, handoff: true }));
         setError(fallback);
         setMessages((current) =>
           current.map((item) =>

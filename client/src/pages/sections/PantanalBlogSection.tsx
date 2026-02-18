@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ChevronRightIcon } from "@/lib/icons";
 import {
   Avatar,
@@ -6,7 +7,6 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import type { HomePageContent } from "@shared/cms-page-content";
@@ -90,9 +90,9 @@ export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Elemen
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
           {blogPosts.map((post) => (
             <motion.div key={post.id} variants={cardItem}>
+            <Link href="/blog" className="no-underline block">
             <Card
-              key={post.id}
-              className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink lg:w-[416px]"
+              className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink lg:w-[416px] cursor-pointer"
               data-testid={`card-blog-${post.id}`}
             >
               <div
@@ -135,13 +135,14 @@ export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Elemen
                 </div>
               </CardContent>
             </Card>
+            </Link>
             </motion.div>
           ))}
         </motion.div>
 
-        <Button
-          variant="ghost"
-          className="flex items-center justify-center gap-4 px-0 py-3 md:py-4 w-full h-auto border-b border-[#f2fcf7] rounded-none"
+        <Link
+          href="/blog"
+          className="flex items-center justify-center gap-4 px-0 py-3 md:py-4 w-full border-b border-[#f2fcf7] no-underline"
           data-testid="button-view-all-blog"
         >
           <div className="flex items-center justify-between flex-1">
@@ -151,7 +152,7 @@ export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Elemen
 
             <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 text-[#e3f7ec]" />
           </div>
-        </Button>
+        </Link>
       </div>
     </section>
   );

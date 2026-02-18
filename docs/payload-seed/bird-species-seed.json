@@ -1615,9 +1615,9 @@
       "description": "Tiranídeo migratório de crista curta e ventre amarelo-dourado, que alcança o Pantanal durante o inverno austral. Habita brejos e áreas úmidas com vegetação emergente.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocolopteryx_acutipennis_Subtropical_Dordito%3B_Mongagu%C3%A1%2C_S%C3%A3o_Paulo%2C_Brazil_(cropped).jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Pseudocolopteryx-acutipennis_tricolino-olivaceo_ML619565992.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Tyrannidae",
       "commonNameEN": "Subtropical Doradito"
@@ -1923,9 +1923,9 @@
       "description": "Maior corruíra do Brasil, vocaliza alto e frequenta florestas secas, pântanos e matas úmidas de baixada. Encontrada em diversos ambientes florestais do Pantanal.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Campylorhynchus_turdinus_unicolor_581024203.jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Campylorhynchus-turdinus_catatau_ML619547231.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Troglodytidae",
       "commonNameEN": "Thrush-like Wren"
@@ -2119,9 +2119,9 @@
       "description": "Icterídeo de plumagem negra uniforme, restrito a ambientes de pântano e brejos. Macho inteiramente negro; fêmea e jovens com tons pardos e estriados.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Unicolored_Blackbird_(Agelasticus_cyanopus)_male.jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Agelasticus-cyanopus_carretao-do-oeste_ML619598388.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Icteridae",
       "commonNameEN": "Unicolored Blackbird"
@@ -5918,9 +5918,9 @@
         "A paciência é essencial — a ave pode demorar a se expor, mas eventualmente pousa em galhos periféricos"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -5951,9 +5951,9 @@
         "A luz lateral filtrada pela copa das árvores realça a coloração perolada do ventre"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "risadinha",
-        "filipe"
+        "risadinha"
       ]
     },
     {
@@ -5984,9 +5984,9 @@
         "O contraste entre o ventre amarelo e as partes superiores cinza rende boas composições com luz lateral"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6017,9 +6017,9 @@
         "A mancha auricular escura é mais visível com iluminação lateral — posicione-se adequadamente"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6050,9 +6050,9 @@
         "As bordas de capões e árvores isoladas em campo aberto oferecem as melhores condições de luz"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "filipe"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6062,13 +6062,13 @@
       "description": "Tiranídeo migratório de crista curta e ventre amarelo-dourado, que alcança o Pantanal durante o inverno austral. Habita brejos e áreas úmidas com vegetação emergente.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocolopteryx_acutipennis_Subtropical_Dordito%3B_Mongagu%C3%A1%2C_S%C3%A3o_Paulo%2C_Brazil_(cropped).jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Pseudocolopteryx-acutipennis_tricolino-olivaceo_ML619565992.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Tyrannidae",
       "commonNameEN": "Subtropical Doradito",
-      "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocolopteryx_acutipennis_Subtropical_Dordito%3B_Mongagu%C3%A1%2C_S%C3%A3o_Paulo%2C_Brazil_(cropped).jpg",
+      "heroImage": "/images/birds/Pseudocolopteryx-acutipennis_tricolino-olivaceo_ML619565992.jpg",
       "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. Possui distribuição ampla, porém a população está possivelmente em declínio. É considerado raro na Colômbia e no Equador, e localmente incomum no Brasil.",
       "size": "Mede de 11 a 12 cm de comprimento e pesa entre 7 e 10 g.",
       "habitat": "Habita brejos, áreas alagadas com vegetação emergente, campos úmidos com juncos e áreas arbustivas próximas a cursos d'água. No Pantanal, ocorre em ambientes palustres durante o período não reprodutivo.",
@@ -6116,9 +6116,9 @@
         "A crista rufescente e o ventre amarelo são as marcas diagnósticas — procure iluminação que as realce"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "sebinho-de-olho-de-ouro",
-        "risadinha",
-        "filipe"
+        "risadinha"
       ]
     },
     {
@@ -6149,9 +6149,9 @@
         "Fotografe em diferentes ângulos para capturar características diagnósticas da espécie"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6182,9 +6182,9 @@
         "A ausência de marcas conspícuas exige boas condições de luz para uma fotografia de identificação adequada"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6215,9 +6215,9 @@
         "A ave ocasionalmente pousa em galhos expostos na borda externa dos arbustos — esteja preparado para esses momentos breves"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6249,9 +6249,9 @@
         "Não negligencie a fêmea — sua plumagem discreta com peito estriado oferece registros fotográficos de interesse comparativo"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6283,9 +6283,9 @@
         "A luz difusa do início da manhã reduz o contraste excessivo típico de fotos contra o céu"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6317,9 +6317,9 @@
         "Diferencie da maria-cavaleira-de-rabo-enferrujado pela crista mais curta e pela vocalização"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6351,9 +6351,9 @@
         "Procure ninhos ativos em cavidades — a espécie retorna com frequência ao local de nidificação"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6385,9 +6385,9 @@
         "Registre o momento da captura de parasitas sobre o gado para documentar o comportamento mutualístico"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6419,9 +6419,9 @@
         "O ventre amarelo vivo é realçado com luz frontal suave, evitando sombras duras no bico escuro"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6453,9 +6453,9 @@
         "Compare lado a lado com fotos do bem-te-vi para material educativo sobre espécies semelhantes"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6487,9 +6487,9 @@
         "Documente a entrada e saída de cavidades de nidificação para séries comportamentais"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6521,9 +6521,9 @@
         "A luz do início da manhã em ambientes abertos de cerrado oferece iluminação uniforme"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6555,9 +6555,9 @@
         "Use 300-500 mm para retratos detalhados; a espécie tolera proximidade moderada"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6589,9 +6589,9 @@
         "Registre interações com outros tiranídeos semelhantes para comparação de espécies"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6623,9 +6623,9 @@
         "A luz do início da manhã em áreas alagadas oferece tons quentes que valorizam a plumagem"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6657,9 +6657,9 @@
         "Reflexos na água calma podem enriquecer a composição, especialmente nas primeiras horas da manhã"
       ],
       "relatedSlugs": [
+        "tricolino-olivaceo",
         "amarelinho-do-junco",
-        "sebinho-de-olho-de-ouro",
-        "risadinha"
+        "sebinho-de-olho-de-ouro"
       ]
     },
     {
@@ -6793,13 +6793,13 @@
       "description": "Maior corruíra do Brasil, vocaliza alto e frequenta florestas secas, pântanos e matas úmidas de baixada. Encontrada em diversos ambientes florestais do Pantanal.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Campylorhynchus_turdinus_unicolor_581024203.jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Campylorhynchus-turdinus_catatau_ML619547231.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Troglodytidae",
       "commonNameEN": "Thrush-like Wren",
-      "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Campylorhynchus_turdinus_unicolor_581024203.jpg",
+      "heroImage": "/images/birds/Campylorhynchus-turdinus_catatau_ML619547231.jpg",
       "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie possui ampla distribuição na América do Sul e ocorre em diversos tipos de habitat florestal, incluindo áreas degradadas.",
       "size": "Mede cerca de 22 cm de comprimento.",
       "habitat": "Habita florestas secas tropicais e subtropicais, matas úmidas de baixada, áreas pantanosas com vegetação arbórea e matas secundárias degradadas. No Pantanal, ocorre em capões, matas ciliares e áreas de vegetação densa, incluindo ambientes com algum grau de inundação sazonal.",
@@ -7244,13 +7244,13 @@
       "description": "Icterídeo de plumagem negra uniforme, restrito a ambientes de pântano e brejos. Macho inteiramente negro; fêmea e jovens com tons pardos e estriados.",
       "category": "Passeriformes",
       "tag": "Fauna",
-      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Unicolored_Blackbird_(Agelasticus_cyanopus)_male.jpg",
-      "author": "",
-      "date": "",
+      "src": "/images/birds/Agelasticus-cyanopus_carretao-do-oeste_ML619598388.jpg",
+      "author": "João Andriola",
+      "date": "Maio de 2024",
       "taxonomicOrder": "Passeriformes",
       "family": "Icteridae",
       "commonNameEN": "Unicolored Blackbird",
-      "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Unicolored_Blackbird_(Agelasticus_cyanopus)_male.jpg",
+      "heroImage": "/images/birds/Agelasticus-cyanopus_carretao-do-oeste_ML619598388.jpg",
       "conservationStatus": "Classificado como Pouco Preocupante (LC) pela IUCN. A espécie depende de zonas úmidas, habitat abundante no Pantanal.",
       "size": "Mede cerca de 18 cm de comprimento, com plumagem negra uniforme no macho e tons pardos estriados na fêmea.",
       "habitat": "Restrito a ambientes de pântano, brejos e áreas alagadas com vegetação emergente. No Pantanal, habita margens de baías, corixos e campos alagados onde crescem taboas, juncos e gramíneas aquáticas.\n\nDependente de zonas úmidas, raramente é observado em ambientes secos ou distantes de corpos d'água.",

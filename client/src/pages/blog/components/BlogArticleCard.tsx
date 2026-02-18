@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { getBlogArticleUrl } from "../cms";
@@ -13,9 +14,9 @@ export const BlogArticleCard = ({
   showDescription = false,
 }: BlogArticleCardProps): JSX.Element => {
   return (
-    <a
+    <Link
       href={getBlogArticleUrl(article)}
-      className="relative flex flex-col justify-end w-full h-[400px] md:h-[450px] lg:h-[510px] rounded-lg overflow-hidden group"
+      className="relative flex flex-col justify-end w-full h-[400px] md:h-[450px] lg:h-[510px] rounded-lg overflow-hidden group no-underline"
     >
       {/* Background image */}
       <OptimizedImage
@@ -80,7 +81,7 @@ export const BlogArticleCard = ({
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

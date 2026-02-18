@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Vercel Serverless Function entry point.
  *
@@ -13,10 +14,12 @@ import path from "path";
 import fs from "fs";
 import { registerRoutes } from "./routes";
 import { injectRouteMeta } from "./seo-meta";
+import { canonicalHostRedirectMiddleware } from "./canonical-host";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(canonicalHostRedirectMiddleware);
 
 let initialized = false;
 let indexHtml = "";
@@ -87,4 +90,3 @@ export default async function handler(req: Request, res: Response) {
     res.status(500).json({ error: err?.message || "Internal server error" });
   }
 }
-

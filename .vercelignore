@@ -1,0 +1,13 @@
+# Build artifacts (generated during vercel build)
+api/index.js
+.vercel/output/
+
+# Large media (served from CDN/external)
+*.mp4
+
+# Development-only
+payload-cms/
+scripts/bird-enrichment/
+scripts/figma-assets.ts
+*.test.ts
+*.test.tsx

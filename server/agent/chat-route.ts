@@ -45,6 +45,19 @@ function mapErrorCode(error: unknown): {
   const message = error instanceof Error ? error.message : "Unexpected error";
   const lower = message.toLowerCase();
 
+  if (
+    lower.includes("api key is missing") ||
+    lower.includes("no llm api key configured") ||
+    lower.includes("llm provider")
+  ) {
+    return {
+      code: "upstream_unavailable",
+      message:
+        "Atendimento digital temporariamente indisponivel por configuracao do provedor de IA.",
+      retryable: false,
+    };
+  }
+
   if (lower.includes("no output generated")) {
     return {
       code: "internal",

@@ -7,6 +7,8 @@ import { handleChatRequest } from "./agent/chat-route";
 import { handleFaqReindexRequest } from "./agent/reindex-route";
 import { handleAgentMetricsRequest } from "./agent/metrics-route";
 import { handleCloudbedsStatusRequest } from "./agent/cloudbeds-status-route";
+import { handleCloudbedsOAuthCallback } from "./agent/cloudbeds-oauth-callback-route";
+import { handleCloudbedsOAuthStart } from "./agent/cloudbeds-oauth-start-route";
 import { registerPanelRoutes } from "./panel/routes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -166,6 +168,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/agent/cloudbeds/status", async (req, res) => {
     await handleCloudbedsStatusRequest(req, res);
+  });
+
+  app.get("/api/agent/cloudbeds/oauth/callback", async (req, res) => {
+    await handleCloudbedsOAuthCallback(req, res);
+  });
+
+  app.get("/api/agent/cloudbeds/oauth/start", async (req, res) => {
+    await handleCloudbedsOAuthStart(req, res);
   });
 
   registerPanelRoutes(app);

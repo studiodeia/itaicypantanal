@@ -54,11 +54,15 @@ export function loadCloudbedsConfig(env: Env = process.env): CloudbedsConfig {
   const scope = (env.CLOUDBEDS_SCOPE || "").trim();
 
   const hasStaticToken = staticAccessToken.length > 0;
+  const hasRefreshToken = initialRefreshToken.length > 0;
   const hasOAuthCredentials =
     oauthTokenUrl.length > 0 && clientId.length > 0 && clientSecret.length > 0;
 
   const enabledByEnv = parseBoolean(env.CLOUDBEDS_ENABLED, false);
-  const enabled = enabledByEnv && apiBaseUrl.length > 0 && (hasStaticToken || hasOAuthCredentials);
+  const enabled =
+    enabledByEnv &&
+    apiBaseUrl.length > 0 &&
+    (hasStaticToken || (hasOAuthCredentials && hasRefreshToken));
 
   return {
     enabled,
@@ -82,4 +86,3 @@ export function loadCloudbedsConfig(env: Env = process.env): CloudbedsConfig {
     circuitOpenMs: parseNumber(env.CLOUDBEDS_CIRCUIT_OPEN_MS, 60_000, 1000, 30 * 60_000),
   };
 }
-

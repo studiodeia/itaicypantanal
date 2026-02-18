@@ -468,6 +468,27 @@
       "scientificName": "Tyto furcata",
       "commonNamePT": "suindara",
       "note": null
+    },
+    {
+      "filename": "Agelasticus-cyanopus_carretao-do-oeste_ML619598388.jpg",
+      "imgId": "ML619598388",
+      "scientificName": "Agelasticus cyanopus",
+      "commonNamePT": "carretao-do-oeste",
+      "note": "eBird/Macaulay Library - João Vitor Andriola - Pousada Itaicy Pantanal"
+    },
+    {
+      "filename": "Pseudocolopteryx-acutipennis_tricolino-olivaceo_ML619565992.jpg",
+      "imgId": "ML619565992",
+      "scientificName": "Pseudocolopteryx acutipennis",
+      "commonNamePT": "tricolino-olivaceo",
+      "note": "eBird/Macaulay Library - João Vitor Andriola - Pousada Itaicy Pantanal"
+    },
+    {
+      "filename": "Campylorhynchus-turdinus_catatau_ML619547231.jpg",
+      "imgId": "ML619547231",
+      "scientificName": "Campylorhynchus turdinus",
+      "commonNamePT": "catatau",
+      "note": "eBird/Macaulay Library - João Vitor Andriola - Pousada Itaicy Pantanal"
     }
   ],
   "nonBirds": [
@@ -508,9 +529,9 @@
     }
   ],
   "summary": {
-    "totalFiles": 73,
-    "birdPhotos": 67,
-    "uniqueSpecies": 54,
+    "totalFiles": 76,
+    "birdPhotos": 70,
+    "uniqueSpecies": 57,
     "nonBirdPhotos": 7,
     "speciesWithMultiplePhotos": [
       "Egretta caerulea (2)",

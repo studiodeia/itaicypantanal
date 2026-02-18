@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
@@ -100,9 +101,9 @@ export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
         </motion.div>
 
         {/* CTA link */}
-        <a
+        <Link
           href="/observacao-de-aves"
-          className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
+          className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group no-underline"
         >
           <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
             Veja nosso inventário de vida selvagem
@@ -111,7 +112,7 @@ export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
             className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"
             strokeWidth={2}
           />
-        </a>
+        </Link>
       </div>
     </section>
   );

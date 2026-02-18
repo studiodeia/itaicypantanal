@@ -22,6 +22,16 @@ function asString(value: unknown): string {
   return typeof value === "string" ? value : "";
 }
 
+function asBoolean(value: unknown): boolean | null {
+  if (typeof value === "boolean") return value;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    if (normalized === "true") return true;
+    if (normalized === "false") return false;
+  }
+  return null;
+}
+
 function extractRows(raw: unknown): AnyRecord[] {
   if (Array.isArray(raw)) {
     return raw.filter(isRecord);
@@ -57,20 +67,41 @@ function normalizeRatesRows(rows: AnyRecord[]) {
         asNumber(row.price) ??
         asNumber(row.rate) ??
         asNumber(row.value) ??
+        asNumber(row.roomRate) ??
+        asNumber(row.totalRate) ??
         asNumber((row.ratePlan as AnyRecord | undefined)?.amount);
 
       const currency =
         asString(row.currency) ||
+        asString(row.currencyCode) ||
+        asString(row.propertyCurrency) ||
         asString((row.ratePlan as AnyRecord | undefined)?.currency) ||
         "BRL";
+
+      const roomsAvailable =
+        asNumber(row.roomsAvailable) ??
+        asNumber(row.available) ??
+        asNumber(row.inventory) ??
+        null;
+      const isDerived = asBoolean(row.isDerived);
 
       return {
         category,
         amount,
         currency,
+        roomsAvailable,
+        ratePlanName:
+          asString(row.ratePlanNamePublic) || asString(row.ratePlanNamePrivate) || null,
+        roomTypeId: asString(row.roomTypeID) || null,
+        isDerived: isDerived === true,
       };
     })
-    .filter((row) => row.amount !== null && row.amount > 0);
+    .filter(
+      (row) =>
+        row.amount !== null &&
+        row.amount > 0 &&
+        (typeof row.roomsAvailable !== "number" || row.roomsAvailable > 0),
+    );
 }
 
 function buildRatesAnswer(
@@ -92,6 +123,20 @@ function buildRatesAnswer(
   ].join(" ");
 }
 
+function getCloudbedsUnavailableMessage(config: AgentConfig): string {
+  const enabledByEnv = (process.env.CLOUDBEDS_ENABLED || "").trim().toLowerCase() === "true";
+  const hasClient = Boolean((process.env.CLOUDBEDS_CLIENT_ID || "").trim());
+  const hasSecret = Boolean((process.env.CLOUDBEDS_CLIENT_SECRET || "").trim());
+  const hasAccessToken = Boolean((process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim());
+  const hasRefreshToken = Boolean((process.env.CLOUDBEDS_REFRESH_TOKEN || "").trim());
+
+  if (enabledByEnv && hasClient && hasSecret && !hasAccessToken && !hasRefreshToken) {
+    return "A integracao Cloudbeds esta pendente de autorizacao OAuth. Posso te conectar com nossa equipe para confirmar tarifas agora.";
+  }
+
+  return config.fallback.apiUnavailable.pt;
+}
+
 export function createGetRatesTool(config: AgentConfig) {
   return tool({
     description:
@@ -110,10 +155,12 @@ export function createGetRatesTool(config: AgentConfig) {
         message: "checkOut must be after checkIn",
       }),
     execute: async ({ checkIn, checkOut, adults, children, roomType, currency }) => {
-      const ratesPath = process.env.CLOUDBEDS_RATES_PATH || "/rates";
+      const ratesPath = process.env.CLOUDBEDS_RATES_PATH || "/getRatePlans";
       const disclaimer = config.disclaimers.price.pt;
+      const propertyIds = process.env.CLOUDBEDS_PROPERTY_IDS?.trim() || "";
 
       if (!cloudbedsClient.isEnabled()) {
+        const unavailable = getCloudbedsUnavailableMessage(config);
         return {
           checkIn,
           checkOut,
@@ -122,7 +169,7 @@ export function createGetRatesTool(config: AgentConfig) {
           roomType: roomType || null,
           currency,
           shouldHandoff: true,
-          answer: `${config.fallback.apiUnavailable.pt} ${disclaimer}`,
+          answer: `${unavailable} ${disclaimer}`,
           disclaimer,
           bookingEngineUrl: config.bookingEngineUrl,
           rates: [],
@@ -138,12 +185,14 @@ export function createGetRatesTool(config: AgentConfig) {
         const raw = await cloudbedsClient.request<unknown>(ratesPath, {
           method: "GET",
           query: {
-            checkIn,
-            checkOut,
+            startDate: checkIn,
+            endDate: checkOut,
             adults,
             children,
-            roomType,
-            currency,
+            roomTypeID: roomType,
+            propertyIDs: propertyIds || undefined,
+            detailedRates: false,
+            includePromoCode: true,
           },
         });
 
@@ -203,4 +252,3 @@ export function createGetRatesTool(config: AgentConfig) {
     },
   });
 }
-

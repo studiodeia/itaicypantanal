@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ChevronRightIcon } from "@/lib/icons";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { fadeIn, fadeUp, stagger, cardItem, viewport, ease } from "@/lib/motion";
 import type { HomePageContent } from "@shared/cms-page-content";
 
@@ -17,24 +17,34 @@ const defaultExpeditionsContent: HomePageContent["expeditions"] = {
       description:
         "Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.",
       backgroundImage: "/images/home/expedition-pesca.webp",
+      href: "/pesca",
     },
     {
       title: "Birdwatching",
       description:
         "166 espécies catalogadas em nosso santuário. Guias ornitólogos conduzem expedições imersivas ao amanhecer.",
       backgroundImage: "/images/home/expedition-birdwatching.webp",
+      href: "/observacao-de-aves",
     },
     {
       title: "Ecoturismo",
       description:
         "Trilhas guiadas, passeios de barco e safáris fotográficos no coração do Pantanal intocado.",
       backgroundImage: "/images/home/expedition-ecoturismo.webp",
+      href: "/ecoturismo",
     },
   ],
   buttonText: "Quero conhecer",
 };
 
 type Props = { content?: HomePageContent["expeditions"] };
+
+/** Fallback href mapping when CMS data doesn't include href */
+const expeditionHrefFallback: Record<string, string> = {
+  "Pesca Esportiva Cota Zero": "/pesca",
+  "Birdwatching": "/observacao-de-aves",
+  "Ecoturismo": "/ecoturismo",
+};
 
 export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JSX.Element => {
   const content = contentProp ?? defaultExpeditionsContent;
@@ -74,48 +84,49 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
                 }`}
                 onMouseEnter={() => setActiveIndex(index)}
               >
-                <Card
-                  className="w-full h-[464px] md:h-[500px] lg:h-[500px] xl:h-[664px] rounded-lg overflow-hidden border-0 bg-center bg-cover bg-no-repeat cursor-pointer"
-                  style={{ backgroundImage: `linear-gradient(0deg, rgba(21,34,24,0.5) 0%, rgba(21,34,24,0) 100%), linear-gradient(0deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.32) 100%), url(${expedition.backgroundImage})` }}
-                  data-testid={`card-expedition-${index}`}
-                >
-                  <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-[32px]">
-                    <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[40px]">
-                      <div className="flex flex-col items-start gap-3 md:gap-5 lg:gap-[20px] w-full">
-                        <h3 className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[#e3f7ec] text-[length:var(--heading-md-font-size)] tracking-[var(--heading-md-letter-spacing)] leading-[var(--heading-md-line-height)] [font-style:var(--heading-md-font-style)]">
-                          {expedition.title}
-                        </h3>
+                <Link href={expedition.href ?? expeditionHrefFallback[expedition.title] ?? "#"} className="block no-underline w-full h-full">
+                  <Card
+                    className="w-full h-[464px] md:h-[500px] lg:h-[500px] xl:h-[664px] rounded-lg overflow-hidden border-0 bg-center bg-cover bg-no-repeat cursor-pointer"
+                    style={{ backgroundImage: `linear-gradient(0deg, rgba(21,34,24,0.5) 0%, rgba(21,34,24,0) 100%), linear-gradient(0deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.32) 100%), url(${expedition.backgroundImage})` }}
+                    data-testid={`card-expedition-${index}`}
+                  >
+                    <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-[32px]">
+                      <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[40px]">
+                        <div className="flex flex-col items-start gap-3 md:gap-5 lg:gap-[20px] w-full">
+                          <h3 className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[#e3f7ec] text-[length:var(--heading-md-font-size)] tracking-[var(--heading-md-letter-spacing)] leading-[var(--heading-md-line-height)] [font-style:var(--heading-md-font-style)]">
+                            {expedition.title}
+                          </h3>
 
-                        {/* Description — Framer Motion height:"auto" on desktop, CSS !important override keeps visible on mobile */}
-                        <motion.div
-                          data-expedition-desc
-                          className="overflow-hidden"
-                          initial={false}
-                          animate={{
-                            height: isActive ? "auto" : 0,
-                            opacity: isActive ? 1 : 0,
-                          }}
-                          transition={{ duration: 0.5, ease }}
+                          {/* Description — Framer Motion height:"auto" on desktop, CSS !important override keeps visible on mobile */}
+                          <motion.div
+                            data-expedition-desc
+                            className="overflow-hidden"
+                            initial={false}
+                            animate={{
+                              height: isActive ? "auto" : 0,
+                              opacity: isActive ? 1 : 0,
+                            }}
+                            transition={{ duration: 0.5, ease }}
+                          >
+                            <p className="max-w-[355px] font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
+                              {expedition.description}
+                            </p>
+                          </motion.div>
+                        </div>
+
+                        <div
+                          className="flex items-center justify-between w-full py-3 md:py-4 lg:h-[56px] lg:py-[12px] px-0 lg:px-[24px] border-b lg:border-b-0 border-[#f2fcf7] rounded-none lg:rounded-[6px]"
+                          data-testid={`button-expedition-details-${index}`}
                         >
-                          <p className="max-w-[355px] font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
-                            {expedition.description}
-                          </p>
-                        </motion.div>
+                          <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] lg:text-[#f2fcf7] text-[length:var(--functional-md-font-size)] lg:text-[24px] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] lg:leading-[32px] [font-style:var(--functional-md-font-style)] lg:font-[number:var(--functional-lg-font-weight)]">
+                            {content.buttonText}
+                          </span>
+                          <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-[#e3f7ec] lg:text-[#f2fcf7]" />
+                        </div>
                       </div>
-
-                      <Button
-                        variant="ghost"
-                        className="flex items-center justify-between w-full py-3 md:py-4 lg:h-[56px] lg:py-[12px] px-0 lg:px-[24px] border-b lg:border-b-0 border-[#f2fcf7] rounded-none lg:rounded-[6px] h-auto"
-                        data-testid={`button-expedition-details-${index}`}
-                      >
-                        <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] lg:text-[#f2fcf7] text-[length:var(--functional-md-font-size)] lg:text-[24px] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] lg:leading-[32px] [font-style:var(--functional-md-font-style)] lg:font-[number:var(--functional-lg-font-weight)]">
-                          {content.buttonText}
-                        </span>
-                        <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-[#e3f7ec] lg:text-[#f2fcf7]" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             );
           })}

@@ -1,4 +1,4 @@
-import { useParams } from "wouter";
+import { useParams, Link } from "wouter";
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildBlogPosting } from "@/components/JsonLd";
 import { getBlogArticleBySlug, getBlogArticleUrl, getBlogRelatedArticles, useBlogCmsData } from "./cms";
@@ -19,9 +19,9 @@ export const BlogArticlePage = (): JSX.Element => {
         <h1 className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)]">
           Artigo não encontrado
         </h1>
-        <a href="/blog" className="mt-8 text-[#ac8042] underline">
+        <Link href="/blog" className="mt-8 text-[#ac8042] underline">
           Voltar ao blog
-        </a>
+        </Link>
       </div>
     );
   }

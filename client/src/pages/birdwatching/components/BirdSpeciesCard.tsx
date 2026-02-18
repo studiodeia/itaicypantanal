@@ -1,5 +1,6 @@
+import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
-import { OptimizedImage } from "@/components/OptimizedImage";
+import { BirdImage } from "@/components/BirdImage";
 import { getBirdUrl } from "../cms";
 import type { BirdSpecies } from "../data";
 
@@ -11,12 +12,12 @@ export const BirdSpeciesCard = ({
   bird,
 }: BirdSpeciesCardProps): JSX.Element => {
   return (
-    <a
+    <Link
       href={getBirdUrl(bird)}
-      className="relative flex flex-col justify-end w-full h-[400px] md:h-[450px] lg:h-[510px] rounded-lg overflow-hidden group"
+      className="relative flex flex-col justify-end w-full h-[400px] md:h-[450px] lg:h-[510px] rounded-lg overflow-hidden group no-underline"
     >
       {/* Background image */}
-      <OptimizedImage
+      <BirdImage
         src={bird.src}
         alt={bird.commonName}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -31,9 +32,16 @@ export const BirdSpeciesCard = ({
         }}
       />
 
-      {/* Tag */}
-      <div className="absolute top-6 left-6 bg-[rgba(10,19,12,0.4)] text-[#f2fcf7] px-3 py-1 rounded-full font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-        {bird.tag}
+      {/* Tag + Photo credit */}
+      <div className="absolute top-6 left-6 right-6 flex items-start justify-between">
+        <div className="bg-[rgba(10,19,12,0.4)] text-[#f2fcf7] px-3 py-1 rounded-full font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
+          {bird.tag}
+        </div>
+        {bird.photoCredit && (
+          <span className="text-[10px] leading-tight text-white/60 text-right max-w-[120px] font-['Lato',sans-serif]">
+            Foto: {bird.photoCredit}
+          </span>
+        )}
       </div>
 
       {/* Content */}
@@ -85,9 +93,7 @@ export const BirdSpeciesCard = ({
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
-
-
 

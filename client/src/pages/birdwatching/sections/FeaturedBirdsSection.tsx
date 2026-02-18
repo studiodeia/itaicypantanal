@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
-import { OptimizedImage } from "@/components/OptimizedImage";
+import { BirdImage } from "@/components/BirdImage";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import type { BirdSpecies } from "../data";
 import { getBirdUrl } from "../cms";
 
 const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
   return (
-    <a
+    <Link
       href={getBirdUrl(bird)}
-      className="relative flex flex-col justify-end w-full md:flex-1 h-[500px] md:h-[600px] lg:h-[910px] rounded-lg overflow-hidden group"
+      className="relative flex flex-col justify-end w-full h-[500px] md:h-[600px] lg:h-[910px] rounded-lg overflow-hidden group no-underline"
     >
       {/* Background image */}
-      <OptimizedImage
+      <BirdImage
         src={bird.src}
         alt={bird.commonName}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -27,9 +28,16 @@ const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
         }}
       />
 
-      {/* Tag */}
-      <div className="absolute top-6 left-6 bg-[rgba(10,19,12,0.4)] text-[#f2fcf7] px-3 py-1 rounded-full font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-        {bird.tag}
+      {/* Tag + Photo credit */}
+      <div className="absolute top-6 left-6 right-6 flex items-start justify-between">
+        <div className="bg-[rgba(10,19,12,0.4)] text-[#f2fcf7] px-3 py-1 rounded-full font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
+          {bird.tag}
+        </div>
+        {bird.photoCredit && (
+          <span className="text-[10px] leading-tight text-white/60 text-right max-w-[140px] font-['Lato',sans-serif]">
+            Foto: {bird.photoCredit}
+          </span>
+        )}
       </div>
 
       {/* Content */}
@@ -81,7 +89,7 @@ const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
@@ -130,7 +138,7 @@ export const FeaturedBirdsSection = ({
           viewport={viewport}
         >
           {featuredBirds.map((bird) => (
-            <motion.div key={bird.slug} variants={cardItem}>
+            <motion.div key={bird.slug} variants={cardItem} className="w-full md:flex-1 min-w-0">
               <FeaturedBirdCard bird={bird} />
             </motion.div>
           ))}

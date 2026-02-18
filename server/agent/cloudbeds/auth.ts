@@ -71,14 +71,33 @@ function toFormBody(values: Record<string, string>): string {
 export class CloudbedsAuthManager {
   private state: AuthState | null = null;
   private inFlightTokenPromise: Promise<string> | null = null;
+  private readonly staticOnlyTokenMode: boolean;
 
   constructor(private readonly config: CloudbedsConfig) {
-    if (config.staticAccessToken.length > 0) {
+    const hasOAuthCredentials =
+      config.oauthTokenUrl.length > 0 &&
+      config.clientId.length > 0 &&
+      config.clientSecret.length > 0;
+
+    this.staticOnlyTokenMode = config.staticAccessToken.length > 0 && !hasOAuthCredentials;
+
+    if (this.staticOnlyTokenMode) {
       this.state = {
         accessToken: config.staticAccessToken,
         tokenType: "Bearer",
         refreshToken: config.initialRefreshToken,
         expiresAtMs: Number.MAX_SAFE_INTEGER,
+      };
+      return;
+    }
+
+    if (config.staticAccessToken.length > 0) {
+      this.state = {
+        accessToken: config.staticAccessToken,
+        tokenType: "Bearer",
+        refreshToken: config.initialRefreshToken,
+        // Bootstrap token loaded from environment, renewed by refresh flow when available.
+        expiresAtMs: Date.now() + 45 * 60 * 1000,
       };
       return;
     }
@@ -95,7 +114,7 @@ export class CloudbedsAuthManager {
 
   invalidateAccessToken(): void {
     if (!this.state) return;
-    if (this.config.staticAccessToken.length > 0) return;
+    if (this.staticOnlyTokenMode) return;
     this.state.expiresAtMs = 0;
     this.state.accessToken = "";
   }
@@ -105,7 +124,7 @@ export class CloudbedsAuthManager {
       throw new CloudbedsAuthError("Cloudbeds is disabled.");
     }
 
-    if (this.config.staticAccessToken.length > 0) {
+    if (this.staticOnlyTokenMode) {
       return this.config.staticAccessToken;
     }
 
@@ -131,26 +150,17 @@ export class CloudbedsAuthManager {
   private async refreshTokenInternal(): Promise<string> {
     const refreshToken = this.state?.refreshToken || this.config.initialRefreshToken;
 
-    if (refreshToken.length > 0) {
-      try {
-        const result = await this.requestToken({
-          grant_type: "refresh_token",
-          refresh_token: refreshToken,
-          client_id: this.config.clientId,
-          client_secret: this.config.clientSecret,
-        });
-        this.setState(result);
-        return result.accessToken;
-      } catch {
-        // Fallback to client credentials when refresh flow fails.
-      }
+    if (refreshToken.length === 0) {
+      throw new CloudbedsAuthError(
+        "Cloudbeds refresh token is missing. Complete OAuth authorization_code callback and set CLOUDBEDS_REFRESH_TOKEN or CLOUDBEDS_ACCESS_TOKEN.",
+      );
     }
 
     const result = await this.requestToken({
-      grant_type: "client_credentials",
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
       client_id: this.config.clientId,
       client_secret: this.config.clientSecret,
-      scope: this.config.scope,
     });
     this.setState(result);
     return result.accessToken;
@@ -223,4 +233,3 @@ export class CloudbedsAuthManager {
     };
   }
 }
-

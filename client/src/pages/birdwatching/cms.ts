@@ -49,7 +49,8 @@ function normalizeBirdPayload(payload: {
 
   const featuredFromPayload = (payload.featuredSlugs ?? [])
     .map((slug) => species.find((bird) => bird.slug === slug))
-    .filter((bird): bird is BirdSpecies => Boolean(bird));
+    .filter((bird): bird is BirdSpecies => Boolean(bird))
+    .slice(0, 2);
   const featured = featuredFromPayload.length > 0
     ? featuredFromPayload
     : fallbackBirdData.featuredBirds;

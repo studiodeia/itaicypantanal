@@ -8,6 +8,8 @@ export interface BirdSpecies {
   src: string;
   author: string;
   date: string;
+  photoCredit?: string;
+  photoLicense?: string;
 }
 
 export interface BirdSpeciesDetail extends BirdSpecies {

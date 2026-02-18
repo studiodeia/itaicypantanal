@@ -24,6 +24,9 @@ payload-cms/tsconfig.tsbuildinfo
 
 # Environment files
 payload-cms/.env
+.env
+.env.*
+!.env.example
 
 # Windows artifacts
 nul

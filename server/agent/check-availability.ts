@@ -22,6 +22,28 @@ function asString(value: unknown): string {
   return typeof value === "string" ? value : "";
 }
 
+function asBoolean(value: unknown): boolean | null {
+  if (typeof value === "boolean") return value;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    if (normalized === "true") return true;
+    if (normalized === "false") return false;
+  }
+  return null;
+}
+
+function getPrimaryCurrency(entry: AnyRecord): string {
+  const propertyCurrency = entry.propertyCurrency;
+  if (!Array.isArray(propertyCurrency)) return "";
+  for (let index = 0; index < propertyCurrency.length; index += 1) {
+    const item = propertyCurrency[index];
+    if (!isRecord(item)) continue;
+    const code = asString(item.currencyCode);
+    if (code) return code;
+  }
+  return "";
+}
+
 function extractRows(raw: unknown): AnyRecord[] {
   if (Array.isArray(raw)) {
     return raw.filter(isRecord);
@@ -34,7 +56,30 @@ function extractRows(raw: unknown): AnyRecord[] {
   for (let index = 0; index < candidates.length; index += 1) {
     const candidate = candidates[index];
     if (Array.isArray(candidate)) {
-      return candidate.filter(isRecord);
+      const directRows = candidate.filter(isRecord);
+      const flattenedRows: AnyRecord[] = [];
+
+      for (let rowIndex = 0; rowIndex < directRows.length; rowIndex += 1) {
+        const row = directRows[rowIndex];
+        const propertyRooms = row.propertyRooms;
+        if (!Array.isArray(propertyRooms)) {
+          flattenedRows.push(row);
+          continue;
+        }
+
+        const propertyCurrency = getPrimaryCurrency(row);
+        for (let roomIndex = 0; roomIndex < propertyRooms.length; roomIndex += 1) {
+          const room = propertyRooms[roomIndex];
+          if (!isRecord(room)) continue;
+          flattenedRows.push({
+            ...room,
+            propertyID: row.propertyID,
+            propertyCurrency,
+          });
+        }
+      }
+
+      return flattenedRows;
     }
   }
 
@@ -55,6 +100,7 @@ function normalizeAvailabilityRows(rows: AnyRecord[]) {
       const available =
         asNumber(row.available) ??
         asNumber(row.availability) ??
+        asNumber(row.roomsAvailable) ??
         asNumber(row.inventory) ??
         asNumber(row.unitsAvailable) ??
         0;
@@ -63,18 +109,27 @@ function normalizeAvailabilityRows(rows: AnyRecord[]) {
         asNumber(row.priceFrom) ??
         asNumber(row.price) ??
         asNumber(row.rate) ??
+        asNumber(row.roomRate) ??
+        asNumber(row.totalRate) ??
         asNumber((row.ratePlan as AnyRecord | undefined)?.amount);
 
       const currency =
         asString(row.currency) ||
+        asString(row.propertyCurrency) ||
+        asString(row.currencyCode) ||
         asString((row.ratePlan as AnyRecord | undefined)?.currency) ||
         "BRL";
+
+      const shared = asBoolean(row.isSharedRoom);
 
       return {
         category,
         available,
         priceFrom,
         currency,
+        roomTypeId: asString(row.roomTypeID) || null,
+        ratePlanName: asString(row.ratePlanNamePublic) || null,
+        isSharedRoom: shared === true,
       };
     })
     .filter((row) => row.available > 0);
@@ -102,6 +157,20 @@ function buildAvailabilityAnswer(
   ].join(" ");
 }
 
+function getCloudbedsUnavailableMessage(config: AgentConfig): string {
+  const enabledByEnv = (process.env.CLOUDBEDS_ENABLED || "").trim().toLowerCase() === "true";
+  const hasClient = Boolean((process.env.CLOUDBEDS_CLIENT_ID || "").trim());
+  const hasSecret = Boolean((process.env.CLOUDBEDS_CLIENT_SECRET || "").trim());
+  const hasAccessToken = Boolean((process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim());
+  const hasRefreshToken = Boolean((process.env.CLOUDBEDS_REFRESH_TOKEN || "").trim());
+
+  if (enabledByEnv && hasClient && hasSecret && !hasAccessToken && !hasRefreshToken) {
+    return "A integracao Cloudbeds esta pendente de autorizacao OAuth. Posso te conectar com nossa equipe para confirmar disponibilidade agora.";
+  }
+
+  return config.fallback.apiUnavailable.pt;
+}
+
 export function createCheckAvailabilityTool(config: AgentConfig) {
   return tool({
     description:
@@ -120,11 +189,14 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
       }),
     execute: async ({ checkIn, checkOut, adults, children, roomType }) => {
       const availabilityPath =
-        process.env.CLOUDBEDS_AVAILABILITY_PATH || "/availability";
+        process.env.CLOUDBEDS_AVAILABILITY_PATH || "/getAvailableRoomTypes";
 
       const disclaimer = config.disclaimers.availability.pt;
+      const propertyIds = process.env.CLOUDBEDS_PROPERTY_IDS?.trim() || "";
+      const rooms = Number.parseInt(process.env.CLOUDBEDS_DEFAULT_ROOMS || "1", 10);
 
       if (!cloudbedsClient.isEnabled()) {
+        const unavailable = getCloudbedsUnavailableMessage(config);
         return {
           checkIn,
           checkOut,
@@ -132,7 +204,7 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
           children,
           roomType: roomType || null,
           shouldHandoff: true,
-          answer: `${config.fallback.apiUnavailable.pt} ${disclaimer}`,
+          answer: `${unavailable} ${disclaimer}`,
           disclaimer,
           bookingEngineUrl: config.bookingEngineUrl,
           availability: [],
@@ -148,11 +220,15 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
         const raw = await cloudbedsClient.request<unknown>(availabilityPath, {
           method: "GET",
           query: {
-            checkIn,
-            checkOut,
+            startDate: checkIn,
+            endDate: checkOut,
+            rooms: Number.isFinite(rooms) && rooms > 0 ? rooms : 1,
             adults,
             children,
-            roomType,
+            roomTypeID: roomType,
+            propertyIDs: propertyIds || undefined,
+            detailedRates: false,
+            includeSharedRooms: false,
           },
         });
 
@@ -216,4 +292,3 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
     },
   });
 }
-
