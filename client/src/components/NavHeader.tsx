@@ -6,6 +6,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 
 interface MenuItem {
   title: string;
@@ -19,74 +21,7 @@ interface MenuCategory {
   items: MenuItem[];
 }
 
-const menuData: Record<string, MenuCategory> = {
-  Hospedagens: {
-    label: "Hospedagens",
-    items: [
-      {
-        title: "Culinária",
-        description: "Sabores regionais autênticos preparados com ingredientes do Pantanal.",
-        image: "/images/nav/menu-culinaria.webp",
-        href: "/culinaria",
-      },
-      {
-        title: "Acomodações",
-        description: "Conforto e natureza em harmonia no coração do Pantanal.",
-        image: "/images/nav/menu-acomodacoes.webp",
-        href: "/acomodacoes",
-      },
-    ],
-  },
-  Experiências: {
-    label: "Experiências",
-    items: [
-      {
-        title: "Pesca Esportiva",
-        description: "Pesca em águas privativas com guias experientes do Pantanal.",
-        image: "/images/nav/menu-pesca.webp",
-        href: "/pesca",
-      },
-      {
-        title: "Birdwatching",
-        description: "166 espécies catalogadas em expedições guiadas ao amanhecer.",
-        image: "/images/nav/menu-birdwatching.webp",
-        href: "/observacao-de-aves",
-      },
-      {
-        title: "Ecoturismo",
-        description: "Trilhas, passeios de barco e safáris fotográficos imersivos.",
-        image: "/images/nav/menu-ecoturismo.webp",
-        href: "/ecoturismo",
-      },
-    ],
-  },
-  Blog: {
-    label: "Blog",
-    items: [
-      {
-        title: "Vida Selvagem",
-        description: "Histórias e descobertas da fauna e flora do Pantanal.",
-        image: "/images/nav/menu-vida-selvagem.webp",
-        href: "/blog",
-      },
-      {
-        title: "Sustentabilidade",
-        description: "Nosso compromisso com a preservação do ecossistema pantaneiro.",
-        image: "/images/nav/menu-sustentabilidade.webp",
-        href: "/blog",
-      },
-    ],
-  },
-};
-
-const navigationItems = [
-  { label: "Início", active: true, hasDropdown: false, href: "/" },
-  { label: "Hospedagens", active: false, hasDropdown: true, href: "/acomodacoes" },
-  { label: "Experiências", active: false, hasDropdown: true, href: "/ecoturismo" },
-  { label: "Nosso impacto", active: false, hasDropdown: false, href: "/nosso-impacto" },
-  { label: "Contato", active: false, hasDropdown: false, href: "/contato" },
-  { label: "Blog", active: false, hasDropdown: true, href: "/blog" },
-];
+const DROPDOWN_KEYS = new Set(["accommodations", "experiences", "blog"]);
 
 interface NavHeaderProps {
   className?: string;
@@ -94,6 +29,7 @@ interface NavHeaderProps {
 }
 
 export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
+  const { lang } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
   const [desktopActiveDropdown, setDesktopActiveDropdown] = useState<string | null>(null);
@@ -102,15 +38,49 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [location] = useLocation();
 
-  const isDropdownOpen = desktopActiveDropdown !== null && menuData[desktopActiveDropdown] !== undefined;
+  const localMenuData: Record<string, MenuCategory> = {
+    accommodations: {
+      label: t("nav", "megaAccommodations", lang),
+      items: [
+        { title: t("nav", "culinary", lang), description: t("nav", "culinaryDesc", lang), image: "/images/nav/menu-culinaria.webp", href: "/culinaria" },
+        { title: t("nav", "accommodationsItem", lang), description: t("nav", "accommodationsDesc", lang), image: "/images/nav/menu-acomodacoes.webp", href: "/acomodacoes" },
+      ],
+    },
+    experiences: {
+      label: t("nav", "megaExperiences", lang),
+      items: [
+        { title: t("nav", "fishing", lang), description: t("nav", "fishingDesc", lang), image: "/images/nav/menu-pesca.webp", href: "/pesca" },
+        { title: t("nav", "birdwatching", lang), description: t("nav", "birdwatchingDesc", lang), image: "/images/nav/menu-birdwatching.webp", href: "/observacao-de-aves" },
+        { title: t("nav", "ecotourism", lang), description: t("nav", "ecotourismDesc", lang), image: "/images/nav/menu-ecoturismo.webp", href: "/ecoturismo" },
+      ],
+    },
+    blog: {
+      label: t("nav", "megaBlog", lang),
+      items: [
+        { title: t("nav", "wildlife", lang), description: t("nav", "wildlifeDesc", lang), image: "/images/nav/menu-vida-selvagem.webp", href: "/blog" },
+        { title: t("nav", "sustainability", lang), description: t("nav", "sustainabilityDesc", lang), image: "/images/nav/menu-sustentabilidade.webp", href: "/blog" },
+      ],
+    },
+  };
 
-  const handleDesktopNavEnter = useCallback((label: string) => {
+  const navItems = [
+    { key: "home", label: t("nav", "home", lang), hasDropdown: false, href: "/" },
+    { key: "accommodations", label: t("nav", "accommodations", lang), hasDropdown: true, href: "/acomodacoes" },
+    { key: "experiences", label: t("nav", "experiences", lang), hasDropdown: true, href: "/ecoturismo" },
+    { key: "impact", label: t("nav", "impact", lang), hasDropdown: false, href: "/nosso-impacto" },
+    { key: "contact", label: t("nav", "contact", lang), hasDropdown: false, href: "/contato" },
+    { key: "blog", label: t("nav", "blog", lang), hasDropdown: true, href: "/blog" },
+  ];
+
+  const isDropdownOpen = desktopActiveDropdown !== null && DROPDOWN_KEYS.has(desktopActiveDropdown);
+
+  const handleDesktopNavEnter = useCallback((key: string) => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
-    if (menuData[label]) {
-      setDesktopActiveDropdown(label);
+    if (DROPDOWN_KEYS.has(key)) {
+      setDesktopActiveDropdown(key);
     }
   }, []);
 
@@ -165,7 +135,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
   }, [isDropdownOpen, mobileMenuOpen, onMenuStateChange]);
 
   const mobileMenuItems = mobileActiveCategory
-    ? menuData[mobileActiveCategory]?.items ?? []
+    ? localMenuData[mobileActiveCategory]?.items ?? []
     : [];
 
   return (
@@ -197,30 +167,30 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 handleDesktopNavLeave();
               }
             }}>
-              {navigationItems.map((item, index) => {
+              {navItems.map((item, index) => {
                 const isCurrentPage = location === item.href || (item.href !== "/" && location.startsWith(item.href));
                 return item.hasDropdown ? (
                   <button
                     key={index}
                     className={`h-auto flex items-center gap-1.5 px-3 py-2.5 rounded-lg transition-colors duration-200 ${
                       isDropdownOpen
-                        ? desktopActiveDropdown === item.label
+                        ? desktopActiveDropdown === item.key
                           ? "text-[#f2fcf7]"
                           : "text-[#cfebdd]"
                         : isCurrentPage
                           ? "text-[#e3f7ec]"
                           : "text-[#a8cab9]"
                     } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
-                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    onMouseEnter={() => handleDesktopNavEnter(item.label)}
+                    data-testid={`link-nav-${item.key}`}
+                    onMouseEnter={() => handleDesktopNavEnter(item.key)}
                     onClick={() => {
-                      setDesktopActiveDropdown(desktopActiveDropdown === item.label ? null : item.label);
+                      setDesktopActiveDropdown(desktopActiveDropdown === item.key ? null : item.key);
                     }}
                   >
                     {item.label}
                     <ChevronDownIcon
                       className={`w-5 h-5 transition-transform duration-200 ${
-                        desktopActiveDropdown === item.label ? "rotate-180" : ""
+                        desktopActiveDropdown === item.key ? "rotate-180" : ""
                       }`}
                     />
                   </button>
@@ -235,7 +205,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                           ? "text-[#e3f7ec]"
                           : "text-[#a8cab9]"
                     } font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]`}
-                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    data-testid={`link-nav-${item.key}`}
                     onMouseEnter={() => setDesktopActiveDropdown(null)}
                   >
                     {item.label}
@@ -253,7 +223,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   className="hidden md:inline-flex items-center gap-1 px-3 py-2.5 text-[#a8cab9] hover:text-[#e3f7ec] transition-colors duration-200 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]"
                   data-testid="button-language"
                 >
-                  PT
+                  {lang.toUpperCase()}
                   <ChevronDownIcon className={`w-5 h-5 transition-transform duration-200 ${languageSwitcherOpen ? "rotate-180" : ""}`} />
                 </button>
               </LanguageSwitcher>
@@ -266,7 +236,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   })
                 }
               >
-                Reservar
+                {t("nav", "reserve", lang)}
               </GoldButton>
 
               <Button
@@ -294,7 +264,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
           >
             <div className="max-w-[1440px] mx-auto px-10 pb-10">
               <div className="flex gap-[32px] h-[316px]">
-                {menuData[desktopActiveDropdown!].items.map((item, idx) => (
+                {localMenuData[desktopActiveDropdown!].items.map((item, idx) => (
                   <Link
                     key={idx}
                     href={item.href}
@@ -356,7 +326,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   setLanguageSwitcherOpen(true);
                 }}
               >
-                PT
+                {lang.toUpperCase()}
                 <ChevronDownIcon className="w-5 h-5" />
               </button>
               <GoldButton
@@ -367,7 +337,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   })
                 }
               >
-                Reservar
+                {t("nav", "reserve", lang)}
               </GoldButton>
               <Button
                 variant="ghost"
@@ -384,13 +354,13 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
           <div className="relative z-10 flex-1 overflow-y-auto">
             {mobileActiveCategory === null ? (
               <div className="glass-menu flex flex-col">
-                {navigationItems.map((item, index) =>
+                {navItems.map((item, index) =>
                   item.hasDropdown ? (
                     <button
                       key={index}
                       className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left"
-                      onClick={() => setMobileActiveCategory(item.label)}
-                      data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      onClick={() => setMobileActiveCategory(item.key)}
+                      data-testid={`button-mobile-category-${item.key}`}
                     >
                       <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
                         {item.label}
@@ -403,7 +373,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                       href={item.href}
                       className="flex items-center justify-between px-5 py-5 border-b border-[#446354] text-left no-underline"
                       onClick={() => setMobileMenuOpen(false)}
-                      data-testid={`button-mobile-category-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                      data-testid={`button-mobile-category-${item.key}`}
                     >
                       <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
                         {item.label}
@@ -423,7 +393,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                   >
                     <ArrowLeftIcon className="w-7 h-7 text-[#e3f7ec] flex-shrink-0" />
                     <span className="[font-family:'Lato',sans-serif] font-semibold text-[22px] md:text-[28px] leading-[32px] md:leading-[36px] text-[#e3f7ec]">
-                      {mobileActiveCategory}
+                      {localMenuData[mobileActiveCategory]?.label ?? mobileActiveCategory}
                     </span>
                   </button>
 
@@ -470,4 +440,3 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
     </>
   );
 }
-

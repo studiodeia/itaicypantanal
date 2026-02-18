@@ -1,7 +1,8 @@
 import { cn } from "@/lib/utils";
-import { useState, useRef, useCallback, useEffect, type ReactNode } from "react";
+import { useRef, useCallback, useEffect, type ReactNode } from "react";
+import { useLanguage, type Lang } from "@/i18n/context";
 
-const languages = [
+const languages: { code: Lang; label: string }[] = [
   { code: "pt", label: "Português" },
   { code: "en", label: "English" },
   { code: "es", label: "Español" },
@@ -14,7 +15,7 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ open, onOpenChange, children }: LanguageSwitcherProps) {
-  const [activeLanguage, setActiveLanguage] = useState("pt");
+  const { lang: activeLanguage, setLang } = useLanguage();
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -76,7 +77,7 @@ export function LanguageSwitcher({ open, onOpenChange, children }: LanguageSwitc
           <button
             key={lang.code}
             onClick={() => {
-              setActiveLanguage(lang.code);
+              setLang(lang.code);
               onOpenChange(false);
             }}
             className={cn(
