@@ -1,4 +1,3 @@
-import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ImpactHeroSection } from "./ImpactHeroSection";
 import { nossoImpactoDefaults } from "../../nosso-impacto-defaults";

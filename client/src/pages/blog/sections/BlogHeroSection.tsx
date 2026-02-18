@@ -85,7 +85,7 @@ export const BlogHeroSection = ({
           <motion.div className="flex items-center gap-4 shrink-0" variants={fadeUp}>
             <div className="w-14 h-14 rounded-full bg-[#446354] overflow-hidden shrink-0" />
             <div className="flex flex-col">
-              <span className="font-['Lato',sans-serif] font-bold text-[#e3f7ec] text-base lg:text-lg leading-6 lg:leading-7 w-full lg:w-[245px] overflow-hidden text-ellipsis whitespace-nowrap">
+              <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)] w-full lg:w-[245px] overflow-hidden text-ellipsis whitespace-nowrap">
                 {featuredArticle.author}
               </span>
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[#cfebdd] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]">

@@ -1,15 +1,19 @@
-import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import { BlogArticlePage } from "./BlogArticlePage";
 
 // Mock wouter's useParams to provide categorySlug + slug
-vi.mock("wouter", () => ({
-  useParams: () => ({
-    categorySlug: "aventura",
-    slug: "guia-observacao-166-especies-aves",
-  }),
-}));
+vi.mock("wouter", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("wouter")>();
+  return {
+    ...actual,
+    useParams: () => ({
+      categorySlug: "aventura",
+      slug: "guia-observacao-166-especies-aves",
+    }),
+    useLocation: () => ["/blog/aventura/guia-observacao-166-especies-aves", () => {}],
+  };
+});
 
 describe("BlogArticlePage", () => {
   it("renders the article title from the featured article", () => {

@@ -1,4 +1,3 @@
-import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ArticleContentSection } from "./ArticleContentSection";
 import type { ArticleContentBlock } from "../data";
