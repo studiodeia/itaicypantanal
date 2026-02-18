@@ -19,7 +19,7 @@ interface GoldButtonProps extends ButtonProps {
 /** Classes reutilizáveis para elementos <a> que precisam do estilo gold CTA */
 export const goldButtonClass = [
   // cor e fundo
-  "bg-[#ac8042] hover:bg-[#8f6a35] text-[#f2fcf7]",
+  "bg-pantanal-gold hover:bg-pantanal-gold-hover text-pantanal-light-secondary",
   // tipografia functional-sm
   "font-functional-sm",
   "font-[number:var(--functional-sm-font-weight)]",

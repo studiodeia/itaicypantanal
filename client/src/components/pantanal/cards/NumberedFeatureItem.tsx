@@ -21,7 +21,7 @@ export function NumberedFeatureItem({
 }: NumberedFeatureItemProps) {
   const borderColor = theme === "light"
     ? "border-pantanal-border-muted"
-    : "border-pantanal-border-muted";
+    : "border-pantanal-border-light";
 
   const numberColor = theme === "light"
     ? "text-pantanal-light-numberMuted"

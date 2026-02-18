@@ -73,6 +73,7 @@ module.exports = {
           },
           medium: "#344e41",         // Background/Section/Secondary
           cream: "#fcf4ed",          // Background/Section/Light (NaturalRefuge)
+          creamDark: "#f5e8db",      // Background/Section/Light variant (darker cream)
           light: {
             primary: "#e3f7ec",      // Text/primary (on dark bg)
             secondary: "#f2fcf7",    // Text/Contrast (on dark bg)
