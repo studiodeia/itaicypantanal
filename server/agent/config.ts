@@ -58,8 +58,18 @@ export function getAgentFirstTokenDelayMs(intent: VisitorIntent = "general"): nu
   );
 }
 
-export function getAgentModel() {
-  const requestedModel = (process.env.AGENT_MODEL || "").trim();
+/**
+ * Intents that are safe for a lighter, cheaper model (no tool-calling complexity).
+ * When AGENT_MODEL_LITE is set, these intents use the lite model.
+ */
+const LITE_MODEL_INTENTS = new Set<string>(["general", "policy"]);
+
+export function getAgentModel(intent: VisitorIntent = "general") {
+  const liteModel = (process.env.AGENT_MODEL_LITE || "").trim();
+  const requestedModel =
+    liteModel && LITE_MODEL_INTENTS.has(intent)
+      ? liteModel
+      : (process.env.AGENT_MODEL || "").trim();
   const providerPreference = (process.env.AGENT_PROVIDER || "auto").trim().toLowerCase();
   const hasOpenAi = Boolean(process.env.OPENAI_API_KEY?.trim());
   const hasAnthropic = Boolean(process.env.ANTHROPIC_API_KEY?.trim());

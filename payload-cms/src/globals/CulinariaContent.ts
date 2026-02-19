@@ -11,133 +11,75 @@ const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
 export const CulinariaContent: GlobalConfig = {
   slug: "culinaria-content",
-  label: "Culinaria",
+  label: "Culinária",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina de culinaria.",
+    group: "Páginas do Site",
+    description: "Página de Culinária: edite hero, menu pantaneiro, destaques, serviços e FAQ.",
     preview: () => `${frontendOrigin}/culinaria`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
       tabs: [
         {
           label: "Hero",
-          fields: [
-            {
-              name: "hero",
-              type: "group",
-              label: "Hero",
-              fields: heroFields(),
-            },
-          ],
+          fields: [{ name: "hero", type: "group", label: "Hero", fields: heroFields() }],
         },
         {
           label: "Manifesto",
-          fields: [
-            {
-              name: "manifesto",
-              type: "group",
-              label: "Manifesto",
-              fields: manifestoFields(),
-            },
-          ],
+          fields: [{ name: "manifesto", type: "group", label: "Manifesto", fields: manifestoFields() }],
         },
         {
           label: "Menu",
-          description: "Secao do menu com categorias e imagens.",
-          fields: [
-            {
-              name: "menu",
-              type: "group",
-              label: "Menu",
-              fields: sobreNosFields(),
-            },
-          ],
+          description: "Seção do menu com categorias e imagens.",
+          fields: [{ name: "menu", type: "group", label: "Menu", fields: sobreNosFields() }],
         },
         {
           label: "Destaques",
-          fields: [
-            {
-              name: "highlights",
-              type: "group",
-              label: "Destaques",
-              fields: highlightsFields(),
-            },
-          ],
+          fields: [{ name: "highlights", type: "group", label: "Destaques", fields: highlightsFields() }],
         },
         {
-          label: "Servicos",
-          fields: [
-            {
-              name: "services",
-              type: "group",
-              label: "Servicos",
-              fields: servicesFields(),
-            },
-          ],
+          label: "Serviços",
+          fields: [{ name: "services", type: "group", label: "Serviços", fields: servicesFields() }],
         },
         {
-          label: "Experiencia",
+          label: "Experiência",
           fields: [
             {
               name: "experience",
               type: "group",
-              label: "Experiencia",
+              label: "Experiência",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
+                { name: "heading", type: "text", label: "Título", localized: true },
                 {
                   name: "body",
                   type: "array",
-                  label: "Paragrafos",
-                  labels: {
-                    singular: "Paragrafo",
-                    plural: "Paragrafos",
-                  },
+                  label: "Parágrafos",
+                  labels: { singular: "Parágrafo", plural: "Parágrafos" },
                   fields: [
-                    {
-                      name: "text",
-                      type: "textarea",
-                      label: "Texto",
-                      required: true,
-                    },
+                    { name: "text", type: "textarea", label: "Texto", required: true, localized: true },
                   ],
                 },
-                {
-                  name: "image",
-                  type: "text",
-                  label: "Imagem de Fundo (path)",
-                },
+                { name: "image", type: "text", label: "Imagem de Fundo (path)" },
               ],
             },
           ],
         },
         {
           label: "Cross-Sell",
-          description: "CTA para pagina de acomodacoes.",
+          description: "CTA para página de acomodações.",
           fields: [
             {
               name: "crossSell",
               type: "group",
               label: "Cross-Sell",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                {
-                  name: "description",
-                  type: "textarea",
-                  label: "Descricao",
-                },
-                {
-                  name: "buttonText",
-                  type: "text",
-                  label: "Texto do Botao",
-                },
-                {
-                  name: "buttonHref",
-                  type: "text",
-                  label: "Link do Botao",
-                },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
+                { name: "buttonText", type: "text", label: "Texto do Botão", localized: true },
+                { name: "buttonHref", type: "text", label: "Link do Botão" },
                 { name: "image", type: "text", label: "Imagem (path)" },
               ],
             },
@@ -145,7 +87,7 @@ export const CulinariaContent: GlobalConfig = {
         },
         {
           label: "FAQ",
-          description: "Perguntas frequentes sobre culinaria pantaneira.",
+          description: "Perguntas frequentes sobre culinária pantaneira.",
           fields: [
             { name: "faq", type: "group", label: "Perguntas Frequentes", fields: faqFields() },
           ],

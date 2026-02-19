@@ -1,153 +1,232 @@
-# CLAUDE.md
+# CLAUDE.md — Itaicy Pantanal Eco Lodge
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Commands
+## Quick Reference
 
 ```bash
-npm run dev       # Dev server with HMR (port 5000)
-npm run build     # Production build (Vite client + esbuild server → dist/)
-npm run start     # Run production build
-npm run check     # TypeScript type checking (no emit)
-npm run db:push       # Push Drizzle schema to database
-npm run figma:assets  # Download + optimize Figma images (see workflow below)
+# Development
+npm run dev              # Express + Vite HMR (port 5000)
+npm run cms:payload:dev  # Payload CMS admin (port 3001, separate terminal)
+
+# Build & Deploy
+npm run build            # Vite client + esbuild server → dist/
+npm run check            # TypeScript type checking
+npm test                 # Vitest (93+ tests)
+npm run test:watch       # Watch mode
+bash scripts/vercel-build.sh  # Full Vercel Build Output API v3
+vercel deploy --prebuilt --prod  # Deploy after build
+
+# CMS Operations
+npm run cms:payload:seed         # Import full-seed.json → Payload
+npm run cms:seed:check           # Audit seed data (dry run)
+npm run cms:seed:write           # Export content → seed JSON
+npm run figma:assets <manifest>  # Download + optimize Figma images
 ```
 
-```bash
-npm test          # Run Vitest test suite
-npm run test:watch  # Watch mode
+## Architecture Overview
+
+Fullstack TypeScript monorepo with four main directories:
+
+```
+itaicypantanal/
+├── client/          → React 18 SPA (Vite + Tailwind 3 + shadcn/ui)
+├── server/          → Express API (CMS proxy, AI agent, admin panel)
+├── shared/          → Types, Drizzle schema, CMS contracts (shared client↔server)
+├── payload-cms/     → Payload CMS v3 (Next.js 15, separate process on :3001)
+├── scripts/         → Build scripts, image pipeline, bird enrichment
+├── docs/            → Seed data (payload-seed/), architecture docs
+└── .interface-design/ → Design system tokens + Tailwind plugin
 ```
 
-## Architecture
+### Per-Directory Documentation
 
-Fullstack single-repo with three directories:
+Each major directory has its own CLAUDE.md with detailed guidance:
 
-- **`client/`** — React 18 SPA (Vite, TypeScript, Tailwind 3, shadcn/ui New York)
-- **`server/`** — Express server (serves SPA, API routes scaffolded but currently empty)
-- **`shared/`** — Drizzle ORM schema + Zod validation + TypeScript types (shared between client/server)
+- [**`server/CLAUDE.md`**](server/CLAUDE.md) — Express routes, CMS data layer, AI agent, admin panel
+- [**`payload-cms/CLAUDE.md`**](payload-cms/CLAUDE.md) — Collections, globals, localization, seed scripts
+- [**`client/src/CLAUDE.md`**](client/src/CLAUDE.md) — Pages, components, CMS hooks, i18n, animations
+- [**`scripts/CLAUDE.md`**](scripts/CLAUDE.md) — Build pipeline, image optimization, bird enrichment
+- [**`shared/CLAUDE.md`**](shared/CLAUDE.md) — Type contracts, Drizzle schema, agent config
 
-**Path aliases** in tsconfig: `@/*` → `client/src/*`, `@shared/*` → `shared/*`, `@assets` → `attached_assets/`
+## CMS Data Flow
 
-**Routing**: Wouter — routes: `/` (home), `/acomodacoes`, `/culinaria`, `/pesca`, `/observacao-de-aves`, `/ecoturismo`, `/blog`, `/blog/:categorySlug/:slug`
+```
+Payload CMS (:3001)  ←→  Payload REST API
+        ↓ (4s timeout, 30s per-locale cache)
+Express server (:5000)
+  → /api/cms/shared?locale=pt|en|es     → SharedCmsSections
+  → /api/cms/page/:slug?locale=         → PageContentMap[slug]
+  → /api/cms/blog?locale=               → BlogCmsData
+  → /api/cms/birdwatching?locale=       → BirdCmsData
+        ↓ (on Payload failure → seed fallback)
+  docs/payload-seed/full-seed.json + page-content.json
+        ↓
+React hooks (module-level cache + locale awareness)
+  → useSharedCmsSections()    → SharedCmsSections
+  → usePageCms<K>(slug)       → PageContentMap[K]
+  → useBlogCmsData()          → BlogCmsData
+  → useBirdCmsData()          → BirdCmsData
+```
 
-**State**: TanStack Query with conservative defaults (staleTime: Infinity, no auto-refetch). No global state store.
+**Payload-first, seed-fallback**: If `PAYLOAD_CMS_BASE_URL` is set, server fetches from Payload REST API with `?locale=` param. On failure (timeout/error), silently falls back to seed JSON files. Client hooks always have hardcoded defaults as initial state.
 
-**Animations**: Framer Motion
+### String Array Convention
 
-**Database**: Drizzle ORM + PostgreSQL (Neon serverless). Currently using in-memory storage placeholder (`server/storage.ts`). Auth libraries (Passport) are installed but not yet wired up.
+Payload requires arrays of objects, not plain string arrays. Symmetric transformations:
+- **Seed → Payload** (`importSeed.ts`): `wrapStrings(["a","b"])` → `[{text:"a"},{text:"b"}]`
+- **Payload → Frontend** (`cms-content.ts`): `unwrapTextArray([{text:"a"}])` → `["a"]`
 
-**Environment variables**: `DATABASE_URL` (PostgreSQL), `PORT` (default 5000), `NODE_ENV`
+## Multilingual System (PT/EN/ES)
+
+Three locales supported end-to-end:
+
+| Layer | How it works |
+|-------|-------------|
+| **Payload CMS** | `localized: true` on fields, `?locale=` REST param, fallback to PT |
+| **Express server** | `getLocale(req)` extracts `?locale=` from query, passes to `getCmsContent()` |
+| **Server cache** | `Map<string, CachedEntry>` keyed by locale, 30s TTL |
+| **Client hooks** | `useLanguage()` → `LOCALE_MAP[lang]` → fetch with `?locale=` |
+| **Client defaults** | `shared-defaults.ts` has full EN/ES translations; PT from `defaultSharedCmsSections` |
+| **UI strings** | `i18n/ui-strings.ts` — nav, mega-menu, static UI text |
+| **localStorage** | Key `itaicy_lang`, `document.documentElement.lang` synced |
 
 ## Design System
 
-**Read `.interface-design/system.md` before making UI changes.** Tailwind plugin at `.interface-design/utilities.js`.
+**Read `.interface-design/system.md` before making UI changes.**
 
-### Figma Implementation Workflow
+- Tokens: `pantanal-*` namespace in `tailwind.config.ts` — **never use raw hex**
+- Typography: Playfair Display (headings), Lato (body), weight **400**
+- Section padding: `px-5 md:px-8 lg:px-16` | Container: `max-w-[1440px] mx-auto`
+- Components: `client/src/components/pantanal/` — all support `theme="dark"|"light"`
+- Utilities plugin: `.interface-design/utilities.js`
+- Interactions: buttons use `hover:-translate-y-0.5`, gold focus ring, `.link-hover` utility
+- Animations: Framer Motion variants in `client/src/lib/motion.ts`, `MotionProvider` wraps app
 
-Before implementing any Figma design, **always cross-reference against the existing design system and components**. Many UI patterns (buttons, cards, typography, section layouts, headers) are already built. Check `client/src/components/pantanal/` and `client/src/pages/sections/` first — map Figma elements to existing components, tokens, and utilities before writing new code. Only create new components when no existing one covers the need.
+### Figma Workflow
 
-### Image Assets from Figma
+1. Get `downloadUrls` from Figma MCP `get_design_context`
+2. Save to manifest JSON file
+3. Run `npm run figma:assets <manifest>` (streams, converts to WebP+AVIF, max 1920px)
+4. Use `<OptimizedImage src="/images/name" />` (no extension — auto `.avif`/`.webp`)
 
-**Do not download Figma image assets directly — the API will hang on large files.** Instead, use the optimization pipeline:
+## AI Agent System
 
-1. Call `get_design_context` from the Figma MCP — it returns `downloadUrls` for each asset
-2. Save those URLs to a manifest file:
-   ```json
-   // tmp/figma-assets.json
-   { "hero-bg": "https://figma-alpha-api...", "room-single": "https://..." }
-   ```
-3. Run the pipeline: `npm run figma:assets tmp/figma-assets.json`
-4. The script downloads via streaming (no memory issues), converts to WebP + AVIF, resizes to max 1920px
-5. Output lands in `client/public/images/<name>.webp` and `.avif`
-6. Reference images using the `<OptimizedImage>` component (see below)
+Full conversational AI with tool-calling, SSE streaming, and Cloudbeds PMS integration.
 
-Use `--force` flag to overwrite existing files. The script skips assets that already exist.
+- **Entry**: `POST /api/chat` → `server/agent/chat-route.ts`
+- **Intent routing**: 10 intents (negotiation, birdwatching, fishing, availability, rates, etc.)
+- **Fast paths**: Availability/rates with dates → direct tool call (no LLM). Negotiation → immediate escalation
+- **Tools**: `searchFAQ` (pgvector + keyword), `checkAvailability`, `getRates`, `getReservation`
+- **Streaming**: SSE events (token, tool_start, tool_end, done, error)
+- **Models**: OpenAI GPT-5-mini / Anthropic Claude 3.5 Sonnet (configurable per intent)
+- **Admin panel**: JWT auth, `/api/panel/` routes, role-based access
 
-**Important:** Filter Figma assets before creating the manifest — ignore icons, UI elements, and SVGs. Only include content photos/backgrounds. Name them semantically by section: `culinaria-hero-bg`, `culinaria-menu-1`, etc. Figma may export placeholder images (very small files) — verify file sizes and skip those.
+## Vercel Deployment
 
-### Rules
+### Frontend (Express + React SPA)
 
-- All colors via `pantanal-*` Tailwind tokens — **never use raw hex values**
-- Typography: Playfair Display (headings), Lato (body), font-weight **400** (not 600)
-- Responsive breakpoints: 390px (mobile default), 768px (tablet), 1024px (desktop)
-- Section padding: `px-5 md:px-8 lg:px-16`
-- Container: `max-w-[1440px] mx-auto`
+Build Output API v3 via `scripts/vercel-build.sh`:
 
-### Components
+- Handler: `server/vercel-handler.ts` (NOT in `api/` — avoids Vercel auto-detection)
+- **esbuild must NOT use `--packages=external`** — all deps bundled inline
+- Static → `.vercel/output/static/` | Function → `.vercel/output/functions/api/index.func/`
+- `.vc-config.json`: `"handler": "index.js"` (filename, NOT `"index.handler"`)
+- `{"type":"commonjs"}` in function dir (overrides root `"type":"module"`)
+- Seed data + `_index.html` copied into function dir for runtime
+- SPA catch-all injects per-route meta tags for AI crawlers
 
-Located in `client/src/components/pantanal/` — buttons, cards, layout, typography. All support `theme="dark" | "light"` prop for dark/cream sections.
+### CMS (Payload CMS)
 
-Shared global components in `client/src/components/`: NavHeader, BookingDatePicker, LanguageSwitcher, Divider, OptimizedImage.
+Deploy from `payload-cms/` dir: `vercel --prod`
+- Live at `https://cms-itaicypantanal.vercel.app`
+- DB: Supabase Postgres via **Supavisor pooler** (`aws-1-sa-east-1.pooler.supabase.com:5432`, session mode) — required for Vercel IPv4 connectivity
+- **Schema migrations**: `push: true` fails on Vercel — run `npx tsx src/scripts/migrate.ts` locally first
+- Set `FRONTEND_ORIGIN` so admin preview links work
 
-### Optimized Images
+## Path Aliases
 
-**Always use `<OptimizedImage>` for content photos** (`client/src/components/OptimizedImage.tsx`). It renders a `<picture>` with AVIF and WebP sources automatically.
-
-```tsx
-<OptimizedImage src="/images/culinaria-menu-1" alt="Prato" className="w-full h-full object-cover" />
+```
+@/*      → client/src/*
+@shared/* → shared/*
+@assets   → attached_assets/
 ```
 
-- `src` is the base path **without extension** — the component appends `.avif`, `.webp` automatically
-- Optimized images live in `client/public/images/`
-- Legacy unoptimized images remain in `client/public/figmaAssets/` (being migrated)
-- For CSS `background-image`, use the `.webp` file directly (no `<picture>` possible)
+## Routes
 
-### Interactions
+| Route | Page | Content Source |
+|-------|------|--------------|
+| `/` | Home | `home-content` global |
+| `/acomodacoes` | Accommodations | `acomodacoes-content` global |
+| `/culinaria` | Culinary | `culinaria-content` global |
+| `/pesca` | Fishing | `pesca-content` global |
+| `/observacao-de-aves` | Birdwatching | `birdwatching-content` global |
+| `/observacao-de-aves/catalogo` | Bird Catalog | `bird-species` + `bird-categories` collections |
+| `/observacao-de-aves/catalogo/:slug` | Species Detail | `bird-species` collection |
+| `/ecoturismo` | Ecotourism | `ecoturismo-content` global |
+| `/blog` | Blog Listing | `blog-posts` + `blog-categories` collections |
+| `/blog/:categorySlug/:slug` | Blog Article | `blog-posts` collection |
+| `/contato` | Contact | `contato-content` global |
+| `/nosso-impacto` | Impact | `nosso-impacto-content` global |
+| `/politica-de-privacidade` | Privacy | `privacidade-content` global |
+| `*` (catch-all) | 404 | `not-found-content` global |
 
-- Buttons: `transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:opacity-90`
-- Gold focus: `focus-visible:ring-2 focus-visible:ring-[rgba(172,128,66,0.4)]`
-- OutlineButton hover: full inversion (white bg + dark text)
-- Links: `.link-hover` utility class (animated underline via ::after)
+## Environment Variables
 
-## Page Composition
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `DATABASE_URL` | Production | PostgreSQL (Neon) connection string |
+| `PAYLOAD_CMS_BASE_URL` | Optional | Payload REST API base (e.g., `http://localhost:3001`) |
+| `PAYLOAD_OWNER_EMAIL/PASSWORD/NAME` | CMS init | Bootstrap admin user |
+| `OPENAI_API_KEY` | Agent | GPT models for chat + embeddings |
+| `ANTHROPIC_API_KEY` | Agent | Claude models for chat |
+| `CLOUDBEDS_*` | Agent | OAuth credentials for PMS integration |
+| `AGENT_PROVIDER` | Optional | Force agent LLM provider |
+| `PORT` | Optional | Server port (default 5000) |
 
-Pages are thin composition files that import and render section components:
+## Testing
 
-- **Shared sections**: `client/src/pages/sections/` (footer, FAQ, CTA, testimonials)
-- **Page-specific sections**: `client/src/pages/[page-name]/sections/`
-- New UI should use pantanal/* components; avoid duplicating existing component logic
+- **Framework**: Vitest 4 + React Testing Library + jsdom
+- **Config**: `vitest.config.ts` (separate from `vite.config.ts`)
+- **Setup**: `client/src/test/setup.ts` (`@testing-library/jest-dom/vitest`)
+- **Pattern**: Co-located `*.test.{ts,tsx}` files next to source
+- **Guard**: `typeof IntersectionObserver === "undefined"` for jsdom compatibility
 
-### Blog
+## Gestão de Memória
 
-The blog listing page (`/blog`) follows a different structure than experience pages (Pesca, Ecoturismo, etc.):
+Raiz: `C:\Users\User\.claude\projects\c--Itaicy\memory\`
 
-**File structure**: `client/src/pages/blog/`
-- `data.ts` — Types (`BlogArticle`, `BlogArticleDetail`, `ArticleContentBlock`), categories, articles, `getArticleBySlug()`, `getRelatedArticles()`, `getArticleUrl()`, `categorySlugMap`, `slugToCategoryMap`
-- `components/BlogArticleCard.tsx` — Overlay card for listing page (Mais Recentes + Categorias)
-- `components/RelatedArticleCard.tsx` — Image-on-top card for related articles section
-- `sections/BlogHeroSection.tsx` — Featured article hero with NavHeader (listing page)
-- `sections/BlogRecentSection.tsx` — "Mais Recentes" horizontal row (3 cards, dark bg)
-- `sections/BlogCategoriesSection.tsx` — Filterable grid with pagination (cream bg)
-- `sections/ArticleHeroSection.tsx` — Article page hero (dark bg, tag, title, description, author row, hero image)
-- `sections/ArticleContentSection.tsx` — Rich article body (paragraphs, headings, species blocks, lists, footer divider)
-- `sections/RelatedArticlesSection.tsx` — Related articles (dark bg, 3 cards)
-- `BlogArticlePage.tsx` — Article page composition (route: `/blog/:categorySlug/:slug`)
+```
+memory/
+  MEMORY.md          ← índice (sempre carregado), leia a cada sessão
+  domain/
+    project.md       ← localização, stack, comandos, rotas, env vars
+    cms.md           ← Payload CMS v3, locales, seed, collections
+    frontend.md      ← design system, componentes, i18n
+    agent.md         ← AI agent, intents, tools
+    birds.md         ← pipeline enriquecimento
+  tools/
+    vercel.md        ← deploy, gotchas críticos
+    testing.md       ← Vitest, jsdom, RTL
+```
 
-**Listing page** (`/blog`): Hero → Mais Recentes → Categorias → shared CTA → shared Footer
+### Regras
+1. Ao descobrir algo valioso → escreva **imediatamente** no arquivo correto
+2. Não espere ser solicitado. Não espere o fim da sessão.
+3. Entradas curtas: `data · o que aconteceu · por quê importa`
+4. Leia `MEMORY.md` no início da sessão; carregue outros arquivos só quando relevantes
+5. Se o arquivo não existir ainda, crie-o
 
-**Article page** (`/blog/:categorySlug/:slug`): ArticleHero → ArticleContent → RelatedArticles → shared CTA → shared Footer
+### Manutenção
+Quando o usuário disser "reorganize memory":
+1. Leia todos os arquivos de memória
+2. Remova duplicatas e entradas desatualizadas
+3. Mescle entradas relacionadas
+4. Separe arquivos que cobrem muitos tópicos
+5. Reordene entradas por data dentro de cada arquivo
+6. Atualize o índice `MEMORY.md`
+7. Mostre resumo do que mudou
 
-**URL structure**: SEO-optimized with category in URL. Articles have `primaryCategory` (used for canonical URL) + `categories[]` (used for multi-category filtering). URL helper: `getArticleUrl(article)` builds `/blog/:categorySlug/:articleSlug`. Category slugs handle accents (Conservação → conservacao) and multi-word names (Roteiros Exclusivos → roteiros-exclusivos).
+## Known Issues
 
-**Testing**: Vitest + React Testing Library — tests in `client/src/pages/blog/**/*.test.{ts,tsx}`
-
-**Key design decisions**:
-- Blog cards are **510px tall** (desktop) — NOT 910px like species cards on experience pages
-- 7 categories: Todas, Aventura, Gastronomia, Conservacao, Sustentabilidade, Roteiros Exclusivos, Eventos e Workshops
-- Category filtering uses `categories[]` array (articles appear in multiple categories); URL uses `primaryCategory`
-- Category filtering + pagination are client-side (React state, 9 per page)
-- Hero author name: Lato Bold `text-base lg:text-lg` with `w-[245px]` truncation — intentionally smaller than Figma's 24px to stay proportional with the site
-- Hero bottom separator: `border-t border-[#f2fcf7] pt-8` (not the Divider component)
-- Categorias section uses cream bg `#fcf4ed` (light theme); Recentes uses dark bg `#263a30`
-- Active pagination button: gold `#ac8042` bg + white text
-- Category pills: active = `bg-[#f5e8db] rounded-lg`, inactive = `rounded-full`
-
-### 404 Page
-
-**File structure**: `client/src/pages/not-found/`
-- `index.tsx` — Page composition (default export `NotFound`)
-- `sections/NotFoundHeroSection.tsx` — 404-specific hero with background image, "404" label, title, description, "Voltar para o início" link
-
-**Composition**: NotFoundHeroSection → ExclusiveExpeditionsSection (reused) → PantanalBlogSection (reused) → SiteFooterSection (reused)
-
-**Route**: Wouter catch-all `<Route component={NotFound} />` (last route in Switch)
+- Home sections use raw hex/CSS vars instead of `pantanal-*` tokens (tech debt)
+- `CLOUDBEDS_PROPERTY_ID` is placeholder — needs real ID from client
+- Bird enrichment pipeline step 05 (LLM editorial) pending `ANTHROPIC_API_KEY`

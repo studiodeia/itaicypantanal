@@ -24,7 +24,7 @@ export const Culinaria = (): JSX.Element => {
   const tourSchema = buildTourProduct({
     name: "Culinaria Pantaneira — Itaicy Eco Lodge",
     description:
-      "Gastronomia autentica do Pantanal com ingredientes regionais e pratos tipicos. Experiencia culinaria imersiva com sabores do Mato Grosso do Sul.",
+      "Gastronomia autêntica do Pantanal com ingredientes regionais e pratos típicos. Experiência culinária imersiva com sabores do Mato Grosso do Sul.",
     url: "/culinaria",
     image: cms.hero?.backgroundImage,
   });
@@ -32,12 +32,12 @@ export const Culinaria = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title="Culinaria Pantaneira"
-        description="Sabores autenticos do Pantanal preparados com ingredientes locais. Gastronomia regional que conecta voce a cultura e a natureza."
+        title="Culinária Pantaneira"
+        description="Sabores autênticos do Pantanal preparados com ingredientes regionais. Gastronomia regional que conecta você à cultura e à natureza."
         canonicalPath="/culinaria"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Culinaria", path: "/culinaria" },
+          { name: "Início", path: "/" },
+          { name: "Culinária", path: "/culinaria" },
         ]}
       />
       <JsonLd data={tourSchema} />

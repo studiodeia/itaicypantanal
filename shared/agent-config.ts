@@ -112,14 +112,14 @@ export const defaultAgentConfig: AgentConfig = {
   },
   fallback: {
     genericError: {
-      pt: "Estou com instabilidade agora. Posso te conectar com nossa equipe para continuar o atendimento.",
-      en: "I am experiencing instability right now. I can connect you with our team to continue the assistance.",
-      es: "Estoy con inestabilidad en este momento. Puedo conectarte con nuestro equipo para continuar la atención.",
+      pt: "Nao consegui buscar essa informacao agora. Nossa equipe pode ajudar pelo WhatsApp ou e-mail. Quer que eu encaminhe?",
+      en: "I couldn't retrieve that information right now. Our team can help via WhatsApp or email. Shall I forward you?",
+      es: "No pude obtener esa informacion ahora. Nuestro equipo puede ayudarte por WhatsApp o correo. Te paso?",
     },
     apiUnavailable: {
-      pt: "No momento não consigo consultar este dado em tempo real. Posso encaminhar seu atendimento para nossa equipe.",
-      en: "I cannot retrieve this information in real time at the moment. I can forward your request to our team.",
-      es: "En este momento no puedo consultar este dato en tiempo real. Puedo derivar tu atención a nuestro equipo.",
+      pt: "Nao consigo confirmar esse dado em tempo real agora. Voce pode verificar no motor de reservas ou nossa equipe confirma em breve.",
+      en: "I can't confirm this in real time right now. You can check on the booking engine or our team will confirm shortly.",
+      es: "No puedo confirmar este dato en tiempo real ahora. Puedes verificarlo en el motor de reservas o nuestro equipo te confirma pronto.",
     },
   },
   lead: {
@@ -223,3 +223,4 @@ export function normalizeAgentConfig(
     },
   };
 }
+

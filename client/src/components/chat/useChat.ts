@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 import type { AgentConfig, AgentLocale } from "@shared/agent-config";
 import type { ChatSseEvent } from "@shared/chat-types";
 
@@ -37,6 +38,12 @@ type UseChatState = {
   suggestedActions: SuggestedActions;
   sendMessage: (message: string) => Promise<void>;
   clearError: () => void;
+};
+
+// Internal queue item — user bubble is shown immediately, assistant pending
+type QueuedMessage = {
+  text: string;
+  userId: string;
 };
 
 function getStaticGreeting(locale: AgentLocale): string {
@@ -109,16 +116,24 @@ function pickLocalizedText(copy: { pt: string; en: string; es: string }, locale:
 
 function detectLocale(message: string): AgentLocale {
   const normalized = message.toLowerCase();
-  if (/\b(hola|quiero|disponibilidad|reserva|precio)\b/.test(normalized)) {
+  // ES-only keywords (avoid "reserva" — also used in PT)
+  if (/\b(hola|tengo|quiero|disponibilidad|precio|precios|habitacion|habitaciones|llegada|salida|gracias|buenas)\b/.test(normalized)) {
     return "es";
   }
-  if (/\b(hello|booking|availability|rate|price|reservation)\b/.test(normalized)) {
+  if (/\b(hello|hi there|booking|availability|available|rate|rates|price|prices|reservation|check.in|check.out|thank you|thanks)\b/.test(normalized)) {
     return "en";
   }
   return "pt";
 }
 
+/** Reads site language from localStorage (set by LanguageSwitcher), falls back to navigator. */
 function detectPreferredLocale(): AgentLocale {
+  try {
+    const stored = localStorage.getItem("itaicy_lang");
+    if (stored === "pt" || stored === "en" || stored === "es") return stored;
+  } catch {
+    // localStorage unavailable
+  }
   if (typeof navigator === "undefined") return "pt";
   const lang = (navigator.language || "").toLowerCase();
   if (lang.startsWith("es")) return "es";
@@ -188,6 +203,18 @@ export function useChat(): UseChatState {
   });
   const initializedRef = useRef(false);
 
+  // Always-current refs — avoid stale closures in callbacks and queue drain
+  const messagesRef = useRef<ChatMessage[]>([]);
+  const sessionIdRef = useRef<string | null>(null);
+  const isStreamingRef = useRef(false);
+  // Session-level locale lock: once a non-PT locale is confirmed, keep it for the session
+  const localeLockRef = useRef<AgentLocale | null>(null);
+  // Queue: messages sent while agent is responding; user bubble already shown
+  const pendingQueueRef = useRef<QueuedMessage[]>([]);
+
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
+  useEffect(() => { sessionIdRef.current = sessionId; }, [sessionId]);
+
   useEffect(() => {
     let cancelled = false;
 
@@ -241,13 +268,36 @@ export function useChat(): UseChatState {
 
   const clearError = useCallback(() => setError(null), []);
 
+  // streamMessage uses sessionIdRef to avoid stale closure — no deps needed
   const streamMessage = useCallback(
-    async (message: string, assistantId: string): Promise<void> => {
-      const locale = detectLocale(message);
+    async (message: string, assistantId: string, historySnapshot: ChatMessage[]): Promise<void> => {
+      // Locale resolution: locked session > history detection > current message > site preference
+      const messageLang = detectLocale(message);
+      const historyLang =
+        historySnapshot
+          .filter((m) => m.role === "user")
+          .slice(-4)
+          .map((m) => detectLocale(m.text))
+          .find((l) => l !== "pt") ?? null;
+      const locale: AgentLocale =
+        localeLockRef.current ??
+        historyLang ??
+        (messageLang !== "pt" ? messageLang : detectPreferredLocale());
+      // Lock once a non-PT locale is confirmed for the session
+      if (!localeLockRef.current && locale !== "pt") {
+        localeLockRef.current = locale;
+      }
+
+      const historyMessages = historySnapshot
+        .filter((m) => m.role !== "system" && m.text.trim().length > 0 && m.id !== assistantId)
+        .slice(-12)
+        .map((m) => ({ role: m.role as "user" | "assistant", content: m.text }));
+
       const payload = {
         message,
+        ...(historyMessages.length > 0 ? { messages: historyMessages } : {}),
         request_id: randomRequestId(),
-        session_id: sessionId ?? undefined,
+        session_id: sessionIdRef.current ?? undefined,
         lang: locale,
       };
 
@@ -308,16 +358,31 @@ export function useChat(): UseChatState {
             }
 
             if (event.status === "success") {
-              if (event.tool === "checkAvailability" || event.tool === "getRates") {
+              if (event.tool === "checkAvailability") {
                 setSuggestedActions((current) => ({ ...current, booking: true }));
+                track("availability_shown");
+                track("cta_booking_shown");
+              }
+              if (event.tool === "getRates") {
+                setSuggestedActions((current) => ({ ...current, booking: true }));
+                track("rates_shown");
+                track("cta_booking_shown");
               }
               if (event.tool === "createHandoff") {
                 setSuggestedActions((current) => ({ ...current, handoff: true }));
+                track("handoff_requested");
+              }
+              if (event.tool === "getReservation") {
+                track("reservation_viewed");
               }
             }
 
             if (event.status === "fallback") {
               setSuggestedActions((current) => ({ ...current, handoff: true }));
+              if (event.tool === "checkAvailability") {
+                track("no_availability");
+              }
+              track("handoff_requested");
             }
             continue;
           }
@@ -339,30 +404,35 @@ export function useChat(): UseChatState {
         }
       }
     },
-    [sessionId],
+    [], // stable: reads sessionId via sessionIdRef
   );
 
-  const sendMessage = useCallback(
-    async (rawMessage: string): Promise<void> => {
-      const message = rawMessage.trim();
-      if (!message || isStreaming) return;
+  /**
+   * Core execution: streams one message.
+   * The user bubble must already be in the messages list (added by sendMessage).
+   * Creates the assistant placeholder, streams, then drains the queue.
+   */
+  const executeMessage = useCallback(
+    async (queued: QueuedMessage): Promise<void> => {
+      const { text: message } = queued;
+      // Snapshot BEFORE adding the assistant bubble so history is correct
+      const historySnapshot = messagesRef.current;
 
       clearError();
       setActiveTool(null);
+      isStreamingRef.current = true;
       setIsStreaming(true);
       setSuggestedActions({ booking: false, handoff: false });
 
-      const userId = randomId();
       const assistantId = randomId();
 
       setMessages((current) => [
         ...current,
-        { id: userId, role: "user", text: message },
         { id: assistantId, role: "assistant", text: "" },
       ]);
 
       try {
-        await streamMessage(message, assistantId);
+        await streamMessage(message, assistantId, historySnapshot);
 
         setMessages((current) =>
           current.map((item) =>
@@ -394,10 +464,54 @@ export function useChat(): UseChatState {
         );
       } finally {
         setActiveTool(null);
+        isStreamingRef.current = false;
         setIsStreaming(false);
+
+        // Drain queue — natural 80ms pause before next message
+        const next = pendingQueueRef.current.shift();
+        if (next) {
+          setTimeout(() => void executeMessage(next), 80);
+        }
       }
     },
-    [clearError, isStreaming, streamMessage],
+    [clearError, streamMessage],
+  );
+
+  /**
+   * Public API: add a message to the conversation.
+   * - Shows user bubble immediately (no waiting for agent)
+   * - If agent is streaming: queues the message for processing after current response
+   * - If idle: sends immediately
+   */
+  const sendMessage = useCallback(
+    async (rawMessage: string): Promise<void> => {
+      const message = rawMessage.trim();
+      if (!message) return;
+
+      const userId = randomId();
+
+      // Always render the user bubble right away
+      setMessages((current) => [
+        ...current,
+        { id: userId, role: "user", text: message },
+      ]);
+
+      // Track first user message as chat_started
+      const currentMessages = messagesRef.current;
+      const hasUserMessage = currentMessages.some((m) => m.role === "user");
+      if (!hasUserMessage) {
+        track("chat_started");
+      }
+
+      if (isStreamingRef.current) {
+        // Queue for processing after current stream finishes
+        pendingQueueRef.current.push({ text: message, userId });
+        return;
+      }
+
+      await executeMessage({ text: message, userId });
+    },
+    [executeMessage],
   );
 
   return useMemo(

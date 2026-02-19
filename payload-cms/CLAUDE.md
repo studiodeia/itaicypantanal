@@ -92,6 +92,18 @@ routeToGlobalSlug: {
 6. Create default content in seed files
 7. Add `transformGlobalToPageContent` handling if the page has text arrays
 
+## Versioning
+
+All 12 globals have `versions: { max: 5 }`. `BlogPosts` has `versions: { maxPerDoc: 10 }`. Access version history via the "Versões" button in the Payload admin when editing any document or global.
+
+## Vercel Deployment
+
+- Deploy via `vercel --prod` from `payload-cms/` directory (NOT from project root)
+- Database: Supabase Postgres via **Supavisor pooler** (`aws-1-sa-east-1.pooler.supabase.com:5432`, session mode) — required for Vercel IPv4 connectivity
+- **`push: true` does NOT work on Vercel serverless** — run migrations locally first: `npx tsx src/scripts/migrate.ts`
+- CMS is deployed separately at `https://cms-itaicypantanal.vercel.app`
+- Set `FRONTEND_ORIGIN` env var to the frontend URL for preview links
+
 ## Adding a New Localized Field
 
 1. Add `localized: true` to the field definition in the collection/global

@@ -1,7 +1,14 @@
 import { z } from "zod";
 
+export const conversationMessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().min(1).max(4000),
+});
+export type ConversationMessage = z.infer<typeof conversationMessageSchema>;
+
 export const chatRequestSchema = z.object({
   message: z.string().trim().min(1).max(4000),
+  messages: z.array(conversationMessageSchema).max(20).optional(),
   session_id: z.string().uuid().optional(),
   request_id: z.string().uuid().optional(),
   guest_token: z.string().min(10).max(4096).optional(),

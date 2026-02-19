@@ -91,6 +91,8 @@ function normalizeAvailabilityRows(rows: AnyRecord[]) {
     .map((row, index) => {
       const category =
         asString(row.category) ||
+        asString(row.roomTypeName) ||
+        asString(row.roomTypeNameShort) ||
         asString(row.roomType) ||
         asString(row.room_type) ||
         asString(row.roomName) ||
@@ -135,40 +137,161 @@ function normalizeAvailabilityRows(rows: AnyRecord[]) {
     .filter((row) => row.available > 0);
 }
 
+const PT_MONTHS = [
+  "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+  "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
+];
+
+function formatDatePT(iso: string): string {
+  const parts = iso.split("-");
+  if (parts.length !== 3) return iso;
+  const year = Number.parseInt(parts[0]!, 10);
+  const month = Number.parseInt(parts[1]!, 10) - 1;
+  const day = Number.parseInt(parts[2]!, 10);
+  if (!Number.isFinite(year) || month < 0 || month > 11 || !Number.isFinite(day)) return iso;
+  return `${day} de ${PT_MONTHS[month]} de ${year}`;
+}
+
+/**
+ * Builds a Cloudbeds booking engine deep link with dates, occupancy and UTMs pre-filled.
+ * Guests land on a pre-populated booking engine — no manual entry required.
+ */
+function buildBookingDeepLink(
+  baseUrl: string,
+  checkIn: string,
+  checkOut: string,
+  adults: number,
+  children: number,
+): string {
+  const separator = baseUrl.includes("?") ? "&" : "?";
+  const pairs: string[] = [
+    "currency=brl",
+    "utm_source=site_itaicy",
+    "utm_medium=chat",
+    "utm_campaign=booking_engine",
+    "utm_content=chat_availability",
+    `checkin=${checkIn}`,
+    `checkout=${checkOut}`,
+    `adults=${adults}`,
+  ];
+  if (children > 0) {
+    pairs.push(`kids=${children}`);
+  }
+  return `${baseUrl}${separator}${pairs.join("&")}`;
+}
+
 function buildAvailabilityAnswer(
   hasResults: boolean,
   checkIn: string,
   checkOut: string,
-  bookingEngineUrl: string,
+  bookingUrl: string,
   disclaimer: string,
+  preview: string[],
 ): string {
+  const checkInPT = formatDatePT(checkIn);
+  const checkOutPT = formatDatePT(checkOut);
+
   if (!hasResults) {
     return [
-      "Nao encontrei disponibilidade confirmada em tempo real para esse periodo.",
-      "Posso encaminhar para nossa equipe validar manualmente.",
+      `Não encontrei disponibilidade confirmada de ${checkInPT} a ${checkOutPT}.`,
+      "Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?",
       disclaimer,
-    ].join(" ");
+    ].join("\n\n");
   }
 
+  const roomList = preview.map((p) => `• ${p}`).join("\n");
+
   return [
-    `Encontrei disponibilidade entre ${checkIn} e ${checkOut}.`,
-    `Voce pode continuar no motor oficial: ${bookingEngineUrl}`,
+    `Ótima notícia — há disponibilidade de ${checkInPT} a ${checkOutPT}!`,
+    roomList,
+    `Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas (água, sucos, refrigerantes, cerveja, caipirinha). Garanta sua vaga com as datas já preenchidas:\n${bookingUrl}`,
     disclaimer,
-  ].join(" ");
+  ].join("\n\n");
+}
+
+/**
+ * Shifts a date string (YYYY-MM-DD) by N days. Returns ISO date string.
+ */
+function shiftDate(iso: string, days: number): string {
+  const d = new Date(iso + "T12:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+type NearbyAlternative = {
+  checkIn: string;
+  checkOut: string;
+  categories: string[];
+};
+
+/**
+ * When no availability found for the requested dates, try ±1 and ±2 day shifts
+ * in parallel (2 calls max) and return the first match.
+ */
+async function findNearbyAvailability(
+  checkIn: string,
+  checkOut: string,
+  adults: number,
+  children: number,
+  roomType: string | undefined,
+  propertyIds: string,
+  rooms: number,
+  availabilityPath: string,
+): Promise<NearbyAlternative | null> {
+  const shifts = [-1, 1, -2, 2];
+  const attempts = shifts.map((shift) => ({
+    checkIn: shiftDate(checkIn, shift),
+    checkOut: shiftDate(checkOut, shift),
+    shift,
+  }));
+
+  // Run first pair in parallel, then second pair if needed (limit API load)
+  for (let batch = 0; batch < attempts.length; batch += 2) {
+    const pair = attempts.slice(batch, batch + 2);
+    const results = await Promise.allSettled(
+      pair.map(async (attempt) => {
+        const raw = await cloudbedsClient.request<unknown>(availabilityPath, {
+          method: "GET",
+          query: {
+            startDate: attempt.checkIn,
+            endDate: attempt.checkOut,
+            rooms: Number.isFinite(rooms) && rooms > 0 ? rooms : 1,
+            adults,
+            children,
+            roomTypeID: roomType,
+            propertyIDs: propertyIds || undefined,
+            detailedRates: false,
+            includeSharedRooms: false,
+          },
+        });
+        const rows = extractRows(raw);
+        const normalized = normalizeAvailabilityRows(rows);
+        if (normalized.length === 0) return null;
+
+        const categories = Array.from(
+          new Set(normalized.map((r) => r.category.trim()).filter(Boolean)),
+        ).slice(0, 3);
+
+        return {
+          checkIn: attempt.checkIn,
+          checkOut: attempt.checkOut,
+          categories,
+        } satisfies NearbyAlternative;
+      }),
+    );
+
+    for (const result of results) {
+      if (result.status === "fulfilled" && result.value) {
+        return result.value;
+      }
+    }
+  }
+
+  return null;
 }
 
 function getCloudbedsUnavailableMessage(config: AgentConfig): string {
-  const enabledByEnv = (process.env.CLOUDBEDS_ENABLED || "").trim().toLowerCase() === "true";
-  const hasClient = Boolean((process.env.CLOUDBEDS_CLIENT_ID || "").trim());
-  const hasSecret = Boolean((process.env.CLOUDBEDS_CLIENT_SECRET || "").trim());
-  const hasAccessToken = Boolean((process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim());
-  const hasRefreshToken = Boolean((process.env.CLOUDBEDS_REFRESH_TOKEN || "").trim());
-
-  if (enabledByEnv && hasClient && hasSecret && !hasAccessToken && !hasRefreshToken) {
-    return "A integracao Cloudbeds esta pendente de autorizacao OAuth. Posso te conectar com nossa equipe para confirmar disponibilidade agora.";
-  }
-
-  return config.fallback.apiUnavailable.pt;
+  return `Voce pode verificar disponibilidade e finalizar sua reserva diretamente em: ${config.bookingEngineUrl} — ou nossa equipe confirma por WhatsApp.`;
 }
 
 export function createCheckAvailabilityTool(config: AgentConfig) {
@@ -236,35 +359,121 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
         const normalized = normalizeAvailabilityRows(rows);
         const hasResults = normalized.length > 0;
 
+        // No availability → auto-search nearby dates (±1, ±2 days)
+        if (!hasResults) {
+          let nearbyAnswer: string;
+          let nearbyDeepLink = config.bookingEngineUrl;
+          let nearbyConfidence = 0.45;
+          let nearbyGrounding: "full" | "none" = "none";
+
+          try {
+            const nearby = await findNearbyAvailability(
+              checkIn, checkOut, adults, children, roomType, propertyIds, rooms, availabilityPath,
+            );
+
+            if (nearby) {
+              const ciPT = formatDatePT(nearby.checkIn);
+              const coPT = formatDatePT(nearby.checkOut);
+              const roomList = nearby.categories.map((c) => `• ${c}`).join("\n");
+              nearbyDeepLink = buildBookingDeepLink(
+                config.bookingEngineUrl, nearby.checkIn, nearby.checkOut, adults, children,
+              );
+              nearbyAnswer = [
+                `Não encontrei disponibilidade de ${formatDatePT(checkIn)} a ${formatDatePT(checkOut)}.`,
+                `Mas há vagas de ${ciPT} a ${coPT}:\n${roomList}`,
+                `Garanta sua vaga:\n${nearbyDeepLink}`,
+                disclaimer,
+              ].join("\n\n");
+              nearbyConfidence = 0.85;
+              nearbyGrounding = "full";
+            } else {
+              nearbyAnswer = buildAvailabilityAnswer(
+                false, checkIn, checkOut, config.bookingEngineUrl, disclaimer, [],
+              );
+            }
+          } catch {
+            // If nearby search fails, fall back to standard no-availability message
+            nearbyAnswer = buildAvailabilityAnswer(
+              false, checkIn, checkOut, config.bookingEngineUrl, disclaimer, [],
+            );
+          }
+
+          return {
+            checkIn,
+            checkOut,
+            adults,
+            children,
+            roomType: roomType || null,
+            shouldHandoff: nearbyGrounding === "none",
+            answer: nearbyAnswer,
+            disclaimer,
+            bookingEngineUrl: nearbyDeepLink,
+            availability: [],
+            sourceRefs: nearbyGrounding === "full"
+              ? [{
+                  source_id: `cloudbeds-availability-nearby:${checkIn}:${checkOut}`,
+                  source_type: "reservation" as const,
+                  title: "Cloudbeds disponibilidade (datas próximas)",
+                  score: 0.85,
+                }]
+              : [],
+            confidenceScore: nearbyConfidence,
+            groundingLevel: nearbyGrounding,
+            provider: "cloudbeds",
+            providerStatus: "ok",
+          };
+        }
+
+        const byCategory = new Map<string, { category: string; available: number }>();
+        for (const item of normalized) {
+          const key = item.category.trim();
+          if (!key) continue;
+          const existing = byCategory.get(key);
+          if (!existing || item.available > existing.available) {
+            byCategory.set(key, { category: item.category, available: item.available });
+          }
+        }
+        const preview = Array.from(byCategory.values())
+          .sort((a, b) => b.available - a.available)
+          .slice(0, 3)
+          .map((row) => row.category);
+
+        const deepLinkUrl = buildBookingDeepLink(
+          config.bookingEngineUrl,
+          checkIn,
+          checkOut,
+          adults,
+          children,
+        );
+
         return {
           checkIn,
           checkOut,
           adults,
           children,
           roomType: roomType || null,
-          shouldHandoff: !hasResults,
+          shouldHandoff: false,
           answer: buildAvailabilityAnswer(
-            hasResults,
+            true,
             checkIn,
             checkOut,
-            config.bookingEngineUrl,
+            deepLinkUrl,
             disclaimer,
+            preview,
           ),
           disclaimer,
-          bookingEngineUrl: config.bookingEngineUrl,
+          bookingEngineUrl: deepLinkUrl,
           availability: normalized.slice(0, 6),
-          sourceRefs: hasResults
-            ? [
-                {
-                  source_id: `cloudbeds-availability:${checkIn}:${checkOut}`,
-                  source_type: "reservation" as const,
-                  title: "Cloudbeds disponibilidade",
-                  score: 0.98,
-                },
-              ]
-            : [],
-          confidenceScore: hasResults ? 0.98 : 0.45,
-          groundingLevel: hasResults ? ("full" as const) : ("none" as const),
+          sourceRefs: [
+            {
+              source_id: `cloudbeds-availability:${checkIn}:${checkOut}`,
+              source_type: "reservation" as const,
+              title: "Cloudbeds disponibilidade",
+              score: 0.98,
+            },
+          ],
+          confidenceScore: 0.98,
+          groundingLevel: "full" as const,
           provider: "cloudbeds",
           providerStatus: "ok",
         };

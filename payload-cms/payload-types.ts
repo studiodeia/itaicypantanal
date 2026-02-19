@@ -96,7 +96,7 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  fallbackLocale: null;
+  fallbackLocale: ('false' | 'none' | 'null') | false | null | ('pt' | 'en' | 'es') | ('pt' | 'en' | 'es')[];
   globals: {
     'agent-config': AgentConfig;
     'site-settings': SiteSetting;
@@ -125,7 +125,7 @@ export interface Config {
     'privacidade-content': PrivacidadeContentSelect<false> | PrivacidadeContentSelect<true>;
     'not-found-content': NotFoundContentSelect<false> | NotFoundContentSelect<true>;
   };
-  locale: null;
+  locale: 'pt' | 'en' | 'es';
   user: User;
   jobs: {
     tasks: unknown;
@@ -151,7 +151,7 @@ export interface UserAuthOperations {
   };
 }
 /**
- * Edite as secoes de cada rota do site mantendo a mesma estrutura JSON.
+ * Coleção de páginas em desenvolvimento. Não utilizada na produção atual.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
@@ -226,7 +226,7 @@ export interface BlogPost {
    */
   title: string;
   /**
-   * URL amigavel do artigo (somente minusculas e hifens).
+   * Identificador único na URL. Use letras minúsculas, números e hifens. Sem acentos ou espaços. Ex: meu-artigo-2024
    */
   slug: string;
   subtitle?: string | null;
@@ -337,7 +337,7 @@ export interface BlogCategory {
   createdAt: string;
 }
 /**
- * Catalogo de especies para paginas de observacao de aves e conteudo editorial.
+ * Catálogo de espécies: 166 espécies do Pantanal com taxonomia, descrição e dicas de fotografia.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "bird-species".
@@ -346,6 +346,9 @@ export interface BirdSpecy {
   id: number;
   commonName: string;
   scientificName: string;
+  /**
+   * URL da espécie. Use letras minúsculas, números e hifens. Ex: arara-azul
+   */
   slug: string;
   description?: string | null;
   /**
@@ -360,6 +363,9 @@ export interface BirdSpecy {
   category?: (number | null) | BirdCategory;
   tag?: string | null;
   src?: string | null;
+  /**
+   * Caminho sem extensão. Ex: /images/arara-azul — os formatos AVIF e WebP são carregados automaticamente.
+   */
   heroImage?: string | null;
   author?: string | null;
   date?: string | null;
@@ -781,7 +787,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
- * Configuracoes operacionais editaveis do agente: disclaimers, handoff, fallback e saudacao.
+ * Assistente de chat: nome, mensagens, contatos para atendimento humano e avisos legais. Altere com cuidado — as mudanças afetam o chat em tempo real.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "agent-config".
@@ -792,7 +798,7 @@ export interface AgentConfig {
   assistantName: string;
   bookingEngineUrl: string;
   /**
-   * Abaixo deste valor o agente deve evitar resposta definitiva e priorizar handoff humano.
+   * Valor entre 0 e 1. Quanto maior, mais exigente o agente é antes de responder com base no FAQ. Recomendado: 0.75. Não altere sem orientação técnica.
    */
   faqConfidenceThreshold: number;
   priceDisclaimer: {
@@ -846,7 +852,7 @@ export interface AgentConfig {
   createdAt?: string | null;
 }
 /**
- * Configuracoes globais compartilhadas em todo o site: contato, rodape, FAQ, depoimentos e secoes da home.
+ * Configurações globais: contato, CTA de reserva, FAQ, depoimentos, rodapé e SEO. Aplicadas em todo o site.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings".
@@ -934,7 +940,7 @@ export interface SiteSetting {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina inicial.
+ * Página inicial: edite os textos das seções Sobre Nós, Expedições, Estatísticas, Acomodações, Impacto e Blog.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "home-content".
@@ -1033,7 +1039,7 @@ export interface HomeContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de acomodacoes.
+ * Página de Acomodações: edite hero, manifesto, destaques, tipos de quarto e FAQ.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "acomodacoes-content".
@@ -1130,7 +1136,7 @@ export interface AcomodacoesContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de culinaria.
+ * Página de Culinária: edite hero, menu pantaneiro, destaques, serviços e FAQ.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "culinaria-content".
@@ -1246,7 +1252,7 @@ export interface CulinariaContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de pesca esportiva.
+ * Página de Pesca Esportiva: edite hero, manifesto, sobre nós, destaques, serviços e FAQ.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pesca-content".
@@ -1345,7 +1351,7 @@ export interface PescaContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de ecoturismo.
+ * Página de Ecoturismo: edite hero, manifesto, sobre nós, destaques, serviços e FAQ.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "ecoturismo-content".
@@ -1444,7 +1450,7 @@ export interface EcoturismoContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de observacao de aves.
+ * Página de Observação de Aves: edite hero, manifesto, sobre nós, destaques e FAQ.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "birdwatching-content".
@@ -1527,7 +1533,7 @@ export interface BirdwatchingContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina de contato.
+ * Página de Contato: edite hero, formulário, canais de atendimento e coordenadas do mapa.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contato-content".
@@ -1576,7 +1582,7 @@ export interface ContatoContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da pagina Nosso Impacto (conservacao).
+ * Página Nosso Impacto: edite hero, manifesto, Rio Vivo, biodiversidade, comunidade, práticas sustentáveis e CTA.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "nosso-impacto-content".
@@ -1663,7 +1669,7 @@ export interface NossoImpactoContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo editavel da politica de privacidade.
+ * Política de Privacidade: edite título, data de atualização e seções do documento.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "privacidade-content".
@@ -1693,7 +1699,7 @@ export interface PrivacidadeContent {
   createdAt?: string | null;
 }
 /**
- * Conteudo da pagina de erro 404.
+ * Página 404: edite o conteúdo exibido quando uma URL não existe.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "not-found-content".

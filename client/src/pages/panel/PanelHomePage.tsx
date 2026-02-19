@@ -101,11 +101,18 @@ export function PanelHomePage() {
       <div className="mx-auto max-w-5xl space-y-4">
         <header className="rounded-3xl border border-black/10 bg-white p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h1 className="text-xl font-semibold text-[#111827]">Painel do usuario</h1>
-              <p className="text-sm text-[#6b7280]">
-                Logado como {user?.displayName} ({user?.role})
-              </p>
+            <div className="flex items-center gap-4">
+              <img
+                src="/images/icons/footer-logo.svg"
+                alt="Itaicy"
+                className="h-8 w-auto"
+              />
+              <div>
+                <h1 className="text-xl font-semibold text-[#111827]">Painel do usuario</h1>
+                <p className="text-sm text-[#6b7280]">
+                  Logado como {user?.displayName} ({user?.role})
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-2">
               {(user?.role === "admin" || user?.role === "manager") && (

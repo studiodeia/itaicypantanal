@@ -14,7 +14,7 @@ function localizedTextField(
       {
         name: "pt",
         type: "textarea",
-        label: "Portugues",
+        label: "Português",
         required,
         admin: { width: "33%" },
       },
@@ -28,7 +28,7 @@ function localizedTextField(
       {
         name: "es",
         type: "textarea",
-        label: "Espanol",
+        label: "Español",
         required,
         admin: { width: "33%" },
       },
@@ -38,16 +38,17 @@ function localizedTextField(
 
 export const AgentConfig: GlobalConfig = {
   slug: "agent-config",
-  label: "Configuracoes do Agente IA",
+  label: "Configurações do Agente IA",
   admin: {
-    group: "Agente IA",
+    group: "Agente de Chat",
     description:
-      "Configuracoes operacionais editaveis do agente: disclaimers, handoff, fallback e saudacao.",
+      "⚠️ Alterações aqui afetam o chat ao vivo imediatamente. Configure: nome do assistente, avisos legais (preço, disponibilidade, políticas), contatos para escalonamento humano e mensagens de erro. Use 'Versões' para desfazer mudanças indesejadas.",
   },
   access: {
     read: () => true,
     update: isAuthenticated,
   },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -78,7 +79,7 @@ export const AgentConfig: GlobalConfig = {
             {
               name: "faqConfidenceThreshold",
               type: "number",
-              label: "Threshold de Confianca para FAQ (0-1)",
+              label: "Sensibilidade do FAQ",
               required: true,
               defaultValue: 0.75,
               min: 0,
@@ -86,24 +87,24 @@ export const AgentConfig: GlobalConfig = {
               admin: {
                 step: 0.01,
                 description:
-                  "Abaixo deste valor o agente deve evitar resposta definitiva e priorizar handoff humano.",
+                  "Valor entre 0 e 1. Quanto maior, mais exigente o agente é antes de responder com base no FAQ. Recomendado: 0.75. Não altere sem orientação técnica.",
               },
             },
           ],
         },
         {
-          label: "Disclaimers",
+          label: "Avisos Legais",
           fields: [
-            localizedTextField("priceDisclaimer", "Disclaimer de Preco"),
+            localizedTextField("priceDisclaimer", "Disclaimer de Preço"),
             localizedTextField(
               "availabilityDisclaimer",
               "Disclaimer de Disponibilidade",
             ),
-            localizedTextField("policyDisclaimer", "Disclaimer de Politicas"),
+            localizedTextField("policyDisclaimer", "Disclaimer de Políticas"),
           ],
         },
         {
-          label: "Handoff",
+          label: "Contato Humano",
           fields: [
             {
               name: "handoff",
@@ -137,7 +138,7 @@ export const AgentConfig: GlobalConfig = {
                 {
                   name: "serviceHours",
                   type: "text",
-                  label: "Horario de Atendimento",
+                  label: "Horário de Atendimento",
                   required: true,
                   defaultValue: "Segunda a sexta, 08:00-18:00 (BRT)",
                   admin: { width: "50%" },
@@ -156,24 +157,24 @@ export const AgentConfig: GlobalConfig = {
           ],
         },
         {
-          label: "Fallback",
+          label: "Mensagens de Erro",
           fields: [
-            localizedTextField("genericErrorFallback", "Fallback Generico"),
+            localizedTextField("genericErrorFallback", "Mensagem padrão de erro"),
             localizedTextField(
               "apiUnavailableFallback",
-              "Fallback API Indisponivel",
+              "Mensagem quando sistema offline",
             ),
           ],
         },
         {
-          label: "Leads",
+          label: "Captação de Contatos",
           fields: [
             localizedTextField("leadConsentPrompt", "Pergunta de Consentimento"),
             localizedTextField("leadSuccessMessage", "Mensagem de Sucesso"),
           ],
         },
         {
-          label: "Saudacao",
+          label: "Saudação Inicial",
           fields: [localizedTextField("welcomeGreeting", "Mensagem Inicial")],
         },
       ],

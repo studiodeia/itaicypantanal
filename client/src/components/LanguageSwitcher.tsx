@@ -63,7 +63,7 @@ export function LanguageSwitcher({ open, onOpenChange, children }: LanguageSwitc
 
       <div
         className={cn(
-          "absolute top-full right-0 mt-2 min-w-[180px] py-2 rounded-lg",
+          "absolute top-full right-0 mt-2 min-w-[180px] py-2 rounded-lg z-[60]",
           "glass-menu",
           "shadow-[0_8px_24px_-4px_rgba(10,19,12,0.5)]",
           "border border-[rgba(168,202,185,0.12)]",

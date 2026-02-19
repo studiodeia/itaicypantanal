@@ -88,8 +88,18 @@ export default buildConfig({
     PrivacidadeContent,
     NotFoundContent,
   ],
-  cors: [frontendOrigin, payloadPublicServerUrl],
-  csrf: [frontendOrigin, payloadPublicServerUrl],
+  cors: [
+    frontendOrigin,
+    payloadPublicServerUrl,
+    "https://cms-itaicypantanal.vercel.app",
+    "https://cms.itaicypantanal.com.br",
+  ].filter(Boolean),
+  csrf: [
+    frontendOrigin,
+    payloadPublicServerUrl,
+    "https://cms-itaicypantanal.vercel.app",
+    "https://cms.itaicypantanal.com.br",
+  ].filter(Boolean),
   onInit: async (payload) => {
     const ownerEmail = process.env.PAYLOAD_OWNER_EMAIL;
     const ownerPassword = process.env.PAYLOAD_OWNER_PASSWORD;

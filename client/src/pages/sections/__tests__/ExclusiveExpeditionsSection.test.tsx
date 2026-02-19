@@ -13,7 +13,7 @@ describe("ExclusiveExpeditionsSection", () => {
   it("shows description for the first card by default", () => {
     render(<ExclusiveExpeditionsSection />);
     expect(
-      screen.getByText(/Em águas privativas, a pesca transcende/)
+      screen.getByText(/Em águas bem conservadas, a pesca transcende/)
     ).toBeInTheDocument();
   });
 
@@ -27,7 +27,7 @@ describe("ExclusiveExpeditionsSection", () => {
   it("all cards have descriptions in DOM", () => {
     render(<ExclusiveExpeditionsSection />);
     expect(
-      screen.getByText(/Em águas privativas, a pesca transcende/)
+      screen.getByText(/Em águas bem conservadas, a pesca transcende/)
     ).toBeInTheDocument();
     expect(
       screen.getByText(/166 espécies catalogadas/)

@@ -9,126 +9,81 @@ export const HomeContent: GlobalConfig = {
   slug: "home-content",
   label: "Home",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina inicial.",
+    group: "Páginas do Site",
+    description: "Página inicial: edite os textos das seções Sobre Nós, Expedições, Estatísticas, Acomodações, Impacto e Blog.",
     preview: () => `${frontendOrigin}/`,
   },
   access: {
     read: () => true,
     update: isAuthenticated,
   },
+  versions: {
+    max: 5,
+  },
   fields: [
     {
       type: "tabs",
       tabs: [
         {
-          label: "Sobre Nos",
-          description: "Secao 'Sobre Nos' com pilares e imagem.",
+          label: "Sobre Nós",
+          description: "Seção 'Sobre Nós' com pilares e imagem.",
           fields: [
             {
               name: "aboutUs",
               type: "group",
-              label: "Sobre Nos",
+              label: "Sobre Nós",
               fields: sobreNosFields(),
             },
           ],
         },
         {
-          label: "Expedicoes",
-          description: "Cards de expedicoes (Pesca, Birdwatching, Ecoturismo).",
+          label: "Expedições",
+          description: "Cards de expedições (Pesca, Birdwatching, Ecoturismo).",
           fields: [
             {
               name: "expeditions",
               type: "group",
-              label: "Expedicoes",
+              label: "Expedições",
               fields: [
-                { name: "label", type: "text", label: "Rotulo" },
-                { name: "heading", type: "text", label: "Titulo" },
-                {
-                  name: "description",
-                  type: "textarea",
-                  label: "Descricao",
-                },
+                { name: "label", type: "text", label: "Rótulo", localized: true },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
                 {
                   name: "items",
                   type: "array",
-                  label: "Cards de Expedicao",
-                  labels: {
-                    singular: "Expedicao",
-                    plural: "Expedicoes",
-                  },
+                  label: "Cards de Expedição",
+                  labels: { singular: "Expedição", plural: "Expedições" },
                   fields: [
-                    {
-                      name: "title",
-                      type: "text",
-                      label: "Titulo",
-                      required: true,
-                    },
-                    {
-                      name: "description",
-                      type: "textarea",
-                      label: "Descricao",
-                    },
-                    {
-                      name: "backgroundImage",
-                      type: "text",
-                      label: "Imagem de Fundo (path)",
-                    },
+                    { name: "title", type: "text", label: "Título", required: true, localized: true },
+                    { name: "description", type: "textarea", label: "Descrição", localized: true },
+                    { name: "backgroundImage", type: "text", label: "Imagem de Fundo (path)" },
                     { name: "href", type: "text", label: "Link" },
                   ],
                 },
-                {
-                  name: "buttonText",
-                  type: "text",
-                  label: "Texto do Botao",
-                },
+                { name: "buttonText", type: "text", label: "Texto do Botão", localized: true },
               ],
             },
           ],
         },
         {
-          label: "Estatisticas",
-          description:
-            "Contadores animados (hospedes, aves, anos, avaliacao).",
+          label: "Estatísticas",
+          description: "Contadores animados (hóspedes, aves, anos, avaliação).",
           fields: [
             {
               name: "stats",
               type: "group",
-              label: "Estatisticas",
+              label: "Estatísticas",
               fields: [
                 {
                   name: "items",
                   type: "array",
                   label: "Contadores",
-                  labels: {
-                    singular: "Contador",
-                    plural: "Contadores",
-                  },
+                  labels: { singular: "Contador", plural: "Contadores" },
                   fields: [
-                    {
-                      name: "target",
-                      type: "number",
-                      label: "Valor Alvo",
-                      required: true,
-                    },
-                    {
-                      name: "suffix",
-                      type: "text",
-                      label: "Sufixo (ex: +, %)",
-                      admin: { width: "30%" },
-                    },
-                    {
-                      name: "label",
-                      type: "text",
-                      label: "Legenda",
-                      admin: { width: "70%" },
-                    },
-                    {
-                      name: "hasIcon",
-                      type: "checkbox",
-                      label: "Tem Icone?",
-                      defaultValue: false,
-                    },
+                    { name: "target", type: "number", label: "Valor Alvo", required: true },
+                    { name: "suffix", type: "text", label: "Sufixo (ex: +, %)", localized: true, admin: { width: "30%" } },
+                    { name: "label", type: "text", label: "Legenda", localized: true, admin: { width: "70%" } },
+                    { name: "hasIcon", type: "checkbox", label: "Tem Ícone?", defaultValue: false },
                   ],
                 },
               ],
@@ -136,71 +91,44 @@ export const HomeContent: GlobalConfig = {
           ],
         },
         {
-          label: "Acomodacoes (CTA)",
-          description:
-            "Secao de acomodacoes com imagem de fundo e botoes.",
+          label: "Acomodações (CTA)",
+          description: "Seção de acomodações com imagem de fundo e botões.",
           fields: [
             {
               name: "accommodation",
               type: "group",
-              label: "Acomodacoes",
+              label: "Acomodações",
               fields: [
-                { name: "label", type: "text", label: "Rotulo" },
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "body", type: "textarea", label: "Texto" },
-                {
-                  name: "buttonReserve",
-                  type: "text",
-                  label: "Texto Botao Reservar",
-                },
-                {
-                  name: "buttonDetails",
-                  type: "text",
-                  label: "Texto Botao Detalhes",
-                },
-                {
-                  name: "backgroundImage",
-                  type: "text",
-                  label: "Imagem de Fundo (path)",
-                },
+                { name: "label", type: "text", label: "Rótulo", localized: true },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "body", type: "textarea", label: "Texto", localized: true },
+                { name: "buttonReserve", type: "text", label: "Texto Botão Reservar", localized: true },
+                { name: "buttonDetails", type: "text", label: "Texto Botão Detalhes", localized: true },
+                { name: "backgroundImage", type: "text", label: "Imagem de Fundo (path)" },
               ],
             },
           ],
         },
         {
           label: "Nosso Impacto",
-          description: "Secao de impacto com pilares e imagem.",
+          description: "Seção de impacto com pilares e imagem.",
           fields: [
             {
               name: "impact",
               type: "group",
               label: "Impacto",
               fields: [
-                { name: "label", type: "text", label: "Rotulo" },
-                { name: "heading", type: "text", label: "Titulo" },
+                { name: "label", type: "text", label: "Rótulo", localized: true },
+                { name: "heading", type: "text", label: "Título", localized: true },
                 {
                   name: "items",
                   type: "array",
                   label: "Pilares de Impacto",
                   labels: { singular: "Pilar", plural: "Pilares" },
                   fields: [
-                    {
-                      name: "number",
-                      type: "text",
-                      label: "Numero",
-                      admin: { width: "20%" },
-                    },
-                    {
-                      name: "title",
-                      type: "text",
-                      label: "Titulo",
-                      admin: { width: "80%" },
-                    },
-                    {
-                      name: "description",
-                      type: "textarea",
-                      label: "Descricao",
-                    },
+                    { name: "number", type: "text", label: "Número", localized: true, admin: { width: "20%" } },
+                    { name: "title", type: "text", label: "Título", localized: true, admin: { width: "80%" } },
+                    { name: "description", type: "textarea", label: "Descrição", localized: true },
                   ],
                 },
                 { name: "image", type: "text", label: "Imagem (path)" },
@@ -210,25 +138,17 @@ export const HomeContent: GlobalConfig = {
         },
         {
           label: "Blog",
-          description: "Secao do blog na home.",
+          description: "Seção do blog na home.",
           fields: [
             {
               name: "blog",
               type: "group",
               label: "Blog",
               fields: [
-                { name: "label", type: "text", label: "Rotulo" },
-                { name: "heading", type: "text", label: "Titulo" },
-                {
-                  name: "description",
-                  type: "textarea",
-                  label: "Descricao",
-                },
-                {
-                  name: "buttonText",
-                  type: "text",
-                  label: "Texto do Botao",
-                },
+                { name: "label", type: "text", label: "Rótulo", localized: true },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
+                { name: "buttonText", type: "text", label: "Texto do Botão", localized: true },
               ],
             },
           ],

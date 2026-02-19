@@ -18,7 +18,13 @@ type AgentConfigCachedEntry = {
   config: AgentConfig;
 };
 
-let cache: CachedEntry | null = null;
+const VALID_LOCALES = new Set(["pt", "en", "es"]);
+function normalizeLocale(locale?: string): string {
+  if (locale && VALID_LOCALES.has(locale)) return locale;
+  return "pt";
+}
+
+const cacheByLocale = new Map<string, CachedEntry>();
 let agentConfigCache: AgentConfigCachedEntry | null = null;
 
 const CACHE_TTL_MS = 30_000;
@@ -536,21 +542,22 @@ function buildFromPayloadData(
   };
 }
 
-async function loadFromPayloadRest(baseUrl: string): Promise<CmsContent> {
+async function loadFromPayloadRest(baseUrl: string, locale = "pt"): Promise<CmsContent> {
   const normalizedBase = baseUrl.replace(/\/+$/, "");
+  const lq = `locale=${locale}`;
 
   const [blogCategoriesRes, blogPostsRes, birdCategoriesRes, birdSpeciesRes] =
     await Promise.all([
-      fetchJsonWithTimeout(`${normalizedBase}/api/blog-categories?limit=200`),
-      fetchJsonWithTimeout(`${normalizedBase}/api/blog-posts?limit=200&depth=1`),
-      fetchJsonWithTimeout(`${normalizedBase}/api/bird-categories?limit=200`),
-      fetchJsonWithTimeout(`${normalizedBase}/api/bird-species?limit=200&depth=1`),
+      fetchJsonWithTimeout(`${normalizedBase}/api/blog-categories?limit=200&${lq}`),
+      fetchJsonWithTimeout(`${normalizedBase}/api/blog-posts?limit=200&depth=1&${lq}`),
+      fetchJsonWithTimeout(`${normalizedBase}/api/bird-categories?limit=200&${lq}`),
+      fetchJsonWithTimeout(`${normalizedBase}/api/bird-species?limit=200&depth=1&${lq}`),
     ]);
 
   let siteSettings: AnyDoc | null = null;
   try {
     const siteSettingsRes = await fetchJsonWithTimeout(
-      `${normalizedBase}/api/globals/site-settings?depth=1`,
+      `${normalizedBase}/api/globals/site-settings?depth=1&${lq}`,
     );
     siteSettings = toRecord(siteSettingsRes);
   } catch {
@@ -560,7 +567,7 @@ async function loadFromPayloadRest(baseUrl: string): Promise<CmsContent> {
   // Fetch all page globals in parallel
   const globalResults = await Promise.allSettled(
     PAGE_GLOBAL_SLUGS.map(({ slug }) =>
-      fetchJsonWithTimeout(`${normalizedBase}/api/globals/${slug}?depth=0`),
+      fetchJsonWithTimeout(`${normalizedBase}/api/globals/${slug}?depth=0&${lq}`),
     ),
   );
 
@@ -645,24 +652,26 @@ export async function getCmsAgentConfig(): Promise<{
   return { source: "seed", config: seedConfig };
 }
 
-export async function getCmsContent(): Promise<{
+export async function getCmsContent(rawLocale?: string): Promise<{
   source: "seed" | "payload";
   content: CmsContent;
 }> {
+  const locale = normalizeLocale(rawLocale);
   const now = Date.now();
-  if (cache && cache.expiresAt > now) {
-    return { source: cache.source, content: cache.content };
+  const cached = cacheByLocale.get(locale);
+  if (cached && cached.expiresAt > now) {
+    return { source: cached.source, content: cached.content };
   }
 
   const payloadBaseUrl = process.env.PAYLOAD_CMS_BASE_URL;
   if (payloadBaseUrl) {
     try {
-      const payloadContent = await loadFromPayloadRest(payloadBaseUrl);
-      cache = {
+      const payloadContent = await loadFromPayloadRest(payloadBaseUrl, locale);
+      cacheByLocale.set(locale, {
         expiresAt: now + CACHE_TTL_MS,
         source: "payload",
         content: payloadContent,
-      };
+      });
       return { source: "payload", content: payloadContent };
     } catch {
       // Silent fallback to seed keeps site available if CMS is down.
@@ -676,15 +685,15 @@ export async function getCmsContent(): Promise<{
         ...seedContent,
         shared: defaultSharedCmsSections,
       };
-  cache = {
+  cacheByLocale.set(locale, {
     expiresAt: now + CACHE_TTL_MS,
     source: "seed",
     content: normalizedSeedContent,
-  };
+  });
   return { source: "seed", content: normalizedSeedContent };
 }
 
 export function clearCmsContentCache() {
-  cache = null;
+  cacheByLocale.clear();
   agentConfigCache = null;
 }

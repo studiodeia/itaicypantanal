@@ -39,7 +39,7 @@ export const categories = [
   "Gastronomia",
   "Conservação",
   "Sustentabilidade",
-  "Roteiros Exclusivos",
+  "Roteiros Guiados",
   "Eventos e Workshops",
 ] as const;
 
@@ -51,7 +51,7 @@ export const categorySlugMap: Record<string, string> = {
   Gastronomia: "gastronomia",
   Conservação: "conservacao",
   Sustentabilidade: "sustentabilidade",
-  "Roteiros Exclusivos": "roteiros-exclusivos",
+  "Roteiros Guiados": "roteiros-guiados",
   "Eventos e Workshops": "eventos-e-workshops",
 };
 
@@ -191,9 +191,9 @@ export const allArticles: BlogArticle[] = [
     slug: "trilha-rio-cuiaba-roteiro",
     title: "Trilha do Rio Cuiabá: Roteiro Completo de 3 Dias",
     subtitle: "25 minutos de leitura",
-    tag: "Roteiros Exclusivos",
-    primaryCategory: "Roteiros Exclusivos",
-    categories: ["Roteiros Exclusivos", "Aventura"],
+    tag: "Roteiros Guiados",
+    primaryCategory: "Roteiros Guiados",
+    categories: ["Roteiros Guiados", "Aventura"],
     src: "/images/blog-article-6",
     author: "Lucas Vieira",
     date: "05 de Julho, 2025",
@@ -258,7 +258,7 @@ const featuredArticleDetail: BlogArticleDetail = {
     },
     {
       type: "paragraph",
-      text: "O segredo por trás desse número extraordinário não é o acaso, mas o acesso.\n\nDiferente de outras regiões, a Itaicy Ecoturismo possui autorizações especiais, incluindo contratos com o IBAMA, que nos permitem operar em milhões de hectares de áreas protegidas que são fechadas para o público geral. Na prática, isso significa um ecossistema equilibrado, silencioso e livre da pressão do turismo convencional.\n\nAqui, as aves se comportam com naturalidade, e nossos hóspedes encontram uma experiência de observação autêntica, silenciosa e profundamente imersiva.",
+      text: "O segredo por trás desse número extraordinário não é o acaso, mas a localização privilegiada.\n\nA Itaicy Ecoturismo está situada em uma área preservada do Pantanal, onde o ecossistema se mantém equilibrado, silencioso e livre da pressão do turismo convencional.\n\nAqui, as aves se comportam com naturalidade, e nossos hóspedes encontram uma experiência de observação autêntica, silenciosa e profundamente imersiva.",
     },
     {
       type: "heading",
@@ -319,7 +319,7 @@ const featuredArticleDetail: BlogArticleDetail = {
     },
     {
       type: "paragraph",
-      text: "Ver esta lista é inspirador, mas observar essas aves ao vivo é transformador. Na Itaicy, sua expedição de Observação de pássaros é completa.\n\nNossos guias locais são especialistas—eles não apenas conhecem os nomes, mas também os cantos, os hábitos e os locais exatos onde as aves mais raras costumam estar. Seja em um passeio de barco silencioso ao amanhecer, em uma caminhada por trilhas exclusivas ou em nossos passeios a cavalo, nosso objetivo é colocar você no lugar certo, na hora certa.\n\nPrepare seus binóculos e sua câmera. O santuário está esperando por você.",
+      text: "Ver esta lista é inspirador, mas observar essas aves ao vivo é transformador. Na Itaicy, sua expedição de Observação de pássaros é completa.\n\nNossos guias locais são especialistas—eles não apenas conhecem os nomes, mas também os cantos, os hábitos e os locais exatos onde as aves mais raras costumam estar. Seja em um passeio de barco silencioso ao amanhecer, em uma caminhada por trilhas preservadas ou em nossos passeios a cavalo, nosso objetivo é colocar você no lugar certo, na hora certa.\n\nPrepare seus binóculos e sua câmera. O santuário está esperando por você.",
     },
   ],
 };

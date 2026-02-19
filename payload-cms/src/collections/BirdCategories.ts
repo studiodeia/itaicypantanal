@@ -8,7 +8,7 @@ export const BirdCategories: CollectionConfig = {
     plural: "Categorias de Aves",
   },
   admin: {
-    group: "Birdwatching",
+    group: "Observação de Aves",
     description: "Organize as especies por grupos para facilitar busca e filtragem.",
     useAsTitle: "name",
     defaultColumns: ["name", "slug", "updatedAt"],

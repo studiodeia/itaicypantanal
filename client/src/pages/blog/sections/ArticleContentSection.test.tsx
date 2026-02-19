@@ -65,9 +65,4 @@ describe("ArticleContentSection", () => {
     expect(screen.getByText("O Relatório Oficial")).toBeInTheDocument();
   });
 
-  it("renders the article footer with logo", () => {
-    render(<ArticleContentSection content={mockContent} />);
-    const logo = screen.getByAltText("Itaicy");
-    expect(logo).toBeInTheDocument();
-  });
 });

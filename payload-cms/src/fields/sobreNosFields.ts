@@ -5,17 +5,18 @@ export function sobreNosFields(): Field[] {
     {
       name: "label",
       type: "text",
-      label: "Rotulo (ex: NOSSA FILOSOFIA)",
+      label: "Rótulo (ex: NOSSA FILOSOFIA)",
+      localized: true,
       admin: { width: "50%" },
     },
-    { name: "heading", type: "text", label: "Titulo" },
+    { name: "heading", type: "text", label: "Título", localized: true },
     {
       name: "body",
       type: "array",
-      label: "Paragrafos",
-      labels: { singular: "Paragrafo", plural: "Paragrafos" },
+      label: "Parágrafos",
+      labels: { singular: "Parágrafo", plural: "Parágrafos" },
       fields: [
-        { name: "text", type: "textarea", label: "Texto", required: true },
+        { name: "text", type: "textarea", label: "Texto", required: true, localized: true },
       ],
     },
     {
@@ -33,16 +34,18 @@ export function sobreNosFields(): Field[] {
         {
           name: "number",
           type: "text",
-          label: "Numero",
+          label: "Número",
+          localized: true,
           admin: { width: "20%" },
         },
         {
           name: "title",
           type: "text",
-          label: "Titulo",
+          label: "Título",
+          localized: true,
           admin: { width: "80%" },
         },
-        { name: "description", type: "textarea", label: "Descricao" },
+        { name: "description", type: "textarea", label: "Descrição", localized: true },
       ],
     },
   ];

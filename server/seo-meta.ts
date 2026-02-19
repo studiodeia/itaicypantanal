@@ -68,7 +68,7 @@ const routeMetaMap: Record<string, RouteMeta> = {
   "/observacao-de-aves": {
     title: "Observacao de Aves no Pantanal — Birdwatching com 166 Especies",
     description:
-      "Mais de 650 especies de aves no Pantanal. Tuiuiu, arara-azul, tucanos e muito mais. Guias especializados e roteiros exclusivos de birdwatching.",
+      "Mais de 650 especies de aves no Pantanal. Tuiuiu, arara-azul, tucanos e muito mais. Guias especializados e roteiros guiados de birdwatching.",
     ogImage: "/images/home/expedition-birdwatching.webp",
     noscriptSummary:
       "Quantas especies de aves tem no Pantanal? A regiao da Itaicy Pantanal Eco Lodge abriga 166 especies catalogadas pelo ornitologo Joao Andriola em expedicao de campo em maio de 2024. Quais aves posso ver? Entre as mais emblematicas estao o Tuiuiu (Jabiru mycteria), ave-simbolo do Pantanal, e a Arara-Azul-Grande (Anodorhynchus hyacinthinus), ameacada de extincao. Como funciona o birdwatching? Os roteiros sao guiados ao amanhecer e entardecer, quando a atividade das aves e mais intensa. Disponibilizamos binoculos, guias de campo e checklists personalizados. O Pantanal Sul-Matogrossense e considerado um dos melhores destinos de observacao de aves da America do Sul.",
@@ -135,7 +135,7 @@ const routeMetaMap: Record<string, RouteMeta> = {
   "/culinaria": {
     title: "Culinaria Pantaneira — Pratos Tipicos e Gastronomia Regional",
     description:
-      "Sabores autenticos do Pantanal preparados com ingredientes locais. Gastronomia regional que conecta voce a cultura e a natureza.",
+      "Sabores autenticos do Pantanal preparados com ingredientes regionais. Gastronomia regional que conecta voce a cultura e a natureza.",
     noscriptSummary:
       "Quais sao os pratos tipicos do Pantanal? A culinaria da Itaicy Pantanal Eco Lodge inclui pacu assado na brasa, arroz carreteiro, sopa paraguaia, caldo de piranha e sobremesas com frutas nativas do cerrado. As refeicoes estao inclusas? Sim, a pensao completa esta inclusa nas diarias: cafe da manha, almoco e jantar. Atendem restricoes alimentares? Sim, atendemos dietas vegetarianas, celiacas e intolerancia a lactose com aviso previo. Os ingredientes sao regionais, valorizando a producao do Pantanal e do Cerrado. A experiencia gastronomica reflete a cultura pantaneira e ribeirinha da regiao de Miranda.",
   },

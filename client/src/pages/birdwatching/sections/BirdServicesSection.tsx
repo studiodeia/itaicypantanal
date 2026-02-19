@@ -95,8 +95,8 @@ export const BirdServicesSection = ({
             </h3>
             <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)] max-w-[600px]">
               Nossos guias especializados sabem onde estão os ninhos ativos e os
-              melhores pontos de observação. Expedições fotográficas exclusivas
-              com acesso a áreas restritas.
+              melhores pontos de observação. Expedições fotográficas com acesso
+              a áreas preservadas.
             </p>
           </div>
           <a

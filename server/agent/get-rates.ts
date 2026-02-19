@@ -105,43 +105,77 @@ function normalizeRatesRows(rows: AnyRecord[]) {
     );
 }
 
+const PT_MONTHS = [
+  "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+  "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
+];
+
+function formatDatePT(iso: string): string {
+  const parts = iso.split("-");
+  if (parts.length !== 3) return iso;
+  const year = Number.parseInt(parts[0]!, 10);
+  const month = Number.parseInt(parts[1]!, 10) - 1;
+  const day = Number.parseInt(parts[2]!, 10);
+  if (!Number.isFinite(year) || month < 0 || month > 11 || !Number.isFinite(day)) return iso;
+  return `${day} de ${PT_MONTHS[month]} de ${year}`;
+}
+
+function buildBookingDeepLink(
+  baseUrl: string,
+  checkIn: string,
+  checkOut: string,
+  adults: number,
+  children: number,
+): string {
+  const separator = baseUrl.includes("?") ? "&" : "?";
+  const pairs: string[] = [
+    "currency=brl",
+    "utm_source=site_itaicy",
+    "utm_medium=chat",
+    "utm_campaign=booking_engine",
+    "utm_content=chat_rates",
+    `checkin=${checkIn}`,
+    `checkout=${checkOut}`,
+    `adults=${adults}`,
+  ];
+  if (children > 0) {
+    pairs.push(`kids=${children}`);
+  }
+  return `${baseUrl}${separator}${pairs.join("&")}`;
+}
+
 function buildRatesAnswer(
   hasResults: boolean,
+  checkIn: string,
+  checkOut: string,
+  adults: number,
   bookingEngineUrl: string,
   disclaimer: string,
   preview: string[],
 ): string {
+  const checkInPT = formatDatePT(checkIn);
+  const checkOutPT = formatDatePT(checkOut);
+
   if (!hasResults) {
     return [
-      "Nao consegui recuperar tarifas em tempo real para esse periodo.",
-      "Posso acionar nossa equipe para confirmar os valores.",
+      `Não consegui recuperar tarifas em tempo real de ${checkInPT} a ${checkOutPT}.`,
+      "Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?\n\nOu consulte diretamente: " + bookingEngineUrl,
       disclaimer,
-    ].join(" ");
+    ].join("\n\n");
   }
 
+  const adultsLabel = adults === 1 ? "1 adulto" : `${adults} adultos`;
+
   return [
-    `Encontrei tarifas atualizadas. Consulte e finalize no motor oficial: ${bookingEngineUrl}`,
-    preview.length > 0 ? `Opcoes: ${preview.join(" | ")}` : "",
+    `Tarifas encontradas para ${adultsLabel}, de ${checkInPT} a ${checkOutPT}:`,
+    preview.map((p) => `• ${p}`).join("\n"),
+    `Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas. Garanta sua vaga com as datas já preenchidas:\n${bookingEngineUrl}`,
     disclaimer,
-  ]
-    .filter((part) => part.trim().length > 0)
-    .join(" ");
+  ].join("\n\n");
 }
 
 function getCloudbedsUnavailableMessage(config: AgentConfig): string {
-  const enabledByEnv = (process.env.CLOUDBEDS_ENABLED || "").trim().toLowerCase() === "true";
-  const hasClient = Boolean((process.env.CLOUDBEDS_CLIENT_ID || "").trim());
-  const hasSecret = Boolean((process.env.CLOUDBEDS_CLIENT_SECRET || "").trim());
-  const hasAccessToken = Boolean(
-    ((process.env.CLOUDBEDS_API_KEY || "").trim() || (process.env.CLOUDBEDS_ACCESS_TOKEN || "").trim()).length > 0,
-  );
-  const hasRefreshToken = Boolean((process.env.CLOUDBEDS_REFRESH_TOKEN || "").trim());
-
-  if (enabledByEnv && hasClient && hasSecret && !hasAccessToken && !hasRefreshToken) {
-    return "A integracao Cloudbeds esta pendente de autorizacao OAuth. Posso te conectar com nossa equipe para confirmar tarifas agora.";
-  }
-
-  return config.fallback.apiUnavailable.pt;
+  return `Você pode consultar tarifas e reservar diretamente em: ${config.bookingEngineUrl} — ou nossa equipe envia os valores por WhatsApp.`;
 }
 
 export function createGetRatesTool(config: AgentConfig) {
@@ -206,9 +240,39 @@ export function createGetRatesTool(config: AgentConfig) {
         const rows = extractRows(raw);
         const normalized = normalizeRatesRows(rows);
         const hasResults = normalized.length > 0;
-        const preview = normalized
+        const byCategory = new Map<
+          string,
+          { category: string; amount: number; currency: string }
+        >();
+        for (const item of normalized) {
+          const key = item.category.trim();
+          if (!key || item.amount === null) continue;
+          const existing = byCategory.get(key);
+          if (!existing || item.amount < existing.amount) {
+            byCategory.set(key, { category: item.category, amount: item.amount, currency: item.currency });
+          }
+        }
+
+        const preview = Array.from(byCategory.values())
+          .sort((a, b) => a.amount - b.amount)
           .slice(0, 3)
-          .map((row) => `${row.category} (a partir de ${row.amount} ${row.currency})`);
+          .map((row) => {
+            const code = (row.currency || "BRL").toUpperCase();
+            const formatted = new Intl.NumberFormat("pt-BR", {
+              style: "currency",
+              currency: code,
+              maximumFractionDigits: 0,
+            }).format(row.amount);
+            return `${row.category} (a partir de ${formatted})`;
+          });
+
+        const deepLinkUrl = buildBookingDeepLink(
+          config.bookingEngineUrl,
+          checkIn,
+          checkOut,
+          adults,
+          children,
+        );
 
         return {
           checkIn,
@@ -218,9 +282,17 @@ export function createGetRatesTool(config: AgentConfig) {
           roomType: roomType || null,
           currency,
           shouldHandoff: !hasResults,
-          answer: buildRatesAnswer(hasResults, config.bookingEngineUrl, disclaimer, preview),
+          answer: buildRatesAnswer(
+            hasResults,
+            checkIn,
+            checkOut,
+            adults,
+            deepLinkUrl,
+            disclaimer,
+            preview,
+          ),
           disclaimer,
-          bookingEngineUrl: config.bookingEngineUrl,
+          bookingEngineUrl: deepLinkUrl,
           rates: normalized.slice(0, 6),
           sourceRefs: hasResults
             ? [

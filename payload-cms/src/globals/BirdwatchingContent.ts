@@ -10,13 +10,14 @@ const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
 export const BirdwatchingContent: GlobalConfig = {
   slug: "birdwatching-content",
-  label: "Observacao de Aves",
+  label: "Observação de Aves",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina de observacao de aves.",
+    group: "Páginas do Site",
+    description: "Página de Observação de Aves: edite hero, manifesto, sobre nós, destaques e FAQ.",
     preview: () => `${frontendOrigin}/observacao-de-aves`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -34,9 +35,9 @@ export const BirdwatchingContent: GlobalConfig = {
           ],
         },
         {
-          label: "Sobre Nos",
+          label: "Sobre Nós",
           fields: [
-            { name: "sobreNos", type: "group", label: "Sobre Nos", fields: sobreNosFields() },
+            { name: "sobreNos", type: "group", label: "Sobre Nós", fields: sobreNosFields() },
           ],
         },
         {
@@ -47,7 +48,7 @@ export const BirdwatchingContent: GlobalConfig = {
         },
         {
           label: "FAQ",
-          description: "Perguntas frequentes sobre observacao de aves.",
+          description: "Perguntas frequentes sobre observação de aves.",
           fields: [
             { name: "faq", type: "group", label: "Perguntas Frequentes", fields: faqFields() },
           ],

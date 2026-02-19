@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage, type Lang } from "@/i18n/context";
 import {
   allBirds,
   categories as localCategories,
@@ -7,6 +8,8 @@ import {
   type BirdSpecies,
   type BirdSpeciesDetail,
 } from "./data";
+
+const LOCALE_MAP: Record<Lang, string> = { pt: "pt", en: "en", es: "es" };
 
 export type BirdCmsData = {
   categories: string[];
@@ -63,9 +66,9 @@ function normalizeBirdPayload(payload: {
   };
 }
 
-export async function fetchBirdCmsData(): Promise<BirdCmsData> {
+export async function fetchBirdCmsData(locale = "pt"): Promise<BirdCmsData> {
   try {
-    const response = await fetch("/api/cms/birdwatching");
+    const response = await fetch(`/api/cms/birdwatching?locale=${locale}`);
     if (!response.ok) {
       return fallbackBirdData;
     }
@@ -105,11 +108,13 @@ export function getRelatedBirdsFromCms(
 }
 
 export function useBirdCmsData(): BirdCmsData {
+  const { lang } = useLanguage();
   const [data, setData] = useState<BirdCmsData>(fallbackBirdData);
 
   useEffect(() => {
+    const locale = LOCALE_MAP[lang] ?? "pt";
     let mounted = true;
-    fetchBirdCmsData().then((nextData) => {
+    fetchBirdCmsData(locale).then((nextData) => {
       if (mounted) {
         setData(nextData);
       }
@@ -117,7 +122,7 @@ export function useBirdCmsData(): BirdCmsData {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [lang]);
 
   return data;
 }

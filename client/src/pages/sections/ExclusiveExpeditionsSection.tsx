@@ -8,14 +8,14 @@ import type { HomePageContent } from "@shared/cms-page-content";
 
 const defaultExpeditionsContent: HomePageContent["expeditions"] = {
   label: "NOSSOS SERVIÇOS",
-  heading: "Expedições Exclusivas no Coração do Pantanal",
+  heading: "Experiências no Coração do Pantanal",
   description:
     "Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição.",
   items: [
     {
       title: "Pesca Esportiva Cota Zero",
       description:
-        "Em águas privativas, a pesca transcende, uma imersão tática com guias que leem o rio.",
+        "Em águas bem conservadas, a pesca transcende — uma imersão tática com guias nativos que dominam o rio.",
       backgroundImage: "/images/home/expedition-pesca.webp",
       href: "/pesca",
     },
@@ -77,9 +77,9 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
               <motion.div
                 key={index}
                 variants={cardItem}
-                className={`w-full transition-all duration-700 [transition-timing-function:cubic-bezier(0.25,0.4,0.25,1)] ${
+                className={`w-full transition-[width,flex-grow] duration-500 ease-out ${
                   isActive
-                    ? "lg:w-[500px] xl:w-[664px] lg:flex-shrink-0"
+                    ? "lg:w-[420px] xl:w-[500px] lg:flex-shrink-0"
                     : "lg:flex-1 lg:min-w-0"
                 }`}
                 onMouseEnter={() => setActiveIndex(index)}
@@ -106,7 +106,10 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
                               height: isActive ? "auto" : 0,
                               opacity: isActive ? 1 : 0,
                             }}
-                            transition={{ duration: 0.5, ease }}
+                            transition={{
+                              height: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+                              opacity: { duration: 0.3, delay: isActive ? 0.1 : 0, ease },
+                            }}
                           >
                             <p className="max-w-[355px] font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
                               {expedition.description}

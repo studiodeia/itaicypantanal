@@ -9,6 +9,7 @@ import { handleAgentMetricsRequest } from "./agent/metrics-route";
 import { handleCloudbedsStatusRequest } from "./agent/cloudbeds-status-route";
 import { handleCloudbedsOAuthCallback } from "./agent/cloudbeds-oauth-callback-route";
 import { handleCloudbedsOAuthStart } from "./agent/cloudbeds-oauth-start-route";
+import { handleNewsletterSubscribeRequest } from "./newsletter-route";
 import { registerPanelRoutes } from "./panel/routes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -18,9 +19,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // use storage to perform CRUD operations on the storage interface
   // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
 
-  app.get("/api/cms/health", async (_req, res) => {
+  /** Extract locale from ?locale= query param (defaults to "pt") */
+  function getLocale(req: { query: Record<string, unknown> }): string | undefined {
+    const raw = req.query.locale;
+    return typeof raw === "string" ? raw : undefined;
+  }
+
+  app.get("/api/cms/health", async (req, res) => {
     try {
-      const { source } = await getCmsContent();
+      const { source } = await getCmsContent(getLocale(req));
       res.json({ status: "ok", source });
     } catch (error) {
       res.status(500).json({
@@ -30,14 +37,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/cms/source", async (_req, res) => {
-    const { source } = await getCmsContent();
+  app.get("/api/cms/source", async (req, res) => {
+    const { source } = await getCmsContent(getLocale(req));
     res.json({ source });
   });
 
-  app.get("/api/cms/blog", async (_req, res) => {
+  app.get("/api/cms/blog", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       res.json({ ...content.blog, source });
     } catch (error) {
       res.status(500).json({
@@ -46,9 +53,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/cms/shared", async (_req, res) => {
+  app.get("/api/cms/shared", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       res.json({ source, shared: content.shared ?? {} });
     } catch (error) {
       res.status(500).json({
@@ -70,7 +77,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/blog/article/:slug", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       const article = content.blog.details.find(
         (item) => item.slug === req.params.slug,
       );
@@ -86,9 +93,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/cms/birdwatching", async (_req, res) => {
+  app.get("/api/cms/birdwatching", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       res.json({ ...content.birdwatching, source });
     } catch (error) {
       res.status(500).json({
@@ -100,7 +107,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/page/:slug", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       const slug = "/" + (req.params.slug === "home" ? "" : req.params.slug);
       const pageData = content.pageContent?.[slug] ?? null;
       if (!pageData) {
@@ -117,7 +124,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/birdwatching/species/:slug", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent();
+      const { content, source } = await getCmsContent(getLocale(req));
       const species = content.birdwatching.details.find(
         (item) => item.slug === req.params.slug,
       );
@@ -176,6 +183,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/agent/cloudbeds/oauth/start", async (req, res) => {
     await handleCloudbedsOAuthStart(req, res);
+  });
+
+  app.post("/api/newsletter/subscribe", async (req, res) => {
+    await handleNewsletterSubscribeRequest(req, res);
   });
 
   registerPanelRoutes(app);

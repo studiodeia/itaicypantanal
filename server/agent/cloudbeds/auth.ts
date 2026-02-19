@@ -79,13 +79,17 @@ export class CloudbedsAuthManager {
       config.clientId.length > 0 &&
       config.clientSecret.length > 0;
 
-    this.staticOnlyTokenMode = config.staticAccessToken.length > 0 && !hasOAuthCredentials;
+    const staticToken = config.staticAccessToken.trim();
+    const isApiKeyToken = staticToken.startsWith("cbat_");
+    // API keys (cbat_) are long-lived and do not use OAuth refresh. Treat them as static-only
+    // even if OAuth credentials are present in the environment.
+    this.staticOnlyTokenMode = staticToken.length > 0 && (isApiKeyToken || !hasOAuthCredentials);
 
     if (this.staticOnlyTokenMode) {
       this.state = {
-        accessToken: config.staticAccessToken,
+        accessToken: staticToken,
         tokenType: "Bearer",
-        refreshToken: config.initialRefreshToken,
+        refreshToken: "",
         expiresAtMs: Number.MAX_SAFE_INTEGER,
       };
       return;
@@ -117,6 +121,11 @@ export class CloudbedsAuthManager {
     if (this.staticOnlyTokenMode) return;
     this.state.expiresAtMs = 0;
     this.state.accessToken = "";
+  }
+
+  hasRefreshTokenConfigured(): boolean {
+    const token = this.state?.refreshToken || this.config.initialRefreshToken;
+    return token.trim().length > 0;
   }
 
   async getAccessToken(forceRefresh = false): Promise<string> {

@@ -130,8 +130,8 @@ export const PescaServicesSection = ({ content }: Props): JSX.Element => {
               Pronto para pescar os gigantes do Pantanal?
             </h3>
             <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)] max-w-[600px]">
-              Barcos equipados com sonar, piloteiros nativos e acesso exclusivo a
-              zonas de pesca restrita. Sua melhor pescaria começa aqui.
+              Lanchas de 19 pés, guias de pesca nativos e acesso a águas bem
+              conservadas. Sua melhor pescaria começa aqui.
             </p>
           </div>
           <a

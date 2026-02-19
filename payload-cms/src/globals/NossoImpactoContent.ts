@@ -9,11 +9,12 @@ export const NossoImpactoContent: GlobalConfig = {
   slug: "nosso-impacto-content",
   label: "Nosso Impacto",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina Nosso Impacto (conservacao).",
+    group: "Páginas do Site",
+    description: "Página Nosso Impacto: edite hero, manifesto, Rio Vivo, biodiversidade, comunidade, práticas sustentáveis e CTA.",
     preview: () => `${frontendOrigin}/nosso-impacto`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -38,27 +39,17 @@ export const NossoImpactoContent: GlobalConfig = {
               type: "group",
               label: "Rio Vivo",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "description", type: "textarea", label: "Descricao" },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
                 {
                   name: "steps",
                   type: "array",
                   label: "Ciclo Cota Zero",
                   labels: { singular: "Etapa", plural: "Etapas" },
                   fields: [
-                    {
-                      name: "iconName",
-                      type: "text",
-                      label: "Icone (ex: Fish, Camera, Waves, Heart)",
-                      admin: { width: "30%" },
-                    },
-                    {
-                      name: "title",
-                      type: "text",
-                      label: "Titulo",
-                      admin: { width: "70%" },
-                    },
-                    { name: "description", type: "textarea", label: "Descricao" },
+                    { name: "iconName", type: "text", label: "Ícone (ex: Fish, Camera, Waves, Heart)", admin: { width: "30%" } },
+                    { name: "title", type: "text", label: "Título", localized: true, admin: { width: "70%" } },
+                    { name: "description", type: "textarea", label: "Descrição", localized: true },
                   ],
                 },
               ],
@@ -73,8 +64,8 @@ export const NossoImpactoContent: GlobalConfig = {
               type: "group",
               label: "Biodiversidade",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "description", type: "textarea", label: "Descricao" },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
                 {
                   name: "counters",
                   type: "array",
@@ -82,9 +73,9 @@ export const NossoImpactoContent: GlobalConfig = {
                   labels: { singular: "Contador", plural: "Contadores" },
                   fields: [
                     { name: "target", type: "number", label: "Valor Alvo", required: true },
-                    { name: "suffix", type: "text", label: "Sufixo (ex: +, %)", admin: { width: "30%" } },
-                    { name: "label", type: "text", label: "Legenda", admin: { width: "70%" } },
-                    { name: "hasIcon", type: "checkbox", label: "Tem Icone?", defaultValue: false },
+                    { name: "suffix", type: "text", label: "Sufixo (ex: +, %)", localized: true, admin: { width: "30%" } },
+                    { name: "label", type: "text", label: "Legenda", localized: true, admin: { width: "70%" } },
+                    { name: "hasIcon", type: "checkbox", label: "Tem Ícone?", defaultValue: false },
                   ],
                 },
               ],
@@ -99,15 +90,15 @@ export const NossoImpactoContent: GlobalConfig = {
               type: "group",
               label: "Comunidade",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "description", type: "textarea", label: "Descricao" },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
                 {
                   name: "body",
                   type: "array",
-                  label: "Paragrafos",
-                  labels: { singular: "Paragrafo", plural: "Paragrafos" },
+                  label: "Parágrafos",
+                  labels: { singular: "Parágrafo", plural: "Parágrafos" },
                   fields: [
-                    { name: "text", type: "textarea", label: "Texto", required: true },
+                    { name: "text", type: "textarea", label: "Texto", required: true, localized: true },
                   ],
                 },
                 { name: "image", type: "text", label: "Imagem (path)" },
@@ -116,24 +107,24 @@ export const NossoImpactoContent: GlobalConfig = {
           ],
         },
         {
-          label: "Operacao Consciente",
+          label: "Operação Consciente",
           fields: [
             {
               name: "operacao",
               type: "group",
-              label: "Operacao Consciente",
+              label: "Operação Consciente",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "description", type: "textarea", label: "Descricao" },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
                 {
                   name: "practices",
                   type: "array",
-                  label: "Praticas Sustentaveis",
-                  labels: { singular: "Pratica", plural: "Praticas" },
+                  label: "Práticas Sustentáveis",
+                  labels: { singular: "Prática", plural: "Práticas" },
                   fields: [
-                    { name: "iconName", type: "text", label: "Icone (ex: Recycle, GlassWater, Droplets)", admin: { width: "30%" } },
-                    { name: "title", type: "text", label: "Titulo", admin: { width: "70%" } },
-                    { name: "description", type: "textarea", label: "Descricao" },
+                    { name: "iconName", type: "text", label: "Ícone (ex: Recycle, GlassWater, Droplets)", admin: { width: "30%" } },
+                    { name: "title", type: "text", label: "Título", localized: true, admin: { width: "70%" } },
+                    { name: "description", type: "textarea", label: "Descrição", localized: true },
                   ],
                 },
               ],
@@ -148,9 +139,9 @@ export const NossoImpactoContent: GlobalConfig = {
               type: "group",
               label: "Engajamento",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
-                { name: "description", type: "textarea", label: "Descricao" },
-                { name: "buttonText", type: "text", label: "Texto do Botao" },
+                { name: "heading", type: "text", label: "Título", localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
+                { name: "buttonText", type: "text", label: "Texto do Botão", localized: true },
               ],
             },
           ],

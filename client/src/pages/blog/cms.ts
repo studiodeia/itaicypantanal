@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage, type Lang } from "@/i18n/context";
 import {
   allArticles,
   categories as localCategories,
@@ -9,6 +10,8 @@ import {
   type BlogArticle,
   type BlogArticleDetail,
 } from "./data";
+
+const LOCALE_MAP: Record<Lang, string> = { pt: "pt", en: "en", es: "es" };
 
 export type BlogCmsData = {
   categories: string[];
@@ -84,9 +87,9 @@ function normalizeBlogPayload(payload: {
   };
 }
 
-export async function fetchBlogCmsData(): Promise<BlogCmsData> {
+export async function fetchBlogCmsData(locale = "pt"): Promise<BlogCmsData> {
   try {
-    const response = await fetch("/api/cms/blog");
+    const response = await fetch(`/api/cms/blog?locale=${locale}`);
     if (!response.ok) {
       return fallbackBlogData;
     }
@@ -126,11 +129,13 @@ export function getBlogRelatedArticles(
 }
 
 export function useBlogCmsData(): BlogCmsData {
+  const { lang } = useLanguage();
   const [data, setData] = useState<BlogCmsData>(fallbackBlogData);
 
   useEffect(() => {
+    const locale = LOCALE_MAP[lang] ?? "pt";
     let mounted = true;
-    fetchBlogCmsData().then((nextData) => {
+    fetchBlogCmsData(locale).then((nextData) => {
       if (mounted) {
         setData(nextData);
       }
@@ -138,7 +143,7 @@ export function useBlogCmsData(): BlogCmsData {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [lang]);
 
   return data;
 }

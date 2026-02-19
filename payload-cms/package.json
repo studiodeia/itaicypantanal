@@ -8,6 +8,7 @@
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 next build",
     "start": "next start -p 3001",
     "seed": "tsx src/scripts/importSeed.ts",
+    "seed:multilingual": "tsx src/scripts/seedMultilingual.ts",
     "owner:ensure": "tsx src/scripts/bootstrapOwner.ts",
     "generate:importmap": "payload generate:importmap"
   },

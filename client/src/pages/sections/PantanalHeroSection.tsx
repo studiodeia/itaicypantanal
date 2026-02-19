@@ -49,11 +49,11 @@ export const PantanalHeroSection = (): JSX.Element => {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:h-[260px] lg:justify-between flex-1 overflow-hidden"
+          className="flex flex-col items-start justify-end gap-5 lg:gap-0 lg:min-h-[260px] lg:justify-between flex-1"
         >
           <motion.h1
             variants={fadeUp}
-            className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] max-w-[592px]"
+            className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] text-[#e3f7ec] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] max-w-[592px] lg:max-w-none"
             data-testid="text-hero-heading"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
@@ -99,7 +99,7 @@ export const PantanalHeroSection = (): JSX.Element => {
                   className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)]"
                   data-testid="text-booking-description"
                 >
-                  <span className="font-bold text-[#d7a45d]">Passo 1:</span>{" "}
+                  <span className="font-bold text-[#d7a45d]">{homeHero.bookingStep1Label}</span>{" "}
                   {homeHero.bookingDescription}
                 </p>
               </div>
@@ -108,9 +108,9 @@ export const PantanalHeroSection = (): JSX.Element => {
 
               {/* Disclaimer */}
               <p className="w-full text-center text-xs leading-4 text-[#9ca3af] [font-family:'Lato',sans-serif] font-normal">
-                Garantimos o melhor preço para reservas diretas.<br />
-                Tarifas incluem sistema{" "}
-                <span className="font-bold">Premium All-Inclusive</span>
+                {homeHero.bookingDisclaimer}<br />
+                {homeHero.bookingDisclaimerPrefix}{" "}
+                <span className="font-bold">{homeHero.bookingDisclaimerHighlight}</span>
               </p>
             </CardContent>
           </Card>

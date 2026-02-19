@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { MotionProvider } from "@/components/MotionProvider";
 import { LanguageProvider } from "@/i18n/context";
+import { Analytics } from "@vercel/analytics/react";
 
 const Desktop = lazy(() =>
   import("@/pages/Desktop").then((module) => ({ default: module.Desktop })),
@@ -139,6 +140,7 @@ function AppContent() {
           <ChatWidget />
         </Suspense>
       )}
+      <Analytics />
     </>
   );
 }

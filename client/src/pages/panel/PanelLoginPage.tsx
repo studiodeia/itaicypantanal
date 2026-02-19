@@ -49,13 +49,20 @@ export function PanelLoginPage() {
   return (
     <main className="min-h-screen bg-[#f4f5f7] px-4 py-8">
       <div className="mx-auto mt-[10vh] w-full max-w-md rounded-3xl border border-black/10 bg-white p-7 shadow-[0_20px_60px_-30px_rgba(2,6,23,0.4)]">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight text-[#111827]">
-            Painel Itaicy
-          </h1>
-          <p className="pt-1 text-sm text-[#6b7280]">
-            Acesso administrativo e operacional com niveis de permissao.
-          </p>
+        <div className="flex flex-col items-center gap-5 pb-2">
+          <img
+            src="/images/icons/footer-logo.svg"
+            alt="Itaicy Pantanal Eco Lodge"
+            className="h-10 w-auto"
+          />
+          <div className="text-center">
+            <h1 className="text-2xl font-semibold tracking-tight text-[#111827]">
+              Painel Itaicy
+            </h1>
+            <p className="pt-1 text-sm text-[#6b7280]">
+              Acesso administrativo e operacional com niveis de permissao.
+            </p>
+          </div>
         </div>
 
         <form onSubmit={onSubmit} className="mt-6 space-y-3">

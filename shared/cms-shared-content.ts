@@ -51,6 +51,9 @@ export type SharedCmsSections = {
     contactInfo: FooterContact[];
     legalLinks: FooterLink[];
     heading: string;
+    pousadaHeading: string;
+    experienciasHeading: string;
+    contactHeading: string;
     newsletterLabel: string;
     newsletterInterests: string[];
     newsletterInputPlaceholder: string;
@@ -64,6 +67,10 @@ export type SharedCmsSections = {
     subtitle: string;
     bookingHeading: string;
     bookingDescription: string;
+    bookingStep1Label: string;
+    bookingDisclaimer: string;
+    bookingDisclaimerPrefix: string;
+    bookingDisclaimerHighlight: string;
   };
   homeManifesto: {
     label: string;
@@ -74,44 +81,44 @@ export type SharedCmsSections = {
 
 export const defaultSharedCmsSections: SharedCmsSections = {
   immersionCta: {
-    heading: "Sua imersao no Pantanal selvagem comeca aqui.",
+    heading: "Sua imersão no Pantanal selvagem começa aqui.",
     description:
-      "Uma experiencia autentica de ecoturismo, observacao de aves ou pesca esportiva espera por voce. Selecione as datas da sua expedicao e garanta seu lugar em nosso refugio.",
+      "Uma experiência autêntica de ecoturismo, observação de aves ou pesca esportiva espera por você. Selecione as datas da sua expedição e garanta seu lugar em nosso refúgio.",
     backgroundImage: "/images/culinaria-cta-bg.webp",
   },
   faq: {
     label: "PERGUNTAS FREQUENTES",
-    heading: "Ainda possui alguma duvida?",
+    heading: "Ainda possui alguma dúvida?",
     description:
-      "Respondemos as principais duvidas para que sua unica preocupacao seja aproveitar a imersao na natureza selvagem.",
+      "Respondemos as principais dúvidas para que sua única preocupação seja aproveitar a imersão na natureza selvagem.",
     items: [
       {
         id: "item-1",
         number: "01",
-        question: "A pousada e destinada apenas para pesca?",
+        question: "A pousada é destinada apenas para pesca?",
         answer:
-          "Nao. A Itaicy oferece experiencias de pesca esportiva, observacao de aves, ecoturismo e imersoes para familias e casais.",
+          "Não. A Itaicy oferece experiências de pesca esportiva, observação de aves, ecoturismo e imersões para famílias e casais.",
       },
       {
         id: "item-2",
         number: "02",
-        question: "Como funciona o acesso as areas exclusivas?",
+        question: "Como funciona o acesso às áreas preservadas?",
         answer:
-          "Nossos roteiros seguem protocolos ambientais e operacionais proprios para garantir seguranca e baixo impacto no bioma.",
+          "Nossos roteiros seguem protocolos ambientais e operacionais próprios para garantir segurança e baixo impacto no bioma.",
       },
       {
         id: "item-3",
         number: "03",
-        question: "As experiencias sao guiadas?",
+        question: "As experiências são guiadas?",
         answer:
-          "Sim. Todas as atividades sao acompanhadas por equipe especializada e guias com conhecimento local.",
+          "Sim. Todas as atividades são acompanhadas por equipe especializada e guias com conhecimento local.",
       },
       {
         id: "item-4",
         number: "04",
-        question: "Existe opcao para grupos e familias?",
+        question: "Existe opção para grupos e famílias?",
         answer:
-          "Sim. Temos configuracoes de hospedagem e roteiro adaptadas para diferentes perfis de viajantes.",
+          "Sim. Temos configurações de hospedagem e roteiro adaptadas para diferentes perfis de viajantes.",
       },
       {
         id: "item-5",
@@ -124,26 +131,26 @@ export const defaultSharedCmsSections: SharedCmsSections = {
   },
   testimonials: {
     label: "DEPOIMENTOS",
-    heading: "Relatos de quem viveu a real imersao",
+    heading: "Relatos de quem viveu a real imersão",
     description:
-      "O que nossos viajantes dizem sobre a experiencia autentica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+      "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
     items: [
       {
-        title: "Experiencia inesquecivel",
+        title: "Experiência inesquecível",
         quote:
-          '"Elegancia essencial em harmonia com o bioma. Uma experiencia autentica e profundamente transformadora."',
+          '"Elegância essencial em harmonia com o bioma. Uma experiência autêntica e profundamente transformadora."',
         author: "Lucas Vieira, BRA",
       },
       {
-        title: "Atendimento impecavel",
+        title: "Atendimento impecável",
         quote:
           '"Equipe preparada, estrutura excelente e roteiros com muito cuidado ambiental. Voltaremos com certeza."',
         author: "Fernanda A., BRA",
       },
       {
-        title: "Conexao real com a natureza",
+        title: "Conexão real com a natureza",
         quote:
-          '"A observacao de aves foi acima da expectativa. Organizacao, seguranca e curadoria de alto nivel."',
+          '"A observação de aves foi acima da expectativa. Organização, segurança e curadoria de alto nível."',
         author: "Rafael M., BRA",
       },
     ],
@@ -151,18 +158,18 @@ export const defaultSharedCmsSections: SharedCmsSections = {
   footer: {
     mobileNavLinks: [
       { label: "Pousada", href: "/" },
-      { label: "Experiencias", href: "/ecoturismo" },
+      { label: "Experiências", href: "/ecoturismo" },
       { label: "Fale conosco", href: "/contato" },
     ],
     pousadaLinks: [
       { label: "Home", href: "/" },
-      { label: "Acomodacoes", href: "/acomodacoes" },
-      { label: "Culinaria", href: "/culinaria" },
+      { label: "Acomodações", href: "/acomodacoes" },
+      { label: "Culinária", href: "/culinaria" },
       { label: "Nosso Impacto", href: "/nosso-impacto" },
       { label: "Blog", href: "/blog" },
     ],
     experienciasLinks: [
-      { label: "Observacao de passaros", href: "/observacao-de-aves" },
+      { label: "Observação de Pássaros", href: "/observacao-de-aves" },
       { label: "Pesca Esportiva", href: "/pesca" },
       { label: "Ecoturismo Imersivo", href: "/ecoturismo" },
     ],
@@ -175,42 +182,49 @@ export const defaultSharedCmsSections: SharedCmsSections = {
       },
     ],
     legalLinks: [
-      { label: "Politica de Privacidade", href: "/politica-de-privacidade" },
-      { label: "Politica de Cookies", href: "/politica-de-privacidade" },
+      { label: "Política de Privacidade", href: "/politica-de-privacidade" },
+      { label: "Política de Cookies", href: "/politica-de-privacidade" },
       { label: "Sitemap", href: "/sitemap.xml" },
       { label: "Termos de Uso", href: "/politica-de-privacidade" },
     ],
-    heading: "O Pantanal como voce nunca sentiu.",
-    newsletterLabel: "Diario de Campo Itaicy",
-    newsletterInterests: ["Quero Pescar", "Quero Natureza", "Viagem em Família"],
+    heading: "O Pantanal como você nunca sentiu.",
+    pousadaHeading: "POUSADA",
+    experienciasHeading: "EXPERIÊNCIAS",
+    contactHeading: "FALE CONOSCO",
+    newsletterLabel: "Diário de Campo Itaicy",
+    newsletterInterests: ["Quero Pescar", "Quero Natureza", "Viagem em Família", "Descanso"],
     newsletterInputPlaceholder: "Seu e-mail",
     newsletterButtonLabel: "Enviar",
     bottomDescription:
-      "Um refugio genuino e sofisticado no coracao do Pantanal. Experiencias aut autenticas para quem busca natureza, conforto e exclusividade.",
+      "Um refúgio genuíno e sofisticado no coração do Pantanal. Experiências autênticas para quem busca natureza, conforto e autenticidade.",
     copyright:
-      "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados.",
+      "© 2026 Itaicy Pantanal Eco Lodge. Todos os direitos reservados.",
   },
   homeHero: {
     heading: "O Pantanal como",
     headingAccent: "você nunca sentiu.",
     subtitle:
-      "Elegancia essencial em harmonia com o bioma. Uma experiencia de imersao autentica, sem excessos e sem concessoes.",
+      "Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.",
     bookingHeading: "Procure por uma data especial",
     bookingDescription:
       "Selecione o período da sua estadia para verificar a disponibilidade.",
+    bookingStep1Label: "Passo 1:",
+    bookingDisclaimer: "Garantimos o melhor preço para reservas diretas.",
+    bookingDisclaimerPrefix: "Tarifas incluem sistema",
+    bookingDisclaimerHighlight: "Premium All-Inclusive",
   },
   homeManifesto: {
     label: "MANIFESTO",
     segments: [
       {
-        text: "Onde o luxo nao e o que se ve, mas o que se sente. Acesso exclusivo ao ",
+        text: "Onde o luxo não é o que se vê, mas o que se sente. Conexão genuína com o ",
         color: "#e3f7ec",
       },
       { text: "Pantanal real", color: "#d6a35d" },
       { text: ". ", color: "#e3f7ec" },
       { text: "Uma ", color: "#e3f7ec" },
-      { text: "imersao autentica", color: "#d6a35d" },
-      { text: ", longe de tudo.", color: "#e3f7ec" },
+      { text: "imersão autêntica", color: "#d6a35d" },
+      { text: ", no coração do bioma.", color: "#e3f7ec" },
     ],
     detailsButtonLabel: "Mais detalhes",
   },

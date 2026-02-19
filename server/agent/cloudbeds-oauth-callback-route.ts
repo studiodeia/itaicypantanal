@@ -34,7 +34,7 @@ function getCallbackConfig(req: Request): CallbackConfig {
   return {
     tokenUrl:
       process.env.CLOUDBEDS_OAUTH_TOKEN_URL?.trim() ||
-      "https://api.cloudbeds.com/api/v1.3/access_token",
+      "https://hotels.cloudbeds.com/api/v1.2/access_token",
     clientId: process.env.CLOUDBEDS_CLIENT_ID?.trim() || "",
     clientSecret: process.env.CLOUDBEDS_CLIENT_SECRET?.trim() || "",
     redirectUri:

@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "assistantName": "Assistente Itaicy",
-  "bookingEngineUrl": "https://hotels.cloudbeds.com/reservation/ITAICY",
+  "bookingEngineUrl": "https://us2.cloudbeds.com/pt-br/reservas/M9G54y",
   "faqConfidenceThreshold": 0.75,
   "disclaimers": {
     "price": {

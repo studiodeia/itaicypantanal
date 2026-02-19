@@ -91,6 +91,7 @@ export class CloudbedsApiError extends Error {
     message: string,
     public readonly status: number,
     public readonly body?: unknown,
+    public readonly requestId?: string,
   ) {
     super(message);
     this.name = "CloudbedsApiError";
@@ -237,20 +238,35 @@ export class CloudbedsClient {
     url: string,
     options: CloudbedsRequestOptions & { method?: string },
     retrying: boolean,
+    useApiKeyHeader = false,
   ): Promise<unknown> {
     const method = (options.method || "GET").toUpperCase();
     const timeoutMs =
       typeof options.timeoutMs === "number" ? options.timeoutMs : this.config.requestTimeoutMs;
 
-    const headers: Record<string, string> = {
-      "Content-Type": "application/json",
-      ...(options.headers || {}),
-    };
+    const headers: Record<string, string> = { ...(options.headers || {}) };
+    // Cloudbeds v1.x endpoints frequently expect form-url-encoded on POST.
+    // For GETs we omit Content-Type to avoid confusing upstreams.
+    if (method !== "GET" && typeof options.body !== "undefined") {
+      headers["Content-Type"] = headers["Content-Type"] || "application/json";
+    }
 
     let bearerToken = "";
     if (!options.skipAuth) {
       bearerToken = await this.auth.getAccessToken(retrying);
-      headers.Authorization = `Bearer ${bearerToken}`;
+      const token = bearerToken.trim();
+      const isApiKeyToken = token.startsWith("cbat_");
+
+      if (isApiKeyToken) {
+        // Cloudbeds docs accept API key as `Authorization: Bearer` OR `x-api-key`.
+        // We send both to avoid subtle differences across endpoints/versions.
+        headers["x-api-key"] = token;
+        headers.Authorization = `Bearer ${token}`;
+      } else if (useApiKeyHeader) {
+        headers["x-api-key"] = token;
+      } else {
+        headers.Authorization = `Bearer ${token}`;
+      }
     }
 
     const controller = new AbortController();
@@ -264,19 +280,43 @@ export class CloudbedsClient {
         signal: controller.signal,
       });
 
-      if (response.status === 401 && !options.skipAuth && !retrying) {
+      // Only retry 401 when we can actually refresh. Otherwise return the 401 as-is
+      // so the caller can surface an "invalid token" message instead of a misleading
+      // "missing refresh token" error.
+      if (
+        response.status === 401 &&
+        !options.skipAuth &&
+        !retrying &&
+        bearerToken.trim().startsWith("cbat_") &&
+        !useApiKeyHeader
+      ) {
+        // API key: retry once forcing x-api-key only (kept for compatibility).
+        return this.executeHttpRequest(url, options, true, true);
+      }
+
+      if (
+        response.status === 401 &&
+        !options.skipAuth &&
+        !retrying &&
+        this.auth.hasRefreshTokenConfigured()
+      ) {
         this.auth.invalidateAccessToken();
-        return this.executeHttpRequest(url, options, true);
+        return this.executeHttpRequest(url, options, true, useApiKeyHeader);
       }
 
       const rawText = await response.text();
       const parsedBody = parseResponseBody(response, rawText);
 
       if (!response.ok) {
+        const requestId =
+          response.headers.get("x-request-id") ||
+          response.headers.get("x-kong-request-id") ||
+          undefined;
         throw new CloudbedsApiError(
           `Cloudbeds API returned HTTP ${response.status}.`,
           response.status,
           parsedBody,
+          requestId,
         );
       }
 
@@ -325,6 +365,7 @@ export function formatCloudbedsError(error: unknown): {
   message: string;
   status?: number;
   body?: string;
+  requestId?: string;
 } {
   if (error instanceof CloudbedsCircuitOpenError) {
     return {
@@ -348,6 +389,7 @@ export function formatCloudbedsError(error: unknown): {
       message: error.message,
       status: error.status,
       body: toSafeJson(error.body),
+      requestId: error.requestId,
     };
   }
 
@@ -356,4 +398,3 @@ export function formatCloudbedsError(error: unknown): {
     message: toErrorMessage(error),
   };
 }
-

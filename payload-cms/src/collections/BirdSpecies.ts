@@ -13,13 +13,13 @@ function getDocString(doc: unknown, key: string): string {
 export const BirdSpecies: CollectionConfig = {
   slug: "bird-species",
   labels: {
-    singular: "Especie de ave",
-    plural: "Especies de aves",
+    singular: "Espécie de ave",
+    plural: "Espécies de aves",
   },
   admin: {
-    group: "Birdwatching",
+    group: "Observação de Aves",
     description:
-      "Catalogo de especies para paginas de observacao de aves e conteudo editorial.",
+      "Catálogo de espécies: 166 espécies do Pantanal com taxonomia, descrição e dicas de fotografia.",
     useAsTitle: "commonName",
     defaultColumns: ["commonName", "scientificName", "slug", "isFeatured", "updatedAt"],
     listSearchableFields: ["commonName", "scientificName", "slug", "tag"],
@@ -51,6 +51,7 @@ export const BirdSpecies: CollectionConfig = {
                   type: "text",
                   label: "Nome comum",
                   required: true,
+                  localized: true,
                   admin: {
                     width: "45%",
                   },
@@ -58,7 +59,7 @@ export const BirdSpecies: CollectionConfig = {
                 {
                   name: "scientificName",
                   type: "text",
-                  label: "Nome cientifico",
+                  label: "Nome científico",
                   required: true,
                   admin: {
                     width: "35%",
@@ -73,6 +74,7 @@ export const BirdSpecies: CollectionConfig = {
                   index: true,
                   admin: {
                     width: "20%",
+                    description: "URL da espécie. Use letras minúsculas, números e hifens. Ex: arara-azul",
                   },
                 },
               ],
@@ -80,8 +82,9 @@ export const BirdSpecies: CollectionConfig = {
             {
               name: "description",
               type: "textarea",
-              label: "Descricao curta",
+              label: "Descrição curta",
               required: false,
+              localized: true,
             },
             {
               type: "row",
@@ -89,7 +92,7 @@ export const BirdSpecies: CollectionConfig = {
                 {
                   name: "taxonomicOrder",
                   type: "text",
-                  label: "Ordem taxonomica",
+                  label: "Ordem taxonômica",
                   required: false,
                   admin: {
                     width: "33%",
@@ -99,7 +102,7 @@ export const BirdSpecies: CollectionConfig = {
                 {
                   name: "family",
                   type: "text",
-                  label: "Familia",
+                  label: "Família",
                   required: false,
                   admin: {
                     width: "33%",
@@ -109,7 +112,7 @@ export const BirdSpecies: CollectionConfig = {
                 {
                   name: "commonNameEN",
                   type: "text",
-                  label: "Nome em ingles",
+                  label: "Nome em inglês",
                   required: false,
                   admin: {
                     width: "34%",
@@ -135,6 +138,7 @@ export const BirdSpecies: CollectionConfig = {
                   type: "text",
                   label: "Tag",
                   required: false,
+                  localized: true,
                   admin: {
                     width: "50%",
                   },
@@ -144,7 +148,7 @@ export const BirdSpecies: CollectionConfig = {
           ],
         },
         {
-          label: "Midia e metadados",
+          label: "Mídia e metadados",
           fields: [
             {
               type: "row",
@@ -165,6 +169,7 @@ export const BirdSpecies: CollectionConfig = {
                   required: false,
                   admin: {
                     width: "60%",
+                    description: "Caminho sem extensão. Ex: /images/arara-azul — os formatos AVIF e WebP são carregados automaticamente.",
                   },
                 },
               ],
@@ -193,12 +198,13 @@ export const BirdSpecies: CollectionConfig = {
                 {
                   name: "conservationStatus",
                   type: "text",
-                  label: "Status de conservacao",
+                  label: "Status de conservação",
                   required: false,
+                  localized: true,
                   admin: {
                     width: "25%",
                     description:
-                      "Status IUCN. Ex: 'Vulneravel (VU)', 'Pouco Preocupante (LC)'",
+                      "Status IUCN. Ex: 'Vulnerável (VU)', 'Pouco Preocupante (LC)'",
                   },
                 },
                 {
@@ -215,47 +221,52 @@ export const BirdSpecies: CollectionConfig = {
             {
               name: "isFeatured",
               type: "checkbox",
-              label: "Exibir como especie em destaque",
+              label: "Exibir como espécie em destaque",
               defaultValue: false,
               admin: {
                 description:
-                  "Marque para exibir na secao de aves em destaque.",
+                  "Marque para exibir na seção de aves em destaque.",
               },
             },
           ],
         },
         {
-          label: "Conteudo detalhado",
+          label: "Conteúdo detalhado",
           fields: [
             {
               name: "habitat",
               type: "textarea",
               label: "Habitat",
               required: false,
+              localized: true,
             },
             {
               name: "overview",
               type: "textarea",
-              label: "Visao geral",
+              label: "Visão geral",
               required: false,
+              localized: true,
             },
             {
               name: "diet",
               type: "textarea",
-              label: "Alimentacao",
+              label: "Alimentação",
               required: false,
+              localized: true,
             },
             {
               name: "behavior",
               type: "textarea",
               label: "Comportamento",
               required: false,
+              localized: true,
             },
             {
               name: "bestTime",
               type: "textarea",
-              label: "Melhor periodo de observacao",
+              label: "Melhor período de observação",
               required: false,
+              localized: true,
             },
             {
               name: "photographyTips",
@@ -265,7 +276,7 @@ export const BirdSpecies: CollectionConfig = {
               admin: {
                 initCollapsed: true,
                 description:
-                  "Dicas praticas para fotografar esta especie no Pantanal.",
+                  "Dicas práticas para fotografar esta espécie no Pantanal.",
               },
               fields: [
                 {
@@ -273,6 +284,7 @@ export const BirdSpecies: CollectionConfig = {
                   type: "text",
                   label: "Dica",
                   required: true,
+                  localized: true,
                 },
               ],
             },
@@ -290,7 +302,7 @@ export const BirdSpecies: CollectionConfig = {
             {
               name: "relatedSpecies",
               type: "relationship",
-              label: "Especies relacionadas",
+              label: "Espécies relacionadas",
               relationTo: "bird-species",
               hasMany: true,
               required: false,

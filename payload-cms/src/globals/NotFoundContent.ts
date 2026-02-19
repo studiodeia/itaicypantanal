@@ -6,13 +6,14 @@ const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
 export const NotFoundContent: GlobalConfig = {
   slug: "not-found-content",
-  label: "Pagina 404",
+  label: "Página 404",
   admin: {
-    group: "Paginas",
-    description: "Conteudo da pagina de erro 404.",
+    group: "Páginas do Site",
+    description: "Página 404: edite o conteúdo exibido quando uma URL não existe.",
     preview: () => `${frontendOrigin}/404-preview`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -24,13 +25,9 @@ export const NotFoundContent: GlobalConfig = {
           ],
         },
         {
-          label: "Acao",
+          label: "Ação",
           fields: [
-            {
-              name: "buttonText",
-              type: "text",
-              label: "Texto do Botao (Voltar)",
-            },
+            { name: "buttonText", type: "text", label: "Texto do Botão (Voltar)", localized: true },
           ],
         },
       ],

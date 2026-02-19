@@ -25,7 +25,7 @@ export async function handleCloudbedsOAuthStart(req: Request, res: Response) {
     `${baseUrl}/api/agent/cloudbeds/oauth/callback`;
   const authorizeUrlBase =
     process.env.CLOUDBEDS_OAUTH_AUTHORIZE_URL?.trim() ||
-    "https://api.cloudbeds.com/api/v1.3/oauth";
+    "https://hotels.cloudbeds.com/api/v1.2/oauth";
 
   const state =
     typeof req.query.state === "string" && req.query.state.trim().length > 0

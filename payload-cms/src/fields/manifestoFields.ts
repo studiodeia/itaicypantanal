@@ -9,11 +9,11 @@ export function manifestoFields(): Field[] {
       labels: { singular: "Segmento", plural: "Segmentos" },
       admin: {
         description:
-          "Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.",
+          "Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.",
         initCollapsed: false,
       },
       fields: [
-        { name: "text", type: "text", label: "Texto", required: true },
+        { name: "text", type: "text", label: "Texto", required: true, localized: true },
         {
           name: "isHighlight",
           type: "checkbox",

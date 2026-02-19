@@ -20,12 +20,14 @@ Cliente HTTP reutilizavel para Cloudbeds com:
 
 Obrigatorias para habilitar:
 - `CLOUDBEDS_ENABLED=true`
-- `CLOUDBEDS_API_BASE_URL` (recomendado: `https://api.cloudbeds.com/api/v1.3`)
-- Uma das opcoes de auth:
-  - Token estatico:
+- `CLOUDBEDS_API_BASE_URL` (recomendado: `https://hotels.cloudbeds.com/api/v1.2`)
+- Uma das opcoes de auth (ordem recomendada):
+  - **API Key (preferido para PMS read-only no MVP):**
+    - `CLOUDBEDS_API_KEY` (formato `cbat_...`)
+  - Token estatico (OAuth access_token ja obtido):
     - `CLOUDBEDS_ACCESS_TOKEN`
-  - OAuth:
-    - `CLOUDBEDS_OAUTH_TOKEN_URL` (recomendado: `https://api.cloudbeds.com/api/v1.3/access_token`)
+  - OAuth completo (quando voce precisar de refresh_token):
+    - `CLOUDBEDS_OAUTH_TOKEN_URL` (recomendado: `https://hotels.cloudbeds.com/api/v1.2/access_token`)
     - `CLOUDBEDS_CLIENT_ID`
     - `CLOUDBEDS_CLIENT_SECRET`
     - `CLOUDBEDS_OAUTH_REDIRECT_URI`
@@ -69,6 +71,7 @@ const availability = await cloudbedsClient.request("/getAvailableRoomTypes", {
 - Em `401`, o cliente invalida token e tenta renovar uma vez automaticamente.
 - Erros 429/5xx entram no fluxo de retry.
 - Cache so se aplica a requests `GET` e pode ser bypassado por request.
+- **API Keys (`cbat_...`) sao tratadas como long-lived** (sem refresh).
 - Para chamadas OAuth em runtime, e necessario `CLOUDBEDS_REFRESH_TOKEN` (ou `CLOUDBEDS_ACCESS_TOKEN` estatico). Cloudbeds nao usa grant `client_credentials` para este fluxo PMS.
 
 ## Endpoint de status (admin)
@@ -77,7 +80,7 @@ const availability = await cloudbedsClient.request("/getAvailableRoomTypes", {
 - Header: `x-agent-admin-key`
 - Query opcional:
   - `probe=true` para executar chamada real de conectividade
-  - `probe_path=/userinfo` para override de rota de probe
+  - `probe_path=/getHotels` para override de rota de probe (default: `/getHotels`)
 
 ## OAuth callback
 

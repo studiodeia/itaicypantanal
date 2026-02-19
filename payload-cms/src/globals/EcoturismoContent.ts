@@ -13,11 +13,12 @@ export const EcoturismoContent: GlobalConfig = {
   slug: "ecoturismo-content",
   label: "Ecoturismo",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina de ecoturismo.",
+    group: "Páginas do Site",
+    description: "Página de Ecoturismo: edite hero, manifesto, sobre nós, destaques, serviços e FAQ.",
     preview: () => `${frontendOrigin}/ecoturismo`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -35,9 +36,9 @@ export const EcoturismoContent: GlobalConfig = {
           ],
         },
         {
-          label: "Sobre Nos",
+          label: "Sobre Nós",
           fields: [
-            { name: "sobreNos", type: "group", label: "Sobre Nos", fields: sobreNosFields() },
+            { name: "sobreNos", type: "group", label: "Sobre Nós", fields: sobreNosFields() },
           ],
         },
         {
@@ -47,9 +48,9 @@ export const EcoturismoContent: GlobalConfig = {
           ],
         },
         {
-          label: "Servicos",
+          label: "Serviços",
           fields: [
-            { name: "services", type: "group", label: "Servicos", fields: servicesFields() },
+            { name: "services", type: "group", label: "Serviços", fields: servicesFields() },
           ],
         },
         {

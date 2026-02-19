@@ -72,7 +72,7 @@ describe("categorySlugMap", () => {
   it("maps display names to URL slugs", () => {
     expect(categorySlugMap["Aventura"]).toBe("aventura");
     expect(categorySlugMap["Conservação"]).toBe("conservacao");
-    expect(categorySlugMap["Roteiros Exclusivos"]).toBe("roteiros-exclusivos");
+    expect(categorySlugMap["Roteiros Guiados"]).toBe("roteiros-guiados");
   });
 });
 
@@ -80,8 +80,8 @@ describe("slugToCategoryMap", () => {
   it("maps URL slugs back to display names", () => {
     expect(slugToCategoryMap["aventura"]).toBe("Aventura");
     expect(slugToCategoryMap["conservacao"]).toBe("Conservação");
-    expect(slugToCategoryMap["roteiros-exclusivos"]).toBe(
-      "Roteiros Exclusivos",
+    expect(slugToCategoryMap["roteiros-guiados"]).toBe(
+      "Roteiros Guiados",
     );
   });
 });

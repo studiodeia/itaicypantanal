@@ -1,64 +1,64 @@
 {
   "immersionCta": {
-    "heading": "Sua imersao no Pantanal selvagem comeca aqui.",
-    "description": "Uma experiencia autentica de ecoturismo, observacao de aves ou pesca esportiva espera por voce. Selecione as datas da sua expedicao e garanta seu lugar em nosso refugio.",
+    "heading": "Sua imersão no Pantanal selvagem começa aqui.",
+    "description": "Uma experiência autêntica de ecoturismo, observação de aves ou pesca esportiva espera por você. Selecione as datas da sua expedição e garanta seu lugar em nosso refúgio.",
     "backgroundImage": "/images/culinaria-cta-bg.webp"
   },
   "faq": {
     "label": "PERGUNTAS FREQUENTES",
-    "heading": "Ainda possui alguma duvida?",
-    "description": "Respondemos as principais duvidas para que sua unica preocupacao seja aproveitar a imersao na natureza selvagem.",
+    "heading": "Ainda possui alguma dúvida?",
+    "description": "Respondemos as principais dúvidas para que sua única preocupação seja aproveitar a imersão na natureza selvagem.",
     "items": [
       {
         "id": "item-1",
         "number": "01",
-        "question": "A pousada e destinada apenas para pesca?",
-        "answer": "Nao. A Itaicy oferece tres experiencias principais: pesca esportiva cota zero (temporada fev-set no Rio Cuiaba), observacao de aves (166 especies catalogadas) e ecoturismo (trilhas, safaris fotograficos, passeios de barco). Tambem e ideal para casais, familias e fotografos de natureza."
+        "question": "A pousada é destinada apenas para pesca?",
+        "answer": "Não. A Itaicy oferece três experiências principais: pesca esportiva cota zero (temporada fev-set no Rio Cuiabá), observação de aves (166 espécies catalogadas) e ecoturismo (trilhas, safáris fotográficos, passeios de barco). Também é ideal para casais, famílias e fotógrafos de natureza."
       },
       {
         "id": "item-2",
         "number": "02",
-        "question": "Como chegar a Itaicy?",
-        "answer": "Estamos na Rodovia MT 040, KM 23, em Santo Antonio do Leverger, MT, a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande. Oferecemos transfer sob consulta."
+        "question": "Como chegar à Itaicy?",
+        "answer": "Estamos na Rodovia MT 040, KM 23, em Santo Antônio do Leverger, MT, a cerca de 33 km de Cuiabá (40 min de carro). O aeroporto mais próximo é o Marechal Rondon (CGB) em Várzea Grande. Oferecemos transfer sob consulta."
       },
       {
         "id": "item-3",
         "number": "03",
-        "question": "As experiencias sao guiadas?",
-        "answer": "Sim. Todas as atividades sao acompanhadas por guias nativos especializados que nasceram na regiao e conhecem profundamente o bioma, os rios e os habitos da fauna. Os piloteiros de pesca dominam a leitura do Rio Cuiaba."
+        "question": "As experiências são guiadas?",
+        "answer": "Sim. Todas as atividades são acompanhadas por guias nativos especializados que nasceram na região e conhecem profundamente o bioma, os rios e os hábitos da fauna. Os guias de pesca dominam a leitura do Rio Cuiabá."
       },
       {
         "id": "item-4",
         "number": "04",
-        "question": "O que esta incluso na diaria?",
-        "answer": "A diaria inclui hospedagem, cafe da manha reforcado, almoco e jantar a la carte, passeio de barco, cavalgada guiada, Wi-Fi nas areas sociais e acesso a piscina e areas de convivencia. Criancas sao bem-vindas e room service esta disponivel."
+        "question": "O que está incluso na diária?",
+        "answer": "A diária inclui hospedagem, café da manhã reforçado, almoço e jantar à la carte, passeio de barco, cavalgada guiada, Wi-Fi nas áreas sociais e acesso à piscina e áreas de convivência. Crianças são bem-vindas e room service está disponível."
       },
       {
         "id": "item-5",
         "number": "05",
         "question": "Posso personalizar meu roteiro?",
-        "answer": "Sim. Nossa equipe pode ajustar o pacote conforme seus interesses (pesca, aves, fotografia, contemplacao), a epoca do ano e a duracao da estadia. Oferecemos roteiros adaptados ao seu perfil. Entre em contato pelo WhatsApp (19) 98870-5593 ou e-mail contato@pousadaitaicy.com.br."
+        "answer": "Sim. Nossa equipe pode ajustar o pacote conforme seus interesses (pesca, aves, fotografia, contemplação), a época do ano e a duração da estadia. Oferecemos roteiros adaptados ao seu perfil. Entre em contato pelo WhatsApp (19) 98870-5593 ou e-mail contato@pousadaitaicy.com.br."
       }
     ]
   },
   "testimonials": {
     "label": "DEPOIMENTOS",
-    "heading": "Relatos de quem viveu a real imersao",
-    "description": "O que nossos viajantes dizem sobre a experiencia autentica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+    "heading": "Relatos de quem viveu a real imersão",
+    "description": "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
     "items": [
       {
-        "title": "Experiencia inesquecivel",
-        "quote": "\"Elegancia essencial em harmonia com o bioma. Uma experiencia autentica e profundamente transformadora.\"",
+        "title": "Experiência inesquecível",
+        "quote": "\"Elegância essencial em harmonia com o bioma. Uma experiência autêntica e profundamente transformadora.\"",
         "author": "Lucas Vieira, BRA"
       },
       {
-        "title": "Atendimento impecavel",
+        "title": "Atendimento impecável",
         "quote": "\"Equipe preparada, estrutura excelente e roteiros com muito cuidado ambiental. Voltaremos com certeza.\"",
         "author": "Fernanda A., BRA"
       },
       {
-        "title": "Conexao real com a natureza",
-        "quote": "\"A observacao de aves foi acima da expectativa. Organizacao, seguranca e curadoria de alto nivel.\"",
+        "title": "Conexão real com a natureza",
+        "quote": "\"A observação de aves foi acima da expectativa. Organização, segurança e curadoria de alto nível.\"",
         "author": "Rafael M., BRA"
       }
     ]
@@ -70,7 +70,7 @@
         "href": "/"
       },
       {
-        "label": "Experiencias",
+        "label": "Experiências",
         "href": "/ecoturismo"
       },
       {
@@ -84,11 +84,11 @@
         "href": "/"
       },
       {
-        "label": "Acomodacoes",
+        "label": "Acomodações",
         "href": "/acomodacoes"
       },
       {
-        "label": "Culinaria",
+        "label": "Culinária",
         "href": "/culinaria"
       },
       {
@@ -102,7 +102,7 @@
     ],
     "experienciasLinks": [
       {
-        "label": "Observacao de passaros",
+        "label": "Observação de Pássaros",
         "href": "/observacao-de-aves"
       },
       {
@@ -125,16 +125,16 @@
       },
       {
         "icon": "/images/icons/location-on.png",
-        "text": "Rodovia MT 040, KM 23 - Santo Antonio do Leverger, MT, 78180-000"
+        "text": "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000"
       }
     ],
     "legalLinks": [
       {
-        "label": "Politica de Privacidade",
+        "label": "Política de Privacidade",
         "href": "/politica-de-privacidade"
       },
       {
-        "label": "Politica de Cookies",
+        "label": "Política de Cookies",
         "href": "/politica-de-privacidade"
       },
       {
@@ -146,22 +146,23 @@
         "href": "/politica-de-privacidade"
       }
     ],
-    "heading": "O Pantanal como voce nunca sentiu.",
-    "newsletterLabel": "Diario de Campo Itaicy",
+    "heading": "O Pantanal como você nunca sentiu.",
+    "newsletterLabel": "Diário de Campo Itaicy",
     "newsletterInterests": [
       "Quero Pescar",
       "Quero Natureza",
-      "Viagem em Família"
+      "Viagem em Família",
+      "Descanso"
     ],
     "newsletterInputPlaceholder": "Seu e-mail",
     "newsletterButtonLabel": "Enviar",
-    "bottomDescription": "Um refugio genuino e sofisticado no coracao do Pantanal. Experiencias aut autenticas para quem busca natureza, conforto e exclusividade.",
-    "copyright": "© 2025 Itaicy Pantanal Eco Lodge. Todos os direitos reservados. Desde 2005."
+    "bottomDescription": "Um refúgio genuíno e sofisticado no coração do Pantanal. Experiências autênticas para quem busca natureza, conforto e autenticidade.",
+    "copyright": "© 2026 Itaicy Pantanal Eco Lodge. Todos os direitos reservados. Desde 2005."
   },
   "homeHero": {
     "heading": "O Pantanal como",
     "headingAccent": "você nunca sentiu.",
-    "subtitle": "Elegancia essencial em harmonia com o bioma. Uma experiencia de imersao autentica, sem excessos e sem concessoes.",
+    "subtitle": "Elegância essencial em harmonia com o bioma. Uma experiência de imersão autêntica, sem excessos e sem concessões.",
     "bookingHeading": "Procure por uma data especial",
     "bookingDescription": "Selecione o período da sua estadia para verificar a disponibilidade."
   },
@@ -169,7 +170,7 @@
     "label": "MANIFESTO",
     "segments": [
       {
-        "text": "Onde o luxo nao e o que se ve, mas o que se sente. Acesso exclusivo ao ",
+        "text": "Onde o luxo não é o que se vê, mas o que se sente. Conexão genuína com o",
         "color": "#e3f7ec"
       },
       {
@@ -185,11 +186,11 @@
         "color": "#e3f7ec"
       },
       {
-        "text": "imersao autentica",
+        "text": "imersão autêntica",
         "color": "#d6a35d"
       },
       {
-        "text": ", longe de tudo.",
+        "text": ", no coração do bioma.",
         "color": "#e3f7ec"
       }
     ],

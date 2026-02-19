@@ -3,14 +3,18 @@ import {
   defaultSharedCmsSections,
   type SharedCmsSections,
 } from "@shared/cms-shared-content";
+import { useLanguage, type Lang } from "@/i18n/context";
+import { sharedDefaults } from "./shared-defaults";
 
 type SharedCmsResponse = {
   source?: "seed" | "payload";
   shared?: SharedCmsSections;
 };
 
-let sharedSectionsCache: SharedCmsSections | null = null;
-let sharedSectionsPromise: Promise<SharedCmsSections> | null = null;
+const sharedCache = new Map<string, SharedCmsSections>();
+const sharedPromises = new Map<string, Promise<SharedCmsSections>>();
+
+const LOCALE_MAP: Record<Lang, string> = { pt: "pt", en: "en", es: "es" };
 
 function isValidSharedSections(value: unknown): value is SharedCmsSections {
   if (!value || typeof value !== "object") return false;
@@ -25,9 +29,9 @@ function isValidSharedSections(value: unknown): value is SharedCmsSections {
   );
 }
 
-export async function fetchSharedCmsSections(): Promise<SharedCmsSections> {
+export async function fetchSharedCmsSections(locale = "pt"): Promise<SharedCmsSections> {
   try {
-    const response = await fetch("/api/cms/shared");
+    const response = await fetch(`/api/cms/shared?locale=${locale}`);
     if (!response.ok) {
       return defaultSharedCmsSections;
     }
@@ -42,30 +46,30 @@ export async function fetchSharedCmsSections(): Promise<SharedCmsSections> {
   }
 }
 
-async function fetchSharedCmsSectionsCached(): Promise<SharedCmsSections> {
-  if (sharedSectionsCache) {
-    return sharedSectionsCache;
-  }
+function fetchSharedCmsSectionsCached(locale: string): Promise<SharedCmsSections> {
+  const cached = sharedCache.get(locale);
+  if (cached) return Promise.resolve(cached);
 
-  if (sharedSectionsPromise) {
-    return sharedSectionsPromise;
-  }
+  const existing = sharedPromises.get(locale);
+  if (existing) return existing;
 
-  sharedSectionsPromise = fetchSharedCmsSections()
+  const promise = fetchSharedCmsSections(locale)
     .then((sections) => {
-      sharedSectionsCache = sections;
+      sharedCache.set(locale, sections);
       return sections;
     })
     .finally(() => {
-      sharedSectionsPromise = null;
+      sharedPromises.delete(locale);
     });
 
-  return sharedSectionsPromise;
+  sharedPromises.set(locale, promise);
+  return promise;
 }
 
 export function useSharedCmsSections(): SharedCmsSections {
+  const { lang } = useLanguage();
   const [sections, setSections] = useState<SharedCmsSections>(
-    defaultSharedCmsSections,
+    sharedDefaults[lang],
   );
 
   useEffect(() => {
@@ -73,8 +77,9 @@ export function useSharedCmsSections(): SharedCmsSections {
       return;
     }
 
+    const locale = LOCALE_MAP[lang] ?? "pt";
     let mounted = true;
-    fetchSharedCmsSectionsCached().then((next) => {
+    fetchSharedCmsSectionsCached(locale).then((next) => {
       if (mounted) {
         setSections((current) => (current === next ? current : next));
       }
@@ -82,7 +87,7 @@ export function useSharedCmsSections(): SharedCmsSections {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [lang]);
 
   return sections;
 }

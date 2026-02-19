@@ -7,12 +7,15 @@ export type LocalizedDefaults<K extends keyof PageContentMap> = Record<Lang, Pag
 const pageCache = new Map<string, unknown>();
 const pagePromises = new Map<string, Promise<unknown>>();
 
+const LOCALE_MAP: Record<Lang, string> = { pt: "pt", en: "en", es: "es" };
+
 async function fetchPageContent<K extends keyof PageContentMap>(
   slug: K,
+  locale: string,
 ): Promise<PageContentMap[K] | null> {
   const apiSlug = slug === "/" ? "home" : (slug as string).replace(/^\//, "");
   try {
-    const res = await fetch(`/api/cms/page/${apiSlug}`);
+    const res = await fetch(`/api/cms/page/${apiSlug}?locale=${locale}`);
     if (!res.ok) return null;
     const data = await res.json();
     return data.content as PageContentMap[K];
@@ -32,14 +35,8 @@ export function usePageCms<K extends keyof PageContentMap>(
   useEffect(() => {
     if (import.meta.env.MODE === "test") return;
 
-    // For non-PT, always use frontend translations (CMS is PT-only for now)
-    if (lang !== "pt") {
-      setContent(defaults[lang] ?? defaults.pt);
-      return;
-    }
-
-    // For PT: fetch from CMS with fallback to PT defaults
-    const cacheKey = slug as string;
+    const locale = LOCALE_MAP[lang] ?? "pt";
+    const cacheKey = `${slug}:${locale}`;
 
     if (pageCache.has(cacheKey)) {
       setContent(pageCache.get(cacheKey) as PageContentMap[K]);
@@ -49,7 +46,7 @@ export function usePageCms<K extends keyof PageContentMap>(
     let mounted = true;
     let promise = pagePromises.get(cacheKey) as Promise<PageContentMap[K] | null> | undefined;
     if (!promise) {
-      promise = fetchPageContent(slug);
+      promise = fetchPageContent(slug, locale);
       pagePromises.set(cacheKey, promise);
     }
 
@@ -57,6 +54,8 @@ export function usePageCms<K extends keyof PageContentMap>(
       if (data && mounted) {
         pageCache.set(cacheKey, data);
         setContent(data);
+      } else if (!data && mounted) {
+        setContent(defaults[lang] ?? defaults.pt);
       }
     }).finally(() => {
       pagePromises.delete(cacheKey);

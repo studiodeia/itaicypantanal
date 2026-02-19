@@ -200,22 +200,6 @@ export const SpeciesContentSection = ({
           </motion.div>
         </article>
 
-        {/* Article footer — line + logo + line */}
-        <motion.div
-          className="flex items-center gap-8 md:gap-12 max-w-[720px] mx-auto w-full mt-12 md:mt-16 lg:mt-[100px]"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-        >
-          <div className="flex-1 h-px bg-[#263a30]/20" />
-          <img
-            src="/images/itaicy-logo-dark.svg"
-            alt="Itaicy"
-            className="h-10 w-auto"
-          />
-          <div className="flex-1 h-px bg-[#263a30]/20" />
-        </motion.div>
       </div>
     </section>
   );

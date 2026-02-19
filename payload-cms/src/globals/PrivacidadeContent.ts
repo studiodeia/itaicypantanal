@@ -5,79 +5,54 @@ const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
 export const PrivacidadeContent: GlobalConfig = {
   slug: "privacidade-content",
-  label: "Politica de Privacidade",
+  label: "Política de Privacidade",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da politica de privacidade.",
+    group: "Páginas do Site",
+    description: "Política de Privacidade: edite título, data de atualização e seções do documento.",
     preview: () => `${frontendOrigin}/politica-de-privacidade`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
       tabs: [
         {
-          label: "Cabecalho",
+          label: "Cabeçalho",
           fields: [
             {
               name: "hero",
               type: "group",
-              label: "Cabecalho",
+              label: "Cabeçalho",
               fields: [
-                { name: "title", type: "text", label: "Titulo da Pagina" },
-                {
-                  name: "lastUpdated",
-                  type: "text",
-                  label: "Ultima Atualizacao (ex: 15 de Fevereiro, 2026)",
-                },
+                { name: "title", type: "text", label: "Título da Página", localized: true },
+                { name: "lastUpdated", type: "text", label: "Última Atualização (ex: 15 de Fevereiro, 2026)", localized: true },
               ],
             },
           ],
         },
         {
-          label: "Secoes",
-          description:
-            "Secoes da politica de privacidade. Use **negrito** no inicio para criar itens de lista.",
+          label: "Seções",
+          description: "Seções da política de privacidade. Use **negrito** no início para criar itens de lista.",
           fields: [
             {
               name: "sections",
               type: "array",
-              label: "Secoes",
-              labels: { singular: "Secao", plural: "Secoes" },
+              label: "Seções",
+              labels: { singular: "Seção", plural: "Seções" },
               fields: [
-                {
-                  name: "id",
-                  type: "text",
-                  label: "ID (ancora, ex: dados-coletados)",
-                  required: true,
-                  admin: { width: "30%" },
-                },
-                {
-                  name: "title",
-                  type: "text",
-                  label: "Titulo da Secao",
-                  required: true,
-                  admin: { width: "70%" },
-                },
+                { name: "id", type: "text", label: "ID (âncora, ex: dados-coletados)", required: true, admin: { width: "30%" } },
+                { name: "title", type: "text", label: "Título da Seção", required: true, localized: true, admin: { width: "70%" } },
                 {
                   name: "content",
                   type: "array",
-                  label: "Paragrafos",
-                  labels: {
-                    singular: "Paragrafo",
-                    plural: "Paragrafos",
-                  },
+                  label: "Parágrafos",
+                  labels: { singular: "Parágrafo", plural: "Parágrafos" },
                   admin: {
-                    description:
-                      "Cada item e um paragrafo. Comece com ** para criar itens de lista com negrito.",
+                    description: "Cada item é um parágrafo. Comece com ** para criar itens de lista com negrito.",
                   },
                   fields: [
-                    {
-                      name: "text",
-                      type: "textarea",
-                      label: "Texto",
-                      required: true,
-                    },
+                    { name: "text", type: "textarea", label: "Texto", required: true, localized: true },
                   ],
                 },
               ],

@@ -34,6 +34,10 @@ export type CloudbedsConfig = {
   clientId: string;
   clientSecret: string;
   scope: string;
+  /**
+   * Static token used for Cloudbeds PMS API calls.
+   * Supports API keys (`cbat_...`) and OAuth access tokens.
+   */
   staticAccessToken: string;
   initialRefreshToken: string;
   requestTimeoutMs: number;
@@ -47,7 +51,9 @@ export type CloudbedsConfig = {
 export function loadCloudbedsConfig(env: Env = process.env): CloudbedsConfig {
   const apiBaseUrl = normalizeUrl(env.CLOUDBEDS_API_BASE_URL);
   const oauthTokenUrl = normalizeUrl(env.CLOUDBEDS_OAUTH_TOKEN_URL);
-  const staticAccessToken = (env.CLOUDBEDS_ACCESS_TOKEN || "").trim();
+  // Prefer the explicit API-key env var if present. This reduces confusion around
+  // "access token" vs "API key" since both can authenticate Cloudbeds calls.
+  const staticAccessToken = (env.CLOUDBEDS_API_KEY || env.CLOUDBEDS_ACCESS_TOKEN || "").trim();
   const clientId = (env.CLOUDBEDS_CLIENT_ID || "").trim();
   const clientSecret = (env.CLOUDBEDS_CLIENT_SECRET || "").trim();
   const initialRefreshToken = (env.CLOUDBEDS_REFRESH_TOKEN || "").trim();

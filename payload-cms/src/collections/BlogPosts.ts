@@ -29,7 +29,7 @@ export const BlogPosts: CollectionConfig = {
   admin: {
     group: "Blog",
     description:
-      "Gerencie os artigos do blog com categorias, destaque e conteudo estruturado.",
+      "Gerencie os artigos do blog com categorias, destaque e conteúdo estruturado.",
     useAsTitle: "title",
     defaultColumns: ["title", "slug", "primaryCategory", "isFeatured", "updatedAt"],
     listSearchableFields: ["title", "slug", "author", "tag"],
@@ -52,6 +52,9 @@ export const BlogPosts: CollectionConfig = {
     },
   },
   defaultSort: "-updatedAt",
+  versions: {
+    maxPerDoc: 10,
+  },
   access: {
     read: () => true,
     create: isAuthenticated,
@@ -71,12 +74,13 @@ export const BlogPosts: CollectionConfig = {
                 {
                   name: "title",
                   type: "text",
-                  label: "Titulo",
+                  label: "Título",
                   required: true,
+                  localized: true,
                   admin: {
                     width: "70%",
                     description:
-                      "Titulo principal do artigo. Aparece no card e na pagina.",
+                      "Título principal do artigo. Aparece no card e na página.",
                   },
                 },
                 {
@@ -89,7 +93,7 @@ export const BlogPosts: CollectionConfig = {
                   admin: {
                     width: "30%",
                     description:
-                      "URL amigavel do artigo (somente minusculas e hifens).",
+                      "Identificador único na URL. Use letras minúsculas, números e hifens. Sem acentos ou espaços. Ex: meu-artigo-2024",
                   },
                 },
               ],
@@ -97,14 +101,16 @@ export const BlogPosts: CollectionConfig = {
             {
               name: "subtitle",
               type: "text",
-              label: "Subtitulo",
+              label: "Subtítulo",
               required: false,
+              localized: true,
             },
             {
               name: "description",
               type: "textarea",
-              label: "Descricao",
+              label: "Descrição",
               required: false,
+              localized: true,
             },
             {
               type: "row",
@@ -114,6 +120,7 @@ export const BlogPosts: CollectionConfig = {
                   type: "text",
                   label: "Tag",
                   required: false,
+                  localized: true,
                   admin: {
                     width: "30%",
                   },
@@ -144,7 +151,7 @@ export const BlogPosts: CollectionConfig = {
           ],
         },
         {
-          label: "Midia e metadados",
+          label: "Mídia e metadados",
           fields: [
             {
               type: "row",
@@ -197,6 +204,7 @@ export const BlogPosts: CollectionConfig = {
                   type: "text",
                   label: "Tempo de leitura",
                   required: false,
+                  localized: true,
                   admin: {
                     width: "30%",
                   },
@@ -206,12 +214,12 @@ export const BlogPosts: CollectionConfig = {
           ],
         },
         {
-          label: "Conteudo",
+          label: "Conteúdo",
           fields: [
             {
               name: "contentBlocks",
               type: "blocks",
-              label: "Blocos de Conteudo",
+              label: "Blocos de Conteúdo",
               labels: {
                 singular: "Bloco",
                 plural: "Blocos",
@@ -219,55 +227,59 @@ export const BlogPosts: CollectionConfig = {
               blocks: [
                 {
                   slug: "paragraph",
-                  labels: { singular: "Paragrafo", plural: "Paragrafos" },
+                  labels: { singular: "Parágrafo", plural: "Parágrafos" },
                   fields: [
                     {
                       name: "text",
                       type: "textarea",
                       label: "Texto",
                       required: true,
+                      localized: true,
                       admin: {
                         description:
-                          "Use **texto** para negrito (compativel com markdown).",
+                          "Use **texto** para negrito (compatível com markdown).",
                       },
                     },
                   ],
                 },
                 {
                   slug: "heading",
-                  labels: { singular: "Titulo", plural: "Titulos" },
+                  labels: { singular: "Título", plural: "Títulos" },
                   fields: [
                     {
                       name: "text",
                       type: "text",
-                      label: "Texto do Titulo",
+                      label: "Texto do Título",
                       required: true,
+                      localized: true,
                     },
                   ],
                 },
                 {
                   slug: "species",
-                  labels: { singular: "Especie", plural: "Especies" },
+                  labels: { singular: "Espécie", plural: "Espécies" },
                   fields: [
                     {
                       name: "name",
                       type: "text",
                       label: "Nome Popular",
                       required: true,
+                      localized: true,
                       admin: { width: "50%" },
                     },
                     {
                       name: "scientificName",
                       type: "text",
-                      label: "Nome Cientifico",
+                      label: "Nome Científico",
                       required: true,
                       admin: { width: "50%" },
                     },
                     {
                       name: "description",
                       type: "textarea",
-                      label: "Descricao",
+                      label: "Descrição",
                       required: true,
+                      localized: true,
                     },
                     {
                       name: "image",
@@ -298,6 +310,7 @@ export const BlogPosts: CollectionConfig = {
                           type: "text",
                           label: "Texto em Negrito",
                           required: true,
+                          localized: true,
                           admin: { width: "40%" },
                         },
                         {
@@ -305,6 +318,7 @@ export const BlogPosts: CollectionConfig = {
                           type: "text",
                           label: "Texto do Item",
                           required: true,
+                          localized: true,
                           admin: { width: "60%" },
                         },
                       ],
@@ -343,7 +357,7 @@ export const BlogPosts: CollectionConfig = {
                   admin: {
                     width: "50%",
                     description:
-                      "Marque para exibir como artigo principal na pagina do blog.",
+                      "Marque para exibir como artigo principal na página do blog.",
                   },
                 },
                 {
@@ -354,7 +368,7 @@ export const BlogPosts: CollectionConfig = {
                   admin: {
                     width: "50%",
                     description:
-                      "Marque para exibir na secao 'Mais Recentes' do blog.",
+                      "Marque para exibir na seção 'Mais Recentes' do blog.",
                   },
                 },
               ],

@@ -17,9 +17,10 @@ export const Pages: CollectionConfig = {
     plural: "Paginas",
   },
   admin: {
-    group: "Conteudo do Site",
+    hidden: true,
+    group: "Sistema",
     description:
-      "Edite as secoes de cada rota do site mantendo a mesma estrutura JSON.",
+      "Coleção de páginas em desenvolvimento. Não utilizada na produção atual.",
     useAsTitle: "title",
     defaultColumns: ["title", "slug", "updatedAt"],
     listSearchableFields: ["title", "slug"],

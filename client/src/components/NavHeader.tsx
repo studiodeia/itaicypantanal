@@ -29,7 +29,7 @@ interface NavHeaderProps {
 }
 
 export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
-  const { lang } = useLanguage();
+  const { lang, setLang } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<string | null>(null);
   const [desktopActiveDropdown, setDesktopActiveDropdown] = useState<string | null>(null);
@@ -382,6 +382,29 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                     </Link>
                   )
                 )}
+                {/* Language switcher — only on phones; tablets see it in the top bar */}
+                <div className="md:hidden flex items-center justify-between px-5 py-4 border-t border-[#446354]">
+                  <span className="[font-family:'Lato',sans-serif] font-normal text-[12px] leading-[16px] tracking-[0.1em] uppercase text-[#a8cab9]">
+                    {lang === "en" ? "Language" : "Idioma"}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    {(["pt", "en", "es"] as const).map((code) => (
+                      <button
+                        key={code}
+                        onClick={() => { setLang(code); setMobileMenuOpen(false); }}
+                        className={cn(
+                          "px-3 py-2 rounded-lg text-[13px] leading-[18px] font-medium uppercase tracking-wider transition-all duration-200",
+                          lang === code
+                            ? "text-[#d7a45d] bg-[rgba(172,128,66,0.15)]"
+                            : "text-[#a8cab9] hover:text-[#e3f7ec]"
+                        )}
+                        data-testid={`button-mobile-lang-${code}`}
+                      >
+                        {code}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             ) : (
               <div className="glass-menu flex flex-col items-center pb-10">

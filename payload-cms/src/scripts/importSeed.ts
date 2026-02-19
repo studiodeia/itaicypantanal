@@ -338,105 +338,62 @@ const routeToGlobalSlug: Record<string, string> = {
   "/404": "not-found-content",
 };
 
+/**
+ * Transforms seed page data into Payload global shape.
+ * Uses spread-first approach: all fields pass through, only fields
+ * that need wrapping (string[] → {text}[]) are overridden.
+ * This prevents data loss when new sections (e.g. faq) are added to globals.
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function buildGlobalData(route: string, data: any): Record<string, unknown> | null {
   switch (route) {
     case "/":
       return {
-        aboutUs: {
-          ...data.aboutUs,
-          body: wrapStrings(data.aboutUs?.body),
-        },
-        expeditions: data.expeditions,
-        stats: data.stats,
-        accommodation: data.accommodation,
-        impact: data.impact,
-        blog: data.blog,
-      };
-    case "/acomodacoes":
-      return {
-        hero: data.hero,
-        manifesto: data.manifesto,
-        highlights: data.highlights,
-        rooms: data.rooms,
-        culinary: data.culinary,
+        ...data,
+        aboutUs: { ...data.aboutUs, body: wrapStrings(data.aboutUs?.body) },
       };
     case "/culinaria":
       return {
-        hero: data.hero,
-        manifesto: data.manifesto,
-        menu: {
-          ...data.menu,
-          body: wrapStrings(data.menu?.body),
-        },
-        highlights: data.highlights,
-        services: data.services,
-        experience: {
-          ...data.experience,
-          body: wrapStrings(data.experience?.body),
-        },
-        crossSell: data.crossSell,
+        ...data,
+        menu: data.menu ? { ...data.menu, body: wrapStrings(data.menu.body) } : data.menu,
+        experience: data.experience
+          ? { ...data.experience, body: wrapStrings(data.experience.body) }
+          : data.experience,
       };
     case "/pesca":
     case "/ecoturismo":
-      return {
-        hero: data.hero,
-        manifesto: data.manifesto,
-        sobreNos: {
-          ...data.sobreNos,
-          body: wrapStrings(data.sobreNos?.body),
-        },
-        highlights: data.highlights,
-        services: data.services,
-      };
     case "/observacao-de-aves":
       return {
-        hero: data.hero,
-        manifesto: data.manifesto,
-        sobreNos: {
-          ...data.sobreNos,
-          body: wrapStrings(data.sobreNos?.body),
-        },
-        highlights: data.highlights,
+        ...data,
+        sobreNos: data.sobreNos
+          ? { ...data.sobreNos, body: wrapStrings(data.sobreNos.body) }
+          : data.sobreNos,
       };
     case "/contato":
       return {
-        hero: data.hero,
-        formTitle: data.formTitle,
-        steps: {
-          ...data.steps,
-          placeholders: wrapStrings(data.steps?.placeholders),
-        },
-        channels: data.channels,
-        mapCoords: data.mapCoords,
+        ...data,
+        steps: data.steps
+          ? { ...data.steps, placeholders: wrapStrings(data.steps.placeholders) }
+          : data.steps,
       };
     case "/nosso-impacto":
       return {
-        hero: data.hero,
-        manifesto: data.manifesto,
-        rioVivo: data.rioVivo,
-        biodiversidade: data.biodiversidade,
-        comunidade: {
-          ...data.comunidade,
-          body: wrapStrings(data.comunidade?.body),
-        },
-        operacao: data.operacao,
-        engagement: data.engagement,
+        ...data,
+        comunidade: data.comunidade
+          ? { ...data.comunidade, body: wrapStrings(data.comunidade.body) }
+          : data.comunidade,
       };
     case "/politica-de-privacidade":
       return {
-        hero: data.hero,
+        ...data,
         sections: (data.sections ?? []).map((s: { id: string; title: string; content: string[] }) => ({
-          id: s.id,
-          title: s.title,
+          ...s,
           content: wrapStrings(s.content),
         })),
       };
+    case "/acomodacoes":
     case "/404":
-      return {
-        hero: data.hero,
-        buttonText: data.buttonText,
-      };
+      return { ...data };
     default:
       return null;
   }

@@ -8,11 +8,12 @@ export const ContatoContent: GlobalConfig = {
   slug: "contato-content",
   label: "Contato",
   admin: {
-    group: "Paginas",
-    description: "Conteudo editavel da pagina de contato.",
+    group: "Páginas do Site",
+    description: "Página de Contato: edite hero, formulário, canais de atendimento e coordenadas do mapa.",
     preview: () => `${frontendOrigin}/contato`,
   },
   access: { read: () => true, update: isAuthenticated },
+  versions: { max: 5 },
   fields: [
     {
       type: "tabs",
@@ -24,17 +25,13 @@ export const ContatoContent: GlobalConfig = {
           ],
         },
         {
-          label: "Formulario",
+          label: "Formulário",
           fields: [
-            {
-              name: "formTitle",
-              type: "text",
-              label: "Titulo do Formulario",
-            },
+            { name: "formTitle", type: "text", label: "Título do Formulário", localized: true },
             {
               name: "steps",
               type: "group",
-              label: "Etapas do Formulario",
+              label: "Etapas do Formulário",
               fields: [
                 {
                   name: "placeholders",
@@ -42,29 +39,12 @@ export const ContatoContent: GlobalConfig = {
                   label: "Placeholders dos Campos",
                   labels: { singular: "Campo", plural: "Campos" },
                   fields: [
-                    {
-                      name: "text",
-                      type: "text",
-                      label: "Placeholder",
-                      required: true,
-                    },
+                    { name: "text", type: "text", label: "Placeholder", required: true, localized: true },
                   ],
                 },
-                {
-                  name: "buttonNext",
-                  type: "text",
-                  label: "Botao Avancar",
-                },
-                {
-                  name: "buttonBack",
-                  type: "text",
-                  label: "Botao Voltar",
-                },
-                {
-                  name: "buttonSubmit",
-                  type: "text",
-                  label: "Botao Enviar",
-                },
+                { name: "buttonNext", type: "text", label: "Botão Avançar", localized: true },
+                { name: "buttonBack", type: "text", label: "Botão Voltar", localized: true },
+                { name: "buttonSubmit", type: "text", label: "Botão Enviar", localized: true },
               ],
             },
           ],
@@ -77,30 +57,16 @@ export const ContatoContent: GlobalConfig = {
               type: "group",
               label: "Canais",
               fields: [
-                { name: "heading", type: "text", label: "Titulo" },
+                { name: "heading", type: "text", label: "Título", localized: true },
                 {
                   name: "items",
                   type: "array",
                   label: "Canais de Contato",
                   labels: { singular: "Canal", plural: "Canais" },
                   fields: [
-                    {
-                      name: "iconName",
-                      type: "text",
-                      label: "Icone (ex: Phone, Mail, MapPin)",
-                      admin: { width: "30%" },
-                    },
-                    {
-                      name: "title",
-                      type: "text",
-                      label: "Titulo",
-                      admin: { width: "70%" },
-                    },
-                    {
-                      name: "info",
-                      type: "text",
-                      label: "Informacao (telefone, email, endereco)",
-                    },
+                    { name: "iconName", type: "text", label: "Ícone (ex: Phone, Mail, MapPin)", admin: { width: "30%" } },
+                    { name: "title", type: "text", label: "Título", localized: true, admin: { width: "70%" } },
+                    { name: "info", type: "text", label: "Informação (telefone, email, endereço)", localized: true },
                   ],
                 },
               ],
@@ -115,18 +81,8 @@ export const ContatoContent: GlobalConfig = {
               type: "group",
               label: "Coordenadas do Mapa",
               fields: [
-                {
-                  name: "lat",
-                  type: "number",
-                  label: "Latitude",
-                  admin: { width: "50%" },
-                },
-                {
-                  name: "lng",
-                  type: "number",
-                  label: "Longitude",
-                  admin: { width: "50%" },
-                },
+                { name: "lat", type: "number", label: "Latitude", admin: { width: "50%" } },
+                { name: "lng", type: "number", label: "Longitude", admin: { width: "50%" } },
               ],
             },
           ],

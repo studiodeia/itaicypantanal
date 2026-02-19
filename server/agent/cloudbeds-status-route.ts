@@ -31,7 +31,8 @@ export async function handleCloudbedsStatusRequest(req: Request, res: Response) 
     return;
   }
 
-  const probePath = parsed.data.probe_path || process.env.CLOUDBEDS_PROBE_PATH || "/userinfo";
+  // Default to a very cheap, broadly available endpoint in Cloudbeds PMS API.
+  const probePath = parsed.data.probe_path || process.env.CLOUDBEDS_PROBE_PATH || "/getHotels";
 
   if (!cloudbedsClient.isEnabled()) {
     res.status(503).json({

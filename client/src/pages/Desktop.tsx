@@ -53,7 +53,7 @@ export const Desktop = (): JSX.Element => {
     <div className="flex flex-col w-full bg-white">
       <PageMeta
         title="Eco Lodge Premium no Pantanal | Pesca Esportiva, Birdwatching e Ecoturismo"
-        description="Eco lodge no Pantanal Sul-Matogrossense em Miranda, MS. Pesca esportiva cota zero, observacao de 166 especies de aves e safaris fotograficos. Reserve sua experiencia autentica."
+        description="Eco lodge no Pantanal Sul-Matogrossense em Miranda, MS. Pesca esportiva cota zero, observação de 166 espécies de aves e safáris fotográficos. Reserve sua experiência autêntica."
         canonicalPath="/"
         ogImage="/images/og-default.webp"
       />

@@ -4,11 +4,11 @@ import { isAuthenticated } from "../access/authenticated";
 export const Users: CollectionConfig = {
   slug: "users",
   labels: {
-    singular: "Usuario",
-    plural: "Usuarios",
+    singular: "Usuário",
+    plural: "Usuários",
   },
   admin: {
-    group: "Administracao",
+    group: "Administração",
     description: "Gerencie os acessos de quem pode editar o site no CMS.",
     useAsTitle: "email",
     defaultColumns: ["name", "email", "updatedAt"],
