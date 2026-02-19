@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useChat } from "./useChat";
+import { ChatTrigger } from "./ChatTrigger";
 import { useLanguage } from "@/i18n/context";
 import type { Lang } from "@/i18n/context";
 
@@ -263,37 +264,6 @@ function TypingIndicator() {
   );
 }
 
-function ConciergeBellIcon() {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className="h-9 w-9">
-      <defs>
-        <linearGradient id="bellGoldFill" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#F9EEBD" />
-          <stop offset="40%" stopColor="#E5CC72" />
-          <stop offset="75%" stopColor="#C4A445" />
-          <stop offset="100%" stopColor="#A68832" />
-        </linearGradient>
-        <radialGradient id="bellGlow" cx="50%" cy="38%" r="50%">
-          <stop offset="0%" stopColor="#FFF8D6" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#D4B355" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      {/* Soft inner glow behind the bell */}
-      <circle cx="32" cy="34" r="18" fill="url(#bellGlow)" />
-      {/* Bell knob */}
-      <circle cx="32" cy="18.5" r="3.8" fill="url(#bellGoldFill)" />
-      {/* Bell dome */}
-      <path
-        d="M16.5 37c0-8.6 6.9-15.8 15.5-15.8S47.5 28.4 47.5 37v1H16.5v-1z"
-        fill="url(#bellGoldFill)"
-      />
-      {/* Bell stem */}
-      <rect x="30" y="38" width="4" height="3.5" rx="0.6" fill="url(#bellGoldFill)" />
-      {/* Bell base */}
-      <rect x="16" y="42" width="32" height="4.5" rx="2.25" fill="url(#bellGoldFill)" />
-    </svg>
-  );
-}
 
 function toWhatsappUrl(raw: string): string | null {
   const digits = raw.replace(/\D/g, "");
@@ -1000,24 +970,9 @@ export function ChatWidget() {
       </section>
 
       {!isOpen ? (
-        <button
-          type="button"
-          onClick={() => setIsOpen(true)}
-          className="pointer-events-auto group relative isolate h-16 w-16 rounded-full border border-[#d5b86b] bg-[radial-gradient(circle_at_30%_22%,#4c412d_0%,#2f281d_55%,#1f1a12_100%)] shadow-[0_22px_42px_-18px_rgba(15,23,42,0.55)] transition duration-300 hover:scale-[1.03] hover:shadow-[0_30px_54px_-20px_rgba(15,23,42,0.62)]"
-          aria-label={ui.fabAriaLabel}
-        >
-          <span className="motion-reduce:animate-none absolute -inset-2 -z-30 rounded-full bg-[#d6b768]/18 blur-xl animate-[pulse_4.8s_ease-in-out_infinite]" />
-          <span className="motion-reduce:animate-none absolute -inset-1 -z-20 rounded-full border border-[#d6b768]/50 opacity-60 animate-[ping_6.2s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
-          <span className="absolute inset-[4px] rounded-full border border-[#e9d58f]/70" />
-          <span
-            className="motion-reduce:animate-none absolute -inset-1 -z-10 rounded-full border border-[#f5e7ad]/35 opacity-45 animate-[ping_7.4s_cubic-bezier(0.16,1,0.3,1)_infinite]"
-            style={{ animationDelay: "1.3s" }}
-          />
-          <span className="relative z-10 flex h-full w-full items-center justify-center text-[#e7d589] drop-shadow-[0_0_10px_rgba(245,218,134,0.45)]">
-            <ConciergeBellIcon />
-          </span>
-          <span className="absolute right-[11px] top-[10px] h-2 w-2 rounded-full bg-[#f4d58c] shadow-[0_0_10px_rgba(244,213,140,0.9)]" />
-        </button>
+        <div className="pointer-events-auto">
+          <ChatTrigger lang={lang} onClick={() => setIsOpen(true)} />
+        </div>
       ) : null}
     </div>
   );
