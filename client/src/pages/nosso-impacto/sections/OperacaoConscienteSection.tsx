@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { resolveIcon } from "@/lib/icon-resolver";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
 type Props = { content: NossoImpactoPageContent["operacao"] };
 
 export const OperacaoConscienteSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -18,7 +21,7 @@ export const OperacaoConscienteSection = ({ content }: Props): JSX.Element => {
           className="flex flex-col gap-6 md:gap-8"
         >
           <motion.span variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#d7a45d] text-[length:var(--lead-md-font-size)] tracking-[3.84px] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)] uppercase">
-            OPERAÇÃO CONSCIENTE
+            {t("impact", "consciousOperation", lang)}
           </motion.span>
           <motion.h2
             variants={fadeUp}

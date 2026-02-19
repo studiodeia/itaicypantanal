@@ -1,6 +1,8 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import { pescaDefaults } from "./pesca-defaults";
 import { PescaHeroSection } from "./pesca/sections/PescaHeroSection";
 import { PescaManifestoSection } from "./pesca/sections/PescaManifestoSection";
@@ -14,6 +16,7 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Pesca = (): JSX.Element => {
   const cms = usePageCms("/pesca", pescaDefaults);
+  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
@@ -30,12 +33,12 @@ export const Pesca = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title="Pesca Esportiva"
-        description="Pesca esportiva no Pantanal com guias locais experientes. Pintado, pacu, dourado e mais de 260 especies em um dos melhores destinos de pesca do mundo."
+        title={t("pageMeta", "pescaTitle", lang)}
+        description={t("pageMeta", "pescaDesc", lang)}
         canonicalPath="/pesca"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Pesca Esportiva", path: "/pesca" },
+          { name: t("pageMeta", "breadHome", lang), path: "/" },
+          { name: t("pageMeta", "breadPesca", lang), path: "/pesca" },
         ]}
       />
       <JsonLd data={tourSchema} />

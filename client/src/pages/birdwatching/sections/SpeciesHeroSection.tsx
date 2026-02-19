@@ -5,6 +5,8 @@ import { NavHeader } from "@/components/NavHeader";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
 import type { BirdSpeciesDetail } from "../data";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 
 interface SpeciesHeroSectionProps {
   bird: BirdSpeciesDetail;
@@ -13,6 +15,7 @@ interface SpeciesHeroSectionProps {
 export const SpeciesHeroSection = ({
   bird,
 }: SpeciesHeroSectionProps): JSX.Element => {
+  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -45,7 +48,7 @@ export const SpeciesHeroSection = ({
         >
           <ChevronLeft className="w-5 h-5" strokeWidth={2} />
           <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            Aves
+            {t("birds", "birdsLabel", lang)}
           </span>
         </motion.a>
 
@@ -56,7 +59,7 @@ export const SpeciesHeroSection = ({
 
         {/* Small title */}
         <motion.span className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" variants={fadeIn}>
-          AVES DO PANTANAL
+          {t("birds", "pantanalBirds", lang)}
         </motion.span>
 
         {/* Main title + description */}

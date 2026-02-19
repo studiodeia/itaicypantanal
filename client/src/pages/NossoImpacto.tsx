@@ -1,5 +1,7 @@
 import { PageMeta } from "@/components/PageMeta";
 import { usePageCms } from "@/lib/cms/page-content";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import { nossoImpactoDefaults } from "./nosso-impacto-defaults";
 import { ImpactHeroSection } from "./nosso-impacto/sections/ImpactHeroSection";
 import { ImpactManifestoSection } from "./nosso-impacto/sections/ImpactManifestoSection";
@@ -13,16 +15,17 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const NossoImpacto = (): JSX.Element => {
   const cms = usePageCms("/nosso-impacto", nossoImpactoDefaults);
+  const { lang } = useLanguage();
 
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title="Nosso Impacto"
-        description="Conservacao ambiental, pesca sustentavel Cota Zero, protecao da biodiversidade e apoio a comunidades locais. Conheca o impacto positivo da Itaicy no Pantanal."
+        title={t("pageMeta", "impactoTitle", lang)}
+        description={t("pageMeta", "impactoDesc", lang)}
         canonicalPath="/nosso-impacto"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Nosso Impacto", path: "/nosso-impacto" },
+          { name: t("pageMeta", "breadHome", lang), path: "/" },
+          { name: t("pageMeta", "breadImpacto", lang), path: "/nosso-impacto" },
         ]}
       />
       <ImpactHeroSection content={cms.hero} />

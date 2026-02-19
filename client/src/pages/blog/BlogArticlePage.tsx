@@ -7,8 +7,11 @@ import { ArticleContentSection } from "./sections/ArticleContentSection";
 import { RelatedArticlesSection } from "./sections/RelatedArticlesSection";
 import { ImmersionCallToActionSection } from "../sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "../sections/SiteFooterSection";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 
 export const BlogArticlePage = (): JSX.Element => {
+  const { lang } = useLanguage();
   const { slug } = useParams<{ categorySlug: string; slug: string }>();
   const blogData = useBlogCmsData();
   const article = slug ? getBlogArticleBySlug(blogData, slug) : undefined;
@@ -17,10 +20,10 @@ export const BlogArticlePage = (): JSX.Element => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#263a30] text-[#e3f7ec]">
         <h1 className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)]">
-          Artigo não encontrado
+          {t("blog", "articleNotFound", lang)}
         </h1>
         <Link href="/blog" className="mt-8 text-[#ac8042] underline">
-          Voltar ao blog
+          {t("blog", "backToBlog", lang)}
         </Link>
       </div>
     );
@@ -38,8 +41,8 @@ export const BlogArticlePage = (): JSX.Element => {
         ogImage={article.heroImage || article.src}
         ogType="article"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Blog", path: "/blog" },
+          { name: t("pageMeta", "breadHome", lang), path: "/" },
+          { name: t("pageMeta", "breadBlog", lang), path: "/blog" },
           { name: article.title, path: articleUrl },
         ]}
       />

@@ -4,6 +4,8 @@ import { ArrowDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { fadeIn, fadeUp, scaleIn, staggerSlow, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import type { CmsHero, ContatoPageContent } from "@shared/cms-page-content";
 
 type Props = {
@@ -13,6 +15,7 @@ type Props = {
 };
 
 export const ContactHeroSection = ({ content, formTitle, steps }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -238,7 +241,7 @@ export const ContactHeroSection = ({ content, formTitle, steps }: Props): JSX.El
 
           <div className="hidden md:flex items-center gap-2 text-[#e3f7ec] shrink-0">
             <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-              {content.scrollHint ?? "Deslize para baixo"}
+              {content.scrollHint ?? t("common", "scrollDown", lang)}
             </span>
             <ArrowDown className="w-6 h-6" />
           </div>

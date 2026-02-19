@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 import { NavHeader } from "@/components/NavHeader";
 import { Divider } from "@/components/Divider";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import type { CmsHero } from "@shared/cms-page-content";
 
 type Props = { content: CmsHero };
 
 export const PescaHeroSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -80,7 +83,7 @@ export const PescaHeroSection = ({ content }: Props): JSX.Element => {
 
             <div className="hidden md:flex items-center gap-2 text-[#e3f7ec]">
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-                {content.scrollHint ?? "Deslize para baixo"}
+                {content.scrollHint ?? t("common", "scrollDown", lang)}
               </span>
               <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>
