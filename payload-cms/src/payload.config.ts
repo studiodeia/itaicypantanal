@@ -34,14 +34,19 @@ const databaseUrl = process.env.DATABASE_URL || "file:./payload.db";
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-const db =
-  databaseUrl.startsWith("postgres://") || databaseUrl.startsWith("postgresql://")
-    ? postgresAdapter({
-        pool: {
-          connectionString: databaseUrl,
-        },
-      })
-    : sqliteAdapter({
+const isPostgres =
+  databaseUrl.startsWith("postgres://") || databaseUrl.startsWith("postgresql://");
+
+const db = isPostgres
+  ? postgresAdapter({
+      pool: {
+        connectionString: databaseUrl,
+        ssl: { rejectUnauthorized: false },
+      },
+      push: true,
+      schemaName: "cms",
+    })
+  : sqliteAdapter({
         client: {
           url: databaseUrl,
         },
@@ -51,6 +56,15 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || "change-this-secret",
   serverURL: payloadPublicServerUrl,
   db,
+  localization: {
+    locales: [
+      { label: "Português", code: "pt" },
+      { label: "English",   code: "en" },
+      { label: "Español",   code: "es" },
+    ],
+    defaultLocale: "pt",
+    fallback: true,
+  },
   collections: [
     Pages,
     Media,
