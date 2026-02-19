@@ -2,6 +2,7 @@ import type { Request } from "express";
 
 import type { CmsContent } from "./cms-content";
 import { getCmsContent } from "./cms-content";
+import { localizePath, getHreflangUrls, SUPPORTED_LANGS } from "./i18n-routes";
 
 const staticRoutes = [
   "/",
@@ -110,30 +111,44 @@ function buildAllPaths(content: CmsContent): string[] {
   return Array.from(paths);
 }
 
-// Supported hreflang values (same URL serves all languages for now)
-const HREFLANGS = ["pt-BR", "en", "es"] as const;
-
+/**
+ * Build sitemap with per-language URLs.
+ * Each PT canonical path produces 3 <url> entries (pt, en, es).
+ * Each entry contains xhtml:link alternates pointing to all 3 language versions.
+ */
 export async function buildSitemapXml(req: Request): Promise<string> {
   const { content } = await getCmsContent();
   const baseUrl = getBaseSiteUrl(req);
   const now = new Date().toISOString();
 
-  const allPaths = buildAllPaths(content).sort();
+  const allPtPaths = buildAllPaths(content).sort();
+  const entries: string[] = [];
 
-  const entries = allPaths
-    .map((path) => {
-      const url = toAbsoluteUrl(baseUrl, path);
-      const escapedUrl = escapeXml(url);
-      const meta = getRouteMeta(path);
-      const hreflangs = HREFLANGS.map(
-        (hl) => `<xhtml:link rel="alternate" hreflang="${hl}" href="${escapedUrl}"/>`,
-      ).join("");
-      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${escapedUrl}"/>`;
-      return `<url><loc>${escapedUrl}</loc><lastmod>${now}</lastmod><changefreq>${meta.changefreq}</changefreq><priority>${meta.priority}</priority>${hreflangs}${xDefault}</url>`;
-    })
-    .join("");
+  for (const ptPath of allPtPaths) {
+    const meta = getRouteMeta(ptPath);
+    const hreflangMap = getHreflangUrls(ptPath, baseUrl);
 
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${entries}</urlset>`;
+    // Build the xhtml:link alternates (same for all 3 lang entries)
+    const alternates = Object.entries(hreflangMap)
+      .map(
+        ([hl, href]) =>
+          `<xhtml:link rel="alternate" hreflang="${hl}" href="${escapeXml(href)}"/>`,
+      )
+      .join("");
+
+    // Generate one <url> per language
+    for (const lang of SUPPORTED_LANGS) {
+      const localizedPath = localizePath(ptPath, lang);
+      const locUrl = toAbsoluteUrl(baseUrl, localizedPath);
+      const escapedLocUrl = escapeXml(locUrl);
+
+      entries.push(
+        `<url><loc>${escapedLocUrl}</loc><lastmod>${now}</lastmod><changefreq>${meta.changefreq}</changefreq><priority>${meta.priority}</priority>${alternates}</url>`,
+      );
+    }
+  }
+
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${entries.join("")}</urlset>`;
 }
 
 // ─── robots.txt with explicit AI crawler permissions ────────────────

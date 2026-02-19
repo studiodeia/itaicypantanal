@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/i18n/context";
+import { getHreflangUrls, localizePath } from "@/i18n/routes";
 
 const OG_LOCALE: Record<string, string> = {
   pt: "pt_BR",
@@ -12,13 +13,6 @@ const OG_LOCALE_ALT: Record<string, string[]> = {
   pt: ["en_US", "es_ES"],
   en: ["pt_BR", "es_ES"],
   es: ["pt_BR", "en_US"],
-};
-
-/** hreflang values per supported language */
-const HREFLANG: Record<string, string> = {
-  pt: "pt-BR",
-  en: "en",
-  es: "es",
 };
 
 const HTML_LANG: Record<string, string> = {
@@ -35,7 +29,7 @@ export interface PageMetaProps {
   title?: string;
   /** Meta description — ideal 120-155 chars */
   description?: string;
-  /** Canonical URL path (e.g. "/blog/fauna/tuiuiu") */
+  /** Canonical URL path in PT (e.g. "/pesca", "/blog/fauna/tuiuiu") */
   canonicalPath?: string;
   /** Open Graph image path */
   ogImage?: string;
@@ -62,9 +56,15 @@ export function PageMeta({
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const ogLocaleAlternates = OG_LOCALE_ALT[lang] ?? [];
   const origin = typeof window !== "undefined" ? window.location.origin : "";
-  const hreflangPath = canonicalPath ?? (typeof window !== "undefined" ? window.location.pathname : "/");
-  const hreflangUrl = `${origin}${hreflangPath}`;
-  const canonicalUrl = canonicalPath ? `${origin}${canonicalPath}` : undefined;
+
+  // canonicalPath is always the PT path; localize for current lang
+  const ptPath = canonicalPath ?? "/";
+  const localizedPath = localizePath(ptPath, lang);
+  const canonicalUrl = `${origin}${localizedPath}`;
+
+  // Hreflang alternates — each language gets its own distinct URL
+  const hreflangUrls = getHreflangUrls(ptPath, origin);
+
   const ogImageUrl = ogImage
     ? ogImage.startsWith("http")
       ? ogImage
@@ -80,7 +80,7 @@ export function PageMeta({
             "@type": "ListItem",
             position: i + 1,
             name: item.name,
-            item: `${origin}${item.path}`,
+            item: `${origin}${localizePath(item.path, lang)}`,
           })),
         }
       : null;
@@ -90,7 +90,7 @@ export function PageMeta({
       <html lang={htmlLang} />
       <title>{fullTitle}</title>
       {description && <meta name="description" content={description} />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="canonical" href={canonicalUrl} />
       {noIndex && <meta name="robots" content="noindex,nofollow" />}
 
       {/* Open Graph */}
@@ -98,18 +98,17 @@ export function PageMeta({
       {description && <meta property="og:description" content={description} />}
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImageUrl} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
       {ogLocaleAlternates.map((alt) => (
         <meta key={alt} property="og:locale:alternate" content={alt} />
       ))}
 
-      {/* hreflang — multilingual signals for search engines */}
-      {Object.entries(HREFLANG).map(([, hreflang]) => (
-        <link key={hreflang} rel="alternate" hrefLang={hreflang} href={hreflangUrl} />
+      {/* hreflang — each language points to its own URL */}
+      {Object.entries(hreflangUrls).map(([hreflang, href]) => (
+        <link key={hreflang} rel="alternate" hrefLang={hreflang} href={href} />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={hreflangUrl} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

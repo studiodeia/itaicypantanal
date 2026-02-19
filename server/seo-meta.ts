@@ -8,6 +8,12 @@
  */
 
 import { getCmsContent } from "./cms-content";
+import {
+  delocalizePath,
+  detectLangFromPath,
+  localizePath,
+  getHreflangUrls,
+} from "./i18n-routes";
 
 const SITE_NAME = "Itaicy Pantanal Eco Lodge";
 const DEFAULT_OG_IMAGE = "/images/og-default.webp";
@@ -319,17 +325,33 @@ async function getRouteMeta(path: string): Promise<RouteMeta | null> {
   return null;
 }
 
+const OG_LOCALE_MAP: Record<string, string> = {
+  pt: "pt_BR",
+  en: "en_US",
+  es: "es_ES",
+};
+
+const OG_LOCALE_ALT: Record<string, string[]> = {
+  pt: ["en_US", "es_ES"],
+  en: ["pt_BR", "es_ES"],
+  es: ["pt_BR", "en_US"],
+};
+
 /**
  * Inject per-route meta tags into the HTML template.
- * Replaces the static <title> and <meta description> with route-specific values,
- * adds OG tags, canonical URL, and a <noscript> content block for AI crawlers.
+ * Delocalizes /en/ and /es/ paths before lookup, then injects the correct
+ * canonical URL, hreflang alternates, and og:locale for the detected language.
  */
 export async function injectRouteMeta(
   html: string,
   requestPath: string,
   baseUrl: string,
 ): Promise<string> {
-  const meta = await getRouteMeta(requestPath);
+  // Delocalize: /en/sport-fishing → /pesca (for routeMetaMap lookup)
+  const lang = detectLangFromPath(requestPath);
+  const ptPath = delocalizePath(requestPath);
+
+  const meta = await getRouteMeta(ptPath);
   if (!meta) return html;
 
   const fullTitle = meta.title.includes(SITE_NAME)
@@ -340,7 +362,9 @@ export async function injectRouteMeta(
     ? `${baseUrl}${meta.ogImage}`
     : `${baseUrl}${DEFAULT_OG_IMAGE}`;
 
-  const canonicalUrl = `${baseUrl}${requestPath === "/" ? "" : requestPath}`;
+  // Canonical points to the localized URL the user requested
+  const localizedPath = localizePath(ptPath, lang);
+  const canonicalUrl = `${baseUrl}${localizedPath === "/" ? "" : localizedPath}`;
 
   // Replace <title>
   html = html.replace(
@@ -354,21 +378,38 @@ export async function injectRouteMeta(
     `<meta name="description" content="${escapeHtml(meta.description)}">`,
   );
 
+  // hreflang alternates — each language points to its own URL
+  const hreflangMap = getHreflangUrls(ptPath, baseUrl);
+  const hreflangTags = Object.entries(hreflangMap)
+    .map(
+      ([hl, href]) =>
+        `<link rel="alternate" hreflang="${hl}" href="${escapeHtml(href)}">`,
+    )
+    .join("\n    ");
+
+  const ogLocale = OG_LOCALE_MAP[lang] ?? "pt_BR";
+  const ogLocaleAlt = OG_LOCALE_ALT[lang] ?? [];
+  const ogLocaleAltTags = ogLocaleAlt
+    .map((alt) => `<meta property="og:locale:alternate" content="${alt}">`)
+    .join("\n    ");
+
   // Build additional meta tags to inject before </head>
   const extraTags = [
     `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">`,
+    hreflangTags,
     `<meta property="og:title" content="${escapeHtml(fullTitle)}">`,
     `<meta property="og:description" content="${escapeHtml(meta.description)}">`,
     `<meta property="og:type" content="website">`,
     `<meta property="og:image" content="${escapeHtml(ogImageUrl)}">`,
     `<meta property="og:url" content="${escapeHtml(canonicalUrl)}">`,
     `<meta property="og:site_name" content="${SITE_NAME}">`,
-    `<meta property="og:locale" content="pt_BR">`,
+    `<meta property="og:locale" content="${ogLocale}">`,
+    ogLocaleAltTags,
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${escapeHtml(fullTitle)}">`,
     `<meta name="twitter:description" content="${escapeHtml(meta.description)}">`,
     `<meta name="twitter:image" content="${escapeHtml(ogImageUrl)}">`,
-  ];
+  ].filter(Boolean);
 
   // Inject per-route JSON-LD schemas
   if (meta.jsonLd && meta.jsonLd.length > 0) {

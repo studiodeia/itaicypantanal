@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
+import { detectLangFromPath, delocalizePath, localizePath } from "./routes";
 
 export type Lang = "pt" | "en" | "es";
 
@@ -15,26 +16,73 @@ const LanguageContext = createContext<LanguageContextValue>({
   setLang: () => {},
 });
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
-      return stored && VALID_LANGS.includes(stored) ? stored : "pt";
-    } catch {
-      return "pt";
-    }
-  });
+/** Read initial language: URL prefix wins, then localStorage, then default PT. */
+function getInitialLang(): Lang {
+  // 1. URL prefix is the primary source of truth (for SEO and direct links)
+  if (typeof window !== "undefined") {
+    const urlLang = detectLangFromPath(window.location.pathname);
+    if (urlLang !== "pt") return urlLang;
+  }
 
-  const setLang = (l: Lang) => {
-    setLangState(l);
+  // 2. localStorage preference (for returning visitors who arrive at /)
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
+    if (stored && VALID_LANGS.includes(stored)) return stored;
+  } catch {
+    // SSR or storage blocked
+  }
+
+  return "pt";
+}
+
+const HTML_LANG: Record<Lang, string> = {
+  pt: "pt-BR",
+  en: "en",
+  es: "es",
+};
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [lang, setLangState] = useState<Lang>(getInitialLang);
+
+  /**
+   * Switch language: navigates to the equivalent localized URL.
+   * E.g. on /en/sport-fishing → setLang("es") → /es/pesca-deportiva
+   */
+  const setLang = (newLang: Lang) => {
+    if (newLang === lang) return;
+
+    setLangState(newLang);
+
     try {
-      localStorage.setItem(STORAGE_KEY, l);
-    } catch {}
-    document.documentElement.lang = l === "pt" ? "pt-BR" : l === "es" ? "es" : "en";
+      localStorage.setItem(STORAGE_KEY, newLang);
+    } catch {
+      // storage blocked
+    }
+
+    document.documentElement.lang = HTML_LANG[newLang];
+
+    // Compute new URL and navigate
+    const currentPtPath = delocalizePath(window.location.pathname);
+    const newPath = localizePath(currentPtPath, newLang);
+
+    window.history.pushState(null, "", newPath);
+    // Notify the custom location hook to re-read the URL
+    window.dispatchEvent(new Event("localized-navigation"));
   };
 
+  // Sync lang when user navigates via browser back/forward
   useEffect(() => {
-    document.documentElement.lang = lang === "pt" ? "pt-BR" : lang === "es" ? "es" : "en";
+    const syncLangFromUrl = () => {
+      const urlLang = detectLangFromPath(window.location.pathname);
+      setLangState((prev) => (prev !== urlLang ? urlLang : prev));
+    };
+    window.addEventListener("popstate", syncLangFromUrl);
+    return () => window.removeEventListener("popstate", syncLangFromUrl);
+  }, []);
+
+  // Set html lang attribute on mount and lang change
+  useEffect(() => {
+    document.documentElement.lang = HTML_LANG[lang];
   }, [lang]);
 
   return (
