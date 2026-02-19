@@ -126,8 +126,14 @@ export default buildConfig({
           "not-found-content": "/404",
         };
         if (globalSlug && slugMap[globalSlug]) return `${siteUrl}${slugMap[globalSlug]}`;
-        if (collectionSlug === "blog-posts") return `${siteUrl}/blog/${d.slug || ""}`;
-        if (collectionSlug === "bird-species") return `${siteUrl}/observacao-de-aves/catalogo/${d.slug || ""}`;
+        if (collectionSlug === "blog-posts") {
+          const slug = typeof d.slug === "string" && d.slug ? d.slug : null;
+          return slug ? `${siteUrl}/blog/${slug}` : `${siteUrl}/blog`;
+        }
+        if (collectionSlug === "bird-species") {
+          const slug = typeof d.slug === "string" && d.slug ? d.slug : null;
+          return slug ? `${siteUrl}/observacao-de-aves/catalogo/${slug}` : `${siteUrl}/observacao-de-aves/catalogo`;
+        }
         return siteUrl;
       },
       fields: ({ defaultFields }) => [
