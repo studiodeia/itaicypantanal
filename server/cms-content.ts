@@ -218,11 +218,18 @@ async function fetchJsonWithTimeout(url: string): Promise<unknown> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), REMOTE_TIMEOUT_MS);
   try {
-    const response = await fetch(url, { signal: controller.signal });
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: { "Accept-Encoding": "identity" },
+    });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} for ${url}`);
     }
-    return await response.json();
+    // Use .text() + JSON.parse for resilience: some CDNs return gzip
+    // despite Accept-Encoding: identity, and response.json() can't
+    // handle raw compressed bytes.
+    const text = await response.text();
+    return JSON.parse(text);
   } finally {
     clearTimeout(timeout);
   }

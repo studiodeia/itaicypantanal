@@ -16,22 +16,13 @@ const LanguageContext = createContext<LanguageContextValue>({
   setLang: () => {},
 });
 
-/** Read initial language: URL prefix wins, then localStorage, then default PT. */
+/** Read initial language purely from the URL prefix.
+ *  With distinct per-language URLs (Phase 2), the URL IS the language.
+ *  No localStorage fallback — `/` is always PT, `/en/` is EN, `/es/` is ES. */
 function getInitialLang(): Lang {
-  // 1. URL prefix is the primary source of truth (for SEO and direct links)
   if (typeof window !== "undefined") {
-    const urlLang = detectLangFromPath(window.location.pathname);
-    if (urlLang !== "pt") return urlLang;
+    return detectLangFromPath(window.location.pathname);
   }
-
-  // 2. localStorage preference (for returning visitors who arrive at /)
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
-    if (stored && VALID_LANGS.includes(stored)) return stored;
-  } catch {
-    // SSR or storage blocked
-  }
-
   return "pt";
 }
 

@@ -35,13 +35,24 @@ type CmsSeed = {
 let cachedSeed: CmsSeed | null = null;
 let cachedAgentConfigSeed: AgentConfig | null = null;
 
+/** Strip BOM, U+FFFD and other non-JSON leading bytes from a string */
+function stripLeadingNonJson(text: string): string {
+  let i = 0;
+  while (i < text.length && text.charCodeAt(i) !== 0x7b /* { */ && text.charCodeAt(i) !== 0x5b /* [ */) {
+    i++;
+    if (i > 20) break; // safety: only check first 20 chars
+  }
+  return i > 0 && i <= 20 ? text.slice(i) : text;
+}
+
 export async function loadCmsSeed(): Promise<CmsSeed> {
   if (cachedSeed) {
     return cachedSeed;
   }
 
   const seedPath = resolve(process.cwd(), "docs", "payload-seed", "full-seed.json");
-  const raw = await readFile(seedPath, "utf8");
+  let raw = await readFile(seedPath, "utf8");
+  raw = stripLeadingNonJson(raw);
   const seed = JSON.parse(raw) as CmsSeed;
 
   // Load page-content.json if not already embedded in full-seed
