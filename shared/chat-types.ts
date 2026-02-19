@@ -65,12 +65,22 @@ export const chatErrorEventSchema = z.object({
   retryable: z.boolean().default(false),
 });
 
+export const chatQuickRepliesEventSchema = z.object({
+  event: z.literal("quick_replies"),
+  prompt: z.string(),
+  options: z.array(z.object({
+    label: z.string(),
+    value: z.string(),
+  })),
+});
+
 export const chatSseEventSchema = z.discriminatedUnion("event", [
   chatTokenEventSchema,
   chatToolStartEventSchema,
   chatToolEndEventSchema,
   chatDoneEventSchema,
   chatErrorEventSchema,
+  chatQuickRepliesEventSchema,
 ]);
 
 export type ChatSseEvent = z.infer<typeof chatSseEventSchema>;

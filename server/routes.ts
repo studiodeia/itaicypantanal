@@ -10,6 +10,8 @@ import { handleCloudbedsStatusRequest } from "./agent/cloudbeds-status-route";
 import { handleCloudbedsOAuthCallback } from "./agent/cloudbeds-oauth-callback-route";
 import { handleCloudbedsOAuthStart } from "./agent/cloudbeds-oauth-start-route";
 import { handleNewsletterSubscribeRequest } from "./newsletter-route";
+import { handleCreateLeadRequest } from "./routes/leads";
+import { handleCreateHandoffRequest } from "./routes/handoffs";
 import { registerPanelRoutes } from "./panel/routes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -187,6 +189,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post("/api/newsletter/subscribe", async (req, res) => {
     await handleNewsletterSubscribeRequest(req, res);
+  });
+
+  app.post("/api/leads", async (req, res) => {
+    await handleCreateLeadRequest(req, res);
+  });
+
+  app.post("/api/handoffs", async (req, res) => {
+    await handleCreateHandoffRequest(req, res);
   });
 
   registerPanelRoutes(app);

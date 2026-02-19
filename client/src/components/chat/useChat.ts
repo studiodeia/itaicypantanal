@@ -28,6 +28,9 @@ type SuggestedActions = {
   handoff: boolean;
 };
 
+export type QuickReply = { label: string; value: string };
+export type QuickRepliesState = { prompt: string; options: QuickReply[] } | null;
+
 type UseChatState = {
   messages: ChatMessage[];
   isStreaming: boolean;
@@ -36,7 +39,9 @@ type UseChatState = {
   sessionId: string | null;
   config: ChatConfig;
   suggestedActions: SuggestedActions;
+  quickReplies: QuickRepliesState;
   sendMessage: (message: string) => Promise<void>;
+  clearQuickReplies: () => void;
   clearError: () => void;
 };
 
@@ -48,12 +53,12 @@ type QueuedMessage = {
 
 function getStaticGreeting(locale: AgentLocale): string {
   if (locale === "en") {
-    return "Hello. This is Itaicy digital service. I can help with availability, rates, and lodge information.";
+    return "Hi! I'm the Itaicy Pantanal Eco Lodge assistant. I can help with dates, rates, experiences or connect you with our team. How can I help?";
   }
   if (locale === "es") {
-    return "Hola. Este es el servicio digital de Itaicy. Puedo ayudarte con disponibilidad, tarifas e informacion de la posada.";
+    return "¡Hola! Soy el asistente de Itaicy Pantanal Eco Lodge. Puedo ayudarle con fechas, tarifas, experiencias o conectarle con nuestro equipo. ¿En qué puedo ayudar?";
   }
-  return "Ola. Este e o atendimento digital da Itaicy. Posso ajudar com disponibilidade, tarifas e informacoes da pousada.";
+  return "Oi! Sou o assistente da Itaicy Pantanal Eco Lodge. Posso ajudar com datas, tarifas, experiências ou conectar você com nossa equipe. Como posso ajudar?";
 }
 
 const defaultConfig: ChatConfig = {
@@ -69,15 +74,21 @@ const defaultConfig: ChatConfig = {
   handoffSlaHours: 24,
 };
 
-const toolLabels: Record<string, string> = {
-  searchFAQ: "Buscando informacoes...",
-  checkAvailability: "Verificando disponibilidade...",
-  getRates: "Consultando tarifas...",
-  authenticateGuest: "Validando dados da reserva...",
-  getReservation: "Buscando detalhes da reserva...",
-  captureLead: "Registrando contato...",
-  createHandoff: "Conectando com a equipe...",
+const toolLabelsMap: Record<string, Record<AgentLocale, string>> = {
+  searchFAQ: { pt: "Buscando informações...", en: "Searching info...", es: "Buscando información..." },
+  checkAvailability: { pt: "Verificando disponibilidade...", en: "Checking availability...", es: "Verificando disponibilidad..." },
+  getRates: { pt: "Consultando tarifas...", en: "Checking rates...", es: "Consultando tarifas..." },
+  authenticateGuest: { pt: "Validando dados da reserva...", en: "Validating booking data...", es: "Validando datos de reserva..." },
+  getReservation: { pt: "Buscando detalhes da reserva...", en: "Looking up reservation...", es: "Buscando detalles de reserva..." },
+  captureLead: { pt: "Registrando contato...", en: "Saving contact...", es: "Registrando contacto..." },
+  createHandoff: { pt: "Conectando com a equipe...", en: "Connecting with our team...", es: "Conectando con el equipo..." },
 };
+
+function getToolLabel(tool: string, locale: AgentLocale): string {
+  const labels = toolLabelsMap[tool];
+  if (!labels) return locale === "en" ? "Processing..." : locale === "es" ? "Procesando..." : "Processando...";
+  return labels[locale] ?? labels.pt;
+}
 
 function randomId(): string {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
@@ -201,6 +212,7 @@ export function useChat(): UseChatState {
     booking: false,
     handoff: false,
   });
+  const [quickReplies, setQuickReplies] = useState<QuickRepliesState>(null);
   const initializedRef = useRef(false);
 
   // Always-current refs — avoid stale closures in callbacks and queue drain
@@ -266,7 +278,20 @@ export function useChat(): UseChatState {
     setMessages([{ id: randomId(), role: "assistant", text: defaultConfig.greeting }]);
   }, []);
 
+  // Track session end on page unload (fire-and-forget beacon)
+  useEffect(() => {
+    function handleUnload() {
+      const msgCount = messagesRef.current.filter((m) => m.role === "user").length;
+      if (msgCount > 0) {
+        track("session_ended", { messages: msgCount, sessionId: sessionIdRef.current ?? "none" });
+      }
+    }
+    window.addEventListener("beforeunload", handleUnload);
+    return () => window.removeEventListener("beforeunload", handleUnload);
+  }, []);
+
   const clearError = useCallback(() => setError(null), []);
+  const clearQuickReplies = useCallback(() => setQuickReplies(null), []);
 
   // streamMessage uses sessionIdRef to avoid stale closure — no deps needed
   const streamMessage = useCallback(
@@ -341,7 +366,8 @@ export function useChat(): UseChatState {
           }
 
           if (event.event === "tool_start") {
-            setActiveTool(toolLabels[event.tool] ?? "Processando...");
+            setActiveTool(getToolLabel(event.tool, locale));
+            track("intent_detected", { tool: event.tool });
             continue;
           }
 
@@ -396,6 +422,14 @@ export function useChat(): UseChatState {
             continue;
           }
 
+          if (event.event === "quick_replies") {
+            setQuickReplies({
+              prompt: event.prompt,
+              options: event.options as QuickReply[],
+            });
+            continue;
+          }
+
           if (event.event === "error") {
             setActiveTool(null);
             setSuggestedActions((current) => ({ ...current, handoff: true }));
@@ -420,6 +454,7 @@ export function useChat(): UseChatState {
 
       clearError();
       setActiveTool(null);
+      setQuickReplies(null);
       isStreamingRef.current = true;
       setIsStreaming(true);
       setSuggestedActions({ booking: false, handoff: false });
@@ -523,7 +558,9 @@ export function useChat(): UseChatState {
       sessionId,
       config,
       suggestedActions,
+      quickReplies,
       sendMessage,
+      clearQuickReplies,
       clearError,
     }),
     [
@@ -534,7 +571,9 @@ export function useChat(): UseChatState {
       sessionId,
       config,
       suggestedActions,
+      quickReplies,
       sendMessage,
+      clearQuickReplies,
       clearError,
     ],
   );

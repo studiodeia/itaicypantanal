@@ -1,7 +1,9 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 import { cn } from "@/lib/utils";
 import { useChat } from "./useChat";
 import { ChatTrigger } from "./ChatTrigger";
+import { ChatMessageContent } from "./ChatMessageContent";
 import { useLanguage } from "@/i18n/context";
 import type { Lang } from "@/i18n/context";
 
@@ -385,19 +387,36 @@ function getOptionCards(locale: Lang): OptionCard[] {
   ];
 }
 
+function formatDateNatural(iso: string, locale: Lang): string {
+  const parts = iso.split("-");
+  if (parts.length !== 3) return iso;
+  const [y, m, d] = parts as [string, string, string];
+  const date = new Date(Number(y), Number(m) - 1, Number(d));
+  if (Number.isNaN(date.getTime())) return iso;
+  const intlLocale = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "pt-BR";
+  return date.toLocaleDateString(intlLocale, { day: "numeric", month: "long" });
+}
+
 function getAvailabilityPrompt(
   locale: Lang,
   form: CalendarFormState,
 ): string {
+  const ci = formatDateNatural(form.checkIn, locale);
+  const co = formatDateNatural(form.checkOut, locale);
+  const g = Number(form.guests) || 2;
+
   if (locale === "en") {
-    return `Check availability from ${form.checkIn} to ${form.checkOut} for ${form.guests} guest(s).`;
+    const ppl = g === 1 ? "1 person" : `${g} people`;
+    return `I'd like to book from ${ci} to ${co} for ${ppl}`;
   }
 
   if (locale === "es") {
-    return `Verificar disponibilidad del ${form.checkIn} al ${form.checkOut} para ${form.guests} huésped(es).`;
+    const ppl = g === 1 ? "1 persona" : `${g} personas`;
+    return `Quiero reservar del ${ci} al ${co} para ${ppl}`;
   }
 
-  return `Verificar disponibilidade de ${form.checkIn} até ${form.checkOut} para ${form.guests} hóspede(s).`;
+  const ppl = g === 1 ? "1 pessoa" : `${g} pessoas`;
+  return `Quero reservar de ${ci} a ${co} para ${ppl}`;
 }
 
 export function ChatWidget() {
@@ -425,9 +444,12 @@ export function ChatWidget() {
     isStreaming,
     error,
     activeTool,
+    sessionId,
     config,
     suggestedActions,
+    quickReplies,
     sendMessage,
+    clearQuickReplies,
     clearError,
   } = useChat();
 
@@ -449,6 +471,28 @@ export function ChatWidget() {
 
   const whatsappUrl = toWhatsappUrl(config.handoffWhatsapp);
   const phoneUrl = toPhoneUrl(config.handoffPhone);
+
+  function persistHandoff(channel: "whatsapp" | "phone" | "email") {
+    if (!sessionId) return;
+    fetch("/api/handoffs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sessionId,
+        intent: "general",
+        urgency: "normal",
+        contextSummary: messages
+          .filter((m) => m.role === "user")
+          .slice(-3)
+          .map((m) => m.text)
+          .join(" | ")
+          .slice(0, 500),
+        channel,
+      }),
+    })
+      .then(() => track("handoff_created", { channel }))
+      .catch(() => {/* non-critical */});
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -494,6 +538,7 @@ export function ChatWidget() {
 
     setCalendarError(null);
     setShowCalendar(false);
+    track("dates_provided", { checkIn: calendarForm.checkIn, checkOut: calendarForm.checkOut });
     await sendMessage(getAvailabilityPrompt(lang, calendarForm));
   }
 
@@ -530,6 +575,22 @@ export function ChatWidget() {
     setSelectedSegment(null);
     setLeadReady(true);
     setShowCalendar(false);
+
+    // Persist lead to backend (fire-and-forget — don't block UX)
+    fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: leadForm.name.trim(),
+        email: leadForm.email.trim().toLowerCase(),
+        phone: leadForm.whatsapp.trim() || undefined,
+        consentLgpd: true,
+        sourceIntent: "chat",
+        context: { locale: lang, channel: "chat_widget" },
+      }),
+    })
+      .then(() => track("lead_captured", { source: "chat" }))
+      .catch(() => {/* non-critical */});
   }
 
   return (
@@ -845,8 +906,10 @@ export function ChatWidget() {
                   >
                     {isEmptyAssistant ? (
                       <TypingIndicator />
-                    ) : (
+                    ) : isUser ? (
                       message.text
+                    ) : (
+                      <ChatMessageContent text={message.text} locale={lang} />
                     )}
                   </article>
                 );
@@ -868,6 +931,7 @@ export function ChatWidget() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => persistHandoff("whatsapp")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   WhatsApp
@@ -876,6 +940,7 @@ export function ChatWidget() {
               {phoneUrl ? (
                 <a
                   href={phoneUrl}
+                  onClick={() => persistHandoff("phone")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   {ui.handoffCall}
@@ -884,11 +949,34 @@ export function ChatWidget() {
               {config.handoffEmail ? (
                 <a
                   href={`mailto:${config.handoffEmail}`}
+                  onClick={() => persistHandoff("email")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   Email
                 </a>
               ) : null}
+            </div>
+          </div>
+        ) : null}
+
+        {quickReplies && !isStreaming ? (
+          <div className="shrink-0 border-t border-[#f1f5f9] bg-[#f8fafc] px-5 py-3">
+            <p className="mb-2 text-xs font-medium text-[#64748b]">{quickReplies.prompt}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {quickReplies.options.map((opt) => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={async () => {
+                    clearQuickReplies();
+                    track("profile_selected", { profile: opt.value });
+                    await sendMessage(opt.label);
+                  }}
+                  className="rounded-full border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-medium text-[#334155] transition hover:border-[#a88755] hover:text-[#a88755]"
+                >
+                  {opt.label}
+                </button>
+              ))}
             </div>
           </div>
         ) : null}
