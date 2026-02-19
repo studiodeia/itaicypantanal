@@ -139,7 +139,7 @@ export function buildWebSite() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: origin,
-    inLanguage: "pt-BR",
+    inLanguage: ["pt-BR", "en", "es"],
     potentialAction: {
       "@type": "SearchAction",
       target: `${origin}/blog?q={search_term_string}`,

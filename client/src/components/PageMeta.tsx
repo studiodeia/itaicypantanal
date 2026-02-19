@@ -7,6 +7,20 @@ const OG_LOCALE: Record<string, string> = {
   es: "es_ES",
 };
 
+/** Alternate OG locales (languages other than current) */
+const OG_LOCALE_ALT: Record<string, string[]> = {
+  pt: ["en_US", "es_ES"],
+  en: ["pt_BR", "es_ES"],
+  es: ["pt_BR", "en_US"],
+};
+
+/** hreflang values per supported language */
+const HREFLANG: Record<string, string> = {
+  pt: "pt-BR",
+  en: "en",
+  es: "es",
+};
+
 const HTML_LANG: Record<string, string> = {
   pt: "pt-BR",
   en: "en",
@@ -46,7 +60,10 @@ export function PageMeta({
   const ogLocale = OG_LOCALE[lang] ?? "pt_BR";
   const htmlLang = HTML_LANG[lang] ?? "pt-BR";
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+  const ogLocaleAlternates = OG_LOCALE_ALT[lang] ?? [];
   const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const hreflangPath = canonicalPath ?? (typeof window !== "undefined" ? window.location.pathname : "/");
+  const hreflangUrl = `${origin}${hreflangPath}`;
   const canonicalUrl = canonicalPath ? `${origin}${canonicalPath}` : undefined;
   const ogImageUrl = ogImage
     ? ogImage.startsWith("http")
@@ -84,6 +101,15 @@ export function PageMeta({
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
+      {ogLocaleAlternates.map((alt) => (
+        <meta key={alt} property="og:locale:alternate" content={alt} />
+      ))}
+
+      {/* hreflang — multilingual signals for search engines */}
+      {Object.entries(HREFLANG).map(([, hreflang]) => (
+        <link key={hreflang} rel="alternate" hrefLang={hreflang} href={hreflangUrl} />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={hreflangUrl} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

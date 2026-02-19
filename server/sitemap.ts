@@ -110,6 +110,9 @@ function buildAllPaths(content: CmsContent): string[] {
   return Array.from(paths);
 }
 
+// Supported hreflang values (same URL serves all languages for now)
+const HREFLANGS = ["pt-BR", "en", "es"] as const;
+
 export async function buildSitemapXml(req: Request): Promise<string> {
   const { content } = await getCmsContent();
   const baseUrl = getBaseSiteUrl(req);
@@ -120,12 +123,17 @@ export async function buildSitemapXml(req: Request): Promise<string> {
   const entries = allPaths
     .map((path) => {
       const url = toAbsoluteUrl(baseUrl, path);
+      const escapedUrl = escapeXml(url);
       const meta = getRouteMeta(path);
-      return `<url><loc>${escapeXml(url)}</loc><lastmod>${now}</lastmod><changefreq>${meta.changefreq}</changefreq><priority>${meta.priority}</priority></url>`;
+      const hreflangs = HREFLANGS.map(
+        (hl) => `<xhtml:link rel="alternate" hreflang="${hl}" href="${escapedUrl}"/>`,
+      ).join("");
+      const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${escapedUrl}"/>`;
+      return `<url><loc>${escapedUrl}</loc><lastmod>${now}</lastmod><changefreq>${meta.changefreq}</changefreq><priority>${meta.priority}</priority>${hreflangs}${xDefault}</url>`;
     })
     .join("");
 
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${entries}</urlset>`;
 }
 
 // ─── robots.txt with explicit AI crawler permissions ────────────────
