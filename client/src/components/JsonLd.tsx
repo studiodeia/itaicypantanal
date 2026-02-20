@@ -406,18 +406,31 @@ export function buildSeasonalEvents(cmsEvents?: CmsSeasonalEvent[]) {
 
   // If CMS has events defined, use them instead of hardcoded
   if (cmsEvents && cmsEvents.length > 0) {
-    const nextYear = currentYear + 1;
+    const today = new Date();
+    const todayMD = [
+      String(today.getMonth() + 1).padStart(2, "0"),
+      String(today.getDate()).padStart(2, "0"),
+    ].join("-");
+
     return cmsEvents.map((event) => {
       const startMD = event.startDate; // "MM-DD"
       const endMD = event.endDate;
-      // If end month < start month, event spans into next year
-      const endYear =
-        startMD && endMD && endMD < startMD ? nextYear : currentYear;
+      let startYear = currentYear;
+      let endYear = currentYear;
+      if (startMD && endMD && endMD < startMD) {
+        // Cross-year event: if today is still in the wrap window (Jan 1–endMD),
+        // the season started last year and ends this year
+        if (todayMD <= endMD) {
+          startYear = currentYear - 1;
+        } else {
+          endYear = currentYear + 1;
+        }
+      }
       return {
         "@type": "Event",
         name: event.name,
         ...(event.description && { description: event.description }),
-        ...(startMD && { startDate: `${currentYear}-${startMD}` }),
+        ...(startMD && { startDate: `${startYear}-${startMD}` }),
         ...(endMD && { endDate: `${endYear}-${endMD}` }),
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventScheduled",
