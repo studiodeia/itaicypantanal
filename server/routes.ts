@@ -109,7 +109,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/page/:slug", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent(getLocale(req));
+      const locale = getLocale(req) ?? "pt";
+      const { content, source } = await getCmsContent(locale);
+      // Seed data is PT-only; for other locales return 404 so the client
+      // falls back to its own hardcoded EN/ES defaults (home-defaults, etc.)
+      if (source === "seed" && locale !== "pt") {
+        res.status(404).json({ message: "Page content not available in this locale (seed)" });
+        return;
+      }
       const slug = "/" + (req.params.slug === "home" ? "" : req.params.slug);
       const pageData = content.pageContent?.[slug] ?? null;
       if (!pageData) {
