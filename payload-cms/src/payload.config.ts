@@ -3,7 +3,10 @@ import { fileURLToPath } from "node:url";
 
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { seoPlugin } from "@payloadcms/plugin-seo";
+import { s3Storage } from "@payloadcms/storage-s3";
 import { buildConfig } from "payload";
+import sharp from "sharp";
 
 import { ensureOwnerUser } from "./auth/ensure-owner-user";
 import { BirdCategories } from "./collections/BirdCategories";
@@ -52,10 +55,95 @@ const db = isPostgres
         },
       });
 
+const s3Enabled = Boolean(process.env.S3_BUCKET && process.env.S3_ACCESS_KEY_ID);
+
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || "change-this-secret",
   serverURL: payloadPublicServerUrl,
+  sharp,
   db,
+  plugins: [
+    ...(s3Enabled
+      ? [
+          s3Storage({
+            collections: { media: true },
+            bucket: process.env.S3_BUCKET!,
+            config: {
+              endpoint: process.env.S3_ENDPOINT,
+              credentials: {
+                accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+              },
+              region: process.env.S3_REGION || "us-east-1",
+              forcePathStyle: true,
+            },
+          }),
+        ]
+      : []),
+    seoPlugin({
+      collections: ["blog-posts", "bird-species"],
+      globals: [
+        "home-content",
+        "acomodacoes-content",
+        "culinaria-content",
+        "pesca-content",
+        "ecoturismo-content",
+        "birdwatching-content",
+        "contato-content",
+        "nosso-impacto-content",
+        "privacidade-content",
+        "not-found-content",
+      ],
+      uploadsCollection: "media",
+      tabbedUI: true,
+      generateTitle: ({ doc, globalConfig, collectionConfig }) => {
+        const d = doc as Record<string, unknown>;
+        const raw = (d.title || d.commonName || d.heading || "") as unknown;
+        const title = typeof raw === "string" ? raw : "";
+        return title ? `${title} | Itaicy Pantanal Eco Lodge` : "Itaicy Pantanal Eco Lodge";
+      },
+      generateDescription: ({ doc }) => {
+        const d = doc as Record<string, unknown>;
+        const raw = (d.description || d.subtitle || "") as unknown;
+        const desc = typeof raw === "string" ? raw : "";
+        return desc.slice(0, 155);
+      },
+      generateURL: ({ doc, globalConfig, collectionConfig }) => {
+        const siteUrl = process.env.SITE_URL || "https://itaicypantanal.com.br";
+        const d = doc as Record<string, unknown>;
+        const globalSlug = globalConfig?.slug;
+        const collectionSlug = collectionConfig?.slug;
+        const slugMap: Record<string, string> = {
+          "home-content": "/",
+          "acomodacoes-content": "/acomodacoes",
+          "culinaria-content": "/culinaria",
+          "pesca-content": "/pesca",
+          "ecoturismo-content": "/ecoturismo",
+          "birdwatching-content": "/observacao-de-aves",
+          "contato-content": "/contato",
+          "nosso-impacto-content": "/nosso-impacto",
+          "privacidade-content": "/politica-de-privacidade",
+          "not-found-content": "/404",
+        };
+        if (globalSlug && slugMap[globalSlug]) return `${siteUrl}${slugMap[globalSlug]}`;
+        if (collectionSlug === "blog-posts") return `${siteUrl}/blog/${d.slug || ""}`;
+        if (collectionSlug === "bird-species") return `${siteUrl}/observacao-de-aves/catalogo/${d.slug || ""}`;
+        return siteUrl;
+      },
+      fields: ({ defaultFields }) => [
+        ...defaultFields,
+        {
+          name: "noIndex",
+          type: "checkbox" as const,
+          label: "Nao indexar (noindex)",
+          defaultValue: false,
+          admin: {
+            description: "Marque para impedir que esta pagina apareca nos resultados de busca.",
+          },
+        },
+      ],
+    }),
+  ],
   localization: {
     locales: [
       { label: "Português", code: "pt" },
@@ -91,12 +179,14 @@ export default buildConfig({
   cors: [
     frontendOrigin,
     payloadPublicServerUrl,
+    `http://localhost:${payloadPort}`,
     "https://cms-itaicypantanal.vercel.app",
     "https://cms.itaicypantanal.com.br",
   ].filter(Boolean),
   csrf: [
     frontendOrigin,
     payloadPublicServerUrl,
+    `http://localhost:${payloadPort}`,
     "https://cms-itaicypantanal.vercel.app",
     "https://cms.itaicypantanal.com.br",
   ].filter(Boolean),
@@ -118,6 +208,44 @@ export default buildConfig({
     user: Users.slug,
     autoRefresh: true,
     dateFormat: "dd/MM/yyyy HH:mm",
+    livePreview: {
+      breakpoints: [
+        { label: "Mobile", name: "mobile", width: 375, height: 667 },
+        { label: "Tablet", name: "tablet", width: 768, height: 1024 },
+        { label: "Desktop", name: "desktop", width: 1440, height: 900 },
+      ],
+      url: ({ globalConfig }) => {
+        const slugToPath: Record<string, string> = {
+          "home-content": "/",
+          "acomodacoes-content": "/acomodacoes",
+          "culinaria-content": "/culinaria",
+          "pesca-content": "/pesca",
+          "ecoturismo-content": "/ecoturismo",
+          "birdwatching-content": "/observacao-de-aves",
+          "contato-content": "/contato",
+          "nosso-impacto-content": "/nosso-impacto",
+          "privacidade-content": "/politica-de-privacidade",
+          "not-found-content": "/404-preview",
+          "site-settings": "/",
+        };
+        const slug = globalConfig?.slug ?? "";
+        const pagePath = slugToPath[slug] ?? "/";
+        return `${frontendOrigin}${pagePath}`;
+      },
+      globals: [
+        "home-content",
+        "acomodacoes-content",
+        "culinaria-content",
+        "pesca-content",
+        "ecoturismo-content",
+        "birdwatching-content",
+        "contato-content",
+        "nosso-impacto-content",
+        "privacidade-content",
+        "not-found-content",
+        "site-settings",
+      ],
+    },
     meta: {
       titleSuffix: " - Itaicy CMS",
       description:

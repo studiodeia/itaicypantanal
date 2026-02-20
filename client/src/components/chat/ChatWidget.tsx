@@ -1,6 +1,9 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 import { cn } from "@/lib/utils";
 import { useChat } from "./useChat";
+import { ChatTrigger } from "./ChatTrigger";
+import { ChatMessageContent } from "./ChatMessageContent";
 import { useLanguage } from "@/i18n/context";
 import type { Lang } from "@/i18n/context";
 
@@ -263,37 +266,6 @@ function TypingIndicator() {
   );
 }
 
-function ConciergeBellIcon() {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className="h-9 w-9">
-      <defs>
-        <linearGradient id="bellGoldFill" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#F9EEBD" />
-          <stop offset="40%" stopColor="#E5CC72" />
-          <stop offset="75%" stopColor="#C4A445" />
-          <stop offset="100%" stopColor="#A68832" />
-        </linearGradient>
-        <radialGradient id="bellGlow" cx="50%" cy="38%" r="50%">
-          <stop offset="0%" stopColor="#FFF8D6" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#D4B355" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      {/* Soft inner glow behind the bell */}
-      <circle cx="32" cy="34" r="18" fill="url(#bellGlow)" />
-      {/* Bell knob */}
-      <circle cx="32" cy="18.5" r="3.8" fill="url(#bellGoldFill)" />
-      {/* Bell dome */}
-      <path
-        d="M16.5 37c0-8.6 6.9-15.8 15.5-15.8S47.5 28.4 47.5 37v1H16.5v-1z"
-        fill="url(#bellGoldFill)"
-      />
-      {/* Bell stem */}
-      <rect x="30" y="38" width="4" height="3.5" rx="0.6" fill="url(#bellGoldFill)" />
-      {/* Bell base */}
-      <rect x="16" y="42" width="32" height="4.5" rx="2.25" fill="url(#bellGoldFill)" />
-    </svg>
-  );
-}
 
 function toWhatsappUrl(raw: string): string | null {
   const digits = raw.replace(/\D/g, "");
@@ -415,19 +387,36 @@ function getOptionCards(locale: Lang): OptionCard[] {
   ];
 }
 
+function formatDateNatural(iso: string, locale: Lang): string {
+  const parts = iso.split("-");
+  if (parts.length !== 3) return iso;
+  const [y, m, d] = parts as [string, string, string];
+  const date = new Date(Number(y), Number(m) - 1, Number(d));
+  if (Number.isNaN(date.getTime())) return iso;
+  const intlLocale = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "pt-BR";
+  return date.toLocaleDateString(intlLocale, { day: "numeric", month: "long" });
+}
+
 function getAvailabilityPrompt(
   locale: Lang,
   form: CalendarFormState,
 ): string {
+  const ci = formatDateNatural(form.checkIn, locale);
+  const co = formatDateNatural(form.checkOut, locale);
+  const g = Number(form.guests) || 2;
+
   if (locale === "en") {
-    return `Check availability from ${form.checkIn} to ${form.checkOut} for ${form.guests} guest(s).`;
+    const ppl = g === 1 ? "1 person" : `${g} people`;
+    return `I'd like to book from ${ci} to ${co} for ${ppl}`;
   }
 
   if (locale === "es") {
-    return `Verificar disponibilidad del ${form.checkIn} al ${form.checkOut} para ${form.guests} huésped(es).`;
+    const ppl = g === 1 ? "1 persona" : `${g} personas`;
+    return `Quiero reservar del ${ci} al ${co} para ${ppl}`;
   }
 
-  return `Verificar disponibilidade de ${form.checkIn} até ${form.checkOut} para ${form.guests} hóspede(s).`;
+  const ppl = g === 1 ? "1 pessoa" : `${g} pessoas`;
+  return `Quero reservar de ${ci} a ${co} para ${ppl}`;
 }
 
 export function ChatWidget() {
@@ -455,9 +444,12 @@ export function ChatWidget() {
     isStreaming,
     error,
     activeTool,
+    sessionId,
     config,
     suggestedActions,
+    quickReplies,
     sendMessage,
+    clearQuickReplies,
     clearError,
   } = useChat();
 
@@ -479,6 +471,28 @@ export function ChatWidget() {
 
   const whatsappUrl = toWhatsappUrl(config.handoffWhatsapp);
   const phoneUrl = toPhoneUrl(config.handoffPhone);
+
+  function persistHandoff(channel: "whatsapp" | "phone" | "email") {
+    if (!sessionId) return;
+    fetch("/api/handoffs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sessionId,
+        intent: "general",
+        urgency: "normal",
+        contextSummary: messages
+          .filter((m) => m.role === "user")
+          .slice(-3)
+          .map((m) => m.text)
+          .join(" | ")
+          .slice(0, 500),
+        channel,
+      }),
+    })
+      .then(() => track("handoff_created", { channel }))
+      .catch(() => {/* non-critical */});
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -524,6 +538,7 @@ export function ChatWidget() {
 
     setCalendarError(null);
     setShowCalendar(false);
+    track("dates_provided", { checkIn: calendarForm.checkIn, checkOut: calendarForm.checkOut });
     await sendMessage(getAvailabilityPrompt(lang, calendarForm));
   }
 
@@ -560,6 +575,22 @@ export function ChatWidget() {
     setSelectedSegment(null);
     setLeadReady(true);
     setShowCalendar(false);
+
+    // Persist lead to backend (fire-and-forget — don't block UX)
+    fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: leadForm.name.trim(),
+        email: leadForm.email.trim().toLowerCase(),
+        phone: leadForm.whatsapp.trim() || undefined,
+        consentLgpd: true,
+        sourceIntent: "chat",
+        context: { locale: lang, channel: "chat_widget" },
+      }),
+    })
+      .then(() => track("lead_captured", { source: "chat" }))
+      .catch(() => {/* non-critical */});
   }
 
   return (
@@ -875,8 +906,10 @@ export function ChatWidget() {
                   >
                     {isEmptyAssistant ? (
                       <TypingIndicator />
-                    ) : (
+                    ) : isUser ? (
                       message.text
+                    ) : (
+                      <ChatMessageContent text={message.text} locale={lang} />
                     )}
                   </article>
                 );
@@ -898,6 +931,7 @@ export function ChatWidget() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => persistHandoff("whatsapp")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   WhatsApp
@@ -906,6 +940,7 @@ export function ChatWidget() {
               {phoneUrl ? (
                 <a
                   href={phoneUrl}
+                  onClick={() => persistHandoff("phone")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   {ui.handoffCall}
@@ -914,11 +949,34 @@ export function ChatWidget() {
               {config.handoffEmail ? (
                 <a
                   href={`mailto:${config.handoffEmail}`}
+                  onClick={() => persistHandoff("email")}
                   className="rounded-lg border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-semibold text-[#334155] transition hover:bg-[#f8fafc]"
                 >
                   Email
                 </a>
               ) : null}
+            </div>
+          </div>
+        ) : null}
+
+        {quickReplies && !isStreaming ? (
+          <div className="shrink-0 border-t border-[#f1f5f9] bg-[#f8fafc] px-5 py-3">
+            <p className="mb-2 text-xs font-medium text-[#64748b]">{quickReplies.prompt}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {quickReplies.options.map((opt) => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={async () => {
+                    clearQuickReplies();
+                    track("profile_selected", { profile: opt.value });
+                    await sendMessage(opt.label);
+                  }}
+                  className="rounded-full border border-[#d1d5db] bg-white px-3 py-1.5 text-xs font-medium text-[#334155] transition hover:border-[#a88755] hover:text-[#a88755]"
+                >
+                  {opt.label}
+                </button>
+              ))}
             </div>
           </div>
         ) : null}
@@ -1000,24 +1058,9 @@ export function ChatWidget() {
       </section>
 
       {!isOpen ? (
-        <button
-          type="button"
-          onClick={() => setIsOpen(true)}
-          className="pointer-events-auto group relative isolate h-16 w-16 rounded-full border border-[#d5b86b] bg-[radial-gradient(circle_at_30%_22%,#4c412d_0%,#2f281d_55%,#1f1a12_100%)] shadow-[0_22px_42px_-18px_rgba(15,23,42,0.55)] transition duration-300 hover:scale-[1.03] hover:shadow-[0_30px_54px_-20px_rgba(15,23,42,0.62)]"
-          aria-label={ui.fabAriaLabel}
-        >
-          <span className="motion-reduce:animate-none absolute -inset-2 -z-30 rounded-full bg-[#d6b768]/18 blur-xl animate-[pulse_4.8s_ease-in-out_infinite]" />
-          <span className="motion-reduce:animate-none absolute -inset-1 -z-20 rounded-full border border-[#d6b768]/50 opacity-60 animate-[ping_6.2s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
-          <span className="absolute inset-[4px] rounded-full border border-[#e9d58f]/70" />
-          <span
-            className="motion-reduce:animate-none absolute -inset-1 -z-10 rounded-full border border-[#f5e7ad]/35 opacity-45 animate-[ping_7.4s_cubic-bezier(0.16,1,0.3,1)_infinite]"
-            style={{ animationDelay: "1.3s" }}
-          />
-          <span className="relative z-10 flex h-full w-full items-center justify-center text-[#e7d589] drop-shadow-[0_0_10px_rgba(245,218,134,0.45)]">
-            <ConciergeBellIcon />
-          </span>
-          <span className="absolute right-[11px] top-[10px] h-2 w-2 rounded-full bg-[#f4d58c] shadow-[0_0_10px_rgba(244,213,140,0.9)]" />
-        </button>
+        <div className="pointer-events-auto">
+          <ChatTrigger lang={lang} onClick={() => setIsOpen(true)} />
+        </div>
       ) : null}
     </div>
   );

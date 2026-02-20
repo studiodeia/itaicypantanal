@@ -9,30 +9,42 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import { useLanguage, type Lang } from "@/i18n/context";
 import type { HomePageContent } from "@shared/cms-page-content";
 
-const defaultBlogContent: HomePageContent["blog"] = {
-  label: "BLOG",
-  heading: "Diário do Pantanal",
-  description:
-    "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
-  buttonText: "Ver todos",
+const defaultBlogContentByLang: Record<Lang, HomePageContent["blog"]> = {
+  pt: {
+    label: "BLOG",
+    heading: "Diário do Pantanal",
+    description:
+      "Histórias, descobertas e relatos do Pantanal: vida selvagem, pesca, aves e tudo o que acontece quando a cidade fica para trás.",
+    buttonText: "Ver todos",
+  },
+  en: {
+    label: "BLOG",
+    heading: "Pantanal Diary",
+    description:
+      "Stories, discoveries and accounts from the Pantanal: wildlife, fishing, birds, and everything that happens when the city is left behind.",
+    buttonText: "View all",
+  },
+  es: {
+    label: "BLOG",
+    heading: "Diario del Pantanal",
+    description:
+      "Historias, descubrimientos y relatos del Pantanal: vida silvestre, pesca, aves y todo lo que ocurre cuando la ciudad queda atrás.",
+    buttonText: "Ver todos",
+  },
 };
 
 type Props = { content?: HomePageContent["blog"] };
 
-const blogPosts = [
+const blogPostsPt = [
   {
     id: 1,
     category: "Aventura",
     readTime: "15 minutos de leitura",
-    title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
-    author: {
-      name: "Lucas Vieira",
-      avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
-    },
+    title: "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy Eco Lodge",
+    author: { name: "Lucas Vieira", avatar: "/images/home/blog-avatar.webp", initials: "LV" },
     date: "09 de Agosto, 2025",
     image: "/images/home/blog-card.webp",
   },
@@ -40,13 +52,8 @@ const blogPosts = [
     id: 2,
     category: "Aventura",
     readTime: "15 minutos de leitura",
-    title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
-    author: {
-      name: "Lucas Vieira",
-      avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
-    },
+    title: "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy Eco Lodge",
+    author: { name: "Lucas Vieira", avatar: "/images/home/blog-avatar.webp", initials: "LV" },
     date: "09 de Agosto, 2025",
     image: "/images/home/blog-card.webp",
   },
@@ -54,20 +61,40 @@ const blogPosts = [
     id: 3,
     category: "Aventura",
     readTime: "15 minutos de leitura",
-    title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
-    author: {
-      name: "Lucas Vieira",
-      avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
-    },
+    title: "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy Eco Lodge",
+    author: { name: "Lucas Vieira", avatar: "/images/home/blog-avatar.webp", initials: "LV" },
     date: "09 de Agosto, 2025",
     image: "/images/home/blog-card.webp",
   },
 ];
 
+const blogPostsEn = blogPostsPt.map((p) => ({
+  ...p,
+  category: "Adventure",
+  readTime: "15 min read",
+  title: "Observation Guide: The 166 Bird Species Spotted at Itaicy Eco Lodge",
+  date: "August 9, 2025",
+}));
+
+const blogPostsEs = blogPostsPt.map((p) => ({
+  ...p,
+  category: "Aventura",
+  readTime: "15 minutos de lectura",
+  title: "Guía de Observación: Las 166 Especies de Aves Vistas en Itaicy Eco Lodge",
+  date: "9 de agosto de 2025",
+}));
+
+const blogPostsByLang: Record<Lang, typeof blogPostsPt> = {
+  pt: blogPostsPt,
+  en: blogPostsEn,
+  es: blogPostsEs,
+};
+
 export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Element => {
-  const content = contentProp ?? defaultBlogContent;
+  const { lang } = useLanguage();
+  const content = contentProp ?? defaultBlogContentByLang[lang];
+  const posts = blogPostsByLang[lang];
+
   return (
     <section className="flex flex-col items-center justify-end gap-8 w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -88,7 +115,7 @@ export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Elemen
         </motion.header>
 
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <motion.div key={post.id} variants={cardItem}>
             <Link href="/blog" className="no-underline block">
             <Card

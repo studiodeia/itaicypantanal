@@ -1,6 +1,8 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import { birdwatchingDefaults } from "./birdwatching-defaults";
 import { BirdHeroSection } from "./birdwatching/sections/BirdHeroSection";
 import { BirdManifestoSection } from "./birdwatching/sections/BirdManifestoSection";
@@ -16,6 +18,7 @@ import { useBirdCmsData } from "./birdwatching/cms";
 export const BirdWatching = (): JSX.Element => {
   const birdData = useBirdCmsData();
   const cms = usePageCms("/observacao-de-aves", birdwatchingDefaults);
+  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
@@ -32,12 +35,12 @@ export const BirdWatching = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title="Observacao de Aves"
-        description="Mais de 650 especies de aves no Pantanal. Tuiuiu, arara-azul, tucanos e muito mais. Guias especializados e roteiros guiados de birdwatching."
+        title={t("pageMeta", "birdwatchingTitle", lang)}
+        description={t("pageMeta", "birdwatchingDesc", lang)}
         canonicalPath="/observacao-de-aves"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Observacao de Aves", path: "/observacao-de-aves" },
+          { name: t("pageMeta", "breadHome", lang), path: "/" },
+          { name: t("pageMeta", "breadBirdwatching", lang), path: "/observacao-de-aves" },
         ]}
       />
       <JsonLd data={tourSchema} />

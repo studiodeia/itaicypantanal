@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronRight } from "@/lib/icons";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
 type Props = { content: NossoImpactoPageContent["biodiversidade"] };
@@ -14,6 +16,7 @@ function easeOutCubic(t: number) {
 }
 
 export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const hasAnimated = useRef(false);
   const [counts, setCounts] = useState<number[]>(content.counters.map(() => 0));
@@ -64,7 +67,7 @@ export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
           className="flex flex-col gap-6 md:gap-8"
         >
           <motion.span variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#d7a45d] text-[length:var(--lead-md-font-size)] tracking-[3.84px] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)] uppercase">
-            BIODIVERSIDADE
+            {t("impact", "biodiversity", lang)}
           </motion.span>
           <motion.h2
             variants={fadeUp}
@@ -106,7 +109,7 @@ export const BiodiversidadeSection = ({ content }: Props): JSX.Element => {
           className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group no-underline"
         >
           <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            Veja nosso inventário de vida selvagem
+            {t("impact", "wildlifeInventory", lang)}
           </span>
           <ChevronRight
             className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"

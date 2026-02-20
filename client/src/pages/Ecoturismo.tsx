@@ -1,6 +1,8 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import { ecoturismoDefaults } from "./ecoturismo-defaults";
 import { EcoHeroSection } from "./ecoturismo/sections/EcoHeroSection";
 import { EcoManifestoSection } from "./ecoturismo/sections/EcoManifestoSection";
@@ -14,6 +16,7 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Ecoturismo = (): JSX.Element => {
   const cms = usePageCms("/ecoturismo", ecoturismoDefaults);
+  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
@@ -30,12 +33,12 @@ export const Ecoturismo = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title="Ecoturismo"
-        description="Experiencias de ecoturismo sustentavel no Pantanal. Trilhas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo."
+        title={t("pageMeta", "ecoturismoTitle", lang)}
+        description={t("pageMeta", "ecoturismoDesc", lang)}
         canonicalPath="/ecoturismo"
         breadcrumbs={[
-          { name: "Inicio", path: "/" },
-          { name: "Ecoturismo", path: "/ecoturismo" },
+          { name: t("pageMeta", "breadHome", lang), path: "/" },
+          { name: t("pageMeta", "breadEcoturismo", lang), path: "/ecoturismo" },
         ]}
       />
       <JsonLd data={tourSchema} />

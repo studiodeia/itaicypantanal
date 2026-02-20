@@ -2,6 +2,9 @@ import { tool } from "ai";
 import { z } from "zod";
 import type { AgentConfig } from "../../shared/agent-config";
 import { cloudbedsClient, formatCloudbedsError } from "./cloudbeds";
+import { formatDateRange } from "./format-date-locale";
+import { buildBookingDeepLink } from "./booking-link";
+import type { VisitorProfile } from "./conversation-profile";
 
 type AnyRecord = Record<string, unknown>;
 
@@ -105,77 +108,145 @@ function normalizeRatesRows(rows: AnyRecord[]) {
     );
 }
 
-const PT_MONTHS = [
-  "janeiro", "fevereiro", "março", "abril", "maio", "junho",
-  "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
-];
+type AgentLocale = "pt" | "en" | "es";
 
-function formatDatePT(iso: string): string {
-  const parts = iso.split("-");
-  if (parts.length !== 3) return iso;
-  const year = Number.parseInt(parts[0]!, 10);
-  const month = Number.parseInt(parts[1]!, 10) - 1;
-  const day = Number.parseInt(parts[2]!, 10);
-  if (!Number.isFinite(year) || month < 0 || month > 11 || !Number.isFinite(day)) return iso;
-  return `${day} de ${PT_MONTHS[month]} de ${year}`;
+/* ── Trilingual helpers for rates answer ── */
+
+function getAdultsLabel(adults: number, locale: AgentLocale): string {
+  if (locale === "en") return adults === 1 ? "1 adult" : `${adults} adults`;
+  if (locale === "es") return adults === 1 ? "1 adulto" : `${adults} adultos`;
+  return adults === 1 ? "1 adulto" : `${adults} adultos`;
 }
 
-function buildBookingDeepLink(
-  baseUrl: string,
-  checkIn: string,
-  checkOut: string,
-  adults: number,
-  children: number,
-): string {
-  const separator = baseUrl.includes("?") ? "&" : "?";
-  const pairs: string[] = [
-    "currency=brl",
-    "utm_source=site_itaicy",
-    "utm_medium=chat",
-    "utm_campaign=booking_engine",
-    "utm_content=chat_rates",
-    `checkin=${checkIn}`,
-    `checkout=${checkOut}`,
-    `adults=${adults}`,
-  ];
-  if (children > 0) {
-    pairs.push(`kids=${children}`);
+function getRatesFoundMsg(adultsLabel: string, dateRange: string, locale: AgentLocale): string {
+  if (locale === "en") return `Rates found for ${adultsLabel}, ${dateRange}:`;
+  if (locale === "es") return `Tarifas encontradas para ${adultsLabel}, ${dateRange}:`;
+  return `Tarifas encontradas para ${adultsLabel}, ${dateRange}:`;
+}
+
+function getNoRatesMsg(dateRange: string, locale: AgentLocale): string {
+  if (locale === "en") return `I couldn't retrieve real-time rates ${dateRange}.`;
+  if (locale === "es") return `No pude recuperar tarifas en tiempo real ${dateRange}.`;
+  return `Não consegui recuperar tarifas em tempo real ${dateRange}.`;
+}
+
+function getNoRatesAlternatives(bookingUrl: string, locale: AgentLocale): string {
+  if (locale === "en") {
+    return `I can check:\n• Nearby dates (1–3 days before or after)?\n• Another accommodation category?\n\nOr check directly: ${bookingUrl}`;
   }
-  return `${baseUrl}${separator}${pairs.join("&")}`;
+  if (locale === "es") {
+    return `Puedo verificar:\n• Fechas cercanas (1 a 3 días antes o después)?\n• Otra categoría de alojamiento?\n\nO consulte directamente: ${bookingUrl}`;
+  }
+  return `Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?\n\nOu consulte diretamente: ${bookingUrl}`;
 }
 
-function buildRatesAnswer(
-  hasResults: boolean,
-  checkIn: string,
-  checkOut: string,
-  adults: number,
-  bookingEngineUrl: string,
-  disclaimer: string,
-  preview: string[],
-): string {
-  const checkInPT = formatDatePT(checkIn);
-  const checkOutPT = formatDatePT(checkOut);
+function getRatesAllInclusiveDesc(locale: AgentLocale): string {
+  if (locale === "en") {
+    return "Our all-inclusive package covers accommodation, breakfast, lunch, dinner, and beverages.";
+  }
+  if (locale === "es") {
+    return "Nuestro paquete all inclusive incluye hospedaje, desayuno, almuerzo, cena y bebidas.";
+  }
+  return "Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas.";
+}
+
+function getRatesProfileHighlight(profile: VisitorProfile, locale: AgentLocale): string {
+  const map: Record<VisitorProfile, Record<AgentLocale, string>> = {
+    pescador: {
+      pt: "Os pacotes de pesca incluem Cota Zero, barco com piloteiro e guia experiente.",
+      en: "Fishing packages include Cota Zero catch-and-release, boat with pilot and expert guide.",
+      es: "Los paquetes de pesca incluyen Cota Zero, bote con piloto y guía experto.",
+    },
+    birdwatcher: {
+      pt: "Já catalogamos 166 espécies de aves na propriedade — o guia é incluído.",
+      en: "We've catalogued 166 bird species on the property — guide included.",
+      es: "Hemos catalogado 166 especies de aves en la propiedad — guía incluido.",
+    },
+    familia: {
+      pt: "Temos suítes familiares e atividades para todas as idades.",
+      en: "We have family suites and activities for all ages.",
+      es: "Tenemos suites familiares y actividades para todas las edades.",
+    },
+    casal: {
+      pt: "Os chalés às margens do rio são ideais para casais.",
+      en: "Our riverside chalets are ideal for couples.",
+      es: "Las cabañas junto al río son ideales para parejas.",
+    },
+    grupo: {
+      pt: "Para grupos, temos condições especiais — posso conectar com a equipe.",
+      en: "For groups, we offer special conditions — I can connect you with our team.",
+      es: "Para grupos tenemos condiciones especiales — puedo conectarle con el equipo.",
+    },
+    unknown: { pt: "", en: "", es: "" },
+  };
+  return map[profile]?.[locale] ?? "";
+}
+
+function getRatesBookingCta(bookingUrl: string, locale: AgentLocale): string {
+  if (locale === "en") return `Book with dates pre-filled:\n${bookingUrl}`;
+  if (locale === "es") return `Reserve con las fechas ya completadas:\n${bookingUrl}`;
+  return `Garanta sua vaga com as datas já preenchidas:\n${bookingUrl}`;
+}
+
+function getPreviewLabel(category: string, formatted: string, locale: AgentLocale): string {
+  if (locale === "en") return `${category} (from ${formatted})`;
+  if (locale === "es") return `${category} (desde ${formatted})`;
+  return `${category} (a partir de ${formatted})`;
+}
+
+/* ── buildRatesAnswer ── */
+
+type BuildRatesOpts = {
+  hasResults: boolean;
+  checkIn: string;
+  checkOut: string;
+  adults: number;
+  bookingUrl: string;
+  disclaimer: string;
+  preview: string[];
+  locale: AgentLocale;
+  profile: VisitorProfile;
+};
+
+function buildRatesAnswer(opts: BuildRatesOpts): string {
+  const { hasResults, checkIn, checkOut, adults, bookingUrl, disclaimer, preview, locale, profile } = opts;
+  const dateRange = formatDateRange(checkIn, checkOut, locale);
 
   if (!hasResults) {
     return [
-      `Não consegui recuperar tarifas em tempo real de ${checkInPT} a ${checkOutPT}.`,
-      "Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?\n\nOu consulte diretamente: " + bookingEngineUrl,
+      getNoRatesMsg(dateRange, locale),
+      getNoRatesAlternatives(bookingUrl, locale),
       disclaimer,
     ].join("\n\n");
   }
 
-  const adultsLabel = adults === 1 ? "1 adulto" : `${adults} adultos`;
+  const adultsLabel = getAdultsLabel(adults, locale);
+  const profileLine = getRatesProfileHighlight(profile, locale);
 
-  return [
-    `Tarifas encontradas para ${adultsLabel}, de ${checkInPT} a ${checkOutPT}:`,
+  const blocks: string[] = [
+    getRatesFoundMsg(adultsLabel, dateRange, locale),
     preview.map((p) => `• ${p}`).join("\n"),
-    `Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas. Garanta sua vaga com as datas já preenchidas:\n${bookingEngineUrl}`,
+  ];
+
+  if (profileLine) blocks.push(profileLine);
+
+  blocks.push(
+    `${getRatesAllInclusiveDesc(locale)} ${getRatesBookingCta(bookingUrl, locale)}`,
     disclaimer,
-  ].join("\n\n");
+  );
+
+  return blocks.join("\n\n");
 }
 
-function getCloudbedsUnavailableMessage(config: AgentConfig): string {
-  return `Você pode consultar tarifas e reservar diretamente em: ${config.bookingEngineUrl} — ou nossa equipe envia os valores por WhatsApp.`;
+function getCloudbedsUnavailableMessage(config: AgentConfig, locale: AgentLocale): string {
+  const url = config.bookingEngineUrl;
+  if (locale === "en") {
+    return `You can check rates and book directly at: ${url} — or our team can send the prices via WhatsApp.`;
+  }
+  if (locale === "es") {
+    return `Puede consultar tarifas y reservar directamente en: ${url} — o nuestro equipo le envía los valores por WhatsApp.`;
+  }
+  return `Você pode consultar tarifas e reservar diretamente em: ${url} — ou nossa equipe envia os valores por WhatsApp.`;
 }
 
 export function createGetRatesTool(config: AgentConfig) {
@@ -191,17 +262,20 @@ export function createGetRatesTool(config: AgentConfig) {
         roomType: z.string().min(1).max(120).optional(),
         currency: z.string().min(3).max(3).default("BRL"),
         lang: z.enum(["pt", "en", "es"]).default("pt"),
+        profile: z
+          .enum(["pescador", "birdwatcher", "familia", "casal", "grupo", "unknown"])
+          .default("unknown"),
       })
       .refine((value) => value.checkOut > value.checkIn, {
         message: "checkOut must be after checkIn",
       }),
-    execute: async ({ checkIn, checkOut, adults, children, roomType, currency }) => {
+    execute: async ({ checkIn, checkOut, adults, children, roomType, currency, lang: locale, profile }) => {
       const ratesPath = process.env.CLOUDBEDS_RATES_PATH || "/getRatePlans";
-      const disclaimer = config.disclaimers.price.pt;
+      const disclaimer = config.disclaimers.price[locale] ?? config.disclaimers.price.pt;
       const propertyIds = process.env.CLOUDBEDS_PROPERTY_IDS?.trim() || "";
 
       if (!cloudbedsClient.isEnabled()) {
-        const unavailable = getCloudbedsUnavailableMessage(config);
+        const unavailable = getCloudbedsUnavailableMessage(config, locale);
         return {
           checkIn,
           checkOut,
@@ -253,17 +327,18 @@ export function createGetRatesTool(config: AgentConfig) {
           }
         }
 
+        const intlLocale = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "pt-BR";
         const preview = Array.from(byCategory.values())
           .sort((a, b) => a.amount - b.amount)
           .slice(0, 3)
           .map((row) => {
             const code = (row.currency || "BRL").toUpperCase();
-            const formatted = new Intl.NumberFormat("pt-BR", {
+            const formatted = new Intl.NumberFormat(intlLocale, {
               style: "currency",
               currency: code,
               maximumFractionDigits: 0,
             }).format(row.amount);
-            return `${row.category} (a partir de ${formatted})`;
+            return getPreviewLabel(row.category, formatted, locale);
           });
 
         const deepLinkUrl = buildBookingDeepLink(
@@ -272,6 +347,7 @@ export function createGetRatesTool(config: AgentConfig) {
           checkOut,
           adults,
           children,
+          "chat_rates",
         );
 
         return {
@@ -282,15 +358,17 @@ export function createGetRatesTool(config: AgentConfig) {
           roomType: roomType || null,
           currency,
           shouldHandoff: !hasResults,
-          answer: buildRatesAnswer(
+          answer: buildRatesAnswer({
             hasResults,
             checkIn,
             checkOut,
             adults,
-            deepLinkUrl,
+            bookingUrl: deepLinkUrl,
             disclaimer,
             preview,
-          ),
+            locale,
+            profile,
+          }),
           disclaimer,
           bookingEngineUrl: deepLinkUrl,
           rates: normalized.slice(0, 6),
@@ -319,7 +397,7 @@ export function createGetRatesTool(config: AgentConfig) {
           roomType: roomType || null,
           currency,
           shouldHandoff: true,
-          answer: `${config.fallback.apiUnavailable.pt} ${disclaimer}`,
+          answer: `${config.fallback.apiUnavailable[locale] ?? config.fallback.apiUnavailable.pt} ${disclaimer}`,
           disclaimer,
           bookingEngineUrl: config.bookingEngineUrl,
           rates: [],

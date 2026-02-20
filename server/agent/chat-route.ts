@@ -32,6 +32,33 @@ import {
   type VisitorProfile,
 } from "./conversation-profile";
 
+// ── Profile follow-up quick replies (sent after availability when profile unknown) ──
+const profilePrompts: Record<string, string> = {
+  pt: "Para personalizar melhor, me conta: qual o perfil da sua viagem?",
+  en: "To personalize your stay, what's the focus of your trip?",
+  es: "Para personalizar su estancia, ¿cuál es el enfoque de su viaje?",
+};
+const profileOptions: Record<string, Array<{ label: string; value: string }>> = {
+  pt: [
+    { label: "Pesca esportiva", value: "pescador" },
+    { label: "Observação de aves", value: "birdwatcher" },
+    { label: "Viagem em família", value: "familia" },
+    { label: "Casal / lua de mel", value: "casal" },
+  ],
+  en: [
+    { label: "Sport fishing", value: "pescador" },
+    { label: "Birdwatching", value: "birdwatcher" },
+    { label: "Family trip", value: "familia" },
+    { label: "Couple / honeymoon", value: "casal" },
+  ],
+  es: [
+    { label: "Pesca deportiva", value: "pescador" },
+    { label: "Avistamiento de aves", value: "birdwatcher" },
+    { label: "Viaje en familia", value: "familia" },
+    { label: "Pareja / luna de miel", value: "casal" },
+  ],
+};
+
 function detectLocale(message: string): "pt" | "en" | "es" {
   const normalized = message.toLowerCase();
   if (/\b(hola|quiero|disponibilidad|reserva|precio)\b/.test(normalized)) {
@@ -397,7 +424,11 @@ export async function handleChatRequest(req: Request, res: Response) {
     const event: ChatSseEvent = {
       event: "error",
       code: "rate_limited",
-      message: "Limite de mensagens atingido. Tente novamente em instantes.",
+      message: locale === "en"
+        ? "Message limit reached. Please try again in a moment."
+        : locale === "es"
+          ? "Límite de mensajes alcanzado. Intente de nuevo en un momento."
+          : "Limite de mensagens atingido. Tente novamente em instantes.",
       retryable: true,
     };
 
@@ -453,10 +484,22 @@ export async function handleChatRequest(req: Request, res: Response) {
     // Also escalate grupo profile immediately (group pricing always needs human review).
     // Never let LLM handle these — no discounts, no promises, no negotiation.
     if (intent === "negotiation" || profile === "grupo") {
-      const escalateMsg =
-        profile === "grupo"
-          ? "Que ótimo! Para reservas em grupo, nossa equipe pode preparar uma proposta personalizada. Posso encaminhar sua mensagem com os detalhes?"
-          : "Entendo! Para condições especiais, nossa equipe pode avaliar diretamente. Posso encaminhar sua mensagem?";
+      const escalateMsgs: Record<string, { grupo: string; negotiation: string }> = {
+        en: {
+          grupo: "Great! For group bookings, our team can prepare a custom proposal. Shall I forward your message with the details?",
+          negotiation: "I understand! For special conditions, our team can evaluate directly. Shall I forward your message?",
+        },
+        es: {
+          grupo: "¡Genial! Para reservas de grupo, nuestro equipo puede preparar una propuesta personalizada. ¿Le paso su mensaje con los detalles?",
+          negotiation: "¡Entendido! Para condiciones especiales, nuestro equipo puede evaluar directamente. ¿Le paso su mensaje?",
+        },
+        pt: {
+          grupo: "Que ótimo! Para reservas em grupo, nossa equipe pode preparar uma proposta personalizada. Posso encaminhar sua mensagem com os detalhes?",
+          negotiation: "Entendo! Para condições especiais, nossa equipe pode avaliar diretamente. Posso encaminhar sua mensagem?",
+        },
+      };
+      const msgs = escalateMsgs[locale] ?? escalateMsgs.pt!;
+      const escalateMsg = profile === "grupo" ? msgs.grupo : msgs.negotiation;
 
       await streamText(res, escalateMsg, firstTokenDelayMs);
 
@@ -501,10 +544,12 @@ export async function handleChatRequest(req: Request, res: Response) {
       const children = slotChildren;
 
       if (!dateRange) {
-        const ask =
-          intent === "availability"
-            ? "Qual seria a data de chegada? Pode enviar como preferir — 15/03, essa sexta, fim de semana..."
-            : "Qual seria a data de chegada? Pode enviar como quiser — 15/03, essa sexta, fim de semana...";
+        const dateMissingAsk: Record<string, string> = {
+          en: "What's your check-in date? You can type it however you like — 03/15, this Friday, next weekend...",
+          es: "¿Cuál sería la fecha de llegada? Puede escribirla como prefiera — 15/03, este viernes, fin de semana...",
+          pt: "Qual seria a data de chegada? Pode enviar como preferir — 15/03, essa sexta, fim de semana...",
+        };
+        const ask = dateMissingAsk[locale] ?? dateMissingAsk.pt!;
 
         await streamText(res, ask, firstTokenDelayMs);
         sseWrite(res, {
@@ -560,6 +605,7 @@ export async function handleChatRequest(req: Request, res: Response) {
             adults,
             children,
             lang: locale,
+            profile,
           },
           {},
         );
@@ -572,6 +618,7 @@ export async function handleChatRequest(req: Request, res: Response) {
             children,
             currency: "BRL",
             lang: locale,
+            profile,
           },
           {},
         );
@@ -628,6 +675,15 @@ export async function handleChatRequest(req: Request, res: Response) {
         grounding_level: toolGrounding,
         source_refs: refs,
       });
+
+      // After successful availability check, ask for trip profile to personalize
+      if (intent === "availability" && !fallbackUsed && profile === "unknown") {
+        sseWrite(res, {
+          event: "quick_replies",
+          prompt: profilePrompts[locale] ?? profilePrompts.pt!,
+          options: profileOptions[locale] ?? profileOptions.pt!,
+        });
+      }
 
       await writeAgentLog({
         sessionId,

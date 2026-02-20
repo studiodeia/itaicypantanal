@@ -1,6 +1,8 @@
 import { useCallback, Fragment } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeUp, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
+import { t } from "@/i18n/ui-strings";
 import type { CmsPrivacySection } from "@shared/cms-page-content";
 
 type Props = { content: CmsPrivacySection[] };
@@ -53,6 +55,7 @@ function renderContentBlock(items: string[]) {
 }
 
 export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   const scrollToSection = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -80,7 +83,7 @@ export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
               className="font-heading-sm font-[number:var(--heading-sm-font-weight)] text-[length:var(--heading-sm-font-size)] leading-[var(--heading-sm-line-height)] text-pantanal-darkText-primary tracking-[var(--heading-sm-letter-spacing)] [font-style:var(--heading-sm-font-style)]"
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             >
-              Sessões
+              {t("privacy", "sections", lang)}
             </h2>
 
             <div className="w-full h-px bg-pantanal-border-muted" />
@@ -102,7 +105,7 @@ export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
             onClick={scrollToTop}
             className="bg-[#f5e8db] rounded-lg p-5 w-full font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] leading-[var(--functional-md-line-height)] text-pantanal-darkText-primary tracking-[var(--functional-md-letter-spacing)] [font-style:var(--functional-md-font-style)] text-center transition-colors duration-200 hover:text-pantanal-gold cursor-pointer"
           >
-            Voltar ao topo
+            {t("common", "backToTop", lang)}
           </button>
         </motion.aside>
 
@@ -117,16 +120,10 @@ export const PrivacyContentSection = ({ content }: Props): JSX.Element => {
             viewport={viewport}
           >
             <p className="mb-6">
-              A sua privacidade é uma prioridade para a Itaici Ecoturismo
-              ("Nós", "Nosso"). Esta Política de Privacidade explica como
-              coletamos, usamos, armazenamos e protegemos as informações
-              pessoais de nossos visitantes e clientes ("Você") ao usar nosso
-              site.
+              {t("privacy", "introP1", lang)}
             </p>
             <p>
-              Estamos comprometidos com a transparência e a proteção dos seus
-              dados, em conformidade com a Lei Geral de Proteção de Dados
-              (LGPD).
+              {t("privacy", "introP2", lang)}
             </p>
           </motion.div>
 

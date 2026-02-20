@@ -2,6 +2,9 @@ import { tool } from "ai";
 import { z } from "zod";
 import type { AgentConfig } from "../../shared/agent-config";
 import { cloudbedsClient, formatCloudbedsError } from "./cloudbeds";
+import { formatDate, formatDateRange } from "./format-date-locale";
+import { buildBookingDeepLink } from "./booking-link";
+import type { VisitorProfile } from "./conversation-profile";
 
 type AnyRecord = Record<string, unknown>;
 
@@ -137,76 +140,132 @@ function normalizeAvailabilityRows(rows: AnyRecord[]) {
     .filter((row) => row.available > 0);
 }
 
-const PT_MONTHS = [
-  "janeiro", "fevereiro", "março", "abril", "maio", "junho",
-  "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
-];
+// formatDate, formatDateRange → imported from ./format-date-locale
+// buildBookingDeepLink → imported from ./booking-link
 
-function formatDatePT(iso: string): string {
-  const parts = iso.split("-");
-  if (parts.length !== 3) return iso;
-  const year = Number.parseInt(parts[0]!, 10);
-  const month = Number.parseInt(parts[1]!, 10) - 1;
-  const day = Number.parseInt(parts[2]!, 10);
-  if (!Number.isFinite(year) || month < 0 || month > 11 || !Number.isFinite(day)) return iso;
-  return `${day} de ${PT_MONTHS[month]} de ${year}`;
+type AgentLocale = "pt" | "en" | "es";
+
+/** Profile-specific highlight injected into availability response. */
+function getProfileHighlight(profile: VisitorProfile, locale: AgentLocale): string {
+  const highlights: Record<string, Record<AgentLocale, string>> = {
+    pescador: {
+      pt: "A pesca está inclusa no pacote — Cota Zero, com guia e lancha dedicados.",
+      en: "Fishing is included in the package — Cota Zero, with a dedicated guide and boat.",
+      es: "La pesca está incluida en el paquete — Cota Zero, con guía y lancha dedicados.",
+    },
+    birdwatcher: {
+      pt: "Já catalogamos 166 espécies de aves na propriedade — binóculos e guia disponíveis.",
+      en: "We've cataloged 166 bird species on the property — binoculars and guide available.",
+      es: "Hemos catalogado 166 especies de aves en la propiedad — binoculares y guía disponibles.",
+    },
+    familia: {
+      pt: "Temos suítes para famílias, com atividades seguras para todas as idades.",
+      en: "We have family suites with safe activities for all ages.",
+      es: "Tenemos suites familiares con actividades seguras para todas las edades.",
+    },
+    casal: {
+      pt: "Nossos chalés oferecem privacidade total, com varandas voltadas para o rio.",
+      en: "Our chalets offer total privacy, with balconies overlooking the river.",
+      es: "Nuestros chalés ofrecen total privacidad, con balcones con vista al río.",
+    },
+  };
+  return highlights[profile]?.[locale] ?? "";
 }
 
-/**
- * Builds a Cloudbeds booking engine deep link with dates, occupancy and UTMs pre-filled.
- * Guests land on a pre-populated booking engine — no manual entry required.
- */
-function buildBookingDeepLink(
-  baseUrl: string,
-  checkIn: string,
-  checkOut: string,
-  adults: number,
-  children: number,
-): string {
-  const separator = baseUrl.includes("?") ? "&" : "?";
-  const pairs: string[] = [
-    "currency=brl",
-    "utm_source=site_itaicy",
-    "utm_medium=chat",
-    "utm_campaign=booking_engine",
-    "utm_content=chat_availability",
-    `checkin=${checkIn}`,
-    `checkout=${checkOut}`,
-    `adults=${adults}`,
-  ];
-  if (children > 0) {
-    pairs.push(`kids=${children}`);
+/** All-inclusive description per locale. */
+function getAllInclusiveDesc(locale: AgentLocale): string {
+  if (locale === "en") {
+    return "Our all-inclusive package covers accommodation, breakfast, lunch, dinner and beverages (water, juices, soft drinks, beer, caipirinha).";
   }
-  return `${baseUrl}${separator}${pairs.join("&")}`;
+  if (locale === "es") {
+    return "Nuestro paquete all inclusive incluye alojamiento, desayuno, almuerzo, cena y bebidas (agua, jugos, refrescos, cerveza, caipirinha).";
+  }
+  return "Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas (água, sucos, refrigerantes, cerveja, caipirinha).";
 }
 
-function buildAvailabilityAnswer(
-  hasResults: boolean,
-  checkIn: string,
-  checkOut: string,
-  bookingUrl: string,
-  disclaimer: string,
-  preview: string[],
-): string {
-  const checkInPT = formatDatePT(checkIn);
-  const checkOutPT = formatDatePT(checkOut);
+/** No-availability message per locale. */
+function getNoAvailabilityMsg(locale: AgentLocale, dateRange: string): string {
+  if (locale === "en") {
+    return `I didn't find confirmed availability ${dateRange}.`;
+  }
+  if (locale === "es") {
+    return `No encontré disponibilidad confirmada ${dateRange}.`;
+  }
+  return `Não encontrei disponibilidade confirmada ${dateRange}.`;
+}
+
+/** No-availability alternatives prompt per locale. */
+function getNoAvailAlternatives(locale: AgentLocale): string {
+  if (locale === "en") {
+    return "I can check:\n• Nearby dates (1 to 3 days before or after)?\n• A different accommodation category?";
+  }
+  if (locale === "es") {
+    return "Puedo verificar:\n• Fechas cercanas (1 a 3 días antes o después)?\n• ¿Otra categoría de alojamiento?";
+  }
+  return "Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?";
+}
+
+/** Great news confirmation per locale. */
+function getGreatNewsMsg(locale: AgentLocale, dateRange: string): string {
+  if (locale === "en") {
+    return `Great news — there's availability ${dateRange}!`;
+  }
+  if (locale === "es") {
+    return `¡Excelente noticia — hay disponibilidad ${dateRange}!`;
+  }
+  return `Ótima notícia — há disponibilidade ${dateRange}!`;
+}
+
+/** CTA text per locale. */
+function getBookingCta(locale: AgentLocale, bookingUrl: string): string {
+  if (locale === "en") {
+    return `Book with your dates pre-filled:\n${bookingUrl}`;
+  }
+  if (locale === "es") {
+    return `Reserve con sus fechas ya completadas:\n${bookingUrl}`;
+  }
+  return `Garanta sua vaga com as datas já preenchidas:\n${bookingUrl}`;
+}
+
+type BuildAvailabilityOpts = {
+  hasResults: boolean;
+  checkIn: string;
+  checkOut: string;
+  bookingUrl: string;
+  disclaimer: string;
+  preview: string[];
+  locale: AgentLocale;
+  profile: VisitorProfile;
+};
+
+function buildAvailabilityAnswer(opts: BuildAvailabilityOpts): string {
+  const { hasResults, checkIn, checkOut, bookingUrl, disclaimer, preview, locale, profile } = opts;
+  const dateRange = formatDateRange(checkIn, checkOut, locale);
 
   if (!hasResults) {
     return [
-      `Não encontrei disponibilidade confirmada de ${checkInPT} a ${checkOutPT}.`,
-      "Posso verificar:\n• Datas próximas (1 a 3 dias antes ou depois)?\n• Outra categoria de acomodação?",
+      getNoAvailabilityMsg(locale, dateRange),
+      getNoAvailAlternatives(locale),
       disclaimer,
     ].join("\n\n");
   }
 
   const roomList = preview.map((p) => `• ${p}`).join("\n");
+  const profileLine = getProfileHighlight(profile, locale);
 
-  return [
-    `Ótima notícia — há disponibilidade de ${checkInPT} a ${checkOutPT}!`,
+  const blocks = [
+    getGreatNewsMsg(locale, dateRange),
     roomList,
-    `Nosso pacote all inclusive inclui hospedagem, café da manhã, almoço, jantar e bebidas (água, sucos, refrigerantes, cerveja, caipirinha). Garanta sua vaga com as datas já preenchidas:\n${bookingUrl}`,
-    disclaimer,
-  ].join("\n\n");
+  ];
+
+  if (profileLine) {
+    blocks.push(profileLine);
+  }
+
+  blocks.push(`${getAllInclusiveDesc(locale)} ${getBookingCta(locale, bookingUrl)}`);
+  blocks.push(disclaimer);
+
+  return blocks.join("\n\n");
 }
 
 /**
@@ -290,8 +349,14 @@ async function findNearbyAvailability(
   return null;
 }
 
-function getCloudbedsUnavailableMessage(config: AgentConfig): string {
-  return `Voce pode verificar disponibilidade e finalizar sua reserva diretamente em: ${config.bookingEngineUrl} — ou nossa equipe confirma por WhatsApp.`;
+function getCloudbedsUnavailableMessage(config: AgentConfig, locale: AgentLocale): string {
+  if (locale === "en") {
+    return `You can check availability and complete your booking at: ${config.bookingEngineUrl} — or our team can confirm via WhatsApp.`;
+  }
+  if (locale === "es") {
+    return `Puede verificar disponibilidad y completar su reserva en: ${config.bookingEngineUrl} — o nuestro equipo puede confirmar por WhatsApp.`;
+  }
+  return `Você pode verificar disponibilidade e finalizar sua reserva diretamente em: ${config.bookingEngineUrl} — ou nossa equipe confirma por WhatsApp.`;
 }
 
 export function createCheckAvailabilityTool(config: AgentConfig) {
@@ -306,20 +371,21 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
         children: z.number().int().min(0).max(10).default(0),
         roomType: z.string().min(1).max(120).optional(),
         lang: z.enum(["pt", "en", "es"]).default("pt"),
+        profile: z.enum(["pescador", "birdwatcher", "familia", "casal", "grupo", "unknown"]).default("unknown"),
       })
       .refine((value) => value.checkOut > value.checkIn, {
         message: "checkOut must be after checkIn",
       }),
-    execute: async ({ checkIn, checkOut, adults, children, roomType }) => {
+    execute: async ({ checkIn, checkOut, adults, children, roomType, lang: locale, profile }) => {
       const availabilityPath =
         process.env.CLOUDBEDS_AVAILABILITY_PATH || "/getAvailableRoomTypes";
 
-      const disclaimer = config.disclaimers.availability.pt;
+      const disclaimer = config.disclaimers.availability[locale] ?? config.disclaimers.availability.pt;
       const propertyIds = process.env.CLOUDBEDS_PROPERTY_IDS?.trim() || "";
       const rooms = Number.parseInt(process.env.CLOUDBEDS_DEFAULT_ROOMS || "1", 10);
 
       if (!cloudbedsClient.isEnabled()) {
-        const unavailable = getCloudbedsUnavailableMessage(config);
+        const unavailable = getCloudbedsUnavailableMessage(config, locale);
         return {
           checkIn,
           checkOut,
@@ -372,30 +438,51 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
             );
 
             if (nearby) {
-              const ciPT = formatDatePT(nearby.checkIn);
-              const coPT = formatDatePT(nearby.checkOut);
+              const origRange = formatDateRange(checkIn, checkOut, locale);
+              const nearbyRange = formatDateRange(nearby.checkIn, nearby.checkOut, locale);
               const roomList = nearby.categories.map((c) => `• ${c}`).join("\n");
               nearbyDeepLink = buildBookingDeepLink(
                 config.bookingEngineUrl, nearby.checkIn, nearby.checkOut, adults, children,
+                "chat_availability",
               );
-              nearbyAnswer = [
-                `Não encontrei disponibilidade de ${formatDatePT(checkIn)} a ${formatDatePT(checkOut)}.`,
-                `Mas há vagas de ${ciPT} a ${coPT}:\n${roomList}`,
-                `Garanta sua vaga:\n${nearbyDeepLink}`,
-                disclaimer,
-              ].join("\n\n");
+
+              const nearbyMessages: Record<AgentLocale, string[]> = {
+                pt: [
+                  `Não encontrei disponibilidade ${origRange}.`,
+                  `Mas há vagas ${nearbyRange}:\n${roomList}`,
+                  `${getBookingCta(locale, nearbyDeepLink)}`,
+                  disclaimer,
+                ],
+                en: [
+                  `I didn't find availability ${origRange}.`,
+                  `But there are openings ${nearbyRange}:\n${roomList}`,
+                  `${getBookingCta(locale, nearbyDeepLink)}`,
+                  disclaimer,
+                ],
+                es: [
+                  `No encontré disponibilidad ${origRange}.`,
+                  `Pero hay plazas ${nearbyRange}:\n${roomList}`,
+                  `${getBookingCta(locale, nearbyDeepLink)}`,
+                  disclaimer,
+                ],
+              };
+
+              nearbyAnswer = (nearbyMessages[locale] ?? nearbyMessages.pt).join("\n\n");
               nearbyConfidence = 0.85;
               nearbyGrounding = "full";
             } else {
-              nearbyAnswer = buildAvailabilityAnswer(
-                false, checkIn, checkOut, config.bookingEngineUrl, disclaimer, [],
-              );
+              nearbyAnswer = buildAvailabilityAnswer({
+                hasResults: false, checkIn, checkOut,
+                bookingUrl: config.bookingEngineUrl, disclaimer, preview: [],
+                locale, profile,
+              });
             }
           } catch {
-            // If nearby search fails, fall back to standard no-availability message
-            nearbyAnswer = buildAvailabilityAnswer(
-              false, checkIn, checkOut, config.bookingEngineUrl, disclaimer, [],
-            );
+            nearbyAnswer = buildAvailabilityAnswer({
+              hasResults: false, checkIn, checkOut,
+              bookingUrl: config.bookingEngineUrl, disclaimer, preview: [],
+              locale, profile,
+            });
           }
 
           return {
@@ -444,6 +531,7 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
           checkOut,
           adults,
           children,
+          "chat_availability",
         );
 
         return {
@@ -453,14 +541,16 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
           children,
           roomType: roomType || null,
           shouldHandoff: false,
-          answer: buildAvailabilityAnswer(
-            true,
+          answer: buildAvailabilityAnswer({
+            hasResults: true,
             checkIn,
             checkOut,
-            deepLinkUrl,
+            bookingUrl: deepLinkUrl,
             disclaimer,
             preview,
-          ),
+            locale,
+            profile,
+          }),
           disclaimer,
           bookingEngineUrl: deepLinkUrl,
           availability: normalized.slice(0, 6),
@@ -486,7 +576,7 @@ export function createCheckAvailabilityTool(config: AgentConfig) {
           children,
           roomType: roomType || null,
           shouldHandoff: true,
-          answer: `${config.fallback.apiUnavailable.pt} ${disclaimer}`,
+          answer: `${config.fallback.apiUnavailable[locale] ?? config.fallback.apiUnavailable.pt} ${disclaimer}`,
           disclaimer,
           bookingEngineUrl: config.bookingEngineUrl,
           availability: [],
