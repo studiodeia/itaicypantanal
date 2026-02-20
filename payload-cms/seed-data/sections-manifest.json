@@ -1,0 +1,858 @@
+{
+  "summary": {
+    "totalSections": 82,
+    "sharedSections": 14,
+    "pageSpecificSections": 68,
+    "withDataArrays": 29,
+    "withImageRefs": 39
+  },
+  "sections": [
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\AccommodationsHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "AccommodationsHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 31
+    },
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\AccommodationsHighlightsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "AccommodationsHighlightsSection"
+      ],
+      "dataArrays": [
+        "highlights"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 29
+    },
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\ApartmentSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ApartmentSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\CulinarySection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinarySection"
+      ],
+      "dataArrays": [
+        "culinaryImages"
+      ],
+      "imageRefs": 4,
+      "stringLiterals": 40
+    },
+    {
+      "file": "client\\src\\pages\\acomodacoes\\sections\\ManifestoStatementSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ManifestoStatementSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\AllBirdsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "AllBirdsSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 44
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BirdHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdHighlightsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BirdHighlightsSection"
+      ],
+      "dataArrays": [
+        "highlights"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 24
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdManifestoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BirdManifestoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 10
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdServicesSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 7
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdServicesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BirdServicesSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 63
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\BirdSobreNosSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BirdSobreNosSection"
+      ],
+      "dataArrays": [
+        "pillars"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 33
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\CatalogHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CatalogHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\FeaturedBirdsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "FeaturedBirdsSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 42
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\SimilarSpeciesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "SimilarSpeciesSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 20
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\SpeciesContentSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "SpeciesContentSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 75
+    },
+    {
+      "file": "client\\src\\pages\\birdwatching\\sections\\SpeciesHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "SpeciesHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 32
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\ArticleContentSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 38
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\ArticleContentSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ArticleContentSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 40
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\ArticleHeroSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 3,
+      "stringLiterals": 31
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\ArticleHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ArticleHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 24
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\BlogCategoriesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BlogCategoriesSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 36
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\BlogHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BlogHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 32
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\BlogRecentSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BlogRecentSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 21
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\RelatedArticlesSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 3,
+      "stringLiterals": 45
+    },
+    {
+      "file": "client\\src\\pages\\blog\\sections\\RelatedArticlesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "RelatedArticlesSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 20
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactChannelsSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 17
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactChannelsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ContactChannelsSection"
+      ],
+      "dataArrays": [
+        "channels"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 34
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactFormSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactFormSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ContactFormSection"
+      ],
+      "dataArrays": [
+        "interestOptions"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 51
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactHeroSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 18
+    },
+    {
+      "file": "client\\src\\pages\\contato\\sections\\ContactHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ContactHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 63
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\AccommodationsCrossSellSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "AccommodationsCrossSellSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 27
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryExperienceSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryExperienceSection"
+      ],
+      "dataArrays": [
+        "experienceImages"
+      ],
+      "imageRefs": 5,
+      "stringLiterals": 31
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 30
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryHighlightsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryHighlightsSection"
+      ],
+      "dataArrays": [
+        "highlights"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 24
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryManifestoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryManifestoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryMenuSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryMenuSection"
+      ],
+      "dataArrays": [
+        "menuTabs",
+        "menuImages"
+      ],
+      "imageRefs": 8,
+      "stringLiterals": 54
+    },
+    {
+      "file": "client\\src\\pages\\culinaria\\sections\\CulinaryServicesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "CulinaryServicesSection"
+      ],
+      "dataArrays": [
+        "services"
+      ],
+      "imageRefs": 3,
+      "stringLiterals": 34
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "EcoHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoHighlightsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "EcoHighlightsSection"
+      ],
+      "dataArrays": [
+        "highlights"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 24
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoManifestoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "EcoManifestoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 10
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoServicesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "EcoServicesSection"
+      ],
+      "dataArrays": [
+        "activities"
+      ],
+      "imageRefs": 4,
+      "stringLiterals": 74
+    },
+    {
+      "file": "client\\src\\pages\\ecoturismo\\sections\\EcoSobreNosSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "EcoSobreNosSection"
+      ],
+      "dataArrays": [
+        "pillars"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 33
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\BiodiversidadeSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 19
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\BiodiversidadeSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "BiodiversidadeSection"
+      ],
+      "dataArrays": [
+        "stats"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ComunidadeSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ComunidadeSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ComunidadeSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 22
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactEngagementSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 8
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactEngagementSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ImpactEngagementSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 10
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactHeroSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ImpactHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 23
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactManifestoSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 9
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\ImpactManifestoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "ImpactManifestoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\OperacaoConscienteSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 16
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\OperacaoConscienteSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "OperacaoConscienteSection"
+      ],
+      "dataArrays": [
+        "practices"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 26
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\RioVivoSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 14
+    },
+    {
+      "file": "client\\src\\pages\\nosso-impacto\\sections\\RioVivoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "RioVivoSection"
+      ],
+      "dataArrays": [
+        "cycleSteps"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 33
+    },
+    {
+      "file": "client\\src\\pages\\not-found\\sections\\NotFoundHeroSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 17
+    },
+    {
+      "file": "client\\src\\pages\\not-found\\sections\\NotFoundHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "NotFoundHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 29
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PescaHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 30
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaHighlightsSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PescaHighlightsSection"
+      ],
+      "dataArrays": [
+        "highlights"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 25
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaManifestoSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PescaManifestoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 11
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaServicesSection.test.tsx",
+      "area": "page-specific",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 7
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaServicesSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PescaServicesSection"
+      ],
+      "dataArrays": [
+        "fishSpecies"
+      ],
+      "imageRefs": 5,
+      "stringLiterals": 87
+    },
+    {
+      "file": "client\\src\\pages\\pesca\\sections\\PescaSobreNosSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PescaSobreNosSection"
+      ],
+      "dataArrays": [
+        "pillars"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 33
+    },
+    {
+      "file": "client\\src\\pages\\privacidade\\sections\\PrivacyContentSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PrivacyContentSection"
+      ],
+      "dataArrays": [
+        "sections"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 101
+    },
+    {
+      "file": "client\\src\\pages\\privacidade\\sections\\PrivacyHeroSection.tsx",
+      "area": "page-specific",
+      "exports": [
+        "PrivacyHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 14
+    },
+    {
+      "file": "client\\src\\pages\\sections\\AccommodationInfoSection.tsx",
+      "area": "shared",
+      "exports": [
+        "AccommodationInfoSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 20
+    },
+    {
+      "file": "client\\src\\pages\\sections\\AuthenticRestSection.tsx",
+      "area": "shared",
+      "exports": [
+        "AuthenticRestSection"
+      ],
+      "dataArrays": [
+        "features"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 34
+    },
+    {
+      "file": "client\\src\\pages\\sections\\ExclusiveExpeditionsSection.tsx",
+      "area": "shared",
+      "exports": [
+        "ExclusiveExpeditionsSection"
+      ],
+      "dataArrays": [
+        "expeditions"
+      ],
+      "imageRefs": 3,
+      "stringLiterals": 44
+    },
+    {
+      "file": "client\\src\\pages\\sections\\FrequentlyAskedQuestionsSection.tsx",
+      "area": "shared",
+      "exports": [
+        "FrequentlyAskedQuestionsSection"
+      ],
+      "dataArrays": [
+        "faqData"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 36
+    },
+    {
+      "file": "client\\src\\pages\\sections\\ImmersionCallToActionSection.tsx",
+      "area": "shared",
+      "exports": [
+        "ImmersionCallToActionSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 1,
+      "stringLiterals": 16
+    },
+    {
+      "file": "client\\src\\pages\\sections\\ImmersionTestimonialsSection.tsx",
+      "area": "shared",
+      "exports": [
+        "ImmersionTestimonialsSection"
+      ],
+      "dataArrays": [
+        "testimonials"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 44
+    },
+    {
+      "file": "client\\src\\pages\\sections\\NaturalRefugeDescriptionSection.tsx",
+      "area": "shared",
+      "exports": [
+        "NaturalRefugeDescriptionSection"
+      ],
+      "dataArrays": [
+        "impactItems"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 32
+    },
+    {
+      "file": "client\\src\\pages\\sections\\PantanalBlogSection.tsx",
+      "area": "shared",
+      "exports": [
+        "PantanalBlogSection"
+      ],
+      "dataArrays": [
+        "blogPosts"
+      ],
+      "imageRefs": 6,
+      "stringLiterals": 60
+    },
+    {
+      "file": "client\\src\\pages\\sections\\PantanalExperienceIntroSection.tsx",
+      "area": "shared",
+      "exports": [
+        "PantanalExperienceIntroSection"
+      ],
+      "dataArrays": [
+        "headingSegments"
+      ],
+      "imageRefs": 0,
+      "stringLiterals": 30
+    },
+    {
+      "file": "client\\src\\pages\\sections\\PantanalHeroSection.tsx",
+      "area": "shared",
+      "exports": [
+        "PantanalHeroSection"
+      ],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 34
+    },
+    {
+      "file": "client\\src\\pages\\sections\\PantanalStatsSection.tsx",
+      "area": "shared",
+      "exports": [
+        "PantanalStatsSection"
+      ],
+      "dataArrays": [
+        "stats"
+      ],
+      "imageRefs": 1,
+      "stringLiterals": 20
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.test.tsx",
+      "area": "shared",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 12
+    },
+    {
+      "file": "client\\src\\pages\\sections\\SiteFooterSection.tsx",
+      "area": "shared",
+      "exports": [
+        "SiteFooterSection"
+      ],
+      "dataArrays": [
+        "mobileNavLinks",
+        "pousadaLinks",
+        "experienciasLinks",
+        "contactInfo",
+        "legalLinks"
+      ],
+      "imageRefs": 5,
+      "stringLiterals": 88
+    },
+    {
+      "file": "client\\src\\pages\\sections\\__tests__\\ExclusiveExpeditionsSection.test.tsx",
+      "area": "shared",
+      "exports": [],
+      "dataArrays": [],
+      "imageRefs": 0,
+      "stringLiterals": 16
+    }
+  ]
+}

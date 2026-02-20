@@ -86,6 +86,7 @@ function slugify(input: string): string {
 
 async function resolveSeedPath(): Promise<string> {
   const candidates = [
+    resolve(process.cwd(), "seed-data", "full-seed.json"),
     resolve(process.cwd(), "..", "docs", "payload-seed", "full-seed.json"),
     resolve(process.cwd(), "docs", "payload-seed", "full-seed.json"),
   ];
@@ -403,6 +404,7 @@ async function importPageGlobals(
   payload: Awaited<ReturnType<typeof getPayload>>,
 ) {
   const candidates = [
+    resolve(process.cwd(), "seed-data", "page-content.json"),
     resolve(process.cwd(), "..", "docs", "payload-seed", "page-content.json"),
     resolve(process.cwd(), "docs", "payload-seed", "page-content.json"),
   ];
