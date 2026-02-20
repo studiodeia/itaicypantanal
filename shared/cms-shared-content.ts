@@ -179,11 +179,11 @@ export const defaultSharedCmsSections: SharedCmsSections = {
       { label: "Ecoturismo Imersivo", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99999-9999" },
       { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Pantanal Sul-Mato-Grossense, Mato Grosso do Sul, Brasil",
+        text: "Santo Antônio do Leverger, Mato Grosso, Brasil",
       },
     ],
     legalLinks: [

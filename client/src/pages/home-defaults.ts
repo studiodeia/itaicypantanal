@@ -6,7 +6,7 @@ const pt: HomePageContent = {
     label: "SOBRE NÓS",
     heading: "Bem-vindo à Itaicy Pantanal Eco Lodge",
     body: [
-      "Em Miranda, no coração do Pantanal Sul-Mato-Grossense — Patrimônio Natural da UNESCO — a Itaicy é o destino para quem busca aventura, contemplação e verdadeiro descanso. Para quem precisa sair do ritmo das cidades e simplesmente estar.",
+      "Em Santo Antônio do Leverger, no coração do Pantanal Norte Matogrossense — Patrimônio Natural da UNESCO — a Itaicy é o destino para quem busca aventura, contemplação e verdadeiro descanso. Para quem precisa sair do ritmo das cidades e simplesmente estar.",
       "Somos pioneiros no pesque e solte no Pantanal desde 2010, antes mesmo de existir legislação específica. Nossa filosofia equilibra alta performance esportiva, observação de aves e o raro privilégio de parar — sem agenda forçada, só natureza.",
     ],
     image: "/images/home/about-us.webp",
@@ -19,7 +19,7 @@ const pt: HomePageContent = {
       {
         number: "02",
         title: "Excelência",
-        description: "Guias nativos especializados com conhecimento profundo do bioma, dos rios e das espécies do Pantanal Sul.",
+        description: "Guias nativos especializados com conhecimento profundo do bioma, dos rios e das espécies do Pantanal Norte.",
       },
       {
         number: "03",
@@ -118,7 +118,7 @@ const pt: HomePageContent = {
         id: "home-2",
         number: "02",
         question: "Onde fica a Itaicy Pantanal Eco Lodge?",
-        answer: "Estamos localizados em Miranda, Mato Grosso do Sul, no coração do Pantanal Sul-Mato-Grossense (Patrimônio Natural da Humanidade — UNESCO). Ficamos a 240 km de Campo Grande (3h de carro) e a 80 km de Bonito (1h30). O acesso é por estrada asfaltada até a entrada da propriedade.",
+        answer: "Estamos localizados em Santo Antônio do Leverger, Mato Grosso (MT), no coração do Pantanal Norte Matogrossense (Patrimônio Natural da Humanidade — UNESCO). Ficamos a 61 km do Aeroporto Internacional de Cuiabá (CGB), cerca de 1 hora de carro. O acesso é por estrada asfaltada até a entrada da propriedade.",
       },
       {
         id: "home-3",
@@ -142,7 +142,7 @@ const pt: HomePageContent = {
         id: "home-6",
         number: "06",
         question: "Como chegar ao Pantanal saindo de São Paulo?",
-        answer: "De São Paulo, a forma mais rápida é voar para Campo Grande (aeroporto CGR), com voos diretos de aproximadamente 2 horas pela Gol, LATAM ou Azul. De Campo Grande, o transfer terrestre até a Itaicy leva cerca de 3 horas pela BR-262, uma rodovia asfaltada que cruza a Serra de Maracaju. A pousada pode organizar transfer com motorista desde o aeroporto. Para quem prefere dirigir, são aproximadamente 1.050 km por rodovia (13 horas).",
+        answer: "De São Paulo, a forma mais rápida é voar para Cuiabá (Aeroporto Internacional Marechal Rondon — CGB), com voos diretos de aproximadamente 2 horas pela Gol, LATAM ou Azul. De Cuiabá, o transfer terrestre até a Itaicy leva cerca de 1 hora (61 km). A pousada pode organizar transfer com motorista desde o aeroporto. Para quem prefere dirigir, são aproximadamente 1.400 km por rodovia desde São Paulo.",
       },
       {
         id: "home-7",
@@ -172,7 +172,7 @@ const pt: HomePageContent = {
         id: "home-11",
         number: "11",
         question: "Qual a diferença entre Pantanal Norte e Pantanal Sul?",
-        answer: "O Pantanal Norte (Mato Grosso, Transpantaneira) é mais voltado para avistamento de onça-pintada. O Pantanal Sul (Mato Grosso do Sul, Miranda), onde fica a Itaicy, é referência em pesca esportiva e birdwatching, com 166 espécies catalogadas. O Sul é mais acessível (aeroporto internacional em Campo Grande a 3h) e permite combinar com Bonito (80 km). Cada região tem fauna e experiências distintas.",
+        answer: "O Pantanal Norte (Mato Grosso), onde fica a Itaicy em Santo Antônio do Leverger, é referência em pesca esportiva e birdwatching, com 166 espécies catalogadas, e é acessado pelo Aeroporto de Cuiabá (CGB, 1h de carro). O Pantanal Sul (Mato Grosso do Sul) é mais voltado para turismo de aventura em regiões como Miranda. O Pantanal Norte também oferece avistamento de onças na Transpantaneira, a apenas algumas horas da Itaicy. Cada região tem fauna e experiências distintas.",
       },
       {
         id: "home-12",
@@ -195,8 +195,8 @@ const pt: HomePageContent = {
       {
         id: "home-15",
         number: "15",
-        question: "Posso combinar Pantanal com Bonito na mesma viagem?",
-        answer: "Sim, é um dos roteiros mais procurados. Bonito fica a apenas 80 km da Itaicy (1h30 de carro) e oferece experiências complementares: flutuação em rios cristalinos, mergulho na Gruta do Lago Azul, trilhas e rapel. Um roteiro ideal combina 4-5 noites no Pantanal com 2-3 noites em Bonito. Nossa equipe pode organizar transfer e indicar parceiros de confiança em Bonito.",
+        question: "Posso combinar o Pantanal com outro destino na mesma viagem?",
+        answer: "Sim! A Chapada dos Guimarães fica a apenas 120 km da Itaicy (~1h30 de carro) e oferece experiências complementares: trilhas com cachoeiras, cânions, vistas panorâmicas e sítios arqueológicos. Cuiabá, a 61 km, tem boa oferta gastronômica e cultural para uma parada antes ou depois do lodge. Nossa equipe pode indicar roteiros e parceiros de confiança na região.",
       },
     ],
   },
@@ -207,7 +207,7 @@ const en: HomePageContent = {
     label: "ABOUT US",
     heading: "Welcome to Itaicy Pantanal Eco Lodge",
     body: [
-      "In Miranda, in the heart of the Southern Pantanal — a UNESCO World Natural Heritage site — Itaicy is the destination for those seeking adventure, contemplation and real rest. For those who need to step away from city life and simply be.",
+      "In Santo Antônio do Leverger, in the heart of the Northern Pantanal — a UNESCO World Natural Heritage site — Itaicy is the destination for those seeking adventure, contemplation and real rest. For those who need to step away from city life and simply be.",
       "We pioneered catch-and-release fishing in the Pantanal since 2010, before any legislation existed. Our philosophy balances high-performance sport fishing, birdwatching, and the rare privilege of simply stopping — no forced agenda, just nature.",
     ],
     image: "/images/home/about-us.webp",
@@ -220,7 +220,7 @@ const en: HomePageContent = {
       {
         number: "02",
         title: "Excellence",
-        description: "Specialized native guides with deep knowledge of the biome, rivers, and species of the Southern Pantanal.",
+        description: "Specialized native guides with deep knowledge of the biome, rivers, and species of the Northern Pantanal.",
       },
       {
         number: "03",
@@ -319,7 +319,7 @@ const en: HomePageContent = {
         id: "home-2",
         number: "02",
         question: "Where is Itaicy Pantanal Eco Lodge?",
-        answer: "We are located in Miranda, Mato Grosso do Sul, in the heart of the Southern Pantanal (UNESCO World Natural Heritage). We are 240 km from Campo Grande (3h by car) and 80 km from Bonito (1h30). Access is via a paved road to the property entrance.",
+        answer: "We are located in Santo Antônio do Leverger, Mato Grosso (MT), in the heart of the Northern Pantanal (UNESCO World Natural Heritage). We are 61 km from Cuiabá International Airport (CGB), approximately 1 hour by car. Access is via a paved road to the property entrance.",
       },
       {
         id: "home-3",
@@ -343,7 +343,7 @@ const en: HomePageContent = {
         id: "home-6",
         number: "06",
         question: "How do I get to the Pantanal from São Paulo?",
-        answer: "From São Paulo, the fastest way is to fly to Campo Grande (CGR airport), with direct flights of approximately 2 hours by Gol, LATAM or Azul. From Campo Grande, the road transfer to Itaicy takes about 3 hours via the BR-262, a paved highway that crosses the Serra de Maracaju. The lodge can arrange a transfer with a driver from the airport. For those who prefer to drive, it is approximately 1,050 km by road (13 hours).",
+        answer: "From São Paulo, the fastest way is to fly to Cuiabá (Marechal Rondon International Airport — CGB), with direct flights of approximately 2 hours by Gol, LATAM or Azul. From Cuiabá, the road transfer to Itaicy takes about 1 hour (61 km). The lodge can arrange a transfer with a driver from the airport. For those who prefer to drive, it is approximately 1,400 km by road from São Paulo.",
       },
       {
         id: "home-7",
@@ -373,7 +373,7 @@ const en: HomePageContent = {
         id: "home-11",
         number: "11",
         question: "What is the difference between the Northern and Southern Pantanal?",
-        answer: "The Northern Pantanal (Mato Grosso, Transpantaneira) is more focused on jaguar sightings. The Southern Pantanal (Mato Grosso do Sul, Miranda), where Itaicy is located, is a reference for sport fishing and birdwatching, with 166 catalogued species. The South is more accessible (international airport in Campo Grande, 3h away) and can be combined with Bonito (80 km). Each region has distinct wildlife and experiences.",
+        answer: "The Northern Pantanal (Mato Grosso), where Itaicy is located in Santo Antônio do Leverger, is a reference for sport fishing and birdwatching, with 166 catalogued species, and is accessed via Cuiabá airport (CGB, 1h away). The Southern Pantanal (Mato Grosso do Sul) is better known for adventure tourism around Miranda. The Northern Pantanal also offers jaguar sightings along the Transpantaneira, just a few hours from Itaicy. Each region has distinct wildlife and experiences.",
       },
       {
         id: "home-12",
@@ -396,8 +396,8 @@ const en: HomePageContent = {
       {
         id: "home-15",
         number: "15",
-        question: "Can I combine the Pantanal with Bonito on the same trip?",
-        answer: "Yes, it is one of the most sought-after itineraries. Bonito is only 80 km from Itaicy (1h30 by car) and offers complementary experiences: snorkeling in crystal-clear rivers, diving in the Gruta do Lago Azul, trails and rappelling. An ideal itinerary combines 4-5 nights in the Pantanal with 2-3 nights in Bonito. Our team can arrange transfers and recommend trusted partners in Bonito.",
+        question: "Can I combine the Pantanal with another destination on the same trip?",
+        answer: "Absolutely! Chapada dos Guimarães is only 120 km from Itaicy (~1h30 by car) and offers complementary experiences: waterfall trails, canyons, panoramic viewpoints, and archaeological sites. Cuiabá, just 61 km away, has great dining and cultural options for a stop before or after the lodge. Our team can suggest itineraries and trusted partners in the region.",
       },
     ],
   },
@@ -408,7 +408,7 @@ const es: HomePageContent = {
     label: "SOBRE NOSOTROS",
     heading: "Bienvenido a Itaicy Pantanal Eco Lodge",
     body: [
-      "En Miranda, en el corazón del Pantanal Sur-Mato-Grossense — Patrimonio Natural de la UNESCO — Itaicy es el destino para quienes buscan aventura, contemplación y verdadero descanso. Para quienes necesitan salir del ritmo de la ciudad y simplemente estar.",
+      "En Santo Antônio do Leverger, en el corazón del Pantanal Norte Matogrossense — Patrimonio Natural de la UNESCO — Itaicy es el destino para quienes buscan aventura, contemplación y verdadero descanso. Para quienes necesitan salir del ritmo de la ciudad y simplemente estar.",
       "Somos pioneros en la pesca de captura y suelta en el Pantanal desde 2010, antes de que existiera ninguna legislación. Nuestra filosofía equilibra la pesca deportiva de alto rendimiento, el avistamiento de aves y el raro privilegio de detenerse — sin agenda forzada, solo naturaleza.",
     ],
     image: "/images/home/about-us.webp",
@@ -421,7 +421,7 @@ const es: HomePageContent = {
       {
         number: "02",
         title: "Excelencia",
-        description: "Guías nativos especializados con profundo conocimiento del bioma, los ríos y las especies del Pantanal Sur.",
+        description: "Guías nativos especializados con profundo conocimiento del bioma, los ríos y las especies del Pantanal Norte.",
       },
       {
         number: "03",
@@ -520,7 +520,7 @@ const es: HomePageContent = {
         id: "home-2",
         number: "02",
         question: "¿Dónde está Itaicy Pantanal Eco Lodge?",
-        answer: "Estamos ubicados en Miranda, Mato Grosso do Sul, en el corazón del Pantanal Sur-Matogrossense (Patrimonio Natural de la Humanidad — UNESCO). Estamos a 240 km de Campo Grande (3h en auto) y 80 km de Bonito (1h30). El acceso es por carretera asfaltada hasta la entrada de la propiedad.",
+        answer: "Estamos ubicados en Santo Antônio do Leverger, Mato Grosso (MT), en el corazón del Pantanal Norte Matogrossense (Patrimonio Natural de la Humanidad — UNESCO). Estamos a 61 km del Aeropuerto Internacional de Cuiabá (CGB), aproximadamente 1 hora en auto. El acceso es por carretera asfaltada hasta la entrada de la propiedad.",
       },
       {
         id: "home-3",
@@ -544,7 +544,7 @@ const es: HomePageContent = {
         id: "home-6",
         number: "06",
         question: "¿Cómo llego al Pantanal desde São Paulo?",
-        answer: "Desde São Paulo, la forma más rápida es volar a Campo Grande (aeropuerto CGR), con vuelos directos de aproximadamente 2 horas por Gol, LATAM o Azul. Desde Campo Grande, el transfer vial hasta Itaicy dura unas 3 horas por la BR-262, una carretera asfaltada que cruza la Serra de Maracaju. El lodge puede organizar un transfer con conductor desde el aeropuerto. Para quienes prefieren manejar, son aproximadamente 1.050 km por carretera (13 horas).",
+        answer: "Desde São Paulo, la forma más rápida es volar a Cuiabá (Aeropuerto Internacional Marechal Rondon — CGB), con vuelos directos de aproximadamente 2 horas por Gol, LATAM o Azul. Desde Cuiabá, el transfer vial hasta Itaicy dura cerca de 1 hora (61 km). El lodge puede organizar un transfer con conductor desde el aeropuerto. Para quienes prefieren manejar, son aproximadamente 1.400 km por carretera desde São Paulo.",
       },
       {
         id: "home-7",
@@ -574,7 +574,7 @@ const es: HomePageContent = {
         id: "home-11",
         number: "11",
         question: "¿Cuál es la diferencia entre el Pantanal Norte y el Pantanal Sur?",
-        answer: "El Pantanal Norte (Mato Grosso, Transpantaneira) está más orientado al avistamiento de jaguares. El Pantanal Sur (Mato Grosso do Sul, Miranda), donde está Itaicy, es referencia en pesca deportiva y aviturismo, con 166 especies catalogadas. El Sur es más accesible (aeropuerto internacional en Campo Grande a 3h) y permite combinarse con Bonito (80 km). Cada región tiene fauna y experiencias distintas.",
+        answer: "El Pantanal Norte (Mato Grosso), donde está Itaicy en Santo Antônio do Leverger, es referencia en pesca deportiva y aviturismo, con 166 especies catalogadas, y se accede por el aeropuerto de Cuiabá (CGB, 1h en auto). El Pantanal Sur (Mato Grosso do Sul) es más conocido por el turismo de aventura alrededor de Miranda. El Pantanal Norte también ofrece avistamiento de jaguares en la Transpantaneira, a pocas horas de Itaicy. Cada región tiene fauna y experiencias distintas.",
       },
       {
         id: "home-12",
@@ -597,8 +597,8 @@ const es: HomePageContent = {
       {
         id: "home-15",
         number: "15",
-        question: "¿Puedo combinar el Pantanal con Bonito en el mismo viaje?",
-        answer: "Sí, es uno de los itinerarios más buscados. Bonito está a solo 80 km de Itaicy (1h30 en auto) y ofrece experiencias complementarias: flotación en ríos cristalinos, buceo en la Gruta do Lago Azul, senderos y rapel. Un itinerario ideal combina 4-5 noches en el Pantanal con 2-3 noches en Bonito. Nuestro equipo puede organizar el transfer y recomendar socios de confianza en Bonito.",
+        question: "¿Puedo combinar el Pantanal con otro destino en el mismo viaje?",
+        answer: "¡Sí! La Chapada dos Guimarães está a solo 120 km de Itaicy (~1h30 en auto) y ofrece experiencias complementarias: senderos con cascadas, cañones, miradores panorámicos y sitios arqueológicos. Cuiabá, a tan solo 61 km, tiene buena oferta gastronómica y cultural para una parada antes o después del lodge. Nuestro equipo puede sugerir itinerarios y socios de confianza en la región.",
       },
     ],
   },

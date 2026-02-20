@@ -102,11 +102,11 @@ const enSharedCmsSections: SharedCmsSections = {
       { label: "Immersive Ecotourism", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99999-9999" },
       { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "South Mato Grosso Pantanal, Mato Grosso do Sul, Brazil",
+        text: "Santo Antônio do Leverger, Mato Grosso, Brazil",
       },
     ],
     legalLinks: [
@@ -252,11 +252,11 @@ const esSharedCmsSections: SharedCmsSections = {
       { label: "Ecoturismo Inmersivo", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99999-9999" },
       { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Pantanal del Sur del Mato Grosso, Mato Grosso do Sul, Brasil",
+        text: "Santo Antônio do Leverger, Mato Grosso, Brasil",
       },
     ],
     legalLinks: [
