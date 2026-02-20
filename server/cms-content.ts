@@ -2,7 +2,7 @@ import { loadAgentConfigSeed, loadCmsSeed } from "./cms-seed";
 import { defaultSharedCmsSections } from "../shared/cms-shared-content";
 import type { AgentConfig } from "../shared/agent-config";
 import { mapPayloadAgentConfigToAgentConfig } from "../shared/agent-config-payload";
-import type { CmsSeo } from "../shared/cms-page-content.js";
+import type { CmsSeo, CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "../shared/cms-page-content.js";
 
 type AnyDoc = Record<string, unknown>;
 
@@ -230,6 +230,35 @@ function buildSharedFromStructuredSettings(
         : [],
       copyright: str(settings.footerCopyright),
     },
+    authors: Array.isArray(settings.authors)
+      ? settings.authors.map((a: AnyDoc): CmsAuthorProfile => ({
+          name: str(a.name),
+          jobTitle: str(a.jobTitle) || undefined,
+          knowsAbout: Array.isArray(a.knowsAbout)
+            ? a.knowsAbout.map((k: AnyDoc) => str(k.topic)).filter(Boolean)
+            : undefined,
+          url: str(a.url) || undefined,
+          image: str(a.image) || undefined,
+        }))
+      : [],
+    seasonalEvents: Array.isArray(settings.seasonalEvents)
+      ? settings.seasonalEvents.map((e: AnyDoc): CmsSeasonalEvent => ({
+          name: str(e.name),
+          description: str(e.description) || undefined,
+          startDate: str(e.startDate) || undefined,
+          endDate: str(e.endDate) || undefined,
+          image: str(e.image) || undefined,
+        }))
+      : [],
+    aggregateRating: (() => {
+      const ar = settings.aggregateRating as AnyDoc | undefined;
+      if (!ar || typeof ar.ratingValue !== "number") return undefined;
+      return {
+        ratingValue: ar.ratingValue,
+        reviewCount: typeof ar.reviewCount === "number" ? ar.reviewCount : undefined,
+        bestRating: typeof ar.bestRating === "number" ? ar.bestRating : 5,
+      } satisfies CmsAggregateRating;
+    })(),
   };
 }
 

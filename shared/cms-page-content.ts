@@ -6,6 +6,28 @@ export interface CmsSeo {
   canonicalUrl?: string;
 }
 
+export interface CmsAuthorProfile {
+  name: string;
+  jobTitle?: string;
+  knowsAbout?: string[];
+  url?: string;
+  image?: string;
+}
+
+export interface CmsSeasonalEvent {
+  name: string;
+  description?: string;
+  startDate?: string;
+  endDate?: string;
+  image?: string;
+}
+
+export interface CmsAggregateRating {
+  ratingValue?: number;
+  reviewCount?: number;
+  bestRating?: number;
+}
+
 // === Reusable field types ===
 export type CmsFeature = {
   number: string;

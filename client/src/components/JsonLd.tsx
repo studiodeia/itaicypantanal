@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import type { CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "../../../shared/cms-page-content";
 
 interface JsonLdProps {
   /** One or more JSON-LD objects to inject */
@@ -212,7 +213,20 @@ const authorProfiles: Record<string, AuthorProfile> = {
   },
 };
 
-function buildAuthorPerson(authorName: string, origin: string) {
+function buildAuthorPerson(authorName: string, origin: string, cmsAuthors?: CmsAuthorProfile[]) {
+  // CMS authors take priority over hardcoded profiles
+  const cmsProfile = cmsAuthors?.find((a) => a.name === authorName);
+  if (cmsProfile) {
+    return {
+      "@type": "Person",
+      name: cmsProfile.name,
+      ...(cmsProfile.jobTitle && { jobTitle: cmsProfile.jobTitle }),
+      worksFor: { "@type": "LodgingBusiness", name: SITE_NAME, url: origin },
+      ...(cmsProfile.knowsAbout && cmsProfile.knowsAbout.length > 0 && { knowsAbout: cmsProfile.knowsAbout }),
+      ...(cmsProfile.url && { sameAs: [cmsProfile.url] }),
+      ...(cmsProfile.image && { image: cmsProfile.image }),
+    };
+  }
   const profile = authorProfiles[authorName];
   if (profile) {
     return {
@@ -231,20 +245,16 @@ function buildAuthorPerson(authorName: string, origin: string) {
   return { "@type": "Person", name: authorName || SITE_NAME };
 }
 
-export function buildBlogPosting(article: {
-  title: string;
-  description?: string;
-  author?: string;
-  date?: string;
-  image?: string;
-  url: string;
-}) {
+export function buildBlogPosting(
+  article: { title: string; description?: string; author?: string; date?: string; image?: string; url: string },
+  cmsAuthors?: CmsAuthorProfile[],
+) {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   return {
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    author: buildAuthorPerson(article.author || SITE_NAME, origin),
+    author: buildAuthorPerson(article.author || SITE_NAME, origin, cmsAuthors),
     datePublished: article.date,
     dateModified: article.date,
     image: article.image
@@ -390,9 +400,46 @@ export function buildTourProduct(tour: {
 
 // ─── Seasonal Event schemas for temporal query matching ──────────────
 
-export function buildSeasonalEvents() {
+export function buildSeasonalEvents(cmsEvents?: CmsSeasonalEvent[]) {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   const currentYear = new Date().getFullYear();
+
+  // If CMS has events defined, use them instead of hardcoded
+  if (cmsEvents && cmsEvents.length > 0) {
+    const nextYear = currentYear + 1;
+    return cmsEvents.map((event) => {
+      const startMD = event.startDate; // "MM-DD"
+      const endMD = event.endDate;
+      // If end month < start month, event spans into next year
+      const endYear =
+        startMD && endMD && endMD < startMD ? nextYear : currentYear;
+      return {
+        "@type": "Event",
+        name: event.name,
+        ...(event.description && { description: event.description }),
+        ...(startMD && { startDate: `${currentYear}-${startMD}` }),
+        ...(endMD && { endDate: `${endYear}-${endMD}` }),
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
+        ...(event.image && {
+          image: event.image.startsWith("http")
+            ? event.image
+            : `${origin}${event.image}`,
+        }),
+        location: {
+          "@type": "Place",
+          name: SITE_NAME,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Miranda",
+            addressRegion: "MS",
+            addressCountry: "BR",
+          },
+        },
+        organizer: { "@type": "Organization", name: SITE_NAME, url: origin },
+      };
+    });
+  }
   const nextYear = currentYear + 1;
 
   return [
@@ -482,17 +529,24 @@ export function buildSeasonalEvents() {
 
 export function buildAggregateRating(
   reviews: { author: string; rating: number; text: string }[],
+  cmsRating?: CmsAggregateRating,
 ) {
-  const avg =
-    reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+  // Prefer CMS aggregate rating when set, fall back to computing from reviews
+  const ratingValue =
+    cmsRating?.ratingValue ??
+    (reviews.length > 0
+      ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+      : 0);
+  const reviewCount = cmsRating?.reviewCount ?? reviews.length;
+  const bestRating = cmsRating?.bestRating ?? 5;
   return {
     "@type": "LodgingBusiness",
     name: SITE_NAME,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: avg.toFixed(1),
-      reviewCount: reviews.length,
-      bestRating: "5",
+      ratingValue: typeof ratingValue === "number" ? ratingValue.toFixed(1) : ratingValue,
+      reviewCount,
+      bestRating: String(bestRating),
       worstRating: "1",
     },
     review: reviews.map((r) => ({
