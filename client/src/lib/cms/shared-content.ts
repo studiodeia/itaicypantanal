@@ -30,19 +30,20 @@ function isValidSharedSections(value: unknown): value is SharedCmsSections {
 }
 
 export async function fetchSharedCmsSections(locale = "pt"): Promise<SharedCmsSections> {
+  const localeFallback = sharedDefaults[locale as Lang] ?? defaultSharedCmsSections;
   try {
     const response = await fetch(`/api/cms/shared?locale=${locale}`);
     if (!response.ok) {
-      return defaultSharedCmsSections;
+      return localeFallback;
     }
 
     const payload = (await response.json()) as SharedCmsResponse;
     if (isValidSharedSections(payload.shared)) {
       return payload.shared;
     }
-    return defaultSharedCmsSections;
+    return localeFallback;
   } catch {
-    return defaultSharedCmsSections;
+    return localeFallback;
   }
 }
 

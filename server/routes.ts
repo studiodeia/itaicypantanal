@@ -57,7 +57,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/shared", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent(getLocale(req));
+      const locale = getLocale(req) ?? "pt";
+      const { content, source } = await getCmsContent(locale);
+      // Seed data is PT-only; return 404 so client uses its hardcoded EN/ES defaults
+      if (source === "seed" && locale !== "pt") {
+        res.status(404).json({ message: "Shared content not available in this locale (seed)" });
+        return;
+      }
       res.json({ source, shared: content.shared ?? {} });
     } catch (error) {
       res.status(500).json({
