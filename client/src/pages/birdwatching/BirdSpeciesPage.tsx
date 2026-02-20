@@ -11,11 +11,8 @@ import { SpeciesContentSection } from "./sections/SpeciesContentSection";
 import { SimilarSpeciesSection } from "./sections/SimilarSpeciesSection";
 import { ImmersionCallToActionSection } from "../sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "../sections/SiteFooterSection";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 export const BirdSpeciesPage = (): JSX.Element => {
-  const { lang } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
   const birdData = useBirdCmsData();
   const bird = slug ? getBirdBySlugFromCms(birdData, slug) : undefined;
@@ -24,13 +21,13 @@ export const BirdSpeciesPage = (): JSX.Element => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#263a30] text-[#e3f7ec]">
         <h1 className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)]">
-          {t("birds", "speciesNotFound", lang)}
+          Espécie não encontrada
         </h1>
         <a
           href="/observacao-de-aves/catalogo"
           className="mt-8 text-[#ac8042] underline"
         >
-          {t("birds", "backToCatalog", lang)}
+          Voltar ao catálogo
         </a>
       </div>
     );
@@ -57,9 +54,9 @@ export const BirdSpeciesPage = (): JSX.Element => {
         canonicalPath={`/observacao-de-aves/catalogo/${bird.slug}`}
         ogImage={bird.heroImage || bird.src}
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadBirdwatching", lang), path: "/observacao-de-aves" },
-          { name: t("pageMeta", "breadCatalogo", lang), path: "/observacao-de-aves/catalogo" },
+          { name: "Inicio", path: "/" },
+          { name: "Observacao de Aves", path: "/observacao-de-aves" },
+          { name: "Catalogo", path: "/observacao-de-aves/catalogo" },
           { name: bird.commonName, path: `/observacao-de-aves/catalogo/${bird.slug}` },
         ]}
       />

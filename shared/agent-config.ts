@@ -105,8 +105,8 @@ export const defaultAgentConfig: AgentConfig = {
   },
   handoff: {
     email: "itaicy-digital@studiodeia.com.br",
-    emergencyPhone: "+55 (67) 99999-9999",
-    whatsapp: "+55 (67) 99999-9999",
+    emergencyPhone: "+55 (65) 99640-2380",
+    whatsapp: "+55 (65) 99640-2380",
     serviceHours: "Segunda a sexta, 08:00-18:00 (BRT)",
     slaHours: 24,
   },

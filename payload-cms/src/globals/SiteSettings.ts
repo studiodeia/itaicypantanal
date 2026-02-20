@@ -1,6 +1,7 @@
 import type { GlobalConfig } from "payload";
 import { isAuthenticated } from "../access/authenticated";
 import { triggerAgentFaqReindexAfterSiteSettingsChange } from "../hooks/triggerAgentFaqReindex";
+import { autoTranslateGlobalAfterChange } from "../hooks/autoTranslate";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -18,7 +19,7 @@ export const SiteSettings: GlobalConfig = {
     update: isAuthenticated,
   },
   hooks: {
-    afterChange: [triggerAgentFaqReindexAfterSiteSettingsChange],
+    afterChange: [triggerAgentFaqReindexAfterSiteSettingsChange, autoTranslateGlobalAfterChange],
   },
   versions: {
     max: 5,
@@ -165,6 +166,65 @@ export const SiteSettings: GlobalConfig = {
               type: "text",
               label: "Google Site Verification",
               admin: { description: "Código de verificação do Google Search Console. Será injetado como meta tag." },
+            },
+          ],
+        },
+        {
+          label: "GEO",
+          description: "Perfis de autoridade, eventos sazonais e avaliações para E-E-A-T e AI search.",
+          fields: [
+            {
+              name: "authors",
+              type: "array",
+              label: "Autores / Especialistas",
+              labels: { singular: "Autor", plural: "Autores" },
+              admin: {
+                description: "Perfis dos autores e especialistas do site para sinais E-E-A-T.",
+                initCollapsed: true,
+              },
+              fields: [
+                { name: "name", type: "text", label: "Nome completo", required: true },
+                { name: "jobTitle", type: "text", label: "Cargo / Especialidade", localized: true },
+                {
+                  name: "knowsAbout",
+                  type: "array",
+                  label: "Áreas de conhecimento",
+                  labels: { singular: "Área", plural: "Áreas" },
+                  fields: [{ name: "topic", type: "text", label: "Tópico", required: true }],
+                },
+                { name: "url", type: "text", label: "URL do perfil (LinkedIn, site)" },
+                { name: "image", type: "text", label: "URL da foto do autor" },
+              ],
+            },
+            {
+              name: "seasonalEvents",
+              type: "array",
+              label: "Eventos Sazonais",
+              labels: { singular: "Evento", plural: "Eventos" },
+              admin: {
+                description: "Eventos e temporadas para schema Event (AI search).",
+                initCollapsed: true,
+              },
+              fields: [
+                { name: "name", type: "text", label: "Nome do evento", required: true, localized: true },
+                { name: "description", type: "textarea", label: "Descrição", localized: true },
+                { name: "startDate", type: "text", label: "Início (MM-DD)", admin: { description: "Ex: 03-01 para 1 de Março" } },
+                { name: "endDate", type: "text", label: "Fim (MM-DD)", admin: { description: "Ex: 10-31 para 31 de Outubro" } },
+                { name: "image", type: "text", label: "Imagem (path)" },
+              ],
+            },
+            {
+              name: "aggregateRating",
+              type: "group",
+              label: "Avaliação Agregada",
+              admin: {
+                description: "Avaliação geral do lodge para schema AggregateRating.",
+              },
+              fields: [
+                { name: "ratingValue", type: "number", label: "Nota média", admin: { description: "Ex: 4.8", width: "33%" } },
+                { name: "reviewCount", type: "number", label: "Número de avaliações", admin: { width: "33%" } },
+                { name: "bestRating", type: "number", label: "Nota máxima", defaultValue: 5, admin: { width: "33%" } },
+              ],
             },
           ],
         },

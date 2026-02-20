@@ -9,7 +9,7 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
 
   return (
     <section className="flex flex-col items-center justify-end bg-[#344e41] w-full">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
         <motion.div
           variants={stagger}
           initial="hidden"

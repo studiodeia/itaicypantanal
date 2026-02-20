@@ -1,6 +1,6 @@
 import type { CollectionConfig } from "payload";
 import { isAuthenticated } from "../access/authenticated";
-import { seoFields } from "../fields/seo";
+import { autoTranslateCollectionAfterChange } from "../hooks/autoTranslate";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -60,6 +60,9 @@ export const BlogPosts: CollectionConfig = {
     create: isAuthenticated,
     update: isAuthenticated,
     delete: isAuthenticated,
+  },
+  hooks: {
+    afterChange: [autoTranslateCollectionAfterChange],
   },
   fields: [
     {
@@ -329,12 +332,6 @@ export const BlogPosts: CollectionConfig = {
             },
           ],
         },
-        seoFields({
-          titleField: "title",
-          descriptionField: "description",
-          imageField: "heroImage",
-          slugPrefix: "/blog",
-        }),
         {
           label: "Relacionamentos e destaque",
           fields: [

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { bellPaths } from "./bell-paths";
 import type { Lang } from "@/i18n/context";
@@ -18,8 +18,8 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
         "Hello! Need anything?",
         "I'm here to help!",
       ],
-      hoverLabel: "Chat with AI",
-      ariaLabel: "Open AI chat agent",
+      hoverLabel: "Talk to Itaicy",
+      ariaLabel: "Open Itaicy chat assistant",
     };
   }
 
@@ -31,8 +31,8 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
         "¡Hola! ¿Necesita algo?",
         "¡Estoy aquí para ayudar!",
       ],
-      hoverLabel: "Chatea con la IA",
-      ariaLabel: "Abrir agente de IA",
+      hoverLabel: "Habla con Itaicy",
+      ariaLabel: "Abrir asistente Itaicy",
     };
   }
 
@@ -43,8 +43,8 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
       "Olá! Precisa de algo?",
       "Estou aqui para ajudar!",
     ],
-    hoverLabel: "Converse com a IA",
-    ariaLabel: "Abrir chat com agente de IA",
+    hoverLabel: "Fale com a Itaicy",
+    ariaLabel: "Abrir assistente Itaicy",
   };
 }
 
@@ -74,44 +74,15 @@ interface ChatTriggerProps {
 }
 
 export function ChatTrigger({ lang, onClick }: ChatTriggerProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [messageIndex, setMessageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   const ui = getTriggerStrings(lang);
-
-  useEffect(() => {
-    const initialTimer = setTimeout(() => {
-      if (!hasInteracted) setShowTooltip(true);
-    }, 3000);
-
-    const interval = setInterval(() => {
-      if (!hasInteracted) {
-        setShowTooltip(true);
-        setMessageIndex((prev) => (prev + 1) % ui.messages.length);
-        setTimeout(() => setShowTooltip(false), 4000);
-      }
-    }, 8000);
-
-    return () => {
-      clearTimeout(initialTimer);
-      clearInterval(interval);
-    };
-  }, [hasInteracted, ui.messages.length]);
-
-  useEffect(() => {
-    if (showTooltip && !hasInteracted) {
-      const timer = setTimeout(() => setShowTooltip(false), 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [showTooltip, hasInteracted]);
 
   return (
     <div className="flex flex-col items-end gap-3">
       {/* Tooltip */}
       <AnimatePresence>
-        {(showTooltip || isHovered) && (
+        {isHovered && (
           <motion.div
             initial={{ opacity: 0, y: 8, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -138,7 +109,7 @@ export function ChatTrigger({ lang, onClick }: ChatTriggerProps) {
                 />
               </div>
               <p className="text-sm text-gray-600">
-                {isHovered ? ui.hoverLabel : ui.messages[messageIndex]}
+                {ui.hoverLabel}
               </p>
             </div>
             <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-white border-b border-r border-amber-100/60 rotate-45" />
@@ -162,11 +133,7 @@ export function ChatTrigger({ lang, onClick }: ChatTriggerProps) {
           }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          onClick={() => {
-            setHasInteracted(true);
-            setShowTooltip(false);
-            onClick();
-          }}
+          onClick={onClick}
           aria-label={ui.ariaLabel}
         >
           <svg

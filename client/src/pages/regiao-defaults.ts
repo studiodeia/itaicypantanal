@@ -4,7 +4,7 @@ import type { LocalizedDefaults } from "@/lib/cms/page-content";
 const pt: RegiaoPageContent = {
   hero: {
     label: "A REGIÃO",
-    heading: "Pantanal Sul-Matogrossense",
+    heading: "Pantanal Norte Matogrossense",
     subtitle:
       "A maior planície alagável do mundo, Patrimônio Natural da Humanidade pela UNESCO. Mais de 4.700 espécies de plantas e animais em 150.000 km² de biodiversidade exuberante.",
     scrollHint: "Deslize para baixo",
@@ -14,42 +14,42 @@ const pt: RegiaoPageContent = {
     label: "LOCALIZAÇÃO",
     heading: "Onde fica o Pantanal e como chegar à Itaicy",
     description:
-      "O Itaicy Pantanal Eco Lodge está localizado em Miranda, no Mato Grosso do Sul, dentro do Pantanal Sul-Matogrossense. A região é considerada a porta de entrada do Pantanal pela Estrada Parque, um dos roteiros mais cênicos do Brasil. Miranda fica a 240 km de Campo Grande (capital do estado, com aeroporto internacional), a 80 km de Bonito (um dos principais destinos de ecoturismo do país) e a aproximadamente 200 km da fronteira com a Bolívia. O acesso é feito por rodovia asfaltada até Miranda, seguido por estrada de terra mantida até a pousada. O aeroporto mais próximo é o Aeroporto Internacional de Campo Grande (CGR), que recebe voos diretos de São Paulo, Rio de Janeiro, Brasília e Curitiba. Transfers do aeroporto até o lodge podem ser organizados pela equipe da Itaicy.",
-    coordinates: "19°50'S, 56°41'W",
+      "O Itaicy Pantanal Eco Lodge está localizado em Santo Antônio do Leverger, no Mato Grosso (MT), dentro do Pantanal Norte Matogrossense. A pousada fica às margens do Rio Cuiabá, a 61 km do Aeroporto Internacional de Cuiabá (CGB) — cerca de 1 hora de carro. O aeroporto recebe voos diretos de São Paulo, Rio de Janeiro, Brasília e outras capitais. A estrada de acesso é asfaltada até a entrada da propriedade. Transfers do aeroporto até o lodge podem ser organizados pela equipe da Itaicy.",
+    coordinates: "15°52'S, 56°05'W",
   },
   access: {
     label: "COMO CHEGAR",
     heading: "Rotas de acesso ao Pantanal",
     description:
-      "O Pantanal Sul-Matogrossense é acessível por via aérea e terrestre a partir das principais capitais brasileiras. O ponto de referência é Campo Grande (CGR), capital do Mato Grosso do Sul, que possui aeroporto internacional com voos diários. De Campo Grande, o trajeto até Miranda leva cerca de 3 horas pela BR-262, uma rodovia asfaltada e bem sinalizada que cruza a Serra de Maracaju antes de descer ao Pantanal. Outra opção é voar até Bonito (aeroporto regional) e seguir 80 km até Miranda. Para quem vem de carro, a Estrada Parque (MS-262) é uma das rotas mais cenográficas do Brasil, com avistamento de fauna silvestre já no trajeto.",
+      "O Pantanal Norte Matogrossense é acessível por via aérea e terrestre a partir das principais capitais brasileiras. O ponto de referência é Cuiabá (CGB), capital do Mato Grosso, com aeroporto internacional e voos diários. De Cuiabá, o trajeto até a Itaicy leva cerca de 1 hora (61 km), por estrada asfaltada. Para quem vem de carro de São Paulo ou Rio de Janeiro, a viagem é longa (acima de 1.700 km) — recomendamos o voo para Cuiabá. A Transpantaneira, saindo de Poconé, é uma das estradas mais cênicas do Brasil, com avistamento de fauna silvestre já no trajeto.",
     routes: [
       {
         from: "São Paulo (GRU/CGH)",
-        distance: "1.450 km",
-        duration: "Voo 2h + transfer 3h",
+        distance: "~1.750 km",
+        duration: "Voo 2h + transfer 1h",
         description:
-          "Voos diretos para Campo Grande (CGR) com duração de aproximadamente 2 horas. De lá, transfer terrestre de 3 horas pela BR-262 até Miranda. Voos diários por Gol, LATAM e Azul.",
+          "Voos diretos para Cuiabá (CGB) com duração de aproximadamente 2 horas. De lá, transfer terrestre de 1 hora (61 km) até a pousada. Voos diários por Gol, LATAM e Azul.",
       },
       {
         from: "Rio de Janeiro (GIG/SDU)",
-        distance: "1.600 km",
-        duration: "Voo 2h30 + transfer 3h",
+        distance: "~2.000 km",
+        duration: "Voo 2h30 + transfer 1h",
         description:
-          "Voos para Campo Grande com conexão ou diretos (dependendo da temporada). Transfer terrestre de Campo Grande até a pousada em aproximadamente 3 horas.",
+          "Voos para Cuiabá com conexão ou diretos (dependendo da temporada). Transfer terrestre de Cuiabá até a pousada em aproximadamente 1 hora.",
       },
       {
         from: "Brasília (BSB)",
-        distance: "1.130 km",
-        duration: "Voo 1h40 + transfer 3h",
+        distance: "~1.130 km",
+        duration: "Voo 1h30 + transfer 1h",
         description:
-          "Voos diretos para Campo Grande com duração de 1h40. Opção terrestre pela BR-060 até Campo Grande (14 horas de carro), não recomendada.",
+          "Voos diretos para Cuiabá com duração de aproximadamente 1h30. Transfer terrestre de 1 hora até a pousada. Opção por rodovia de ~1.130 km (12 horas), não recomendada.",
       },
       {
         from: "Curitiba (CWB)",
-        distance: "1.200 km",
-        duration: "Voo 1h50 + transfer 3h",
+        distance: "~2.200 km",
+        duration: "Voo ~3h + transfer 1h",
         description:
-          "Voos diretos para Campo Grande. Opção terrestre pela BR-267 passando por Maringá e Dourados (aproximadamente 14 horas).",
+          "Voos para Cuiabá com conexão via São Paulo (duração total ~3h). Transfer terrestre de 1 hora até a pousada. Opção por rodovia de ~2.200 km, não recomendada.",
       },
     ],
   },
@@ -93,28 +93,28 @@ const pt: RegiaoPageContent = {
     label: "ARREDORES",
     heading: "O que visitar próximo ao Pantanal",
     description:
-      "A região de Miranda é privilegiada pela proximidade com alguns dos principais destinos turísticos do Mato Grosso do Sul. Bonito, a apenas 80 km, é reconhecido internacionalmente por seus rios de águas cristalinas, flutuação e mergulho em grutas. Campo Grande, a 240 km, é a capital do estado e oferece gastronomia regional, o Mercado Municipal e o Bioparque Pantanal (o maior aquário de água doce do mundo). A combinação Pantanal + Bonito é um dos roteiros mais procurados por turistas nacionais e internacionais, permitindo experiências complementares de ecoturismo em uma única viagem.",
+      "A região de Santo Antônio do Leverger é privilegiada pela proximidade com Cuiabá e com a Chapada dos Guimarães — dois destinos que se complementam perfeitamente com a imersão no Pantanal. Cuiabá, a apenas 61 km, é a capital do Mato Grosso e ponto de partida para a viagem. A Chapada dos Guimarães, a ~120 km, é um dos destinos de ecoturismo mais belos do Brasil, com cânions, cachoeiras e sítios arqueológicos. A Transpantaneira, famosa pelos avistamentos de onça-pintada e jacarés, fica a poucas horas de carro da pousada.",
     places: [
       {
-        name: "Bonito",
-        distance: "80 km (1h30 de carro)",
+        name: "Chapada dos Guimarães",
+        distance: "~120 km (~1h30 de carro)",
         description:
-          "Capital do ecoturismo brasileiro. Rios de águas cristalinas para flutuação, Gruta do Lago Azul, mergulho em cavernas e trilhas. Combina perfeitamente com o Pantanal em roteiros de 7 a 10 dias.",
+          "Um dos destinos de ecoturismo mais espetaculares do Brasil. Cânions, cachoeiras, mirantes panorâmicos, trilhas e sítios arqueológicos. Combina perfeitamente com o Pantanal em roteiros de 7 a 10 dias.",
       },
       {
-        name: "Campo Grande",
-        distance: "240 km (3h de carro)",
+        name: "Cuiabá",
+        distance: "61 km (~1h de carro)",
         description:
-          "Capital do Mato Grosso do Sul com aeroporto internacional. Bioparque Pantanal (maior aquário de água doce do mundo), Mercado Municipal, gastronomia regional com sobá e tererê.",
+          "Capital do Mato Grosso e ponto de chegada pelo Aeroporto Internacional CGB. Gastronomia regional, Museu do Rio, Praça da República e boa oferta de serviços para uma parada antes ou depois do lodge.",
       },
       {
-        name: "Estrada Parque (MS-262)",
-        distance: "Acesso direto",
+        name: "Transpantaneira",
+        distance: "~120 km (via Poconé)",
         description:
-          "Uma das estradas mais cênicas do Brasil, com 120 km de terra batida cortando o Pantanal. Pontes de madeira sobre rios, fauna silvestre avistada do carro e paisagens de tirar o fôlego.",
+          "A estrada mais icônica do Pantanal Norte. 145 km de pontes de madeira sobre rios, com avistamentos garantidos de jacarés, capivaras, tuiuiús e onça-pintada. Uma das rotas de safari mais famosas da América do Sul.",
       },
       {
-        name: "Rio Negro",
+        name: "Rio Cuiabá",
         distance: "Acesso direto",
         description:
           "Rio que banha a propriedade da Itaicy. Pesca esportiva de pintado, pacu e dourado. Passeios de barco ao nascer e pôr do sol. Habitat de jacarés, capivaras e aves aquáticas.",
@@ -125,14 +125,14 @@ const pt: RegiaoPageContent = {
     label: "PERGUNTAS FREQUENTES",
     heading: "Dúvidas sobre a região do Pantanal",
     description:
-      "Respondemos as perguntas mais comuns de quem planeja visitar o Pantanal Sul-Matogrossense.",
+      "Respondemos as perguntas mais comuns de quem planeja visitar o Pantanal Norte Matogrossense.",
     items: [
       {
         id: "regiao-1",
         number: "01",
         question: "Qual a diferença entre Pantanal Norte e Pantanal Sul?",
         answer:
-          "O Pantanal ocupa cerca de 150.000 km² divididos entre dois estados brasileiros, e cada metade oferece experiências distintas para o visitante. O Pantanal Norte (Mato Grosso), com base em Poconé e ao longo da Transpantaneira, é mais conhecido pelo turismo de onça-pintada e tem infraestrutura focada em safáris fotográficos, com lodges concentrados ao longo dos 145 km da estrada-parque. O Pantanal Sul (Mato Grosso do Sul), onde fica a Itaicy em Miranda, é mais procurado por pescadores esportivos e observadores de aves, com 166 espécies catalogadas apenas na área da pousada. O Sul também se destaca pela maior acessibilidade: o Aeroporto Internacional de Campo Grande (CGR) fica a apenas 240 km, cerca de 3 horas de carro pela BR-262 asfaltada. Além disso, a proximidade de 80 km com Bonito permite combinar Pantanal e rios cristalinos em um único roteiro de 7 a 10 dias.",
+          "O Pantanal ocupa cerca de 150.000 km² divididos entre dois estados brasileiros, e cada metade oferece experiências distintas. O Pantanal Norte (Mato Grosso), onde fica a Itaicy em Santo Antônio do Leverger, é referência em pesca esportiva e birdwatching, com 166 espécies catalogadas na área da pousada. É acessado pelo Aeroporto de Cuiabá (CGB, 1h de carro). A Transpantaneira, no mesmo estado, é a rota mais icônica para avistamento de onça-pintada. O Pantanal Sul (Mato Grosso do Sul, Miranda/Campo Grande) é mais procurado por turistas que combinam o bioma com Bonito. Cada região tem fauna e experiências distintas — e o Pantanal Norte oferece o diferencial de fácil acesso por Cuiabá.",
       },
       {
         id: "regiao-2",
@@ -153,7 +153,7 @@ const pt: RegiaoPageContent = {
         number: "04",
         question: "Tem internet e sinal de celular no Pantanal?",
         answer:
-          "A conectividade no Pantanal é limitada em comparação com centros urbanos, mas a Itaicy mantém infraestrutura suficiente para que você se comunique quando necessário. O lodge oferece Wi-Fi via satélite nas áreas comuns, incluindo recepção, restaurante e varandas com vista para o rio. A conexão é adequada para mensagens de texto, e-mails, navegação básica e envio de fotos em redes sociais, mas não é ideal para streaming de vídeo ou videochamadas longas. O sinal de celular 4G funciona de forma intermitente na região de Miranda, que fica a cerca de 30 minutos do lodge — as operadoras Vivo e Claro oferecem melhor cobertura na área. Recomendamos aproveitar a desconexão digital como parte da experiência imersiva no Pantanal: muitos hóspedes relatam que a pausa nas telas é um dos pontos altos da viagem. Mesmo assim, você não ficará completamente isolado em nenhum momento.",
+          "A conectividade no Pantanal é limitada em comparação com centros urbanos, mas a Itaicy mantém infraestrutura suficiente para que você se comunique quando necessário. O lodge oferece Wi-Fi via satélite nas áreas comuns, incluindo recepção, restaurante e varandas com vista para o rio. A conexão é adequada para mensagens de texto, e-mails, navegação básica e envio de fotos em redes sociais, mas não é ideal para streaming de vídeo ou videochamadas longas. O sinal de celular 4G funciona de forma intermitente na área de Santo Antônio do Leverger — as operadoras Vivo e Claro oferecem melhor cobertura na região. Recomendamos aproveitar a desconexão digital como parte da experiência imersiva no Pantanal: muitos hóspedes relatam que a pausa nas telas é um dos pontos altos da viagem. Mesmo assim, você não ficará completamente isolado em nenhum momento.",
       },
       {
         id: "regiao-5",
@@ -169,7 +169,7 @@ const pt: RegiaoPageContent = {
 const en: RegiaoPageContent = {
   hero: {
     label: "THE REGION",
-    heading: "Southern Pantanal",
+    heading: "Northern Pantanal",
     subtitle:
       "The largest floodplain in the world, a UNESCO Natural Heritage Site. Over 4,700 species of plants and animals across 150,000 km² of exuberant biodiversity.",
     scrollHint: "Scroll down",
@@ -179,42 +179,42 @@ const en: RegiaoPageContent = {
     label: "LOCATION",
     heading: "Where the Pantanal is and how to get to Itaicy",
     description:
-      "Itaicy Pantanal Eco Lodge is located in Miranda, in Mato Grosso do Sul, within the Southern Pantanal. The region is considered the gateway to the Pantanal via the Estrada Parque, one of the most scenic routes in Brazil. Miranda is 240 km from Campo Grande (the state capital, with an international airport), 80 km from Bonito (one of the country's leading ecotourism destinations) and approximately 200 km from the Bolivian border. Access is via a paved road to Miranda, followed by a maintained dirt road to the lodge. The nearest airport is Campo Grande International Airport (CGR), which receives direct flights from São Paulo, Rio de Janeiro, Brasília and Curitiba. Transfers from the airport to the lodge can be arranged by the Itaicy team.",
-    coordinates: "19°50'S, 56°41'W",
+      "Itaicy Pantanal Eco Lodge is located in Santo Antônio do Leverger, Mato Grosso (MT), within the Northern Pantanal. The lodge sits on the banks of the Rio Cuiabá, 61 km from Cuiabá International Airport (CGB) — approximately 1 hour by car. The airport receives direct flights from São Paulo, Rio de Janeiro, Brasília and other capitals. The access road is paved all the way to the property entrance. Transfers from the airport to the lodge can be arranged by the Itaicy team.",
+    coordinates: "15°52'S, 56°05'W",
   },
   access: {
     label: "HOW TO GET THERE",
     heading: "Access routes to the Pantanal",
     description:
-      "The Southern Pantanal is accessible by air and road from the main Brazilian state capitals. The reference point is Campo Grande (CGR), the capital of Mato Grosso do Sul, which has an international airport with daily flights. From Campo Grande, the drive to Miranda takes about 3 hours along the BR-262, a well-signposted paved highway that crosses the Serra de Maracaju before descending into the Pantanal. Another option is to fly to Bonito (regional airport) and drive 80 km to Miranda. For those traveling by car, the Estrada Parque (MS-262) is one of the most scenic routes in Brazil, with wildlife sightings along the way.",
+      "The Northern Pantanal is accessible by air and road from the main Brazilian state capitals. The reference point is Cuiabá (CGB), the capital of Mato Grosso, with an international airport and daily flights. From Cuiabá, the drive to Itaicy takes about 1 hour (61 km) along a paved road. For those driving from São Paulo or Rio de Janeiro, the journey exceeds 1,700 km — we recommend flying to Cuiabá. The Transpantaneira, departing from Poconé, is one of the most scenic roads in Brazil, with guaranteed wildlife sightings along the way.",
     routes: [
       {
         from: "São Paulo (GRU/CGH)",
-        distance: "1,450 km",
-        duration: "2h flight + 3h transfer",
+        distance: "~1,750 km",
+        duration: "2h flight + 1h transfer",
         description:
-          "Direct flights to Campo Grande (CGR) of approximately 2 hours. From there, a 3-hour road transfer via the BR-262 to Miranda. Daily flights by Gol, LATAM and Azul.",
+          "Direct flights to Cuiabá (CGB) of approximately 2 hours. From there, a 1-hour road transfer (61 km) to the lodge. Daily flights by Gol, LATAM and Azul.",
       },
       {
         from: "Rio de Janeiro (GIG/SDU)",
-        distance: "1,600 km",
-        duration: "2h30 flight + 3h transfer",
+        distance: "~2,000 km",
+        duration: "2h30 flight + 1h transfer",
         description:
-          "Flights to Campo Grande with connection or direct (depending on the season). Road transfer from Campo Grande to the lodge in approximately 3 hours.",
+          "Flights to Cuiabá with connection or direct (depending on the season). Road transfer from Cuiabá to the lodge in approximately 1 hour.",
       },
       {
         from: "Brasília (BSB)",
-        distance: "1,130 km",
-        duration: "1h40 flight + 3h transfer",
+        distance: "~1,130 km",
+        duration: "1h30 flight + 1h transfer",
         description:
-          "Direct flights to Campo Grande of 1h40. Land option via BR-060 to Campo Grande (14 hours by car), not recommended.",
+          "Direct flights to Cuiabá of approximately 1h30. Road transfer of 1 hour to the lodge. Land option (~1,130 km, 12 hours), not recommended.",
       },
       {
         from: "Curitiba (CWB)",
-        distance: "1,200 km",
-        duration: "1h50 flight + 3h transfer",
+        distance: "~2,200 km",
+        duration: "~3h flight + 1h transfer",
         description:
-          "Direct flights to Campo Grande. Land option via BR-267 through Maringá and Dourados (approximately 14 hours).",
+          "Flights to Cuiabá via connection through São Paulo (total ~3 hours). Road transfer of 1 hour to the lodge. Land option (~2,200 km), not recommended.",
       },
     ],
   },
@@ -258,31 +258,31 @@ const en: RegiaoPageContent = {
     label: "SURROUNDINGS",
     heading: "What to visit near the Pantanal",
     description:
-      "The Miranda region is privileged by its proximity to some of the main tourist destinations in Mato Grosso do Sul. Bonito, just 80 km away, is internationally recognized for its crystal-clear rivers, snorkeling and cave diving. Campo Grande, 240 km away, is the state capital and offers regional gastronomy, the Municipal Market and the Bioparque Pantanal (the world's largest freshwater aquarium). The Pantanal + Bonito combination is one of the most popular itineraries among national and international tourists, offering complementary ecotourism experiences in a single trip.",
+      "The Santo Antônio do Leverger region is privileged by its proximity to Cuiabá and Chapada dos Guimarães — two destinations that complement the Pantanal immersion perfectly. Cuiabá, just 61 km away, is the Mato Grosso state capital and the arrival hub. Chapada dos Guimarães, ~120 km away, is one of the most beautiful ecotourism destinations in Brazil, with canyons, waterfalls, and archaeological sites. The Transpantaneira, famous for jaguar and caiman sightings, is just a few hours' drive from the lodge.",
     places: [
       {
-        name: "Bonito",
-        distance: "80 km (1h30 by car)",
+        name: "Chapada dos Guimarães",
+        distance: "~120 km (~1h30 by car)",
         description:
-          "Capital of Brazilian ecotourism. Crystal-clear rivers for snorkeling, Gruta do Lago Azul, cave diving and trails. Pairs perfectly with the Pantanal on 7-10 day itineraries.",
+          "One of the most spectacular ecotourism destinations in Brazil. Canyons, waterfalls, panoramic viewpoints, trails and archaeological sites. Pairs perfectly with the Pantanal on 7-10 day itineraries.",
       },
       {
-        name: "Campo Grande",
-        distance: "240 km (3h by car)",
+        name: "Cuiabá",
+        distance: "61 km (~1h by car)",
         description:
-          "Capital of Mato Grosso do Sul with international airport. Bioparque Pantanal (world's largest freshwater aquarium), Municipal Market, regional cuisine with sobá and tereré.",
+          "Capital of Mato Grosso and arrival point via CGB International Airport. Regional gastronomy, Museu do Rio, Praça da República and a great range of services for a stop before or after the lodge.",
       },
       {
-        name: "Estrada Parque (MS-262)",
+        name: "Transpantaneira",
+        distance: "~120 km (via Poconé)",
+        description:
+          "The most iconic road in the Northern Pantanal. 145 km of wooden bridges over rivers, with guaranteed sightings of caimans, capybaras, jabirus and jaguars. One of South America's most famous safari routes.",
+      },
+      {
+        name: "Rio Cuiabá",
         distance: "Direct access",
         description:
-          "One of the most scenic roads in Brazil, with 120 km of dirt road cutting through the Pantanal. Wooden bridges over rivers, wildlife spotted from the car and breathtaking scenery.",
-      },
-      {
-        name: "Rio Negro",
-        distance: "Direct access",
-        description:
-          "River that borders the Itaicy property. Sport fishing for pintado, pacu and dourado. Boat trips at sunrise and sunset. Habitat for caimans, capybaras and water birds.",
+          "River that flows through the Itaicy property. Sport fishing for pintado, pacu and dourado. Boat trips at sunrise and sunset. Habitat for caimans, capybaras and water birds.",
       },
     ],
   },
@@ -290,14 +290,14 @@ const en: RegiaoPageContent = {
     label: "FREQUENTLY ASKED QUESTIONS",
     heading: "Questions about the Pantanal Region",
     description:
-      "We answer the most common questions from those planning to visit the Southern Pantanal.",
+      "We answer the most common questions from those planning to visit the Northern Pantanal.",
     items: [
       {
         id: "regiao-1",
         number: "01",
         question: "What is the difference between the Northern and Southern Pantanal?",
         answer:
-          "The Pantanal covers approximately 150,000 km² divided between two Brazilian states, and each half offers distinct experiences. The Northern Pantanal (Mato Grosso), based around Poconé and along the Transpantaneira, is best known for jaguar tourism and has infrastructure focused on photographic safaris, with lodges concentrated along the 145 km of the park road. The Southern Pantanal (Mato Grosso do Sul), where Itaicy is located in Miranda, is more sought after by sport fishermen and birdwatchers, with 166 species catalogued in the lodge area alone. The South also stands out for its greater accessibility: Campo Grande International Airport (CGR) is only 240 km away, about 3 hours by car along the paved BR-262. Additionally, the 80 km proximity to Bonito allows you to combine the Pantanal and crystal-clear rivers in a single 7-10 day itinerary.",
+          "The Pantanal covers approximately 150,000 km² divided between two Brazilian states, each offering distinct experiences. The Northern Pantanal (Mato Grosso), where Itaicy is located in Santo Antônio do Leverger, is a reference for sport fishing and birdwatching, with 166 species catalogued on the lodge property. It is accessed via Cuiabá airport (CGB, 1h away). The Transpantaneira, also in Mato Grosso, is the iconic jaguar-watching route. The Southern Pantanal (Mato Grosso do Sul, Miranda/Campo Grande) is better known by tourists who combine the biome with Bonito. Each region has distinct wildlife and experiences — and the Northern Pantanal stands out for its easy Cuiabá access.",
       },
       {
         id: "regiao-2",
@@ -318,7 +318,7 @@ const en: RegiaoPageContent = {
         number: "04",
         question: "Is there internet and cell phone signal in the Pantanal?",
         answer:
-          "Connectivity in the Pantanal is limited compared to urban centers, but Itaicy maintains sufficient infrastructure for you to communicate when needed. The lodge offers satellite Wi-Fi in common areas, including the reception, restaurant and balconies overlooking the river. The connection is adequate for text messages, emails, basic browsing and sharing photos on social media, but is not ideal for video streaming or long video calls. 4G mobile signal works intermittently in the Miranda area, which is about 30 minutes from the lodge — the Vivo and Claro carriers offer the best coverage in the area. We recommend embracing the digital disconnection as part of the immersive Pantanal experience: many guests report that the break from screens is one of the highlights of the trip. Even so, you will not be completely isolated at any time.",
+          "Connectivity in the Pantanal is limited compared to urban centers, but Itaicy maintains sufficient infrastructure for you to communicate when needed. The lodge offers satellite Wi-Fi in common areas, including the reception, restaurant and balconies overlooking the river. The connection is adequate for text messages, emails, basic browsing and sharing photos on social media, but is not ideal for video streaming or long video calls. 4G mobile signal works intermittently in the Santo Antônio do Leverger area — the Vivo and Claro carriers offer the best coverage in the region. We recommend embracing the digital disconnection as part of the immersive Pantanal experience: many guests report that the break from screens is one of the highlights of the trip. Even so, you will not be completely isolated at any time.",
       },
       {
         id: "regiao-5",
@@ -334,7 +334,7 @@ const en: RegiaoPageContent = {
 const es: RegiaoPageContent = {
   hero: {
     label: "LA REGIÓN",
-    heading: "Pantanal Sur-Matogrossense",
+    heading: "Pantanal Norte Matogrossense",
     subtitle:
       "La mayor planicie inundable del mundo, Patrimonio Natural de la Humanidad por la UNESCO. Más de 4.700 especies de plantas y animales en 150.000 km² de exuberante biodiversidad.",
     scrollHint: "Desliza hacia abajo",
@@ -344,42 +344,42 @@ const es: RegiaoPageContent = {
     label: "UBICACIÓN",
     heading: "Dónde está el Pantanal y cómo llegar a Itaicy",
     description:
-      "Itaicy Pantanal Eco Lodge está ubicado en Miranda, en el Mato Grosso do Sul, dentro del Pantanal Sur-Matogrossense. La región es considerada la puerta de entrada al Pantanal por la Estrada Parque, uno de los recorridos más pintorescos de Brasil. Miranda está a 240 km de Campo Grande (capital del estado, con aeropuerto internacional), a 80 km de Bonito (uno de los principales destinos de ecoturismo del país) y a aproximadamente 200 km de la frontera con Bolivia. El acceso se realiza por carretera asfaltada hasta Miranda, seguido de un camino de tierra mantenido hasta el lodge. El aeropuerto más cercano es el Aeropuerto Internacional de Campo Grande (CGR), que recibe vuelos directos desde São Paulo, Río de Janeiro, Brasilia y Curitiba. Los transfers del aeropuerto al lodge pueden ser organizados por el equipo de Itaicy.",
-    coordinates: "19°50'S, 56°41'W",
+      "Itaicy Pantanal Eco Lodge está ubicado en Santo Antônio do Leverger, Mato Grosso (MT), dentro del Pantanal Norte Matogrossense. El lodge está a orillas del Río Cuiabá, a 61 km del Aeropuerto Internacional de Cuiabá (CGB) — aproximadamente 1 hora en auto. El aeropuerto recibe vuelos directos desde São Paulo, Río de Janeiro, Brasilia y otras capitales. El camino de acceso está asfaltado hasta la entrada de la propiedad. Los transfers del aeropuerto al lodge pueden ser organizados por el equipo de Itaicy.",
+    coordinates: "15°52'S, 56°05'W",
   },
   access: {
     label: "CÓMO LLEGAR",
     heading: "Rutas de acceso al Pantanal",
     description:
-      "El Pantanal Sur-Matogrossense es accesible por vía aérea y terrestre desde las principales capitales brasileñas. El punto de referencia es Campo Grande (CGR), capital del Mato Grosso do Sul, con aeropuerto internacional y vuelos diarios. Desde Campo Grande, el trayecto hasta Miranda dura unas 3 horas por la BR-262, una carretera asfaltada y bien señalizada que cruza la Serra de Maracaju antes de bajar al Pantanal. Otra opción es volar a Bonito (aeropuerto regional) y recorrer 80 km hasta Miranda. Para quienes viajan en auto, la Estrada Parque (MS-262) es una de las rutas más escénicas de Brasil, con avistamiento de fauna silvestre ya en el camino.",
+      "El Pantanal Norte Matogrossense es accesible por vía aérea y terrestre desde las principales capitales brasileñas. El punto de referencia es Cuiabá (CGB), capital de Mato Grosso, con aeropuerto internacional y vuelos diarios. Desde Cuiabá, el trayecto hasta Itaicy dura aproximadamente 1 hora (61 km) por carretera asfaltada. Para quienes viajan en auto desde São Paulo o Río de Janeiro, el viaje supera los 1.700 km — recomendamos volar a Cuiabá. La Transpantaneira, saliendo de Poconé, es una de las carreteras más escénicas de Brasil, con avistamiento de fauna silvestre ya en el camino.",
     routes: [
       {
         from: "São Paulo (GRU/CGH)",
-        distance: "1.450 km",
-        duration: "Vuelo 2h + transfer 3h",
+        distance: "~1.750 km",
+        duration: "Vuelo 2h + transfer 1h",
         description:
-          "Vuelos directos a Campo Grande (CGR) de aproximadamente 2 horas. Desde allí, transfer vial de 3 horas por la BR-262 hasta Miranda. Vuelos diarios por Gol, LATAM y Azul.",
+          "Vuelos directos a Cuiabá (CGB) de aproximadamente 2 horas. Desde allí, transfer vial de 1 hora (61 km) hasta el lodge. Vuelos diarios por Gol, LATAM y Azul.",
       },
       {
         from: "Río de Janeiro (GIG/SDU)",
-        distance: "1.600 km",
-        duration: "Vuelo 2h30 + transfer 3h",
+        distance: "~2.000 km",
+        duration: "Vuelo 2h30 + transfer 1h",
         description:
-          "Vuelos a Campo Grande con conexión o directos (según la temporada). Transfer vial desde Campo Grande hasta el lodge en aproximadamente 3 horas.",
+          "Vuelos a Cuiabá con conexión o directos (según la temporada). Transfer vial desde Cuiabá hasta el lodge en aproximadamente 1 hora.",
       },
       {
         from: "Brasilia (BSB)",
-        distance: "1.130 km",
-        duration: "Vuelo 1h40 + transfer 3h",
+        distance: "~1.130 km",
+        duration: "Vuelo 1h30 + transfer 1h",
         description:
-          "Vuelos directos a Campo Grande de 1h40. Opción terrestre por la BR-060 hasta Campo Grande (14 horas en auto), no recomendada.",
+          "Vuelos directos a Cuiabá de aproximadamente 1h30. Transfer vial de 1 hora hasta el lodge. Opción terrestre (~1.130 km, 12 horas), no recomendada.",
       },
       {
         from: "Curitiba (CWB)",
-        distance: "1.200 km",
-        duration: "Vuelo 1h50 + transfer 3h",
+        distance: "~2.200 km",
+        duration: "Vuelo ~3h + transfer 1h",
         description:
-          "Vuelos directos a Campo Grande. Opción terrestre por la BR-267 pasando por Maringá y Dourados (aproximadamente 14 horas).",
+          "Vuelos a Cuiabá con conexión via São Paulo (total ~3h). Transfer vial de 1 hora hasta el lodge. Opción terrestre (~2.200 km), no recomendada.",
       },
     ],
   },
@@ -423,31 +423,31 @@ const es: RegiaoPageContent = {
     label: "ALREDEDORES",
     heading: "Qué visitar cerca del Pantanal",
     description:
-      "La región de Miranda es privilegiada por su cercanía a algunos de los principales destinos turísticos del Mato Grosso do Sul. Bonito, a apenas 80 km, es reconocido internacionalmente por sus ríos de aguas cristalinas, flotación y buceo en cuevas. Campo Grande, a 240 km, es la capital del estado y ofrece gastronomía regional, el Mercado Municipal y el Bioparque Pantanal (el mayor acuario de agua dulce del mundo). La combinación Pantanal + Bonito es uno de los itinerarios más buscados por turistas nacionales e internacionales, permitiendo experiencias complementarias de ecoturismo en un solo viaje.",
+      "La región de Santo Antônio do Leverger es privilegiada por su cercanía a Cuiabá y la Chapada dos Guimarães — dos destinos que se complementan perfectamente con la inmersión en el Pantanal. Cuiabá, a solo 61 km, es la capital de Mato Grosso y el punto de llegada. La Chapada dos Guimarães, a ~120 km, es uno de los destinos de ecoturismo más bellos de Brasil, con cañones, cascadas y sitios arqueológicos. La Transpantaneira, famosa por el avistamiento de jaguares y caimanes, está a pocas horas en auto del lodge.",
     places: [
       {
-        name: "Bonito",
-        distance: "80 km (1h30 en auto)",
+        name: "Chapada dos Guimarães",
+        distance: "~120 km (~1h30 en auto)",
         description:
-          "Capital del ecoturismo brasileño. Ríos de aguas cristalinas para flotación, Gruta do Lago Azul, buceo en cuevas y senderos. Se combina perfectamente con el Pantanal en itinerarios de 7 a 10 días.",
+          "Uno de los destinos de ecoturismo más espectaculares de Brasil. Cañones, cascadas, miradores panorámicos, senderos y sitios arqueológicos. Se combina perfectamente con el Pantanal en itinerarios de 7 a 10 días.",
       },
       {
-        name: "Campo Grande",
-        distance: "240 km (3h en auto)",
+        name: "Cuiabá",
+        distance: "61 km (~1h en auto)",
         description:
-          "Capital del Mato Grosso do Sul con aeropuerto internacional. Bioparque Pantanal (mayor acuario de agua dulce del mundo), Mercado Municipal, gastronomía regional con sobá y tereré.",
+          "Capital de Mato Grosso y punto de llegada por el Aeropuerto Internacional CGB. Gastronomía regional, Museu do Rio, Praça da República y amplia oferta de servicios para una parada antes o después del lodge.",
       },
       {
-        name: "Estrada Parque (MS-262)",
+        name: "Transpantaneira",
+        distance: "~120 km (via Poconé)",
+        description:
+          "La carretera más icónica del Pantanal Norte. 145 km de puentes de madera sobre ríos, con avistamientos garantizados de caimanes, capibaras, tuiuyús y jaguares. Una de las rutas de safari más famosas de América del Sur.",
+      },
+      {
+        name: "Río Cuiabá",
         distance: "Acceso directo",
         description:
-          "Una de las carreteras más escénicas de Brasil, con 120 km de camino de tierra atravesando el Pantanal. Puentes de madera sobre ríos, fauna silvestre avistada desde el auto y paisajes que quitan el aliento.",
-      },
-      {
-        name: "Rio Negro",
-        distance: "Acceso directo",
-        description:
-          "Río que bordea la propiedad de Itaicy. Pesca deportiva de pintado, pacu y dourado. Paseos en barco al amanecer y al atardecer. Hábitat de caimanes, capibaras y aves acuáticas.",
+          "Río que fluye por la propiedad de Itaicy. Pesca deportiva de pintado, pacu y dourado. Paseos en barco al amanecer y al atardecer. Hábitat de caimanes, capibaras y aves acuáticas.",
       },
     ],
   },
@@ -455,14 +455,14 @@ const es: RegiaoPageContent = {
     label: "PREGUNTAS FRECUENTES",
     heading: "Dudas sobre la Región del Pantanal",
     description:
-      "Respondemos las preguntas más comunes de quienes planifican visitar el Pantanal Sur-Matogrossense.",
+      "Respondemos las preguntas más comunes de quienes planifican visitar el Pantanal Norte Matogrossense.",
     items: [
       {
         id: "regiao-1",
         number: "01",
         question: "¿Cuál es la diferencia entre el Pantanal Norte y el Pantanal Sur?",
         answer:
-          "El Pantanal ocupa cerca de 150.000 km² divididos entre dos estados brasileños, y cada mitad ofrece experiencias distintas. El Pantanal Norte (Mato Grosso), con base en Poconé y a lo largo de la Transpantaneira, es más conocido por el turismo de jaguar y tiene infraestructura enfocada en safaris fotográficos, con lodges concentrados a lo largo de los 145 km de la carretera-parque. El Pantanal Sur (Mato Grosso do Sul), donde está Itaicy en Miranda, es más buscado por pescadores deportivos y observadores de aves, con 166 especies catalogadas solo en el área del lodge. El Sur también destaca por su mayor accesibilidad: el Aeropuerto Internacional de Campo Grande (CGR) está a solo 240 km, unas 3 horas en auto por la BR-262 asfaltada. Además, la cercanía de 80 km con Bonito permite combinar el Pantanal y los ríos cristalinos en un único itinerario de 7 a 10 días.",
+          "El Pantanal ocupa cerca de 150.000 km² divididos entre dos estados brasileños, y cada mitad ofrece experiencias distintas. El Pantanal Norte (Mato Grosso), donde está Itaicy en Santo Antônio do Leverger, es referencia en pesca deportiva y aviturismo, con 166 especies catalogadas en la propiedad del lodge. Se accede por el aeropuerto de Cuiabá (CGB, 1h en auto). La Transpantaneira, también en Mato Grosso, es la ruta icónica para el avistamiento de jaguares. El Pantanal Sur (Mato Grosso do Sul, Miranda/Campo Grande) es más conocido por turistas que combinan el bioma con Bonito. Cada región tiene fauna y experiencias distintas — y el Pantanal Norte destaca por su fácil acceso vía Cuiabá.",
       },
       {
         id: "regiao-2",
@@ -483,7 +483,7 @@ const es: RegiaoPageContent = {
         number: "04",
         question: "¿Hay internet y señal de celular en el Pantanal?",
         answer:
-          "La conectividad en el Pantanal es limitada en comparación con los centros urbanos, pero Itaicy mantiene la infraestructura suficiente para que usted pueda comunicarse cuando lo necesite. El lodge ofrece Wi-Fi vía satélite en las áreas comunes, incluyendo recepción, restaurante y balcones con vista al río. La conexión es adecuada para mensajes de texto, correos, navegación básica y compartir fotos en redes sociales, pero no es ideal para streaming de video o videollamadas largas. La señal de celular 4G funciona de forma intermitente en la región de Miranda, que está a unos 30 minutos del lodge — las operadoras Vivo y Claro ofrecen mejor cobertura en la zona. Recomendamos aprovechar la desconexión digital como parte de la experiencia inmersiva en el Pantanal: muchos huéspedes señalan que la pausa en las pantallas es uno de los puntos altos del viaje. Aun así, usted no estará completamente aislado en ningún momento.",
+          "La conectividad en el Pantanal es limitada en comparación con los centros urbanos, pero Itaicy mantiene la infraestructura suficiente para que usted pueda comunicarse cuando lo necesite. El lodge ofrece Wi-Fi vía satélite en las áreas comunes, incluyendo recepción, restaurante y balcones con vista al río. La conexión es adecuada para mensajes de texto, correos, navegación básica y compartir fotos en redes sociales, pero no es ideal para streaming de video o videollamadas largas. La señal de celular 4G funciona de forma intermitente en el área de Santo Antônio do Leverger — las operadoras Vivo y Claro ofrecen mejor cobertura en la región. Recomendamos aprovechar la desconexión digital como parte de la experiencia inmersiva en el Pantanal: muchos huéspedes señalan que la pausa en las pantallas es uno de los puntos altos del viaje. Aun así, usted no estará completamente aislado en ningún momento.",
       },
       {
         id: "regiao-5",

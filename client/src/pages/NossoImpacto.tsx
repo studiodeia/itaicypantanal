@@ -1,7 +1,5 @@
 import { PageMeta } from "@/components/PageMeta";
 import { usePageCms } from "@/lib/cms/page-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { nossoImpactoDefaults } from "./nosso-impacto-defaults";
 import { ImpactHeroSection } from "./nosso-impacto/sections/ImpactHeroSection";
 import { ImpactManifestoSection } from "./nosso-impacto/sections/ImpactManifestoSection";
@@ -10,22 +8,22 @@ import { BiodiversidadeSection } from "./nosso-impacto/sections/BiodiversidadeSe
 import { ComunidadeSection } from "./nosso-impacto/sections/ComunidadeSection";
 import { OperacaoConscienteSection } from "./nosso-impacto/sections/OperacaoConscienteSection";
 import { ImpactEngagementSection } from "./nosso-impacto/sections/ImpactEngagementSection";
+import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuestionsSection";
 import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const NossoImpacto = (): JSX.Element => {
   const cms = usePageCms("/nosso-impacto", nossoImpactoDefaults);
-  const { lang } = useLanguage();
 
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "impactoTitle", lang)}
-        description={t("pageMeta", "impactoDesc", lang)}
+        title="Nosso Impacto"
+        description="Conservacao ambiental, pesca sustentavel Cota Zero, protecao da biodiversidade e apoio a comunidades locais. Conheca o impacto positivo da Itaicy no Pantanal."
         canonicalPath="/nosso-impacto"
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadImpacto", lang), path: "/nosso-impacto" },
+          { name: "Inicio", path: "/" },
+          { name: "Nosso Impacto", path: "/nosso-impacto" },
         ]}
       />
       <ImpactHeroSection content={cms.hero} />
@@ -35,6 +33,7 @@ export const NossoImpacto = (): JSX.Element => {
       <ComunidadeSection content={cms.comunidade} />
       <OperacaoConscienteSection content={cms.operacao} />
       <ImpactEngagementSection content={cms.engagement} />
+      <FrequentlyAskedQuestionsSection />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>

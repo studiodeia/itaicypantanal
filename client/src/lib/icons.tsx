@@ -65,6 +65,7 @@ export type LucideIcon = ReturnType<typeof createOutlineIcon>;
 
 function resolveWeight(strokeWidth?: number): IconWeight {
   if (!strokeWidth) return "regular";
+  if (strokeWidth <= 1) return "thin";
   if (strokeWidth <= 1.5) return "light";
   if (strokeWidth >= 2.5) return "bold";
   return "regular";

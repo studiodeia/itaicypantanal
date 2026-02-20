@@ -1,8 +1,9 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { getCmsAgentConfig, getCmsContent } from "./cms-content";
-import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt } from "./sitemap";
+import { getCmsAgentConfig, getCmsContent, clearCmsContentCache } from "./cms-content";
+import { clearCmsSeedCache } from "./cms-seed";
+import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt, type LlmsCmsData } from "./sitemap";
 import { handleChatRequest } from "./agent/chat-route";
 import { handleFaqReindexRequest } from "./agent/reindex-route";
 import { handleAgentMetricsRequest } from "./agent/metrics-route";
@@ -26,6 +27,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     const raw = req.query.locale;
     return typeof raw === "string" ? raw : undefined;
   }
+
+  app.post("/api/cms/reload", (_req, res) => {
+    clearCmsSeedCache();
+    clearCmsContentCache();
+    res.json({ ok: true, message: "CMS cache cleared" });
+  });
 
   app.get("/api/cms/health", async (req, res) => {
     try {
@@ -57,7 +64,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/shared", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent(getLocale(req));
+      const locale = getLocale(req) ?? "pt";
+      const { content, source } = await getCmsContent(locale);
+      // Seed data is PT-only; return 404 so client uses its hardcoded EN/ES defaults
+      if (source === "seed" && locale !== "pt") {
+        res.status(404).json({ message: "Shared content not available in this locale (seed)" });
+        return;
+      }
       res.json({ source, shared: content.shared ?? {} });
     } catch (error) {
       res.status(500).json({
@@ -109,7 +122,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/cms/page/:slug", async (req, res) => {
     try {
-      const { content, source } = await getCmsContent(getLocale(req));
+      const locale = getLocale(req) ?? "pt";
+      const { content, source } = await getCmsContent(locale);
+      // Seed data is PT-only; for other locales return 404 so the client
+      // falls back to its own hardcoded EN/ES defaults (home-defaults, etc.)
+      if (source === "seed" && locale !== "pt") {
+        res.status(404).json({ message: "Page content not available in this locale (seed)" });
+        return;
+      }
       const slug = "/" + (req.params.slug === "home" ? "" : req.params.slug);
       const pageData = content.pageContent?.[slug] ?? null;
       if (!pageData) {
@@ -158,9 +178,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.type("text/plain").send(robotsTxt);
   });
 
-  app.get("/llms.txt", (req, res) => {
-    const llmsTxt = buildLlmsTxt(req);
-    res.type("text/plain").send(llmsTxt);
+  app.get("/llms.txt", async (req, res) => {
+    let cmsMeta: LlmsCmsData | undefined;
+    try {
+      const { content } = await getCmsContent("en");
+      const shared = content?.shared as Record<string, unknown> | undefined;
+      cmsMeta = {
+        authors: Array.isArray(shared?.authors)
+          ? (shared.authors as LlmsCmsData["authors"])
+          : undefined,
+        blogPosts: Array.isArray(content?.blog?.posts)
+          ? (content.blog.posts as LlmsCmsData["blogPosts"])
+          : undefined,
+        seasonalEvents: Array.isArray(shared?.seasonalEvents)
+          ? (shared.seasonalEvents as LlmsCmsData["seasonalEvents"])
+          : undefined,
+      };
+    } catch {
+      // keep hardcoded fallback
+    }
+    res.type("text/plain").send(buildLlmsTxt(req, cmsMeta));
   });
 
   app.post("/api/chat", async (req, res) => {

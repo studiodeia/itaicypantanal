@@ -4,6 +4,7 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
 import type { CmsServices } from "@shared/cms-page-content";
 
 type Props = { content: CmsServices };
@@ -52,6 +53,7 @@ const fishSpecies = [
 ];
 
 export const PescaServicesSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -136,6 +138,7 @@ export const PescaServicesSection = ({ content }: Props): JSX.Element => {
           </div>
           <a
             href={buildCloudbedsBookingUrl({
+              locale: lang,
               utmContent: "pesca_section_reservar_expedicao",
             })}
             className={`${goldButtonClass} shrink-0`}

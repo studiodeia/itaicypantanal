@@ -1,4 +1,5 @@
 type CloudbedsBookingOptions = {
+  locale?: string;
   checkIn?: Date;
   checkOut?: Date;
   currency?: string;
@@ -8,9 +9,18 @@ type CloudbedsBookingOptions = {
   utmContent?: string;
 };
 
-export const CLOUDBEDS_BOOKING_BASE_URL =
-  "https://us2.cloudbeds.com/pt-br/reservas/M9G54y";
+const CLOUDBEDS_LOCALE_MAP: Record<string, string> = {
+  pt: "pt-br",
+  en: "en",
+  es: "es",
+};
+const CLOUDBEDS_PROPERTY_PATH = "reservas/M9G54y";
 export const CLOUDBEDS_DEFAULT_CURRENCY = "brl";
+
+function getBaseUrl(locale = "pt"): string {
+  const cloudbedsLocale = CLOUDBEDS_LOCALE_MAP[locale] ?? "pt-br";
+  return `https://us2.cloudbeds.com/${cloudbedsLocale}/${CLOUDBEDS_PROPERTY_PATH}`;
+}
 
 function formatDate(date: Date): string {
   const year = date.getFullYear();
@@ -22,7 +32,7 @@ function formatDate(date: Date): string {
 export function buildCloudbedsBookingUrl(
   options: CloudbedsBookingOptions = {},
 ): string {
-  const url = new URL(CLOUDBEDS_BOOKING_BASE_URL);
+  const url = new URL(getBaseUrl(options.locale));
 
   url.searchParams.set("currency", options.currency ?? CLOUDBEDS_DEFAULT_CURRENCY);
   url.searchParams.set("utm_source", options.utmSource ?? "site_itaicy");

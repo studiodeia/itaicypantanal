@@ -16,6 +16,24 @@ const sharedPromises = new Map<string, Promise<SharedCmsSections>>();
 
 const LOCALE_MAP: Record<Lang, string> = { pt: "pt", en: "en", es: "es" };
 
+/** Fill empty-string fields in CMS data with values from the locale fallback. */
+function mergeWithFallback(
+  cms: SharedCmsSections,
+  fallback: SharedCmsSections,
+): SharedCmsSections {
+  const footer = cms.footer;
+  const fb = fallback.footer;
+  return {
+    ...cms,
+    footer: {
+      ...footer,
+      pousadaHeading: footer.pousadaHeading || fb.pousadaHeading,
+      experienciasHeading: footer.experienciasHeading || fb.experienciasHeading,
+      contactHeading: footer.contactHeading || fb.contactHeading,
+    },
+  };
+}
+
 function isValidSharedSections(value: unknown): value is SharedCmsSections {
   if (!value || typeof value !== "object") return false;
   const record = value as Record<string, unknown>;
@@ -30,19 +48,20 @@ function isValidSharedSections(value: unknown): value is SharedCmsSections {
 }
 
 export async function fetchSharedCmsSections(locale = "pt"): Promise<SharedCmsSections> {
+  const localeFallback = sharedDefaults[locale as Lang] ?? defaultSharedCmsSections;
   try {
     const response = await fetch(`/api/cms/shared?locale=${locale}`);
     if (!response.ok) {
-      return defaultSharedCmsSections;
+      return localeFallback;
     }
 
     const payload = (await response.json()) as SharedCmsResponse;
     if (isValidSharedSections(payload.shared)) {
-      return payload.shared;
+      return mergeWithFallback(payload.shared, localeFallback);
     }
-    return defaultSharedCmsSections;
+    return localeFallback;
   } catch {
-    return defaultSharedCmsSections;
+    return localeFallback;
   }
 }
 

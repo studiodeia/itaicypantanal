@@ -60,8 +60,7 @@ export const PantanalHeroSection = (): JSX.Element => {
             {homeHero.heading}
             {homeHero.headingAccent && (
               <span
-                className="block"
-                style={{ color: "#a88b56" }}
+                className="block text-[#d7a45d]"
               >
                 {homeHero.headingAccent}
               </span>

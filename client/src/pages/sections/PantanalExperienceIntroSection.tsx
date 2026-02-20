@@ -25,7 +25,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
             {homeManifesto.label}
           </motion.p>
 
-          <motion.h1
+          <motion.h2
             variants={fadeUp}
             className="w-full text-left [font-family:'Playfair_Display',Helvetica] font-normal text-[length:var(--display-lg-font-size)] tracking-[0] leading-[var(--display-lg-line-height)]"
             data-testid="text-manifesto-heading"
@@ -39,7 +39,7 @@ export const PantanalExperienceIntroSection = (): JSX.Element => {
                 {segment.text}
               </span>
             ))}
-          </motion.h1>
+          </motion.h2>
 
           <Button
             variant="ghost"

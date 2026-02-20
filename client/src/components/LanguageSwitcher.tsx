@@ -55,7 +55,7 @@ export function LanguageSwitcher({ open, onOpenChange, children }: LanguageSwitc
   return (
     <div
       ref={containerRef}
-      className="relative"
+      className={cn("relative", open && "z-[70]")}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={scheduleClose}
     >

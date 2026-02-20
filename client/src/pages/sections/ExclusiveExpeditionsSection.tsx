@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, LayoutGroup } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronRightIcon } from "@/lib/icons";
-import { Card, CardContent } from "@/components/ui/card";
 import { fadeIn, fadeUp, stagger, cardItem, viewport, ease } from "@/lib/motion";
 import type { HomePageContent } from "@shared/cms-page-content";
 
 const defaultExpeditionsContent: HomePageContent["expeditions"] = {
   label: "NOSSOS SERVIÇOS",
-  heading: "Experiências no Coração do Pantanal",
+  heading: "Expedições Exclusivas no Coração do Pantanal",
   description:
     "Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição.",
   items: [
@@ -52,7 +51,8 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
 
   return (
     <section className="flex flex-col items-center justify-end w-full bg-[#344e41]">
-      <div className="flex flex-col max-w-[1440px] items-center justify-end gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-10 py-12 md:py-16 lg:py-[100px] w-full">
+      <div className="flex flex-col max-w-[1440px] items-center gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
+        {/* Section header */}
         <motion.header variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full">
           <motion.p variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" data-testid="text-services-label">
             {content.label}
@@ -69,35 +69,48 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
           </div>
         </motion.header>
 
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-6 lg:gap-[32px]">
-          {content.items.map((expedition, index) => {
-            const isActive = activeIndex === index;
+        {/* Cards — LayoutGroup coordena a transição de flex entre os cards */}
+        <LayoutGroup>
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex flex-col md:flex-row w-full items-stretch gap-4 md:gap-6 lg:gap-[32px]">
+            {content.items.map((expedition, index) => {
+              const isActive = activeIndex === index;
 
-            return (
-              <motion.div
-                key={index}
-                variants={cardItem}
-                className={`w-full transition-[width,flex-grow] duration-500 ease-out ${
-                  isActive
-                    ? "lg:w-[420px] xl:w-[500px] lg:flex-shrink-0"
-                    : "lg:flex-1 lg:min-w-0"
-                }`}
-                onMouseEnter={() => setActiveIndex(index)}
-              >
-                <Link href={expedition.href ?? expeditionHrefFallback[expedition.title] ?? "#"} className="block no-underline w-full h-full">
-                  <Card
-                    className="w-full h-[464px] md:h-[500px] lg:h-[500px] xl:h-[664px] rounded-lg overflow-hidden border-0 bg-center bg-cover bg-no-repeat cursor-pointer"
-                    style={{ backgroundImage: `linear-gradient(0deg, rgba(21,34,24,0.5) 0%, rgba(21,34,24,0) 100%), linear-gradient(0deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.32) 100%), url(${expedition.backgroundImage})` }}
-                    data-testid={`card-expedition-${index}`}
-                  >
-                    <CardContent className="flex flex-col justify-end h-full p-5 md:p-6 lg:p-[32px]">
-                      <div className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[40px]">
-                        <div className="flex flex-col items-start gap-3 md:gap-5 lg:gap-[20px] w-full">
+              return (
+                <motion.div
+                  key={index}
+                  variants={cardItem}
+                  layout
+                  className={`w-full min-w-0 ${isActive ? "lg:flex-[2]" : "lg:flex-[1]"}`}
+                  transition={{ layout: { duration: 0.45, ease: [0.25, 0.4, 0.25, 1] } }}
+                  onMouseEnter={() => setActiveIndex(index)}
+                >
+                  <Link href={expedition.href ?? expeditionHrefFallback[expedition.title] ?? "#"} className="block no-underline w-full h-full">
+                    {/* Card — bg escuro + imagem a 20% opacity + gradiente na base */}
+                    <div
+                      className="relative w-full h-[464px] md:h-[560px] lg:h-[740px] rounded-[8px] overflow-hidden flex flex-col justify-end cursor-pointer bg-[#152218]"
+                      data-testid={`card-expedition-${index}`}
+                    >
+                      {/* Imagem de fundo a 20% opacity */}
+                      <div
+                        className="absolute inset-0 bg-cover bg-center opacity-20"
+                        style={{ backgroundImage: `url(${expedition.backgroundImage})` }}
+                        aria-hidden="true"
+                      />
+                      {/* Gradiente: escuro na base, transparente no topo */}
+                      <div
+                        className="absolute inset-0"
+                        style={{ background: "linear-gradient(to top, rgba(21,34,24,0.88) 33%, rgba(21,34,24,0) 75%)" }}
+                        aria-hidden="true"
+                      />
+
+                      {/* Conteúdo */}
+                      <div className="relative flex flex-col gap-6 md:gap-8 lg:gap-[40px] items-start p-5 md:p-6 lg:p-[32px] w-full">
+                        <div className="flex flex-col items-start gap-3 md:gap-4 lg:gap-[20px] w-full">
                           <h3 className="font-heading-md font-[number:var(--heading-md-font-weight)] text-[#e3f7ec] text-[length:var(--heading-md-font-size)] tracking-[var(--heading-md-letter-spacing)] leading-[var(--heading-md-line-height)] [font-style:var(--heading-md-font-style)]">
                             {expedition.title}
                           </h3>
 
-                          {/* Description — Framer Motion height:"auto" on desktop, CSS !important override keeps visible on mobile */}
+                          {/* Descrição: animada por height/opacity ao mudar o card ativo */}
                           <motion.div
                             data-expedition-desc
                             className="overflow-hidden"
@@ -111,29 +124,34 @@ export const ExclusiveExpeditionsSection = ({ content: contentProp }: Props): JS
                               opacity: { duration: 0.3, delay: isActive ? 0.1 : 0, ease },
                             }}
                           >
-                            <p className="max-w-[355px] font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
+                            <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)]">
                               {expedition.description}
                             </p>
                           </motion.div>
                         </div>
 
+                        {/* Botão: borda completa no card ativo, sem borda nos inativos (desktop) */}
                         <div
-                          className="flex items-center justify-between w-full py-3 md:py-4 lg:h-[56px] lg:py-[12px] px-0 lg:px-[24px] border-b lg:border-b-0 border-[#f2fcf7] rounded-none lg:rounded-[6px]"
+                          className={`flex items-center gap-[8px] w-full py-3 md:py-4 lg:h-[56px] lg:py-[12px] lg:px-[24px] rounded-none lg:rounded-[6px] ${
+                            isActive
+                              ? "border border-[#f2fcf7] lg:border lg:border-[#f2fcf7]"
+                              : "border-b border-[#f2fcf7] lg:border-0"
+                          }`}
                           data-testid={`button-expedition-details-${index}`}
                         >
-                          <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] lg:text-[#f2fcf7] text-[length:var(--functional-md-font-size)] lg:text-[24px] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] lg:leading-[32px] [font-style:var(--functional-md-font-style)] lg:font-[number:var(--functional-lg-font-weight)]">
+                          <span className="flex-1 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#f2fcf7] text-[length:var(--functional-md-font-size)] lg:text-[24px] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] lg:leading-[32px] [font-style:var(--functional-md-font-style)] lg:font-[number:var(--functional-lg-font-weight)] lg:whitespace-nowrap">
                             {content.buttonText}
                           </span>
-                          <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-[#e3f7ec] lg:text-[#f2fcf7]" />
+                          <ChevronRightIcon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-[#f2fcf7]" />
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </LayoutGroup>
       </div>
     </section>
   );

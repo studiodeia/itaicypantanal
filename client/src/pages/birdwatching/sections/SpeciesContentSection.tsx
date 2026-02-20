@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Shield, Ruler, MapPin, Camera } from "@/lib/icons";
 import { fadeUp, scaleIn, viewport } from "@/lib/motion";
 import type { BirdSpeciesDetail } from "../data";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 interface SpeciesContentSectionProps {
   bird: BirdSpeciesDetail;
@@ -36,7 +34,6 @@ function renderParagraph(text: string) {
 export const SpeciesContentSection = ({
   bird,
 }: SpeciesContentSectionProps): JSX.Element => {
-  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#fcf4ed]">
       <div className="flex flex-col max-w-[1440px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -52,7 +49,7 @@ export const SpeciesContentSection = ({
             <Shield className="w-6 h-6 text-[#ac8042] shrink-0" />
             <div className="flex flex-col gap-1">
               <span className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[#446354] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)]">
-                {t("speciesDetail", "conservationStatus", lang)}
+                Status de Conservação
               </span>
               <span className="font-['Lato',Helvetica] font-bold text-[#263a30] text-base">
                 {bird.conservationStatus}
@@ -69,7 +66,7 @@ export const SpeciesContentSection = ({
             whileInView="visible"
             viewport={viewport}
           >
-            {t("speciesDetail", "overview", lang)}
+            Visão Geral
           </motion.h2>
           <motion.div
             className="flex flex-col gap-6 md:gap-8"
@@ -93,7 +90,7 @@ export const SpeciesContentSection = ({
               <div className="flex items-center gap-3">
                 <Ruler className="w-5 h-5 text-[#ac8042]" />
                 <span className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[#446354] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)]">
-                  {t("speciesDetail", "size", lang)}
+                  Tamanho
                 </span>
               </div>
               <span className="font-['Lato',Helvetica] font-normal text-[#263a30] text-sm leading-relaxed">
@@ -104,7 +101,7 @@ export const SpeciesContentSection = ({
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[#ac8042]" />
                 <span className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[#446354] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)]">
-                  {t("speciesDetail", "habitat", lang)}
+                  Habitat
                 </span>
               </div>
               <span className="font-['Lato',Helvetica] font-normal text-[#263a30] text-sm leading-relaxed">
@@ -122,7 +119,7 @@ export const SpeciesContentSection = ({
             whileInView="visible"
             viewport={viewport}
           >
-            {t("speciesDetail", "dietFeeding", lang)}
+            Dieta e Alimentação
           </motion.h2>
           <motion.div
             className="flex flex-col gap-6 md:gap-8"
@@ -143,7 +140,7 @@ export const SpeciesContentSection = ({
             whileInView="visible"
             viewport={viewport}
           >
-            {t("speciesDetail", "behavior", lang)}
+            Comportamento
           </motion.h2>
           <motion.div
             className="flex flex-col gap-6 md:gap-8"
@@ -164,7 +161,7 @@ export const SpeciesContentSection = ({
             whileInView="visible"
             viewport={viewport}
           >
-            {t("speciesDetail", "bestTime", lang)}
+            Melhor Época para Observação
           </motion.h2>
           <motion.div
             className="flex flex-col gap-6 md:gap-8"
@@ -187,7 +184,7 @@ export const SpeciesContentSection = ({
             <div className="flex items-center gap-3">
               <Camera className="w-5 h-5 text-[#ac8042]" />
               <span className="font-['Lato',Helvetica] font-bold text-[#263a30] text-base">
-                {t("speciesDetail", "photographyTips", lang)}
+                Dicas de fotografia
               </span>
             </div>
             <ul className="list-disc ml-6 flex flex-col gap-2">

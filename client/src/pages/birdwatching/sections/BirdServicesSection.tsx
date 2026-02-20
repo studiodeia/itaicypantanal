@@ -5,6 +5,7 @@ import { BirdImage } from "@/components/BirdImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { stagger, fadeIn, fadeUp, cardItem, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
 import { getBirdUrl } from "../cms";
 import { allBirds as fallbackAllBirds } from "../data";
 import type { BirdSpecies } from "../data";
@@ -16,6 +17,7 @@ interface BirdServicesSectionProps {
 export const BirdServicesSection = ({
   birds = fallbackAllBirds,
 }: BirdServicesSectionProps): JSX.Element => {
+  const { lang } = useLanguage();
   const birdSpecies = birds.slice(0, 4);
 
   return (
@@ -101,6 +103,7 @@ export const BirdServicesSection = ({
           </div>
           <a
             href={buildCloudbedsBookingUrl({
+              locale: lang,
               utmContent: "birdwatching_section_agendar_expedicao",
             })}
             className={`${goldButtonClass} shrink-0`}

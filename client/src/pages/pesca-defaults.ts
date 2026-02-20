@@ -6,7 +6,7 @@ const pt: PescaPageContent = {
     label: "PESCA ESPORTIVA",
     heading: "Pesca Esportiva Cota Zero no Coração do Pantanal",
     subtitle:
-      "Pioneiros no pesque e solte no Pantanal desde 2010. Navegue pelos rios do Miranda com guias nativos que dominam cada corredeira, poção e ponto de emboscada do Dourado.",
+      "Pioneiros no pesque e solte no Pantanal desde 2010. Navegue pelo Rio Cuiabá com guias nativos que dominam cada corredeira, poção e ponto de emboscada do Dourado.",
     scrollHint: "Deslize para baixo",
     backgroundImage: "/images/pesca-hero-bg.webp",
   },
@@ -63,9 +63,9 @@ const pt: PescaPageContent = {
       },
       {
         iconName: "Sailboat",
-        title: "Rio Miranda Preservado",
+        title: "Rio Cuiabá Preservado",
         description:
-          "Pescamos em rios onde a biodiversidade é monitorada e os peixes crescem em equilíbrio natural, com acesso facilitado a apenas 3h de Campo Grande.",
+          "Pescamos em rios onde a biodiversidade é monitorada e os peixes crescem em equilíbrio natural, com acesso facilitado a apenas 1h de Cuiabá.",
       },
       {
         iconName: "Fish",
@@ -84,13 +84,13 @@ const pt: PescaPageContent = {
       {
         title: "Pintado",
         description:
-          "O maior predador dos rios pantaneiros. O pintado (surubim) pode ultrapassar 20 quilos e é famoso por sua resistência e batalhas memoráveis nas profundezas do Rio Miranda.",
+          "O maior predador dos rios pantaneiros. O pintado (surubim) pode ultrapassar 20 quilos e é famoso por sua resistência e batalhas memoráveis nas profundezas do Rio Cuiabá.",
         image: "/images/pesca-fish-1",
       },
       {
         title: "Piraputanga",
         description:
-          "Endêmica do Rio Miranda, a piraputanga é ágil, agressiva e desafiadora com iscas artificiais. Um troféu menor em tamanho, mas imbatível em adrenalina.",
+          "Endêmica do Rio Cuiabá, a piraputanga é ágil, agressiva e desafiadora com iscas artificiais. Um troféu menor em tamanho, mas imbatível em adrenalina.",
         image: "/images/pesca-fish-2",
       },
       {
@@ -153,7 +153,7 @@ const en: PescaPageContent = {
     label: "SPORT FISHING",
     heading: "Catch-and-Release Sport Fishing in the Heart of the Pantanal",
     subtitle:
-      "Pioneers in catch-and-release in the Pantanal since 2010. Navigate the Miranda River system with native guides who know every current, pool, and Dourado ambush point.",
+      "Pioneers in catch-and-release in the Pantanal since 2010. Navigate the Rio Cuiabá with native guides who know every current, pool, and Dourado ambush point.",
     scrollHint: "Scroll down",
     backgroundImage: "/images/pesca-hero-bg.webp",
   },
@@ -210,9 +210,9 @@ const en: PescaPageContent = {
       },
       {
         iconName: "Sailboat",
-        title: "Preserved Miranda River",
+        title: "Preserved Rio Cuiabá",
         description:
-          "We fish in rivers where biodiversity is monitored and fish thrive in natural balance, with easy access just 3h from Campo Grande.",
+          "We fish in rivers where biodiversity is monitored and fish thrive in natural balance, with easy access just 1h from Cuiabá.",
       },
       {
         iconName: "Fish",
@@ -231,13 +231,13 @@ const en: PescaPageContent = {
       {
         title: "Pintado",
         description:
-          "The largest predator of the Pantanal rivers. The pintado (surubim) can exceed 20 kilos and is famous for its endurance and memorable battles in the depths of the Miranda River.",
+          "The largest predator of the Pantanal rivers. The pintado (surubim) can exceed 20 kilos and is famous for its endurance and memorable battles in the depths of the Rio Cuiabá.",
         image: "/images/pesca-fish-1",
       },
       {
         title: "Piraputanga",
         description:
-          "Endemic to the Miranda River, the piraputanga is agile, aggressive, and thrilling on artificial lures. A smaller trophy in size, but unbeatable in adrenaline.",
+          "Endemic to the Rio Cuiabá, the piraputanga is agile, aggressive, and thrilling on artificial lures. A smaller trophy in size, but unbeatable in adrenaline.",
         image: "/images/pesca-fish-2",
       },
       {
@@ -300,7 +300,7 @@ const es: PescaPageContent = {
     label: "PESCA DEPORTIVA",
     heading: "Pesca Deportiva Captura y Suelta en el Corazón del Pantanal",
     subtitle:
-      "Pioneros en la pesca captura y suelta en el Pantanal desde 2010. Navega por los ríos del Miranda con guías nativos que conocen cada corriente, pozo y punto de emboscada del Dourado.",
+      "Pioneros en la pesca captura y suelta en el Pantanal desde 2010. Navega por el Río Cuiabá con guías nativos que conocen cada corriente, pozo y punto de emboscada del Dourado.",
     scrollHint: "Desliza hacia abajo",
     backgroundImage: "/images/pesca-hero-bg.webp",
   },
@@ -357,9 +357,9 @@ const es: PescaPageContent = {
       },
       {
         iconName: "Sailboat",
-        title: "Río Miranda Preservado",
+        title: "Río Cuiabá Preservado",
         description:
-          "Pescamos en ríos donde la biodiversidad es monitoreada y los peces crecen en equilibrio natural, con acceso fácil a solo 3h de Campo Grande.",
+          "Pescamos en ríos donde la biodiversidad es monitoreada y los peces crecen en equilibrio natural, con acceso fácil a solo 1h de Cuiabá.",
       },
       {
         iconName: "Fish",
@@ -378,13 +378,13 @@ const es: PescaPageContent = {
       {
         title: "Pintado",
         description:
-          "El mayor depredador de los ríos pantaneros. El pintado (surubim) puede superar los 20 kilos y es famoso por su resistencia y batallas memorables en las profundidades del río Miranda.",
+          "El mayor depredador de los ríos pantaneros. El pintado (surubim) puede superar los 20 kilos y es famoso por su resistencia y batallas memorables en las profundidades del Río Cuiabá.",
         image: "/images/pesca-fish-1",
       },
       {
         title: "Piraputanga",
         description:
-          "Endémica del río Miranda, la piraputanga es ágil, agresiva y desafiante con señuelos artificiales. Un trofeo menor en tamaño, pero insuperable en adrenalina.",
+          "Endémica del Río Cuiabá, la piraputanga es ágil, agresiva y desafiante con señuelos artificiales. Un trofeo menor en tamaño, pero insuperable en adrenalina.",
         image: "/images/pesca-fish-2",
       },
       {

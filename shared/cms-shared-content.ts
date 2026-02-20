@@ -1,3 +1,5 @@
+import type { CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "./cms-page-content";
+
 export type FooterLink = {
   label: string;
   href: string;
@@ -77,6 +79,9 @@ export type SharedCmsSections = {
     segments: HomeManifestoSegment[];
     detailsButtonLabel: string;
   };
+  authors?: CmsAuthorProfile[];
+  seasonalEvents?: CmsSeasonalEvent[];
+  aggregateRating?: CmsAggregateRating;
 };
 
 export const defaultSharedCmsSections: SharedCmsSections = {
@@ -174,11 +179,11 @@ export const defaultSharedCmsSections: SharedCmsSections = {
       { label: "Ecoturismo Imersivo", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
-      { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
+      { icon: "/images/icons/mail.png", text: "contato@itaicypantanal.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Pantanal Sul-Mato-Grossense, Mato Grosso do Sul, Brasil",
+        text: "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000",
       },
     ],
     legalLinks: [

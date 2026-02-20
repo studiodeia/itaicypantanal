@@ -33,7 +33,12 @@ type CmsSeed = {
 };
 
 let cachedSeed: CmsSeed | null = null;
+let cachedSeedExpiresAt = 0;
 let cachedAgentConfigSeed: AgentConfig | null = null;
+
+// In development: re-read the seed file every 10 seconds so changes to
+// full-seed.json are picked up without restarting the server.
+const SEED_TTL_MS = process.env.NODE_ENV === "production" ? Infinity : 10_000;
 
 /** Strip BOM, U+FFFD and other non-JSON leading bytes from a string */
 function stripLeadingNonJson(text: string): string {
@@ -46,7 +51,7 @@ function stripLeadingNonJson(text: string): string {
 }
 
 export async function loadCmsSeed(): Promise<CmsSeed> {
-  if (cachedSeed) {
+  if (cachedSeed && Date.now() < cachedSeedExpiresAt) {
     return cachedSeed;
   }
 
@@ -67,6 +72,7 @@ export async function loadCmsSeed(): Promise<CmsSeed> {
   }
 
   cachedSeed = seed;
+  cachedSeedExpiresAt = Date.now() + SEED_TTL_MS;
   return cachedSeed;
 }
 
@@ -94,5 +100,6 @@ export async function loadAgentConfigSeed(): Promise<AgentConfig> {
 
 export function clearCmsSeedCache() {
   cachedSeed = null;
+  cachedSeedExpiresAt = 0;
   cachedAgentConfigSeed = null;
 }

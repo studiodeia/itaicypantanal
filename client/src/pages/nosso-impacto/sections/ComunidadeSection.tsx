@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeIn, fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
 type Props = { content: NossoImpactoPageContent["comunidade"] };
 
 export const ComunidadeSection = ({ content }: Props): JSX.Element => {
-  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#344e41]">
       <div className="flex flex-col lg:flex-row max-w-[1440px] gap-12 lg:gap-[64px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full items-center">
@@ -36,7 +33,7 @@ export const ComunidadeSection = ({ content }: Props): JSX.Element => {
           className="flex flex-col gap-6 md:gap-8 w-full lg:w-1/2"
         >
           <motion.span variants={fadeIn} className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#d7a45d] text-[length:var(--lead-md-font-size)] tracking-[3.84px] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)] uppercase">
-            {t("impact", "community", lang)}
+            COMUNIDADE & RAÍZES
           </motion.span>
 
           <motion.h2
@@ -59,7 +56,7 @@ export const ComunidadeSection = ({ content }: Props): JSX.Element => {
                 100%
               </span>
               <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#a8cab9] text-[length:var(--functional-md-font-size)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-                {t("impact", "localGuides", lang)}
+                Dos guias são moradores da região
               </span>
             </div>
           </motion.div>

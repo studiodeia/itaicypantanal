@@ -5,14 +5,11 @@ import { NavHeader } from "@/components/NavHeader";
 import { ProgressiveVideo } from "@/components/ProgressiveVideo";
 import { Divider } from "@/components/Divider";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import type { CmsHero } from "@shared/cms-page-content";
 
 type Props = { content: CmsHero };
 
 export const AccommodationsHeroSection = ({ content }: Props): JSX.Element => {
-  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -95,7 +92,7 @@ export const AccommodationsHeroSection = ({ content }: Props): JSX.Element => {
 
             <div className="hidden md:flex items-center gap-2 text-[#a8cab9]">
               <span className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)] whitespace-nowrap">
-                {content.scrollHint ?? t("common", "scrollDown", lang)}
+                {content.scrollHint ?? "Deslize para baixo"}
               </span>
               <ChevronDown className="w-4 h-4 animate-bounce" />
             </div>

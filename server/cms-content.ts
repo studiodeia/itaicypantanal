@@ -2,6 +2,7 @@ import { loadAgentConfigSeed, loadCmsSeed } from "./cms-seed";
 import { defaultSharedCmsSections } from "../shared/cms-shared-content";
 import type { AgentConfig } from "../shared/agent-config";
 import { mapPayloadAgentConfigToAgentConfig } from "../shared/agent-config-payload";
+import type { CmsSeo, CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "../shared/cms-page-content.js";
 
 type AnyDoc = Record<string, unknown>;
 
@@ -93,39 +94,57 @@ function stripPayloadMeta(obj: AnyDoc): AnyDoc {
   return result;
 }
 
+function extractSeoFromGlobal(raw: Record<string, unknown>): CmsSeo {
+  const meta = (raw.meta || {}) as Record<string, unknown>;
+  const image = meta.image as Record<string, unknown> | undefined;
+  return {
+    metaTitle: typeof meta.title === "string" && meta.title ? meta.title : undefined,
+    metaDescription: typeof meta.description === "string" && meta.description ? meta.description : undefined,
+    ogImage: image?.url
+      ? String(image.url)
+      : typeof meta.image === "string" && meta.image
+      ? meta.image
+      : undefined,
+    noIndex: typeof meta.noIndex === "boolean" ? meta.noIndex : false,
+    canonicalUrl: typeof meta.canonicalUrl === "string" && meta.canonicalUrl ? meta.canonicalUrl : undefined,
+  };
+}
+
 /** Route-specific transformation from Payload global shape to frontend-expected shape */
 function transformGlobalToPageContent(route: string, raw: AnyDoc): Record<string, unknown> {
   const data = stripPayloadMeta(raw);
+
+  const seo = extractSeoFromGlobal(raw);
 
   switch (route) {
     case "/": {
       const aboutUs = toRecord(data.aboutUs);
       if (aboutUs) aboutUs.body = unwrapTextArray(aboutUs.body);
-      return { ...data, aboutUs };
+      return { ...data, aboutUs, seo };
     }
     case "/culinaria": {
       const menu = toRecord(data.menu);
       if (menu) menu.body = unwrapTextArray(menu.body);
       const experience = toRecord(data.experience);
       if (experience) experience.body = unwrapTextArray(experience.body);
-      return { ...data, menu, experience };
+      return { ...data, menu, experience, seo };
     }
     case "/pesca":
     case "/ecoturismo":
     case "/observacao-de-aves": {
       const sobreNos = toRecord(data.sobreNos);
       if (sobreNos) sobreNos.body = unwrapTextArray(sobreNos.body);
-      return { ...data, sobreNos };
+      return { ...data, sobreNos, seo };
     }
     case "/contato": {
       const steps = toRecord(data.steps);
       if (steps) steps.placeholders = unwrapTextArray(steps.placeholders);
-      return { ...data, steps };
+      return { ...data, steps, seo };
     }
     case "/nosso-impacto": {
       const comunidade = toRecord(data.comunidade);
       if (comunidade) comunidade.body = unwrapTextArray(comunidade.body);
-      return { ...data, comunidade };
+      return { ...data, comunidade, seo };
     }
     case "/politica-de-privacidade": {
       const sections = Array.isArray(data.sections)
@@ -134,10 +153,10 @@ function transformGlobalToPageContent(route: string, raw: AnyDoc): Record<string
             content: unwrapTextArray(s.content),
           }))
         : data.sections;
-      return { ...data, sections };
+      return { ...data, sections, seo };
     }
     default:
-      return data;
+      return { ...data, seo };
   }
 }
 
@@ -211,6 +230,35 @@ function buildSharedFromStructuredSettings(
         : [],
       copyright: str(settings.footerCopyright),
     },
+    authors: Array.isArray(settings.authors)
+      ? settings.authors.map((a: AnyDoc): CmsAuthorProfile => ({
+          name: str(a.name),
+          jobTitle: str(a.jobTitle) || undefined,
+          knowsAbout: Array.isArray(a.knowsAbout)
+            ? a.knowsAbout.map((k: AnyDoc) => str(k.topic)).filter(Boolean)
+            : undefined,
+          url: str(a.url) || undefined,
+          image: str(a.image) || undefined,
+        }))
+      : [],
+    seasonalEvents: Array.isArray(settings.seasonalEvents)
+      ? settings.seasonalEvents.map((e: AnyDoc): CmsSeasonalEvent => ({
+          name: str(e.name),
+          description: str(e.description) || undefined,
+          startDate: str(e.startDate) || undefined,
+          endDate: str(e.endDate) || undefined,
+          image: str(e.image) || undefined,
+        }))
+      : [],
+    aggregateRating: (() => {
+      const ar = settings.aggregateRating as AnyDoc | undefined;
+      if (!ar || typeof ar.ratingValue !== "number") return undefined;
+      return {
+        ratingValue: ar.ratingValue,
+        reviewCount: typeof ar.reviewCount === "number" ? ar.reviewCount : undefined,
+        bestRating: typeof ar.bestRating === "number" ? ar.bestRating : 5,
+      } satisfies CmsAggregateRating;
+    })(),
   };
 }
 

@@ -1,3 +1,33 @@
+export interface CmsSeo {
+  metaTitle?: string;
+  metaDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  canonicalUrl?: string;
+}
+
+export interface CmsAuthorProfile {
+  name: string;
+  jobTitle?: string;
+  knowsAbout?: string[];
+  url?: string;
+  image?: string;
+}
+
+export interface CmsSeasonalEvent {
+  name: string;
+  description?: string;
+  startDate?: string;
+  endDate?: string;
+  image?: string;
+}
+
+export interface CmsAggregateRating {
+  ratingValue?: number;
+  reviewCount?: number;
+  bestRating?: number;
+}
+
 // === Reusable field types ===
 export type CmsFeature = {
   number: string;
@@ -163,6 +193,7 @@ export type HomePageContent = {
     buttonText: string;
   };
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type AcomodacoesPageContent = {
@@ -179,6 +210,7 @@ export type AcomodacoesPageContent = {
     ctaHref: string;
   };
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type CulinariaPageContent = {
@@ -196,6 +228,7 @@ export type CulinariaPageContent = {
     image: string;
   };
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type PescaPageContent = {
@@ -205,6 +238,7 @@ export type PescaPageContent = {
   highlights: CmsHighlights;
   services: CmsServices;
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type EcoturismoPageContent = {
@@ -214,6 +248,7 @@ export type EcoturismoPageContent = {
   highlights: CmsHighlights;
   services: CmsServices;
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type BirdwatchingPageContent = {
@@ -222,6 +257,7 @@ export type BirdwatchingPageContent = {
   sobreNos: CmsSobreNos;
   highlights: CmsHighlights;
   faq?: CmsFaq;
+  seo?: CmsSeo;
 };
 
 export type ContatoPageContent = {
@@ -235,6 +271,7 @@ export type ContatoPageContent = {
   };
   channels: { heading: string; items: CmsContactChannel[] };
   mapCoords: { lat: number; lng: number };
+  seo?: CmsSeo;
 };
 
 export type NossoImpactoPageContent = {
@@ -266,16 +303,19 @@ export type NossoImpactoPageContent = {
     description: string;
     buttonText: string;
   };
+  seo?: CmsSeo;
 };
 
 export type PrivacidadePageContent = {
   hero: { title: string; lastUpdated: string };
   sections: CmsPrivacySection[];
+  seo?: CmsSeo;
 };
 
 export type NotFoundPageContent = {
   hero: CmsHero;
   buttonText: string;
+  seo?: CmsSeo;
 };
 
 // === Regiao (region) page ===

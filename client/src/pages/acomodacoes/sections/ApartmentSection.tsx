@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ChevronRight, type LucideIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import { fadeUp, scaleIn, stagger, viewport } from "@/lib/motion";
+import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
+import { useLanguage } from "@/i18n/context";
 
 interface ApartmentFeature {
   icon: LucideIcon;
@@ -25,6 +27,7 @@ export const ApartmentSection = ({
   ctaText = "Verificar disponibilidade",
   imagePosition = "left",
 }: ApartmentSectionProps): JSX.Element => {
+  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full">
       <div className="flex flex-col max-w-[1440px] items-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -78,7 +81,9 @@ export const ApartmentSection = ({
             <div className="flex flex-col gap-6 pt-2">
               <div className="w-full h-px bg-[rgba(168,202,185,0.2)]" />
               <a
-                href="#"
+                href={buildCloudbedsBookingUrl({ locale: lang, utmContent: "acomodacoes_section_verificar_disponibilidade" })}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="link-hover inline-flex items-center gap-2 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] w-fit group"
                 data-testid={`link-apartment-cta-${title.toLowerCase().replace(/\s+/g, "-")}`}
               >

@@ -102,11 +102,11 @@ const enSharedCmsSections: SharedCmsSections = {
       { label: "Immersive Ecotourism", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
-      { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
+      { icon: "/images/icons/mail.png", text: "contato@itaicypantanal.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "South Mato Grosso Pantanal, Mato Grosso do Sul, Brazil",
+        text: "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000",
       },
     ],
     legalLinks: [
@@ -252,11 +252,11 @@ const esSharedCmsSections: SharedCmsSections = {
       { label: "Ecoturismo Inmersivo", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (67) 99999-9999" },
-      { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
+      { icon: "/images/icons/mail.png", text: "contato@itaicypantanal.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Pantanal del Sur del Mato Grosso, Mato Grosso do Sul, Brasil",
+        text: "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000",
       },
     ],
     legalLinks: [

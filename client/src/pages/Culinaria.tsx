@@ -1,8 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { culinariaDefaults } from "./culinaria-defaults";
 import { CulinaryHeroSection } from "./culinaria/sections/CulinaryHeroSection";
 import { CulinaryManifestoSection } from "./culinaria/sections/CulinaryManifestoSection";
@@ -18,7 +16,6 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Culinaria = (): JSX.Element => {
   const cms = usePageCms("/culinaria", culinariaDefaults);
-  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
@@ -35,12 +32,12 @@ export const Culinaria = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "culinariaTitle", lang)}
-        description={t("pageMeta", "culinariaDesc", lang)}
+        title="Culinária Pantaneira"
+        description="Sabores autênticos do Pantanal preparados com ingredientes regionais. Gastronomia regional que conecta você à cultura e à natureza."
         canonicalPath="/culinaria"
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadCulinaria", lang), path: "/culinaria" },
+          { name: "Início", path: "/" },
+          { name: "Culinária", path: "/culinaria" },
         ]}
       />
       <JsonLd data={tourSchema} />
@@ -49,7 +46,7 @@ export const Culinaria = (): JSX.Element => {
       <CulinaryManifestoSection content={cms.manifesto} />
       <CulinaryHighlightsSection content={cms.highlights} />
       <CulinaryExperienceSection content={cms.experience} />
-      <CulinaryMenuSection content={cms.menu} />
+      <CulinaryMenuSection content={cms.menu} buttonText={cms.services?.buttonText} />
       <CulinaryServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
       <AccommodationsCrossSellSection content={cms.crossSell} />

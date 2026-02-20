@@ -1,8 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { birdwatchingDefaults } from "./birdwatching-defaults";
 import { BirdHeroSection } from "./birdwatching/sections/BirdHeroSection";
 import { BirdManifestoSection } from "./birdwatching/sections/BirdManifestoSection";
@@ -18,16 +16,15 @@ import { useBirdCmsData } from "./birdwatching/cms";
 export const BirdWatching = (): JSX.Element => {
   const birdData = useBirdCmsData();
   const cms = usePageCms("/observacao-de-aves", birdwatchingDefaults);
-  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
     : null;
 
   const tourSchema = buildTourProduct({
-    name: "Observacao de Aves no Pantanal — Itaicy Eco Lodge",
+    name: "Observação de Aves no Pantanal — Itaicy Eco Lodge",
     description:
-      "Birdwatching guiado no Pantanal com 166 especies catalogadas. Tuiuiu, arara-azul, tucanos, gavioes e muito mais com guias especializados e roteiros guiados.",
+      "Birdwatching guiado no Pantanal com 166 espécies catalogadas. Tuiuiu, arara-azul, tucanos, gaviões e muito mais com guias especializados e roteiros guiados.",
     url: "/observacao-de-aves",
     image: cms.hero?.backgroundImage,
   });
@@ -35,12 +32,12 @@ export const BirdWatching = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "birdwatchingTitle", lang)}
-        description={t("pageMeta", "birdwatchingDesc", lang)}
+        title="Observacao de Aves"
+        description="Mais de 650 especies de aves no Pantanal. Tuiuiu, arara-azul, tucanos e muito mais. Guias especializados e roteiros guiados de birdwatching."
         canonicalPath="/observacao-de-aves"
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadBirdwatching", lang), path: "/observacao-de-aves" },
+          { name: "Inicio", path: "/" },
+          { name: "Observacao de Aves", path: "/observacao-de-aves" },
         ]}
       />
       <JsonLd data={tourSchema} />
@@ -51,8 +48,8 @@ export const BirdWatching = (): JSX.Element => {
       <BirdHighlightsSection content={cms.highlights} />
       <BirdServicesSection birds={birdData.allBirds} />
       <ImmersionTestimonialsSection />
-      <ImmersionCallToActionSection />
       <FrequentlyAskedQuestionsSection content={cms.faq} />
+      <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>
   );
