@@ -18,8 +18,8 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
         "Hello! Need anything?",
         "I'm here to help!",
       ],
-      hoverLabel: "Chat with AI",
-      ariaLabel: "Open AI chat agent",
+      hoverLabel: "Talk to Itaicy",
+      ariaLabel: "Open Itaicy chat assistant",
     };
   }
 
@@ -31,8 +31,8 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
         "¡Hola! ¿Necesita algo?",
         "¡Estoy aquí para ayudar!",
       ],
-      hoverLabel: "Chatea con la IA",
-      ariaLabel: "Abrir agente de IA",
+      hoverLabel: "Habla con Itaicy",
+      ariaLabel: "Abrir asistente Itaicy",
     };
   }
 
@@ -44,7 +44,7 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
       "Estou aqui para ajudar!",
     ],
     hoverLabel: "Fale com a Itaicy",
-    ariaLabel: "Abrir chat com agente de IA",
+    ariaLabel: "Abrir assistente Itaicy",
   };
 }
 
