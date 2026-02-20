@@ -36,9 +36,9 @@ export function buildLodgingBusiness() {
     "@type": "LodgingBusiness",
     name: SITE_NAME,
     description:
-      "Eco lodge no Pantanal Norte Matogrossense em Santo Antônio do Leverger, MT, a 37 km de Cuiabá. Pesca esportiva catch-and-release cota zero, observacao de 166 especies de aves catalogadas e safaris fotograficos de ecoturismo.",
+      "Eco lodge no Pantanal Norte Matogrossense em Santo Antônio do Leverger, MT, a 61 km de Cuiabá. Pesca esportiva catch-and-release cota zero, observacao de 166 especies de aves catalogadas e safaris fotograficos de ecoturismo.",
     url: origin,
-    telephone: "+55 65 99999-0000",
+    telephone: "+55 65 99640-2380",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Estrada Parque, s/n",
@@ -127,7 +127,7 @@ export function buildOrganization() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+55-65-99999-0000",
+      telephone: "+55-65-99640-2380",
       contactType: "reservations",
       availableLanguage: ["Portuguese", "English", "Spanish"],
     },

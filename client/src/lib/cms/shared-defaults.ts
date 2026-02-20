@@ -102,7 +102,7 @@ const enSharedCmsSections: SharedCmsSections = {
       { label: "Immersive Ecotourism", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (65) 99999-9999" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
       { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
       {
         icon: "/images/icons/location-on.png",
@@ -252,7 +252,7 @@ const esSharedCmsSections: SharedCmsSections = {
       { label: "Ecoturismo Inmersivo", href: "/ecoturismo" },
     ],
     contactInfo: [
-      { icon: "/images/icons/call.png", text: "+55 (65) 99999-9999" },
+      { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
       { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
       {
         icon: "/images/icons/location-on.png",
