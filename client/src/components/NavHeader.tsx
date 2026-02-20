@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/i18n/context";
 import { t } from "@/i18n/ui-strings";
+import { BLOG_ENABLED } from "@/lib/features";
 
 interface MenuItem {
   title: string;
@@ -69,7 +70,8 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
     { key: "experiences", label: t("nav", "experiences", lang), hasDropdown: true, href: "/ecoturismo" },
     { key: "impact", label: t("nav", "impact", lang), hasDropdown: false, href: "/nosso-impacto" },
     { key: "contact", label: t("nav", "contact", lang), hasDropdown: false, href: "/contato" },
-    { key: "blog", label: t("nav", "blog", lang), hasDropdown: true, href: "/blog" },
+    // BLOG: guarded by BLOG_ENABLED feature flag (see client/src/lib/features.ts)
+    ...(BLOG_ENABLED ? [{ key: "blog", label: t("nav", "blog", lang), hasDropdown: true, href: "/blog" }] : []),
   ];
 
   const isDropdownOpen = desktopActiveDropdown !== null && DROPDOWN_KEYS.has(desktopActiveDropdown);

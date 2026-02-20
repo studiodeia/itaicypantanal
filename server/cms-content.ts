@@ -1,4 +1,4 @@
-import { loadAgentConfigSeed, loadCmsSeed } from "./cms-seed";
+import { loadAgentConfigSeed, loadCmsSeed, loadCmsSeedLocale } from "./cms-seed";
 import { defaultSharedCmsSections } from "../shared/cms-shared-content";
 import type { AgentConfig } from "../shared/agent-config";
 import { mapPayloadAgentConfigToAgentConfig } from "../shared/agent-config-payload";
@@ -733,7 +733,7 @@ export async function getCmsContent(rawLocale?: string): Promise<{
     }
   }
 
-  const seedContent = await loadCmsSeed();
+  const seedContent = await loadCmsSeedLocale(locale);
   const normalizedSeedContent: CmsContent = seedContent.shared
     ? seedContent
     : {

@@ -13,6 +13,7 @@ import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { useSharedCmsSections } from "@/lib/cms/shared-content";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
 import { useLanguage } from "@/i18n/context";
+import { BLOG_ENABLED } from "@/lib/features";
 
 const socialLinks = [
   { Icon: Instagram, href: "https://www.instagram.com/pousadaitaicy/", label: "Instagram" },
@@ -61,6 +62,10 @@ function resolveFooterContactIcon(iconPath: string) {
 export const SiteFooterSection = (): JSX.Element => {
   const { lang } = useLanguage();
   const { footer } = useSharedCmsSections();
+  // BLOG: guarded by BLOG_ENABLED feature flag (see client/src/lib/features.ts)
+  const pousadaLinks = BLOG_ENABLED
+    ? footer.pousadaLinks
+    : footer.pousadaLinks.filter((link) => link.href !== "/blog");
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">(
     "idle",
@@ -249,7 +254,7 @@ export const SiteFooterSection = (): JSX.Element => {
                 {footer.pousadaHeading}
               </h3>
               <ul className="flex flex-col gap-2">
-                {footer.pousadaLinks.map((link, index) => (
+                {pousadaLinks.map((link, index) => (
                   <li key={index}>
                     <FooterLink
                       href={link.href}

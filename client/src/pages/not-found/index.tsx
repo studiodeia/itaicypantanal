@@ -4,6 +4,7 @@ import { notFoundDefaults } from "../not-found-defaults";
 import { NotFoundHeroSection } from "./sections/NotFoundHeroSection";
 import { ExclusiveExpeditionsSection } from "@/pages/sections/ExclusiveExpeditionsSection";
 import { PantanalBlogSection } from "@/pages/sections/PantanalBlogSection";
+import { BLOG_ENABLED } from "@/lib/features";
 import { SiteFooterSection } from "@/pages/sections/SiteFooterSection";
 
 export default function NotFound() {
@@ -17,7 +18,8 @@ export default function NotFound() {
       />
       <NotFoundHeroSection content={cms.hero} buttonText={cms.buttonText} />
       <ExclusiveExpeditionsSection />
-      <PantanalBlogSection />
+      {/* BLOG: guarded by BLOG_ENABLED feature flag (see client/src/lib/features.ts) */}
+      {BLOG_ENABLED && <PantanalBlogSection />}
       <SiteFooterSection />
     </div>
   );
