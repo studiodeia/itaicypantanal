@@ -8,6 +8,7 @@
  */
 
 import { getCmsContent } from "./cms-content";
+import type { CmsSeo } from "../shared/cms-page-content.js";
 import {
   delocalizePath,
   detectLangFromPath,
@@ -354,17 +355,46 @@ export async function injectRouteMeta(
   const meta = await getRouteMeta(ptPath);
   if (!meta) return html;
 
-  const fullTitle = meta.title.includes(SITE_NAME)
-    ? meta.title
-    : `${meta.title} | ${SITE_NAME}`;
+  // Mutable copy so CMS SEO data can override hardcoded fallback values
+  const routeMeta: RouteMeta & { noIndex?: boolean } = { ...meta };
 
-  const ogImageUrl = meta.ogImage
-    ? `${baseUrl}${meta.ogImage}`
+  // Try to override with CMS SEO data
+  try {
+    const locale = detectLangFromPath(requestPath);
+    const { content } = await getCmsContent(locale);
+    const pageContent = content?.pageContent?.[ptPath] as Record<string, unknown> | undefined;
+    const cmsSeo = pageContent?.seo as CmsSeo | undefined;
+
+    if (cmsSeo) {
+      if (cmsSeo.metaTitle) routeMeta.title = cmsSeo.metaTitle;
+      if (cmsSeo.metaDescription) routeMeta.description = cmsSeo.metaDescription;
+      if (cmsSeo.ogImage) routeMeta.ogImage = cmsSeo.ogImage;
+      if (typeof cmsSeo.noIndex === "boolean") routeMeta.noIndex = cmsSeo.noIndex;
+    }
+
+    if (cmsSeo && cmsSeo.canonicalUrl) {
+      // Use CMS canonical URL directly — override the auto-constructed one
+      // The canonical is injected later when building meta tags; we store it in routeMeta
+      (routeMeta as unknown as Record<string, unknown>).canonicalUrl = cmsSeo.canonicalUrl;
+    }
+  } catch {
+    // Keep hardcoded fallback — CMS may be unavailable
+  }
+
+  const fullTitle = routeMeta.title.includes(SITE_NAME)
+    ? routeMeta.title
+    : `${routeMeta.title} | ${SITE_NAME}`;
+
+  const ogImageUrl = routeMeta.ogImage
+    ? `${baseUrl}${routeMeta.ogImage}`
     : `${baseUrl}${DEFAULT_OG_IMAGE}`;
 
-  // Canonical points to the localized URL the user requested
+  // Canonical points to the localized URL the user requested,
+  // unless the CMS has provided an explicit canonical URL override.
   const localizedPath = localizePath(ptPath, lang);
-  const canonicalUrl = `${baseUrl}${localizedPath === "/" ? "" : localizedPath}`;
+  const canonicalHref = (routeMeta as unknown as Record<string, unknown>).canonicalUrl as string | undefined
+    || `${baseUrl}${localizedPath === "/" ? "" : localizedPath}`;
+  const canonicalUrl = canonicalHref;
 
   // Replace <title>
   html = html.replace(
@@ -375,7 +405,7 @@ export async function injectRouteMeta(
   // Replace <meta name="description">
   html = html.replace(
     /<meta name="description" content="[^"]*">/,
-    `<meta name="description" content="${escapeHtml(meta.description)}">`,
+    `<meta name="description" content="${escapeHtml(routeMeta.description)}">`,
   );
 
   // hreflang alternates — each language points to its own URL
@@ -398,7 +428,7 @@ export async function injectRouteMeta(
     `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">`,
     hreflangTags,
     `<meta property="og:title" content="${escapeHtml(fullTitle)}">`,
-    `<meta property="og:description" content="${escapeHtml(meta.description)}">`,
+    `<meta property="og:description" content="${escapeHtml(routeMeta.description)}">`,
     `<meta property="og:type" content="website">`,
     `<meta property="og:image" content="${escapeHtml(ogImageUrl)}">`,
     `<meta property="og:url" content="${escapeHtml(canonicalUrl)}">`,
@@ -407,13 +437,13 @@ export async function injectRouteMeta(
     ogLocaleAltTags,
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${escapeHtml(fullTitle)}">`,
-    `<meta name="twitter:description" content="${escapeHtml(meta.description)}">`,
+    `<meta name="twitter:description" content="${escapeHtml(routeMeta.description)}">`,
     `<meta name="twitter:image" content="${escapeHtml(ogImageUrl)}">`,
   ].filter(Boolean);
 
   // Inject per-route JSON-LD schemas
-  if (meta.jsonLd && meta.jsonLd.length > 0) {
-    for (const schema of meta.jsonLd) {
+  if (routeMeta.jsonLd && routeMeta.jsonLd.length > 0) {
+    for (const schema of routeMeta.jsonLd) {
       extraTags.push(
         `<script type="application/ld+json">${JSON.stringify(schema)}</script>`,
       );
@@ -424,8 +454,8 @@ export async function injectRouteMeta(
 
   // Add <noscript> content block for AI crawlers that don't execute JS.
   // Placed inside <div id="root"> so it's replaced when React hydrates.
-  if (meta.noscriptSummary) {
-    const noscriptBlock = `<noscript><article><h1>${escapeHtml(fullTitle)}</h1><p>${escapeHtml(meta.description)}</p><p>${escapeHtml(meta.noscriptSummary)}</p></article></noscript>`;
+  if (routeMeta.noscriptSummary) {
+    const noscriptBlock = `<noscript><article><h1>${escapeHtml(fullTitle)}</h1><p>${escapeHtml(routeMeta.description)}</p><p>${escapeHtml(routeMeta.noscriptSummary)}</p></article></noscript>`;
     html = html.replace(
       '<div id="root"></div>',
       `<div id="root">${noscriptBlock}</div>`,
