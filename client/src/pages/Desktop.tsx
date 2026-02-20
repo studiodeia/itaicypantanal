@@ -18,6 +18,7 @@ import { ImmersionTestimonialsSection } from "./sections/ImmersionTestimonialsSe
 import { NaturalRefugeDescriptionSection } from "./sections/NaturalRefugeDescriptionSection";
 import { ParaQuemSection } from "./sections/ParaQuemSection";
 import { PantanalBlogSection } from "./sections/PantanalBlogSection";
+import { BLOG_ENABLED } from "@/lib/features";
 import { PantanalExperienceIntroSection } from "./sections/PantanalExperienceIntroSection";
 import { PantanalHeroSection } from "./sections/PantanalHeroSection";
 import { PantanalStatsSection } from "./sections/PantanalStatsSection";
@@ -68,7 +69,8 @@ export const Desktop = (): JSX.Element => {
       <NaturalRefugeDescriptionSection content={cms.impact} />
       {cms.paraQuem && <ParaQuemSection content={cms.paraQuem} />}
       <FrequentlyAskedQuestionsSection content={cms.faq} />
-      <PantanalBlogSection content={cms.blog} />
+      {/* BLOG: guarded by BLOG_ENABLED feature flag (see client/src/lib/features.ts) */}
+      {BLOG_ENABLED && <PantanalBlogSection content={cms.blog} />}
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>
