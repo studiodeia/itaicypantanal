@@ -38,6 +38,7 @@ type TranslationBatch = {
 
 async function resolveTranslationPath(locale: string): Promise<string> {
   const candidates = [
+    resolve(process.cwd(), "seed-data", `editorial-batch-1-${locale}.json`),
     resolve(process.cwd(), "..", "docs", "payload-seed", `editorial-batch-1-${locale}.json`),
     resolve(process.cwd(), "docs", "payload-seed", `editorial-batch-1-${locale}.json`),
   ];
@@ -104,9 +105,7 @@ async function importLocale(
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
-async function main() {
-  const payload = await getPayload({ config });
-
+export async function runImportEditorialBatch1Translations(payload: Awaited<ReturnType<typeof getPayload>>) {
   for (const locale of ["en", "es"]) {
     const filePath = await resolveTranslationPath(locale);
     const raw = await readFile(filePath, "utf8");
@@ -115,6 +114,11 @@ async function main() {
   }
 
   console.log("\n✅ Traduções do Editorial Batch 1 importadas com sucesso!");
+}
+
+async function main() {
+  const payload = await getPayload({ config });
+  await runImportEditorialBatch1Translations(payload);
 }
 
 main().catch((error) => {

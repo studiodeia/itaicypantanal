@@ -99,6 +99,7 @@ async function upsertBySlug(
 
 async function resolveBatchPath(): Promise<string> {
   const candidates = [
+    resolve(process.cwd(), "seed-data", "editorial-batch-1.json"),
     resolve(process.cwd(), "..", "docs", "payload-seed", "editorial-batch-1.json"),
     resolve(process.cwd(), "docs", "payload-seed", "editorial-batch-1.json"),
   ];
@@ -117,12 +118,10 @@ async function resolveBatchPath(): Promise<string> {
 
 // ─── Main import ──────────────────────────────────────────────────────────────
 
-async function main() {
+export async function runImportEditorialBatch1(payload: Awaited<ReturnType<typeof getPayload>>) {
   const batchPath = await resolveBatchPath();
   const raw = await readFile(batchPath, "utf8");
   const batch = JSON.parse(raw) as BatchData;
-
-  const payload = await getPayload({ config });
 
   // 1. Upsert blog categories
   console.log("\n📂 Categorias do blog:");
@@ -201,6 +200,11 @@ async function main() {
 
   console.log("\n✅ Editorial Batch 1 importado com sucesso!");
   console.log(`   ${batch.posts.length} artigos | ${batch.categories.length} categorias`);
+}
+
+async function main() {
+  const payload = await getPayload({ config });
+  await runImportEditorialBatch1(payload);
 }
 
 main().catch((error) => {
