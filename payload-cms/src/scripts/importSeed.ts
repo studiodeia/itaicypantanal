@@ -521,9 +521,8 @@ async function importSharedSections(
   console.log("SiteSettings structured fields populated.");
 }
 
-async function main() {
+export async function runImportSeed(payload: Awaited<ReturnType<typeof getPayload>>) {
   const seed = await readSeed();
-  const payload = await getPayload({ config });
 
   await importBlog(payload, seed.blog);
   await importBirdwatching(payload, seed.birdwatching);
@@ -532,6 +531,11 @@ async function main() {
   await importPageGlobals(payload);
 
   console.log("Seed importado para o Payload com sucesso.");
+}
+
+async function main() {
+  const payload = await getPayload({ config });
+  await runImportSeed(payload);
 }
 
 main().catch((error) => {
