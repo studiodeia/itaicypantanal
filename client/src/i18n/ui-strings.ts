@@ -189,6 +189,10 @@ export const ui = {
   categories: {
     pt: {
       all: "Todas",
+      blogFishing: "Pesca",
+      blogBirdwatching: "Observação de Aves",
+      blogEcotourism: "Ecoturismo",
+      blogCulture: "Cultura",
       blogAdventure: "Aventura",
       blogGastronomy: "Gastronomia",
       blogConservation: "Conservação",
@@ -203,6 +207,10 @@ export const ui = {
     },
     en: {
       all: "All",
+      blogFishing: "Fishing",
+      blogBirdwatching: "Birdwatching",
+      blogEcotourism: "Ecotourism",
+      blogCulture: "Culture",
       blogAdventure: "Adventure",
       blogGastronomy: "Gastronomy",
       blogConservation: "Conservation",
@@ -217,6 +225,10 @@ export const ui = {
     },
     es: {
       all: "Todas",
+      blogFishing: "Pesca",
+      blogBirdwatching: "Avistamiento de Aves",
+      blogEcotourism: "Ecoturismo",
+      blogCulture: "Cultura",
       blogAdventure: "Aventura",
       blogGastronomy: "Gastronomía",
       blogConservation: "Conservación",
@@ -246,6 +258,10 @@ export function t<
 
 const BLOG_CATEGORY_KEY: Record<string, keyof typeof ui.categories.pt> = {
   "Todas": "all",
+  "Pesca": "blogFishing",
+  "Observação de Aves": "blogBirdwatching",
+  "Ecoturismo": "blogEcotourism",
+  "Cultura": "blogCulture",
   "Aventura": "blogAdventure",
   "Gastronomia": "blogGastronomy",
   "Conservação": "blogConservation",

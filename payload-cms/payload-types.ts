@@ -166,26 +166,6 @@ export interface Page {
    * Use a rota completa, ex.: /, /blog, /observacao-de-aves.
    */
   slug: string;
-  /**
-   * Deixe vazio para usar automaticamente: "{title} | Itaicy Pantanal Eco Lodge". Maximo recomendado: 60 caracteres.
-   */
-  metaTitle?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente os primeiros 155 caracteres do campo "title". Ideal: 120-155 caracteres.
-   */
-  metaDescription?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente o campo "title". Tamanho ideal: 1200x630px.
-   */
-  ogImage?: string | null;
-  /**
-   * Marque para impedir que esta pagina apareca nos resultados de busca.
-   */
-  noIndex?: boolean | null;
-  /**
-   * Deixe vazio para usar automaticamente: "http://127.0.0.1:5000/{slug}". Preencha apenas se a URL canonica for diferente.
-   */
-  canonicalUrl?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -200,7 +180,7 @@ export interface Media {
   /**
    * Descreva a imagem para leitores de tela e para melhorar SEO.
    */
-  alt?: string | null;
+  alt: string;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -212,9 +192,35 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    hero?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
- * Gerencie os artigos do blog com categorias, destaque e conteudo estruturado.
+ * Gerencie os artigos do blog com categorias, destaque e conteúdo estruturado.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "blog-posts".
@@ -222,7 +228,7 @@ export interface Media {
 export interface BlogPost {
   id: number;
   /**
-   * Titulo principal do artigo. Aparece no card e na pagina.
+   * Título principal do artigo. Aparece no card e na página.
    */
   title: string;
   /**
@@ -246,7 +252,7 @@ export interface BlogPost {
     | (
         | {
             /**
-             * Use **texto** para negrito (compativel com markdown).
+             * Use **texto** para negrito (compatível com markdown).
              */
             text: string;
             id?: string | null;
@@ -285,35 +291,27 @@ export interface BlogPost {
           }
       )[]
     | null;
-  /**
-   * Deixe vazio para usar automaticamente: "{title} | Itaicy Pantanal Eco Lodge". Maximo recomendado: 60 caracteres.
-   */
-  metaTitle?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente os primeiros 155 caracteres do campo "description". Ideal: 120-155 caracteres.
-   */
-  metaDescription?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente o campo "heroImage". Tamanho ideal: 1200x630px.
-   */
-  ogImage?: string | null;
-  /**
-   * Marque para impedir que esta pagina apareca nos resultados de busca.
-   */
-  noIndex?: boolean | null;
-  /**
-   * Deixe vazio para usar automaticamente: "http://127.0.0.1:5000/blog/{slug}". Preencha apenas se a URL canonica for diferente.
-   */
-  canonicalUrl?: string | null;
   relatedPosts?: (number | BlogPost)[] | null;
   /**
-   * Marque para exibir como artigo principal na pagina do blog.
+   * Marque para exibir como artigo principal na página do blog.
    */
   isFeatured?: boolean | null;
   /**
-   * Marque para exibir na secao 'Mais Recentes' do blog.
+   * Marque para exibir na seção 'Mais Recentes' do blog.
    */
   isRecent?: boolean | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -370,12 +368,12 @@ export interface BirdSpecy {
   author?: string | null;
   date?: string | null;
   /**
-   * Status IUCN. Ex: 'Vulneravel (VU)', 'Pouco Preocupante (LC)'
+   * Status IUCN. Ex: 'Vulnerável (VU)', 'Pouco Preocupante (LC)'
    */
   conservationStatus?: string | null;
   size?: string | null;
   /**
-   * Marque para exibir na secao de aves em destaque.
+   * Marque para exibir na seção de aves em destaque.
    */
   isFeatured?: boolean | null;
   habitat?: string | null;
@@ -384,7 +382,7 @@ export interface BirdSpecy {
   behavior?: string | null;
   bestTime?: string | null;
   /**
-   * Dicas praticas para fotografar esta especie no Pantanal.
+   * Dicas práticas para fotografar esta espécie no Pantanal.
    */
   photographyTips?:
     | {
@@ -392,27 +390,19 @@ export interface BirdSpecy {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Deixe vazio para usar automaticamente: "{commonName} | Itaicy Pantanal Eco Lodge". Maximo recomendado: 60 caracteres.
-   */
-  metaTitle?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente os primeiros 155 caracteres do campo "description". Ideal: 120-155 caracteres.
-   */
-  metaDescription?: string | null;
-  /**
-   * Deixe vazio para usar automaticamente o campo "heroImage". Tamanho ideal: 1200x630px.
-   */
-  ogImage?: string | null;
-  /**
-   * Marque para impedir que esta pagina apareca nos resultados de busca.
-   */
-  noIndex?: boolean | null;
-  /**
-   * Deixe vazio para usar automaticamente: "http://127.0.0.1:5000/observacao-de-aves/catalogo/{slug}". Preencha apenas se a URL canonica for diferente.
-   */
-  canonicalUrl?: string | null;
   relatedSpecies?: (number | BirdSpecy)[] | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -567,11 +557,6 @@ export interface PayloadMigration {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  metaTitle?: T;
-  metaDescription?: T;
-  ogImage?: T;
-  noIndex?: T;
-  canonicalUrl?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -592,6 +577,40 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        card?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        hero?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -651,14 +670,17 @@ export interface BlogPostsSelect<T extends boolean = true> {
               blockName?: T;
             };
       };
-  metaTitle?: T;
-  metaDescription?: T;
-  ogImage?: T;
-  noIndex?: T;
-  canonicalUrl?: T;
   relatedPosts?: T;
   isFeatured?: T;
   isRecent?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
@@ -704,12 +726,15 @@ export interface BirdSpeciesSelect<T extends boolean = true> {
         tip?: T;
         id?: T;
       };
-  metaTitle?: T;
-  metaDescription?: T;
-  ogImage?: T;
-  noIndex?: T;
-  canonicalUrl?: T;
   relatedSpecies?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
@@ -787,7 +812,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
- * Assistente de chat: nome, mensagens, contatos para atendimento humano e avisos legais. Altere com cuidado — as mudanças afetam o chat em tempo real.
+ * ⚠️ Alterações aqui afetam o chat ao vivo imediatamente. Configure: nome do assistente, avisos legais (preço, disponibilidade, políticas), contatos para escalonamento humano e mensagens de erro. Use 'Versões' para desfazer mudanças indesejadas.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "agent-config".
@@ -917,25 +942,73 @@ export interface SiteSetting {
     | null;
   footerCopyright?: string | null;
   /**
-   * Usado como fallback quando uma pagina nao tem metaTitle. Max 60 chars.
+   * Usado como fallback quando uma página não tem metaTitle. Máx. 60 chars.
    */
   defaultMetaTitle?: string | null;
   /**
-   * Usado como fallback quando uma pagina nao tem metaDescription. Ideal: 120-155 chars.
+   * Usado como fallback quando uma página não tem metaDescription. Ideal: 120-155 chars.
    */
   defaultMetaDescription?: string | null;
   /**
-   * Imagem padrao para compartilhamento em redes sociais. Tamanho ideal: 1200x630px.
+   * Imagem padrão para compartilhamento em redes sociais. Tamanho ideal: 1200x630px.
    */
   defaultOgImage?: string | null;
   /**
-   * URL base do site em producao. Ex: https://itaicypantanal.com.br. Usada para gerar canonical URLs e sitemap.
+   * URL base do site em produção. Ex: https://itaicypantanal.com.br. Usada para gerar canonical URLs e sitemap.
    */
   siteUrl?: string | null;
   /**
-   * Codigo de verificacao do Google Search Console. Sera injetado como meta tag.
+   * Código de verificação do Google Search Console. Será injetado como meta tag.
    */
   googleSiteVerification?: string | null;
+  /**
+   * Perfis dos autores e especialistas do site para sinais E-E-A-T.
+   */
+  authors?:
+    | {
+        name: string;
+        jobTitle?: string | null;
+        knowsAbout?:
+          | {
+              topic: string;
+              id?: string | null;
+            }[]
+          | null;
+        url?: string | null;
+        image?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Eventos e temporadas para schema Event (AI search).
+   */
+  seasonalEvents?:
+    | {
+        name: string;
+        description?: string | null;
+        /**
+         * Ex: 03-01 para 1 de Março
+         */
+        startDate?: string | null;
+        /**
+         * Ex: 10-31 para 31 de Outubro
+         */
+        endDate?: string | null;
+        image?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Avaliação geral do lodge para schema AggregateRating.
+   */
+  aggregateRating?: {
+    /**
+     * Ex: 4.8
+     */
+    ratingValue?: number | null;
+    reviewCount?: number | null;
+    bestRating?: number | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1035,6 +1108,18 @@ export interface HomeContent {
         }[]
       | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1064,7 +1149,7 @@ export interface AcomodacoesContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1132,6 +1217,18 @@ export interface AcomodacoesContent {
         }[]
       | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1156,7 +1253,7 @@ export interface CulinariaContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1248,6 +1345,18 @@ export interface CulinariaContent {
         }[]
       | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1272,7 +1381,7 @@ export interface PescaContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1346,6 +1455,18 @@ export interface PescaContent {
           answer: string;
         }[]
       | null;
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -1371,7 +1492,7 @@ export interface EcoturismoContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1446,6 +1567,18 @@ export interface EcoturismoContent {
         }[]
       | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1470,7 +1603,7 @@ export interface BirdwatchingContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1528,6 +1661,18 @@ export interface BirdwatchingContent {
           answer: string;
         }[]
       | null;
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -1578,6 +1723,18 @@ export interface ContatoContent {
     lat?: number | null;
     lng?: number | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1602,7 +1759,7 @@ export interface NossoImpactoContent {
   };
   manifesto?: {
     /**
-     * Cada segmento e um trecho de texto. Marque 'Destaque' para texto dourado.
+     * Cada segmento é um trecho de texto. Marque 'Destaque' para texto dourado.
      */
     segments?:
       | {
@@ -1665,6 +1822,18 @@ export interface NossoImpactoContent {
     description?: string | null;
     buttonText?: string | null;
   };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1685,7 +1854,7 @@ export interface PrivacidadeContent {
         id: string;
         title: string;
         /**
-         * Cada item e um paragrafo. Comece com ** para criar itens de lista com negrito.
+         * Cada item é um parágrafo. Comece com ** para criar itens de lista com negrito.
          */
         content?:
           | {
@@ -1695,6 +1864,18 @@ export interface PrivacidadeContent {
           | null;
       }[]
     | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1718,6 +1899,18 @@ export interface NotFoundContent {
     backgroundImage?: string | null;
   };
   buttonText?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    /**
+     * Marque para impedir que esta pagina apareca nos resultados de busca.
+     */
+    noIndex?: boolean | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -1860,6 +2053,38 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   defaultOgImage?: T;
   siteUrl?: T;
   googleSiteVerification?: T;
+  authors?:
+    | T
+    | {
+        name?: T;
+        jobTitle?: T;
+        knowsAbout?:
+          | T
+          | {
+              topic?: T;
+              id?: T;
+            };
+        url?: T;
+        image?: T;
+        id?: T;
+      };
+  seasonalEvents?:
+    | T
+    | {
+        name?: T;
+        description?: T;
+        startDate?: T;
+        endDate?: T;
+        image?: T;
+        id?: T;
+      };
+  aggregateRating?:
+    | T
+    | {
+        ratingValue?: T;
+        reviewCount?: T;
+        bestRating?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1968,6 +2193,14 @@ export interface HomeContentSelect<T extends boolean = true> {
               answer?: T;
             };
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2063,6 +2296,14 @@ export interface AcomodacoesContentSelect<T extends boolean = true> {
               question?: T;
               answer?: T;
             };
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -2182,6 +2423,14 @@ export interface CulinariaContentSelect<T extends boolean = true> {
               answer?: T;
             };
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2278,6 +2527,14 @@ export interface PescaContentSelect<T extends boolean = true> {
               question?: T;
               answer?: T;
             };
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -2376,6 +2633,14 @@ export interface EcoturismoContentSelect<T extends boolean = true> {
               answer?: T;
             };
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2455,6 +2720,14 @@ export interface BirdwatchingContentSelect<T extends boolean = true> {
               answer?: T;
             };
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2506,6 +2779,14 @@ export interface ContatoContentSelect<T extends boolean = true> {
     | {
         lat?: T;
         lng?: T;
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -2600,6 +2881,14 @@ export interface NossoImpactoContentSelect<T extends boolean = true> {
         description?: T;
         buttonText?: T;
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2627,6 +2916,14 @@ export interface PrivacidadeContentSelect<T extends boolean = true> {
               id?: T;
             };
       };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -2647,6 +2944,14 @@ export interface NotFoundContentSelect<T extends boolean = true> {
         backgroundImage?: T;
       };
   buttonText?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+        noIndex?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

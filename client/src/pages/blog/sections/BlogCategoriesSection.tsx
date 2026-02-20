@@ -12,13 +12,15 @@ const ARTICLES_PER_PAGE = 9;
 interface BlogCategoriesSectionProps {
   allArticles: BlogArticle[];
   categories: string[];
+  initialCategory?: string;
 }
 
 export const BlogCategoriesSection = ({
   allArticles,
   categories,
+  initialCategory = "Todas",
 }: BlogCategoriesSectionProps): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState<string>("Todas");
+  const [activeCategory, setActiveCategory] = useState<string>(initialCategory);
   const [currentPage, setCurrentPage] = useState(1);
   const { lang } = useLanguage();
 

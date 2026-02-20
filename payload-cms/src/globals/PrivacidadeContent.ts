@@ -1,5 +1,6 @@
 import type { GlobalConfig } from "payload";
 import { isAuthenticated } from "../access/authenticated";
+import { autoTranslateGlobalAfterChange } from "../hooks/autoTranslate";
 
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:5000";
 
@@ -13,6 +14,9 @@ export const PrivacidadeContent: GlobalConfig = {
   },
   access: { read: () => true, update: isAuthenticated },
   versions: { max: 5 },
+  hooks: {
+    afterChange: [autoTranslateGlobalAfterChange],
+  },
   fields: [
     {
       type: "tabs",

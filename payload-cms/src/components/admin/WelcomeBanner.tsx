@@ -1,6 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+// ---------------------------------------------------------------------------
+// Types
+// ---------------------------------------------------------------------------
+
+type DashboardStats = {
+  birdSpecies: number;
+  blogPosts: number;
+  mediaFiles: number;
+  loaded: boolean;
+};
+
+// ---------------------------------------------------------------------------
+// Styles
+// ---------------------------------------------------------------------------
 
 const styles = {
   container: {
@@ -73,6 +88,34 @@ const styles = {
     background:
       "linear-gradient(135deg, transparent 50%, rgba(172,128,66,0.08) 100%)",
   },
+  statsRow: {
+    display: "grid" as const,
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "12px",
+  },
+  statCard: {
+    background: "#fafafa",
+    border: "1px solid #e8e8e8",
+    borderRadius: "12px",
+    padding: "16px 20px",
+    textAlign: "center" as const,
+  },
+  statNumber: {
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontSize: "28px",
+    fontWeight: 600,
+    color: "#263a30",
+    margin: "0",
+    lineHeight: "1.2",
+  },
+  statLabel: {
+    fontFamily: "'Lato', sans-serif",
+    fontSize: "12px",
+    color: "#8aad9c",
+    margin: "4px 0 0 0",
+    textTransform: "uppercase" as const,
+    letterSpacing: "0.05em",
+  },
   card: {
     background: "#fafafa",
     border: "1px solid #e8e8e8",
@@ -135,60 +178,96 @@ const styles = {
   },
 };
 
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
+
 const PAGES = [
   { label: "Home", href: "/admin/globals/home-content" },
-  { label: "Acomodações", href: "/admin/globals/acomodacoes-content" },
-  { label: "Culinária", href: "/admin/globals/culinaria-content" },
+  { label: "Acomodacoes", href: "/admin/globals/acomodacoes-content" },
+  { label: "Culinaria", href: "/admin/globals/culinaria-content" },
   { label: "Pesca Esportiva", href: "/admin/globals/pesca-content" },
   { label: "Ecoturismo", href: "/admin/globals/ecoturismo-content" },
-  { label: "Observação de Aves", href: "/admin/globals/birdwatching-content" },
+  { label: "Observacao de Aves", href: "/admin/globals/birdwatching-content" },
   { label: "Contato", href: "/admin/globals/contato-content" },
   { label: "Nosso Impacto", href: "/admin/globals/nosso-impacto-content" },
   { label: "Privacidade", href: "/admin/globals/privacidade-content" },
-  { label: "Página 404", href: "/admin/globals/not-found-content" },
+  { label: "Pagina 404", href: "/admin/globals/not-found-content" },
 ];
 
 const QUICK_ACTIONS = [
-  {
-    label: "Novo Artigo",
-    href: "/admin/collections/blog-posts/create",
-    primary: true,
-  },
-  {
-    label: "Nova Espécie de Ave",
-    href: "/admin/collections/bird-species/create",
-    primary: false,
-  },
-  {
-    label: "Configurações do Site",
-    href: "/admin/globals/site-settings",
-    primary: false,
-  },
-  {
-    label: "Agente de Chat",
-    href: "/admin/globals/agent-config",
-    primary: false,
-  },
+  { label: "Novo Artigo", href: "/admin/collections/blog-posts/create", primary: true },
+  { label: "Nova Especie de Ave", href: "/admin/collections/bird-species/create", primary: false },
+  { label: "Configuracoes do Site", href: "/admin/globals/site-settings", primary: false },
+  { label: "Biblioteca de Midia", href: "/admin/collections/media", primary: false },
 ];
 
 const TIPS = [
-  "🌐 Para editar em Inglês ou Espanhol: use o seletor de idioma no topo da página ao abrir qualquer conteúdo.",
-  "🖼️ Campos de imagem: insira o caminho sem extensão — ex: /images/lodge-exterior — os formatos AVIF e WebP são carregados automaticamente pelo site.",
-  "💾 Após salvar, o site reflete as mudanças em até 30 segundos.",
-  "📝 Artigos em destaque: marque \"Exibir como destaque\" em apenas 1 artigo por vez para evitar conflito visual no blog.",
-  "↩️ Histórico de versões: artigos do blog guardam até 10 versões; todas as páginas e configurações guardam até 5 — acesse pelo botão 'Versões' ao editar.",
+  "Traducao automatica: ao salvar conteudo em Portugues, os campos em Ingles e Espanhol sao preenchidos automaticamente por IA.",
+  "Campos de imagem: insira o caminho sem extensao — ex: /images/lodge-exterior — os formatos AVIF e WebP sao carregados automaticamente pelo site.",
+  "Apos salvar, o site reflete as mudancas em ate 30 segundos.",
+  "Artigos em destaque: marque \"Exibir como destaque\" em apenas 1 artigo por vez para evitar conflito visual no blog.",
+  "Historico de versoes: artigos do blog guardam ate 10 versoes; todas as paginas e configuracoes guardam ate 5.",
 ];
 
+// ---------------------------------------------------------------------------
+// Stats Hook
+// ---------------------------------------------------------------------------
+
+function useDashboardStats(): DashboardStats {
+  const [stats, setStats] = useState<DashboardStats>({
+    birdSpecies: 0,
+    blogPosts: 0,
+    mediaFiles: 0,
+    loaded: false,
+  });
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function fetchCount(collection: string): Promise<number> {
+      try {
+        const res = await fetch(`/api/${collection}?limit=0`);
+        if (!res.ok) return 0;
+        const data = await res.json();
+        return typeof data.totalDocs === "number" ? data.totalDocs : 0;
+      } catch {
+        return 0;
+      }
+    }
+
+    Promise.all([
+      fetchCount("bird-species"),
+      fetchCount("blog-posts"),
+      fetchCount("media"),
+    ]).then(([birdSpecies, blogPosts, mediaFiles]) => {
+      if (!cancelled) {
+        setStats({ birdSpecies, blogPosts, mediaFiles, loaded: true });
+      }
+    });
+
+    return () => { cancelled = true; };
+  }, []);
+
+  return stats;
+}
+
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
+
 export default function WelcomeBanner() {
+  const stats = useDashboardStats();
+
   return (
     <div style={styles.container}>
-      {/* Header com ações rápidas */}
+      {/* Header com acoes rapidas */}
       <div style={styles.header}>
         <div style={styles.headerInner}>
           <h2 style={styles.headerTitle}>Painel Itaicy Pantanal</h2>
           <p style={styles.headerSubtitle}>
-            Gerencie o conteúdo do site. Todas as alterações são refletidas em
-            até 30 segundos após salvar.
+            Gerencie o conteudo do site. Traducoes para EN/ES sao geradas
+            automaticamente ao salvar em Portugues.
           </p>
           <div style={styles.quickActions}>
             {QUICK_ACTIONS.map((action) => (
@@ -205,9 +284,25 @@ export default function WelcomeBanner() {
         <div style={styles.goldAccent} />
       </div>
 
-      {/* Acesso rápido às páginas */}
+      {/* Stats */}
+      <div style={styles.statsRow}>
+        <div style={styles.statCard}>
+          <p style={styles.statNumber}>{stats.loaded ? stats.birdSpecies : "..."}</p>
+          <p style={styles.statLabel}>Especies de Aves</p>
+        </div>
+        <div style={styles.statCard}>
+          <p style={styles.statNumber}>{stats.loaded ? stats.blogPosts : "..."}</p>
+          <p style={styles.statLabel}>Artigos no Blog</p>
+        </div>
+        <div style={styles.statCard}>
+          <p style={styles.statNumber}>{stats.loaded ? stats.mediaFiles : "..."}</p>
+          <p style={styles.statLabel}>Arquivos de Midia</p>
+        </div>
+      </div>
+
+      {/* Acesso rapido as paginas */}
       <div style={styles.card}>
-        <p style={styles.sectionLabel}>Editar páginas do site</p>
+        <p style={styles.sectionLabel}>Editar paginas do site</p>
         <div style={styles.pillsGrid}>
           {PAGES.map((page) => (
             <a key={page.href} href={page.href} style={styles.pill}>
@@ -219,7 +314,7 @@ export default function WelcomeBanner() {
 
       {/* Dicas */}
       <div style={styles.cardGold}>
-        <p style={styles.sectionLabelGold}>Dicas rápidas</p>
+        <p style={styles.sectionLabelGold}>Dicas rapidas</p>
         <div style={styles.tipsList}>
           {TIPS.map((tip, i) => (
             <p key={i} style={styles.tip}>
