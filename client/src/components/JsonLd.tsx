@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import type { CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "../../../shared/cms-page-content";
 
 interface JsonLdProps {
   /** One or more JSON-LD objects to inject */
@@ -140,7 +139,7 @@ export function buildWebSite() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: origin,
-    inLanguage: ["pt-BR", "en", "es"],
+    inLanguage: "pt-BR",
     potentialAction: {
       "@type": "SearchAction",
       target: `${origin}/blog?q={search_term_string}`,
@@ -213,20 +212,7 @@ const authorProfiles: Record<string, AuthorProfile> = {
   },
 };
 
-function buildAuthorPerson(authorName: string, origin: string, cmsAuthors?: CmsAuthorProfile[]) {
-  // CMS authors take priority over hardcoded profiles
-  const cmsProfile = cmsAuthors?.find((a) => a.name === authorName);
-  if (cmsProfile) {
-    return {
-      "@type": "Person",
-      name: cmsProfile.name,
-      ...(cmsProfile.jobTitle && { jobTitle: cmsProfile.jobTitle }),
-      worksFor: { "@type": "LodgingBusiness", name: SITE_NAME, url: origin },
-      ...(cmsProfile.knowsAbout && cmsProfile.knowsAbout.length > 0 && { knowsAbout: cmsProfile.knowsAbout }),
-      ...(cmsProfile.url && { sameAs: [cmsProfile.url] }),
-      ...(cmsProfile.image && { image: cmsProfile.image }),
-    };
-  }
+function buildAuthorPerson(authorName: string, origin: string) {
   const profile = authorProfiles[authorName];
   if (profile) {
     return {
@@ -245,16 +231,20 @@ function buildAuthorPerson(authorName: string, origin: string, cmsAuthors?: CmsA
   return { "@type": "Person", name: authorName || SITE_NAME };
 }
 
-export function buildBlogPosting(
-  article: { title: string; description?: string; author?: string; date?: string; image?: string; url: string },
-  cmsAuthors?: CmsAuthorProfile[],
-) {
+export function buildBlogPosting(article: {
+  title: string;
+  description?: string;
+  author?: string;
+  date?: string;
+  image?: string;
+  url: string;
+}) {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   return {
     "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
-    author: buildAuthorPerson(article.author || SITE_NAME, origin, cmsAuthors),
+    author: buildAuthorPerson(article.author || SITE_NAME, origin),
     datePublished: article.date,
     dateModified: article.date,
     image: article.image
@@ -400,59 +390,9 @@ export function buildTourProduct(tour: {
 
 // ─── Seasonal Event schemas for temporal query matching ──────────────
 
-export function buildSeasonalEvents(cmsEvents?: CmsSeasonalEvent[]) {
+export function buildSeasonalEvents() {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   const currentYear = new Date().getFullYear();
-
-  // If CMS has events defined, use them instead of hardcoded
-  if (cmsEvents && cmsEvents.length > 0) {
-    const today = new Date();
-    const todayMD = [
-      String(today.getMonth() + 1).padStart(2, "0"),
-      String(today.getDate()).padStart(2, "0"),
-    ].join("-");
-
-    return cmsEvents.map((event) => {
-      const startMD = event.startDate; // "MM-DD"
-      const endMD = event.endDate;
-      let startYear = currentYear;
-      let endYear = currentYear;
-      if (startMD && endMD && endMD < startMD) {
-        // Cross-year event: if today is still in the wrap window (Jan 1–endMD),
-        // the season started last year and ends this year
-        if (todayMD <= endMD) {
-          startYear = currentYear - 1;
-        } else {
-          endYear = currentYear + 1;
-        }
-      }
-      return {
-        "@type": "Event",
-        name: event.name,
-        ...(event.description && { description: event.description }),
-        ...(startMD && { startDate: `${startYear}-${startMD}` }),
-        ...(endMD && { endDate: `${endYear}-${endMD}` }),
-        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-        eventStatus: "https://schema.org/EventScheduled",
-        ...(event.image && {
-          image: event.image.startsWith("http")
-            ? event.image
-            : `${origin}${event.image}`,
-        }),
-        location: {
-          "@type": "Place",
-          name: SITE_NAME,
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Miranda",
-            addressRegion: "MS",
-            addressCountry: "BR",
-          },
-        },
-        organizer: { "@type": "Organization", name: SITE_NAME, url: origin },
-      };
-    });
-  }
   const nextYear = currentYear + 1;
 
   return [
@@ -542,24 +482,17 @@ export function buildSeasonalEvents(cmsEvents?: CmsSeasonalEvent[]) {
 
 export function buildAggregateRating(
   reviews: { author: string; rating: number; text: string }[],
-  cmsRating?: CmsAggregateRating,
 ) {
-  // Prefer CMS aggregate rating when set, fall back to computing from reviews
-  const ratingValue =
-    cmsRating?.ratingValue ??
-    (reviews.length > 0
-      ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
-      : 0);
-  const reviewCount = cmsRating?.reviewCount ?? reviews.length;
-  const bestRating = cmsRating?.bestRating ?? 5;
+  const avg =
+    reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
   return {
     "@type": "LodgingBusiness",
     name: SITE_NAME,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: typeof ratingValue === "number" ? ratingValue.toFixed(1) : ratingValue,
-      reviewCount,
-      bestRating: String(bestRating),
+      ratingValue: avg.toFixed(1),
+      reviewCount: reviews.length,
+      bestRating: "5",
       worstRating: "1",
     },
     review: reviews.map((r) => ({

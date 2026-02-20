@@ -1,5 +1,3 @@
-import type { CmsAuthorProfile, CmsSeasonalEvent, CmsAggregateRating } from "./cms-page-content";
-
 export type FooterLink = {
   label: string;
   href: string;
@@ -79,9 +77,6 @@ export type SharedCmsSections = {
     segments: HomeManifestoSegment[];
     detailsButtonLabel: string;
   };
-  authors?: CmsAuthorProfile[];
-  seasonalEvents?: CmsSeasonalEvent[];
-  aggregateRating?: CmsAggregateRating;
 };
 
 export const defaultSharedCmsSections: SharedCmsSections = {

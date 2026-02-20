@@ -22,7 +22,7 @@ export const Ecoturismo = (): JSX.Element => {
   const tourSchema = buildTourProduct({
     name: "Ecoturismo no Pantanal — Itaicy Eco Lodge",
     description:
-      "Experiências de ecoturismo sustentável no Pantanal. Trilhas ecológicas, safáris fotográficos, passeios de barco e imersão na maior planície alagável do mundo.",
+      "Experiencias de ecoturismo sustentavel no Pantanal. Trilhas ecologicas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo.",
     url: "/ecoturismo",
     image: cms.hero?.backgroundImage,
   });
@@ -46,8 +46,8 @@ export const Ecoturismo = (): JSX.Element => {
       <EcoHighlightsSection content={cms.highlights} />
       <EcoServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
-      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <ImmersionCallToActionSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <SiteFooterSection />
     </div>
   );

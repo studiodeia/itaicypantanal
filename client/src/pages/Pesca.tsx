@@ -22,7 +22,7 @@ export const Pesca = (): JSX.Element => {
   const tourSchema = buildTourProduct({
     name: "Pesca Esportiva no Pantanal — Itaicy Eco Lodge",
     description:
-      "Expedição de pesca esportiva catch-and-release no Pantanal Sul-Mato-Grossense. Pintado, pacu, dourado e mais de 260 espécies com guias locais experientes no Rio Negro.",
+      "Expedicao de pesca esportiva catch-and-release no Pantanal Sul-Matogrossense. Pintado, pacu, dourado e mais de 260 especies com guias locais experientes no Rio Negro.",
     url: "/pesca",
     image: cms.hero?.backgroundImage,
   });
@@ -46,8 +46,8 @@ export const Pesca = (): JSX.Element => {
       <PescaHighlightsSection content={cms.highlights} />
       <PescaServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
-      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <ImmersionCallToActionSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <SiteFooterSection />
     </div>
   );

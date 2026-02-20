@@ -22,9 +22,9 @@ export const BirdWatching = (): JSX.Element => {
     : null;
 
   const tourSchema = buildTourProduct({
-    name: "Observação de Aves no Pantanal — Itaicy Eco Lodge",
+    name: "Observacao de Aves no Pantanal — Itaicy Eco Lodge",
     description:
-      "Birdwatching guiado no Pantanal com 166 espécies catalogadas. Tuiuiú, arara-azul, tucanos, gaviões e muito mais com guias especializados e roteiros guiados.",
+      "Birdwatching guiado no Pantanal com 166 especies catalogadas. Tuiuiu, arara-azul, tucanos, gavioes e muito mais com guias especializados e roteiros guiados.",
     url: "/observacao-de-aves",
     image: cms.hero?.backgroundImage,
   });
@@ -48,8 +48,8 @@ export const BirdWatching = (): JSX.Element => {
       <BirdHighlightsSection content={cms.highlights} />
       <BirdServicesSection birds={birdData.allBirds} />
       <ImmersionTestimonialsSection />
-      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <ImmersionCallToActionSection />
+      <FrequentlyAskedQuestionsSection content={cms.faq} />
       <SiteFooterSection />
     </div>
   );
