@@ -9,7 +9,6 @@ import { buildConfig } from "payload";
 import sharp from "sharp";
 
 import { ensureOwnerUser } from "./auth/ensure-owner-user";
-import { migrations } from "./migrations";
 import { BirdCategories } from "./collections/BirdCategories";
 import { BirdSpecies } from "./collections/BirdSpecies";
 import { BlogCategories } from "./collections/BlogCategories";
@@ -47,9 +46,8 @@ const db = isPostgres
         connectionString: databaseUrl,
         ssl: { rejectUnauthorized: false },
       },
-      push: process.env.NODE_ENV !== "production",
+      push: true,
       schemaName: "cms",
-      prodMigrations: migrations,
     })
   : sqliteAdapter({
         client: {
