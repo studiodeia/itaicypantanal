@@ -64,6 +64,9 @@
     ]
   },
   "footer": {
+    "pousadaHeading": "POUSADA",
+    "experienciasHeading": "EXPERIÊNCIAS",
+    "contactHeading": "FALE CONOSCO",
     "mobileNavLinks": [
       {
         "label": "Pousada",
@@ -121,7 +124,7 @@
       },
       {
         "icon": "/images/icons/mail.png",
-        "text": "contato@pousadaitaicy.com.br"
+        "text": "contato@itaicypantanal.com.br"
       },
       {
         "icon": "/images/icons/location-on.png",

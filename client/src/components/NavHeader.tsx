@@ -57,8 +57,8 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
     blog: {
       label: t("nav", "megaBlog", lang),
       items: [
-        { title: t("nav", "wildlife", lang), description: t("nav", "wildlifeDesc", lang), image: "/images/nav/menu-vida-selvagem.webp", href: "/blog" },
-        { title: t("nav", "sustainability", lang), description: t("nav", "sustainabilityDesc", lang), image: "/images/nav/menu-sustentabilidade.webp", href: "/blog" },
+        { title: t("nav", "birdwatching", lang), description: t("nav", "birdwatchingDesc", lang), image: "/images/nav/menu-birdwatching.webp", href: "/blog/observacao-de-aves" },
+        { title: t("nav", "fishing", lang), description: t("nav", "fishingDesc", lang), image: "/images/nav/menu-pesca.webp", href: "/blog/pesca" },
       ],
     },
   };
@@ -232,6 +232,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 data-testid="button-reservar-hero"
                 onClick={() =>
                   goToCloudbedsBooking({
+                    locale: lang,
                     utmContent: "header_desktop_reservar",
                   })
                 }
@@ -333,6 +334,7 @@ export function NavHeader({ className, onMenuStateChange }: NavHeaderProps) {
                 data-testid="button-reservar-mobile-menu"
                 onClick={() =>
                   goToCloudbedsBooking({
+                    locale: lang,
                     utmContent: "header_mobile_reservar",
                   })
                 }

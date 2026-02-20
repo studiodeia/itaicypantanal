@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
 import { goldButtonClass } from "@/components/pantanal/buttons/GoldButton";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
 import type { NossoImpactoPageContent } from "@shared/cms-page-content";
 
 type Props = { content: NossoImpactoPageContent["engagement"] };
 
 export const ImpactEngagementSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#152218]">
       <motion.div
@@ -27,6 +29,7 @@ export const ImpactEngagementSection = ({ content }: Props): JSX.Element => {
         <motion.a
           variants={fadeUp}
           href={buildCloudbedsBookingUrl({
+            locale: lang,
             utmContent: "impacto_section_reservar_experiencia",
           })}
           className={goldButtonClass}

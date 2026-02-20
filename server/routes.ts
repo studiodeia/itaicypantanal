@@ -1,7 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { getCmsAgentConfig, getCmsContent } from "./cms-content";
+import { getCmsAgentConfig, getCmsContent, clearCmsContentCache } from "./cms-content";
+import { clearCmsSeedCache } from "./cms-seed";
 import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt, type LlmsCmsData } from "./sitemap";
 import { handleChatRequest } from "./agent/chat-route";
 import { handleFaqReindexRequest } from "./agent/reindex-route";
@@ -26,6 +27,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     const raw = req.query.locale;
     return typeof raw === "string" ? raw : undefined;
   }
+
+  app.post("/api/cms/reload", (_req, res) => {
+    clearCmsSeedCache();
+    clearCmsContentCache();
+    res.json({ ok: true, message: "CMS cache cleared" });
+  });
 
   app.get("/api/cms/health", async (req, res) => {
     try {

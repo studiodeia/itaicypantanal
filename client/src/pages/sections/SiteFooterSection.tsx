@@ -146,20 +146,20 @@ export const SiteFooterSection = (): JSX.Element => {
     <footer className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col w-full max-w-[1440px] mx-auto px-5 md:px-8 lg:px-10 py-16 md:py-24 lg:py-[100px] gap-16 md:gap-20 lg:gap-[100px]">
 
-        {/* Main two-column layout */}
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-[100px] items-start w-full min-w-0">
+        {/* Main layout: stacked → lg: 5-col grid (2+1+1+1) */}
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-16 lg:gap-6 xl:gap-8 2xl:gap-10 items-start w-full">
 
-          {/* LEFT: Logo + Heading + Socials + Newsletter */}
+          {/* LEFT: spans 2 cols */}
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="flex flex-col gap-10 lg:gap-[48px] flex-1 min-w-0"
+            className="flex flex-col gap-8 lg:col-span-2 min-w-0"
           >
             <motion.img
               variants={fadeIn}
-              className="h-10 w-auto"
+              className="h-10 w-auto max-w-full self-start"
               alt="Itaicy Pantanal Eco Lodge"
               src="/images/icons/footer-logo.svg"
               data-testid="img-footer-logo"
@@ -173,75 +173,78 @@ export const SiteFooterSection = (): JSX.Element => {
               {footer.heading}
             </motion.h2>
 
-            <motion.div
-              variants={fadeIn}
-              className="flex items-center gap-3"
-              data-testid="img-social-links"
-              aria-label="Redes sociais"
-            >
-              {socialLinks.map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-[4px] bg-[#344e41] text-[#e3f7ec] hover:bg-[#ac8042] transition-all duration-300 shrink-0"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </motion.div>
+            {/* Socials + Newsletter grouped with tighter spacing */}
+            <motion.div variants={fadeIn} className="flex flex-col gap-6">
+              <div
+                className="flex items-center gap-3"
+                data-testid="img-social-links"
+                aria-label="Redes sociais"
+              >
+                {socialLinks.map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-[4px] bg-[#344e41] text-[#e3f7ec] hover:bg-[#ac8042] transition-all duration-300 shrink-0"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
 
-            <motion.div variants={fadeUp} className="flex flex-col gap-3">
-              <span className="text-[#a8cab9] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif]">
-                {footer.newsletterLabel}
-              </span>
-              <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
-                <div className="flex items-center bg-[#344e41] h-[56px] rounded-[8px] w-full lg:w-[458px] pl-5 pr-2 py-2 gap-2">
-                  <input
-                    type="email"
-                    value={newsletterEmail}
-                    onChange={(e) => setNewsletterEmail(e.target.value)}
-                    placeholder={newsletterCopy.emailPlaceholder}
-                    aria-label={newsletterCopy.emailPlaceholder}
-                    className="flex-1 min-w-0 bg-transparent text-[#e3f7ec] text-sm [font-family:'Lato',sans-serif] placeholder:text-[#a8cab9] outline-none"
-                    data-testid="input-email-newsletter"
-                  />
-                  <GoldButton
-                    data-testid="button-newsletter-submit"
-                    type="submit"
-                    disabled={submitState === "submitting"}
-                    className="h-auto py-2 px-4 shrink-0 text-sm"
-                  >
-                    {footer.newsletterButtonLabel}
-                  </GoldButton>
-                </div>
-                {submitMessage ? (
-                  <p
-                    className={`text-xs ${
-                      submitState === "success" ? "text-[#a8cab9]" : "text-[#f2b3b3]"
-                    }`}
-                    data-testid="text-newsletter-submit-status"
-                    role={submitState === "error" ? "alert" : "status"}
-                  >
-                    {submitMessage}
-                  </p>
-                ) : null}
-              </form>
+              <div className="flex flex-col gap-3">
+                <span className="text-[#a8cab9] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif]">
+                  {footer.newsletterLabel}
+                </span>
+                <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
+                  <div className="flex items-center bg-[#344e41] h-[56px] rounded-[8px] w-full max-w-[458px] pl-5 pr-2 py-2 gap-2">
+                    <input
+                      type="email"
+                      value={newsletterEmail}
+                      onChange={(e) => setNewsletterEmail(e.target.value)}
+                      placeholder={newsletterCopy.emailPlaceholder}
+                      aria-label={newsletterCopy.emailPlaceholder}
+                      className="flex-1 min-w-0 bg-transparent text-[#e3f7ec] text-sm [font-family:'Lato',sans-serif] placeholder:text-[#a8cab9] outline-none"
+                      data-testid="input-email-newsletter"
+                    />
+                    <GoldButton
+                      data-testid="button-newsletter-submit"
+                      type="submit"
+                      disabled={submitState === "submitting"}
+                      className="h-auto py-2 px-4 shrink-0 text-sm"
+                    >
+                      {footer.newsletterButtonLabel}
+                    </GoldButton>
+                  </div>
+                  {submitMessage ? (
+                    <p
+                      className={`text-xs ${
+                        submitState === "success" ? "text-[#a8cab9]" : "text-[#f2b3b3]"
+                      }`}
+                      data-testid="text-newsletter-submit-status"
+                      role={submitState === "error" ? "alert" : "status"}
+                    >
+                      {submitMessage}
+                    </p>
+                  ) : null}
+                </form>
+              </div>
             </motion.div>
           </motion.div>
 
-          {/* RIGHT: POUSADA + EXPERIÊNCIAS + FALE CONOSCO */}
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            className="flex flex-col sm:flex-row gap-10 sm:gap-12 lg:gap-[64px] items-start min-w-0"
-          >
+          {/* RIGHT: stacked → sm: flex-row → lg: grid contents (each 1 col) */}
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-10 lg:contents items-start">
+
             {/* POUSADA */}
-            <motion.div variants={fadeIn} className="flex flex-col gap-5">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+              className="flex flex-col gap-5"
+            >
               <h3 className="text-xs font-bold tracking-[0.24em] uppercase text-[#a8cab9]">
                 {footer.pousadaHeading}
               </h3>
@@ -250,7 +253,7 @@ export const SiteFooterSection = (): JSX.Element => {
                   <li key={index}>
                     <FooterLink
                       href={link.href}
-                      className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors whitespace-nowrap"
+                      className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors"
                     >
                       {link.label}
                     </FooterLink>
@@ -260,7 +263,13 @@ export const SiteFooterSection = (): JSX.Element => {
             </motion.div>
 
             {/* EXPERIÊNCIAS */}
-            <motion.div variants={fadeIn} className="flex flex-col gap-5">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+              className="flex flex-col gap-5"
+            >
               <h3 className="text-xs font-bold tracking-[0.24em] uppercase text-[#a8cab9]">
                 {footer.experienciasHeading}
               </h3>
@@ -269,7 +278,7 @@ export const SiteFooterSection = (): JSX.Element => {
                   <li key={index}>
                     <FooterLink
                       href={link.href}
-                      className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors whitespace-nowrap"
+                      className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors"
                     >
                       {link.label}
                     </FooterLink>
@@ -279,7 +288,13 @@ export const SiteFooterSection = (): JSX.Element => {
             </motion.div>
 
             {/* FALE CONOSCO */}
-            <motion.div variants={fadeIn} className="flex flex-col gap-5">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+              className="flex flex-col gap-5"
+            >
               <h3 className="text-xs font-bold tracking-[0.24em] uppercase text-[#a8cab9]">
                 {footer.contactHeading}
               </h3>
@@ -288,17 +303,17 @@ export const SiteFooterSection = (): JSX.Element => {
                   const ContactIcon = resolveFooterContactIcon(contact.icon);
                   const isEmail = contact.icon.toLowerCase().includes("mail");
                   return (
-                    <div key={index} className="flex items-start gap-4">
-                      <ContactIcon className="w-6 h-6 flex-shrink-0 text-[#a8cab9]" />
+                    <div key={index} className="flex items-start gap-3 min-w-0">
+                      <ContactIcon className="w-5 h-5 mt-[3px] flex-shrink-0 text-[#a8cab9]" />
                       {isEmail ? (
                         <a
                           href={`mailto:${contact.text}`}
-                          className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors"
+                          className="min-w-0 break-all text-[#e3f7ec] text-base leading-[1.5] [font-family:'Lato',sans-serif] hover:text-[#ac8042] transition-colors"
                         >
                           {contact.text}
                         </a>
                       ) : (
-                        <span className="text-[#e3f7ec] text-[18px] leading-[1.5] [font-family:'Lato',sans-serif]">
+                        <span className="min-w-0 text-[#e3f7ec] text-base leading-[1.5] [font-family:'Lato',sans-serif]">
                           {contact.text}
                         </span>
                       )}
@@ -307,7 +322,8 @@ export const SiteFooterSection = (): JSX.Element => {
                 })}
               </address>
             </motion.div>
-          </motion.div>
+
+          </div>
         </div>
 
         {/* Divider */}
@@ -325,28 +341,37 @@ export const SiteFooterSection = (): JSX.Element => {
             variants={fadeIn}
             className="font-body-sm font-[number:var(--body-sm-font-weight)] text-[#a8cab9] text-[length:var(--body-sm-font-size)] tracking-[var(--body-sm-letter-spacing)] leading-[var(--body-sm-line-height)] [font-style:var(--body-sm-font-style)] italic md:max-w-[548px]"
           >
-            &ldquo;{footer.bottomDescription}&rdquo;
+            &ldquo;{footer.bottomDescription.split(/\.\s+/).map((sentence, i, arr) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {i < arr.length - 1 ? sentence + "." : sentence}
+              </span>
+            ))}&rdquo;
           </motion.p>
 
           <motion.div
             variants={fadeIn}
-            className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
+            className="flex flex-col gap-4 items-end"
           >
             <p
-              className="text-[10px] text-[#a8cab9]/70 tracking-widest uppercase whitespace-nowrap"
+              className="text-[10px] text-[#a8cab9]/70 tracking-widest uppercase"
               data-testid="text-copyright"
             >
               {footer.copyright}
             </p>
-            <nav className="flex flex-wrap gap-x-6 gap-y-2">
+            <nav className="flex flex-wrap items-center gap-y-2 justify-end">
               {footer.legalLinks.map((link, index) => (
-                <FooterLink
-                  key={index}
-                  href={link.href}
-                  className="text-[10px] text-[#a8cab9]/70 tracking-widest uppercase hover:text-[#ac8042] transition-colors whitespace-nowrap"
-                >
-                  {link.label}
-                </FooterLink>
+                <span key={index} className="flex items-center">
+                  {index > 0 && (
+                    <span className="mx-3 text-[#a8cab9]/40 text-[10px]">•</span>
+                  )}
+                  <FooterLink
+                    href={link.href}
+                    className="text-[10px] text-[#a8cab9]/70 tracking-widest uppercase hover:text-[#ac8042] transition-colors whitespace-nowrap"
+                  >
+                    {link.label}
+                  </FooterLink>
+                </span>
               ))}
             </nav>
           </motion.div>

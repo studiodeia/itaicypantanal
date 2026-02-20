@@ -4,11 +4,13 @@ import { goToCloudbedsBooking } from "@/lib/booking/cloudbeds";
 import { GoldButton } from "@/components/pantanal/buttons/GoldButton";
 import { OutlineButton } from "@/components/pantanal/buttons/OutlineButton";
 import { fadeIn, fadeUp, stagger, viewport } from "@/lib/motion";
+import { useLanguage } from "@/i18n/context";
 import type { HomePageContent } from "@shared/cms-page-content";
 
 type Props = { content: HomePageContent["accommodation"] };
 
 export const AccommodationInfoSection = ({ content }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   return (
     <section className="relative z-[6] flex flex-col items-center w-full min-h-[868px] md:min-h-[800px] lg:h-[1000px] overflow-hidden">
       {/* Background — full-bleed image, gradient darkens left for text readability */}
@@ -40,6 +42,7 @@ export const AccommodationInfoSection = ({ content }: Props): JSX.Element => {
               data-testid="button-reservar-accommodations"
               onClick={() =>
                 goToCloudbedsBooking({
+                  locale: lang,
                   utmContent: "accommodations_section_reservar",
                 })
               }

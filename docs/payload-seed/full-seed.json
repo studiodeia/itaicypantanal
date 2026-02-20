@@ -6,6 +6,10 @@
   },
   "blog": {
     "categories": [
+      "Pesca",
+      "Observação de Aves",
+      "Ecoturismo",
+      "Cultura",
       "Aventura",
       "Gastronomia",
       "Conservação",
@@ -14,6 +18,91 @@
       "Eventos e Workshops"
     ],
     "posts": [
+      {
+        "slug": "guia-completo-pesca-esportiva-pantanal",
+        "title": "Guia Completo de Pesca Esportiva no Pantanal: Espécies, Temporadas e Técnicas",
+        "subtitle": "Pesca",
+        "description": "Tudo o que você precisa saber para uma expedição de pesca esportiva no Pantanal Norte Matogrossense: espécies-troféu, melhores épocas, técnicas eficazes e o Projeto Cota Zero.",
+        "tag": "Guia",
+        "primaryCategory": "Pesca",
+        "categories": [
+          "Pesca"
+        ],
+        "src": "/images/blog-pesca-guia-completo",
+        "author": "Lucas Vieira",
+        "date": "25 de Fevereiro de 2026",
+        "readingTime": "9 minutos de leitura",
+        "isFeatured": false,
+        "isRecent": true
+      },
+      {
+        "slug": "guia-observacao-aves-pantanal-especies-epocas-tecnicas",
+        "title": "Guia Completo de Observação de Aves no Pantanal Norte Matogrossense",
+        "subtitle": "Observação de Aves",
+        "description": "O roteiro definitivo para observadores de aves no Pantanal: 166 espécies catalogadas, melhores pontos de observação, calendário da avifauna por mês e dicas de equipamento.",
+        "tag": "Guia",
+        "primaryCategory": "Observação de Aves",
+        "categories": [
+          "Observação de Aves"
+        ],
+        "src": "/images/blog-birdwatching-guia-completo",
+        "author": "João Andriola",
+        "date": "22 de Fevereiro de 2026",
+        "readingTime": "8 minutos de leitura",
+        "isFeatured": true,
+        "isRecent": true
+      },
+      {
+        "slug": "desconectar-para-reconectar-executivos-pantanal",
+        "title": "Desconectar para Reconectar: Por Que Executivos Estressados Estão Escolhendo o Pantanal",
+        "subtitle": "Ecoturismo",
+        "description": "Burnout, hiperconectividade e a busca por descanso real: como um retiro all-inclusive no Pantanal Norte Matogrossense pode ser o reset que seu corpo e mente precisam.",
+        "tag": "Bem-estar",
+        "primaryCategory": "Ecoturismo",
+        "categories": [
+          "Ecoturismo"
+        ],
+        "src": "/images/blog-executivos-descanso",
+        "author": "Lucas Vieira",
+        "date": "20 de Fevereiro de 2026",
+        "readingTime": "5 minutos de leitura",
+        "isFeatured": false,
+        "isRecent": true
+      },
+      {
+        "slug": "acordar-som-passaros-birdwatching-pantanal",
+        "title": "Acordar ao Som dos Pássaros: Como uma Manhã de Birdwatching no Pantanal Resseta Corpo e Mente",
+        "subtitle": "Observação de Aves",
+        "description": "A ciência comprova: o canto dos pássaros reduz o estresse e restaura o sistema nervoso. Descubra como a trilha do amanhecer no Itaicy pode ser a melhor experiência de descanso da sua vida.",
+        "tag": "Bem-estar",
+        "primaryCategory": "Observação de Aves",
+        "categories": [
+          "Observação de Aves"
+        ],
+        "src": "/images/blog-birdwatching-amanhecer",
+        "author": "Lucas Vieira",
+        "date": "21 de Fevereiro de 2026",
+        "readingTime": "4 minutos de leitura",
+        "isFeatured": false,
+        "isRecent": true
+      },
+      {
+        "slug": "gastronomia-all-inclusive-pantanal-descanso",
+        "title": "Comer Bem para Descansar Melhor: Como a Gastronomia All-Inclusive do Pantanal Faz Parte da Cura",
+        "subtitle": "Gastronomia",
+        "description": "Alimentação de qualidade, sem decisões, com ingredientes frescos do Pantanal Norte Matogrossense. Descubra como o conceito all-inclusive do Itaicy transforma refeições em momentos de restauração.",
+        "tag": "Gastronomia",
+        "primaryCategory": "Gastronomia",
+        "categories": [
+          "Gastronomia"
+        ],
+        "src": "/images/blog-gastronomia-all-inclusive",
+        "author": "Lucas Vieira",
+        "date": "23 de Fevereiro de 2026",
+        "readingTime": "5 minutos de leitura",
+        "isFeatured": false,
+        "isRecent": true
+      },
       {
         "slug": "guia-observacao-166-especies-aves",
         "title": "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy",
@@ -209,6 +298,603 @@
     ],
     "details": [
       {
+        "slug": "guia-completo-pesca-esportiva-pantanal",
+        "heroImage": "/images/article-pesca-guia-completo",
+        "relatedSlugs": [
+          "acordar-som-passaros-birdwatching-pantanal",
+          "desconectar-para-reconectar-executivos-pantanal"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "O Pantanal Norte Matogrossense abriga uma das maiores concentrações de peixes de água doce do planeta. Com mais de 260 espécies catalogadas nos rios e baías que cortam o bioma, pescar aqui não é apenas um esporte — é uma imersão em um dos ecossistemas mais produtivos e biodiversos do mundo."
+          },
+          {
+            "type": "paragraph",
+            "text": "A partir do Itaicy Pantanal Eco Lodge, às margens do Rio Negro em Santo Antônio do Leverger, a 37 km de Cuiabá, você tem acesso privilegiado a áreas remotas onde as grandes espécies-troféu da região ainda abundam."
+          },
+          {
+            "type": "paragraph",
+            "text": "Este guia reúne tudo o que você precisa para planejar sua expedição: espécies, temporadas, técnicas e a filosofia por trás do Projeto Cota Zero."
+          },
+          {
+            "type": "heading",
+            "text": "A Riqueza Piscosa do Pantanal Norte Matogrossense"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Pantanal é alimentado por um sistema hidrológico extraordinário. Durante a cheia (outubro a março), as águas do Rio Cuiabá e seus afluentes invadem as planícies, criando uma rede de lagos e baías temporárias onde os peixes se reproduzem e se alimentam."
+          },
+          {
+            "type": "paragraph",
+            "text": "Na seca (abril a setembro), essa água recua e concentra os cardumes nos rios e baías permanentes — criando condições excepcionais para a pesca esportiva. O resultado é uma biomassa de peixes sem paralelo no mundo tropical."
+          },
+          {
+            "type": "paragraph",
+            "text": "Espécies como o pintado-amazônico, o dourado, o pacu e o cachara atingem tamanhos impressionantes justamente por causa dessa disponibilidade de alimento e da proteção que o Projeto Cota Zero oferece. Pescar no Pantanal Norte é, antes de tudo, uma lição de como a natureza funciona quando respeitada."
+          },
+          {
+            "type": "heading",
+            "text": "As Espécies-Troféu: Quem Você Vai Encontrar"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cada espécie do Pantanal tem sua própria personalidade, seu habitat preferido e o conjunto de técnicas que melhor a atrai. Conhecer essas nuances é o que separa um dia produtivo de um dia frustrante. As espécies mais disputadas pelos pescadores esportivos que frequentam o Itaicy são:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "Pintado-amazônico (Pseudoplatystoma punctifer):",
+                "text": " O maior predador de escamas do Pantanal. Pode ultrapassar 1,20 m e 30 kg. Prefere fundos de rio com corrente moderada e se alimenta principalmente à noite. Responde bem a iscas artificiais volumosas e a corrimão de fundo."
+              },
+              {
+                "bold": "Dourado (Salminus brasiliensis):",
+                "text": " O jaguar dos rios. Salta, corre e luta de forma espetacular quando fisgado. Frequenta corredeiras e trechos mais oxigenados. É a espécie preferida dos praticantes de fly fishing no Pantanal."
+              },
+              {
+                "bold": "Pacu (Piaractus mesopotamicus):",
+                "text": " Parente do tambaqui, é um combatente de fibra. Frequenta as bordas de mata alagada e reage bem a frutas e iscas de fundo. Sua captura é particularmente gratificante para iniciantes."
+              },
+              {
+                "bold": "Cachara (Pseudoplatystoma reticulatum):",
+                "text": " Primo mais raro do pintado, identificado pelo padrão de listras no lugar de pontos. Atinge tamanhos semelhantes e exige ainda mais habilidade para localizar e capturar."
+              },
+              {
+                "bold": "Tucunaré (Cichla sp.):",
+                "text": " Predador territorial de grande agressividade. Habita baías e lagoas marginais. Reage com violência a iscas topwater e poppers, gerando strikes espetaculares na superfície da água."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Temporadas de Pesca: Quando Ir"
+          },
+          {
+            "type": "paragraph",
+            "text": "A temporada oficial de pesca esportiva no Pantanal mato-grossense vai de março a outubro, respeitando o período de piracema (defeso), que ocorre entre novembro e fevereiro. Dentro da temporada, cada período oferece condições e oportunidades diferentes:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "Março a Abril (início da vazante):",
+                "text": " As águas começam a baixar. Os peixes ainda estão dispersos, mas concentrações nos rios principais começam a se formar. Excelente para pintado e cachara de grande porte."
+              },
+              {
+                "bold": "Maio a Julho (seca progressiva):",
+                "text": " Considerado o melhor período para a maioria das espécies. A água está clara, os cardumes se concentram e a pesca fica mais técnica e produtiva. É a alta temporada do Itaicy."
+              },
+              {
+                "bold": "Agosto a Outubro (seca plena):",
+                "text": " Água nos níveis mais baixos, peixes altamente concentrados. Excelente para dourado em corredeiras e tucunaré em baías. A pesca de fundo para pintado também atinge seu pico."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Técnicas Mais Eficazes no Pantanal"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Pantanal exige versatilidade. Diferente de destinos com uma ou duas técnicas dominantes, aqui o pescador que domina múltiplos estilos terá resultados muito superiores. As principais técnicas praticadas no Itaicy incluem:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "Corrimão ou Trolling:",
+                "text": " Arrasto de iscas artificiais (rapalas, cucharas) pela corrente do rio. Muito eficaz para pintado e cachara em trechos profundos com corrente moderada."
+              },
+              {
+                "bold": "Pesca de Fundo:",
+                "text": " Com molinete de carretel e linha pesada. Iscas naturais no fundo para pintado e cachara noturnos. Técnica preferida dos guias locais de maior experiência."
+              },
+              {
+                "bold": "Fly Fishing:",
+                "text": " O dourado é o protagonista. Requer equipamento específico (vara 8-10, linha WF8-10F) e apresentações precisas em áreas de corredeira. O Itaicy oferece acesso a trechos ideais para essa prática."
+              },
+              {
+                "bold": "Topwater:",
+                "text": " Poppers e swimbaits de superfície para tucunaré em baías calmas ao amanhecer e entardecer. Os strikes são visuais, dramáticos e absolutamente inesquecíveis."
+              },
+              {
+                "bold": "Jig e Artificial de Fundo:",
+                "text": " Swimbaits e jigs para pintado e pacu em profundidades variáveis. Exige sensibilidade de mão para sentir o toque sutil dessas espécies em ambientes de fundo."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "O Projeto Cota Zero: Pesca com Propósito"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Itaicy Pantanal Eco Lodge opera sob o Projeto Cota Zero: todo peixe capturado é devolvido vivo ao rio. Não há extração, não há cota diária de peixes para levar para casa."
+          },
+          {
+            "type": "paragraph",
+            "text": "Essa filosofia, que alguns visitantes recebem com surpresa na chegada, rapidamente se transforma na razão pela qual voltam. Os rios ao entorno do Itaicy abrigam peixes grandes precisamente porque eles não são retirados. Um pintado de 25 kg capturado hoje pode ser capturado por outro pescador amanhã — e por você na próxima temporada."
+          },
+          {
+            "type": "paragraph",
+            "text": "Cada captura com peixe devolvido vivo gera dados para o monitoramento contínuo da biodiversidade aquática do Pantanal Norte, contribuindo para pesquisas científicas sobre a saúde dos ecossistemas da região."
+          },
+          {
+            "type": "heading",
+            "text": "Por Que o Itaicy É a Base Ideal para Sua Expedição"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mais do que acesso a bons pesqueiros, o diferencial de uma expedição no Itaicy é a estrutura completa: barcos equipados com motor de centro e elétrico para pesca silenciosa, guias locais que conhecem cada baía e cada ponto do Rio Negro há décadas, e equipamentos de qualidade disponíveis para locação."
+          },
+          {
+            "type": "paragraph",
+            "text": "O modelo all-inclusive do lodge significa que você chega, pesca e descansa — sem se preocupar com logística, refeições ou equipamentos. Reserve sua vaga para a temporada 2026 e descubra por que o Pantanal Norte Matogrossense é o destino de pesca esportiva mais emocionante do Brasil."
+          }
+        ]
+      },
+      {
+        "slug": "guia-observacao-aves-pantanal-especies-epocas-tecnicas",
+        "heroImage": "/images/article-birdwatching-guia-completo",
+        "relatedSlugs": [
+          "acordar-som-passaros-birdwatching-pantanal",
+          "guia-completo-pesca-esportiva-pantanal"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Em maio de 2024, o ornitólogo João Andriola completou o levantamento de campo mais abrangente já realizado no Itaicy Pantanal Eco Lodge: 166 espécies de aves catalogadas nos limites da propriedade e em suas imediações. O número impressiona — mas quem conhece o Pantanal Norte Matogrossense não se surpreende."
+          },
+          {
+            "type": "paragraph",
+            "text": "Localizado em Santo Antônio do Leverger, MT, a 37 km de Cuiabá, o Itaicy ocupa uma zona de transição extraordinária: entre campos alagados, matas de galeria, cerrado e baías permanentes. É essa diversidade de habitats que atrai uma avifauna encontrada em poucos lugares do planeta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Este guia foi elaborado com a consultoria do João Andriola para ajudar observadores de todos os níveis a extrair o máximo de sua visita ao Pantanal Norte Matogrossense."
+          },
+          {
+            "type": "heading",
+            "text": "Por Que o Pantanal Norte É um Paraíso para Birdwatchers"
+          },
+          {
+            "type": "paragraph",
+            "text": "A chave para entender a riqueza ornitológica do Pantanal está no seu regime hidrológico único. Durante a cheia, extensas áreas de campos inundados criam habitats temporários que atraem espécies aquáticas e migratórias em densidade espetacular. Na seca, a fauna se concentra nas bordas de rios e baías — facilitando a observação e a fotografia."
+          },
+          {
+            "type": "paragraph",
+            "text": "Diferente da Amazônia, onde as aves se escondem no dossel de uma floresta fechada, no Pantanal você as vê. Tuiuiús sobrevoando o horizonte. Araras-azuis pousadas em palmeiras. Colhereiros rosados em voo rasante sobre a água. A experiência visual é imediata, abundante e constantemente surpreendente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Para o observador experiente, o Pantanal Norte representa ainda um território com menor pressão de visitantes do que o Pantanal Sul — o que significa aves menos acostumadas a humanos e comportamentos mais naturais para observação científica ou recreativa."
+          },
+          {
+            "type": "heading",
+            "text": "Os Melhores Pontos de Observação no Itaicy"
+          },
+          {
+            "type": "paragraph",
+            "text": "A propriedade do Itaicy oferece quatro ambientes distintos de observação, cada um com suas espécies características:"
+          },
+          {
+            "type": "species",
+            "name": "Mata de Galeria do Rio Negro",
+            "scientificName": "Ambiente ribeirinho",
+            "description": "As margens do Rio Negro, com sua vegetação densa e água escura, são habitat preferido de martins-pescadores (quatro espécies registradas), socós, garças e biguatingas. A canoa ou o barco de alumínio permitem uma abordagem silenciosa e próxima dessas espécies. Os horários do amanhecer e do entardecer são especialmente produtivos para espécies como o socó-dorminhoco e o martim-pescador-verde.",
+            "image": "/images/birdwatching-mata-galeria"
+          },
+          {
+            "type": "species",
+            "name": "Campos Abertos e Pastagens",
+            "scientificName": "Ambiente campestre",
+            "description": "As áreas abertas da propriedade são território das seriemas, carcará, gavião-caboclo e diversas espécies de sabiás e chupins. Tuiuiús frequentam essas áreas em busca de alimento, especialmente na seca, quando a concentração de anfíbios e peixes nos campos baixos os atrai em grande número.",
+            "image": "/images/birdwatching-campos-abertos"
+          },
+          {
+            "type": "species",
+            "name": "Baías e Lagoas Marginais",
+            "scientificName": "Ambiente aquático",
+            "description": "As baías permanentes da propriedade concentram a maior diversidade. Colhereiros, espátulas, biguás, patos-do-mato, jaçanãs e diversas espécies de garças habitam esses ambientes. A madrugada e o amanhecer são os momentos de maior atividade, com bandos de dezenas de aves se alimentando simultaneamente em espetáculo de difícil descrição.",
+            "image": "/images/birdwatching-baias-lagoas"
+          },
+          {
+            "type": "heading",
+            "text": "Calendário da Avifauna: Quando Ver Cada Espécie"
+          },
+          {
+            "type": "paragraph",
+            "text": "A composição da avifauna no Pantanal muda significativamente ao longo do ano, acompanhando o pulso das águas. Para birdwatchers com espécies-alvo específicas, conhecer esse calendário é essencial para planejar a visita."
+          },
+          {
+            "type": "paragraph",
+            "text": "Julho a outubro é a melhor época para aves aquáticas — garças, tuiuiú, colhereiro, biguatinga — que se concentram nos corpos d'água em retração. Outubro a fevereiro traz as espécies migratórias, especialmente andorinhas e limícolas que chegam do Hemisfério Norte ou do Sul do continente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Março a junho é excelente para espécies florestais em atividade de reprodução, com maior atividade vocal e territorial — facilitando a localização por canto. O Itaicy opera durante todos esses períodos, e nossos guias adaptam os roteiros conforme a temporada."
+          },
+          {
+            "type": "heading",
+            "text": "Equipamento Essencial para Birdwatching no Pantanal"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Pantanal exige equipamento adaptado às suas condições: calor intenso, umidade alta e distâncias variáveis entre o observador e as aves. Nossa recomendação por categoria:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "Binóculo 8x42 ou 10x42:",
+                "text": " O padrão para birdwatching terrestre. O 8x42 oferece campo visual mais amplo e melhor estabilidade para uso sem tripé. Marcas como Swarovski, Zeiss e Vortex são excelentes; o Nikon Prostaff é uma opção de qualidade a preço acessível."
+              },
+              {
+                "bold": "Câmera com teleobjetiva:",
+                "text": " Lentes de 400mm ou mais são ideais para documentação. Para quem não quer investir em fotografia especializada, um superzoom compacto (Sony RX10 IV) cobre bem a maioria das situações no Pantanal."
+              },
+              {
+                "bold": "Guia de campo:",
+                "text": " 'Aves do Pantanal' de Souza & Giroti é a referência mais completa para a região. O aplicativo Merlin Bird ID (Cornell Lab) funciona offline e tem a coleção de sons das espécies sul-americanas — indispensável para identificação por canto."
+              },
+              {
+                "bold": "Roupas neutras:",
+                "text": " Tons de cáqui, verde oliva e bege. Evite branco e cores vibrantes que perturbam as aves. Camisas de manga longa com proteção UV são essenciais para o sol intenso do Pantanal."
+              },
+              {
+                "bold": "Repelente e protetor solar:",
+                "text": " Repelente com DEET ou Icaridina para mosquitos, especialmente próximo às baías no amanhecer. Protetor solar FPS 50+ para as trilhas abertas sob o sol pantaneiro."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "As Espécies Mais Desafiadoras de Encontrar"
+          },
+          {
+            "type": "paragraph",
+            "text": "Das 166 espécies catalogadas no Itaicy, algumas exigem paciência, sorte e conhecimento específico para serem encontradas. São as mais cobiçadas pelos observadores experientes."
+          },
+          {
+            "type": "paragraph",
+            "text": "O gavião-real (Harpia harpyja) faz aparições raras nas matas mais fechadas da propriedade. O urutau (Nyctibius griseus) é especialista em camuflagem diurna — quase impossível de ver sem o auxílio do canto noturno. Já o potoo grande (Nyctibius grandis), cujo chamado perturbador corta as noites pantaneiras, exige buscas específicas no período noturno."
+          },
+          {
+            "type": "paragraph",
+            "text": "O João Andriola conhece os hábitos e os locais frequentados por cada uma dessas espécies raras. Seus roteiros guiados especializados são a melhor forma de otimizar as chances de encontro com as aves mais esquivas do catálogo."
+          },
+          {
+            "type": "heading",
+            "text": "Ética na Observação de Aves"
+          },
+          {
+            "type": "paragraph",
+            "text": "No Pantanal, onde a fauna ainda se comporta de forma natural em muitas áreas, respeitar princípios básicos garante que as aves continuem assim para os próximos observadores."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nunca utilize playback por mais de dois minutos consecutivos na mesma espécie. Mantenha distância segura de ninhos e áreas de reprodução — especialmente durante a cheia, quando tuiuiús e colhereiros nidificam ativamente. Não alimente as aves, pois animais acostumados a alimento humano perdem o instinto de forrageamento natural."
+          },
+          {
+            "type": "paragraph",
+            "text": "O Itaicy adota um código de conduta para todos os roteiros de birdwatching que garante uma experiência memorável e responsável, tanto para o hóspede quanto para as aves que habitam o Pantanal Norte Matogrossense."
+          }
+        ]
+      },
+      {
+        "slug": "desconectar-para-reconectar-executivos-pantanal",
+        "heroImage": "/images/article-executivos-descanso",
+        "relatedSlugs": [
+          "acordar-som-passaros-birdwatching-pantanal",
+          "gastronomia-all-inclusive-pantanal-descanso"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Você termina o expediente, mas não termina o trabalho. Os emails continuam chegando. As reuniões se acumulam no calendário. O sono é fragmentado pela antecipação de problemas que ainda não aconteceram."
+          },
+          {
+            "type": "paragraph",
+            "text": "Se essa sequência soa familiar, você não está sozinho. O burnout afeta entre 40% e 60% dos profissionais de alta performance em posições de liderança, segundo dados do Fórum Econômico Mundial de 2025."
+          },
+          {
+            "type": "paragraph",
+            "text": "A busca pela solução tem levado um número crescente de executivos a uma descoberta contraintuitiva: o Pantanal Norte Matogrossense, a 37 km de Cuiabá, pode oferecer o que nenhum aplicativo de meditação ou resort urbano consegue — um reset completo e genuíno do sistema nervoso."
+          },
+          {
+            "type": "heading",
+            "text": "O Custo Oculto da Hiperconectividade Permanente"
+          },
+          {
+            "type": "paragraph",
+            "text": "O cérebro humano não foi projetado para processar o volume de estímulos que a vida corporativa moderna impõe. A atenção constante a múltiplas telas, a pressão de estar sempre disponível e a sobrecarga de decisões cotidianas criam um estado de ativação crônica do sistema nervoso simpático — o modo de luta ou fuga."
+          },
+          {
+            "type": "paragraph",
+            "text": "Com o tempo, esse estado cumulativo se manifesta como exaustão cognitiva, dificuldade de concentração, irritabilidade e insônia profunda. Tirar férias em um destino movimentado frequentemente não resolve o problema: o ambiente continuamente estimulante impede a verdadeira recuperação fisiológica."
+          },
+          {
+            "type": "paragraph",
+            "text": "O que o sistema nervoso precisa não é de entretenimento — é de silêncio, natureza e a ausência de decisões urgentes."
+          },
+          {
+            "type": "heading",
+            "text": "A Ciência: O Que a Natureza Faz ao Seu Cérebro"
+          },
+          {
+            "type": "paragraph",
+            "text": "A pesquisa em neurociência e psicologia ambiental acumulou evidências robustas sobre os efeitos restauradores da natureza. O estudo de Strayer et al. (2014) demonstrou que três dias de imersão em ambientes naturais sem acesso a tecnologia produzem um aumento de 50% em testes de criatividade e resolução de problemas."
+          },
+          {
+            "type": "paragraph",
+            "text": "Kaplan & Kaplan, criadores da Teoria da Restauração da Atenção, descrevem como ambientes naturais reativam a atenção involuntária — o tipo que não se cansa — e permitem que a atenção voluntária, esgotada pelo trabalho, se recupere plenamente."
+          },
+          {
+            "type": "paragraph",
+            "text": "No Pantanal, esses mecanismos operam em plena intensidade: o som do vento sobre os campos, o canto de 166 espécies de aves catalogadas na propriedade, a visão da água e o ritmo lento da natureza pantaneira criam as condições ideais para a restauração cognitiva que seu cérebro precisa."
+          },
+          {
+            "type": "heading",
+            "text": "O Retiro All-Inclusive: Uma Experiência Sem Preocupações"
+          },
+          {
+            "type": "paragraph",
+            "text": "O que diferencia o Itaicy de outros destinos de descanso é a eliminação de todas as fricções logísticas da viagem. No modelo all-inclusive, cada refeição já está preparada com ingredientes frescos da região, cada atividade já está organizada pelo guia, cada detalhe da estadia já está cuidado pela equipe."
+          },
+          {
+            "type": "paragraph",
+            "text": "Para executivos acostumados a tomar centenas de micro-decisões por dia, essa ausência de escolhas operacionais é em si mesma profundamente restauradora. Você chega, respira o ar do Pantanal e passa os próximos dias apenas sendo — sem agendas, sem emails, sem responsabilidades de curto prazo."
+          },
+          {
+            "type": "heading",
+            "text": "'Cheguei Exausto. Saí Diferente.'"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ricardo M., Diretor de Operações, São Paulo: 'Cheguei no Itaicy com a sensação de que precisava de pelo menos três semanas de férias para me recuperar. Depois de quatro dias, dormia como não dormia há anos.'"
+          },
+          {
+            "type": "paragraph",
+            "text": "'No quinto dia, acordei às cinco da manhã — não porque precisava, mas porque queria ver o nascer do sol no Rio Negro. Voltei para São Paulo com energia que não sentia desde antes da pandemia. Já marquei para voltar.'"
+          },
+          {
+            "type": "paragraph",
+            "text": "A transformação que Ricardo descreve não é coincidência. É o resultado previsível de imersão em natureza, sono de qualidade em ambiente silencioso, alimentação regional sem ultraprocessados e dias inteiros sem urgências artificiais competindo pela sua atenção."
+          },
+          {
+            "type": "heading",
+            "text": "Como Funciona a Desconexão Digital no Itaicy"
+          },
+          {
+            "type": "paragraph",
+            "text": "O Itaicy oferece Wi-Fi nas áreas comuns, mas o sinal é deliberadamente ausente nas trilhas, nos barcos e nos quartos. Isso não é um problema técnico — é uma escolha de design para proteger a qualidade da sua experiência."
+          },
+          {
+            "type": "paragraph",
+            "text": "A maioria dos hóspedes que chega resistente à ideia de desconexão confessa, ao final da estadia, que foi exatamente isso que precisava. Para quem precisa de um período de transição, recomendamos uma janela de conexão de 30 minutos pela manhã para verificar emergências reais — e o restante do dia inteiramente livre de telas."
+          }
+        ]
+      },
+      {
+        "slug": "acordar-som-passaros-birdwatching-pantanal",
+        "heroImage": "/images/article-birdwatching-amanhecer",
+        "relatedSlugs": [
+          "guia-observacao-aves-pantanal-especies-epocas-tecnicas",
+          "desconectar-para-reconectar-executivos-pantanal"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Às 5h30 da manhã, antes do sol tocar o horizonte sobre as baías do Pantanal Norte Matogrossense, algo extraordinário acontece. Primeiro, uma voz isolada — talvez a siriema, inconfundível no silêncio do amanhecer. Depois, em cascata, dezenas de outras espécies se juntam em um coral que não tem equivalente na experiência humana urbana."
+          },
+          {
+            "type": "paragraph",
+            "text": "Para quem chegou ao Itaicy com o sistema nervoso sobrecarregado de ruído de cidade, reuniões e notificações, essa é a primeira dose de algo que a ciência já documentou com precisão: o canto dos pássaros tem efeitos mensuráveis e imediatos sobre o estado psicológico e fisiológico humano."
+          },
+          {
+            "type": "paragraph",
+            "text": "E o Pantanal, com 166 espécies catalogadas na propriedade, oferece esse tratamento na dosagem máxima."
+          },
+          {
+            "type": "heading",
+            "text": "A Ciência do Canto dos Pássaros e Seus Efeitos no Sistema Nervoso"
+          },
+          {
+            "type": "paragraph",
+            "text": "Em 2022, pesquisadores do Instituto Max Planck publicaram um estudo com mais de 295 participantes demonstrando que a exposição ao canto de pássaros reduziu significativamente os níveis de ansiedade, paranoia e depressão — mesmo em doses breves de apenas 15 minutos."
+          },
+          {
+            "type": "paragraph",
+            "text": "O mecanismo proposto envolve a associação evolutiva profunda entre presença de pássaros cantando e ambientes seguros. No ambiente ancestral humano, silêncio ou alarme das aves sinalizava perigo iminente. Quando os pássaros cantam em abundância, o cérebro interpreta o ambiente como seguro e ativa o sistema nervoso parassimpático — responsável pela recuperação, digestão e descanso profundo."
+          },
+          {
+            "type": "paragraph",
+            "text": "O resultado é literalmente fisiológico: frequência cardíaca mais lenta, respiração mais profunda, cortisol em queda consistente. No Pantanal, com 166 espécies dentro da propriedade, esse efeito é multiplicado por uma diversidade sonora que simplesmente não existe em nenhum parque urbano ou resort convencional."
+          },
+          {
+            "type": "heading",
+            "text": "O Coral do Amanhecer no Pantanal"
+          },
+          {
+            "type": "paragraph",
+            "text": "O 'dawn chorus' — o pico de atividade vocal das aves nas primeiras horas da manhã — é um fenômeno universal no reino animal, mas o Pantanal o eleva a uma dimensão completamente diferente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ao contrário de uma floresta tropical fechada, onde os sons chegam filtrados por camadas de vegetação, no Pantanal a paisagem aberta permite que o som viaje com clareza por centenas de metros. Você pode ouvir o tuiuiú a 500 metros, a arara-azul cruzando o céu ao mesmo tempo que o acauã chama na beira da mata e o biguatinga seca as asas no galho próximo ao barco."
+          },
+          {
+            "type": "paragraph",
+            "text": "É polifônico, imersivo e — segundo os hóspedes que já experimentaram — impossível de descrever com precisão para quem ainda não viveu essa experiência."
+          },
+          {
+            "type": "heading",
+            "text": "A Trilha do Amanhecer no Itaicy: Hora a Hora"
+          },
+          {
+            "type": "paragraph",
+            "text": "O roteiro padrão da trilha do amanhecer, guiada pelo ornitólogo João Andriola ou pelos guias do Itaicy treinados para birdwatching, segue esta sequência:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "5h00 — Café da manhã silencioso:",
+                "text": " Já preparado antes mesmo do horário de acordar habitual. Café forte, frutas frescas e pão de queijo — simples, nutritivo, sem ruído. O silêncio já é parte da experiência desde esse momento."
+              },
+              {
+                "bold": "5h30 — Saída para a trilha:",
+                "text": " Com lanternas de cabeça e binóculos. O guia lidera em silêncio, comunicando por gestos. Os primeiros cantos já começam antes mesmo de deixar a área do lodge — a siriema, o bem-te-vi, o joão-de-barro."
+              },
+              {
+                "bold": "5h45 — Ponto de observação da baía:",
+                "text": " A primeira parada estratégica. Com o amanhecer refletindo na água, é possível ver garças, socós-dormentes e, com frequência, o tuiuiú chegando para o primeiro forrageio do dia."
+              },
+              {
+                "bold": "6h15 — Incursão pela mata de galeria:",
+                "text": " A luz aumenta e as espécies florestais ficam mais ativas. Pica-paus, sabiás, cambacicas e jacus se movimentam pela vegetação ribeirinha em busca de alimento."
+              },
+              {
+                "bold": "7h00 — Retorno e café da manhã completo:",
+                "text": " De volta ao lodge para o café da manhã principal, com a satisfação tranquila de quem já viveu duas horas inteiras antes que o restante do mundo acorde."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "O All-Inclusive Que Cuida de Tudo Para Você"
+          },
+          {
+            "type": "paragraph",
+            "text": "Você não precisa preparar nada, organizar nada ou se preocupar com nada. O café está pronto antes de você acordar, o guia está esperando, o roteiro está planejado."
+          },
+          {
+            "type": "paragraph",
+            "text": "A filosofia all-inclusive do Itaicy existe exatamente para isso: eliminar todas as barreiras entre você e a experiência. Depois da trilha, o café da manhã completo já está servido, e o resto do dia é seu — para descansar, pescar, passear de barco ou simplesmente ficar na varanda ouvindo o Pantanal continuar."
+          }
+        ]
+      },
+      {
+        "slug": "gastronomia-all-inclusive-pantanal-descanso",
+        "heroImage": "/images/article-gastronomia-all-inclusive",
+        "relatedSlugs": [
+          "desconectar-para-reconectar-executivos-pantanal",
+          "acordar-som-passaros-birdwatching-pantanal"
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Existe uma ironia bem documentada pela neurociência comportamental: pessoas sob estresse crônico fazem piores escolhas alimentares justamente quando mais precisam de nutrição de qualidade. A fadiga de decisão — o empobrecimento cognitivo causado pelo excesso de escolhas ao longo do dia — se manifesta nas refeições como atração por alimentos ultraprocessados e alto teor calórico."
+          },
+          {
+            "type": "paragraph",
+            "text": "É o mecanismo que explica por que o executivo que almoça bem na segunda já está comendo mal na sexta-feira."
+          },
+          {
+            "type": "paragraph",
+            "text": "No Itaicy Pantanal Eco Lodge, o modelo all-inclusive foi desenhado para quebrar exatamente esse ciclo: você não escolhe o que comer, não paga por cada item, não se preocupa com o menu. Você apenas come — bem, com ingredientes frescos do Pantanal Norte Matogrossense, preparados com a técnica da culinária regional pantaneira."
+          },
+          {
+            "type": "heading",
+            "text": "Alimentação de Qualidade e Recuperação do Estresse"
+          },
+          {
+            "type": "paragraph",
+            "text": "A relação entre dieta e estresse é bidirecional e bem estabelecida na literatura científica. O cortisol elevado cronicamente aumenta a inflamação sistêmica e piora a qualidade do sono. Uma alimentação rica em ômega-3, antioxidantes e fibras reduz marcadores inflamatórios e apoia a produção de serotonina e dopamina."
+          },
+          {
+            "type": "paragraph",
+            "text": "O peixe de água doce do Pantanal — pintado, pacu, jaú, dourado — é uma das fontes mais ricas de ômega-3 disponíveis no Brasil. As frutas regionais como o caju-do-cerrado e o acuri são ricas em vitamina C e compostos antioxidantes. A mandioca, base da cozinha pantaneira, oferece fibras que alimentam o microbioma intestinal — cada vez mais reconhecido como central para a regulação do humor e da ansiedade."
+          },
+          {
+            "type": "paragraph",
+            "text": "Comer bem no Pantanal não é um detalhe da viagem. É parte integrante do protocolo de recuperação."
+          },
+          {
+            "type": "heading",
+            "text": "O All-Inclusive: A Libertação das Decisões"
+          },
+          {
+            "type": "paragraph",
+            "text": "O psicólogo Barry Schwartz, em 'O Paradoxo da Escolha', demonstrou que mais opções frequentemente levam a mais ansiedade e menor satisfação. Para viajantes que chegam ao Itaicy com a mente exausta de um ano de decisões corporativas, retirar as micro-escolhas das refeições é um alívio genuíno e imediato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Não há cardápio à la carte, não há conta por item, não há dilema entre o prato A e o prato B. O que o chef pantaneiro preparou com ingredientes frescos do dia é o que será servido — e invariavelmente surpreende pela qualidade e pela autenticidade regional."
+          },
+          {
+            "type": "paragraph",
+            "text": "A experiência all-inclusive não significa menos qualidade: significa mais presença. Você está sentado à mesa, com a paisagem do Rio Negro ao fundo, sem nenhuma preocupação além de saborear inteiramente o momento."
+          },
+          {
+            "type": "heading",
+            "text": "Os Ingredientes do Pantanal Norte Matogrossense"
+          },
+          {
+            "type": "paragraph",
+            "text": "A culinária pantaneira tem raízes profundas na tradição do peão-pantaneiro e na abundância do bioma. Os ingredientes que aparecem na mesa do Itaicy refletem essa herança cultural e natural:"
+          },
+          {
+            "type": "orderedList",
+            "items": [
+              {
+                "bold": "Pintado na telha:",
+                "text": " O prato mais emblemático do Pantanal. Filé de pintado-amazônico grelhado sobre telha de barro, com manteiga, alho, ervas frescas e limão cravo. Sabor suave, textura firme, impossível de esquecer — e de encontrar igual fora da região."
+              },
+              {
+                "bold": "Pacu assado:",
+                "text": " Peixe inteiro assado na brasa, com escama, que atua como barreira protetora e confere uma maciez extraordinária à carne branca. Servido com farofa de pequi e vinagrete de tomate fresco colhido do horto do lodge."
+              },
+              {
+                "bold": "Galinhada pantaneira:",
+                "text": " Galinha caipira cozida lentamente com açafrão da terra, urucum e legumes locais. A receita original do peão-pantaneiro, servida com arroz soltinho e feijão-bordô de caldo espesso."
+              },
+              {
+                "bold": "Sobremesas regionais:",
+                "text": " Doce de buriti, mousse de cupuaçu, arroz com leite ao molho de acuri. A confeitaria pantaneira usa frutos do cerrado que os hóspedes de centros urbanos raramente conhecem — uma descoberta à parte."
+              },
+              {
+                "bold": "Café pantaneiro:",
+                "text": " Forte, coado na hora, servido com leite fresco. Uma experiência simples que, às 5h30 da manhã antes da trilha do amanhecer, adquire uma dimensão completamente diferente do café tomado às pressas na cidade."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "O Ritual das Refeições Compartilhadas"
+          },
+          {
+            "type": "paragraph",
+            "text": "No mundo corporativo, as refeições frequentemente acontecem em frente às telas, de pé ou durante reuniões paralelas. No Itaicy, as refeições são eventos — momentos em que os hóspedes se reúnem na varanda com vista para o Rio Negro, sem pressa, sem agenda e sem telefone à mesa."
+          },
+          {
+            "type": "paragraph",
+            "text": "É um ritual que a maioria dos hóspedes identifica, ao final da estadia, como um dos aspectos mais restauradores de toda a experiência. Comer devagar, com presença, enquanto a natureza do Pantanal Norte Matogrossense acontece ao redor — isso é um luxo real que nenhum restaurante estrelado pode replicar."
+          }
+        ]
+      },
+      {
         "slug": "guia-observacao-166-especies-aves",
         "title": "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy",
         "subtitle": "Aventura",
@@ -303,11 +989,11 @@
         ]
       }
     ],
-    "featuredSlug": "guia-observacao-166-especies-aves",
+    "featuredSlug": "guia-observacao-aves-pantanal-especies-epocas-tecnicas",
     "recentSlugs": [
-      "arara-azul-pantanal",
-      "arara-vermelha-pantanal",
-      "ibis-preto-pantanal"
+      "guia-completo-pesca-esportiva-pantanal",
+      "desconectar-para-reconectar-executivos-pantanal",
+      "acordar-som-passaros-birdwatching-pantanal"
     ]
   },
   "birdwatching": {
@@ -8821,6 +9507,9 @@
       ]
     },
     "footer": {
+      "pousadaHeading": "POUSADA",
+      "experienciasHeading": "EXPERIÊNCIAS",
+      "contactHeading": "FALE CONOSCO",
       "mobileNavLinks": [
         {
           "label": "Pousada",
@@ -8878,7 +9567,7 @@
         },
         {
           "icon": "/images/icons/mail.png",
-          "text": "contato@pousadaitaicy.com.br"
+          "text": "contato@itaicypantanal.com.br"
         },
         {
           "icon": "/images/icons/location-on.png",

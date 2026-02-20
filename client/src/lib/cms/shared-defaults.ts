@@ -103,10 +103,10 @@ const enSharedCmsSections: SharedCmsSections = {
     ],
     contactInfo: [
       { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
-      { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
+      { icon: "/images/icons/mail.png", text: "contato@itaicypantanal.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Santo Antônio do Leverger, Mato Grosso, Brazil",
+        text: "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000",
       },
     ],
     legalLinks: [
@@ -253,10 +253,10 @@ const esSharedCmsSections: SharedCmsSections = {
     ],
     contactInfo: [
       { icon: "/images/icons/call.png", text: "+55 (65) 99640-2380" },
-      { icon: "/images/icons/mail.png", text: "reservas@pousadaitaicy.com.br" },
+      { icon: "/images/icons/mail.png", text: "contato@itaicypantanal.com.br" },
       {
         icon: "/images/icons/location-on.png",
-        text: "Santo Antônio do Leverger, Mato Grosso, Brasil",
+        text: "Rodovia MT 040, KM 23 - Santo Antônio do Leverger, MT, 78180-000",
       },
     ],
     legalLinks: [

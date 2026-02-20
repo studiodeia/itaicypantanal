@@ -4,6 +4,7 @@ import { stagger, fadeIn, fadeUp, viewport } from "@/lib/motion";
 import { ChevronRight } from "@/lib/icons";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { buildCloudbedsBookingUrl } from "@/lib/booking/cloudbeds";
+import { useLanguage } from "@/i18n/context";
 import type { CmsSobreNos } from "@shared/cms-page-content";
 
 const menuImages = [
@@ -20,6 +21,7 @@ const menuImages = [
 type Props = { content: CmsSobreNos; buttonText?: string };
 
 export const CulinaryMenuSection = ({ content, buttonText }: Props): JSX.Element => {
+  const { lang } = useLanguage();
   const tabs = (content.features ?? []).map((f) => ({
     id: f.title.toLowerCase(),
     label: `${f.number} ${f.title}`,
@@ -135,6 +137,7 @@ export const CulinaryMenuSection = ({ content, buttonText }: Props): JSX.Element
         {/* Bottom CTA */}
         <a
           href={buildCloudbedsBookingUrl({
+            locale: lang,
             utmContent: "culinaria_section_fazer_reserva",
           })}
           className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"

@@ -61,6 +61,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
     }
 
     goToCloudbedsBooking({
+      locale: lang,
       checkIn: dateRange.from,
       checkOut: dateRange.to,
       utmContent:

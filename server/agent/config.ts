@@ -1,9 +1,10 @@
-import { anthropic, createAnthropic } from "@ai-sdk/anthropic";
-import { openai, createOpenAI } from "@ai-sdk/openai";
+import { createAnthropic } from "@ai-sdk/anthropic";
+import { createOpenAI } from "@ai-sdk/openai";
 import type { VisitorIntent } from "./conversation-profile";
 
 export const AGENT_DEFAULT_MODEL_OPENAI = "gpt-5-mini";
 export const AGENT_DEFAULT_MODEL_ANTHROPIC = "claude-3-5-sonnet-latest";
+export const AGENT_DEFAULT_MODEL_MODAL = "zai-org/GLM-5-FP8";
 
 function parseNumber(
   value: string | undefined,
@@ -77,6 +78,20 @@ export function getAgentModel(intent: VisitorIntent = "general") {
   const preferAnthropicByModel = requestedModel.startsWith("claude");
   const preferOpenAiByModel =
     requestedModel.startsWith("gpt") || requestedModel.startsWith("o");
+
+  if (providerPreference === "modal") {
+    const modalApiKey = process.env.MODAL_API_KEY?.trim();
+    const modalBaseUrl = (process.env.MODAL_BASE_URL || "https://api.us-west-2.modal.direct/v1").trim();
+    if (!modalApiKey) {
+      throw new Error("LLM provider modal selected but MODAL_API_KEY is missing.");
+    }
+    const provider = createOpenAI({
+      apiKey: modalApiKey,
+      baseURL: modalBaseUrl,
+    });
+    // Use .chat() to force /v1/chat/completions (default provider() uses /v1/responses)
+    return provider.chat(requestedModel || AGENT_DEFAULT_MODEL_MODAL);
+  }
 
   if (providerPreference === "anthropic") {
     if (!hasAnthropic) {
