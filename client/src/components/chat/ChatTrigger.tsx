@@ -43,7 +43,7 @@ function getTriggerStrings(lang: Lang): ChatTriggerMessages {
       "Olá! Precisa de algo?",
       "Estou aqui para ajudar!",
     ],
-    hoverLabel: "Converse com a IA",
+    hoverLabel: "Fale com a Itaicy",
     ariaLabel: "Abrir chat com agente de IA",
   };
 }
