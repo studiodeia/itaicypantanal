@@ -40,9 +40,11 @@ export const Acomodacoes = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "acomodacoesTitle", lang)}
-        description={t("pageMeta", "acomodacoesDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "acomodacoesTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "acomodacoesDesc", lang)}
         canonicalPath="/acomodacoes"
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadAcomodacoes", lang), path: "/acomodacoes" },

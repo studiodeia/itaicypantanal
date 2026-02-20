@@ -14,9 +14,11 @@ export const Contato = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "contatoTitle", lang)}
-        description={t("pageMeta", "contatoDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "contatoTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "contatoDesc", lang)}
         canonicalPath="/contato"
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadContato", lang), path: "/contato" },

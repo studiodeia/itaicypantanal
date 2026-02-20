@@ -33,9 +33,11 @@ export const Ecoturismo = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "ecoturismoTitle", lang)}
-        description={t("pageMeta", "ecoturismoDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "ecoturismoTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "ecoturismoDesc", lang)}
         canonicalPath="/ecoturismo"
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadEcoturismo", lang), path: "/ecoturismo" },

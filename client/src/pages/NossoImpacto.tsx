@@ -20,9 +20,11 @@ export const NossoImpacto = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "impactoTitle", lang)}
-        description={t("pageMeta", "impactoDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "impactoTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "impactoDesc", lang)}
         canonicalPath="/nosso-impacto"
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadImpacto", lang), path: "/nosso-impacto" },

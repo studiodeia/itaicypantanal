@@ -55,10 +55,11 @@ export const Desktop = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full bg-white">
       <PageMeta
-        title={t("pageMeta", "homeTitle", lang)}
-        description={t("pageMeta", "homeDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "homeTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "homeDesc", lang)}
         canonicalPath="/"
-        ogImage="/images/og-default.webp"
+        ogImage={cms.seo?.ogImage || "/images/og-default.webp"}
+        noIndex={cms.seo?.noIndex}
       />
       <JsonLd data={schemas} />
       <PantanalHeroSection />

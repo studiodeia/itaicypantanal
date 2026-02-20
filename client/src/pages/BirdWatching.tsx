@@ -35,9 +35,11 @@ export const BirdWatching = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "birdwatchingTitle", lang)}
-        description={t("pageMeta", "birdwatchingDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "birdwatchingTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "birdwatchingDesc", lang)}
         canonicalPath="/observacao-de-aves"
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadBirdwatching", lang), path: "/observacao-de-aves" },

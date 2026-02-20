@@ -14,10 +14,11 @@ export const Privacidade = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "privacidadeTitle", lang)}
-        description={t("pageMeta", "privacidadeDesc", lang)}
+        title={cms.seo?.metaTitle || t("pageMeta", "privacidadeTitle", lang)}
+        description={cms.seo?.metaDescription || t("pageMeta", "privacidadeDesc", lang)}
         canonicalPath="/politica-de-privacidade"
-        noIndex={true}
+        ogImage={cms.seo?.ogImage}
+        noIndex={cms.seo?.noIndex || true}
         breadcrumbs={[
           { name: t("pageMeta", "breadHome", lang), path: "/" },
           { name: t("pageMeta", "breadPrivacidade", lang), path: "/politica-de-privacidade" },
