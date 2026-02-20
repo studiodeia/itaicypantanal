@@ -17,9 +17,9 @@ const menuImages = [
   { src: "/images/culinaria-menu-8" },
 ];
 
-type Props = { content: CmsSobreNos };
+type Props = { content: CmsSobreNos; buttonText?: string };
 
-export const CulinaryMenuSection = ({ content }: Props): JSX.Element => {
+export const CulinaryMenuSection = ({ content, buttonText }: Props): JSX.Element => {
   const tabs = (content.features ?? []).map((f) => ({
     id: f.title.toLowerCase(),
     label: `${f.number} ${f.title}`,
@@ -141,7 +141,7 @@ export const CulinaryMenuSection = ({ content }: Props): JSX.Element => {
           data-testid="link-menu-reserva"
         >
           <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            Fazer uma reserva
+            {buttonText ?? "Fazer uma reserva"}
           </span>
           <ChevronRight className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2} />
         </a>

@@ -46,7 +46,7 @@ export const Culinaria = (): JSX.Element => {
       <CulinaryManifestoSection content={cms.manifesto} />
       <CulinaryHighlightsSection content={cms.highlights} />
       <CulinaryExperienceSection content={cms.experience} />
-      <CulinaryMenuSection content={cms.menu} />
+      <CulinaryMenuSection content={cms.menu} buttonText={cms.services?.buttonText} />
       <CulinaryServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
       <AccommodationsCrossSellSection content={cms.crossSell} />

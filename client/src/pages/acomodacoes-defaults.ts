@@ -35,7 +35,7 @@ const pt: AcomodacoesPageContent = {
   },
   rooms: [
     {
-      title: "Suíte Explorer",
+      title: "Suíte Individual",
       description: "O refúgio ideal para o viajante solo que busca imersão total. Privacidade, silêncio e conexão com a natureza no seu próprio ritmo.",
       image: "/images/acomodacoes/suite-explorer.webp",
       ctaText: "Verificar disponibilidade",
@@ -47,7 +47,7 @@ const pt: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Suíte Adventure",
+      title: "Suíte Casal ou Dupla",
       description: "Projetada para casais que buscam uma experiência a dois no coração do Pantanal. Conforto, natureza e momentos inesquecíveis.",
       image: "/images/acomodacoes/suite-adventure.webp",
       ctaText: "Verificar disponibilidade",
@@ -59,7 +59,7 @@ const pt: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Suíte Family",
+      title: "Suíte Tripla",
       description: "A mais espaçosa das nossas suítes. Perfeita para famílias ou pequenos grupos, com cama de casal, solteiro e ampla área de convivência.",
       image: "/images/acomodacoes/suite-family.webp",
       ctaText: "Verificar disponibilidade",
@@ -93,7 +93,7 @@ const pt: AcomodacoesPageContent = {
         id: "acomod-1",
         number: "01",
         question: "Quais tipos de suíte estão disponíveis?",
-        answer: "A Itaicy foi planejada para atender diferentes perfis de hóspede, desde o viajante solo até famílias que buscam uma experiência imersiva no Pantanal. Oferecemos três categorias de suíte, cada uma com personalidade própria. A Suíte Explorer é individual, pensada para quem viaja sozinho e quer privacidade e silêncio para se reconectar com a natureza. A Suíte Adventure foi desenhada para casais, com cama queen e varanda privativa ideal para momentos a dois. Já a Suíte Family é a mais ampla, com cama de casal e solteiro, acomodando até três pessoas com espaço de convivência generoso. Todas as suítes compartilham o mesmo padrão de conforto: ar-condicionado split individual, banheiro privativo com amenities completos, roupas de cama premium e varanda privativa para contemplação e descanso.",
+        answer: "A Itaicy foi planejada para atender diferentes perfis de hóspede, desde o viajante solo até famílias que buscam uma experiência imersiva no Pantanal. Oferecemos três categorias de suíte, cada uma com personalidade própria. A Suíte Individual é pensada para quem viaja sozinho e quer privacidade e silêncio para se reconectar com a natureza. A Suíte Casal ou Dupla foi desenhada para casais, com cama queen e varanda privativa ideal para momentos a dois. Já a Suíte Tripla é a mais ampla, com cama de casal e solteiro, acomodando até três pessoas com espaço de convivência generoso. Todas as suítes compartilham o mesmo padrão de conforto: ar-condicionado split individual, banheiro privativo com amenities completos, roupas de cama premium e varanda privativa para contemplação e descanso.",
       },
       {
         id: "acomod-2",
@@ -105,7 +105,7 @@ const pt: AcomodacoesPageContent = {
         id: "acomod-3",
         number: "03",
         question: "Qual a capacidade total da pousada?",
-        answer: "A Itaicy foi concebida como um lodge de baixa densidade, priorizando a experiência individual de cada hóspede e o respeito ao ecossistema local. Contamos com 10 suítes distribuídas em três categorias — Explorer, Adventure e Family — que juntas acomodam até 20 pessoas simultaneamente. Esse número reduzido de hóspedes é uma escolha deliberada, não uma limitação. Com grupos pequenos, cada passeio de barco, cavalgada e safári fotográfico se torna mais íntimo e produtivo, aumentando as chances de avistamento da fauna. O atendimento personalizado é outro benefício direto: a equipe conhece cada hóspede pelo nome e pode adaptar roteiros conforme preferências individuais. Do ponto de vista ambiental, a capacidade controlada reduz a pressão sobre as trilhas, margens do rio e habitats sensíveis, mantendo o equilíbrio essencial entre turismo responsável e conservação que define a identidade da Itaicy.",
+        answer: "A Itaicy foi concebida como um lodge de baixa densidade, priorizando a experiência individual de cada hóspede e o respeito ao ecossistema local. Contamos com 10 suítes distribuídas em três categorias — Individual, Casal ou Dupla e Tripla — que juntas acomodam até 20 pessoas simultaneamente. Esse número reduzido de hóspedes é uma escolha deliberada, não uma limitação. Com grupos pequenos, cada passeio de barco, cavalgada e safári fotográfico se torna mais íntimo e produtivo, aumentando as chances de avistamento da fauna. O atendimento personalizado é outro benefício direto: a equipe conhece cada hóspede pelo nome e pode adaptar roteiros conforme preferências individuais. Do ponto de vista ambiental, a capacidade controlada reduz a pressão sobre as trilhas, margens do rio e habitats sensíveis, mantendo o equilíbrio essencial entre turismo responsável e conservação que define a identidade da Itaicy.",
       },
       {
         id: "acomod-4",
@@ -157,7 +157,7 @@ const en: AcomodacoesPageContent = {
   },
   rooms: [
     {
-      title: "Explorer Suite",
+      title: "Individual Suite",
       description: "The ideal retreat for the solo traveler seeking total immersion. Privacy, silence and connection with nature at your own pace.",
       image: "/images/acomodacoes/suite-explorer.webp",
       ctaText: "Check availability",
@@ -169,7 +169,7 @@ const en: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Adventure Suite",
+      title: "Double Suite",
       description: "Designed for couples seeking a shared experience in the heart of the Pantanal. Comfort, nature and unforgettable moments.",
       image: "/images/acomodacoes/suite-adventure.webp",
       ctaText: "Check availability",
@@ -181,7 +181,7 @@ const en: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Family Suite",
+      title: "Triple Suite",
       description: "The most spacious of our suites. Perfect for families or small groups, with a double bed, single bed and a generous living area.",
       image: "/images/acomodacoes/suite-family.webp",
       ctaText: "Check availability",
@@ -215,7 +215,7 @@ const en: AcomodacoesPageContent = {
         id: "acomod-1",
         number: "01",
         question: "What types of suites are available?",
-        answer: "Itaicy was designed to accommodate different guest profiles, from solo travelers to families seeking an immersive experience in the Pantanal. We offer three suite categories, each with its own personality. The Explorer Suite is a single room designed for solo travelers who want privacy and silence to reconnect with nature. The Adventure Suite was designed for couples, with a queen bed and a private balcony ideal for intimate moments together. The Family Suite is the most spacious, with a double bed and a single bed, accommodating up to three people with a generous living area. All suites share the same comfort standard: individual split air conditioning, private bathroom with full amenities, premium bedding and a private balcony for contemplation and rest.",
+        answer: "Itaicy was designed to accommodate different guest profiles, from solo travelers to families seeking an immersive experience in the Pantanal. We offer three suite categories, each with its own personality. The Individual Suite is designed for solo travelers who want privacy and silence to reconnect with nature. The Double Suite was designed for couples, with a queen bed and a private balcony ideal for intimate moments together. The Triple Suite is the most spacious, with a double bed and a single bed, accommodating up to three people with a generous living area. All suites share the same comfort standard: individual split air conditioning, private bathroom with full amenities, premium bedding and a private balcony for contemplation and rest.",
       },
       {
         id: "acomod-2",
@@ -227,7 +227,7 @@ const en: AcomodacoesPageContent = {
         id: "acomod-3",
         number: "03",
         question: "What is the total capacity of the lodge?",
-        answer: "Itaicy was conceived as a low-density lodge, prioritizing the individual experience of each guest and respect for the local ecosystem. We have 10 suites distributed across three categories — Explorer, Adventure and Family — which together accommodate up to 20 guests simultaneously. This reduced number of guests is a deliberate choice, not a limitation. With small groups, each boat trip, horseback ride and photographic safari becomes more intimate and productive, increasing the chances of wildlife sightings. Personalized service is another direct benefit: the staff knows every guest by name and can tailor itineraries to individual preferences. From an environmental perspective, controlled capacity reduces pressure on the trails, river banks and sensitive habitats, maintaining the essential balance between responsible tourism and conservation that defines Itaicy's identity.",
+        answer: "Itaicy was conceived as a low-density lodge, prioritizing the individual experience of each guest and respect for the local ecosystem. We have 10 suites distributed across three categories — Individual, Double and Triple — which together accommodate up to 20 guests simultaneously. This reduced number of guests is a deliberate choice, not a limitation. With small groups, each boat trip, horseback ride and photographic safari becomes more intimate and productive, increasing the chances of wildlife sightings. Personalized service is another direct benefit: the staff knows every guest by name and can tailor itineraries to individual preferences. From an environmental perspective, controlled capacity reduces pressure on the trails, river banks and sensitive habitats, maintaining the essential balance between responsible tourism and conservation that defines Itaicy's identity.",
       },
       {
         id: "acomod-4",
@@ -279,7 +279,7 @@ const es: AcomodacoesPageContent = {
   },
   rooms: [
     {
-      title: "Suite Explorer",
+      title: "Suite Individual",
       description: "El refugio ideal para el viajero solo que busca inmersión total. Privacidad, silencio y conexión con la naturaleza a su propio ritmo.",
       image: "/images/acomodacoes/suite-explorer.webp",
       ctaText: "Consultar disponibilidad",
@@ -291,7 +291,7 @@ const es: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Suite Adventure",
+      title: "Suite Doble",
       description: "Diseñada para parejas que buscan una experiencia a dos en el corazón del Pantanal. Confort, naturaleza y momentos inolvidables.",
       image: "/images/acomodacoes/suite-adventure.webp",
       ctaText: "Consultar disponibilidad",
@@ -303,7 +303,7 @@ const es: AcomodacoesPageContent = {
       ],
     },
     {
-      title: "Suite Family",
+      title: "Suite Triple",
       description: "La más espaciosa de nuestras suites. Perfecta para familias o grupos pequeños, con cama doble, cama individual y amplia área de convivencia.",
       image: "/images/acomodacoes/suite-family.webp",
       ctaText: "Consultar disponibilidad",
@@ -337,7 +337,7 @@ const es: AcomodacoesPageContent = {
         id: "acomod-1",
         number: "01",
         question: "¿Qué tipos de suite están disponibles?",
-        answer: "Itaicy fue planificada para atender diferentes perfiles de huéspedes, desde el viajero solo hasta familias que buscan una experiencia inmersiva en el Pantanal. Ofrecemos tres categorías de suite, cada una con personalidad propia. La Suite Explorer es individual, pensada para quien viaja solo y quiere privacidad y silencio para reconectarse con la naturaleza. La Suite Adventure fue diseñada para parejas, con cama queen y balcón privado ideal para momentos a dos. La Suite Family es la más amplia, con cama doble y cama individual, acomodando hasta tres personas con un generoso espacio de convivencia. Todas las suites comparten el mismo estándar de confort: aire acondicionado split individual, baño privado con amenities completos, ropa de cama premium y balcón privado para contemplación y descanso.",
+        answer: "Itaicy fue planificada para atender diferentes perfiles de huéspedes, desde el viajero solo hasta familias que buscan una experiencia inmersiva en el Pantanal. Ofrecemos tres categorías de suite, cada una con personalidad propia. La Suite Individual está pensada para quien viaja solo y quiere privacidad y silencio para reconectarse con la naturaleza. La Suite Doble fue diseñada para parejas, con cama queen y balcón privado ideal para momentos a dos. La Suite Triple es la más amplia, con cama doble y cama individual, acomodando hasta tres personas con un generoso espacio de convivencia. Todas las suites comparten el mismo estándar de confort: aire acondicionado split individual, baño privado con amenities completos, ropa de cama premium y balcón privado para contemplación y descanso.",
       },
       {
         id: "acomod-2",
@@ -349,7 +349,7 @@ const es: AcomodacoesPageContent = {
         id: "acomod-3",
         number: "03",
         question: "¿Cuál es la capacidad total del lodge?",
-        answer: "Itaicy fue concebido como un lodge de baja densidad, priorizando la experiencia individual de cada huésped y el respeto al ecosistema local. Contamos con 10 suites distribuidas en tres categorías — Explorer, Adventure y Family — que juntas acomodan hasta 20 personas simultáneamente. Este número reducido de huéspedes es una elección deliberada, no una limitación. Con grupos pequeños, cada paseo en barco, cabalgata y safari fotográfico se vuelve más íntimo y productivo, aumentando las posibilidades de avistamiento de fauna. La atención personalizada es otro beneficio directo: el equipo conoce a cada huésped por su nombre y puede adaptar los itinerarios según las preferencias individuales. Desde el punto de vista ambiental, la capacidad controlada reduce la presión sobre los senderos, las márgenes del río y los hábitats sensibles, manteniendo el equilibrio esencial entre turismo responsable y conservación que define la identidad de Itaicy.",
+        answer: "Itaicy fue concebido como un lodge de baja densidad, priorizando la experiencia individual de cada huésped y el respeto al ecosistema local. Contamos con 10 suites distribuidas en tres categorías — Individual, Doble y Triple — que juntas acomodan hasta 20 personas simultáneamente. Este número reducido de huéspedes es una elección deliberada, no una limitación. Con grupos pequeños, cada paseo en barco, cabalgata y safari fotográfico se vuelve más íntimo y productivo, aumentando las posibilidades de avistamiento de fauna. La atención personalizada es otro beneficio directo: el equipo conoce a cada huésped por su nombre y puede adaptar los itinerarios según las preferencias individuales. Desde el punto de vista ambiental, la capacidad controlada reduce la presión sobre los senderos, las márgenes del río y los hábitats sensibles, manteniendo el equilibrio esencial entre turismo responsable y conservación que define la identidad de Itaicy.",
       },
       {
         id: "acomod-4",
