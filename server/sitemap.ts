@@ -200,7 +200,13 @@ export function buildRobotsTxt(req: Request): string {
 
 // ─── llms.txt — structured content guidance for AI crawlers ─────────
 
-export function buildLlmsTxt(req: Request): string {
+export interface LlmsCmsData {
+  authors?: Array<{ name: string; jobTitle?: string; knowsAbout?: string[] }>;
+  blogPosts?: Array<{ title: string; slug: string; description?: string }>;
+  seasonalEvents?: Array<{ name: string; description?: string; startDate?: string; endDate?: string }>;
+}
+
+export function buildLlmsTxt(req: Request, cms?: LlmsCmsData): string {
   const baseUrl = getBaseSiteUrl(req);
 
   return `# Itaicy Pantanal Eco Lodge
@@ -247,11 +253,28 @@ export function buildLlmsTxt(req: Request): string {
   - **Operacao Consciente**: Gestao de residuos, energia solar, captacao de agua da chuva
 
 ## Autoridades e Especialistas
-- **Joao Andriola** — Ornitologo. Conduziu levantamento de campo de 166 especies de aves na regiao da Itaicy em maio de 2024. Especialista em ornitologia neotropical e conservacao da biodiversidade.
-- **Lucas Jose Fernandes Vieira** — Editor de conteudo e guia regional. Expertise em pesca esportiva, ecoturismo sustentavel e culinaria pantaneira.
+${
+  cms?.authors && cms.authors.length > 0
+    ? cms.authors
+        .map((a) => {
+          const expertise = a.knowsAbout && a.knowsAbout.length > 0 ? ` Expertise: ${a.knowsAbout.join(", ")}.` : "";
+          return `- **${a.name}**${a.jobTitle ? ` — ${a.jobTitle}.` : ""}${expertise}`;
+        })
+        .join("\n")
+    : `- **Joao Andriola** — Ornitologo. Conduziu levantamento de campo de 166 especies de aves na regiao da Itaicy em maio de 2024. Especialista em ornitologia neotropical e conservacao da biodiversidade.
+- **Lucas Jose Fernandes Vieira** — Editor de conteudo e guia regional. Expertise em pesca esportiva, ecoturismo sustentavel e culinaria pantaneira.`
+}
 
 ## Blog e Conteudo
 - [Blog](${baseUrl}/blog): Artigos sobre pesca, aves, conservacao, gastronomia e roteiros no Pantanal.
+${
+  cms?.blogPosts && cms.blogPosts.length > 0
+    ? cms.blogPosts
+        .slice(0, 5)
+        .map((p) => `- [${p.title}](${baseUrl}/blog/${p.slug})${p.description ? `: ${p.description.slice(0, 100)}` : ""}`)
+        .join("\n")
+    : ""
+}
 
 ## Contato e Reservas
 - [Contato](${baseUrl}/contato): Formulario, WhatsApp, telefone e mapa.

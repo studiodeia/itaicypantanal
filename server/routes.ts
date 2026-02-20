@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { getCmsAgentConfig, getCmsContent } from "./cms-content";
-import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt } from "./sitemap";
+import { buildRobotsTxt, buildSitemapXml, buildLlmsTxt, type LlmsCmsData } from "./sitemap";
 import { handleChatRequest } from "./agent/chat-route";
 import { handleFaqReindexRequest } from "./agent/reindex-route";
 import { handleAgentMetricsRequest } from "./agent/metrics-route";
@@ -158,9 +158,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.type("text/plain").send(robotsTxt);
   });
 
-  app.get("/llms.txt", (req, res) => {
-    const llmsTxt = buildLlmsTxt(req);
-    res.type("text/plain").send(llmsTxt);
+  app.get("/llms.txt", async (req, res) => {
+    let cmsMeta: LlmsCmsData | undefined;
+    try {
+      const { content } = await getCmsContent("en");
+      const shared = content?.shared as Record<string, unknown> | undefined;
+      cmsMeta = {
+        authors: Array.isArray(shared?.authors)
+          ? (shared.authors as LlmsCmsData["authors"])
+          : undefined,
+        blogPosts: Array.isArray(content?.blog?.posts)
+          ? (content.blog.posts as LlmsCmsData["blogPosts"])
+          : undefined,
+        seasonalEvents: Array.isArray(shared?.seasonalEvents)
+          ? (shared.seasonalEvents as LlmsCmsData["seasonalEvents"])
+          : undefined,
+      };
+    } catch {
+      // keep hardcoded fallback
+    }
+    res.type("text/plain").send(buildLlmsTxt(req, cmsMeta));
   });
 
   app.post("/api/chat", async (req, res) => {
