@@ -8,6 +8,7 @@ import { BiodiversidadeSection } from "./nosso-impacto/sections/BiodiversidadeSe
 import { ComunidadeSection } from "./nosso-impacto/sections/ComunidadeSection";
 import { OperacaoConscienteSection } from "./nosso-impacto/sections/OperacaoConscienteSection";
 import { ImpactEngagementSection } from "./nosso-impacto/sections/ImpactEngagementSection";
+import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuestionsSection";
 import { ImmersionCallToActionSection } from "./sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "./sections/SiteFooterSection";
 
@@ -32,6 +33,7 @@ export const NossoImpacto = (): JSX.Element => {
       <ComunidadeSection content={cms.comunidade} />
       <OperacaoConscienteSection content={cms.operacao} />
       <ImpactEngagementSection content={cms.engagement} />
+      <FrequentlyAskedQuestionsSection />
       <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>
