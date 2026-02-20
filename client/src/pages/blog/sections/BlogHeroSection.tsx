@@ -4,8 +4,6 @@ import { ChevronDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import type { BlogArticle } from "../data";
 import { staggerSlow, fadeIn, fadeUp, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 interface BlogHeroSectionProps {
   featuredArticle: BlogArticle;
@@ -14,7 +12,6 @@ interface BlogHeroSectionProps {
 export const BlogHeroSection = ({
   featuredArticle,
 }: BlogHeroSectionProps): JSX.Element => {
-  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -106,7 +103,7 @@ export const BlogHeroSection = ({
 
           <div className="hidden md:flex items-center gap-2 text-[#e3f7ec] shrink-0">
             <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-              {t("blog", "moreArticles", lang)}
+              Mais artigos
             </span>
             <ChevronDown className="w-6 h-6" />
           </div>

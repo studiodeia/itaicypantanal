@@ -40,7 +40,7 @@ export const ImmersionCallToActionSection = (): JSX.Element => {
           </motion.p>
 
           <motion.div variants={fadeUp}>
-            <BookingDatePicker variant="cta" className="self-stretch" />
+            <BookingDatePicker variant="hero" className="self-stretch" />
           </motion.div>
         </motion.div>
       </div>

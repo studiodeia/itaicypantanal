@@ -1,8 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { regiaoDefaults } from "./regiao-defaults";
 import { RegiaoHeroSection } from "./regiao/sections/RegiaoHeroSection";
 import { LocationSection } from "./regiao/sections/LocationSection";
@@ -15,7 +13,6 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Regiao = (): JSX.Element => {
   const cms = usePageCms("/regiao", regiaoDefaults);
-  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(
@@ -26,12 +23,12 @@ export const Regiao = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "regiaoTitle", lang)}
-        description={t("pageMeta", "regiaoDesc", lang)}
+        title="Pantanal Sul-Matogrossense — Regiao, Clima e Como Chegar"
+        description="Guia completo do Pantanal Sul-Matogrossense. Localizacao em Miranda (MS), como chegar de aviao ou carro, melhor epoca para visitar, clima por estacao e pontos turisticos proximos como Bonito."
         canonicalPath="/regiao"
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadRegiao", lang), path: "/regiao" },
+          { name: "Inicio", path: "/" },
+          { name: "A Regiao", path: "/regiao" },
         ]}
       />
       {faqSchema && <JsonLd data={faqSchema} />}

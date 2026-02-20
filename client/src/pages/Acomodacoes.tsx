@@ -2,8 +2,6 @@ import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
 import { resolveIcon } from "@/lib/icon-resolver";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { acomodacoesDefaults } from "./acomodacoes-defaults";
 import { AccommodationsHeroSection } from "./acomodacoes/sections/AccommodationsHeroSection";
 import { ManifestoStatementSection } from "./acomodacoes/sections/ManifestoStatementSection";
@@ -19,7 +17,6 @@ const imagePositions = ["left", "right", "left"] as const;
 
 export const Acomodacoes = (): JSX.Element => {
   const cms = usePageCms("/acomodacoes", acomodacoesDefaults);
-  const { lang } = useLanguage();
 
   const rooms = cms.rooms.map((room, i) => ({
     title: room.title,
@@ -40,14 +37,12 @@ export const Acomodacoes = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={cms.seo?.metaTitle || t("pageMeta", "acomodacoesTitle", lang)}
-        description={cms.seo?.metaDescription || t("pageMeta", "acomodacoesDesc", lang)}
+        title="Acomodacoes"
+        description="Suites premium no coracao do Pantanal. Explorer para viajantes solo, Adventure para casais e Family para familias. Conforto, natureza e privacidade."
         canonicalPath="/acomodacoes"
-        ogImage={cms.seo?.ogImage}
-        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadAcomodacoes", lang), path: "/acomodacoes" },
+          { name: "Inicio", path: "/" },
+          { name: "Acomodacoes", path: "/acomodacoes" },
         ]}
       />
       {faqSchema && <JsonLd data={faqSchema} />}

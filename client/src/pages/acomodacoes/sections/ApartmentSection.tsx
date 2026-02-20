@@ -78,7 +78,7 @@ export const ApartmentSection = ({
             <div className="flex flex-col gap-6 pt-2">
               <div className="w-full h-px bg-[rgba(168,202,185,0.2)]" />
               <a
-                href="#"
+                href="/contato"
                 className="link-hover inline-flex items-center gap-2 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] w-fit group"
                 data-testid={`link-apartment-cta-${title.toLowerCase().replace(/\s+/g, "-")}`}
               >

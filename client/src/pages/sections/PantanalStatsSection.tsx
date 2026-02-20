@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Star } from "@/lib/icons";
 import { fadeUp, stagger, viewport } from "@/lib/motion";
 import type { HomePageContent } from "@shared/cms-page-content";
 
@@ -17,8 +16,10 @@ export const PantanalStatsSection = ({ content }: Props): JSX.Element => {
   const sectionRef = useRef<HTMLElement>(null);
   const hasAnimated = useRef(false);
   const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
+  const [started, setStarted] = useState(false);
 
   const animateCounts = useCallback(() => {
+    setStarted(true);
     const startTime = performance.now();
 
     const tick = (now: number) => {
@@ -77,17 +78,34 @@ export const PantanalStatsSection = ({ content }: Props): JSX.Element => {
               data-testid={`stat-${index}`}
             >
               {stat.hasIcon ? (
-                <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3 w-full">
+                <div className={`flex items-center justify-center md:justify-start gap-0 w-full transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
                   <div className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[#e3f7ec] text-[length:var(--display-lg-font-size)] tracking-[var(--display-lg-letter-spacing)] leading-[var(--display-lg-line-height)] [font-style:var(--display-lg-font-style)]">
                     {formatValue(counts[index], index)}
                   </div>
-                  <Star
-                    className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#e3f7ec]"
+                  <svg
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    className="w-[2.4em] h-[2.4em] text-[#e3f7ec] shrink-0"
                     aria-label="Rating icon"
-                  />
+                  >
+                    {[0, 1, 2, 3, 4].map((i) => {
+                      const angle = (i * 72 - 90) * (Math.PI / 180);
+                      return (
+                        <line
+                          key={i}
+                          x1="16" y1="16"
+                          x2={16 + 13 * Math.cos(angle)}
+                          y2={16 + 13 * Math.sin(angle)}
+                        />
+                      );
+                    })}
+                  </svg>
                 </div>
               ) : (
-                <div className="font-display-lg font-[number:var(--display-lg-font-weight)] text-[#e3f7ec] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] w-full text-center md:text-left">
+                <div className={`font-display-lg font-[number:var(--display-lg-font-weight)] text-[#e3f7ec] text-[length:var(--display-lg-font-size)] leading-[var(--display-lg-line-height)] tracking-[var(--display-lg-letter-spacing)] [font-style:var(--display-lg-font-style)] w-full text-center md:text-left transition-opacity duration-300 ${started ? "opacity-100" : "opacity-0"}`}>
                   {formatValue(counts[index], index)}
                 </div>
               )}

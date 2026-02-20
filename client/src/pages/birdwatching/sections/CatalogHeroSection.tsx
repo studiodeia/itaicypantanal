@@ -4,11 +4,8 @@ import { ChevronDown } from "@/lib/icons";
 import { NavHeader } from "@/components/NavHeader";
 import { Divider } from "@/components/Divider";
 import { fadeIn, fadeUp, staggerSlow, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 export const CatalogHeroSection = (): JSX.Element => {
-  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -57,7 +54,7 @@ export const CatalogHeroSection = (): JSX.Element => {
         <motion.div className="flex flex-col items-start gap-6 md:gap-8 w-full max-w-[738px]" variants={fadeUp}>
           {/* Label */}
           <motion.span className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#e3f7ec] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" variants={fadeIn}>
-            {t("birds", "guideLabel", lang)}
+            GUIA DE AVES
           </motion.span>
 
           {/* Title */}
@@ -66,7 +63,7 @@ export const CatalogHeroSection = (): JSX.Element => {
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            {t("birds", "sanctuaryHeading", lang)}
+            Espécies do Nosso Santuário
           </motion.h1>
         </motion.div>
 
@@ -75,12 +72,13 @@ export const CatalogHeroSection = (): JSX.Element => {
           <Divider theme="dark" />
           <div className="flex items-start justify-between w-full">
             <motion.p className="max-w-[600px] font-body-md font-[number:var(--body-md-font-weight)] text-[#e3f7ec] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]" variants={fadeUp}>
-              {t("birds", "sanctuaryDesc", lang)}
+              Explore o compêndio completo da avifauna registrada em nossa
+              reserva. Mais de 166 espécies catalogadas em expedições de campo.
             </motion.p>
 
             <div className="hidden md:flex items-center gap-2 text-[#e3f7ec]">
               <span className="font-body-md font-[number:var(--body-md-font-weight)] text-[length:var(--body-md-font-size)] tracking-[var(--body-md-letter-spacing)] leading-[var(--body-md-line-height)] [font-style:var(--body-md-font-style)] whitespace-nowrap">
-                {t("common", "scrollDown", lang)}
+                Deslize para baixo
               </span>
               <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>

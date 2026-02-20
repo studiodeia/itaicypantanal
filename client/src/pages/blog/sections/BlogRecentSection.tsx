@@ -3,8 +3,6 @@ import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import type { BlogArticle } from "../data";
 import { BlogArticleCard } from "../components/BlogArticleCard";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 interface BlogRecentSectionProps {
   recentArticles: BlogArticle[];
@@ -13,8 +11,6 @@ interface BlogRecentSectionProps {
 export const BlogRecentSection = ({
   recentArticles,
 }: BlogRecentSectionProps): JSX.Element => {
-  const { lang } = useLanguage();
-
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -31,7 +27,7 @@ export const BlogRecentSection = ({
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            {t("blog", "recentPosts", lang)}
+            Mais Recentes
           </motion.h2>
 
           <div className="hidden md:flex items-center gap-2">

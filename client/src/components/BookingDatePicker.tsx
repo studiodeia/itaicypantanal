@@ -176,7 +176,7 @@ export function BookingDatePicker({ className, variant = "hero" }: BookingDatePi
         className
       )}
     >
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 w-full p-4 sm:py-2 sm:pr-2 sm:pl-5 glass-card-hero">
+      <div className="flex flex-row items-center justify-between gap-0 w-full py-2 pr-2 pl-5 glass-card-hero">
         <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
           <PopoverTrigger asChild>
             <button

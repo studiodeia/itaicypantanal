@@ -2,14 +2,11 @@ import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { NavHeader } from "@/components/NavHeader";
 import { fadeUp, viewport } from "@/lib/motion";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import type { PrivacidadePageContent } from "@shared/cms-page-content";
 
 type Props = { content: PrivacidadePageContent["hero"] };
 
 export const PrivacyHeroSection = ({ content }: Props): JSX.Element => {
-  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = useCallback((isOpen: boolean) => {
@@ -46,7 +43,7 @@ export const PrivacyHeroSection = ({ content }: Props): JSX.Element => {
           whileInView="visible"
           viewport={viewport}
         >
-          {t("privacy", "lastUpdated", lang)} {content.lastUpdated}
+          Última atualização: {content.lastUpdated}
         </motion.p>
       </div>
     </section>

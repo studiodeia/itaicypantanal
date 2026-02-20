@@ -5,7 +5,7 @@ import type { BlogArticle } from "../data";
 import { BlogArticleCard } from "../components/BlogArticleCard";
 import { stagger, fadeUp, cardItem, viewport } from "@/lib/motion";
 import { useLanguage } from "@/i18n/context";
-import { getBlogCategoryLabel, t } from "@/i18n/ui-strings";
+import { getBlogCategoryLabel } from "@/i18n/ui-strings";
 
 const ARTICLES_PER_PAGE = 9;
 
@@ -57,7 +57,7 @@ export const BlogCategoriesSection = ({
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
             variants={fadeUp}
           >
-            {t("blog", "allCategories", lang)}
+            Todas as categorias
           </motion.h2>
 
           {/* Filters + Sort */}
@@ -82,11 +82,11 @@ export const BlogCategoriesSection = ({
             {/* Sort dropdown */}
             <div className="flex items-center gap-2 shrink-0">
               <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#8aad9c] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-                {t("blog", "sortBy", lang)}
+                Ordenar por:
               </span>
               <button className="flex items-center gap-2 px-3 py-2.5">
                 <span className="font-functional-md font-[number:var(--functional-md-font-weight)] text-[#263a30] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-                  {t("blog", "mostRecent", lang)}
+                  Mais recente
                 </span>
                 <ChevronDown className="w-5 h-5 text-[#263a30]" />
               </button>

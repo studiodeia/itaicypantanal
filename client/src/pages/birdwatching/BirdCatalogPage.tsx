@@ -7,11 +7,8 @@ import { AllBirdsSection } from "./sections/AllBirdsSection";
 import { ImmersionCallToActionSection } from "../sections/ImmersionCallToActionSection";
 import { SiteFooterSection } from "../sections/SiteFooterSection";
 import { useBirdCmsData } from "./cms";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 export const BirdCatalogPage = (): JSX.Element => {
-  const { lang } = useLanguage();
   const birdData = useBirdCmsData();
   const origin = typeof window !== "undefined" ? window.location.origin : "";
 
@@ -26,13 +23,13 @@ export const BirdCatalogPage = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={t("pageMeta", "catalogoTitle", lang)}
-        description={t("pageMeta", "catalogoDesc", lang)}
+        title="Catalogo de Aves do Pantanal"
+        description="Guia completo de aves do Pantanal. Tuiuiu, arara-azul, tucanos, papagaios e dezenas de especies com fotos, habitats e dicas de observacao."
         canonicalPath="/observacao-de-aves/catalogo"
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadBirdwatching", lang), path: "/observacao-de-aves" },
-          { name: t("pageMeta", "breadCatalogo", lang), path: "/observacao-de-aves/catalogo" },
+          { name: "Inicio", path: "/" },
+          { name: "Observacao de Aves", path: "/observacao-de-aves" },
+          { name: "Catalogo", path: "/observacao-de-aves/catalogo" },
         ]}
       />
       <JsonLd data={itemListSchema} />

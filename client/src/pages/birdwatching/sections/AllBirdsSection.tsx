@@ -5,7 +5,7 @@ import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import type { BirdSpecies } from "../data";
 import { BirdSpeciesCard } from "../components/BirdSpeciesCard";
 import { useLanguage } from "@/i18n/context";
-import { t, getBirdCategoryLabel } from "@/i18n/ui-strings";
+import { getBirdCategoryLabel } from "@/i18n/ui-strings";
 
 const BIRDS_PER_PAGE = 9;
 
@@ -75,7 +75,7 @@ export const AllBirdsSection = ({
           viewport={viewport}
         >
           <motion.span className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#8aad9c] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" variants={fadeIn}>
-            {t("birds", "fullCompendium", lang)}
+            O COMPÊNDIO COMPLETO
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -83,10 +83,11 @@ export const AllBirdsSection = ({
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               variants={fadeUp}
             >
-              {t("birds", "allSpecies", lang)}
+              Todas as Espécies
             </motion.h2>
             <motion.p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#446354] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]" variants={fadeUp}>
-              {t("birds", "allSpeciesDesc", lang)}
+              Pesquise por nome ou filtre por categoria para encontrar a espécie
+              que você procura.
             </motion.p>
           </div>
         </motion.div>
@@ -98,7 +99,7 @@ export const AllBirdsSection = ({
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#8aad9c]" />
             <input
               type="text"
-              placeholder={t("birds", "searchPlaceholder", lang)}
+              placeholder="Buscar espécie..."
               value={searchQuery}
               onChange={(e) => handleSearchChange(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-transparent border-b border-[#263a30]/20 font-functional-md font-[number:var(--functional-md-font-weight)] text-[#263a30] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] placeholder:text-[#8aad9c] focus:outline-none focus:border-pantanal-gold transition-colors duration-200"
@@ -149,7 +150,7 @@ export const AllBirdsSection = ({
               exit={{ opacity: 0, transition: { duration: 0.2 } }}
             >
               <p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#446354] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] text-center">
-                {t("birds", "noResults", lang)}
+                Nenhuma espécie encontrada para esta busca.
               </p>
               <button
                 onClick={() => {
@@ -158,7 +159,7 @@ export const AllBirdsSection = ({
                 }}
                 className="font-functional-md font-[number:var(--functional-md-font-weight)] text-pantanal-gold text-[length:var(--functional-md-font-size)] hover:underline"
               >
-                {t("birds", "clearFilters", lang)}
+                Limpar filtros
               </button>
             </motion.div>
           )}

@@ -1,8 +1,6 @@
 import { PageMeta } from "@/components/PageMeta";
 import { JsonLd, buildFAQPage, buildTourProduct } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { ecoturismoDefaults } from "./ecoturismo-defaults";
 import { EcoHeroSection } from "./ecoturismo/sections/EcoHeroSection";
 import { EcoManifestoSection } from "./ecoturismo/sections/EcoManifestoSection";
@@ -16,7 +14,6 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 
 export const Ecoturismo = (): JSX.Element => {
   const cms = usePageCms("/ecoturismo", ecoturismoDefaults);
-  const { lang } = useLanguage();
 
   const faqSchema = cms.faq?.items.length
     ? buildFAQPage(cms.faq.items.map((i) => ({ question: i.question, answer: i.answer })))
@@ -25,7 +22,7 @@ export const Ecoturismo = (): JSX.Element => {
   const tourSchema = buildTourProduct({
     name: "Ecoturismo no Pantanal — Itaicy Eco Lodge",
     description:
-      "Experiencias de ecoturismo sustentavel no Pantanal. Trilhas ecologicas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo.",
+      "Experiências de ecoturismo sustentável no Pantanal. Trilhas ecológicas, safáris fotográficos, passeios de barco e imersão na maior planície alagável do mundo.",
     url: "/ecoturismo",
     image: cms.hero?.backgroundImage,
   });
@@ -33,14 +30,12 @@ export const Ecoturismo = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full">
       <PageMeta
-        title={cms.seo?.metaTitle || t("pageMeta", "ecoturismoTitle", lang)}
-        description={cms.seo?.metaDescription || t("pageMeta", "ecoturismoDesc", lang)}
+        title="Ecoturismo"
+        description="Experiencias de ecoturismo sustentavel no Pantanal. Trilhas, safaris fotograficos, passeios de barco e imersao na maior planicie alagavel do mundo."
         canonicalPath="/ecoturismo"
-        ogImage={cms.seo?.ogImage}
-        noIndex={cms.seo?.noIndex}
         breadcrumbs={[
-          { name: t("pageMeta", "breadHome", lang), path: "/" },
-          { name: t("pageMeta", "breadEcoturismo", lang), path: "/ecoturismo" },
+          { name: "Inicio", path: "/" },
+          { name: "Ecoturismo", path: "/ecoturismo" },
         ]}
       />
       <JsonLd data={tourSchema} />
@@ -51,8 +46,8 @@ export const Ecoturismo = (): JSX.Element => {
       <EcoHighlightsSection content={cms.highlights} />
       <EcoServicesSection content={cms.services} />
       <ImmersionTestimonialsSection />
-      <ImmersionCallToActionSection />
       <FrequentlyAskedQuestionsSection content={cms.faq} />
+      <ImmersionCallToActionSection />
       <SiteFooterSection />
     </div>
   );

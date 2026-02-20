@@ -5,11 +5,8 @@ import { BirdImage } from "@/components/BirdImage";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import type { BirdSpecies } from "../data";
 import { getBirdUrl } from "../cms";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
-  const { lang } = useLanguage();
   return (
     <Link
       href={getBirdUrl(bird)}
@@ -38,7 +35,7 @@ const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
         </div>
         {bird.photoCredit && (
           <span className="text-[10px] leading-tight text-white/60 text-right max-w-[140px] font-['Lato',sans-serif]">
-            {t("birds", "photoPrefix", lang)} {bird.photoCredit}
+            Foto: {bird.photoCredit}
           </span>
         )}
       </div>
@@ -86,7 +83,7 @@ const FeaturedBirdCard = ({ bird }: { bird: BirdSpecies }): JSX.Element => {
 
           <span className="flex items-center gap-1.5 px-4 py-2 rounded text-[#f2fcf7] transition-all duration-300 group-hover:-translate-y-0.5">
             <span className="font-functional-sm font-[number:var(--functional-sm-font-weight)] text-[length:var(--functional-sm-font-size)] leading-[var(--functional-sm-line-height)] [font-style:var(--functional-sm-font-style)]">
-              {t("common", "learnMore", lang)}
+              Saiba mais
             </span>
             <ChevronRight className="w-5 h-5" strokeWidth={2} />
           </span>
@@ -103,7 +100,6 @@ interface FeaturedBirdsSectionProps {
 export const FeaturedBirdsSection = ({
   featuredBirds,
 }: FeaturedBirdsSectionProps): JSX.Element => {
-  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-pantanal-medium">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -116,7 +112,7 @@ export const FeaturedBirdsSection = ({
           viewport={viewport}
         >
           <motion.span className="font-lead-md font-[number:var(--lead-md-font-weight)] text-[#a8cab9] text-[length:var(--lead-md-font-size)] tracking-[var(--lead-md-letter-spacing)] leading-[var(--lead-md-line-height)] [font-style:var(--lead-md-font-style)]" variants={fadeIn}>
-            {t("birds", "curationLabel", lang)}
+            CURADORIA ESPECIAL
           </motion.span>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[100px] items-start lg:items-center">
             <motion.h2
@@ -124,10 +120,11 @@ export const FeaturedBirdsSection = ({
               style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
               variants={fadeUp}
             >
-              {t("birds", "frequentSightings", lang)}
+              Avistamentos frequentes
             </motion.h2>
             <motion.p className="font-body-md font-[number:var(--body-md-font-weight)] text-[#a8cab9] text-[length:var(--body-md-font-size)] leading-[var(--body-md-line-height)] tracking-[var(--body-md-letter-spacing)] [font-style:var(--body-md-font-style)]" variants={fadeUp}>
-              {t("birds", "frequentDesc", lang)}
+              Espécies que nossos guias registram com maior frequência durante as
+              expedições. Avistamentos praticamente garantidos na sua visita.
             </motion.p>
           </div>
         </motion.div>

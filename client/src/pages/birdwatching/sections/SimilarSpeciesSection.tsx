@@ -3,8 +3,6 @@ import { ChevronLeft, ChevronRight } from "@/lib/icons";
 import { fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 import { BirdSpeciesCard } from "../components/BirdSpeciesCard";
 import type { BirdSpecies } from "../data";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 
 interface SimilarSpeciesSectionProps {
   birds: BirdSpecies[];
@@ -13,7 +11,6 @@ interface SimilarSpeciesSectionProps {
 export const SimilarSpeciesSection = ({
   birds,
 }: SimilarSpeciesSectionProps): JSX.Element => {
-  const { lang } = useLanguage();
   return (
     <section className="flex flex-col items-center w-full bg-[#263a30]">
       <div className="flex flex-col max-w-[1440px] gap-12 md:gap-16 lg:gap-[100px] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-[100px] w-full">
@@ -29,7 +26,7 @@ export const SimilarSpeciesSection = ({
             className="font-heading-lg font-[number:var(--heading-lg-font-weight)] text-[#e3f7ec] text-[length:var(--heading-lg-font-size)] leading-[var(--heading-lg-line-height)] tracking-[var(--heading-lg-letter-spacing)] [font-style:var(--heading-lg-font-style)]"
             style={{ fontFeatureSettings: "'lnum' 1, 'pnum' 1" }}
           >
-            {t("birds", "similarSpecies", lang)}
+            Espécies similares
           </h2>
 
           <div className="hidden md:flex items-center gap-2">

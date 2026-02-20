@@ -8,8 +8,6 @@ import {
 } from "@/components/JsonLd";
 import { usePageCms } from "@/lib/cms/page-content";
 import { useSharedCmsSections } from "@/lib/cms/shared-content";
-import { useLanguage } from "@/i18n/context";
-import { t } from "@/i18n/ui-strings";
 import { homeDefaults } from "./home-defaults";
 import { AccommodationInfoSection } from "./sections/AccommodationInfoSection";
 import { AuthenticRestSection } from "./sections/AuthenticRestSection";
@@ -28,7 +26,6 @@ import { SiteFooterSection } from "./sections/SiteFooterSection";
 export const Desktop = (): JSX.Element => {
   const cms = usePageCms("/", homeDefaults);
   const { testimonials } = useSharedCmsSections();
-  const { lang } = useLanguage();
 
   const faqItems = cms.faq?.items ?? [];
   const faqSchema = faqItems.length > 0
@@ -55,11 +52,10 @@ export const Desktop = (): JSX.Element => {
   return (
     <div className="flex flex-col w-full bg-white">
       <PageMeta
-        title={cms.seo?.metaTitle || t("pageMeta", "homeTitle", lang)}
-        description={cms.seo?.metaDescription || t("pageMeta", "homeDesc", lang)}
+        title="Eco Lodge Premium no Pantanal | Pesca Esportiva, Birdwatching e Ecoturismo"
+        description="Eco lodge no Pantanal Sul-Matogrossense em Miranda, MS. Pesca esportiva cota zero, observação de 166 espécies de aves e safáris fotográficos. Reserve sua experiência autêntica."
         canonicalPath="/"
-        ogImage={cms.seo?.ogImage || "/images/og-default.webp"}
-        noIndex={cms.seo?.noIndex}
+        ogImage="/images/og-default.webp"
       />
       <JsonLd data={schemas} />
       <PantanalHeroSection />
