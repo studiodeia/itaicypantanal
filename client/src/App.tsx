@@ -112,6 +112,7 @@ function Router() {
         <Route path="/observacao-de-aves/catalogo/:slug" component={BirdSpeciesPage} />
         <Route path="/ecoturismo" component={Ecoturismo} />
         <Route path="/blog" component={Blog} />
+        <Route path="/blog/:categorySlug" component={Blog} />
         <Route path="/blog/:categorySlug/:slug" component={BlogArticlePage} />
         <Route path="/contato" component={Contato} />
         <Route path="/nosso-impacto" component={NossoImpacto} />

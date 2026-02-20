@@ -24,45 +24,50 @@ type Props = { content?: HomePageContent["blog"] };
 const blogPosts = [
   {
     id: 1,
-    category: "Aventura",
-    readTime: "15 minutos de leitura",
+    href: "/blog/observacao-de-aves/guia-observacao-aves-pantanal-especies-epocas-tecnicas",
+    category: "Observação de Aves",
+    readTime: "12 minutos de leitura",
     title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
+      "Guia Completo de Observação de Aves no Pantanal: Espécies, Épocas e Técnicas",
     author: {
-      name: "Lucas Vieira",
+      name: "Equipe Itaicy",
       avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
+      initials: "EI",
     },
-    date: "09 de Agosto, 2025",
-    image: "/images/home/blog-card.webp",
+    date: "20 de Fevereiro, 2026",
+    image: "/images/blog/birdwatching-pantanal-card.webp",
+    imageFallback: "/images/home/blog-card.webp",
   },
   {
     id: 2,
-    category: "Aventura",
+    href: "/blog/pesca/guia-completo-pesca-esportiva-pantanal",
+    category: "Pesca",
     readTime: "15 minutos de leitura",
-    title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
+    title: "Guia Completo de Pesca Esportiva no Pantanal",
     author: {
-      name: "Lucas Vieira",
+      name: "Equipe Itaicy",
       avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
+      initials: "EI",
     },
-    date: "09 de Agosto, 2025",
-    image: "/images/home/blog-card.webp",
+    date: "20 de Fevereiro, 2026",
+    image: "/images/blog/pesca-esportiva-pantanal-card.webp",
+    imageFallback: "/images/home/blog-card.webp",
   },
   {
     id: 3,
-    category: "Aventura",
-    readTime: "15 minutos de leitura",
+    href: "/blog/gastronomia/gastronomia-all-inclusive-pantanal-descanso",
+    category: "Gastronomia",
+    readTime: "7 minutos de leitura",
     title:
-      "Guia de Observação: As 166 Espécies de Aves Vistas na Itaicy eco Lodge",
+      "Gastronomia All-Inclusive no Pantanal: Uma Experiência para Todos os Sentidos",
     author: {
-      name: "Lucas Vieira",
+      name: "Equipe Itaicy",
       avatar: "/images/home/blog-avatar.webp",
-      initials: "LV",
+      initials: "EI",
     },
-    date: "09 de Agosto, 2025",
-    image: "/images/home/blog-card.webp",
+    date: "20 de Fevereiro, 2026",
+    image: "/images/blog/gastronomia-pantanal-card.webp",
+    imageFallback: "/images/home/blog-card.webp",
   },
 ];
 
@@ -90,14 +95,14 @@ export const PantanalBlogSection = ({ content: contentProp }: Props): JSX.Elemen
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewport} className="flex overflow-x-auto scrollbar-hide pb-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-[32px] w-full">
           {blogPosts.map((post) => (
             <motion.div key={post.id} variants={cardItem}>
-            <Link href="/blog" className="no-underline block">
+            <Link href={post.href} className="no-underline block">
             <Card
               className="flex-col items-start rounded-lg overflow-hidden flex bg-transparent border-0 w-[350px] flex-shrink-0 md:w-auto md:flex-shrink lg:w-[416px] cursor-pointer"
               data-testid={`card-blog-${post.id}`}
             >
               <div
                 className="relative w-full h-[200px] md:h-[220px] lg:h-[233.07px] bg-cover bg-center bg-no-repeat rounded-t-lg"
-                style={{ backgroundImage: `url(${post.image})` }}
+                style={{ backgroundImage: `url(${post.image}), url(${post.imageFallback})` }}
               >
                 <Badge className="absolute top-4 left-4 bg-[#ac8042] text-[#f2fcf7] rounded-[999px] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] px-3 py-1 font-functional-md font-[number:var(--functional-md-font-weight)] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)] no-default-hover-elevate no-default-active-elevate">
                   {post.category}

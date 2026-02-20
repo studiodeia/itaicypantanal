@@ -21,17 +21,24 @@ export const Media: CollectionConfig = {
   upload: {
     staticDir: "media",
     mimeTypes: ["image/*"],
+    imageSizes: [
+      { name: "thumbnail", width: 400, height: 300, position: "centre" },
+      { name: "card", width: 768, height: 512, position: "centre" },
+      { name: "hero", width: 1920, height: undefined, position: "centre" },
+    ],
+    adminThumbnail: "thumbnail",
   },
   fields: [
     {
       name: "alt",
       type: "text",
       label: "Texto alternativo (acessibilidade)",
+      localized: true,
       admin: {
         description:
           "Descreva a imagem para leitores de tela e para melhorar SEO.",
       },
-      required: false,
+      required: true,
     },
   ],
 };
