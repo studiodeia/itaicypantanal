@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { Star as PhStar } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "@/lib/icons";
 import { useSharedCmsSections } from "@/lib/cms/shared-content";
 import { fadeIn, fadeUp, stagger, cardItem, viewport } from "@/lib/motion";
 
@@ -15,7 +15,7 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full lg:px-[24px]"
+          className="flex flex-col items-start gap-6 md:gap-8 lg:gap-[32px] w-full"
         >
           <motion.div
             variants={fadeIn}
@@ -62,7 +62,7 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
                       {item.title}
                     </h3>
 
-                    <blockquote className="w-full font-body-lg font-[number:var(--body-lg-font-weight)] text-[#a8cab9] text-[length:var(--body-lg-font-size)] tracking-[var(--body-lg-letter-spacing)] leading-[var(--body-lg-line-height)] [font-style:var(--body-lg-font-style)] line-clamp-5">
+                    <blockquote className="w-full font-body-lg font-[number:var(--body-lg-font-weight)] text-[#a8cab9] text-[length:var(--body-lg-font-size)] tracking-[var(--body-lg-letter-spacing)] leading-[var(--body-lg-line-height)] [font-style:var(--body-lg-font-style)]">
                       {item.quote}
                     </blockquote>
                   </div>
@@ -74,9 +74,10 @@ export const ImmersionTestimonialsSection = (): JSX.Element => {
 
                     <div className="inline-flex items-center">
                       {Array.from({ length: 5 }).map((_, starIndex) => (
-                        <Star
+                        <PhStar
                           key={starIndex}
-                          className="w-4 h-4 md:w-5 md:h-5 text-[#e3f7ec]"
+                          weight="fill"
+                          className="w-5 h-5 text-[#ac8042]"
                           aria-hidden="true"
                         />
                       ))}

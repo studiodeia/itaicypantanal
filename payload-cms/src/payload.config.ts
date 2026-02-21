@@ -12,6 +12,7 @@ import { ensureOwnerUser } from "./auth/ensure-owner-user";
 import { migrations } from "./migrations";
 import { BirdCategories } from "./collections/BirdCategories";
 import { BirdSpecies } from "./collections/BirdSpecies";
+import { FishSpecies } from "./collections/FishSpecies";
 import { BlogCategories } from "./collections/BlogCategories";
 import { BlogPosts } from "./collections/BlogPosts";
 import { Media } from "./collections/Media";
@@ -83,7 +84,7 @@ export default buildConfig({
         ]
       : []),
     seoPlugin({
-      collections: ["blog-posts", "bird-species"],
+      collections: ["blog-posts", "bird-species", "fish-species"],
       globals: [
         "home-content",
         "acomodacoes-content",
@@ -136,6 +137,10 @@ export default buildConfig({
           const slug = typeof d.slug === "string" && d.slug ? d.slug : null;
           return slug ? `${siteUrl}/observacao-de-aves/catalogo/${slug}` : `${siteUrl}/observacao-de-aves/catalogo`;
         }
+        if (collectionSlug === "fish-species") {
+          const slug = typeof d.slug === "string" && d.slug ? d.slug : null;
+          return slug ? `${siteUrl}/pesca/catalogo/${slug}` : `${siteUrl}/pesca/catalogo`;
+        }
         return siteUrl;
       },
       fields: ({ defaultFields }) => [
@@ -168,6 +173,7 @@ export default buildConfig({
     BlogCategories,
     BirdSpecies,
     BirdCategories,
+    FishSpecies,
     Users,
   ],
   globals: [
