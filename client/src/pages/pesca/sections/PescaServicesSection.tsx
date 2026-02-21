@@ -147,20 +147,22 @@ export const PescaServicesSection = ({ content }: Props): JSX.Element => {
           </a>
         </div>
 
-        {/* Bottom CTA */}
-        <a
-          href={content.buttonHref ?? "#"}
-          className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
-          data-testid="link-pesca-guia"
-        >
-          <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
-            {content.buttonText ?? "Ver guia de espécies completo"}
-          </span>
-          <ChevronRight
-            className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"
-            strokeWidth={2}
-          />
-        </a>
+        {/* Bottom CTA — only rendered when a real href is set (fish catalog page not yet built) */}
+        {content.buttonHref && content.buttonHref !== "#" && (
+          <a
+            href={content.buttonHref}
+            className="flex items-center justify-between w-full py-4 border-b border-[#f2fcf7] transition-all duration-300 group"
+            data-testid="link-pesca-guia"
+          >
+            <span className="link-hover font-functional-md font-[number:var(--functional-md-font-weight)] text-[#e3f7ec] text-[length:var(--functional-md-font-size)] tracking-[var(--functional-md-letter-spacing)] leading-[var(--functional-md-line-height)] [font-style:var(--functional-md-font-style)]">
+              {content.buttonText ?? "Ver guia de espécies completo"}
+            </span>
+            <ChevronRight
+              className="w-5 h-5 text-[#e3f7ec] transition-transform duration-200 group-hover:translate-x-1"
+              strokeWidth={2}
+            />
+          </a>
+        )}
       </div>
     </section>
   );

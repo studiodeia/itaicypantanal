@@ -86,6 +86,7 @@ function slugify(input: string): string {
 
 async function resolveSeedPath(): Promise<string> {
   const candidates = [
+    resolve(process.cwd(), "seed-data", "full-seed.json"),
     resolve(process.cwd(), "..", "docs", "payload-seed", "full-seed.json"),
     resolve(process.cwd(), "docs", "payload-seed", "full-seed.json"),
   ];
@@ -403,6 +404,7 @@ async function importPageGlobals(
   payload: Awaited<ReturnType<typeof getPayload>>,
 ) {
   const candidates = [
+    resolve(process.cwd(), "seed-data", "page-content.json"),
     resolve(process.cwd(), "..", "docs", "payload-seed", "page-content.json"),
     resolve(process.cwd(), "docs", "payload-seed", "page-content.json"),
   ];
@@ -521,9 +523,8 @@ async function importSharedSections(
   console.log("SiteSettings structured fields populated.");
 }
 
-async function main() {
+export async function runImportSeed(payload: Awaited<ReturnType<typeof getPayload>>) {
   const seed = await readSeed();
-  const payload = await getPayload({ config });
 
   await importBlog(payload, seed.blog);
   await importBirdwatching(payload, seed.birdwatching);
@@ -532,6 +533,11 @@ async function main() {
   await importPageGlobals(payload);
 
   console.log("Seed importado para o Payload com sucesso.");
+}
+
+async function main() {
+  const payload = await getPayload({ config });
+  await runImportSeed(payload);
 }
 
 main().catch((error) => {

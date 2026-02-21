@@ -107,7 +107,7 @@ const pt: PescaPageContent = {
       },
     ],
     buttonText: "Ver guia de espécies completo",
-    buttonHref: "#",
+    buttonHref: "",
   },
   faq: {
     label: "PERGUNTAS FREQUENTES",
@@ -254,7 +254,7 @@ const en: PescaPageContent = {
       },
     ],
     buttonText: "View full species guide",
-    buttonHref: "#",
+    buttonHref: "",
   },
   faq: {
     label: "FREQUENTLY ASKED QUESTIONS",
@@ -401,7 +401,7 @@ const es: PescaPageContent = {
       },
     ],
     buttonText: "Ver guía de especies completa",
-    buttonHref: "#",
+    buttonHref: "",
   },
   faq: {
     label: "PREGUNTAS FRECUENTES",

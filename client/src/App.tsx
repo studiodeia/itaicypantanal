@@ -63,6 +63,16 @@ const BirdSpeciesPage = lazy(() =>
     default: module.BirdSpeciesPage,
   })),
 );
+const FishCatalogPage = lazy(() =>
+  import("@/pages/pesca/FishCatalogPage").then((module) => ({
+    default: module.FishCatalogPage,
+  })),
+);
+const FishSpeciesPage = lazy(() =>
+  import("@/pages/pesca/FishSpeciesPage").then((module) => ({
+    default: module.FishSpeciesPage,
+  })),
+);
 const Regiao = lazy(() =>
   import("@/pages/Regiao").then((module) => ({ default: module.Regiao })),
 );
@@ -107,6 +117,8 @@ function Router() {
         <Route path="/acomodacoes" component={Acomodacoes} />
         <Route path="/culinaria" component={Culinaria} />
         <Route path="/pesca" component={Pesca} />
+        <Route path="/pesca/catalogo" component={FishCatalogPage} />
+        <Route path="/pesca/catalogo/:slug" component={FishSpeciesPage} />
         <Route path="/observacao-de-aves" component={BirdWatching} />
         <Route path="/observacao-de-aves/catalogo" component={BirdCatalogPage} />
         <Route path="/observacao-de-aves/catalogo/:slug" component={BirdSpeciesPage} />

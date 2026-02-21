@@ -18,5 +18,8 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/src ./src
+COPY --from=builder /app/seed-data ./seed-data
+COPY startup.sh ./startup.sh
+RUN chmod +x ./startup.sh
 EXPOSE 3001
-CMD ["npm", "run", "start"]
+CMD ["sh", "./startup.sh"]

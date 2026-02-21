@@ -1,0 +1,586 @@
+{
+  "/": {
+    "aboutUs": {
+      "label": "SOBRE NÓS",
+      "heading": "Bem-vindo ao Nosso Refúgio Natural",
+      "body": [
+        "Localizada no coração de uma das regiões mais biodiversas do mundo, nossa pousada oferece uma experiência única de conexão com a natureza.",
+        "Desde 2005, nos dedicamos a proporcionar momentos inesqueciveis enquanto preservamos e protegemos nosso ambiente natural. A pousada esta situada no historico sitio da Usina Itaicy, fundada em 1897 por Toto Paes de Barros, responsavel pela primeira geracao de energia eletrica de Mato Grosso — patrimonio tombado (Tombamento 55/84)."
+      ],
+      "image": "/images/home/about-us.webp",
+      "features": [
+        { "number": "01", "title": "Sustentabilidade", "description": "Práticas eco-friendly em todas as nossas operações" },
+        { "number": "02", "title": "Excelência", "description": "Guias especializados e equipamentos de primeira linha" },
+        { "number": "03", "title": "Hospitalidade", "description": "Atendimento personalizado para cada hóspede" }
+      ]
+    },
+    "expeditions": {
+      "label": "NOSSOS SERVIÇOS",
+      "heading": "Experiências no Coração do Pantanal",
+      "description": "Nossas atividades são desenhadas para uma conexão profunda com o ecossistema. Escolha a sua expedição.",
+      "items": [
+        { "title": "Pesca Esportiva Cota Zero", "description": "Em águas bem conservadas, a pesca transcende — uma imersão tática com guias nativos que dominam o rio.", "backgroundImage": "/images/home/expedition-pesca.webp", "href": "/pesca" },
+        { "title": "Birdwatching", "description": "166 espécies catalogadas em nosso santuário. Guias ornitólogos conduzem expedições imersivas ao amanhecer.", "backgroundImage": "/images/home/expedition-birdwatching.webp", "href": "/observacao-de-aves" },
+        { "title": "Ecoturismo", "description": "Trilhas guiadas, passeios de barco e safáris fotográficos no coração do Pantanal intocado.", "backgroundImage": "/images/home/expedition-ecoturismo.webp", "href": "/ecoturismo" }
+      ],
+      "buttonText": "Quero conhecer"
+    },
+    "stats": {
+      "items": [
+        { "target": 2000, "suffix": "+", "label": "HÓSPEDES SATISFEITOS" },
+        { "target": 166, "suffix": "+", "label": "AVES AVISTADAS" },
+        { "target": 20, "suffix": "+", "label": "ANOS DE EXPERIÊNCIA" },
+        { "target": 4.9, "suffix": "", "label": "AVALIAÇÃO MÉDIA", "hasIcon": true }
+      ]
+    },
+    "accommodation": {
+      "label": "ACOMODAÇÕES",
+      "heading": "Descanso autêntico no coração selvagem",
+      "body": "Nossas acomodações são projetadas para o descanso e a imersão. Confortáveis, climatizadas e com vista para a natureza intocada, elas são o ponto de partida perfeito para sua aventura no Pantanal.",
+      "buttonReserve": "Reservar",
+      "buttonDetails": "Mais detalhes",
+      "backgroundImage": "/images/home/accommodations-bg.webp"
+    },
+    "impact": {
+      "label": "NOSSO IMPACTO",
+      "heading": "Compromisso com a Natureza, Impacto na Comunidade",
+      "items": [
+        { "number": "01", "title": "Biodiversidade Preservada", "description": "Acesso a áreas protegidas onde 166 espécies de aves foram catalogadas." },
+        { "number": "02", "title": "Apoio Comunitário", "description": "Parte de nossa receita é revertida diretamente para as comunidades indígenas locais." },
+        { "number": "03", "title": "Preservação Oficial", "description": "Parceria com órgãos ambientais para a preservação de áreas protegidas do Pantanal." }
+      ],
+      "image": "/images/home/impact.webp"
+    },
+    "blog": {
+      "label": "BLOG",
+      "heading": "Diário do Pantanal",
+      "description": "O que nossos viajantes dizem sobre a experiência autêntica de se desconectar na natureza selvagem da Itaicy Ecoturismo.",
+      "buttonText": "Ver todos"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Duvidas sobre o Pantanal e a Itaicy",
+      "description": "Respondemos as principais perguntas sobre a regiao, a pousada e as experiencias que oferecemos.",
+      "items": [
+        {"id": "home-1", "number": "01", "question": "A pousada e destinada apenas para pesca?", "answer": "Nao. A Itaicy oferece tres experiencias principais: pesca esportiva cota zero (catch-and-release), observacao de aves (birdwatching com 166 especies catalogadas) e ecoturismo (trilhas, safaris fotograficos, passeios de barco). Tambem e ideal para casais, familias e fotografos de natureza que buscam imersao no Pantanal."},
+        {"id": "home-2", "number": "02", "question": "Onde fica a Itaicy Pantanal Eco Lodge?", "answer": "Estamos localizados em Santo Antonio do Leverger, Mato Grosso, as margens do Rio Cuiaba, na Rodovia MT 040, KM 23. Ficamos a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande. O acesso e por estrada asfaltada ate a entrada da propriedade."},
+        {"id": "home-3", "number": "03", "question": "Qual a melhor epoca para visitar o Pantanal?", "answer": "Cada estacao oferece experiencias unicas. A seca (maio a setembro) e ideal para pesca esportiva (temporada fev-set no Rio Cuiaba) e avistamento de fauna concentrada. A cheia (outubro a marco) revela paisagens dramaticas e aves migratorias. Para birdwatching, a seca e imbativel; para paisagens e fotografia, a transicao entre estacoes."},
+        {"id": "home-4", "number": "04", "question": "As experiencias sao guiadas?", "answer": "Sim. Todas as atividades sao acompanhadas por guias nativos especializados que nasceram na regiao e conhecem profundamente o bioma, os rios, os habitos da fauna e as melhores tecnicas para cada experiencia. Nossos guias sao certificados e seguem protocolos ambientais rigorosos."},
+        {"id": "home-5", "number": "05", "question": "Posso personalizar meu roteiro?", "answer": "Sim. Nossa equipe pode ajustar o pacote de acordo com seus interesses (pesca, aves, fotografia, contemplacao), a epoca do ano e a duracao da estadia. Oferecemos roteiros de 3 a 7 noites, com combinacoes de atividades adaptadas ao seu perfil e objetivos de viagem."}
+      ]
+    }
+  },
+  "/acomodacoes": {
+    "hero": {
+      "label": "ACOMODAÇÕES",
+      "heading": "Refúgios de Conforto Essencial",
+      "subtitle": "O seu ponto de partida para a imersão no Pantanal.",
+      "scrollHint": "Deslize para baixo",
+      "videoMp4": "/Vídeo_Pronto_e_Suave.mp4",
+      "videoWebm": "/video-pronto-suave.webm",
+      "videoMp4Low": "/video-pronto-suave-low.mp4",
+      "videoWebmLow": "/video-pronto-suave-low.webm",
+      "videoPoster": "/images/acomodacoes/suite-explorer.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Nossos apartamentos são projetados para o ", "isHighlight": false },
+        { "text": "conforto essencial", "isHighlight": true },
+        { "text": ", garantindo que você tenha o ", "isHighlight": false },
+        { "text": "refúgio perfeito", "isHighlight": true },
+        { "text": " após um dia de expedição.", "isHighlight": false }
+      ]
+    },
+    "highlights": {
+      "heading": "O Essencial da Sua Estadia",
+      "items": [
+        { "iconName": "UtensilsCrossed", "title": "Gastronomia Full-Board", "description": "Café da manhã, almoço com ingredientes regionais, lanche da tarde e jantar autoral — tudo incluso" },
+        { "iconName": "GlassWater", "title": "Bebidas Inclusas", "description": "Água, sucos naturais, café especial e refrigerantes disponíveis durante toda a estadia" },
+        { "iconName": "Compass", "title": "Expedições Guiadas Inclusas", "description": "Passeio de barco e cavalgada guiada inclusos — explore a fauna e flora com especialistas" },
+        { "iconName": "Fence", "title": "Varanda Privativa", "description": "Varanda privativa para contemplação e descanso" },
+        { "iconName": "Snowflake", "title": "Climatização Individual", "description": "Ar-condicionado split em todas as suítes para conforto em qualquer estação" },
+        { "iconName": "Wifi", "title": "Conectividade Essencial", "description": "Wi-Fi via satélite nas áreas sociais — desconecte-se do mundo, conecte-se ao Pantanal" }
+      ]
+    },
+    "rooms": [
+      {
+        "title": "Suíte Explorer",
+        "description": "O refúgio ideal para o viajante solo que busca imersão total. Privacidade, silêncio e conexão com a natureza no seu próprio ritmo.",
+        "image": "/images/acomodacoes/suite-explorer.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedSingle", "label": "Cama Individual Premium" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Intimista" },
+          { "iconName": "User", "label": "1 Pessoa" }
+        ]
+      },
+      {
+        "title": "Suíte Adventure",
+        "description": "Projetada para casais que buscam uma experiência a dois no coração do Pantanal. Conforto, natureza e momentos inesquecíveis.",
+        "image": "/images/acomodacoes/suite-adventure.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedDouble", "label": "Cama de Casal Premium" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Privativa" },
+          { "iconName": "Users", "label": "2 Pessoas" }
+        ]
+      },
+      {
+        "title": "Suíte Family",
+        "description": "A mais espaçosa das nossas suítes. Perfeita para famílias ou pequenos grupos, com cama de casal, solteiro e ampla área de convivência.",
+        "image": "/images/acomodacoes/suite-family.webp",
+        "ctaText": "Verificar disponibilidade",
+        "features": [
+          { "iconName": "BedDouble", "label": "Cama Casal + Solteiro" },
+          { "iconName": "Bath", "label": "Banheiro Privativo" },
+          { "iconName": "Fence", "label": "Varanda Ampla" },
+          { "iconName": "Users", "label": "3 Pessoas" }
+        ]
+      }
+    ],
+    "culinary": {
+      "label": "CULINÁRIA",
+      "heading": "O Sabor Autêntico do Pantanal",
+      "description": "Nossa gastronomia é focada no essencial: ingredientes regionais frescos e um preparo cuidadoso, resultando em uma comida autêntica e reconfortante após um dia de expedição.",
+      "images": [
+        { "src": "/images/acomodacoes/culinaria-1.webp", "alt": "Prato regional do Pantanal", "tag": "Café da manhã" },
+        { "src": "/images/acomodacoes/culinaria-2.webp", "alt": "Almoço preparado com ingredientes regionais", "tag": "Almoço" },
+        { "src": "/images/acomodacoes/culinaria-3.webp", "alt": "Jantar sofisticado na pousada", "tag": "Jantar" },
+        { "src": "/images/acomodacoes/culinaria-4.webp", "alt": "Lanche e petiscos regionais", "tag": "Lanche" }
+      ],
+      "ctaText": "Conheça nossa gastronomia",
+      "ctaHref": "/culinaria"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Duvidas sobre Acomodacoes e Hospedagem",
+      "description": "Tudo o que voce precisa saber sobre a estrutura, quartos e comodidades da Itaicy.",
+      "items": [
+        {"id": "acomod-1", "number": "01", "question": "Quais tipos de suite estao disponiveis?", "answer": "Oferecemos tres categorias: Suite Explorer (individual, ideal para viajantes solo), Suite Adventure (casal, com cama queen) e Suite Family (familia, com cama casal + solteiro). Todas possuem ar-condicionado, banheiro privativo, varanda privativa e amenities completos."},
+        {"id": "acomod-2", "number": "02", "question": "O que esta incluso na diaria?", "answer": "A diaria inclui hospedagem em suite privativa, cafe da manha reforcado, almoco e jantar a la carte, passeio de barco e cavalgada guiada, Wi-Fi nas areas sociais, acesso a piscina e areas de convivencia. Criancas sao bem-vindas e room service esta disponivel. Atividades adicionais e bebidas podem ter custo extra."},
+        {"id": "acomod-3", "number": "03", "question": "Qual a capacidade total da pousada?", "answer": "A Itaicy possui suites confortaveis com capacidade limitada para garantir exclusividade e atendimento personalizado. A estrutura inclui piscina, restaurante a la carte, deck panoramico e areas de convivencia, tudo integrado a natureza as margens do Rio Cuiaba."},
+        {"id": "acomod-4", "number": "04", "question": "A pousada tem Wi-Fi e sinal de celular?", "answer": "Sim. Oferecemos Wi-Fi via satelite nas areas sociais (restaurante, deck, recepcao). O sinal e suficiente para mensagens e e-mails, mas pode nao suportar streaming pesado. Sinal de celular (Vivo e Claro) funciona em areas abertas. Recomendamos usar a estadia para desconectar e curtir a natureza."},
+        {"id": "acomod-5", "number": "05", "question": "Como chego ate a pousada?", "answer": "A Itaicy fica em Santo Antonio do Leverger, MT, na Rodovia MT 040, KM 23, a cerca de 33 km de Cuiaba (40 min de carro). O aeroporto mais proximo e o Marechal Rondon (CGB) em Varzea Grande, MT. Oferecemos transfer sob consulta. A estrada e asfaltada ate a entrada da propriedade."}
+      ]
+    }
+  },
+  "/culinaria": {
+    "hero": {
+      "label": "CULINÁRIA",
+      "heading": "Onde o Pantanal Vira Alimento",
+      "subtitle": "Ingredientes da terra e da horta, técnica internacional e alma pantaneira em cada prato.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/culinaria/hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "A ", "isHighlight": false },
+        { "text": "alma do Pantanal", "isHighlight": true },
+        { "text": ", a técnica do mundo. Ingredientes regionais colhidos no dia, ", "isHighlight": false },
+        { "text": "técnicas de alta gastronomia", "isHighlight": true },
+        { "text": " e o tempo que cada prato merece — uma cozinha autoral que honra a terra e surpreende o paladar.", "isHighlight": false }
+      ]
+    },
+    "menu": {
+      "label": "NOSSO MENU",
+      "heading": "Galeria de experiências",
+      "body": [
+        "Navegue pelas categorias e explore tudo o que espera por você. Conheça as carnes já inclusas na sua Pensão Completa. Descubra também os doces caseiros e nossa seleção especial de vinhos e drinks."
+      ],
+      "image": "",
+      "features": [
+        { "number": "01", "title": "Carnes", "description": "" },
+        { "number": "02", "title": "Entradas", "description": "" },
+        { "number": "03", "title": "Massas", "description": "" },
+        { "number": "04", "title": "Doces", "description": "" },
+        { "number": "05", "title": "Bebidas", "description": "" }
+      ]
+    },
+    "highlights": {
+      "heading": "Da Horta e da Terra à Sua Mesa",
+      "items": [
+        { "iconName": "UtensilsCrossed", "title": "Cozinha Autoral", "description": "Pratos únicos que combinam técnica internacional com sabores genuinamente pantaneiros." },
+        { "iconName": "Sprout", "title": "Produtores Locais", "description": "Parceria com fazendas e comunidades vizinhas que sustentam a cadeia produtiva da região." },
+        { "iconName": "Flower2", "title": "Horta da Casa", "description": "Temperos e vegetais frescos colhidos diariamente da nossa própria horta orgânica." }
+      ]
+    },
+    "services": {
+      "label": "NOSSOS SERVIÇOS",
+      "heading": "O Ciclo da Sua Imersão Gastronômica",
+      "description": "Da alvorada ao anoitecer, sua experiência gastronômica está inclusa e conectada à sua expedição.",
+      "items": [
+        { "title": "Café da Manhã Regional", "description": "Desfrute de um café regional com frutas, pães artesanais e tapiocas.", "image": "/images/culinaria-services-1" },
+        { "title": "Almoço no Refúgio", "description": "", "image": "/images/culinaria-services-2" },
+        { "title": "Jantar à Luz de Velas", "description": "", "image": "/images/culinaria-services-3" }
+      ],
+      "buttonText": "Fazer uma reserva"
+    },
+    "experience": {
+      "heading": "Sabor e Aconchego",
+      "body": [
+        "O calor do fogo, o vinho, os sabores autênticos e o conforto de um refúgio no coração do Pantanal."
+      ],
+      "image": "/images/culinaria-experience-bg.webp"
+    },
+    "crossSell": {
+      "heading": "O refúgio completo",
+      "description": "Agora que conheceu nossa cozinha, encontre a acomodação perfeita para sua imersão no Pantanal.",
+      "buttonText": "Conhecer acomodações",
+      "buttonHref": "/acomodacoes",
+      "image": "/images/culinaria-crosssell-2"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Dúvidas sobre a Culinária Pantaneira",
+      "description": "Tudo o que você precisa saber sobre a gastronomia e as refeições na Itaicy.",
+      "items": [
+        {"id": "culinaria-1", "number": "01", "question": "As refeições estão inclusas na hospedagem?", "answer": "A gastronomia é parte central da experiência no Itaicy, pensada para que o hóspede aproveite cada momento sem preocupações com custos extras de alimentação durante toda a estadia. Sim, todas as refeições estão inclusas no regime de Pensão Completa: café da manhã com frutas regionais, pães artesanais, tapiocas recheadas e sucos naturais; almoço com pratos autorais de carnes e ingredientes regionais servidos em mesa compartilhada; e jantar com menu degustação que varia a cada noite conforme a sazonalidade dos ingredientes. Além das três refeições principais, oferecemos lanches durante os passeios, como sanduíches naturais, barras de castanha e água fresca, garantindo energia ao longo de cada expedição. Dietas especiais como vegetariana, vegana, sem glúten ou sem lactose são atendidas com prazer, desde que informadas no momento da reserva para que nossa equipe de cozinha prepare opções personalizadas com ingredientes frescos e de origem local."},
+        {"id": "culinaria-2", "number": "02", "question": "Quais pratos típicos do Pantanal são servidos?", "answer": "O Pantanal possui uma tradição culinária rica e singular, moldada pela vida nas fazendas e pela influência das culturas indígena, paraguaia e dos tropeiros que cruzaram a região por séculos, criando uma identidade gastronômica única no Brasil. Nosso cardápio celebra essa herança com pratos como arroz carreteiro com carne seca desfiada e temperado com cebolinha da horta, farofa de banana-da-terra tostada na manteiga, picadinho pantaneiro com mandioca e temperos frescos e cortes nobres grelhados ao modo regional. Também servimos chipa caseira, inspirada na receita tradicional paraguaia, e sobremesas artesanais com frutas nativas do cerrado como bocaiuva, guavira e cumbaru. Cada prato é preparado com ingredientes colhidos no dia, muitos vindos de produtores locais de Miranda e Bonito, garantindo frescor absoluto e valorizando a economia da comunidade pantaneira."},
+        {"id": "culinaria-3", "number": "03", "question": "Vocês servem bebidas alcoólicas?", "answer": "O momento das refeições no Itaicy é também uma oportunidade para explorar sabores regionais na forma de bebidas exclusivas, pensadas para complementar e harmonizar com cada prato do cardápio ao longo do dia. Sim, oferecemos uma seleção cuidadosa de vinhos tintos e brancos de vinícolas brasileiras e sul-americanas, cervejas artesanais de microprodução regional e drinks autorais criados pela nossa equipe de bar. Entre os destaques estão caipirinhas de bocaiuva, gin tônicas com ervas frescas da horta e um drink especial de tereré com limão e hortelã, perfeito para tardes quentes. Sucos naturais de frutas como manga, acerola, caju e guavira estão sempre disponíveis e são inclusos na Pensão Completa sem nenhum custo adicional. O consumo de rótulos premium de vinhos importados e destilados especiais pode ter custo à parte, dependendo do pacote contratado. Nossa carta de bebidas é atualizada sazonalmente para acompanhar a disponibilidade dos ingredientes frescos da região."},
+        {"id": "culinaria-4", "number": "04", "question": "De onde vêm os ingredientes usados na cozinha?", "answer": "A procedência dos ingredientes é um dos pilares da nossa proposta gastronômica, porque acreditamos que um prato excepcional começa muito antes do preparo, na escolha cuidadosa da matéria-prima e no respeito à cadeia produtiva local que sustenta a região. Priorizamos ingredientes regionais e sazonais em todas as refeições servidas no lodge. As carnes bovinas são de fazendas da região de Miranda com certificação de boas práticas de manejo. Temperos frescos como cebolinha, salsinha, manjericão e pimenta-de-cheiro são colhidos diariamente da nossa própria horta orgânica mantida pela equipe do lodge. Frutas nativas como bocaiuva e guavira vêm de coletores comunitários da região. Essa rastreabilidade rigorosa garante frescor máximo, qualidade constante em cada prato e gera impacto econômico positivo e direto nas famílias da comunidade local."},
+        {"id": "culinaria-5", "number": "05", "question": "A cozinha atende restrições alimentares?", "answer": "Sabemos que cada hóspede tem necessidades alimentares diferentes, e a experiência gastronômica no Itaicy deve ser plenamente inclusiva para que todos possam desfrutar dos sabores autênticos do Pantanal com total tranquilidade e segurança. Sim, nossa equipe de cozinha é treinada para adaptar o cardápio completo a diversas restrições alimentares, incluindo vegetarianismo, veganismo, intolerância a glúten, intolerância a lactose, alergias a frutos do mar ou a oleaginosas e outras necessidades clínicas específicas. Preparamos versões alternativas dos pratos do dia utilizando ingredientes frescos e substituições criativas, como farinhas de mandioca e polvilho no lugar do trigo, leites vegetais de castanha da região e pratos proteicos elaborados à base de leguminosas e cogumelos. Basta nos informar no momento da reserva ou até 48 horas antes da chegada para que nossa brigada de cozinha organize um plano alimentar personalizado e seguro para cada refeição ao longo de toda a sua estadia no lodge."}
+      ]
+    }
+  },
+  "/pesca": {
+    "hero": {
+      "label": "PESCA ESPORTIVA",
+      "heading": "Pesca Esportiva de Alta Performance no Rio Cuiabá",
+      "subtitle": "Uma operação de pesca esportiva cota zero no Rio Cuiabá. Lanchas de 19 pés, guias nativos e o respeito absoluto ao peixe.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/pesca-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "No Rio Cuiaba, operamos com ", "isHighlight": false },
+        { "text": "respeito absoluto ao peixe", "isHighlight": true },
+        { "text": " e foco total na sua ", "isHighlight": false },
+        { "text": "performance esportiva", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Alta Performance e Preservação",
+      "body": [
+        "As margens do Rio Cuiaba, nossa estrutura e desenhada para o pescador esportivo que busca desafio tecnico e trofeus. Operamos com embarcacoes de aluminio equipadas com plataforma de arremesso, comportando ate 3 pescadores por barco, sempre acompanhados de guia nativo que conhece cada pocao do rio."
+      ],
+      "image": "/images/pesca-about-1",
+      "features": [
+        { "number": "01", "title": "Cota Zero (Pesque e Solte)", "description": "Praticamos rigorosamente a conservação. O peixe é um troféu vivo que retorna ao rio, garantindo o equilíbrio do ecossistema e o futuro do esporte." },
+        { "number": "02", "title": "Águas Bem Conservadas", "description": "Navegue por rios e corixos em áreas preservadas do Rio Cuiabá, longe do turismo convencional." },
+        { "number": "03", "title": "Guias Nativos", "description": "Nossos guias nasceram na região e dominam a leitura do rio. Eles conhecem os pontos de caça do Dourado e as técnicas para maximizar sua performance." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por que pescar na Itaicy?",
+      "items": [
+        { "iconName": "Star", "title": "Temporada Fev-Set", "description": "A temporada de pesca no Rio Cuiaba vai de fevereiro a setembro, com pico do Dourado entre junho e setembro na seca." },
+        { "iconName": "Sailboat", "title": "Barcos Equipados", "description": "Embarcacoes de aluminio com plataforma de arremesso, ate 3 pescadores por barco, guia nativo incluso." },
+        { "iconName": "Fish", "title": "O Reino do Dourado", "description": "O Rio Cuiaba e habitat natural do Dourado, Pintado, Cachara, Pacu e Piraputanga — trofeus para cada perfil de pescador." }
+      ]
+    },
+    "services": {
+      "label": "O SANTUÁRIO",
+      "heading": "Os Gigantes do Nosso Rio",
+      "description": "O Dourado é o rei, mas não reina sozinho. Nossas águas abrigam uma variedade incrível de desafios esportivos. Conheça seus adversários.",
+      "items": [
+        { "title": "Dourado", "description": "O 'Rei do Rio Cuiaba'. Famoso por sua luta intensa e saltos espetaculares, e o trofeu mais cobiçado da pesca esportiva no Pantanal.", "image": "/images/pesca-fish-4" },
+        { "title": "Pintado", "description": "O maior bagre do Pantanal. Pode ultrapassar 1 metro de comprimento e proporciona batalhas memoraveis nas aguas do Rio Cuiaba.", "image": "/images/pesca-fish-1" },
+        { "title": "Cachara", "description": "Primo do Pintado, o Cachara e um predador de fundo que exige tecnica e paciencia. Habita os poçoes e canais do Rio Cuiaba.", "image": "/images/pesca-fish-2" },
+        { "title": "Pacu", "description": "Peixe versatil e combativo, o Pacu e encontrado em abundancia no Rio Cuiaba. Ótimo para pesca com iscas naturais e artificiais.", "image": "/images/pesca-fish-3" }
+      ],
+      "buttonText": "Ver guia de espécies completo",
+      "buttonHref": "#"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Duvidas sobre Pesca Esportiva",
+      "description": "Respondemos as principais perguntas sobre a operacao de pesca no Pantanal da Itaicy.",
+      "items": [
+        {"id": "pesca-1", "number": "01", "question": "Qual e a melhor epoca para pescar no Pantanal?", "answer": "A temporada de pesca no Rio Cuiaba vai de fevereiro a setembro. O periodo de seca (junho a setembro) e o mais indicado, pois os rios estao mais baixos e os peixes se concentram em pocoes, facilitando a pesca esportiva. O pico de atividade do Dourado ocorre entre junho e setembro. As embarcacoes sao de aluminio com plataforma de arremesso, comportando ate 3 pescadores por barco acompanhados de guia nativo."},
+        {"id": "pesca-2", "number": "02", "question": "O que significa pesca cota zero (pesque e solte)?", "answer": "Cota zero significa que todo peixe capturado e devolvido vivo ao rio. Nao ha retirada de peixes. Essa pratica garante a conservacao das especies, a manutencao do equilibrio ecologico e a perpetuacao da pesca esportiva para futuras geracoes. Na Itaicy, o Projeto Cota Zero e rigorosamente cumprido."},
+        {"id": "pesca-3", "number": "03", "question": "Quais especies posso pescar na Itaicy?", "answer": "As principais especies do Rio Cuiaba sao: Dourado (o 'Rei do Rio'), Pintado, Cachara, Pacu e Piraputanga. Nossos rios abrigam grande diversidade de peixes, com destaque para os grandes predadores esportivos. As lanchas de 19 pes garantem conforto e performance na pesca."},
+        {"id": "pesca-4", "number": "04", "question": "Preciso levar meu proprio equipamento de pesca?", "answer": "Nao e obrigatorio. Oferecemos equipamento completo de alta performance (varas, carretilhas, iscas artificiais). Porem, se voce possui equipamento proprio e prefere usa-lo, e bem-vindo. Nossos guias podem orientar sobre o melhor setup para cada especie e condicao do rio."},
+        {"id": "pesca-5", "number": "05", "question": "Os guias de pesca sao locais?", "answer": "Sim. Nossos guias nasceram na regiao e possuem conhecimento profundo dos rios, dos habitos dos peixes e das melhores tecnicas. Eles dominam a leitura do rio e sabem exatamente onde os grandes exemplares se concentram em cada epoca do ano."}
+      ]
+    }
+  },
+  "/ecoturismo": {
+    "hero": {
+      "label": "ECOTURISMO",
+      "heading": "Imersão Autêntica na Natureza Selvagem do Pantanal",
+      "subtitle": "Passeios guiados que revelam a essência do bioma mais biodiverso do planeta. Cada experiência é uma conexão profunda com a vida selvagem.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/eco-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Uma experiência que vai além do ", "isHighlight": false },
+        { "text": "turismo convencional", "isHighlight": true },
+        { "text": ". Cada passeio é uma imersão guiada no coração de um dos ", "isHighlight": false },
+        { "text": "ecossistemas mais ricos", "isHighlight": true },
+        { "text": " do planeta.", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Conexão Autêntica com o Bioma",
+      "body": [
+        "Às margens do Rio Cuiabá, oferecemos uma seleção de passeios que proporcionam uma imersão completa na natureza do Pantanal.",
+        "Todos os passeios são acompanhados por guias especializados, garantindo segurança, conforto e uma experiência autêntica neste bioma singular."
+      ],
+      "image": "/images/eco-about-1",
+      "features": [
+        { "number": "01", "title": "Guias Nativos", "description": "Nossos guias nasceram no Pantanal. Eles conhecem cada trilha, cada som e cada comportamento animal da região." },
+        { "number": "02", "title": "Baixo Impacto", "description": "Operamos com grupos reduzidos e protocolos rigorosos para minimizar nossa presença no habitat natural." },
+        { "number": "03", "title": "Experiência Imersiva", "description": "Do nascer ao pôr do sol, cada momento é pensado para conectar você de forma autêntica com a vida selvagem do Pantanal." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por Que Explorar com a Itaicy",
+      "items": [
+        { "iconName": "Compass", "title": "Roteiros Guiados", "description": "Acesso a áreas preservadas do Rio Cuiabá e seus afluentes, longe do turismo de massa." },
+        { "iconName": "ShieldCheck", "title": "Segurança Total", "description": "Guias experientes e equipamentos de primeira linha em todas as expedições." },
+        { "iconName": "Sunrise", "title": "Experiências Únicas", "description": "Do nascer ao pôr do sol, cada passeio revela uma face diferente do Pantanal." }
+      ]
+    },
+    "services": {
+      "label": "AS EXPEDIÇÕES",
+      "heading": "Nossos Passeios",
+      "description": "Cada passeio é uma oportunidade de vivenciar o Pantanal de forma única. Nossos guias nativos garantem avistamentos memoráveis e segurança em cada expedição.",
+      "items": [
+        { "title": "Passeio de Barco ao Pôr do Sol", "description": "Navegação pelos canais e corixos do Rio Cuiabá, com o espetáculo do pôr do sol refletido nas águas e a tradicional pesca de piranhas.", "image": "/images/eco-activity-1" },
+        { "title": "Safári Noturno", "description": "Aventure-se pelo rio à noite e observe jacarés, capivaras, ariranhas e corujas em seu habitat natural.", "image": "/images/eco-activity-2" },
+        { "title": "Nascer do Sol Pantaneiro", "description": "Saídas ao amanhecer para vivenciar o despertar da vida no Pantanal. Cores, sons e os primeiros movimentos dos animais.", "image": "/images/eco-activity-3" },
+        { "title": "Trilhas Ecológicas", "description": "Caminhadas pelos arredores da pousada, ideais para observação de aves, mamíferos e da exuberante flora nativa.", "image": "/images/eco-activity-4" }
+      ],
+      "buttonText": "Ver todos os passeios disponíveis",
+      "buttonHref": "#"
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Duvidas sobre Ecoturismo no Pantanal",
+      "description": "Tudo o que voce precisa saber sobre nossas expedicoes e atividades de ecoturismo.",
+      "items": [
+        {"id": "eco-1", "number": "01", "question": "Quais atividades de ecoturismo estao incluidas no pacote?", "answer": "Os pacotes incluem passeios de barco, safaris fotograficos, trilhas ecologicas guiadas, focagem noturna (safari noturno) e observacao do nascer e por do sol. Todas as atividades sao conduzidas por guias nativos especializados. A disponibilidade varia conforme a epoca do ano e condicoes climaticas."},
+        {"id": "eco-2", "number": "02", "question": "E seguro fazer ecoturismo no Pantanal?", "answer": "Sim. Todas as expedicoes sao acompanhadas por guias experientes que conhecem profundamente a regiao. Utilizamos embarcacoes equipadas com coletes salva-vidas, radio comunicacao e kit de primeiros socorros. Os roteiros seguem protocolos ambientais e operacionais rigorosos para garantir sua seguranca."},
+        {"id": "eco-3", "number": "03", "question": "Quais animais e possivel avistar durante os passeios?", "answer": "O Pantanal abriga mais de 4.700 especies de plantas e animais. Durante as expedicoes no Rio Cuiaba, e comum avistar jacares, capivaras, ariranhas, tucanos, tuiuius, araras-azuis, cervos-do-pantanal, oncas-pintadas (com sorte), sucuris e centenas de especies de aves. A Itaicy tem 166 especies de aves catalogadas no entorno do lodge."},
+        {"id": "eco-4", "number": "04", "question": "Qual a melhor epoca para ecoturismo no Pantanal?", "answer": "Cada epoca oferece experiencias unicas. A seca (maio a setembro) facilita o avistamento de animais nos rios e lagoas. A cheia (outubro a marco) revela paisagens dramaticas e a reproducao de diversas especies. Para fotografia de fauna, a seca e ideal; para paisagens, a transicao entre estacoes."},
+        {"id": "eco-5", "number": "05", "question": "Preciso de preparo fisico para as atividades?", "answer": "A maioria das atividades nao exige preparo fisico especial. Passeios de barco, safaris e focagem noturna sao acessiveis para todas as idades. Trilhas ecologicas tem nivel leve a moderado. Sempre informamos o grau de dificuldade antes de cada atividade para que voce escolha o que melhor se adapta ao seu perfil."}
+      ]
+    }
+  },
+  "/observacao-de-aves": {
+    "hero": {
+      "label": "OBSERVAÇÃO DE AVES",
+      "heading": "Observação de Espécies Raras em Habitat Intocado",
+      "subtitle": "Uma experiência de observação única. Registre nossa avifauna em um dos santuários de aves mais ricos de todo o planeta.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/bird-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Uma ", "isHighlight": false },
+        { "text": "imersão contemplativa", "isHighlight": true },
+        { "text": " que vai além do convencional. Guiamos com respeito em nosso santuário de ", "isHighlight": false },
+        { "text": "acesso privilegiado", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "sobreNos": {
+      "label": "NOSSA FILOSOFIA",
+      "heading": "Observação Consciente e Imersiva",
+      "body": [
+        "No coração do Pantanal, praticamos a observação de aves com respeito absoluto ao habitat natural.",
+        "Cada expedição é planejada para minimizar o impacto ambiental, enquanto maximiza suas oportunidades de avistamento."
+      ],
+      "image": "/images/bird-about-1",
+      "features": [
+        { "number": "01", "title": "Guias Experts", "description": "Nossos guias possuem mais de 15 anos de experiência e conhecem intimamente os comportamentos e rotas de cada espécie." },
+        { "number": "02", "title": "Áreas Preservadas", "description": "Operamos em áreas preservadas com alta densidade de avifauna, longe do turismo convencional." },
+        { "number": "03", "title": "Imersão Contemplativa", "description": "Oferecemos uma experiência que vai além do turismo, focada em uma imersão científica e verdadeiramente contemplativa." }
+      ]
+    },
+    "highlights": {
+      "heading": "Por Que Escolher Nossa Expedição",
+      "items": [
+        { "iconName": "Bird", "title": "166+ Espécies avistadas", "description": "Registradas em apenas 5 dias de expedição" },
+        { "iconName": "ShieldCheck", "title": "Áreas Preservadas", "description": "Áreas preservadas com biodiversidade única" },
+        { "iconName": "Users", "title": "Guias Especializados", "description": "Ornitólogos certificados e fotógrafos experientes" }
+      ]
+    },
+    "faq": {
+      "label": "PERGUNTAS FREQUENTES",
+      "heading": "Duvidas sobre Observacao de Aves",
+      "description": "Respondemos as principais perguntas sobre birdwatching no Pantanal da Itaicy.",
+      "items": [
+        {"id": "bird-1", "number": "01", "question": "Quantas especies de aves e possivel avistar na Itaicy?", "answer": "Nosso levantamento cientifico (survey Joao Andriola, maio 2024) catalogou 166 especies no entorno do lodge em apenas 5 dias de expedicao. O Pantanal abriga mais de 650 especies de aves, e a regiao de Santo Antonio do Leverger, as margens do Rio Cuiaba, e um dos pontos de maior concentracao de avifauna do bioma."},
+        {"id": "bird-2", "number": "02", "question": "Preciso ter experiencia em birdwatching para participar?", "answer": "Nao. Nossas expedicoes sao adaptadas para todos os niveis, desde iniciantes curiosos ate birders experientes com listas de vida. Nossos guias especialistas ajudam na identificacao, explicam comportamentos e indicam os melhores angulos para fotografia. Fornecemos binoculos e guias de campo."},
+        {"id": "bird-3", "number": "03", "question": "Qual a melhor epoca para observacao de aves no Pantanal?", "answer": "A seca (maio a setembro) e ideal porque as aves se concentram proximo a fontes de agua, facilitando o avistamento. Porem, a epoca chuvosa (outubro a marco) atrai especies migratorias do hemisferio norte. Para araras-azuis e tuiuius, a seca e imbativel; para migratorias, visite entre outubro e dezembro."},
+        {"id": "bird-4", "number": "04", "question": "Quais especies mais emblematicas posso avistar?", "answer": "As especies mais iconicas incluem o Tuiuiu (ave-simbolo do Pantanal), Arara-Azul-Grande, Arara-Vermelha, Tucano-Toco, Gaviao-Real, Jabiru, Martin-Pescador-Grande e diversas especies de garcas, socos e falcoes. Aves noturnas como a Coruja-Buraqueira e o Urutau tambem sao frequentes."},
+        {"id": "bird-5", "number": "05", "question": "Que equipamento devo trazer para birdwatching?", "answer": "Recomendamos: camera com teleobjetiva (300mm+), binoculos (8x42 ou 10x42), roupas em cores neutras (verde, marrom, bege), chapeu, protetor solar e repelente. Oferecemos binoculos de emprestimo e guias de campo para quem nao possui equipamento proprio. Nossos guias tambem auxiliam com dicas de fotografia."}
+      ]
+    }
+  },
+  "/contato": {
+    "hero": {
+      "label": "PREPARE SUA EXPEDIÇÃO",
+      "heading": "Fale com Nossos Especialistas",
+      "description": "Nossa equipe está à disposição para ajudar com suas dúvidas, seja sobre nossas expedições de birdwatching, pacotes de pesca esportiva ou os detalhes da sua estadia de ecoturismo.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/culinaria-cta-bg.webp"
+    },
+    "formTitle": "Entrar em contato",
+    "steps": {
+      "placeholders": ["E-mail", "Nome completo", "Telefone / WhatsApp", "Sua mensagem..."],
+      "buttonNext": "Avançar",
+      "buttonBack": "Voltar",
+      "buttonSubmit": "Enviar"
+    },
+    "channels": {
+      "heading": "Nossos Canais de Atendimento",
+      "items": [
+        { "iconName": "Phone", "title": "Telefone & WhatsApp", "info": "(65) 9 9640-2380" },
+        { "iconName": "Mail", "title": "E-mail", "info": "contato@pousadaitaicy.com.br" },
+        { "iconName": "MapPin", "title": "Nosso Endereço", "info": "Santo Antônio do Leverger, MT, 78180-000" }
+      ]
+    },
+    "mapCoords": { "lat": -15.87, "lng": -56.08 }
+  },
+  "/nosso-impacto": {
+    "hero": {
+      "label": "NOSSO LEGADO",
+      "heading": "O Pantanal de amanhã se constrói hoje.",
+      "description": "Não somos apenas observadores. Somos guardiões. Na Itaicy, cada estadia financia a proteção de 166 espécies de aves e garante que o Dourado continue reinando em nossos rios.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/bird-hero-bg.webp"
+    },
+    "manifesto": {
+      "segments": [
+        { "text": "Cada hóspede que chega à Itaicy se torna parte de algo maior: ", "isHighlight": false },
+        { "text": "guardiões de um ecossistema", "isHighlight": true },
+        { "text": " que sustenta milhares de espécies. Sua estadia não é apenas uma viagem — é um ato de ", "isHighlight": false },
+        { "text": "preservação", "isHighlight": true },
+        { "text": ".", "isHighlight": false }
+      ]
+    },
+    "rioVivo": {
+      "heading": "100% Cota Zero: O Compromisso com o Gigante.",
+      "description": "Fomos pioneiros em entender que um Dourado vivo vale mil vezes mais que um no prato. Nossa política estrita de devolução garante que os troféus cresçam, se reproduzam e desafiem gerações de pescadores.",
+      "steps": [
+        { "iconName": "Fish", "title": "Captura", "description": "" },
+        { "iconName": "Camera", "title": "Foto", "description": "" },
+        { "iconName": "Waves", "title": "Soltura", "description": "" },
+        { "iconName": "Heart", "title": "Reprodução", "description": "" }
+      ]
+    },
+    "biodiversidade": {
+      "heading": "Santuário de Vida Selvagem",
+      "description": "",
+      "counters": [
+        { "target": 166, "suffix": "+", "label": "ESPÉCIES CATALOGADAS" },
+        { "target": 4, "suffix": "", "label": "ESPÉCIES AMEAÇADAS PROTEGIDAS" },
+        { "target": 85, "suffix": "%", "label": "DE ÁREA PRESERVADA" }
+      ]
+    },
+    "comunidade": {
+      "heading": "Guardiões Nativos.",
+      "description": "",
+      "body": [
+        "Nossos guias nao aprenderam sobre o Pantanal em livros; eles nasceram no ritmo das aguas do Rio Cuiaba. Valorizamos o saber ancestral, empregando e capacitando a comunidade local de Santo Antonio do Leverger. Sua visita gera renda e dignidade para a regiao."
+      ],
+      "image": "/images/pesca-about-1.webp"
+    },
+    "operacao": {
+      "heading": "Turismo que Regenera",
+      "description": "",
+      "practices": [
+        { "iconName": "Recycle", "title": "Gestão de Resíduos", "description": "Separação, compostagem e destinação responsável de 100% dos resíduos gerados na operação da pousada." },
+        { "iconName": "GlassWater", "title": "Zero Plástico Descartável", "description": "Garrafas reutilizáveis em todas as embarcações e quartos. Eliminamos o plástico de uso único da operação." },
+        { "iconName": "Droplets", "title": "Tratamento de Água", "description": "Sistema próprio de tratamento de efluentes que devolve água limpa ao ecossistema pantaneiro." }
+      ]
+    },
+    "engagement": {
+      "heading": "Faça parte deste legado.",
+      "description": "",
+      "buttonText": "Reservar Minha Experiência Consciente"
+    }
+  },
+  "/politica-de-privacidade": {
+    "hero": {
+      "title": "Políticas de Privacidade",
+      "lastUpdated": "17 de fevereiro de 2026"
+    },
+    "sections": [
+      {
+        "id": "dados-coletados",
+        "title": "1. Quais Dados Coletamos?",
+        "content": [
+          "Coletamos informações que você nos fornece e dados gerados automaticamente durante sua navegação:",
+          "**Informações Fornecidas por Você:** Inclui dados de identificação pessoal como nome, e-mail e número de telefone que você insere ao preencher formulários de contato, de reserva ou ao solicitar o download de materiais (como nossos guias de espécies).",
+          "**Informações de Reserva:** Para gerenciar sua estadia, podemos coletar informações sobre as datas da sua viagem e preferências. O processamento final do pagamento é feito por nosso parceiro de reservas externo e seguro.",
+          "**Informações de Navegação (Cookies):** Coletamos dados anônimos sobre como você interage com nosso site (como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência) para melhorar sua experiência."
+        ]
+      },
+      {
+        "id": "uso-dados",
+        "title": "2. Como Usamos Seus Dados?",
+        "content": [
+          "Utilizamos suas informações pessoais com os seguintes objetivos:",
+          "**Processar sua Reserva:** Para confirmar e gerenciar sua expedição, comunicar detalhes importantes sobre sua estadia e garantir que sua experiência seja tranquila.",
+          "**Prestar Atendimento:** Para responder às suas dúvidas, solicitações e fornecer o suporte necessário.",
+          "**Melhorar Nosso Site:** Analisamos dados de navegação para entender como nossos visitantes usam o site, otimizando o layout, o conteúdo e a performance.",
+          "**Marketing e Comunicação (com seu consentimento):** Para enviar e-mails sobre nossos pacotes, promoções especiais e conteúdos relevantes do nosso blog. Você pode optar por não receber essas comunicações a qualquer momento."
+        ]
+      },
+      {
+        "id": "compartilhamento",
+        "title": "3. Com Quem Compartilhamos Seus Dados?",
+        "content": [
+          "A Itaici Ecoturismo não vende, aluga ou comercializa suas informações pessoais.",
+          "O compartilhamento de dados é estritamente limitado a parceiros operacionais essenciais para a prestação do nosso serviço, como o nosso motor de reservas externo, que possui seus próprios e rigorosos padrões de segurança.",
+          "Também poderemos compartilhar informações se formos obrigados por lei ou para proteger nossos direitos legais."
+        ]
+      },
+      {
+        "id": "protecao",
+        "title": "4. Como Protegemos Seus Dados?",
+        "content": [
+          "Implementamos um conjunto de medidas de segurança técnicas e administrativas para proteger seus dados pessoais contra acesso não autorizado, perda, alteração ou destruição. Isso inclui o uso de criptografia (SSL) e controles de acesso restrito."
+        ]
+      },
+      {
+        "id": "direitos-lgpd",
+        "title": "5. Seus Direitos (LGPD)",
+        "content": [
+          "Você, como titular dos dados, tem o direito de:",
+          "Confirmar se estamos tratando seus dados.",
+          "Acessar, corrigir ou atualizar suas informações.",
+          "Solicitar a anonimização ou eliminação de dados que considere desnecessários.",
+          "Revogar seu consentimento para o marketing a qualquer momento.",
+          "Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato conosco através do e-mail: contato@pousadaitaicy.com.br"
+        ]
+      },
+      {
+        "id": "alteracoes",
+        "title": "6. Alterações Nesta Política",
+        "content": [
+          "Podemos atualizar esta Política de Privacidade periodicamente para refletir novas práticas ou mudanças na legislação. A versão mais recente estará sempre disponível nesta página, e a data da última atualização será indicada no topo."
+        ]
+      }
+    ]
+  },
+  "/404": {
+    "hero": {
+      "label": "404",
+      "heading": "Parece que você saiu um pouco da trilha.",
+      "description": "Acontece até com os exploradores mais experientes. A página que você procurava não foi encontrada ou pode ter sido movida.",
+      "scrollHint": "Deslize para baixo",
+      "backgroundImage": "/images/404-hero-bg.webp"
+    },
+    "buttonText": "Voltar para o início"
+  }
+}

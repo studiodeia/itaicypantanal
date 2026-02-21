@@ -12,7 +12,7 @@ const staticRoutes = [
   "/observacao-de-aves",
   "/observacao-de-aves/catalogo",
   "/ecoturismo",
-  "/blog",
+  // "/blog" — excluded until blog is launched; re-add and remove Disallow in robots.txt
   "/contato",
   "/nosso-impacto",
   "/regiao",
@@ -100,9 +100,10 @@ function buildAllPaths(content: CmsContent): string[] {
     : [];
   const paths = new Set<string>([...staticRoutes, ...seedRoutes]);
 
-  for (const post of content.blog.posts) {
-    paths.add(getBlogArticlePath(post));
-  }
+  // Blog posts excluded from sitemap until blog is launched
+  // for (const post of content.blog.posts) {
+  //   paths.add(getBlogArticlePath(post));
+  // }
 
   for (const bird of content.birdwatching.species) {
     paths.add(`/observacao-de-aves/catalogo/${bird.slug}`);
@@ -183,13 +184,14 @@ export function buildRobotsTxt(req: Request): string {
     "",
     "User-agent: *",
     "Allow: /",
+    "Disallow: /blog",
     "Crawl-delay: 1",
     "",
-    "# AI Search Crawlers — explicitly permitted",
-    ...AI_CRAWLERS.map((bot) => `User-agent: ${bot}\nAllow: /`),
+    "# AI Search Crawlers — explicitly permitted (blog excluded until launch)",
+    ...AI_CRAWLERS.map((bot) => `User-agent: ${bot}\nAllow: /\nDisallow: /blog`),
     "",
-    "# Search Engine Crawlers",
-    ...SEARCH_CRAWLERS.map((bot) => `User-agent: ${bot}\nAllow: /`),
+    "# Search Engine Crawlers (blog excluded until launch)",
+    ...SEARCH_CRAWLERS.map((bot) => `User-agent: ${bot}\nAllow: /\nDisallow: /blog`),
     "",
     `Sitemap: ${baseUrl}/sitemap.xml`,
     "",
